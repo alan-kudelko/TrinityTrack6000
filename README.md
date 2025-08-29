@@ -9,4 +9,6 @@ The project is developed according to **MISRA C:2025** standards, ensuring safe,
 Powering the tank is a **custom-designed switching power supply**, built from scratch to provide stable and reliable voltage for all MCUs and high-current peripherals.
 
 > 🔧 Status: Planned / Project in preparation  
-> 🧪 Goal: Serve as a futuristic, educational platform for exploring STM32 and Infineon microcontrollers, multi-MCU coordination, and real-time RTOS-based embedded systems.
+> 🧪 Goal: Serve as a futuristic, educational platform for learning **STM32**, **Infineon MCUs**, and real-time operating systems **ThreadX** and **Micrium µC/OS**, while exploring multi-MCU coordination and embedded system design  
+
+
