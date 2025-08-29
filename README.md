@@ -37,7 +37,7 @@ This project integrates a wide range of hardware, software, and system-level con
 - UART serial interface for remote monitoring, control, and debugging
 - I²C bus for AVR slave communication and peripheral integration
 - Multi-level diagnostic LCD menu (planned) for viewing system status and sensor data
-- Optional wireless interfaces: nRF24L01 and Bluetooth for remote control and telemetry
+- Wwireless interface: nRF24L01 for remote control and telemetry
 
 ### 🧰 Development Tools & Libraries
 - **C / C++** for firmware development
