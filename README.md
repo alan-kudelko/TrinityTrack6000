@@ -8,7 +8,7 @@ The project is developed according to **MISRA C:2025** standards, ensuring safe,
 
 Powering the tank is a **custom-designed switching power supply**, built from scratch to provide stable and reliable voltage for all MCUs and high-current peripherals.
 
-> 🔧 Status: Planned after finishing DrinkCreator6000
+> 🔧 Status: Planned after finishing DrinkCreator6000  
 > 🧪 Goal: Serve as a futuristic, educational platform for learning **STM32**, **Infineon MCUs**, and real-time operating systems **ThreadX** and **Micrium µC/OS**, while exploring multi-MCU coordination and embedded system design  
 
 ---
@@ -48,4 +48,19 @@ This project integrates a wide range of hardware, software, and system-level con
 
 ### 📚 Documentation
 The source code is fully documented using **Doxygen**, which generates up-to-date, browsable documentation from the annotated source files. The generated docs can be found in the `docs/` directory and are updated as part of the build process.
+
+---
+
+## 🧠 Design Goals
+
+- 💾 Use 100% static memory allocation (no malloc, no heap)
+- 🧰 Track system stability via runtime task/memory debug tools, including guard zones and stack overflow detection
+- 🔁 Ensure fault safety: robust recovery after failure or communication loss using EEPROM fault logging
+- 📟 Provide full system visibility through LCD diagnostics and monitoring
+- 🧪 Serve as a practical educational platform for learning **STM32** and **Infineon MCUs**, as well as real-time operating systems **ThreadX** and **Micrium µC/OS**
+- 📚 Deepen understanding of multitasking, resource sharing, fail-safe system design, and embedded system best practices
+- 🧩 Implement low-level memory management techniques for optimized and reliable resource control
+- 🧱 Integrate tightly with custom hardware (PCB, sensors, actuators, display)
+- 🌐 Explore principles of distributed embedded systems and multi-MCU communication commonly used in commercial applications
+
 
