@@ -22,6 +22,8 @@ This project integrates a wide range of hardware, software, and system-level con
   - **STM32 MCU** – Handles high-level coordination tasks and system management
   - **Infineon MCU** – Controls precise motor and servo operations with real-time current monitoring
   - **ATmega AVR MCU** as I²C Slave – Reads data from 1-Wire temperature sensors
+- **nRF24l01** module
+- **ADXL345** module
 - Separate custom switching power supply PCB – Provides stable voltage rails for all MCUs and high-current peripherals
 
 ### 🧠 System Architecture & Concepts
@@ -37,7 +39,7 @@ This project integrates a wide range of hardware, software, and system-level con
 - UART serial interface for remote monitoring, control, and debugging
 - I²C bus for AVR slave communication and peripheral integration
 - Multi-level diagnostic LCD menu (planned) for viewing system status and sensor data
-- Wwireless interface: nRF24L01 for remote control and telemetry
+- Wireless interface: nRF24L01 for remote control and telemetry
 
 ### 🧰 Development Tools & Libraries
 - **C / C++** for firmware development
