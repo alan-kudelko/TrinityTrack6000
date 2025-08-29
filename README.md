@@ -22,7 +22,7 @@ This project integrates a wide range of hardware, software, and system-level con
   - **STM32 MCU** – Handles high-level coordination tasks and system management
   - **Infineon MCU** – Controls precise motor and servo operations with real-time current monitoring
   - **ATmega AVR MCU** as I²C Slave – Reads data from 1-Wire temperature sensors
-- Custom switching power supply – Provides stable voltage rails for all MCUs and high-current peripherals
+- Separate custom switching power supply PCB – Provides stable voltage rails for all MCUs and high-current peripherals
 
 ### 🧠 System Architecture & Concepts
 - Real-time system based on **ThreadX** (STM32) and **Micrium µC/OS** (Infineon)
