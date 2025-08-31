@@ -1,0 +1,12 @@
+
+#ifdef __cplusplus
+
+void ram_dump(){
+
+}
+
+void flash_dump(){
+
+}
+
+#endif // __cplusplus

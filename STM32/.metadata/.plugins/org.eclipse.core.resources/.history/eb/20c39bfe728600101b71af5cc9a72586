@@ -1,0 +1,16 @@
+
+#ifdef __cplusplus
+	extern "C"{
+#endif // __cplusplus
+
+void ram_dump(){
+
+}
+
+void flash_dump(){
+
+}
+
+#ifdef __cplusplus
+	}
+#endif // __cplusplus

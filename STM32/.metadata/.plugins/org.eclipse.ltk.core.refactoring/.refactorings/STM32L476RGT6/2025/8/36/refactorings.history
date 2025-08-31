@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32L476RGT6/Utils/mem_info.cpp&apos; to &apos;mem_info.c&apos;" description="Rename resource &apos;mem_info.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Utils/mem_info.cpp" name="mem_info.c" stamp="1756648960585" updateReferences="true"/>
+</session>

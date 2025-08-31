@@ -1,0 +1,2 @@
+../Utils/mem_info.c:14:6:ram_dump	4	static
+../Utils/mem_info.c:18:6:flash_dump	4	static

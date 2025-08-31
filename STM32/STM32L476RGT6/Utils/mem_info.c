@@ -1,0 +1,24 @@
+#include <stdint.h>
+
+extern uint32_t data;
+extern uint32_t _edata;
+extern uint32_t _sbss;
+extern uint32_t __bss_end__;
+extern uint32_t _user_heap_stack;
+
+
+#ifdef __cplusplus
+	extern "C"{
+#endif // __cplusplus
+
+void ram_dump(){
+
+}
+
+void flash_dump(){
+
+}
+
+#ifdef __cplusplus
+	}
+#endif // __cplusplus
