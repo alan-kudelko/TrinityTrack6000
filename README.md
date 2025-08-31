@@ -78,7 +78,11 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ Prototyping Roadmap
+
+- 🔄 Implement a diagnostic function to display RAM usage over UART, including `.bss`, `.data`, `.heap`, `.stack`, and other linker sections such as `.tdat`
+
+## 🗺️ Production Roadmap
 
 
 
