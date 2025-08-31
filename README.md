@@ -15,8 +15,19 @@ Powering the tank is a **custom-designed switching power supply**, built from sc
 
 ## ✳️ Planned Technologies & Tools
 
-This project integrates a wide range of hardware, software, and system-level concepts typically found in professional embedded systems. Below is a breakdown of the core technologies and components involved in the design and implementation of TrinityTrack6000:
+**TrinityTrack6000** is an advanced embedded system project that combines hardware, software, and system-level design principles typically seen in professional-grade applications. The project is focused on precise tracking and control, integrating multiple peripherals and sensors to achieve robust and reliable performance.
 
+## Development Strategy
+
+- **Prototyping Phase:** The initial development and testing are conducted on a **Nucleo board with STM32L476RGT6**, using **STM32 HAL** for rapid prototyping and feature verification. This allows fast iteration and hardware abstraction during the early stages of the project.
+- **Production Phase:** The final implementation will be migrated to a **custom PCB featuring STM32G473CET6**, developed using **bare-metal / LL (Low-Layer) drivers**. This phase focuses on performance optimization, resource efficiency, and full control over hardware-level operations.
+
+## Key Features
+
+- Modular hardware and software architecture
+- Integration of multiple sensors and communication interfaces
+- Scalable design for both prototyping and production
+- Hybrid approach: HAL for fast development, LL/bare-metal for final product optimization
 ### 🔌 Hardware & Electronics
 - Custom PCB hosting all MCUs:
   - **STM32G473CET6** – Handles high-level coordination tasks and system management
@@ -68,6 +79,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 ---
 
 ## 🗺️ Roadmap
+
+
 
 ---
 
