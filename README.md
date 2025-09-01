@@ -80,6 +80,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ## 🗺️ Prototyping Roadmap
 
+- 🔄 Migrate project to VS Code, CMake, and Ninja build system with `arm-gcc` toolchain
 - 🔄 Implement a diagnostic function to display RAM usage over UART, including `.bss`, `.data`, `.heap`, `.stack`, and other linker sections such as `.tdat`
 
 ## 🗺️ Production Roadmap
