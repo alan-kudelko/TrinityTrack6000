@@ -36,6 +36,7 @@ Powering the tank is a **custom-designed switching power supply**, built from sc
   - **ATmega AVR MCU** as I²C Slave – Reads data from 1-Wire temperature sensors
 - **nRF24l01** module
 - **ADXL345** module
+- **EEPROM** IC for storing data and settings for MCUs between bootups (Yet to be selected)
 - Separate custom switching power supply PCB – Provides stable voltage rails for all MCUs and high-current peripherals
 
 ### 🧠 System Architecture & Concepts
@@ -108,7 +109,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 	├── STM32/              # STM32 MCU files
 	│   ├── STM32L4RGT6     # STM32 prototyping files
 	│   ├── STM32G473CET6   # STM32 production files
-	│   ├── ARM LIBC
+	│   ├── 
 	│   └── ... (other files)
 	│
 	├── Infineon/             # Infineon MCU files
@@ -116,8 +117,13 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 	│   └── ... (other source files)
 	│
  	├── AVR/             # ATmega328p MCU files
+  	│   ├── Src
+    │   ├── Include 
+	|
 	├── tools/                # Helper tools, including the complete ARM toolchain (arm-gcc)
-	│
+	│   ├── AVR Libc
+ 	│   ├── ARM Libc
+    |   
 	├── .vscode/              # Visual Studio Code configuration files
 	│
 	├── LICENSE               # Project license file
