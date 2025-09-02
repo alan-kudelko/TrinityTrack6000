@@ -29,8 +29,9 @@ Powering the tank is a **custom-designed switching power supply**, built from sc
 - Scalable design for both prototyping and production
 - Hybrid approach: HAL for fast development, LL/bare-metal for final product optimization
 ### 🔌 Hardware & Electronics
+- **Nucleo STM-64 STM32L4RGT6 board** for rapid prototyping and learning STM32
 - Custom PCB hosting all MCUs:
-  - **STM32G473CET6** – Handles high-level coordination tasks and system management
+  - **STM32G473CET6 MCU** – Handles high-level coordination tasks and system management
   - **Infineon MCU** – Controls precise motor and servo operations with real-time current monitoring
   - **ATmega AVR MCU** as I²C Slave – Reads data from 1-Wire temperature sensors
 - **nRF24l01** module
