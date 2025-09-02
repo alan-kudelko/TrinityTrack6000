@@ -92,12 +92,6 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## Technical Table of Contents
-
----
-
-## ⚙️ Technical Overview
-
 ## ⚙️ Technical Overview
 
 ### 1. 📦 Project Structure & File Overview
