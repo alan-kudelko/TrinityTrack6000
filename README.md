@@ -231,3 +231,10 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | PC5 (ADC5/SCL/PCINT13)  | ⚪ Unused |
 | ADC7                    | ⚪ Unused |
 
+## Design considerations
+
+### SPI Max frequency vs line length and type
+
+| Line type | Length [cm] | Frequency min [MHz] | Frequency max [MHz] | Single bit period [ns/bit] |
+|-----------|-------------|---------------------|---------------------|----------------------------|
+| PCB trace | 15          | 20                  | 25                  | 50                         |
