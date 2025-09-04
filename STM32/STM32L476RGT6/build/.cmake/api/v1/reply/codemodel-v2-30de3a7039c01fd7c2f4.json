@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "STM32L476RGT6.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-STM32L476RGT6.elf-Debug-bc01c3598fbb56586794.json",
+					"jsonFile" : "target-STM32L476RGT6.elf-Release-2e1a330cb6ec7503e134.json",
 					"name" : "STM32L476RGT6.elf",
 					"projectIndex" : 0
 				}

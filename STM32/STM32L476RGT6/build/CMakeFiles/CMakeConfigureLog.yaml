@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:207 (message)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       The target system is: Generic -  - arm
       The host system is: Windows - 10.0.26100 - AMD64
@@ -17,7 +17,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -45,32 +45,33 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe 
+      Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       1
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
       exit.c:(.text.exit+0x28): undefined reference to `_exit'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
       closer.c:(.text._close_r+0x18): undefined reference to `_close'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
       lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
       readr.c:(.text._read_r+0x24): undefined reference to `_read'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
       writer.c:(.text._write_r+0x24): undefined reference to `_write'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
       sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
       collect2.exe: error: ld returned 1 exit status
       
@@ -83,7 +84,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -111,16 +112,17 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe 
+      Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe 
       Build flags: 
       Id flags: -c 
       
@@ -138,7 +140,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -154,7 +156,7 @@ events:
       - "arm-none-eabi-ar"
       - "ar"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -165,8 +167,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -178,12 +180,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -199,7 +202,7 @@ events:
       - "arm-none-eabi-ranlib"
       - "ranlib"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -210,8 +213,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -223,12 +226,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -244,7 +248,7 @@ events:
       - "arm-none-eabi-strip"
       - "strip"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -255,8 +259,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-strip.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-strip.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-strip.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-strip.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -268,12 +272,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -289,7 +294,7 @@ events:
       - "arm-none-eabi-ld"
       - "ld"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -300,8 +305,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ld.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ld.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ld.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ld.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -313,12 +318,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -334,7 +340,7 @@ events:
       - "arm-none-eabi-nm"
       - "nm"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -345,8 +351,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-nm.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-nm.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-nm.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-nm.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -358,12 +364,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -379,7 +386,7 @@ events:
       - "arm-none-eabi-objdump"
       - "objdump"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -390,8 +397,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -403,12 +410,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -424,7 +432,7 @@ events:
       - "arm-none-eabi-objcopy"
       - "objcopy"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -435,8 +443,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -448,12 +456,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -469,7 +478,7 @@ events:
       - "arm-none-eabi-readelf"
       - "readelf"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -480,8 +489,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -493,12 +502,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -514,7 +524,7 @@ events:
       - "arm-none-eabi-dlltool"
       - "dlltool"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -525,9 +535,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool"
       - "C:/Windows/System32/arm-none-eabi-dlltool.com"
       - "C:/Windows/System32/arm-none-eabi-dlltool.exe"
       - "C:/Windows/System32/arm-none-eabi-dlltool"
@@ -555,9 +565,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-dlltool.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-dlltool.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-dlltool"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool"
       - "C:/Windows/System32/dlltool.com"
       - "C:/Windows/System32/dlltool.exe"
       - "C:/Windows/System32/dlltool"
@@ -597,12 +607,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -618,7 +629,7 @@ events:
       - "arm-none-eabi-addr2line"
       - "addr2line"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -629,8 +640,8 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -642,12 +653,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -663,7 +675,7 @@ events:
       - "arm-none-eabi-tapi"
       - "tapi"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -674,9 +686,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi"
       - "C:/Windows/System32/arm-none-eabi-tapi.com"
       - "C:/Windows/System32/arm-none-eabi-tapi.exe"
       - "C:/Windows/System32/arm-none-eabi-tapi"
@@ -704,9 +716,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-tapi.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-tapi.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-tapi"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi"
       - "C:/Windows/System32/tapi.com"
       - "C:/Windows/System32/tapi.exe"
       - "C:/Windows/System32/tapi"
@@ -746,12 +758,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -769,7 +782,7 @@ events:
       - "arm-none-eabi-gcc-ar14"
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -780,9 +793,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3"
@@ -810,9 +823,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14"
@@ -840,9 +853,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar14"
@@ -870,8 +883,8 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -883,12 +896,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -906,7 +920,7 @@ events:
       - "arm-none-eabi-gcc-ranlib14"
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -917,9 +931,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3"
@@ -947,9 +961,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14"
@@ -977,9 +991,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14"
@@ -1007,8 +1021,8 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -1020,6 +1034,7 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
@@ -1028,7 +1043,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1056,32 +1071,33 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-      Compiler: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-g++.exe 
+      Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-g++.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       1
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
       exit.c:(.text.exit+0x28): undefined reference to `_exit'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
       closer.c:(.text._close_r+0x18): undefined reference to `_close'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
       lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
       readr.c:(.text._read_r+0x24): undefined reference to `_read'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
       writer.c:(.text._write_r+0x24): undefined reference to `_write'
-      D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
       sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
       collect2.exe: error: ld returned 1 exit status
       
@@ -1094,7 +1110,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1122,16 +1138,17 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-g++.exe 
+      Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-g++.exe 
       Build flags: 
       Id flags: -c 
       
@@ -1149,7 +1166,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1167,7 +1184,7 @@ events:
       - "arm-none-eabi-gcc-ar14"
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -1178,9 +1195,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3"
@@ -1208,9 +1225,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-14"
@@ -1238,9 +1255,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar14"
@@ -1268,8 +1285,8 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -1281,12 +1298,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1304,7 +1322,7 @@ events:
       - "arm-none-eabi-gcc-ranlib14"
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -1315,9 +1333,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3"
@@ -1345,9 +1363,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14"
@@ -1375,9 +1393,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14"
@@ -1405,8 +1423,8 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -1418,12 +1436,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       GNU assembler (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
@@ -1437,7 +1456,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1455,7 +1474,7 @@ events:
       - "arm-none-eabi-gcc-ar"
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -1466,9 +1485,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
@@ -1496,9 +1515,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
@@ -1526,8 +1545,8 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -1539,12 +1558,13 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1562,7 +1582,7 @@ events:
       - "arm-none-eabi-gcc-ranlib"
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/PuTTY/"
@@ -1573,9 +1593,9 @@ events:
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
     searched_directories:
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
@@ -1603,9 +1623,9 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.com"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.exe"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
       - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
@@ -1633,8 +1653,8 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-"
-      - "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
-    found: "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
+      - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\WINDOWS\\system32"
@@ -1646,17 +1666,18 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
+      CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "try_compile-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-ci66rr"
-      binary: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-ci66rr"
+      source: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-qq3xlp"
+      binary: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-qq3xlp"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1665,42 +1686,42 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-ci66rr'
+        Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-qq3xlp'
         
-        Run Build Command(s): ninja -v cmTC_1360b
-        [1/2] D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): ninja -v cmTC_d0a12
+        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
-        COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe
+        COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
         Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14-5/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=x86_64-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1360b.dir/'
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1360b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccQyA6sZ.s
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d0a12.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d0a12.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cc5laxxf.s
         GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
-        ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 1ef75dace964d07dc45f44c52d1314e5
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1360b.dir/'
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccQyA6sZ.s
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d0a12.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cc5laxxf.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
-        COMPILER_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_1360b.a && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_1360b.a  CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_1360b.a && cd ."
+        COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_d0a12.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_d0a12.a  CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_d0a12.a && cd ."
         
       exitCode: 0
   -
@@ -1708,19 +1729,19 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         end of search list found
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
-        implicit include dirs: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
+        implicit include dirs: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
       
       
   -
@@ -1728,52 +1749,52 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-ci66rr']
+        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-qq3xlp']
         ignore line: []
-        ignore line: [Run Build Command(s): ninja -v cmTC_1360b]
-        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): ninja -v cmTC_d0a12]
+        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe]
+        ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
         ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14-5/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=x86_64-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)']
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1360b.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1360b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccQyA6sZ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d0a12.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d0a12.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cc5laxxf.s]
         ignore line: [GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
-        ignore line: [ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 1ef75dace964d07dc45f44c52d1314e5]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1360b.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccQyA6sZ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d0a12.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cc5laxxf.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
-        ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
-        ignore line: [LIBRARY_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_1360b.a && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_1360b.a  CMakeFiles/cmTC_1360b.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_1360b.a && cd ."]
+        ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_d0a12.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_d0a12.a  CMakeFiles/cmTC_d0a12.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_d0a12.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -1787,12 +1808,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-97f6x8"
-      binary: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-97f6x8"
+      source: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-hr3ohq"
+      binary: "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-hr3ohq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1802,48 +1823,48 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-97f6x8'
+        Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-hr3ohq'
         
-        Run Build Command(s): ninja -v cmTC_952b6
-        [1/2] D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): ninja -v cmTC_b09f1
+        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
-        COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe
+        COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
         Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14-5/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=x86_64-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_952b6.dir/'
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_952b6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccFkqF3q.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_b09f1.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b09f1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccgZi4iw.s
         GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
-        ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
-        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: bed1a8c09af7a45230275f732365cbb8
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_952b6.dir/'
-         D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccFkqF3q.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_b09f1.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccgZi4iw.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
-        COMPILER_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_952b6.a && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_952b6.a  CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_952b6.a && cd ."
+        COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_b09f1.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_b09f1.a  CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_b09f1.a && cd ."
         
       exitCode: 0
   -
@@ -1851,25 +1872,25 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
-          add: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         end of search list found
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/backward]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
-        collapse include dir [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
-        implicit include dirs: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/arm-none-eabi;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/backward;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed;D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/backward]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
+        implicit include dirs: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/arm-none-eabi;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/backward;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include]
       
       
   -
@@ -1877,58 +1898,58 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:32 (project)"
+      - "CMakeLists.txt:63 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-97f6x8']
+        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/CMakeScratch/TryCompile-hr3ohq']
         ignore line: []
-        ignore line: [Run Build Command(s): ninja -v cmTC_952b6]
-        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): ninja -v cmTC_b09f1]
+        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe]
+        ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
         ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14-5/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=x86_64-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)']
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_952b6.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_952b6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccFkqF3q.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_b09f1.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b09f1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccgZi4iw.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
-        ignore line: [ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
-        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14-5/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: bed1a8c09af7a45230275f732365cbb8]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_952b6.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccFkqF3q.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_b09f1.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccgZi4iw.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
-        ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
-        ignore line: [LIBRARY_PATH=D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
-        ignore line: [D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_952b6.a && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_952b6.a  CMakeFiles/cmTC_952b6.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\STM32\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_952b6.a && cd ."]
+        ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_b09f1.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_b09f1.a  CMakeFiles/cmTC_b09f1.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_b09f1.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []

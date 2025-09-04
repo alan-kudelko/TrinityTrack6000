@@ -9,5 +9,9 @@
     "stm32l4xx_hal.h": "c",
     "random": "c",
     "functional": "c"
-  }
+  },
+  "cmake.buildtypes":[
+    "Debug",
+    "Release"
+  ]
 }
