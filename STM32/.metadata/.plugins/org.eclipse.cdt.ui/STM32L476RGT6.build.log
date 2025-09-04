@@ -1,17 +1,15 @@
-22:52:25 **** Incremental Build of configuration Debug for project STM32L476RGT6 ****
+20:00:07 **** Incremental Build of configuration Release for project STM32L476RGT6 ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:117:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  117 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "STM32L476RGT6.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Projekty\TrinityTrack6000\STM32\STM32L476RGT6\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32L476RGT6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: STM32L476RGT6.elf
- 
-arm-none-eabi-size  STM32L476RGT6.elf 
-arm-none-eabi-objdump -h -S STM32L476RGT6.elf  > "STM32L476RGT6.list"
-   text	   data	    bss	    dec	    hex	filename
-  12708	     12	   1708	  14428	   385c	STM32L476RGT6.elf
-Finished building: default.size.stdout
- 
-Finished building: STM32L476RGT6.list
- 
+D:/Programy/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+main.c:(.text.startup.main+0x4): undefined reference to `initializeSystem'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: STM32L476RGT6.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-22:52:26 Build Finished. 0 errors, 0 warnings. (took 931ms)
+20:00:08 Build Failed. 2 errors, 1 warnings. (took 632ms)
 

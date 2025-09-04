@@ -3,6 +3,13 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="SystemInit"/>
+		<item value=".init"/>
+		<item value=".init6"/>
+		<item value=".init7"/>
+		<item value=".init8"/>
+		<item value="FPU"/>
+		<item value="uart"/>
 		<item value="UART"/>
 		<item value="pro"/>
 	</list>

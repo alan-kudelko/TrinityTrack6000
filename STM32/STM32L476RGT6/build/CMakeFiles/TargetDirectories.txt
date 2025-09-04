@@ -1,0 +1,3 @@
+D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/STM32L476RGT6.elf.dir
+D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/edit_cache.dir
+D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/rebuild_cache.dir

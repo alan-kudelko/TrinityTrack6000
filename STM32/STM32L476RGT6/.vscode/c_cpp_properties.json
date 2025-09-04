@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "name": "arm",
+      "compilerPath": "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+      "intelliSenseMode": "gcc-arm",
+      "includePath": [
+          "${workspaceFolder}/Core/Inc",
+          "${workspaceFolder}/Drivers/CMSIS/Include",
+          "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+          "${workspaceFolder}/Drivers/STM32L4xx_HAL_Driver/Inc",
+		      "${workspaceFolder}/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
+		      "${workspaceFolder}/Include",
+          "${workspaceFolder}/Utils",
+          "${workspaceFolder}/Init",
+          "${workspaceFolder}/Src"
+        ],		  
+      "browse": {
+        "path": [
+          "${workspaceFolder}/Core/Inc",
+          "${workspaceFolder}/Core/Src",
+          "${workspaceFolder}/Core/Startup",
+          "${workspaceFolder}/Drivers/CMSIS/Include",
+          "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+          "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates",
+          "${workspaceFolder}/Drivers/STM32L4xx_HAL_Driver/Inc",
+		      "${workspaceFolder}/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
+		      "${workspaceFolder}/Include",
+          "${workspaceFolder}/Src",
+          "${workspaceFolder}/Utils",
+          "${workspaceFolder}/Init"
+        ],		  
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "defines": ["STM32L476xx"]
+    }
+  ],
+  "version": 4
+}

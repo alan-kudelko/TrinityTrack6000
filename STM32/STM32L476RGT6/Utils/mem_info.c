@@ -1,4 +1,6 @@
 #include <stdint.h>
+#include <string.h>
+#include <stm32l4xx_hal.h>
 
 extern uint32_t data;
 extern uint32_t _edata;
@@ -12,7 +14,17 @@ extern uint32_t _user_heap_stack;
 #endif // __cplusplus
 
 void ram_dump(){
-
+	  UART_HandleTypeDef uart;
+	  uart.Instance = USART2;
+	  uart.Init.BaudRate = 115200;
+	  uart.Init.WordLength = UART_WORDLENGTH_8B;
+	  uart.Init.Parity = UART_PARITY_NONE;
+	  uart.Init.StopBits = UART_STOPBITS_1;
+	  uart.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	  uart.Init.OverSampling = UART_OVERSAMPLING_16;
+	  uart.Init.Mode = UART_MODE_TX_RX;
+	  HAL_UART_Init(&uart);
+	//HAL_UART_Transmit(&uart,(uint8_t*)s,strlen(s),1000);
 }
 
 void flash_dump(){

@@ -1,0 +1,23 @@
+//Doxy
+
+#ifndef _TRINITY_TRACK6000_INIT_H_
+	#define _TRINITY_TRACK6000_INIT_H_
+
+#include <TrinityTrack6000_Config.h>
+
+// Initialize clock and AHB, APB busses
+void initializeClock(void);
+
+// Initialize HAL
+void initializeHAL(void);
+
+// Initialize GPIO
+void initializeGPIO(void);
+
+// Initialize UART
+void initializeUART(void);
+
+// Call all initializations 
+void initializeSystem(void) __attribute((naked,used,section(".init8")));
+	
+#endif // _TRINITY_TRACK6000_INIT_H_
