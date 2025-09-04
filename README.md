@@ -145,7 +145,55 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## STM32G473CET6 Pinout (LQFP48)
+### X. Pinout overview
+
+#### X.1 Required signals list STM32
+
+USART_RX
+USART_TX
+
+SPI1_MOSI
+SPI1_MISO
+SPI1_SCK
+
+SPIn_MOSI
+SPIn_MISO
+SPIn_SCK
+
+CS_NRF24L01
+CS_STM32
+CS_EEPROM
+CS_INFINEON
+
+SPI1_REQ
+SPI1_BUSY
+
+I2Cn_SDA
+I2Cn_SCL
+
+SWDIO
+SWDCLK
+NRST
+SWO
+
+D+
+D-
+
+SMOKE_ON
+LED_LIGHTS
+CHASSIS_FANS
+GUN_LOCK
+POWER_LED_ON
+BUZZER_DIAG
+LED_ARMED
+LED_UNARMED
+LED_GUN_READY
+INFINEON_KILL_SWITCH
+
+AVR_RESTART
+INFINEON_RESTART
+
+#### X.2 STM32G473CET6 Pinout (LQFP48)
 
 | Pin / Function | Usage |
 |----------------|-------|
@@ -193,11 +241,11 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | PD6  ADC4_IN6 / TIM5_CH3 / USART2_TX | ⚪ Unused |
 | PD7  ADC4_IN7 / TIM5_CH4 / USART2_CK | ⚪ Unused |
 
-## Infineon Pinout
+#### X.3 Infineon Pinout
 
 (soon)
 
-## ATmega328p Pinout (TQFP-32)
+#### X.4 ATmega328p Pinout (TQFP-32)
 
 | Pin | Usage |
 |-----|-------|
@@ -231,6 +279,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | PC4 (ADC4/SDA/PCINT12)  | ⚪ Unused |
 | PC5 (ADC5/SCL/PCINT13)  | ⚪ Unused |
 | ADC7                    | ⚪ Unused |
+
+---
 
 ## Design considerations
 
