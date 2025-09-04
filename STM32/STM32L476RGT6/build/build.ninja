@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: STM32L476RGT6
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,218 +49,218 @@ cmake_ninja_workdir = D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/
 
 build cmake_object_order_depends_target_STM32L476RGT6.elf: phony || .
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_dma_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_exti.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash_ramfunc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_i2c.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_i2c_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_pwr_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/stm32l4xx_hal_msp.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/stm32l4xx_hal_msp.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src\stm32l4xx_hal_msp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/stm32l4xx_it.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/stm32l4xx_it.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src\stm32l4xx_it.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/syscalls.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/syscalls.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src\syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/sysmem.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/sysmem.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src\sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/system_stm32l4xx.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Src/system_stm32l4xx.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src\system_stm32l4xx.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Core\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj: ASM_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Startup/startup_stm32l476rgtx.s || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj: ASM_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Startup/startup_stm32l476rgtx.s || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Core\Startup\startup_stm32l476rgtx.s.obj.d
   FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Core\Startup
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init/TrinityTrack6000_Init.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init/TrinityTrack6000_Init.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Init\TrinityTrack6000_Init.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Init
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Src/TrinityTrack6000_Config.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Src/TrinityTrack6000_Config.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Src\TrinityTrack6000_Config.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Src/main.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
+build CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Src/main.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Src\main.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Src
 
-build CMakeFiles/STM32L476RGT6.elf.dir/Utils/mem_info.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Release D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils/mem_info.c || cmake_object_order_depends_target_STM32L476RGT6.elf
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Utils\mem_info.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG -std=gnu11
+build CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj: C_COMPILER__STM32L476RGT6.2eelf_unscanned_Debug D$:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils/TrinityTrack6000_MemInfo.c || cmake_object_order_depends_target_STM32L476RGT6.elf
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\STM32L476RGT6.elf.dir\Utils\TrinityTrack6000_MemInfo.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11
   INCLUDES = -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils -ID:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\STM32L476RGT6.elf.dir\Utils
@@ -271,16 +271,16 @@ build CMakeFiles/STM32L476RGT6.elf.dir/Utils/mem_info.c.obj: C_COMPILER__STM32L4
 
 
 #############################################
-# Link the executable Release\STM32L476RGT6.elf
+# Link the executable Debug\STM32L476RGT6.elf
 
-build Release/STM32L476RGT6.elf: C_EXECUTABLE_LINKER__STM32L476RGT6.2eelf_Release CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Utils/mem_info.c.obj
-  CONFIG = Release
-  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections  -O3 -DNDEBUG
+build Debug/STM32L476RGT6.elf: C_EXECUTABLE_LINKER__STM32L476RGT6.2eelf_Debug CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+  CONFIG = Debug
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g
   LINK_FLAGS = -TD:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/STM32L476RGTX_FLASH.ld -Wl,--gc-sections -Wl,-Map=STM32L476RGT6.map
   OBJECT_DIR = CMakeFiles\STM32L476RGT6.elf.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Release\STM32L476RGT6.elf
+  TARGET_FILE = Debug\STM32L476RGT6.elf
   TARGET_PDB = STM32L476RGT6.elf.dbg
 
 
@@ -310,7 +310,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build STM32L476RGT6.elf: phony Release/STM32L476RGT6.elf
+build STM32L476RGT6.elf: phony Debug/STM32L476RGT6.elf
 
 # =============================================================================
 # Folder targets.
@@ -320,7 +320,7 @@ build STM32L476RGT6.elf: phony Release/STM32L476RGT6.elf
 #############################################
 # Folder: D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build
 
-build all: phony Release/STM32L476RGT6.elf
+build all: phony Debug/STM32L476RGT6.elf
 
 # =============================================================================
 # Built-in targets
