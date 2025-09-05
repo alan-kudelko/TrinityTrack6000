@@ -40,7 +40,7 @@ ENTRY(Reset_Handler)
 _estack = ORIGIN(RAM) + LENGTH(RAM); /* end of "RAM" Ram type memory */
 
 _Min_Heap_Size = 0x400; /* required amount of heap */
-_Min_Stack_Size = 0x400; /* required amount of stack */
+_Min_Stack_Size = 0x4000; /* required amount of stack */
 
 /* Memories definition */
 MEMORY
@@ -175,8 +175,18 @@ SECTIONS
     PROVIDE ( _end = . );
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
+    PROVIDE ( _heap_start = . );
     . = ALIGN(8);
   } >RAM
+
+  /* RAM Bank 2 custom section*/
+  .ram2 : 
+  {
+    . = ALIGN(4);
+    PROVIDE ( _sram2_start = . );
+    *(.ram2)
+    PROVIDE (_sram2_end = . ); 
+  } >RAM2
 
   /* Remove information from the compiler libraries */
   /DISCARD/ :

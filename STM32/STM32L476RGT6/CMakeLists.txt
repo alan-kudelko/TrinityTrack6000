@@ -73,7 +73,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 # Setting up compiler flags
-set(CMAKE_C_FLAGS "${CPU_FLAGS_C} -std=gnu${CMAKE_C_STANDARD} -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections ${DEBUG_FLAGS}")
+set(CMAKE_C_FLAGS "${CPU_FLAGS_C} -std=gnu${CMAKE_C_STANDARD} -Wall -Werror -Wno-unused-function -Wno-unused-variable -fdata-sections -ffunction-sections ${DEBUG_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CPU_FLAGS_C} -std=gnu++${CMAKE_CXX_STANDARD} -Wall -Werror -fno-exceptions -fno-rtti ${DEBUG_FLAGS}")
 set(CMAKE_ASM_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
 

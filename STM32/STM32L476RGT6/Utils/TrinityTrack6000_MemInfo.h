@@ -24,6 +24,8 @@ extern const char msg_ramDump_free_header[];  /**< Header for free RAM section *
 extern const char msg_ramDump_free_footer[];  /**< Footer for free RAM section */
 extern const char msg_ramDump_addr_header[];  /**< Header for memory address listings */
 extern const char msg_ramDump_seperator[];    /**< Separator string for memory output */
+
+extern const char msg_ram2Dump_header1[];     /**< General RAM2 dump header part 1 */
 /** @} */
 
 #ifdef __cplusplus
