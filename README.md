@@ -78,6 +78,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - 🧱 Integrate tightly with custom hardware (PCB, sensors, actuators, display)
 - 🌐 Explore principles of distributed embedded systems and multi-MCU communication commonly used in commercial applications
 - 🚀 **Benchmark RAM bank variables placement + assembly optimizations** – squeezing every cycle for max performance
+- ⚡ Benchmark FPU/ALU instruction interleaving (manual scheduling in ASM) to explore cycle-level parallelism
 ---
 
 ## 🗺️ Prototyping Roadmap  
