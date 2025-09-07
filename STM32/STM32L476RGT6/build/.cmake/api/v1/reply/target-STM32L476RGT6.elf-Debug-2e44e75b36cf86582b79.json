@@ -42,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -Wno-unused-variable -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11"
+					"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11"
 				}
 			],
 			"includes" : 
@@ -174,7 +174,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -Wno-unused-variable -fdata-sections -ffunction-sections -g3 -O0 -g",
+				"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g",
 				"role" : "flags"
 			},
 			{

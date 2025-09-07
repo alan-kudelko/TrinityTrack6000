@@ -1,5 +1,6 @@
 #include <TrinityTrack6000_Init.h>
 
+extern void ramDiagnositcsInit(void);
 
 void initializeClock(void){
   	RCC_OscInitTypeDef RCC_OscInitStruct={0};
@@ -77,6 +78,7 @@ void initializeSystem(void){
 	initializeClock();
 	initializeGPIO();
 	initializeUART();
+	ramDiagnositcsInit();
 }
 
 void Error_Handler(void){

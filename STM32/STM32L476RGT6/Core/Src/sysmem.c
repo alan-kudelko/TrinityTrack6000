@@ -27,7 +27,8 @@
 /**
  * Pointer to the current high watermark of the heap usage
  */
-static uint8_t *__sbrk_heap_end = NULL;
+uint8_t *__sbrk_heap_end = NULL; // Changed to external linkage to be used in TrinityTrack6000_MemInfo.c
+// Note this is the only modification in this file
 
 /**
  * @brief _sbrk() allocates memory to the newlib heap and is used by malloc

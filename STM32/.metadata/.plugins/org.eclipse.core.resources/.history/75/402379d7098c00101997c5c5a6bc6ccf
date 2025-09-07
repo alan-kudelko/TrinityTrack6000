@@ -25,7 +25,6 @@
 extern void ramDiagnosticsGeneral();
 extern void ramDiagnosticsRefresh();
 extern void ramDiagnosticsRAM1();
-extern void ramDiagnosticsRAM2();
 
 extern void initializeSystem();
 
@@ -37,14 +36,18 @@ void send_string(UART_HandleTypeDef*uart,char*s){
   * @brief  The application entry point.
   * @retval int
   */
+uint32_t tablica[256+16];
+uint32_t tab[1] __attribute( (section(".ram2")) ); // Added to test RAM2 section
 int main(void){
+  tab[0]=123456;
     initializeSystem();
-    uint32_t*t=malloc(1900*sizeof(uint32_t));
-    t[0]=123456;
+tablica[0]=123456;
+    uint32_t*tab=malloc(256*sizeof(uint32_t));
+    tab[0]=123456;
     ramDiagnosticsRefresh();
     ramDiagnosticsGeneral();
     ramDiagnosticsRAM1();
-    ramDiagnosticsRAM2();
+
 
     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
     DWT->CYCCNT = 0;            // zerowanie licznika

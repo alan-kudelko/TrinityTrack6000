@@ -2625,21 +2625,9 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .data          0x00000000        0x0 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .bss           0x00000000        0x0 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ramDump_tdat_header
-                0x00000000        0xb CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ramDump_tdat_footer
-                0x00000000        0xd CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ramDump_free_header
-                0x00000000       0x26 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ramDump_free_footer
-                0x00000000        0xd CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ramDump_addr_header
-                0x00000000        0x5 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ram2Dump_header1
-                0x00000000       0x3a CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ram2Dump_ram2_header
-                0x00000000        0xc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .rodata.msg_ram2Dump_ram2_footer
+ .rodata.msg_ramDiagnosticsGeneral_formatStringCCSRAM
+                0x00000000       0x4d CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .text.ramDiagnosticsCCSRAM
                 0x00000000        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .text.flash_dump
                 0x00000000        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
@@ -3198,8 +3186,12 @@ END GROUP
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
                 0x20018000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x20000000                        __RAM1_start__ = ORIGIN (RAM)
+                0x20018000                        __RAM1_end__ = (ORIGIN (RAM) + LENGTH (RAM))
+                0x10000000                        __RAM2_start__ = ORIGIN (RAM2)
+                0x10008000                        __RAM2_end__ = (ORIGIN (RAM2) + LENGTH (RAM2))
                 0x00000400                        _Min_Heap_Size = 0x400
-                0x00004000                        _Min_Stack_Size = 0x4000
+                0x00000400                        _Min_Stack_Size = 0x400
 
 .isr_vector     0x08000000      0x188
                 0x08000000                        . = ALIGN (0x4)
@@ -3208,7 +3200,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x08000000                g_pfnVectors
                 0x08000188                        . = ALIGN (0x4)
 
-.text           0x080001c0     0xafb8
+.text           0x080001c0     0xb290
                 0x080001c0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001c0       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
@@ -3527,407 +3519,452 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x08003b08       0x74 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
                 0x08003b08                initializeUART
  .text.initializeSystem
-                0x08003b7c       0x18 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+                0x08003b7c       0x1c CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
                 0x08003b7c                initializeSystem
  .text.Error_Handler
-                0x08003b94        0xc CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
-                0x08003b94                Error_Handler
- .text.main     0x08003ba0      0x128 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
-                0x08003ba0                main
- .text.ram_dump
-                0x08003cc8      0x44c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x08003cc8                ram_dump
- .text.ram2_dump
-                0x08004114        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x08004114                ram2_dump
- *fill*         0x08004122        0x2 
+                0x08003b98        0xc CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+                0x08003b98                Error_Handler
+ .text.main     0x08003ba4      0x138 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+                0x08003ba4                main
+ .text.ramDiagnositcsInit
+                0x08003cdc       0xcc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x08003cdc                ramDiagnositcsInit
+ .text.ramDiagnosticsRefresh
+                0x08003da8       0xd4 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x08003da8                ramDiagnosticsRefresh
+ .text.ramDiagnosticsGeneral
+                0x08003e7c      0x258 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x08003e7c                ramDiagnosticsGeneral
+ .text.ramDiagnosticsRAM1
+                0x080040d4      0x224 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x080040d4                ramDiagnosticsRAM1
+ .text.ramDiagnosticsRAM2
+                0x080042f8      0x108 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x080042f8                ramDiagnosticsRAM2
  .text.__udivmoddi4
-                0x08004124      0x2f8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08004124                __udivmoddi4
- .text.malloc   0x0800441c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
-                0x0800441c                malloc
+                0x08004400      0x2f8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08004400                __udivmoddi4
+ .text.malloc   0x080046f8       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
+                0x080046f8                malloc
  .text._malloc_r
-                0x0800442c      0x598 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
-                0x0800442c                _malloc_r
+                0x08004708      0x598 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+                0x08004708                _malloc_r
  .text.__malloc_lock
-                0x080049c4        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
-                0x080049c4                __malloc_lock
+                0x08004ca0        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
+                0x08004ca0                __malloc_lock
  .text.__malloc_unlock
-                0x080049d0        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
-                0x080049d0                __malloc_unlock
+                0x08004cac        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
+                0x08004cac                __malloc_unlock
  .text.stdio_exit_handler
-                0x080049dc       0x18 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x08004cb8       0x18 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x080049f4       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x08004cd0       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x08004a34       0xf0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
- .text.__sinit  0x08004b24       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
-                0x08004b24                __sinit
+                0x08004d10       0xf0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+ .text.__sinit  0x08004e00       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x08004e00                __sinit
  .text.__sfp_lock_acquire
-                0x08004b60        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
-                0x08004b60                __sfp_lock_acquire
+                0x08004e3c        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x08004e3c                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x08004b6c        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
-                0x08004b6c                __sfp_lock_release
+                0x08004e48        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x08004e48                __sfp_lock_release
  .text._fwalk_sglue
-                0x08004b78       0x44 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fwalk.o)
-                0x08004b78                _fwalk_sglue
+                0x08004e54       0x44 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fwalk.o)
+                0x08004e54                _fwalk_sglue
  .text.snprintf
-                0x08004bbc       0x90 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-snprintf.o)
-                0x08004bbc                snprintf
- .text.__sread  0x08004c4c       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
-                0x08004c4c                __sread
+                0x08004e98       0x90 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-snprintf.o)
+                0x08004e98                snprintf
+ .text.__sread  0x08004f28       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
+                0x08004f28                __sread
  .text.__swrite
-                0x08004c70       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
-                0x08004c70                __swrite
- .text.__sseek  0x08004cb0       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
-                0x08004cb0                __sseek
+                0x08004f4c       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
+                0x08004f4c                __swrite
+ .text.__sseek  0x08004f8c       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
+                0x08004f8c                __sseek
  .text.__sclose
-                0x08004cd4        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
-                0x08004cd4                __sclose
- .text.memset   0x08004cdc       0x9c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
-                0x08004cdc                memset
+                0x08004fb0        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
+                0x08004fb0                __sclose
+ .text.memset   0x08004fb8       0x9c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+                0x08004fb8                memset
  .text._close_r
-                0x08004d78       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-closer.o)
-                0x08004d78                _close_r
+                0x08005054       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-closer.o)
+                0x08005054                _close_r
  .text._lseek_r
-                0x08004d9c       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lseekr.o)
-                0x08004d9c                _lseek_r
- .text._read_r  0x08004dc8       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-readr.o)
-                0x08004dc8                _read_r
- .text._sbrk_r  0x08004df4       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
-                0x08004df4                _sbrk_r
+                0x08005078       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lseekr.o)
+                0x08005078                _lseek_r
+ .text._read_r  0x080050a4       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-readr.o)
+                0x080050a4                _read_r
+ .text._sbrk_r  0x080050d0       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
+                0x080050d0                _sbrk_r
  .text._write_r
-                0x08004e18       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-writer.o)
-                0x08004e18                _write_r
- .text.__errno  0x08004e44        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
-                0x08004e44                __errno
+                0x080050f4       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-writer.o)
+                0x080050f4                _write_r
+ .text.__errno  0x08005120        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
+                0x08005120                __errno
  .text.__libc_init_array
-                0x08004e50       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
-                0x08004e50                __libc_init_array
+                0x0800512c       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+                0x0800512c                __libc_init_array
  .text.__retarget_lock_init_recursive
-                0x08004ea0        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08004ea0                __retarget_lock_init_recursive
+                0x0800517c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x0800517c                __retarget_lock_init_recursive
  .text.__retarget_lock_close_recursive
-                0x08004ea4        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08004ea4                __retarget_lock_close_recursive
+                0x08005180        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x08005180                __retarget_lock_close_recursive
  .text.__retarget_lock_acquire_recursive
-                0x08004ea8        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08004ea8                __retarget_lock_acquire_recursive
+                0x08005184        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x08005184                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08004eac        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08004eac                __retarget_lock_release_recursive
- .text.sysconf  0x08004eb0       0x1c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
-                0x08004eb0                sysconf
+                0x08005188        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x08005188                __retarget_lock_release_recursive
+ .text.sysconf  0x0800518c       0x1c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
+                0x0800518c                sysconf
  .text.startup.register_fini
-                0x08004ecc       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x08004ee0        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
-                0x08004ee0                atexit
+                0x080051a8       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x080051bc        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+                0x080051bc                atexit
  .text._malloc_trim_r
-                0x08004eec       0xb8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
-                0x08004eec                _malloc_trim_r
- .text._free_r  0x08004fa4      0x1f0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
-                0x08004fa4                _free_r
- *fill*         0x08005194        0x4 
+                0x080051c8       0xb8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
+                0x080051c8                _malloc_trim_r
+ .text._free_r  0x08005280      0x1f0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
+                0x08005280                _free_r
  .text._svfprintf_r
-                0x08005198     0x21f0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
-                0x08005198                _svfprintf_r
+                0x08005470     0x21f0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
+                0x08005470                _svfprintf_r
  .text.__ssprint_r
-                0x08007388       0x58 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssprint_r.o)
-                0x08007388                __ssprint_r
+                0x08007660       0x58 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssprint_r.o)
+                0x08007660                __ssprint_r
  .text._fclose_r
-                0x080073e0       0xc0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fclose.o)
-                0x080073e0                _fclose_r
+                0x080076b8       0xc0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fclose.o)
+                0x080076b8                _fclose_r
  .text.__sflush_r
-                0x080074a0      0x138 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fflush.o)
-                0x080074a0                __sflush_r
+                0x08007778      0x138 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fflush.o)
+                0x08007778                __sflush_r
  .text._fflush_r
-                0x080075d8       0x54 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fflush.o)
-                0x080075d8                _fflush_r
- .text.strncpy  0x0800762c       0x68 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strncpy.o)
-                0x0800762c                strncpy
+                0x080078b0       0x54 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fflush.o)
+                0x080078b0                _fflush_r
+ .text.strncpy  0x08007904       0x68 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strncpy.o)
+                0x08007904                strncpy
  .text.__locale_mb_cur_max
-                0x08007694        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-locale.o)
-                0x08007694                __locale_mb_cur_max
+                0x0800796c        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-locale.o)
+                0x0800796c                __locale_mb_cur_max
  .text._localeconv_r
-                0x080076a0        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-localeconv.o)
-                0x080076a0                _localeconv_r
+                0x08007978        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-localeconv.o)
+                0x08007978                _localeconv_r
  .text.__libc_fini_array
-                0x080076a8       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
-                0x080076a8                __libc_fini_array
- .text.frexp    0x080076d0       0x64 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libm_a-s_frexp.o)
-                0x080076d0                frexp
+                0x08007980       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+                0x08007980                __libc_fini_array
+ .text.frexp    0x080079a8       0x64 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libm_a-s_frexp.o)
+                0x080079a8                frexp
  .text.__register_exitproc
-                0x08007734       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x08007734                __register_exitproc
- .text.quorem   0x080077b4      0x12c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
- .text._dtoa_r  0x080078e0     0x1030 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
-                0x080078e0                _dtoa_r
+                0x08007a0c       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x08007a0c                __register_exitproc
+ .text.quorem   0x08007a8c      0x12c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
+ .text._dtoa_r  0x08007bb8     0x1030 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
+                0x08007bb8                _dtoa_r
  .text.__ascii_mbtowc
-                0x08008910       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mbtowc_r.o)
-                0x08008910                __ascii_mbtowc
- .text._Balloc  0x0800893c       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x0800893c                _Balloc
- .text._Bfree   0x08008988       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008988                _Bfree
+                0x08008be8       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mbtowc_r.o)
+                0x08008be8                __ascii_mbtowc
+ .text._Balloc  0x08008c14       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008c14                _Balloc
+ .text._Bfree   0x08008c60       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008c60                _Bfree
  .text.__multadd
-                0x0800899c       0xa0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x0800899c                __multadd
+                0x08008c74       0xa0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008c74                __multadd
  .text.__hi0bits
-                0x08008a3c       0x54 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008a3c                __hi0bits
+                0x08008d14       0x54 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008d14                __hi0bits
  .text.__lo0bits
-                0x08008a90       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008a90                __lo0bits
- .text.__i2b    0x08008b10       0x5c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008b10                __i2b
+                0x08008d68       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008d68                __lo0bits
+ .text.__i2b    0x08008de8       0x5c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008de8                __i2b
  .text.__multiply
-                0x08008b6c      0x16c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008b6c                __multiply
+                0x08008e44      0x16c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008e44                __multiply
  .text.__pow5mult
-                0x08008cd8       0xc0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008cd8                __pow5mult
+                0x08008fb0       0xc0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08008fb0                __pow5mult
  .text.__lshift
-                0x08008d98       0xe8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008d98                __lshift
- .text.__mcmp   0x08008e80       0x44 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008e80                __mcmp
- .text.__mdiff  0x08008ec4      0x174 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08008ec4                __mdiff
- .text.__d2b    0x08009038       0xbc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x08009038                __d2b
+                0x08009070       0xe8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08009070                __lshift
+ .text.__mcmp   0x08009158       0x44 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08009158                __mcmp
+ .text.__mdiff  0x0800919c      0x174 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x0800919c                __mdiff
+ .text.__d2b    0x08009310       0xbc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x08009310                __d2b
  .text.__ascii_wctomb
-                0x080090f4       0x1c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wctomb_r.o)
-                0x080090f4                __ascii_wctomb
+                0x080093cc       0x1c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wctomb_r.o)
+                0x080093cc                __ascii_wctomb
  .text._wcrtomb_r
-                0x08009110       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcrtomb.o)
-                0x08009110                _wcrtomb_r
+                0x080093e8       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcrtomb.o)
+                0x080093e8                _wcrtomb_r
  .text._wcsrtombs_r
-                0x0800915c       0x18 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsrtombs.o)
-                0x0800915c                _wcsrtombs_r
+                0x08009434       0x18 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsrtombs.o)
+                0x08009434                _wcsrtombs_r
  .text.__ssputs_r
-                0x08009174       0xc0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssputs_r.o)
-                0x08009174                __ssputs_r
- .text.memmove  0x08009234      0x130 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memmove.o)
-                0x08009234                memmove
+                0x0800944c       0xc0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssputs_r.o)
+                0x0800944c                __ssputs_r
+ .text.memmove  0x0800950c      0x130 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memmove.o)
+                0x0800950c                memmove
  .text.__assert_func
-                0x08009364       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-assert.o)
-                0x08009364                __assert_func
+                0x0800963c       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-assert.o)
+                0x0800963c                __assert_func
  .text._calloc_r
-                0x080093a4       0x6c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-callocr.o)
-                0x080093a4                _calloc_r
+                0x0800967c       0x6c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-callocr.o)
+                0x0800967c                _calloc_r
  .text._realloc_r
-                0x08009410      0x348 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-reallocr.o)
-                0x08009410                _realloc_r
+                0x080096e8      0x348 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-reallocr.o)
+                0x080096e8                _realloc_r
  .text._wcsnrtombs_l
-                0x08009758       0xf0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsnrtombs.o)
-                0x08009758                _wcsnrtombs_l
+                0x08009a30       0xf0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsnrtombs.o)
+                0x08009a30                _wcsnrtombs_l
  .text._wcsnrtombs_r
-                0x08009848       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsnrtombs.o)
-                0x08009848                _wcsnrtombs_r
+                0x08009b20       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsnrtombs.o)
+                0x08009b20                _wcsnrtombs_r
  .text.fiprintf
-                0x0800986c       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fiprintf.o)
-                0x0800986c                fiprintf
+                0x08009b44       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fiprintf.o)
+                0x08009b44                fiprintf
  .text._vfiprintf_r
-                0x08009894     0x1288 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
-                0x08009894                _vfiprintf_r
+                0x08009b6c     0x1288 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
+                0x08009b6c                _vfiprintf_r
  .text.__sbprintf
-                0x0800ab1c       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
+                0x0800adf4       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
  .text.__sprint_r
-                0x0800aba0       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sprint_r.o)
-                0x0800aba0                __sprint_r
+                0x0800ae78       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sprint_r.o)
+                0x0800ae78                __sprint_r
  .text.__sfvwrite_r
-                0x0800abc0      0x2ec D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fvwrite.o)
-                0x0800abc0                __sfvwrite_r
+                0x0800ae98      0x2ec D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fvwrite.o)
+                0x0800ae98                __sfvwrite_r
  .text.__swsetup_r
-                0x0800aeac       0xfc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wsetup.o)
-                0x0800aeac                __swsetup_r
- .text.abort    0x0800afa8       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-abort.o)
-                0x0800afa8                abort
+                0x0800b184       0xfc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wsetup.o)
+                0x0800b184                __swsetup_r
+ .text.abort    0x0800b280       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-abort.o)
+                0x0800b280                abort
  .text.__smakebuf_r
-                0x0800afb8       0xd0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-makebuf.o)
-                0x0800afb8                __smakebuf_r
- .text.raise    0x0800b088       0x58 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signal.o)
-                0x0800b088                raise
+                0x0800b290       0xd0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-makebuf.o)
+                0x0800b290                __smakebuf_r
+ .text.raise    0x0800b360       0x58 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signal.o)
+                0x0800b360                raise
  .text._fstat_r
-                0x0800b0e0       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fstatr.o)
-                0x0800b0e0                _fstat_r
+                0x0800b3b8       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fstatr.o)
+                0x0800b3b8                _fstat_r
  .text._isatty_r
-                0x0800b10c       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-isattyr.o)
-                0x0800b10c                _isatty_r
- .text._kill_r  0x0800b130       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signalr.o)
-                0x0800b130                _kill_r
+                0x0800b3e4       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-isattyr.o)
+                0x0800b3e4                _isatty_r
+ .text._kill_r  0x0800b408       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signalr.o)
+                0x0800b408                _kill_r
  .text._getpid_r
-                0x0800b15c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signalr.o)
-                0x0800b15c                _getpid_r
+                0x0800b434        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signalr.o)
+                0x0800b434                _getpid_r
  *(.glue_7)
- .glue_7        0x0800b160        0x0 linker stubs
+ .glue_7        0x0800b438        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800b160        0x0 linker stubs
+ .glue_7t       0x0800b438        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0800b160        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0800b438        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0800b160        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800b160                _init
- .init          0x0800b164        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0800b438        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800b438                _init
+ .init          0x0800b43c        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800b16c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800b16c                _fini
- .fini          0x0800b170        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0800b178                        . = ALIGN (0x4)
-                0x0800b178                        _etext = .
+ .fini          0x0800b444        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800b444                _fini
+ .fini          0x0800b448        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0800b450                        . = ALIGN (0x4)
+                0x0800b450                        _etext = .
 
-.vfp11_veneer   0x0800b178        0x0
- .vfp11_veneer  0x0800b178        0x0 linker stubs
+.vfp11_veneer   0x0800b450        0x0
+ .vfp11_veneer  0x0800b450        0x0 linker stubs
 
-.v4_bx          0x0800b178        0x0
- .v4_bx         0x0800b178        0x0 linker stubs
+.v4_bx          0x0800b450        0x0
+ .v4_bx         0x0800b450        0x0 linker stubs
 
-.iplt           0x0800b178        0x0
- .iplt          0x0800b178        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0800b450        0x0
+ .iplt          0x0800b450        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x0800b178      0x5d4
-                0x0800b178                        . = ALIGN (0x4)
+.rodata         0x0800b450      0x9dc
+                0x0800b450                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0800b178        0xe CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- *fill*         0x0800b186        0x2 
- .rodata        0x0800b188       0x2c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .rodata        0x0800b450        0xe CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ *fill*         0x0800b45e        0x2 
+ .rodata        0x0800b460        0x3 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  *(.rodata*)
+ *fill*         0x0800b463        0x1 
  .rodata.AHBPrescTable
-                0x0800b1b4       0x10 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x0800b1b4                AHBPrescTable
+                0x0800b464       0x10 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x0800b464                AHBPrescTable
  .rodata.APBPrescTable
-                0x0800b1c4        0x8 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x0800b1c4                APBPrescTable
+                0x0800b474        0x8 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x0800b474                APBPrescTable
  .rodata.MSIRangeTable
-                0x0800b1cc       0x30 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x0800b1cc                MSIRangeTable
- .rodata.msg_ramDump_header1
-                0x0800b1fc       0xb8 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b1fc                msg_ramDump_header1
- .rodata.msg_ramDump_header2
-                0x0800b2b4       0x3a CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b2b4                msg_ramDump_header2
- *fill*         0x0800b2ee        0x2 
- .rodata.msg_ramDump_data_header
-                0x0800b2f0        0xc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b2f0                msg_ramDump_data_header
- .rodata.msg_ramDump_data_footer
-                0x0800b2fc        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b2fc                msg_ramDump_data_footer
- *fill*         0x0800b30a        0x2 
- .rodata.msg_ramDump_bss_header
-                0x0800b30c        0xc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b30c                msg_ramDump_bss_header
- .rodata.msg_ramDump_bss_footer
-                0x0800b318        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b318                msg_ramDump_bss_footer
- *fill*         0x0800b326        0x2 
- .rodata.msg_ramDump_heap_header
-                0x0800b328        0xc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b328                msg_ramDump_heap_header
- .rodata.msg_ramDump_heap_footer
-                0x0800b334        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b334                msg_ramDump_heap_footer
- *fill*         0x0800b342        0x2 
- .rodata.msg_ramDump_stack_header
-                0x0800b344        0xc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b344                msg_ramDump_stack_header
- .rodata.msg_ramDump_stack_footer
-                0x0800b350        0xe CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b350                msg_ramDump_stack_footer
- *fill*         0x0800b35e        0x2 
- .rodata.msg_ramDump_seperator
-                0x0800b360        0x3 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800b360                msg_ramDump_seperator
- *fill*         0x0800b363        0x1 
+                0x0800b47c       0x30 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x0800b47c                MSIRangeTable
+ .rodata.msg_ramDiagnosticsGeneral_header1
+                0x0800b4ac       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b4ac                msg_ramDiagnosticsGeneral_header1
+ *fill*         0x0800b4f7        0x1 
+ .rodata.msg_ramDiagnosticsGeneral_header2
+                0x0800b4f8       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b4f8                msg_ramDiagnosticsGeneral_header2
+ *fill*         0x0800b543        0x1 
+ .rodata.msg_ramDiagnosticsGeneral_header3
+                0x0800b544       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b544                msg_ramDiagnosticsGeneral_header3
+ *fill*         0x0800b58f        0x1 
+ .rodata.msg_ramDiagnosticsGeneral_formatStringRAM1
+                0x0800b590       0x4d CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b590                msg_ramDiagnosticsGeneral_formatStringRAM1
+ *fill*         0x0800b5dd        0x3 
+ .rodata.msg_ramDiagnosticsGeneral_formatStringRAM2
+                0x0800b5e0       0x4d CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b5e0                msg_ramDiagnosticsGeneral_formatStringRAM2
+ *fill*         0x0800b62d        0x3 
+ .rodata.msg_ramDiagnosticsGeneral_formatStringFreeRAM
+                0x0800b630       0x4f CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b630                msg_ramDiagnosticsGeneral_formatStringFreeRAM
+ *fill*         0x0800b67f        0x1 
+ .rodata.msg_ramDiagnosticsGeneral_footer1
+                0x0800b680       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b680                msg_ramDiagnosticsGeneral_footer1
+ *fill*         0x0800b6cb        0x1 
+ .rodata.msg_ramDiagnosticsGeneral_footer2
+                0x0800b6cc       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b6cc                msg_ramDiagnosticsGeneral_footer2
+ *fill*         0x0800b717        0x1 
+ .rodata.msg_ramDiagnosticsRAM1_header1
+                0x0800b718       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b718                msg_ramDiagnosticsRAM1_header1
+ *fill*         0x0800b763        0x1 
+ .rodata.msg_ramDiagnosticsRAM1_header2
+                0x0800b764       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b764                msg_ramDiagnosticsRAM1_header2
+ *fill*         0x0800b7af        0x1 
+ .rodata.msg_ramDiagnosticsRAM1_header3
+                0x0800b7b0       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b7b0                msg_ramDiagnosticsRAM1_header3
+ *fill*         0x0800b7fb        0x1 
+ .rodata.msg_ramDiagnosticsRAM1_formatStringData
+                0x0800b7fc       0x45 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b7fc                msg_ramDiagnosticsRAM1_formatStringData
+ *fill*         0x0800b841        0x3 
+ .rodata.msg_ramDiagnosticsRAM1_formatStringBSS
+                0x0800b844       0x45 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b844                msg_ramDiagnosticsRAM1_formatStringBSS
+ *fill*         0x0800b889        0x3 
+ .rodata.msg_ramDiagnosticsRAM1_formatStringTData
+                0x0800b88c       0x45 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b88c                msg_ramDiagnosticsRAM1_formatStringTData
+ *fill*         0x0800b8d1        0x3 
+ .rodata.msg_ramDiagnosticsRAM1_formatStringHeap
+                0x0800b8d4       0x45 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b8d4                msg_ramDiagnosticsRAM1_formatStringHeap
+ *fill*         0x0800b919        0x3 
+ .rodata.msg_ramDiagnosticsRAM1_formatStringStack
+                0x0800b91c       0x45 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b91c                msg_ramDiagnosticsRAM1_formatStringStack
+ *fill*         0x0800b961        0x3 
+ .rodata.msg_ramDiagnosticsRAM1_formatStringFreeRAM
+                0x0800b964       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b964                msg_ramDiagnosticsRAM1_formatStringFreeRAM
+ *fill*         0x0800b9af        0x1 
+ .rodata.msg_ramDiagnosticsRAM2_header1
+                0x0800b9b0       0x4b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b9b0                msg_ramDiagnosticsRAM2_header1
+ *fill*         0x0800b9fb        0x1 
+ .rodata.msg_ramDiagnosticsRAM2_formatStringRamDia
+                0x0800b9fc       0x45 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800b9fc                msg_ramDiagnosticsRAM2_formatStringRamDia
+ *fill*         0x0800ba41        0x3 
  .rodata._svfprintf_r.str1.4
-                0x0800b364      0x1a7 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
+                0x0800ba44      0x1a7 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
                                  0x42 (size before relaxing)
- *fill*         0x0800b50b        0x1 
+ *fill*         0x0800bbeb        0x1 
  .rodata.zeroes.0
-                0x0800b50c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
+                0x0800bbec       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
  .rodata.blanks.1
-                0x0800b51c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
+                0x0800bbfc       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
  .rodata.str1.4
-                0x0800b52c       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-locale.o)
+                0x0800bc0c       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-locale.o)
  .rodata._dtoa_r.str1.4
-                0x0800b52c       0x83 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
+                0x0800bc0c       0x83 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
  .rodata.__multadd.str1.4
-                0x0800b52c       0x70 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
- .rodata.p05.0  0x0800b52c        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x0800bc0c       0x70 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+ .rodata.p05.0  0x0800bc0c        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
  .rodata.__mprec_bigtens
-                0x0800b538       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x0800b538                __mprec_bigtens
+                0x0800bc18       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x0800bc18                __mprec_bigtens
  .rodata.__mprec_tens
-                0x0800b560       0xc8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
-                0x0800b560                __mprec_tens
+                0x0800bc40       0xc8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+                0x0800bc40                __mprec_tens
  .rodata._ctype_
-                0x0800b628      0x101 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ctype_.o)
-                0x0800b628                _ctype_
+                0x0800bd08      0x101 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ctype_.o)
+                0x0800bd08                _ctype_
  .rodata.__assert_func.str1.4
-                0x0800b729       0x43 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-assert.o)
+                0x0800be09       0x43 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-assert.o)
  .rodata._vfiprintf_r.str1.4
-                0x0800b729       0x2f D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
- *fill*         0x0800b729        0x3 
+                0x0800be09       0x2f D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
+ *fill*         0x0800be09        0x3 
  .rodata.zeroes.0
-                0x0800b72c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
+                0x0800be0c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
  .rodata.blanks.1
-                0x0800b73c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
-                0x0800b74c                        . = ALIGN (0x4)
+                0x0800be1c       0x10 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
+                0x0800be2c                        . = ALIGN (0x4)
 
-.ARM.extab      0x0800b74c        0x0
-                0x0800b74c                        . = ALIGN (0x4)
+.ARM.extab      0x0800be2c        0x0
+                0x0800be2c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800b74c                        . = ALIGN (0x4)
+                0x0800be2c                        . = ALIGN (0x4)
 
-.ARM            0x0800b74c        0x8
-                0x0800b74c                        . = ALIGN (0x4)
-                0x0800b74c                        __exidx_start = .
+.ARM            0x0800be2c        0x8
+                0x0800be2c                        . = ALIGN (0x4)
+                0x0800be2c                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800b74c        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
- .ARM.exidx     0x0800b754        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memchr.o)
+ .ARM.exidx     0x0800be2c        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
+ .ARM.exidx     0x0800be34        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memchr.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x0800b754        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
+ .ARM.exidx     0x0800be34        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.__udivmoddi4
-                0x0800b754        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800be34        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x0800b754                        __exidx_end = .
-                0x0800b754                        . = ALIGN (0x4)
+                0x0800be34                        __exidx_end = .
+                0x0800be34                        . = ALIGN (0x4)
 
-.preinit_array  0x0800b754        0x0
-                0x0800b754                        . = ALIGN (0x4)
-                0x0800b754                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800be34        0x0
+                0x0800be34                        . = ALIGN (0x4)
+                0x0800be34                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0800b754                        PROVIDE (__preinit_array_end = .)
-                0x0800b754                        . = ALIGN (0x4)
+                0x0800be34                        PROVIDE (__preinit_array_end = .)
+                0x0800be34                        . = ALIGN (0x4)
 
-.init_array     0x0800b754        0x8
-                0x0800b754                        . = ALIGN (0x4)
-                0x0800b754                        PROVIDE (__init_array_start = .)
+.init_array     0x0800be34        0x8
+                0x0800be34                        . = ALIGN (0x4)
+                0x0800be34                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x0800b754        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x0800be34        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0800b758        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0800b75c                        PROVIDE (__init_array_end = .)
-                0x0800b75c                        . = ALIGN (0x4)
+ .init_array    0x0800be38        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0800be3c                        PROVIDE (__init_array_end = .)
+                0x0800be3c                        . = ALIGN (0x4)
 
-.fini_array     0x0800b75c        0x4
-                0x0800b75c                        . = ALIGN (0x4)
-                0x0800b75c                        PROVIDE (__fini_array_start = .)
+.fini_array     0x0800be3c        0x4
+                0x0800be3c                        . = ALIGN (0x4)
+                0x0800be3c                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800b75c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0800b760                        PROVIDE (__fini_array_end = .)
-                0x0800b760                        . = ALIGN (0x4)
-                0x0800b760                        _sidata = LOADADDR (.data)
+ .fini_array    0x0800be3c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0800be40                        PROVIDE (__fini_array_end = .)
+                0x0800be40                        . = ALIGN (0x4)
+                0x0800be40                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0800b760        0x0
- .rel.iplt      0x0800b760        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0800be40        0x0
+ .rel.iplt      0x0800be40        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000      0x888 load address 0x0800b760
+.data           0x20000000      0x888 load address 0x0800be40
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3972,17 +4009,17 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x20000888                        _edata = .
 
 .tm_clone_table
-                0x20000888        0x0 load address 0x0800bfe8
+                0x20000888        0x0 load address 0x0800c6c8
  .tm_clone_table
                 0x20000888        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x20000888        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x20000888        0x0 load address 0x0800bfe8
+.igot.plt       0x20000888        0x0 load address 0x0800c6c8
  .igot.plt      0x20000888        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20000888                        . = ALIGN (0x4)
 
-.bss            0x20000888      0x3c0 load address 0x0800bfe8
+.bss            0x20000888      0x3c0 load address 0x0800c6c8
                 0x20000888                        _sbss = .
                 0x20000888                        __bss_start__ = _sbss
  *(.bss)
@@ -3995,6 +4032,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x200008a4                uwTick
  .bss.__sbrk_heap_end
                 0x200008a8        0x4 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
+                0x200008a8                __sbrk_heap_end
  .bss.uart      0x200008ac       0x88 CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
                 0x200008ac                uart
  .bss.__malloc_current_mallinfo
@@ -4039,22 +4077,48 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x20000c48                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000c48     0x4400 load address 0x0800bfe8
+                0x20000c48      0x800 load address 0x0800c6c8
                 0x20000c48                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x20000c48                        PROVIDE (_end = .)
                 0x20001048                        . = (. + _Min_Heap_Size)
  *fill*         0x20000c48      0x400 
-                0x20005048                        . = (. + _Min_Stack_Size)
- *fill*         0x20001048     0x4000 
-                0x20005048                        PROVIDE (_heap_start = .)
-                0x20005048                        . = ALIGN (0x8)
+                0x20001448                        . = (. + _Min_Stack_Size)
+ *fill*         0x20001048      0x400 
+                [!provide]                        PROVIDE (_heap_start = .)
+                0x20001448                        . = ALIGN (0x8)
 
-.ram2           0x10000000        0x0
+.ramDiagnostics
+                0x10000000       0x18
                 0x10000000                        . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_sram2_start = .)
- *(.ram2)
-                [!provide]                        PROVIDE (_sram2_end = .)
+ *(.ramDiagnostics.uint8_t)
+ .ramDiagnostics.uint8_t
+                0x10000000        0xc CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x10000000                ramDiagnosticsRAM1_total_size
+                0x10000001                ramDiagnosticsRAM2_total_size
+                0x10000002                ramDiagnosticsCCSRAM_total_size
+                0x10000003                ramDiagnosticsRAM1_used
+                0x10000004                ramDiagnosticsRAM2_used
+                0x10000005                ramDiagnosticsCCSRAM_used
+                0x10000006                ramDiagnosticsRAM1_data_size
+                0x10000007                ramDiagnosticsRAM1_bss_size
+                0x10000008                ramDiagnosticsRAM1_tdat_size
+                0x10000009                ramDiagnosticsRAM1_heap_size
+                0x1000000a                ramDiagnosticsRAM1_stack_size
+                0x1000000b                ramDiagnosticsRAM2_ramDiagnostics_size
+                0x1000000c                        . = ALIGN (0x2)
+ *(.ramDiagnostics.uint16_t)
+ .ramDiagnostics.uint16_t
+                0x1000000c        0x4 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x1000000c                ramDiagnosticsGeneral_total_size
+                0x1000000e                ramDiagnosticsGeneral_used
+                0x10000010                        . = ALIGN (0x4)
+ *(.ramDiagnostics.uint32_t)
+ .ramDiagnostics.uint32_t
+                0x10000010        0x8 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x10000010                ramDiagnosticsRAM1_lastMSP
+                0x10000014                ramDiagnosticsRAM1_lastHeapEnd
+                0x10000018                        PROVIDE (__RAM_DIAGNOSTICS_END__ = .)
 
 /DISCARD/
  libc.a(*)
@@ -4246,7 +4310,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000     0xc2f1
+.debug_info     0x00000000     0xc534
  .debug_info    0x00000000      0xaeb CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_info    0x00000aeb      0xd81 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
  .debug_info    0x0000186c      0x757 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
@@ -4257,14 +4321,14 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_info    0x00007eef      0xd21 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
  .debug_info    0x00008c10      0x113 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
  .debug_info    0x00008d23      0x6a3 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
- .debug_info    0x000093c6      0x168 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
- .debug_info    0x0000952e      0x5aa CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_info    0x00009ad8      0xc0a CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_info    0x0000a6e2      0x672 CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_info    0x0000ad54      0xab8 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_info    0x0000b80c      0xae5 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_info    0x000093c6      0x169 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x0000952f      0x5aa CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_info    0x00009ad9      0xc12 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_info    0x0000a6eb      0x672 CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_info    0x0000ad5d      0xace CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ .debug_info    0x0000b82b      0xd09 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_abbrev   0x00000000     0x1e5b
+.debug_abbrev   0x00000000     0x1f0a
  .debug_abbrev  0x00000000      0x242 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_abbrev  0x00000242      0x31c CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
  .debug_abbrev  0x0000055e      0x1cb CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
@@ -4275,14 +4339,14 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_abbrev  0x00001163      0x1d2 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
  .debug_abbrev  0x00001335       0x73 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
  .debug_abbrev  0x000013a8      0x1b6 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
- .debug_abbrev  0x0000155e       0xbc CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
- .debug_abbrev  0x0000161a      0x11a CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_abbrev  0x00001734      0x1ef CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_abbrev  0x00001923      0x11f CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_abbrev  0x00001a42      0x1fe CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_abbrev  0x00001c40      0x21b CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_abbrev  0x0000155e       0xcf CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
+ .debug_abbrev  0x0000162d      0x11a CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_abbrev  0x00001747      0x202 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_abbrev  0x00001949      0x11f CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_abbrev  0x00001a68      0x1fe CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ .debug_abbrev  0x00001c66      0x2a4 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_aranges  0x00000000      0x9c0
+.debug_aranges  0x00000000      0x9e0
  .debug_aranges
                 0x00000000      0x130 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_aranges
@@ -4314,10 +4378,10 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_aranges
                 0x00000968       0x28 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
  .debug_aranges
-                0x00000990       0x30 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x00000990       0x50 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
 .debug_rnglists
-                0x00000000      0x754
+                0x00000000      0x770
  .debug_rnglists
                 0x00000000       0xdf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_rnglists
@@ -4347,9 +4411,9 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_rnglists
                 0x0000071a       0x1a CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
  .debug_rnglists
-                0x00000734       0x20 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x00000734       0x3c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_macro    0x00000000    0x26c64
+.debug_macro    0x00000000    0x26c6a
  .debug_macro   0x00000000      0x1f5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_macro   0x000001f5      0xacc CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_macro   0x00000cc1      0x1a1 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
@@ -4448,9 +4512,9 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_macro   0x0002690c       0x16 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
  .debug_macro   0x00026922      0x2d6 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00026bf8       0x56 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_macro   0x00026c4e       0x16 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x00026c4e       0x1c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_line     0x00000000     0xbf2f
+.debug_line     0x00000000     0xc006
  .debug_line    0x00000000      0xac5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_line    0x00000ac5      0xc60 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
  .debug_line    0x00001725      0xb19 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
@@ -4463,29 +4527,29 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_line    0x00008fd0      0x6a7 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
  .debug_line    0x00009677      0x383 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
  .debug_line    0x000099fa      0x4ad CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_line    0x00009ea7      0x817 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_line    0x0000a6be      0x6f4 CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_line    0x0000adb2      0x86f CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_line    0x0000b621      0x90e CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_line    0x00009ea7      0x818 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_line    0x0000a6bf      0x6f4 CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_line    0x0000adb3      0x873 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ .debug_line    0x0000b626      0x9e0 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_str      0x00000000    0xe9506
- .debug_str     0x00000000    0xe9506 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+.debug_str      0x00000000    0xe98de
+ .debug_str     0x00000000    0xe98de CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
                               0xe1a0d (size before relaxing)
- .debug_str     0x000e9506    0xe16f3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
- .debug_str     0x000e9506    0xe0ff3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .debug_str     0x000e9506    0xe13d5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
- .debug_str     0x000e9506    0xe14c0 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
- .debug_str     0x000e9506    0xe1639 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
- .debug_str     0x000e9506    0xe1bd2 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
- .debug_str     0x000e9506    0xe158a CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_str     0x000e9506    0xe0cec CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_str     0x000e9506     0x941b CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
- .debug_str     0x000e9506     0x7120 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
- .debug_str     0x000e9506    0x9ebd3 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_str     0x000e9506    0xe1478 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_str     0x000e9506    0xe10ee CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_str     0x000e9506    0xe45a2 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_str     0x000e9506    0xe469a CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_str     0x000e98de    0xe16f3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_str     0x000e98de    0xe0ff3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_str     0x000e98de    0xe13d5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000e98de    0xe14c0 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_str     0x000e98de    0xe1639 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_str     0x000e98de    0xe1bd2 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_str     0x000e98de    0xe158a CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_str     0x000e98de    0xe0cec CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_str     0x000e98de     0x941b CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x000e98de     0x7120 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x000e98de    0x9ebd3 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_str     0x000e98de    0xe148b CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_str     0x000e98de    0xe10ee CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_str     0x000e98de    0xe45e1 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ .debug_str     0x000e98de    0xe4a8f CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
 .comment        0x00000000       0x46
  .comment       0x00000000       0x46 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
@@ -4506,7 +4570,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .comment       0x00000046       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
  .comment       0x00000046       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_frame    0x00000000     0x3d98
+.debug_frame    0x00000000     0x3e2c
  .debug_frame   0x00000000      0x498 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
  .debug_frame   0x00000498      0x4e8 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
  .debug_frame   0x00000980      0x14c CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
@@ -4521,72 +4585,72 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_frame   0x000023c4       0x58 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
  .debug_frame   0x0000241c       0xd0 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .debug_frame   0x000024ec       0x58 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_frame   0x00002544       0x78 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_frame   0x000025bc       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000025e8       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000261c       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
- .debug_frame   0x0000264c       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
- .debug_frame   0x00002698       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
- .debug_frame   0x000026c8      0x13c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
- .debug_frame   0x00002804       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fwalk.o)
- .debug_frame   0x00002838       0x94 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-snprintf.o)
- .debug_frame   0x000028cc       0x8c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
- .debug_frame   0x00002958       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
- .debug_frame   0x00002984       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-closer.o)
- .debug_frame   0x000029b0       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
- .debug_frame   0x000029ec       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lseekr.o)
- .debug_frame   0x00002a18       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-readr.o)
- .debug_frame   0x00002a44       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
- .debug_frame   0x00002a70       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-writer.o)
- .debug_frame   0x00002a9c       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
- .debug_frame   0x00002abc       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
- .debug_frame   0x00002ae8       0xb0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
- .debug_frame   0x00002b98       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
- .debug_frame   0x00002bc0       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
- .debug_frame   0x00002bf0       0x5c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x00002c4c       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
- .debug_frame   0x00002c6c       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
- .debug_frame   0x00002cf0       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
- .debug_frame   0x00002d30       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssprint_r.o)
- .debug_frame   0x00002d64       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fclose.o)
- .debug_frame   0x00002da0       0x70 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fflush.o)
- .debug_frame   0x00002e10       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strncpy.o)
- .debug_frame   0x00002e38       0xec D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-locale.o)
- .debug_frame   0x00002f24       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-localeconv.o)
- .debug_frame   0x00002f64       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
- .debug_frame   0x00002f98       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memchr.o)
- .debug_frame   0x00002fe4       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libm_a-s_frexp.o)
- .debug_frame   0x00003010       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
- .debug_frame   0x00003044       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
- .debug_frame   0x000030c8      0x130 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mbtowc_r.o)
- .debug_frame   0x000031f8      0x288 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
- .debug_frame   0x00003480       0x8c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wctomb_r.o)
- .debug_frame   0x0000350c       0x60 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcrtomb.o)
- .debug_frame   0x0000356c       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsrtombs.o)
- .debug_frame   0x000035bc       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ctype_.o)
- .debug_frame   0x000035dc       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssputs_r.o)
- .debug_frame   0x00003610       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memmove.o)
- .debug_frame   0x00003640       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
- .debug_frame   0x00003668       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-assert.o)
- .debug_frame   0x000036a8       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-callocr.o)
- .debug_frame   0x000036d4       0x48 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-reallocr.o)
- .debug_frame   0x0000371c       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsnrtombs.o)
- .debug_frame   0x000037a0       0x70 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fiprintf.o)
- .debug_frame   0x00003810       0x8c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
- .debug_frame   0x0000389c       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sprint_r.o)
- .debug_frame   0x000038c4       0x60 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fvwrite.o)
- .debug_frame   0x00003924       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wsetup.o)
- .debug_frame   0x00003950       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-abort.o)
- .debug_frame   0x00003978       0x6c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-makebuf.o)
- .debug_frame   0x000039e4      0x11c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signal.o)
- .debug_frame   0x00003b00       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fstatr.o)
- .debug_frame   0x00003b2c       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-isattyr.o)
- .debug_frame   0x00003b58       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signalr.o)
- .debug_frame   0x00003b94       0xac D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00003c40       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00003c90       0xc4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x00003d54       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x00003d74       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x00002544      0x10c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_frame   0x00002650       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000267c       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000026b0       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-malloc.o)
+ .debug_frame   0x000026e0       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mallocr.o)
+ .debug_frame   0x0000272c       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mlock.o)
+ .debug_frame   0x0000275c      0x13c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+ .debug_frame   0x00002898       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fwalk.o)
+ .debug_frame   0x000028cc       0x94 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-snprintf.o)
+ .debug_frame   0x00002960       0x8c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
+ .debug_frame   0x000029ec       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+ .debug_frame   0x00002a18       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-closer.o)
+ .debug_frame   0x00002a44       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-reent.o)
+ .debug_frame   0x00002a80       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lseekr.o)
+ .debug_frame   0x00002aac       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-readr.o)
+ .debug_frame   0x00002ad8       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sbrkr.o)
+ .debug_frame   0x00002b04       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-writer.o)
+ .debug_frame   0x00002b30       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
+ .debug_frame   0x00002b50       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+ .debug_frame   0x00002b7c       0xb0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+ .debug_frame   0x00002c2c       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sysconf.o)
+ .debug_frame   0x00002c54       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
+ .debug_frame   0x00002c84       0x5c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00002ce0       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+ .debug_frame   0x00002d00       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-freer.o)
+ .debug_frame   0x00002d84       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-svfprintf.o)
+ .debug_frame   0x00002dc4       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssprint_r.o)
+ .debug_frame   0x00002df8       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fclose.o)
+ .debug_frame   0x00002e34       0x70 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fflush.o)
+ .debug_frame   0x00002ea4       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strncpy.o)
+ .debug_frame   0x00002ecc       0xec D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-locale.o)
+ .debug_frame   0x00002fb8       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-localeconv.o)
+ .debug_frame   0x00002ff8       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+ .debug_frame   0x0000302c       0x4c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memchr.o)
+ .debug_frame   0x00003078       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libm_a-s_frexp.o)
+ .debug_frame   0x000030a4       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+ .debug_frame   0x000030d8       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-dtoa.o)
+ .debug_frame   0x0000315c      0x130 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mbtowc_r.o)
+ .debug_frame   0x0000328c      0x288 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-mprec.o)
+ .debug_frame   0x00003514       0x8c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wctomb_r.o)
+ .debug_frame   0x000035a0       0x60 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcrtomb.o)
+ .debug_frame   0x00003600       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsrtombs.o)
+ .debug_frame   0x00003650       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ctype_.o)
+ .debug_frame   0x00003670       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-ssputs_r.o)
+ .debug_frame   0x000036a4       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memmove.o)
+ .debug_frame   0x000036d4       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
+ .debug_frame   0x000036fc       0x40 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-assert.o)
+ .debug_frame   0x0000373c       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-callocr.o)
+ .debug_frame   0x00003768       0x48 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-reallocr.o)
+ .debug_frame   0x000037b0       0x84 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wcsnrtombs.o)
+ .debug_frame   0x00003834       0x70 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fiprintf.o)
+ .debug_frame   0x000038a4       0x8c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-vfiprintf.o)
+ .debug_frame   0x00003930       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-sprint_r.o)
+ .debug_frame   0x00003958       0x60 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fvwrite.o)
+ .debug_frame   0x000039b8       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-wsetup.o)
+ .debug_frame   0x000039e4       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-abort.o)
+ .debug_frame   0x00003a0c       0x6c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-makebuf.o)
+ .debug_frame   0x00003a78      0x11c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signal.o)
+ .debug_frame   0x00003b94       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fstatr.o)
+ .debug_frame   0x00003bc0       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-isattyr.o)
+ .debug_frame   0x00003bec       0x3c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-signalr.o)
+ .debug_frame   0x00003c28       0xac D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00003cd4       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00003d24       0xc4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00003de8       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x00003e08       0x24 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
 
 .debug_line_str
                 0x00000000      0x1e5

@@ -39,8 +39,14 @@ ENTRY(Reset_Handler)
 /* Highest address of the user mode stack */
 _estack = ORIGIN(RAM) + LENGTH(RAM); /* end of "RAM" Ram type memory */
 
-_Min_Heap_Size = 0x400; /* required amount of heap */
-_Min_Stack_Size = 0x4000; /* required amount of stack */
+__RAM1_start__ = ORIGIN(RAM); /* Defined by me */
+__RAM1_end__ = ORIGIN(RAM) + LENGTH(RAM); /* Defined by me */
+
+__RAM2_start__ = ORIGIN(RAM2); /* Defined by me */
+__RAM2_end__ = ORIGIN(RAM2) + LENGTH(RAM2); /* Defined by me */
+
+_Min_Heap_Size = 0x0400; /* required amount of heap */
+_Min_Stack_Size = 0x0400; /* required amount of stack */
 
 /* Memories definition */
 MEMORY
@@ -175,17 +181,20 @@ SECTIONS
     PROVIDE ( _end = . );
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
-    PROVIDE ( _heap_start = . );
+    PROVIDE ( _heap_start = . ); /* It doesn't matter in sysmem.c */
     . = ALIGN(8);
   } >RAM
 
   /* RAM Bank 2 custom section*/
-  .ram2 : 
+  .ramDiagnostics : 
   {
     . = ALIGN(4);
-    PROVIDE ( _sram2_start = . );
-    *(.ram2)
-    PROVIDE (_sram2_end = . ); 
+    *(.ramDiagnostics.uint8_t)
+    . = ALIGN(2);
+    *(.ramDiagnostics.uint16_t)
+    . = ALIGN(4);
+    *(.ramDiagnostics.uint32_t)
+    PROVIDE ( __RAM_DIAGNOSTICS_END__ = . );
   } >RAM2
 
   /* Remove information from the compiler libraries */
