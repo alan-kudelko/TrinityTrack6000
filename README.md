@@ -100,9 +100,16 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
+## Technical Table of Contents
+
+1. [Project Structure & File Overview](#1--project-structure--file-overview)
+2. [System's architecture](#2-system's-architecture)
+3. [STM32G473CET6](#3-STM32G473CET6)
+---
+
 # ⚙️ Technical Overview STM32 Part
 
-### 1. 📦 Project Structure & File Overview
+## 1. 📦 Project Structure & File Overview
 
     📦 TrinityTrack6000/
  	│
@@ -149,9 +156,15 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-### 7. 💾 Memory Layout
+## 2. System's architecture
 
-#### 7.1 RAM Map
+---
+
+## 3. STM32G473CET6
+
+### 3.7. 💾 Memory Layout
+
+#### 3.7.1 RAM Map
 
 ![UI Navigation](Media/STM32G473_RAM_MAP.png)
 
@@ -176,9 +189,17 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - `__brkval` is a pointer internally managed by malloc() to indicate the current top of the heap. If no memory has been allocated yet, it remains zero.
 - The `__stack_ptr` variable is initialized with the value of the `SP` register before the RTOS scheduler starts. On AVR microcontrollers, `SP` holds the current stack pointer. However, after the scheduler starts, `SP` is overwritten with the stack pointer of the currently executing task, which would lead to incorrect free memory calculations if used directly.
 
-#### 7.2 Custom RAM Segments
+#### 3.7.2 Custom RAM Segments
 
 
+
+## 4. Infineon
+
+---
+
+## 5. ATmega2561
+
+---
 
 ### X. Pinout overview
 
