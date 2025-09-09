@@ -1,19 +1,34 @@
-//Doxy
+/**
+ * @file TrinityTrack6000_Init.h
+ * @brief System initialization functions for TrinityTrack6000 project.
+ *
+ * This header provides prototypes for initialization routines including
+ * system clock, HAL, GPIO, UART, and the overall system setup.  
+ * It also defines error handling and assert reporting mechanisms.
+ *
+ * @date 2025.09.08
+ * @author Alan Kudełko
+ */
 
 #ifndef _TRINITY_TRACK6000_INIT_H_
 	#define _TRINITY_TRACK6000_INIT_H_
 
 #include <TrinityTrack6000_Config.h>
 
+/** @name Bootup sequence diagnostics strings
+ *  @{
+ */
+
+extern const char msg_initializeHAL_info[]; /**< Info1 */
+extern const char msg_initializeClock_info[]; /**< Info1 */
+extern const char msg_initializeGPIO_info[]; /**< Info1 */
+extern const char msg_initializeUART_info[]; /**< Info1 */
+extern const char msg_initializeRAMDia_info[]; /**< Info1 */
+/** @} */
+
 #ifdef __cplusplus
 	extern "C"{
 #endif // __cplusplus
-
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
-void initializeClock(void);
 
 /**
   * @brief HAL Initialization Function
@@ -21,6 +36,12 @@ void initializeClock(void);
   * @retval None
   */
 void initializeHAL(void);
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void initializeClock(void);
 
 /**
   * @brief GPIO Initialization Function
@@ -35,6 +56,13 @@ void initializeGPIO(void);
   * @retval None
   */
 void initializeUART(void);
+
+/**
+  * @brief Memory Initialization Function
+  * @param None
+  * @retval None
+  */
+void initializeMemory(void);
 
 /**
  * @brief System Initialization Function

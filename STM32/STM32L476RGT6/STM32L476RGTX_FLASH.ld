@@ -185,9 +185,10 @@ SECTIONS
     . = ALIGN(8);
   } >RAM
 
-  /* RAM Bank 2 custom section*/
+  /* RAM Bank 2 custom sections*/
   .ramDiagnostics : 
   {
+    PROVIDE ( __RAM_DIAGNOSTICS_START__ = . );
     . = ALIGN(4);
     *(.ramDiagnostics.uint8_t)
     . = ALIGN(2);
@@ -195,6 +196,13 @@ SECTIONS
     . = ALIGN(4);
     *(.ramDiagnostics.uint32_t)
     PROVIDE ( __RAM_DIAGNOSTICS_END__ = . );
+  } >RAM2
+  .sysDiag :
+  {
+    PROVIDE ( __SYS_DIAGNOSTICS_START__ = . );
+    . = ALIGN(4);
+    *(sysDiag);
+    PROVIDE ( __SYS_DIAGNOSTICS_END__ = . );
   } >RAM2
 
   /* Remove information from the compiler libraries */

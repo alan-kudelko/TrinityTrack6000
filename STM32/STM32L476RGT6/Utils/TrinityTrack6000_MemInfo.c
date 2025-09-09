@@ -19,7 +19,11 @@ extern uint32_t _heap_start; // Defined in the linker script by me for heap star
 extern uint32_t __RAM2_start__; // Defined in the linker script by me for RAM2 start
 extern uint32_t __RAM2_end__; // Defined in the linker script by me for RAM2 end
 
+extern uint32_t __RAM_DIAGNOSTICS_START__; // Defined in the linker script be me for start of ramDiagnostics section in RAM2
 extern uint32_t __RAM_DIAGNOSTICS_END__; // Defined in the linker script by me for end of ramDiagnostics section in RAM2
+
+extern uint32_t __SYS_DIAGNOSTICS_START__; // Defined in the linker scritp be me for start of sysDiag section in RAM2
+extern uint32_t __SYS_DIAGNOSTICS_END__; // Defined in the linker script by me for end of sysDiag section in RAM2
 
 extern uint8_t* __sbrk_heap_end; // Defined in sysmem.c
 
@@ -65,12 +69,19 @@ const char msg_ramDiagnosticsRAM2_header1[]               ="+-------------------
                                                         //  | Section | Start      | End        | Size    | Usage     |            |
                                                         //  +---------+------------+------------+---------+-----------+------------+
                                                         //  | .ramDia | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
-const char msg_ramDiagnosticsRAM2_formatStringRamDia[]    ="| .ramDia | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
+const char msg_ramDiagnosticsRAM2_formatStringRamDia[]    ="| .ramDia | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+                                                        //  | .sysDia | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
+const char msg_ramDiagnosticsRAM2_formatStringSysDia[]    ="| .sysDia | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
                                                         //  +---------+--------+----------+------------+------+--------------------+
                                                         //  | FREE RAM TOTAL: 60 KB                                                |                                      
                                                         //  | Commands: s(snapshot) b(bank) q(quit)                                |
 														//  +----------------------------------------------------------------------+
 
+const char msg_ramDiagnosticsCCSRAM_header1[]             ="+-----------------------[ BANK CCSRAM DETAILS ]------------------------+\r\n";
+                                                        //  | Section | Start      | End        | Size    | Usage     |            |
+                                                        //  +---------+------------+------------+---------+-----------+------------+
+
+														
 uint16_t ramDiagnosticsGeneral_total_size=0;
 uint8_t ramDiagnosticsRAM1_total_size=0;
 uint8_t ramDiagnosticsRAM2_total_size=0;
@@ -90,6 +101,7 @@ uint8_t ramDiagnosticsRAM1_heap_size=0;
 uint8_t ramDiagnosticsRAM1_stack_size=0;
 
 uint8_t ramDiagnosticsRAM2_ramDiagnostics_size=0;
+uint8_t ramDiagnosticsRAM2_sysDiagnostics_size=0;
 
 void ramDiagnositcsInit(void){
 	ramDiagnosticsRAM1_total_size=((uint32_t)&__RAM1_end__-(uint32_t)&__RAM1_start__)/1024;
@@ -101,7 +113,8 @@ void ramDiagnositcsInit(void){
 	ramDiagnosticsRAM1_bss_size=((&__bss_end__-(uint32_t*)&__bss_start__)/1024);
 	ramDiagnosticsRAM1_tdat_size=0; // Will be implemented after adding ThreadX to the project
 
-	ramDiagnosticsRAM2_ramDiagnostics_size=((uint32_t)&__RAM_DIAGNOSTICS_END__-(uint32_t)&__RAM2_start__)/1024;
+	ramDiagnosticsRAM2_ramDiagnostics_size=((uint32_t)&__RAM_DIAGNOSTICS_END__-(uint32_t)&__RAM_DIAGNOSTICS_START__)/1024;
+	ramDiagnosticsRAM2_sysDiagnostics_size=((uint32_t)&__SYS_DIAGNOSTICS_END__-(uint32_t)&__SYS_DIAGNOSTICS_END__)/1024;
 
 	ramDiagnosticsRefresh();
 }
@@ -261,12 +274,20 @@ void ramDiagnosticsRAM2(){
 	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 // Send .ramDiagnostics section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM2_formatStringRamDia,
-		(uint32_t)&__RAM2_start__,	                 // .ramDiagnostics start
+		(uint32_t)&__RAM_DIAGNOSTICS_START__,	     // .ramDiagnostics start
 		(uint32_t)&__RAM_DIAGNOSTICS_END__,          // .ramDiagnostics end
 		ramDiagnosticsRAM2_ramDiagnostics_size,      // .ramDiagnostics size in KB
 		ramDiagnosticsRAM2_ramDiagnostics_size       // .ramDiagnostics used size in KB
 	);
 	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+// Send .sysDiag section info
+	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM2_formatStringSysDia,
+		(uint32_t)&__SYS_DIAGNOSTICS_START__,        // .sysDiag start
+		(uint32_t)&__SYS_DIAGNOSTICS_END__,          // .sysDiag end
+		ramDiagnosticsRAM2_sysDiagnostics_size,      // .sysDiag size in KB
+		ramDiagnosticsRAM2_sysDiagnostics_size       // .sysDiag size in KB
+	);
+	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);	
 // Send RAM2 diagnostics footers
 	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 // Send Free RAM total

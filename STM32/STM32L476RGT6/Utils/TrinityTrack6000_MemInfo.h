@@ -1,4 +1,28 @@
-//Doxy
+/**
+ * @file TrinityTrack6000_MemInfo.h
+ * @brief RAM diagnostics interface for TrinityTrack6000 project.
+ *
+ * This module provides functions and variables for monitoring and 
+ * reporting memory usage across different RAM banks (RAM1, RAM2, CCSRAM). 
+ * It defines diagnostics headers/footers, format strings for 
+ * generating ASCII reports, and dedicated variables stored in 
+ * `.ramDiagnostics` linker sections to track memory sizes and usage.
+ *
+ * Features:
+ * - Initialization and refresh of memory usage information
+ * - General RAM diagnostics overview
+ * - Per-bank diagnostics for RAM1, RAM2, and CCSRAM
+ * - Tracking of heap and stack pointers in RAM1
+ * - Allocation of diagnostic variables in separate linker sections
+ *
+ * Usage:
+ * - Call `ramDiagnositcsInit()` during system initialization to set up total sizes
+ * - Call `ramDiagnosticsRefresh()` on-demand or periodically to update usage data
+ * - Use `ramDiagnosticsGeneral()`, `ramDiagnosticsRAM1()`, etc. to print details
+ *
+ * @date 2025.09.08
+ * @author Alan Kudełko
+ */
 #ifndef _TRINITYTRACK6000_MEMINFO_H_
     #define _TRINITYTRACK6000_MEMINFO_H_
 
@@ -33,8 +57,9 @@ extern const char msg_ramDiagnosticsRAM1_formatStringFreeRAM[];  /**< RAM1 diagn
 
 extern const char msg_ramDiagnosticsRAM2_header1[]; /**< RAM2 diagnostics header line 1 */
 extern const char msg_ramDiagnosticsRAM2_formatStringRamDia[]; /**< RAM2 diagnostics format string for .ramDiagnostics section */
+extern const char msg_ramDiagnosticsRAM2_formatStringSysDia[]; /**< RAM2 diagnostics format string for .sysDiag section */
 
-
+extern const char msg_ramDiagnosticsCCSRAM_header1[]; /**< CCSRAM diagnostics header line 1 */
 /** @} */
 
 /**
@@ -60,30 +85,62 @@ extern uint8_t ramDiagnosticsRAM1_heap_size      __attribute((section(".ramDiagn
 extern uint8_t ramDiagnosticsRAM1_stack_size     __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Size of .stack section in RAM1 */
 
 extern uint8_t ramDiagnosticsRAM2_ramDiagnostics_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .ramDiagnostics section in RAM2 */
-
+extern uint8_t ramDiagnosticsRAM2_sysDiagnostics_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .sysDiagnostics section in RAM2 */
 /** @} */
 
 #ifdef __cplusplus
     extern "C" {
 #endif // __cplusplus
 
-// Initialize RAM diagnostics - calculate total RAM sizes and refresh current usage
-// Move to initializeSystem()
+/**
+ * @brief Initialize RAM diagnostics.
+ *
+ * Calculates the total sizes of all RAM banks and refreshes the current usage.  
+ * This function should be called once during system initialization 
+ * (e.g., inside `initializeSystem()`).
+ */
 void ramDiagnositcsInit(void);
 
-// Calculate current RAM usage
+/**
+ * @brief Refresh RAM diagnostics data.
+ *
+ * Updates the usage information for all RAM banks (RAM1, RAM2, CCSRAM).  
+ * Should be called periodically or on-demand when up-to-date memory 
+ * information is required.
+ */
 void ramDiagnosticsRefresh(void);
 
-// RAM memory info - general
+/**
+ * @brief Print general RAM usage information.
+ *
+ * Displays an overview of all RAM banks, including start/end addresses, 
+ * total sizes, usage bars, and percentage utilization.
+ */
 void ramDiagnosticsGeneral(void);
 
-// RAM memory info bank 1
+/**
+ * @brief Print detailed RAM1 diagnostics.
+ *
+ * Displays section-level information for RAM1, including `.data`, `.bss`, 
+ * `.heap`, and `.stack` sizes, usage, and high-water marks.
+ */
 void ramDiagnosticsRAM1(void);
 
-// RAM memory info bank 2
+/**
+ * @brief Print detailed RAM2 diagnostics.
+ *
+ * Displays section-level information for RAM2.  
+ * By default, this includes `.ramDiagnostics` or any custom sections 
+ * assigned to RAM2.
+ */
 void ramDiagnosticsRAM2(void);
 
-// RAM memory info CCSRAM
+/**
+ * @brief Print detailed CCSRAM diagnostics.
+ *
+ * Displays section-level information for CCMRAM/CCSRAM.
+ * Yes to be implemented
+ */
 void ramDiagnosticsCCSRAM(void);
 
 

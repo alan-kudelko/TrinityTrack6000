@@ -1,6 +1,19 @@
+#include <string.h>
+
 #include <TrinityTrack6000_Init.h>
+#include <TrinityTrack6000_Errors.h>
 
 extern void ramDiagnositcsInit(void);
+
+const char msg_initializeHAL_info[]   ="| 00 HAL Initialized\r\n";
+const char msg_initializeClock_info[] ="| 01 Clock Initialized\r\n";
+const char msg_initializeGPIO_info[]  ="| 02 GPIO Initialized\r\n";
+const char msg_initializeUART_info[]  ="| 03 UART Initialized\r\n";
+const char msg_initializeRAMDia_info[]="| 04 Memory diagnostics Initialized\r\n";
+
+void initializeHAL(void){
+	HAL_Init();
+}
 
 void initializeClock(void){
   	RCC_OscInitTypeDef RCC_OscInitStruct={0};
@@ -9,6 +22,7 @@ void initializeClock(void){
   	/** Configure the main internal regulator output voltage
   	*/
   	if(HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1)!=HAL_OK){
+		global_error_code=ERROR_HAL_PWREx_ControlVoltageScaling;
     	Error_Handler();
   	}
 
@@ -26,6 +40,7 @@ void initializeClock(void){
   	RCC_OscInitStruct.PLL.PLLQ=RCC_PLLQ_DIV2;
   	RCC_OscInitStruct.PLL.PLLR=RCC_PLLR_DIV2;
   	if(HAL_RCC_OscConfig(&RCC_OscInitStruct)!=HAL_OK){
+		global_error_code=ERROR_HAL_RCC_OscConfig;
     	Error_Handler();
   	}
 
@@ -39,12 +54,9 @@ void initializeClock(void){
   	RCC_ClkInitStruct.APB2CLKDivider=RCC_HCLK_DIV1;
 
   	if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct,FLASH_LATENCY_4)!=HAL_OK){
+		global_error_code=ERROR_HAL_RCC_ClockConfig;
     	Error_Handler();
   	}	
-}
-
-void initializeHAL(void){
-	HAL_Init();
 }
 
 void initializeGPIO(void){
@@ -69,8 +81,20 @@ void initializeUART(void){
 	__HAL_RCC_USART2_CLK_ENABLE();
 
 	if(HAL_UART_Init(&uart)!=HAL_OK){
+		global_error_code=ERROR_HAL_UART_Init;
 		Error_Handler();
 	}
+	// Fix magic numbers
+	HAL_UART_Transmit(&uart,(uint8_t*)msg_initializeHAL_info,strlen(msg_initializeHAL_info),1000);
+	HAL_UART_Transmit(&uart,(uint8_t*)msg_initializeClock_info,strlen(msg_initializeClock_info),1000);
+	HAL_UART_Transmit(&uart,(uint8_t*)msg_initializeGPIO_info,strlen(msg_initializeGPIO_info),1000);
+	HAL_UART_Transmit(&uart,(uint8_t*)msg_initializeUART_info,strlen(msg_initializeUART_info),1000);
+}
+
+void initializeMemory(void){
+	ramDiagnositcsInit();
+
+	HAL_UART_Transmit(&uart,(uint8_t*)msg_initializeRAMDia_info,strlen(msg_initializeRAMDia_info),1000);
 }
 
 void initializeSystem(void){
@@ -78,7 +102,7 @@ void initializeSystem(void){
 	initializeClock();
 	initializeGPIO();
 	initializeUART();
-	ramDiagnositcsInit();
+	initializeMemory();
 }
 
 void Error_Handler(void){

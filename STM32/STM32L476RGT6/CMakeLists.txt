@@ -82,7 +82,14 @@ set(CMAKE_ASM_FLAGS_RELEASE "${CPU_FLAGS_ASM}")
 set(CMAKE_ASM_FLAGS_DEBUG   "${CPU_FLAGS_ASM}")
 
 # Setting up linker flags
-set(CMAKE_EXE_LINKER_FLAGS "${CPU_FLAGS_ASM} -T${LINKER_SCRIPT} -Wl,--gc-sections -Wl,-Map=${PROJECT_NAME}.map ")
+set(CMAKE_EXE_LINKER_FLAGS "${CPU_FLAGS_ASM} -T${LINKER_SCRIPT} -Wl,--gc-sections")
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${CMAKE_BINARY_DIR}/Debug/${PROJECT_NAME}.map")
+elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${CMAKE_BINARY_DIR}/Release/${PROJECT_NAME}.map")
+endif()
+
 
 message(STATUS "[6] Compiler flags C:   ${CMAKE_C_FLAGS}")
 message(STATUS "    Compiler flags CXX: ${CMAKE_CXX_FLAGS}")
