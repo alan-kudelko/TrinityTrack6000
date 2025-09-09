@@ -112,6 +112,9 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 5. [STM32G473CET6](#5-stm32g473cet6)
    - [5.7 💾 Memory Layout](#57--memory-layout)
      - [5.7.1 RAM Map](#571-ram-map)
+     - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
+6. [Infineon](#6-infineon)
+7. [ATmega328p](#7-atmega328p)
 ---
 
 ## ⚙️ Technical Overview STM32 Part
@@ -227,7 +230,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 (soon)
 
-## 3.3 ATmega2561 Pinout (TQFP-32)
+## 3.3 ATmega328p Pinout (TQFP-32)
 
 | Pin | Usage |
 |-----|-------|
@@ -305,7 +308,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## 7. ATmega2561
+## 7. ATmega328p
 
 ---
 
