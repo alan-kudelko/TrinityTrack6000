@@ -507,20 +507,9 @@ According to these graphs, the Injora 540 13T motor reaches a peak power of arou
 
 With the selected **DC motor** and **1:50 reduction gearbox**, the theoretical sprocket speed is:  
 
-\[
-n_{out} = \frac{n}{r} = \frac{32500}{50} \approx 650 \ \text{rpm}
-\]
+$n_{out} = \frac{n}{r} = \frac{32500}{50} \approx 650 \ \text{rpm}$
 
-Using formula (1), we can calculate the **maximum theoretical speed of the tank**:  
 
-1)  
-\[
-V_{max} = \pi \cdot \frac{D \cdot n_{out}}{60}
-\]
-
-\[
-V_{max} = \pi \cdot \frac{0.048 \cdot 650}{60} \approx 1.63 \ \text{m/s} \approx 5.88 \ \text{km/h}
-\]
 
 
 ---
