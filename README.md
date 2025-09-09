@@ -105,7 +105,10 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 1. [Project Structure & File Overview](#1--project-structure--file-overview)
 2. [Design considerations](#2-systems-architecture)
 3. [MCU's pinouts](#3-mcus-pinouts)
-3.1 [STM32G473CET6 Pinout (LQFP-48)](#3.1-STM32G473CET6-Pinout-(LQFP-48))
+   - [3.1 STM32G473CET6 Pinout (LQFP-48)](#31-stm32g473cet6-pinout-lqfp-48)
+   - [3.2 Infineon Pinout](#32-infineon-pinout)
+   - [3.3 ATmega328p Pinout](#33-atmega328p-pinout-tqfp-32)
+4. [System's architecture](#4-systems-architecture)
 ---
 
 ## ⚙️ Technical Overview STM32 Part
