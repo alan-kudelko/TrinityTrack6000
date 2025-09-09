@@ -450,6 +450,22 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 
 ## 8. Mechanical Overview
 
+### 8.0 Tank Dimensions and weight
+
+| Dimension    |         |
+|--------------|---------|
+| $Length$     | 70 [cm] |
+| $Width_{1}$  | 32 [cm] |
+| $Width_{2}$  | 42 [cm] |
+| $Height$     | 20 [cm] |
+| $Ground\ clearance$ | 5 [cm] |
+| $Weight$     | 25 [kg] |
+
+###### $Width_{1}$ - Width of tank without tracks  
+###### $Width_{2}$ - Width of tank with tracks  
+
+Speed of the tank has to be at least $V_{Max}=5\frac{km}{h}$
+
 ### 8.1 Tank Body Overview
 
 ![Tank Chassis](Media/Tank_Body_1.jpg)
@@ -468,13 +484,27 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 ![Tank Tracks](Media/Injora540_Parameters_Comparison.png)
 ![Tank Tracks](Media/DC_Motor_Selection.png)
 
+According to graphs Injora 540 13T has the highest peak power of around 300W but its RPM is too high for usage in a RC Tank. In order to able to move heavy vehicle we need to use a gearbox.
+
 
 #### 8.2.3 Reduction Gearbox
+
+| Drivetrain parameters    |         |
+|--------------|---------|
+| Sprocket wheel diameter     | D=48 [mm] |
+| RPM  | n=32500 [rpm] |
+| Gearbox reduction  | r=1:50 |
 
 ![Tank Tracks](Media/DC_Motor_Gearbox_1_50.png)
 ![Tank Tracks](Media/DC_Motor_Gearbox_dims_1.png)
 ![Tank Tracks](Media/DC_Motor_Gearbox_dims_2.png)
 ![Tank Tracks](Media/DC_Motor_Gearbox_Selection.png)
+
+We can see that the selected DC motor with 1:50 gearbox gives theoretical 650 rpm.
+
+Using a formula 1) we can calculate maximum theoretical speed of a tank.
+
+1) $V_{Max}=\pi\frac{D*rpm}{60}=1.63\frac{m}{s}=5.88\frac{km}{h} $
 
 
 ---
