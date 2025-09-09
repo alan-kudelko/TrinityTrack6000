@@ -109,6 +109,9 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [3.2 Infineon Pinout](#32-infineon-pinout)
    - [3.3 ATmega328p Pinout](#33-atmega328p-pinout-tqfp-32)
 4. [System's architecture](#4-systems-architecture)
+5. [STM32G473CET6](#5-stm32g473cet6)
+   - [5.7 💾 Memory Layout](#57--memory-layout)
+     - [5.7.1 RAM Map](#571-ram-map)
 ---
 
 ## ⚙️ Technical Overview STM32 Part
