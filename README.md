@@ -114,6 +114,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [5.7 💾 Memory Layout](#57--memory-layout)
      - [5.7.1 RAM Map](#571-ram-map)
      - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
+     - [5.7.3 Free Memory Calculation](#573-free-memory-calculation)
+     - [5.7.4 RAM Usage Overview](#574-ram-usage-overview)
 7. [Infineon](#6-infineon)
 8. [ATmega328p](#7-atmega328p)
 ---
@@ -291,18 +293,6 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - `ramDiagnosticsRAM1_lastMSP` is a C variable defined by me to capture the last value of the main stack pointer before the RTOS scheduler starts (see Notes below).
 - `__RAM1_end__` is a custom linker symbol representing the last address of RAM1 on STM32G473CET6
 
-#### 5.7.1.2 RAM2
-- `__RAM_DIAGNOSTICS_start__` is a custom linker symbol representing the starting address of the `.ramDiagnostics` section in RAM2
-- `__RAM_DIAGNOSTICS_end__` is a custom linker symbol representing the ending address of the `.ramDiagnostics` section in RAM2
-- `__SYS_DIAGNOSTICS_start__` is a custom linker symbol representing the starting address of the `.sysDiag` section in RAM2
-- `__SYS_DIAGNOSTICS_end__` is a custom linker symbol representing the ending address of the `.sysDiag` section in RAM2
-- `__RAM2_end` is a custom linker symbol representing the ending address of the RAM2 on STM32G473CET6
-
-#### 5.7.1.3 CCSRAM
-- `__CRIT_start__` is a custom linker symbol representing the starting address of the `.crit` section in CCSRAM
-- `__CRIT_end__` is a custom linker symbol representing the ending address of the `.crit` section in CCSRAM
-- `__CCSRAM_end__` is a custom linker symbol representing the ending address of the CCSRAM on STM32G473CET6
-
 *RAM1 notes:*
 - The `.tdat` section is a custom linker-defined memory segment used to store non-critical or rarely used Task Control Blocks (TCBs), their stacks, and associated guard zones. By placing these stacks contiguously within `.tdat`, the system ensures controlled allocation and simplifies stack overflow detection for non-critical tasks.
 - The symbols `__TDAT_start__` and `__TDAT_end__` were predefined in the linker script, along with a custom `.tdat` section. This section is used to store Task Control Blocks (TCBs), task stacks, and corresponding guard zones. The `.tdat` section ensures that stacks and their guard zones are placed contiguously in memory, enabling reliable stack overflow monitoring.
@@ -313,10 +303,22 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
   Here, `__sbrk_heap_end` is a pointer managed by the STM32's custom implementation of `_sbrk`, indicating the current top of the heap. If no memory has been allocated yet, it remains `NULL`.
 - The `ramDiagnosticsRAM1_lastMSP` variable captures the value of the main stack pointer (`MSP`) before the RTOS scheduler starts. After the scheduler starts, `MSP` is switched to the currently running task's stack pointer, which would make direct free memory calculations invalid if used afterward.
 
+#### 5.7.1.2 RAM2
+- `__RAM_DIAGNOSTICS_start__` is a custom linker symbol representing the starting address of the `.ramDiagnostics` section in RAM2
+- `__RAM_DIAGNOSTICS_end__` is a custom linker symbol representing the ending address of the `.ramDiagnostics` section in RAM2
+- `__SYS_DIAGNOSTICS_start__` is a custom linker symbol representing the starting address of the `.sysDiag` section in RAM2
+- `__SYS_DIAGNOSTICS_end__` is a custom linker symbol representing the ending address of the `.sysDiag` section in RAM2
+- `__RAM2_end` is a custom linker symbol representing the ending address of the RAM2 on STM32G473CET6
+
 *RAM2 notes:*
 - The `.ramDiagnostics` section stores variables related to memory usage and diagnostics of the RAM state. These variables are not time-critical, allowing them to reside in RAM2, which has slower access compared to other RAM regions.
 - The `.sysDiag` section is used for storing global error flags and other system diagnostics that are also not time-critical.
 - Access to RAM2 is slower compared to other RAM regions, making it suitable for non-time-critical data storage.
+
+#### 5.7.1.3 CCSRAM
+- `__CRIT_start__` is a custom linker symbol representing the starting address of the `.crit` section in CCSRAM
+- `__CRIT_end__` is a custom linker symbol representing the ending address of the `.crit` section in CCSRAM
+- `__CCSRAM_end__` is a custom linker symbol representing the ending address of the CCSRAM on STM32G473CET6
 
 *CCSRAM notes:*
 - The `.crit` section (located in CCSRAM) stores TCBs, stacks, guard zones, and buffers for critical or frequently executed tasks, ensuring maximum performance and predictability.
@@ -328,7 +330,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 #### 5.7.4 RAM Usage Overview
 
-
+(will be summarized after adding ThreadX and tasks to the project)
 
 ## 6. Infineon
 
