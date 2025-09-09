@@ -100,7 +100,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## ⚙️ Technical Overview
+## ⚙️ Technical Overview STM32 Part
 
 ### 1. 📦 Project Structure & File Overview
 
@@ -148,6 +148,37 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 	└── README.md             # Project overview and documentation
 
 ---
+
+### 7. 💾 Memory Layout
+
+#### 7.1 RAM Map
+
+![UI Navigation](Media/STM32G473_RAM_MAP.png)
+
+- `__data_start` is a linker symbol representing the starting address of the `.data` section in SRAM on AVR microcontrollers.
+- `__data_end` is a linker symbol representing the ending address of the `.data` section in SRAM on AVR microcontrollers.
+- `__bss_start` is a linker symbol representing the starting address of the `.bss` section in SRAM on AVR microcontrollers.
+- `__bss_end` is a linker symbol representing the ending address of the `.bss` section in SRAM on AVR microcontrollers.
+- `__tdat_start` is a linker symbol representing the starting address of the `.tdat` section in SRAM.
+- `__tdat_end` is a linker symbol representing the ending address of the `.tdat` section in SRAM.
+- `__heap_start` is a linker symbol representing the starting address of the heap section in SRAM.
+- `__heap_end` is a C variable defined by me to represent the current end of the heap. Its value is calculated at runtime (see Notes below).
+- `__stack_ptr` is a C variable defined by me to capture the initial value of the stack pointer before the RTOS scheduler starts (see Notes below).
+- `RAMEND` is a predefined constant representing the last address of SRAM on AVR microcontrollers. For the ATmega2561 used in this project, `RAMEND` is equal to `0x21FF`.
+
+*Note:*
+- The `.tdat` section is a custom memory segment defined in the linker script. It is used to store Task Control Blocks (TCBs), task stacks, and associated guard zones. By placing all task stacks contiguously within .tdat, the system ensures controlled stack allocation and simplifies stack overflow detection.
+- The symbols `__tdat_start` and `__tdat_end` were predefined in the linker script, along with a custom `.tdat` section. This section is used to store Task Control Blocks (TCBs), task stacks, and corresponding guard zones. The `.tdat` section ensures that stacks and their guard zones are placed contiguously in memory, enabling reliable stack overflow monitoring.
+- The `__heap_end` variable is computed as:
+  
+      __heap_end = (__brkval != 0) ? __brkval : (void*)&__heap_start;
+  
+- `__brkval` is a pointer internally managed by malloc() to indicate the current top of the heap. If no memory has been allocated yet, it remains zero.
+- The `__stack_ptr` variable is initialized with the value of the `SP` register before the RTOS scheduler starts. On AVR microcontrollers, `SP` holds the current stack pointer. However, after the scheduler starts, `SP` is overwritten with the stack pointer of the currently executing task, which would lead to incorrect free memory calculations if used directly.
+
+#### 7.2 Custom RAM Segments
+
+
 
 ### X. Pinout overview
 
