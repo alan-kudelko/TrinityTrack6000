@@ -452,7 +452,7 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 
 ### 8.1 Tank Body Overview
 
-[Tank Chassis](Media/Tank_Body_1.jpg)
+![Tank Chassis](Media/Tank_Body_1.jpg)
 
 ---
 
