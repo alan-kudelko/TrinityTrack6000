@@ -100,7 +100,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## ⚙️ Technical Overview STM32 Part
+# ⚙️ Technical Overview STM32 Part
 
 ### 1. 📦 Project Structure & File Overview
 
