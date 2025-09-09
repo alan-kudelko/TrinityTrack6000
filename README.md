@@ -103,11 +103,11 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 ## Technical Table of Contents
 
 1. [Project Structure & File Overview](#1--project-structure--file-overview)
-2. [System's architecture](#2-system's-architecture)
+2. [System's architecture](#2-system-s-architecture)
 3. [STM32G473CET6](#3-STM32G473CET6)
 ---
 
-# ⚙️ Technical Overview STM32 Part
+## ⚙️ Technical Overview STM32 Part
 
 ## 1. 📦 Project Structure & File Overview
 
