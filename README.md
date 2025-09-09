@@ -192,51 +192,56 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ### 3.1 STM32G473CET6 Pinout (LQFP-48)
 
-| Pin / Function | Usage |
-|----------------|-------|
-| PA0  ADC1_IN0 / TIM2_CH1 / USART2_RX / I2C1_SDA | ⚪ Unused |
-| PA1  ADC1_IN1 / TIM2_CH2 / USART2_TX / I2C1_SCL | ⚪ Unused |
-| PA2  ADC1_IN2 / TIM2_CH3 / USART2_CK / I2C1_SDA | ⚪ Unused |
-| PA3  ADC1_IN3 / TIM2_CH4 / USART2_RTS / I2C1_SCL | ⚪ Unused |
-| PA4  ADC1_IN4 / TIM3_CH1 / USART2_CTS / I2C1_SDA | ⚪ Unused |
-| PA5  ADC1_IN5 / TIM3_CH2 / SPI1_SCK / I2C1_SCL | ⚪ Unused |
-| PA6  ADC1_IN6 / TIM3_CH3 / SPI1_MISO / I2C1_SDA | ⚪ Unused |
-| PA7  ADC1_IN7 / TIM3_CH4 / SPI1_MOSI / I2C1_SCL | ⚪ Unused |
-| PA8  MCO / USART1_CK / I2C1_SDA | ⚪ Unused |
-| PA9  USART1_TX / I2C1_SCL | ⚪ Unused |
-| PA10 USART1_RX / I2C1_SDA | ⚪ Unused |
-| PA11 USART1_RTS / I2C1_SCL | ⚪ Unused |
-| PA12 USART1_CTS / I2C1_SDA | ⚪ Unused |
-| PA13 SWDIO | ⚪ Unused |
-| PA14 SWCLK | ⚪ Unused |
-| PA15 JTDI / SPI1_NSS | ⚪ Unused |
-| PB0  ADC2_IN8 / TIM3_CH1 / SPI2_NSS | ⚪ Unused |
-| PB1  ADC2_IN9 / TIM3_CH2 / SPI2_SCK | ⚪ Unused |
-| PB2  ADC2_IN10 / TIM3_CH3 / SPI2_MISO | ⚪ Unused |
-| PB3  ADC2_IN11 / TIM3_CH4 / SPI2_MOSI | ⚪ Unused |
-| PB4  ADC2_IN12 / TIM4_CH1 / SPI2_NSS | ⚪ Unused |
-| PB5  ADC2_IN13 / TIM4_CH2 / SPI2_SCK | ⚪ Unused |
-| PB6  ADC2_IN14 / TIM4_CH3 / SPI2_MISO | ⚪ Unused |
-| PB7  ADC2_IN15 / TIM4_CH4 / SPI2_MOSI | ⚪ Unused |
-| PB8  I2C2_SCL / USART3_TX | ⚪ Unused |
-| PB9  I2C2_SDA / USART3_RX | ⚪ Unused |
-| PB10 I2C2_SCL / USART3_CK | ⚪ Unused |
-| PB11 I2C2_SDA / USART3_RTS | ⚪ Unused |
-| PB12 I2C2_SCL / USART3_CTS | ⚪ Unused |
-| PB13 JTMS / SWDIO | ⚪ Unused |
-| PB14 JTCK / SWCLK | ⚪ Unused |
-| PB15 JTDI / SPI1_NSS | ⚪ Unused |
-| PC13 TAMPER / RTC_IN | ⚪ Unused |
-| PC14 OSC32_IN | ⚪ Unused |
-| PC15 OSC32_OUT | ⚪ Unused |
-| PD0  ADC4_IN0 / TIM4_CH1 / USART2_RX | ⚪ Unused |
-| PD1  ADC4_IN1 / TIM4_CH2 / USART2_TX | ⚪ Unused |
-| PD2  ADC4_IN2 / TIM4_CH3 / USART2_CK | ⚪ Unused |
-| PD3  ADC4_IN3 / TIM4_CH4 / USART2_RTS | ⚪ Unused |
-| PD4  ADC4_IN4 / TIM5_CH1 / USART2_CTS | ⚪ Unused |
-| PD5  ADC4_IN5 / TIM5_CH2 / USART2_RX | ⚪ Unused |
-| PD6  ADC4_IN6 / TIM5_CH3 / USART2_TX | ⚪ Unused |
-| PD7  ADC4_IN7 / TIM5_CH4 / USART2_CK | ⚪ Unused |
+| #  | Pin / Function           | Usage           | Description                              |
+|----|--------------------------|-----------------|------------------------------------------|
+| 1  | VBAT                     | Backup Domian   | Used to power Backup Domain with CR2032  |
+| 2  | PC13                     |            |             |
+| 3  | PC14 / OSC32_IN          |            |             |
+| 4  | PC15 / OSC32_OUT         |            |             |
+| 5  | PF0 / OSC_IN             |             |             |
+| 6  | PF1 / OSC_OUT            |       |             |
+| 7  | PG10 / NRST              | Reset      |             |
+| 8  | PA0                      |                |             |
+| 9  | PA1                      |                |             |
+| 10 | PA2                      | 🟠 USART2_TX   |             |
+| 11 | PA3                      | 🟠 USART2_RX   |             |
+| 12 | PA4                      |       |             |
+| 13 | PA5                      |       |             |
+| 14 | PA6                      |       |             |
+| 15 | PA7                      |       |             |
+| 16 | PB0                      |       |             |
+| 17 | PB1                      |       |             |
+| 18 | PB2                      |       |             |
+| 19 | VSSA                     | GND        |  No need to filter analog section since analog inputs are not used in the project |
+| 20 | VREF+                    | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
+| 21 | VDDA                     | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
+| 22 | PB10                     |       |             |
+| 23 | VSS                      | GND      |             |
+| 24 | VDD                      | +3.3V    |             |
+| 25 | PB11                     |                  |             |
+| 26 | PB12                     | 🔵 CS_INFINEON  | Chip select Infineon            |
+| 27 | PB13                     | 🔵 SPI2_SCK     | Communication witn Infineon MCU |
+| 28 | PB14                     | 🔵 SPI2_MISO    | Communication witn Infineon MCU |
+| 29 | PB15                     | 🔵 SPI2_MOSI    | Communication witn Infineon MCU |
+| 30 | PA8                      | 🟢 I2C2_SDA     | Communication with ATmega328p   |
+| 31 | PA9                      | 🟢 I2C2_SDL     | Communication with ATmega328p   |
+| 32 | PA10                     |       |             |
+| 33 | PA11                     |       |             |
+| 34 | PA12                     |       |             |
+| 35 | VSS                      | GND     |             |
+| 36 | VDD                      | +3.3V   |             |
+| 37 | PA13                     |       |             |
+| 38 | PA14                     | ST-Link      |             |
+| 39 | PA15                     | ST-Link      |             |
+| 40 | PB3                      |       |             |
+| 41 | PB4                      |       |             |
+| 42 | PB5                      |       |             |
+| 43 | PB6                      | 🟠 USART1_TX      |             |
+| 44 | PB7                      | 🟠 USART1_RX      |             |
+| 45 | PB8 / BOOT0              |       |             |
+| 46 | PB9                      |       |             |
+| 47 | VSS                      | GND      |             |
+| 48 | VDD                      | +3.3V    |             |
 
 ### 3.2 Infineon Pinout
 
