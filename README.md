@@ -241,7 +241,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 (soon)
 
-## 3.3 ATmega328p Pinout (TQFP-32)
+### 3.3 ATmega328p Pinout (TQFP-32)
 
 | Pin | Usage |
 |-----|-------|
@@ -280,11 +280,30 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ## 4. System's architecture
 
+
+
 ---
 
 ## 5. STM32G473CET6
 
-### 5.7. 💾 Memory Layout
+### 5.1 Task Overview
+
+| Task ID | Task Name                  | Description                                                                                                               | Priority | Stack Size | Free Stack |
+|---------|----------------------------|---------------------------------------------------------------------------------------------------------------------------|----------|------------|------------|
+| 00      | `taskErrorHandler`         | Handles critical faults such as stack overflows and guard zone corruption, and logs errors to EEPROM                      |    3     |    256     |     50     |
+| 01      | `taskSerialDiagnostics`    |                                                                                                                           |    1     |    x       |     x      |
+
+### 5.2 ThreadX Architecture
+
+### 5.3 System initialization
+
+### 5.4 Normal start
+
+### 5.5 Fault start
+
+### 5.6 Normal operation
+
+### 5.7 💾 Memory Layout
 
 #### 5.7.1 RAM Map
 
