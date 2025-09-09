@@ -103,18 +103,19 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 ## Technical Table of Contents
 
 1. [Project Structure & File Overview](#1--project-structure--file-overview)
-2. [Design considerations](#2-systems-architecture)
-3. [MCU's pinouts](#3-mcus-pinouts)
+2. [Design considerations](#2-design-considerations)
+   - [2.1 SPI Max frequency vs line length and type](#21-spi-max-frequency-vs-line-length-and-type)
+4. [MCU's pinouts](#3-mcus-pinouts)
    - [3.1 STM32G473CET6 Pinout (LQFP-48)](#31-stm32g473cet6-pinout-lqfp-48)
    - [3.2 Infineon Pinout](#32-infineon-pinout)
    - [3.3 ATmega328p Pinout](#33-atmega328p-pinout-tqfp-32)
-4. [System's architecture](#4-systems-architecture)
-5. [STM32G473CET6](#5-stm32g473cet6)
+5. [System's architecture](#4-systems-architecture)
+6. [STM32G473CET6](#5-stm32g473cet6)
    - [5.7 💾 Memory Layout](#57--memory-layout)
      - [5.7.1 RAM Map](#571-ram-map)
      - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
-6. [Infineon](#6-infineon)
-7. [ATmega328p](#7-atmega328p)
+7. [Infineon](#6-infineon)
+8. [ATmega328p](#7-atmega328p)
 ---
 
 ## ⚙️ Technical Overview STM32 Part
