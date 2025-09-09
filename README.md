@@ -176,10 +176,13 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ### 2.1 SPI Max frequency vs line length and type
 
-| Line type | Length [cm] | Frequency min [MHz] | Frequency max [MHz] | Single bit period [ns/bit] |
-|-----------|-------------|---------------------|---------------------|----------------------------|
-| PCB trace | 15          | 20                  | 25                  | 50                         |
+| Line type         | Length [cm] | Frequency min [MHz] | Frequency max [MHz] | Single bit period [ns/bit] | Packet transfer time [μs] |
+|-------------------|-------------|---------------------|--------------------|-----------------------------|---------------------------|
+| PCB trace         | 15          | 20                  | 25                 | 50                          | 51.2                      |
+| Unshielded wire   | 15          | 5                   | 10                 | 100                         | 102.4                     |
+| Unshielded wire   | 30          | 2                   | 5                  | 200                         | 204.8                     |
 
+**Note:** Packet size is 128 bytes (1024 bits).
 ---
 
 ## 3. MCU's pinouts
