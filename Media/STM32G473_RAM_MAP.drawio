@@ -31,7 +31,7 @@
         <mxCell id="urWOwsYpe-8lvMp6Ferf-21" value="stack" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#FF6723;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="-443" y="-635" width="129" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-22" value="free_memory" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="urWOwsYpe-8lvMp6Ferf-22" value="ramDiagnosticsRAM1_used" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="-443" y="-655" width="129" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-27" value=".ramDiagnostics" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00A6ED;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
@@ -49,10 +49,10 @@
         <mxCell id="urWOwsYpe-8lvMp6Ferf-49" value="(under consideration)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="-443" y="-495" width="129" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-50" value="free_memory" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="urWOwsYpe-8lvMp6Ferf-50" value="ramDiagnosticsRAM2_used" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="-443" y="-555" width="129" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-51" value="free_memory" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="urWOwsYpe-8lvMp6Ferf-51" value="ramDiagnosticsCCSRAM_used" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="-443" y="-475" width="129" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-5" value="&lt;font style=&quot;color: rgb(255, 255, 255); font-size: 10px;&quot;&gt;Section start symbol or variable&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
