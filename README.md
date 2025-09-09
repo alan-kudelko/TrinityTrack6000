@@ -116,7 +116,9 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
      - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
      - [5.7.3 Free Memory Calculation](#573-free-memory-calculation)
      - [5.7.4 RAM Usage Overview](#574-ram-usage-overview)
-   - [5.8 MCU Diagnostics](#58-mcu-diagnostics) 
+   - [5.8 MCU Diagnostics](#58-mcu-diagnostics)
+     - [5.8.1 ThreadX Tasks Diagnostics](#581-threadx-tasks-diagnostics)
+     - [5.8.2 RAM Usage Diagnostics](#582-ram-usage-diagnostics)
 7. [Infineon](#6-infineon)
 8. [ATmega328p](#7-atmega328p)
 ---
