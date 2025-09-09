@@ -103,8 +103,9 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 ## Technical Table of Contents
 
 1. [Project Structure & File Overview](#1--project-structure--file-overview)
-2. [System's architecture](#2-system-s-architecture)
-3. [STM32G473CET6](#3-STM32G473CET6)
+2. [Design considerations](#2-systems-architecture)
+3. [MCU's pinouts](#3-mcus-pinouts)
+3.1 [STM32G473CET6 Pinout (LQFP-48)](#3.1-STM32G473CET6-Pinout-(LQFP-48))
 ---
 
 ## ⚙️ Technical Overview STM32 Part
@@ -156,15 +157,116 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ---
 
-## 2. System's architecture
+## 2. Design considerations
+
+### 2.1 SPI Max frequency vs line length and type
+
+| Line type | Length [cm] | Frequency min [MHz] | Frequency max [MHz] | Single bit period [ns/bit] |
+|-----------|-------------|---------------------|---------------------|----------------------------|
+| PCB trace | 15          | 20                  | 25                  | 50                         |
 
 ---
 
-## 3. STM32G473CET6
+## 3. MCU's pinouts
 
-### 3.7. 💾 Memory Layout
+### 3.1 STM32G473CET6 Pinout (LQFP-48)
 
-#### 3.7.1 RAM Map
+| Pin / Function | Usage |
+|----------------|-------|
+| PA0  ADC1_IN0 / TIM2_CH1 / USART2_RX / I2C1_SDA | ⚪ Unused |
+| PA1  ADC1_IN1 / TIM2_CH2 / USART2_TX / I2C1_SCL | ⚪ Unused |
+| PA2  ADC1_IN2 / TIM2_CH3 / USART2_CK / I2C1_SDA | ⚪ Unused |
+| PA3  ADC1_IN3 / TIM2_CH4 / USART2_RTS / I2C1_SCL | ⚪ Unused |
+| PA4  ADC1_IN4 / TIM3_CH1 / USART2_CTS / I2C1_SDA | ⚪ Unused |
+| PA5  ADC1_IN5 / TIM3_CH2 / SPI1_SCK / I2C1_SCL | ⚪ Unused |
+| PA6  ADC1_IN6 / TIM3_CH3 / SPI1_MISO / I2C1_SDA | ⚪ Unused |
+| PA7  ADC1_IN7 / TIM3_CH4 / SPI1_MOSI / I2C1_SCL | ⚪ Unused |
+| PA8  MCO / USART1_CK / I2C1_SDA | ⚪ Unused |
+| PA9  USART1_TX / I2C1_SCL | ⚪ Unused |
+| PA10 USART1_RX / I2C1_SDA | ⚪ Unused |
+| PA11 USART1_RTS / I2C1_SCL | ⚪ Unused |
+| PA12 USART1_CTS / I2C1_SDA | ⚪ Unused |
+| PA13 SWDIO | ⚪ Unused |
+| PA14 SWCLK | ⚪ Unused |
+| PA15 JTDI / SPI1_NSS | ⚪ Unused |
+| PB0  ADC2_IN8 / TIM3_CH1 / SPI2_NSS | ⚪ Unused |
+| PB1  ADC2_IN9 / TIM3_CH2 / SPI2_SCK | ⚪ Unused |
+| PB2  ADC2_IN10 / TIM3_CH3 / SPI2_MISO | ⚪ Unused |
+| PB3  ADC2_IN11 / TIM3_CH4 / SPI2_MOSI | ⚪ Unused |
+| PB4  ADC2_IN12 / TIM4_CH1 / SPI2_NSS | ⚪ Unused |
+| PB5  ADC2_IN13 / TIM4_CH2 / SPI2_SCK | ⚪ Unused |
+| PB6  ADC2_IN14 / TIM4_CH3 / SPI2_MISO | ⚪ Unused |
+| PB7  ADC2_IN15 / TIM4_CH4 / SPI2_MOSI | ⚪ Unused |
+| PB8  I2C2_SCL / USART3_TX | ⚪ Unused |
+| PB9  I2C2_SDA / USART3_RX | ⚪ Unused |
+| PB10 I2C2_SCL / USART3_CK | ⚪ Unused |
+| PB11 I2C2_SDA / USART3_RTS | ⚪ Unused |
+| PB12 I2C2_SCL / USART3_CTS | ⚪ Unused |
+| PB13 JTMS / SWDIO | ⚪ Unused |
+| PB14 JTCK / SWCLK | ⚪ Unused |
+| PB15 JTDI / SPI1_NSS | ⚪ Unused |
+| PC13 TAMPER / RTC_IN | ⚪ Unused |
+| PC14 OSC32_IN | ⚪ Unused |
+| PC15 OSC32_OUT | ⚪ Unused |
+| PD0  ADC4_IN0 / TIM4_CH1 / USART2_RX | ⚪ Unused |
+| PD1  ADC4_IN1 / TIM4_CH2 / USART2_TX | ⚪ Unused |
+| PD2  ADC4_IN2 / TIM4_CH3 / USART2_CK | ⚪ Unused |
+| PD3  ADC4_IN3 / TIM4_CH4 / USART2_RTS | ⚪ Unused |
+| PD4  ADC4_IN4 / TIM5_CH1 / USART2_CTS | ⚪ Unused |
+| PD5  ADC4_IN5 / TIM5_CH2 / USART2_RX | ⚪ Unused |
+| PD6  ADC4_IN6 / TIM5_CH3 / USART2_TX | ⚪ Unused |
+| PD7  ADC4_IN7 / TIM5_CH4 / USART2_CK | ⚪ Unused |
+
+### 3.2 Infineon Pinout
+
+(soon)
+
+## 3.3 ATmega2561 Pinout (TQFP-32)
+
+| Pin | Usage |
+|-----|-------|
+| PC6 (RESET/PCINT14)     | ⚪ Unused |
+| PD0 (RXD/PCINT16)       | ⚪ Unused |
+| PD1 (TXD/PCINT17)       | ⚪ Unused |
+| PD2 (INT0/PCINT18)      | ⚪ Unused |
+| PD3 (INT1/OC2B/PCINT19) | ⚪ Unused |
+| PD4 (T0/XCK/PCINT20)    | ⚪ Unused |
+| VCC                     | ⚪ Power |
+| GND                     | ⚪ Ground |
+| PB6 (XTAL1/TOSC1/PCINT6)| ⚪ Crystal |
+| PB7 (XTAL2/TOSC2/PCINT7)| ⚪ Crystal |
+| PD5 (T1/OC0B/PCINT21)   | ⚪ Unused |
+| PD6 (AIN0/OC0A/PCINT22) | ⚪ Unused |
+| PD7 (AIN1/PCINT23)      | ⚪ Unused |
+| PB0 (ICP1/CLKO/PCINT0)  | ⚪ Unused |
+| PB1 (OC1A/PCINT1)       | ⚪ Unused |
+| PB2 (SS/OC1B/PCINT2)    | ⚪ Unused |
+| PB3 (MOSI/OC2A/PCINT3)  | ⚪ Unused |
+| PB4 (MISO/PCINT4)       | ⚪ Unused |
+| PB5 (SCK/PCINT5)        | ⚪ Unused |
+| AVCC                    | ⚪ Power |
+| ADC6                    | ⚪ Unused |
+| AREF                    | ⚪ Reference |
+| GND                     | ⚪ Ground |
+| PC0 (ADC0/PCINT8)       | ⚪ Unused |
+| PC1 (ADC1/PCINT9)       | ⚪ Unused |
+| PC2 (ADC2/PCINT10)      | ⚪ Unused |
+| PC3 (ADC3/PCINT11)      | ⚪ Unused |
+| PC4 (ADC4/SDA/PCINT12)  | ⚪ Unused |
+| PC5 (ADC5/SCL/PCINT13)  | ⚪ Unused |
+| ADC7                    | ⚪ Unused |
+
+---
+
+## 4. System's architecture
+
+---
+
+## 5. STM32G473CET6
+
+### 5.7. 💾 Memory Layout
+
+#### 5.7.1 RAM Map
 
 ![UI Navigation](Media/STM32G473_RAM_MAP.png)
 
@@ -189,15 +291,15 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - `__brkval` is a pointer internally managed by malloc() to indicate the current top of the heap. If no memory has been allocated yet, it remains zero.
 - The `__stack_ptr` variable is initialized with the value of the `SP` register before the RTOS scheduler starts. On AVR microcontrollers, `SP` holds the current stack pointer. However, after the scheduler starts, `SP` is overwritten with the stack pointer of the currently executing task, which would lead to incorrect free memory calculations if used directly.
 
-#### 3.7.2 Custom RAM Segments
+#### 5.7.2 Custom RAM Segments
 
 
 
-## 4. Infineon
+## 6. Infineon
 
 ---
 
-## 5. ATmega2561
+## 7. ATmega2561
 
 ---
 
@@ -249,99 +351,3 @@ INFINEON_KILL_SWITCH
 AVR_RESTART
 INFINEON_RESTART
 
-#### X.2 STM32G473CET6 Pinout (LQFP48)
-
-| Pin / Function | Usage |
-|----------------|-------|
-| PA0  ADC1_IN0 / TIM2_CH1 / USART2_RX / I2C1_SDA | ⚪ Unused |
-| PA1  ADC1_IN1 / TIM2_CH2 / USART2_TX / I2C1_SCL | ⚪ Unused |
-| PA2  ADC1_IN2 / TIM2_CH3 / USART2_CK / I2C1_SDA | ⚪ Unused |
-| PA3  ADC1_IN3 / TIM2_CH4 / USART2_RTS / I2C1_SCL | ⚪ Unused |
-| PA4  ADC1_IN4 / TIM3_CH1 / USART2_CTS / I2C1_SDA | ⚪ Unused |
-| PA5  ADC1_IN5 / TIM3_CH2 / SPI1_SCK / I2C1_SCL | ⚪ Unused |
-| PA6  ADC1_IN6 / TIM3_CH3 / SPI1_MISO / I2C1_SDA | ⚪ Unused |
-| PA7  ADC1_IN7 / TIM3_CH4 / SPI1_MOSI / I2C1_SCL | ⚪ Unused |
-| PA8  MCO / USART1_CK / I2C1_SDA | ⚪ Unused |
-| PA9  USART1_TX / I2C1_SCL | ⚪ Unused |
-| PA10 USART1_RX / I2C1_SDA | ⚪ Unused |
-| PA11 USART1_RTS / I2C1_SCL | ⚪ Unused |
-| PA12 USART1_CTS / I2C1_SDA | ⚪ Unused |
-| PA13 SWDIO | ⚪ Unused |
-| PA14 SWCLK | ⚪ Unused |
-| PA15 JTDI / SPI1_NSS | ⚪ Unused |
-| PB0  ADC2_IN8 / TIM3_CH1 / SPI2_NSS | ⚪ Unused |
-| PB1  ADC2_IN9 / TIM3_CH2 / SPI2_SCK | ⚪ Unused |
-| PB2  ADC2_IN10 / TIM3_CH3 / SPI2_MISO | ⚪ Unused |
-| PB3  ADC2_IN11 / TIM3_CH4 / SPI2_MOSI | ⚪ Unused |
-| PB4  ADC2_IN12 / TIM4_CH1 / SPI2_NSS | ⚪ Unused |
-| PB5  ADC2_IN13 / TIM4_CH2 / SPI2_SCK | ⚪ Unused |
-| PB6  ADC2_IN14 / TIM4_CH3 / SPI2_MISO | ⚪ Unused |
-| PB7  ADC2_IN15 / TIM4_CH4 / SPI2_MOSI | ⚪ Unused |
-| PB8  I2C2_SCL / USART3_TX | ⚪ Unused |
-| PB9  I2C2_SDA / USART3_RX | ⚪ Unused |
-| PB10 I2C2_SCL / USART3_CK | ⚪ Unused |
-| PB11 I2C2_SDA / USART3_RTS | ⚪ Unused |
-| PB12 I2C2_SCL / USART3_CTS | ⚪ Unused |
-| PB13 JTMS / SWDIO | ⚪ Unused |
-| PB14 JTCK / SWCLK | ⚪ Unused |
-| PB15 JTDI / SPI1_NSS | ⚪ Unused |
-| PC13 TAMPER / RTC_IN | ⚪ Unused |
-| PC14 OSC32_IN | ⚪ Unused |
-| PC15 OSC32_OUT | ⚪ Unused |
-| PD0  ADC4_IN0 / TIM4_CH1 / USART2_RX | ⚪ Unused |
-| PD1  ADC4_IN1 / TIM4_CH2 / USART2_TX | ⚪ Unused |
-| PD2  ADC4_IN2 / TIM4_CH3 / USART2_CK | ⚪ Unused |
-| PD3  ADC4_IN3 / TIM4_CH4 / USART2_RTS | ⚪ Unused |
-| PD4  ADC4_IN4 / TIM5_CH1 / USART2_CTS | ⚪ Unused |
-| PD5  ADC4_IN5 / TIM5_CH2 / USART2_RX | ⚪ Unused |
-| PD6  ADC4_IN6 / TIM5_CH3 / USART2_TX | ⚪ Unused |
-| PD7  ADC4_IN7 / TIM5_CH4 / USART2_CK | ⚪ Unused |
-
-#### X.3 Infineon Pinout
-
-(soon)
-
-#### X.4 ATmega328p Pinout (TQFP-32)
-
-| Pin | Usage |
-|-----|-------|
-| PC6 (RESET/PCINT14)     | ⚪ Unused |
-| PD0 (RXD/PCINT16)       | ⚪ Unused |
-| PD1 (TXD/PCINT17)       | ⚪ Unused |
-| PD2 (INT0/PCINT18)      | ⚪ Unused |
-| PD3 (INT1/OC2B/PCINT19) | ⚪ Unused |
-| PD4 (T0/XCK/PCINT20)    | ⚪ Unused |
-| VCC                     | ⚪ Power |
-| GND                     | ⚪ Ground |
-| PB6 (XTAL1/TOSC1/PCINT6)| ⚪ Crystal |
-| PB7 (XTAL2/TOSC2/PCINT7)| ⚪ Crystal |
-| PD5 (T1/OC0B/PCINT21)   | ⚪ Unused |
-| PD6 (AIN0/OC0A/PCINT22) | ⚪ Unused |
-| PD7 (AIN1/PCINT23)      | ⚪ Unused |
-| PB0 (ICP1/CLKO/PCINT0)  | ⚪ Unused |
-| PB1 (OC1A/PCINT1)       | ⚪ Unused |
-| PB2 (SS/OC1B/PCINT2)    | ⚪ Unused |
-| PB3 (MOSI/OC2A/PCINT3)  | ⚪ Unused |
-| PB4 (MISO/PCINT4)       | ⚪ Unused |
-| PB5 (SCK/PCINT5)        | ⚪ Unused |
-| AVCC                    | ⚪ Power |
-| ADC6                    | ⚪ Unused |
-| AREF                    | ⚪ Reference |
-| GND                     | ⚪ Ground |
-| PC0 (ADC0/PCINT8)       | ⚪ Unused |
-| PC1 (ADC1/PCINT9)       | ⚪ Unused |
-| PC2 (ADC2/PCINT10)      | ⚪ Unused |
-| PC3 (ADC3/PCINT11)      | ⚪ Unused |
-| PC4 (ADC4/SDA/PCINT12)  | ⚪ Unused |
-| PC5 (ADC5/SCL/PCINT13)  | ⚪ Unused |
-| ADC7                    | ⚪ Unused |
-
----
-
-## Design considerations
-
-### SPI Max frequency vs line length and type
-
-| Line type | Length [cm] | Frequency min [MHz] | Frequency max [MHz] | Single bit period [ns/bit] |
-|-----------|-------------|---------------------|---------------------|----------------------------|
-| PCB trace | 15          | 20                  | 25                  | 50                         |
