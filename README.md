@@ -509,6 +509,7 @@ With the selected **DC motor** and **1:50 reduction gearbox**, the theoretical s
 
 $n_{out} = \frac{n}{r} = \frac{32500}{50} \approx 650 \ \text{rpm}$
 
+$V_{max} = \frac{\pi \cdot D \cdot n_{out}}{60} = \frac{\pi \cdot 0.048 \cdot 650}{60} \approx 1.63 \ \text{m/s} \approx 5.88 \ \text{km/h}$
 
 
 
