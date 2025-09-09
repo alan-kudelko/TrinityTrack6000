@@ -453,6 +453,29 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 ### 8.1 Tank Body Overview
 
 ![Tank Chassis](Media/Tank_Body_1.jpg)
+![Tank Chassis](Media/Tank_Body_2.jpg)
+
+### 8.2 Drive Train Components
+
+#### 8.2.1 Tracks and Sprocket Wheels
+
+![Tank Tracks](Media/Tank_Tracks.png)
+![Tank Tracks](Media/Sprocket_Wheel.png)
+
+#### 8.2.2 DC Motors
+
+![Tank Tracks](Media/Injora540_13T_Parameters.png)
+![Tank Tracks](Media/Injora540_Parameters_Comparison.png)
+![Tank Tracks](Media/DC_Motor_Selection.png)
+
+
+#### 8.2.3 Reduction Gearbox
+
+![Tank Tracks](Media/DC_Motor_Gearbox_1_50.png)
+![Tank Tracks](Media/DC_Motor_Gearbox_dims_1.png)
+![Tank Tracks](Media/DC_Motor_Gearbox_dims_2.png)
+![Tank Tracks](Media/DC_Motor_Gearbox_Selection.png)
+
 
 ---
 
