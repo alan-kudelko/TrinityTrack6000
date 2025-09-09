@@ -281,6 +281,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 #### 5.7.1 RAM Map
 
+This section provides a detailed description of the memory sections and their roles within the project. It covers the organization of all RAM banks (RAM1, RAM2, and CCSRAM), custom linker-defined sections, and their purpose in task management, memory diagnostics, and system operation.
+
 ![STM32G473_RAM_MAP](Media/STM32G473_RAM_MAP.png)
 
 #### 5.7.1.1 RAM1
