@@ -373,6 +373,33 @@ These symbols representing the **start and ending addresses of each RAM bank**.
     __CCSRAM_start__ = ORIGIN(CCSRAM);
 	__CCSRAM_end__ = ORIGIN(CCSRAM) + LENGTH(CCSRAM);
 
+In addition to the custom sections, the variables in the default `.data` and `.bss` sections have been **renamed and unified** with consistent naming conventions.  
+This unification improves **code readability**, simplifies memory diagnostics, and ensures a coherent approach when calculating used and free memory across RAM1, RAM2, and CCSRAM.
+
+	__DATA_start__ = .
+    __DATA_end__ = .
+
+ 	__BSS_start__ = .
+    __BSS_end__ = .
+
+The `.tdat` section, located in **RAM1**, contains variables such as **Task Control Blocks (TCBs)**, task **stacks**, and corresponding **guard zones** for non-critical or rarely executed tasks.  
+
+By placing these elements in `.tdat`, the system ensures that stack memory for less critical tasks is grouped together, enabling efficient memory usage and reliable **stack overflow detection**, while keeping time-critical memory regions free for high-priority tasks.
+
+    .tdat :
+    {
+	. = ALIGN(4);
+	PROVIDE (__TDAT_start__ = . );
+	
+	KEEP(*(.tdat.guardZone0));	
+	KEEP(*(.tdat.errorHandlerStack));	
+	
+	KEEP(*(.tdat))
+	KEEP(*(.tdat*))
+	PROVIDE (__TDAT_end__ = . );
+    } >RAM
+ 
+
 The `.ramDiagnostics` section is defined in **RAM2** and groups diagnostic variables by their data type (`uint8_t`, `uint16_t`, `uint32_t`).  
 This organization ensures proper alignment while minimizing unused padding ("fill") between variables.  
 
