@@ -182,7 +182,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | Unshielded wire   | 15          | 5                   | 10                 | 100                         | 102.4                     |
 | Unshielded wire   | 30          | 2                   | 5                  | 200                         | 204.8                     |
 
-**Note:** Packet size is 128 bytes (1024 bits).
+*Note:* Packet size is 128 bytes (1024 bits).
+
 ---
 
 ## 3. MCU's pinouts
