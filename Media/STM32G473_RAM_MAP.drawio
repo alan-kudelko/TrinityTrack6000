@@ -8,7 +8,7 @@
           <mxGeometry x="-468" y="-795" width="520" height="360" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-8" value=".data" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#FF6723;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-735" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-735" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-11" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;RAM1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;direction=west;flipV=0;flipH=0;rotation=270;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-515" y="-685" width="120" height="20" as="geometry" />
@@ -20,79 +20,79 @@
           <mxGeometry x="-485" y="-495" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-14" value=".bss" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#FF6723;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-715" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-715" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-17" value="heap" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#FF6723;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-675" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-675" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-18" value=".tdat" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00A6ED;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-695" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-695" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-21" value="stack" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#FF6723;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-635" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-635" width="145" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-22" value="ramDiagnosticsRAM1_used" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-655" width="129" height="20" as="geometry" />
+        <mxCell id="urWOwsYpe-8lvMp6Ferf-22" value="free" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="-443" y="-655" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-27" value=".ramDiagnostics" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00A6ED;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-595" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-595" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-28" value=".sysDiag" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00A6ED;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-575" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-575" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-41" value=".crit" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00A6ED;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-515" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-515" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-1" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Planned memory map with Start and End Markers for Each Section&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-468" y="-788" width="520" height="30" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-49" value="(under consideration)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-495" width="129" height="20" as="geometry" />
+          <mxGeometry x="-443" y="-495" width="145" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-50" value="ramDiagnosticsRAM2_used" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-555" width="129" height="20" as="geometry" />
+        <mxCell id="urWOwsYpe-8lvMp6Ferf-50" value="free" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="-443" y="-555" width="145" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-51" value="ramDiagnosticsCCSRAM_used" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="-443" y="-475" width="129" height="20" as="geometry" />
+        <mxCell id="urWOwsYpe-8lvMp6Ferf-51" value="free" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#00D26A;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="-443" y="-475" width="145" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-5" value="&lt;font style=&quot;color: rgb(255, 255, 255); font-size: 10px;&quot;&gt;Section start symbol or variable&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-755" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-755" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-6" value="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;Section end symbol or variable&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-755" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-9" value="&lt;font&gt;__DATA_start__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-735" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-735" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-10" value="&lt;font style=&quot;&quot;&gt;__DATA_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-735" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-15" value="&lt;font style=&quot;&quot;&gt;__BSS_start__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-715" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-715" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-16" value="&lt;font style=&quot;&quot;&gt;__BSS_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-715" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-19" value="&lt;font style=&quot;&quot;&gt;__TDAT_start__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-695" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-695" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-20" value="&lt;font style=&quot;&quot;&gt;__TDAT_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-695" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-23" value="&lt;font style=&quot;&quot;&gt;__TDAT_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-675" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-675" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-24" value="&lt;font style=&quot;&quot;&gt;ramDiagnosticsRAM1_lastHeapEnd&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-675" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-25" value="&lt;font style=&quot;&quot;&gt;ramDiagnosticsRAM1_lastHeapEnd&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00D26A;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-655" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-655" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-29" value="&lt;font style=&quot;&quot;&gt;__RAM_DIAGNOSTICS_start__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-595" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-595" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-30" value="&lt;font style=&quot;&quot;&gt;__SYS_DIAGNOSTICS_start__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-575" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-575" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-31" value="&lt;font style=&quot;&quot;&gt;__SYS_DIAGNOSTICS_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-575" width="170" height="20" as="geometry" />
@@ -104,13 +104,13 @@
           <mxGeometry x="-120" y="-655" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-34" value="&lt;font style=&quot;&quot;&gt;ramDiagnosticsRAM1_lastMSP&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-635" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-635" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-35" value="&lt;font style=&quot;&quot;&gt;__RAM1_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6723;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-635" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-37" value="&lt;font style=&quot;&quot;&gt;__CRIT_start__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-515" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-515" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-38" value="&lt;font style=&quot;&quot;&gt;__CRIT_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00A6ED;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-515" width="170" height="20" as="geometry" />
@@ -119,10 +119,10 @@
           <mxGeometry x="-120" y="-475" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-54" value="&lt;font style=&quot;&quot;&gt;__CRIT_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00D26A;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-475" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-475" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-55" value="&lt;font style=&quot;&quot;&gt;__SYS_DIAGNOSTICS_end__&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00D26A;" vertex="1" parent="1">
-          <mxGeometry x="-300" y="-555" width="170" height="20" as="geometry" />
+          <mxGeometry x="-295" y="-555" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-56" value="&lt;span style=&quot;&quot;&gt;__RAM2_end__&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00D26A;" vertex="1" parent="1">
           <mxGeometry x="-120" y="-555" width="170" height="20" as="geometry" />
