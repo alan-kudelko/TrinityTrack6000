@@ -119,8 +119,9 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [5.8 MCU Diagnostics](#58-mcu-diagnostics)
      - [5.8.1 ThreadX Tasks Diagnostics](#581-threadx-tasks-diagnostics)
      - [5.8.2 RAM Usage Diagnostics](#582-ram-usage-diagnostics)
-7. [Infineon](#6-infineon)
-8. [ATmega328p](#7-atmega328p)
+6. [Infineon](#6-infineon)
+7. [ATmega328p](#7-atmega328p)
+8. [Mechanical Overview](#8-mechanical-overview)
 ---
 
 ## ⚙️ Technical Overview STM32 Part
@@ -446,6 +447,12 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 ---
 
 ## 7. ATmega328p
+
+## 8. Mechanical Overview
+
+### 8.1 Tank Body Overview
+
+[Tank Chassis](Media/Tank_Body_1.jpg)
 
 ---
 
