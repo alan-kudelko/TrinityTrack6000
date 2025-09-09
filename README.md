@@ -105,17 +105,18 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 1. [Project Structure & File Overview](#1--project-structure--file-overview)
 2. [Design considerations](#2-design-considerations)
    - [2.1 SPI Max frequency vs line length and type](#21-spi-max-frequency-vs-line-length-and-type)
-4. [MCU's pinouts](#3-mcus-pinouts)
+3. [MCU's pinouts](#3-mcus-pinouts)
    - [3.1 STM32G473CET6 Pinout (LQFP-48)](#31-stm32g473cet6-pinout-lqfp-48)
    - [3.2 Infineon Pinout](#32-infineon-pinout)
    - [3.3 ATmega328p Pinout](#33-atmega328p-pinout-tqfp-32)
-5. [System's architecture](#4-systems-architecture)
-6. [STM32G473CET6](#5-stm32g473cet6)
+4. [System's architecture](#4-systems-architecture)
+5. [STM32G473CET6](#5-stm32g473cet6)
    - [5.7 💾 Memory Layout](#57--memory-layout)
      - [5.7.1 RAM Map](#571-ram-map)
      - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
      - [5.7.3 Free Memory Calculation](#573-free-memory-calculation)
      - [5.7.4 RAM Usage Overview](#574-ram-usage-overview)
+   - [5.8 MCU Diagnostics](#58-mcu-diagnostics) 
 7. [Infineon](#6-infineon)
 8. [ATmega328p](#7-atmega328p)
 ---
@@ -355,6 +356,49 @@ The free memory for each RAM bank and the overall system is then calculated by s
 #### 5.7.4 RAM Usage Overview
 
 (will be summarized after adding ThreadX and tasks to the project)
+
+---
+
+### 5.8 MCU Diagnostics
+
+Diagnostics for the STM32G473CET6 microcontroller can be performed either via the **ST-LINK** interface in STM32CubeIDE or through a **UART** interface.
+
+The diagnostics system provides real-time insight into:
+- The current state of system tasks (Task Control Blocks, stack usage, and guard zones)
+- RAM usage and memory status across all memory banks
+- The most recent error codes and system fault flags
+
+This enables developers and engineers to monitor system health, detect stack overflows, and analyze runtime behavior for both critical and non-critical tasks.
+
+#### 5.8.1 ThreadX Tasks Diagnostics
+
+(soon)
+
+#### 5.8.2 RAM Usage Diagnostics
+
+RAM usage diagnostics provide a detailed view of the memory sections for each RAM bank (RAM1, RAM2, and CCSRAM).  
+
+This diagnostics functionality is accessible via the **UART interface**, allowing real-time monitoring of:
+- Memory usage per section
+- Free and used memory in kilobytes (kB)
+- Task stack allocation and guard zones (for RAM1 and CCSRAM)
+
+This diagnostics functionality is accessible via the **UART interface** and consists of:
+- A **main menu** summarizing all RAM banks and their overall usage
+- Detailed views for each individual RAM bank, showing section-specific memory usage, free and used memory in kilobytes (kB), and task stack allocation with guard zones (for RAM1 and CCSRAM)
+
+The diagnostics interface is structured similarly to the diagrams below, providing an intuitive visualization of memory allocation and usage.
+
+      +-------------------------[ RAM DIAGNOSTICS ]--------------------------+
+      | Bank   | Start      | End        | Size    | Usage      | Used       |
+      +--------+------------+------------+---------+------------+------------+
+      | RAM1   | 0x20000000 | 0x2001FFFF | 128 KB  | ########## | 80%        |
+	  | RAM2   | 0x20020000 | 0x2003FFFF |  64 KB  | ####------ | 40%        |
+      | CCSRAM | 0x10000000 | 0x10003FFF |  16 KB  | ##-------- | 20%        |
+	  +--------+------------+------------+---------+-----------+-------------+
+      | FREE RAM TOTAL: 250 KB                                               |
+      | Commands: s(snapshot) b(bank) q(quit)                                |
+	  +----------------------------------------------------------------------+
 
 ## 6. Infineon
 
