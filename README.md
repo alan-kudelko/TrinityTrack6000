@@ -200,17 +200,17 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | 4  | PC15 / EVENTOUT / OSC32_OUT                                                                       |                                       |                                          |
 | 5  | PF0 / I2C2_SDA / SPI2_NSS/I2S2_WS / TIM1_CH3N / EVENTOUT / ADC1_IN10 / OSC_IN                     |                                       |                                          |
 | 6  | PF1 / SPI2_SCK/I2S2_CK / EVENTOUT / ADC2_IN10 / COMP3_INM / OSC_OUT                               |                                       |                                          |
-| 7  | PG10 / MCO / EVENTOUT / NRST                                                                      | MCU's reset                           |                                          |
+| 7  | PG10 / MCO / EVENTOUT / NRST                                                                      | MCU's reset                           | Used to reset the MCU either by button or ST-Link programmer |
 | 8  | PA0 / TIM2_CH1 / TIM5_CH1 / USART2_CTS / COMP1_OUT / TIM8_BKIN/ TIM8_ETR / TIM2_ETR / EVENTOUT / ADC12_IN1 / COMP1_INM / COMP3_INP / RTC_TAMP2 / WKUP1|                |             |
 | 9  | PA1 / RTC_REFIN / TIM2_CH2 / TIM5_CH2 / USART2_RTS_DE / TIM15_CH1N / EVENTOUT / ADC12_IN2 / COMP1_INP / OPAMP1_VINP / OPAMP3_VINP / OPAMP6_VINM       |                |             |
-| 10 | PA2 / TIM2_CH3 / TIM5_CH3 / USART2_TX / COMP2_OUT / TIM15_CH1 / QUADSPI1_BK1_NCS / LPUART1_TX / UCPD1_FRSTX / EVENTOUT / ADC1_IN3 / COMP2_INM / OPAMP1_VOUT / WKUP4/LSCO           | 🟠 USART2_TX |        |
-| 11 | PA3 / TIM2_CH4 / TIM5_CH4 / SAI1_CK1 / USART2_RX / TIM15_CH2 / QUADSPI1_CLK / LPUART1_RX / SAI1_MCLK_A / EVENTOUT ADC1_IN4 / COMP2_INP / OPAMP1_VINM/OPAMP / 1_VINP / OPAMP5_VINM  | 🟠 USART2_RX |        |
-| 12 | PA4 / TIM3_CH2 / SPI1_NSS / SPI3_NSS/I2S3_WS / USART2_CK / SAI1_FS_B / EVENTOUT / ADC2_IN17 / DAC1_OUT1 / COMP1_INM                     |       |             |
-| 13 | PA5 / TIM2_CH1 / TIM2_ETR / SPI1_SCK / UCPD1_FRSTX / EVENTOUT / ADC2_IN13 / DAC1_OUT2 / COMP2_INM / OPAMP2_VINM                     |       |             |
-| 14 | PA6 / TIM16_CH1 / TIM3_CH1 / TIM8_BKIN / SPI1_MISO / TIM1_BKIN / COMP1_OUT / QUADSPI1_BK1_IO3 / LPUART1_CTS / EVENTOUT / ADC2_IN3 / DAC2_OUT1 / OPAMP2_VOUT           |       |             |
-| 15 | PA7 / TIM17_CH1 / TIM3_CH2 / TIM8_CH1N / SPI1_MOSI / TIM1_CH1N / COMP2_OUT / QUADSPI1_BK1_IO2 / UCPD1_FRSTX / EVENTOUT / ADC2_IN4 / COMP2_INP / OPAMP1_VINP / OPAMP2_VINP     |       |             |
-| 16 | PB0 / TIM3_CH3 / TIM8_CH2N / TIM1_CH2N / QUADSPI1_BK1_IO1 / UCPD1_FRSTX / EVENTOUT / ADC3_IN12 / ADC1_IN15 / COMP4_INP / OPAMP2_VINP / OPAMP3_VINP                 |       |             |
-| 17 | PB1 / TIM3_CH4 / TIM8_CH3N / TIM1_CH3N / COMP4_OUT / QUADSPI1_BK1_IO0 / EVENTOUT / ADC3_IN1 / ADC1_IN12 / COMP1_INP / OPAMP3_VOUT / OPAMP6_VINM                  |       |             |
+| 10 | PA2 / TIM2_CH3 / TIM5_CH3 / USART2_TX / COMP2_OUT / TIM15_CH1 / QUADSPI1_BK1_NCS / LPUART1_TX / UCPD1_FRSTX / EVENTOUT / ADC1_IN3 / COMP2_INM / OPAMP1_VOUT / WKUP4/LSCO           | 🟠 USART2_TX | Used to communicate with PC's serial port via Nucleo Board Programmer  |
+| 11 | PA3 / TIM2_CH4 / TIM5_CH4 / SAI1_CK1 / USART2_RX / TIM15_CH2 / QUADSPI1_CLK / LPUART1_RX / SAI1_MCLK_A / EVENTOUT ADC1_IN4 / COMP2_INP / OPAMP1_VINM/OPAMP / 1_VINP / OPAMP5_VINM  | 🟠 USART2_RX | Used to communicate with PC's serial port via Nucleo Board Programmer  |
+| 12 | PA4 / TIM3_CH2 / SPI1_NSS / SPI3_NSS/I2S3_WS / USART2_CK / SAI1_FS_B / EVENTOUT / ADC2_IN17 / DAC1_OUT1 / COMP1_INM                                                       |        |              |
+| 13 | PA5 / TIM2_CH1 / TIM2_ETR / SPI1_SCK / UCPD1_FRSTX / EVENTOUT / ADC2_IN13 / DAC1_OUT2 / COMP2_INM / OPAMP2_VINM                                                           | 🟣 SPI1_SCK  | Used for communication with nRF24L01 module and external EEPROM |
+| 14 | PA6 / TIM16_CH1 / TIM3_CH1 / TIM8_BKIN / SPI1_MISO / TIM1_BKIN / COMP1_OUT / QUADSPI1_BK1_IO3 / LPUART1_CTS / EVENTOUT / ADC2_IN3 / DAC2_OUT1 / OPAMP2_VOUT               | 🟣 SPI1_MISO | Used for communication with nRF24L01 module and external EEPROM |
+| 15 | PA7 / TIM17_CH1 / TIM3_CH2 / TIM8_CH1N / SPI1_MOSI / TIM1_CH1N / COMP2_OUT / QUADSPI1_BK1_IO2 / UCPD1_FRSTX / EVENTOUT / ADC2_IN4 / COMP2_INP / OPAMP1_VINP / OPAMP2_VINP | 🟣 SPI1_MOSI | Used for communication with nRF24L01 module and external EEPROM |
+| 16 | PB0 / TIM3_CH3 / TIM8_CH2N / TIM1_CH2N / QUADSPI1_BK1_IO1 / UCPD1_FRSTX / EVENTOUT / ADC3_IN12 / ADC1_IN15 / COMP4_INP / OPAMP2_VINP / OPAMP3_VINP                        | 🟣 NRF24L01_CS | Used to select NRF24L01 as SPI slave                          |
+| 17 | PB1 / TIM3_CH4 / TIM8_CH3N / TIM1_CH3N / COMP4_OUT / QUADSPI1_BK1_IO0 / EVENTOUT / ADC3_IN1 / ADC1_IN12 / COMP1_INP / OPAMP3_VOUT / OPAMP6_VINM                           | 🟣 EEPROM_CS | Used to select external EEPROM as SPI slave                     |
 | 18 | PB2 / RTC_OUT2 / LPTIM1_OUT / TIM5_CH1 / TIM20_CH1 / I2C3_SMBA / QUADSPI1_BK2_IO1 / EVENTOUT / ADC2_IN12 / COMP4_INM / OPAMP3_VINM                    |       |             |
 | 19 | VSSA                     | GND        |  No need to filter analog section since analog inputs are not used in the project |
 | 20 | VREF+                    | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
@@ -218,26 +218,26 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | 22 | PB10 / TIM2_CH3 / USART3_TX / LPUART1_RX / QUADSPI1_CLK / TIM1_BKIN / SAI1_SCK_A / EVENTOUT / COMP5_INM / OPAMP3_VINM / OPAMP4_VINM                  |       |             |
 | 23 | VSS                      | GND      |             |
 | 24 | VDD                      | +3.3V    |             |
-| 25 | PB11 / TIM2_CH4 / USART3_RX / LPUART1_TX / QUADSPI1_BK1_NCS / EVENTOUT / ADC12_IN14 / COMP6_INP / OPAMP4_VINP / OPAMP6_VOUT                   |                  |             |
-| 26 | PB12 / TIM5_ETR / I2C2_SMBA / SPI2_NSS/I2S2_WS / TIM1_BKIN / USART3_CK / LPUART1_RTS_DE / FDCAN2_RX / EVENTOUT / ADC4_IN3 / ADC1_IN11 / COMP7_INM / OPAMP4_VOUT / OPAMP6_VINP  | 🔵 CS_INFINEON | Chip select Infineon            |
+| 25 | PB11 / TIM2_CH4 / USART3_RX / LPUART1_TX / QUADSPI1_BK1_NCS / EVENTOUT / ADC12_IN14 / COMP6_INP / OPAMP4_VINP / OPAMP6_VOUT                   | 🔵 INFINEON_KILL_SWITCH                 | Used to provide kill switch for Infineon MCU in case of emergency  |
+| 26 | PB12 / TIM5_ETR / I2C2_SMBA / SPI2_NSS/I2S2_WS / TIM1_BKIN / USART3_CK / LPUART1_RTS_DE / FDCAN2_RX / EVENTOUT / ADC4_IN3 / ADC1_IN11 / COMP7_INM / OPAMP4_VOUT / OPAMP6_VINP  | 🔵 INFINEON_CS | Chip select Infineon |
 | 27 | PB13 / SPI2_SCK/I2S2_CK / TIM1_CH1N / USART3_CTS / LPUART1_CTS / FDCAN2_TX / EVENTOUT / ADC3_IN5 / COMP5_INP / OPAMP3_VINP / OPAMP4_VINP / OPAMP6_VINP | 🔵 SPI2_SCK | Communication witn Infineon MCU |
 | 28 | PB14 / TIM15_CH1 / SPI2_MISO / TIM1_CH2N / USART3_RTS_DE / COMP4_OUT / EVENTOUT / ADC4_IN4 / ADC1_IN5 / COMP7_INP / OPAMP2_VINP / OPAMP5_VINP          | 🔵 SPI2_MISO    | Communication witn Infineon MCU |
 | 29 | PB15 / RTC_REFIN / TIM15_CH2 / TIM15_CH1N / COMP3_OUT / TIM1_CH3N / SPI2_MOSI/I2S2_SD / EVENTOUT / ADC4_IN5 / ADC2_IN15 / COMP6_INM / OPAMP5_VINM      | 🔵 SPI2_MOSI    | Communication witn Infineon MCU |
 | 30 | PA8 / MCO / I2C3_SCL / I2C2_SDA / I2S2_MCK / TIM1_CH1 / USART1_CK / COMP7_OUT / TIM4_ETR / FDCAN3_RX / SAI1_CK2 / SAI1_SCK_A / EVENTOUT / ADC5_IN1 / OPAMP5_VOUT | 🟢 I2C2_SDA     | Communication with ATmega328p   |
-| 31 | PA9 / I2C3_SMBA / I2C2_SCL / I2S3_MCK / TIM1_CH2 / USART1_TX / OMP5_OUT / TIM15_BKIN / TIM2_CH3 / SAI1_FS_A / EVENTOUT / ADC5_IN2 / UCPD1_DBCC1  | 🟢 I2C2_SDL     | Communication with ATmega328p   |
-| 32 | PA10 / TIM17_BKIN / USB_CRS_SYNC / I2C2_SMBA / SPI2_MISO / TIM1_CH3 / USART1_RX / COMP6_OUT / TIM2_CH4 / TIM8_BKIN / SAI1_D1 / SAI1_SD_A / EVENTOUT / UCPD1_DBCC2 / PVD_IN   |       |             |
-| 33 | PA11 / SPI2_MOSI / I2S2_SD / TIM1_CH1N / USART1_CTS / COMP1_OUT / FDCAN1_RX / TIM4_CH1 / TIM1_CH4 / TIM1_BKIN2 / EVENTOUT / USB_DM |       |             |
+| 31 | PA9 / I2C3_SMBA / I2C2_SCL / I2S3_MCK / TIM1_CH2 / USART1_TX / OMP5_OUT / TIM15_BKIN / TIM2_CH3 / SAI1_FS_A / EVENTOUT / ADC5_IN2 / UCPD1_DBCC1                  | 🟢 I2C2_SCL     | Communication with ATmega328p   |
+| 32 | PA10 / TIM17_BKIN / USB_CRS_SYNC / I2C2_SMBA / SPI2_MISO / TIM1_CH3 / USART1_RX / COMP6_OUT / TIM2_CH4 / TIM8_BKIN / SAI1_D1 / SAI1_SD_A / EVENTOUT / UCPD1_DBCC2 / PVD_IN   | 🔵 INFINEON_RESET      | Used to reset Infineon MCU in case of glitch or repeating response timeout |
+| 33 | PA11 / SPI2_MOSI / I2S2_SD / TIM1_CH1N / USART1_CTS / COMP1_OUT / FDCAN1_RX / TIM4_CH1 / TIM1_CH4 / TIM1_BKIN2 / EVENTOUT / USB_DM                               | 🟢 ATMEGA_RESET | Used to reset ATmega328p in case of glitch or repeating response timeout |
 | 34 | PA12 / TIM16_CH1 / I2SCKIN / TIM1_CH2N / USART1_RTS_DE / COMP2_OUT / FDCAN1_TX / TIM4_CH2 / TIM1_ETR / EVENTOUT / USB_DP           |       |             |
 | 35 | VSS                      | GND     |             |
 | 36 | VDD                      | +3.3V   |             |
-| 37 | PA13 / SWDIO-JTMS / TIM16_CH1N / I2C4_SCL / I2C1_SCL / IR_OUT / USART3_CTS / TIM4_CH3 / SAI1_SD_B / EVENTOUT                    |       |             |
-| 38 | PA14 / SWCLK-JTCK / LPTIM1_OUT / I2C4_SMBA / I2C1_SDA / TIM8_CH2 / TIM1_BKIN / USART2_TX / SAI1_FS_B / EVENTOUT                 | ST-Link      |             |
-| 39 | PA15 / JTDI / TIM2_CH1 / TIM8_CH1 / I2C1_SCL / SPI1_NSS / SPI3_NSS / I2S3_WS / USART2_RX / UART4_RTS_DE / TIM1_BKIN / FDCAN3_TX / TIM2_ETR / EVENTOUT           | ST-Link      |             |
+| 37 | PA13 / SWDIO-JTMS / TIM16_CH1N / I2C4_SCL / I2C1_SCL / IR_OUT / USART3_CTS / TIM4_CH3 / SAI1_SD_B / EVENTOUT                    | 🔴 ST-Link      | JTAG data input (JTDI); used for programming/debugging via ST-Link |
+| 38 | PA14 / SWCLK-JTCK / LPTIM1_OUT / I2C4_SMBA / I2C1_SDA / TIM8_CH2 / TIM1_BKIN / USART2_TX / SAI1_FS_B / EVENTOUT                 | 🔴 ST-Link      | Debug clock input for SWD interface; used for programming and debugging via ST-Link |
+| 39 | PA15 / JTDI / TIM2_CH1 / TIM8_CH1 / I2C1_SCL / SPI1_NSS / SPI3_NSS / I2S3_WS / USART2_RX / UART4_RTS_DE / TIM1_BKIN / FDCAN3_TX / TIM2_ETR / EVENTOUT           | |  |
 | 40 | PB3 / JTDO-TRACESWO / TIM2_CH2 / TIM4_ETR / UCPD1_CRS_SYNC / TIM8_CH1N / SPI1_SCK / SPI3_SCK / I2S3_CK / USART2_TX / TIM3_ETR / FDCAN3_RX / SAI1_SCK_B / EVENTOUT|       |             |
 | 41 | PB4 / JTRST / TIM16_CH1 / TIM3_CH1 / TIM8_CH2N / SPI1_MISO / SPI3_MISO / USART2_RX / UART5_RTS_DE / TIM17_BKIN / FDCAN3_TX / SAI1_MCLK_B / EVENTOUT / UCPD1_CC2          |       |             |
 | 42 | PB5 / TIM16_BKIN / TIM3_CH2 / TIM8_CH3N / I2C1_SMBA / SPI1_MOSI / SPI3_MOSI / I2S3_SD / USART2_CK / I2C3_SDA / FDCAN2_RX / TIM17_CH1 / LPTIM1_IN1 / SAI1_SD_B / UART5_CTS / EVENTOUT  |       |             |
-| 43 | PB6 / TIM16_CH1N / TIM4_CH1 / TIM8_CH1 / TIM8_ETR / USART1_TX / COMP4_OUT / FDCAN2_TX / TIM8_BKIN2 / LPTIM1_ETR / SAI1_FS_B / EVENTOUT / UCPD1_CC1| 🟠 USART1_TX      |             |
-| 44 | PB7 / TIM17_CH1N / TIM4_CH2 / I2C4_SDA / I2C1_SDA / TIM8_BKIN / USART1_RX / COMP3_OUT / TIM3_CH4 / LPTIM1_IN2 / FMC_NL / UART4_CTS / EVENTOUT | 🟠 USART1_RX      |             |
+| 43 | PB6 / TIM16_CH1N / TIM4_CH1 / TIM8_CH1 / TIM8_ETR / USART1_TX / COMP4_OUT / FDCAN2_TX / TIM8_BKIN2 / LPTIM1_ETR / SAI1_FS_B / EVENTOUT / UCPD1_CC1 | 🟠 USART1_TX      | Used for communication with GPS module |
+| 44 | PB7 / TIM17_CH1N / TIM4_CH2 / I2C4_SDA / I2C1_SDA / TIM8_BKIN / USART1_RX / COMP3_OUT / TIM3_CH4 / LPTIM1_IN2 / FMC_NL / UART4_CTS / EVENTOUT      | 🟠 USART1_RX      | Used for communication with GPS module |
 | 45 | PB8 / BOOT0 / TIM16_CH1 / TIM4_CH3 / SAI1_CK1 / I2C1_SCL / USART3_RX / COMP1_OUT / FDCAN1_RX / TIM8_CH2 / TIM1_BKIN / SAI1_MCLK_A / EVENTOUT  |       |             |
 | 46 | PB9 / TIM17_CH1 / TIM4_CH4 / SAI1_D2 / I2C1_SDA / IR_OUT / USART3_TX / COMP2_OUT / FDCAN1_TX / TIM8_CH3 / TIM1_CH3N / SAI1_FS_A / EVENTOUT    |       |             |
 | 47 | VSS                      | GND      |             |
