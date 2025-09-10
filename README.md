@@ -192,10 +192,10 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ### 3.1 STM32G473CET6 Pinout (LQFP-48)
 
-| #  | Pin / Function           | Usage           | Description                              |
-|----|--------------------------|-----------------|------------------------------------------|
-| 1  | VBAT                     | Backup Domian   | Used to power Backup Domain with CR2032  |
-| 2  | PC13                     |            |             |
+| #  | Pin / Function           | Usage                                                                                              | Description                              |
+|----|--------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------|
+| 1  | VBAT                     | Supply for RTC and backup registers   | Used to power Backup Domain with CR2032  |
+| 2  | PC13                     | TIM1_BKIN / TIM1_CH1N / TIM8_CH4N / EVENTOUT / WKUP2 / RTC_TAMP1 / RTC_TS / RTC_OUT1               |                                          |
 | 3  | PC14 / OSC32_IN          |            |             |
 | 4  | PC15 / OSC32_OUT         |            |             |
 | 5  | PF0 / OSC_IN             |             |             |
