@@ -192,18 +192,18 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ### 3.1 STM32G473CET6 Pinout (LQFP-48)
 
-| #  | Pin / Function           | Usage                                                                                              | Description                              |
-|----|--------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------|
-| 1  | VBAT                     | Supply for RTC and backup registers   | Used to power Backup Domain with CR2032  |
-| 2  | PC13                     | TIM1_BKIN / TIM1_CH1N / TIM8_CH4N / EVENTOUT / WKUP2 / RTC_TAMP1 / RTC_TS / RTC_OUT1               |                                          |
-| 3  | PC14 / OSC32_IN          |            |             |
-| 4  | PC15 / OSC32_OUT         |            |             |
-| 5  | PF0 / OSC_IN             |             |             |
-| 6  | PF1 / OSC_OUT            |       |             |
+| #  | Pin / Function                                                                                    | Usage                     | Description                              |
+|----|---------------------------------------------------------------------------------------------------|---------------------------|------------------------------------------|
+| 1  | VBAT                                                                                              | Supply for RTC and backup registers   | Used to power Backup Domain with CR2032  |
+| 2  | PC13 / TIM1_BKIN / TIM1_CH1N / TIM8_CH4N / EVENTOUT / WKUP2 / RTC_TAMP1 / RTC_TS / RTC_OUT1       |                                       |                                          |
+| 3  | PC14 / EVENTOUT / OSC32_IN                                                                        |                                       |                                          |
+| 4  | PC15 / EVENTOUT / OSC32_OUT                                                                       |                                       |                                          |
+| 5  | PF0 / I2C2_SDA / SPI2_NSS/I2S2_WS / TIM1_CH3N / EVENTOUT / ADC1_IN10 / OSC_IN      |     |                                          |
+| 6  | PF1 / SPI2_SCK/I2S2_CK / EVENTOUT / ADC2_IN10 / COMP3_INM / OSC_OUT           |     |             |
 | 7  | PG10 / NRST              | Reset      |             |
 | 8  | PA0                      |                |             |
 | 9  | PA1                      |                |             |
-| 10 | PA2                      | 🟠 USART2_TX   |             |
+| 10 | PA2                      | 🟠 USART2_TX   |              |
 | 11 | PA3                      | 🟠 USART2_RX   |             |
 | 12 | PA4                      |       |             |
 | 13 | PA5                      |       |             |
