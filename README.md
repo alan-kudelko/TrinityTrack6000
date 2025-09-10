@@ -192,19 +192,19 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ### 3.1 STM32G473CET6 Pinout (LQFP-48)
 
-| #  | Pin / Function                                                                                    | Usage                     | Description                              |
-|----|---------------------------------------------------------------------------------------------------|---------------------------|------------------------------------------|
+| #  | Pin / Function                                                                                    | Usage                                 | Description                              |
+|----|---------------------------------------------------------------------------------------------------|---------------------------------------|------------------------------------------|
 | 1  | VBAT                                                                                              | Supply for RTC and backup registers   | Used to power Backup Domain with CR2032  |
 | 2  | PC13 / TIM1_BKIN / TIM1_CH1N / TIM8_CH4N / EVENTOUT / WKUP2 / RTC_TAMP1 / RTC_TS / RTC_OUT1       |                                       |                                          |
 | 3  | PC14 / EVENTOUT / OSC32_IN                                                                        |                                       |                                          |
 | 4  | PC15 / EVENTOUT / OSC32_OUT                                                                       |                                       |                                          |
-| 5  | PF0 / I2C2_SDA / SPI2_NSS/I2S2_WS / TIM1_CH3N / EVENTOUT / ADC1_IN10 / OSC_IN      |     |                                          |
-| 6  | PF1 / SPI2_SCK/I2S2_CK / EVENTOUT / ADC2_IN10 / COMP3_INM / OSC_OUT           |     |             |
-| 7  | PG10 / NRST              | Reset      |             |
-| 8  | PA0                      |                |             |
-| 9  | PA1                      |                |             |
-| 10 | PA2                      | 🟠 USART2_TX   |              |
-| 11 | PA3                      | 🟠 USART2_RX   |             |
+| 5  | PF0 / I2C2_SDA / SPI2_NSS/I2S2_WS / TIM1_CH3N / EVENTOUT / ADC1_IN10 / OSC_IN                     |                                       |                                          |
+| 6  | PF1 / SPI2_SCK/I2S2_CK / EVENTOUT / ADC2_IN10 / COMP3_INM / OSC_OUT                               |                                       |                                          |
+| 7  | PG10 / MCO / EVENTOUT / NRST                                                                      | MCU's reset                           |                                          |
+| 8  | PA0 / TIM2_CH1 / TIM5_CH1 / USART2_CTS / COMP1_OUT / TIM8_BKIN/ TIM8_ETR / TIM2_ETR / EVENTOUT / ADC12_IN1 / COMP1_INM / COMP3_INP / RTC_TAMP2 / WKUP1|                |             |
+| 9  | PA1 / RTC_REFIN / TIM2_CH2 / TIM5_CH2 / USART2_RTS_DE / TIM15_CH1N / EVENTOUT / ADC12_IN2 / COMP1_INP / OPAMP1_VINP / OPAMP3_VINP / OPAMP6_VINM       |                |             |
+| 10 | PA2 / TIM2_CH3 / TIM5_CH3 / USART2_TX / COMP2_OUT / TIM15_CH1 / QUADSPI1_BK1_NCS / LPUART1_TX / UCPD1_FRSTX / EVENTOUT / ADC1_IN3 / COMP2_INM / OPAMP1_VOUT / WKUP4/LSCO| 🟠 USART2_TX   |              |
+| 11 | PA3 / TIM2_CH4 / TIM5_CH4 / SAI1_CK1 / USART2_RX / TIM15_CH2 / QUADSPI1_CLK / LPUART1_RX / SAI1_MCLK_A / EVENTOUT ADC1_IN4 / COMP2_INP / OPAMP1_VINM/OPAMP / 1_VINP / OPAMP5_VINM  🟠 USART2_RX   |           |
 | 12 | PA4                      |       |             |
 | 13 | PA5                      |       |             |
 | 14 | PA6                      |       |             |
