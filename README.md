@@ -203,26 +203,26 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 | 7  | PG10 / MCO / EVENTOUT / NRST                                                                      | MCU's reset                           |                                          |
 | 8  | PA0 / TIM2_CH1 / TIM5_CH1 / USART2_CTS / COMP1_OUT / TIM8_BKIN/ TIM8_ETR / TIM2_ETR / EVENTOUT / ADC12_IN1 / COMP1_INM / COMP3_INP / RTC_TAMP2 / WKUP1|                |             |
 | 9  | PA1 / RTC_REFIN / TIM2_CH2 / TIM5_CH2 / USART2_RTS_DE / TIM15_CH1N / EVENTOUT / ADC12_IN2 / COMP1_INP / OPAMP1_VINP / OPAMP3_VINP / OPAMP6_VINM       |                |             |
-| 10 | PA2 / TIM2_CH3 / TIM5_CH3 / USART2_TX / COMP2_OUT / TIM15_CH1 / QUADSPI1_BK1_NCS / LPUART1_TX / UCPD1_FRSTX / EVENTOUT / ADC1_IN3 / COMP2_INM / OPAMP1_VOUT / WKUP4/LSCO| 🟠 USART2_TX   |              |
-| 11 | PA3 / TIM2_CH4 / TIM5_CH4 / SAI1_CK1 / USART2_RX / TIM15_CH2 / QUADSPI1_CLK / LPUART1_RX / SAI1_MCLK_A / EVENTOUT ADC1_IN4 / COMP2_INP / OPAMP1_VINM/OPAMP / 1_VINP / OPAMP5_VINM  🟠 USART2_RX   |           |
-| 12 | PA4                      |       |             |
-| 13 | PA5                      |       |             |
-| 14 | PA6                      |       |             |
-| 15 | PA7                      |       |             |
-| 16 | PB0                      |       |             |
-| 17 | PB1                      |       |             |
-| 18 | PB2                      |       |             |
+| 10 | PA2 / TIM2_CH3 / TIM5_CH3 / USART2_TX / COMP2_OUT / TIM15_CH1 / QUADSPI1_BK1_NCS / LPUART1_TX / UCPD1_FRSTX / EVENTOUT / ADC1_IN3 / COMP2_INM / OPAMP1_VOUT / WKUP4/LSCO           | 🟠 USART2_TX |        |
+| 11 | PA3 / TIM2_CH4 / TIM5_CH4 / SAI1_CK1 / USART2_RX / TIM15_CH2 / QUADSPI1_CLK / LPUART1_RX / SAI1_MCLK_A / EVENTOUT ADC1_IN4 / COMP2_INP / OPAMP1_VINM/OPAMP / 1_VINP / OPAMP5_VINM  | 🟠 USART2_RX |        |
+| 12 | PA4 / TIM3_CH2 / SPI1_NSS / SPI3_NSS/I2S3_WS / USART2_CK / SAI1_FS_B / EVENTOUT / ADC2_IN17 / DAC1_OUT1 / COMP1_INM                     |       |             |
+| 13 | PA5 / TIM2_CH1 / TIM2_ETR / SPI1_SCK / UCPD1_FRSTX / EVENTOUT / ADC2_IN13 / DAC1_OUT2 / COMP2_INM / OPAMP2_VINM                     |       |             |
+| 14 | PA6 / TIM16_CH1 / TIM3_CH1 / TIM8_BKIN / SPI1_MISO / TIM1_BKIN / COMP1_OUT / QUADSPI1_BK1_IO3 / LPUART1_CTS / EVENTOUT / ADC2_IN3 / DAC2_OUT1 / OPAMP2_VOUT           |       |             |
+| 15 | PA7 / TIM17_CH1 / TIM3_CH2 / TIM8_CH1N / SPI1_MOSI / TIM1_CH1N / COMP2_OUT / QUADSPI1_BK1_IO2 / UCPD1_FRSTX / EVENTOUT / ADC2_IN4 / COMP2_INP / OPAMP1_VINP / OPAMP2_VINP     |       |             |
+| 16 | PB0 / TIM3_CH3 / TIM8_CH2N / TIM1_CH2N / QUADSPI1_BK1_IO1 / UCPD1_FRSTX / EVENTOUT / ADC3_IN12 / ADC1_IN15 / COMP4_INP / OPAMP2_VINP / OPAMP3_VINP                 |       |             |
+| 17 | PB1 / TIM3_CH4 / TIM8_CH3N / TIM1_CH3N / COMP4_OUT / QUADSPI1_BK1_IO0 / EVENTOUT / ADC3_IN1 / ADC1_IN12 / COMP1_INP / OPAMP3_VOUT / OPAMP6_VINM                  |       |             |
+| 18 | PB2 / RTC_OUT2 / LPTIM1_OUT / TIM5_CH1 / TIM20_CH1 / I2C3_SMBA / QUADSPI1_BK2_IO1 / EVENTOUT / ADC2_IN12 / COMP4_INM / OPAMP3_VINM                    |       |             |
 | 19 | VSSA                     | GND        |  No need to filter analog section since analog inputs are not used in the project |
 | 20 | VREF+                    | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
 | 21 | VDDA                     | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
-| 22 | PB10                     |       |             |
+| 22 | PB10 / TIM2_CH3 / USART3_TX / LPUART1_RX / QUADSPI1_CLK / TIM1_BKIN / SAI1_SCK_A / EVENTOUT / COMP5_INM / OPAMP3_VINM / OPAMP4_VINM                  |       |             |
 | 23 | VSS                      | GND      |             |
 | 24 | VDD                      | +3.3V    |             |
-| 25 | PB11                     |                  |             |
-| 26 | PB12                     | 🔵 CS_INFINEON  | Chip select Infineon            |
-| 27 | PB13                     | 🔵 SPI2_SCK     | Communication witn Infineon MCU |
-| 28 | PB14                     | 🔵 SPI2_MISO    | Communication witn Infineon MCU |
-| 29 | PB15                     | 🔵 SPI2_MOSI    | Communication witn Infineon MCU |
+| 25 | PB11 / TIM2_CH4 / USART3_RX / LPUART1_TX / QUADSPI1_BK1_NCS / EVENTOUT / ADC12_IN14 / COMP6_INP / OPAMP4_VINP / OPAMP6_VOUT                   |                  |             |
+| 26 | PB12 / TIM5_ETR / I2C2_SMBA / SPI2_NSS/I2S2_WS / TIM1_BKIN / USART3_CK / LPUART1_RTS_DE / FDCAN2_RX / EVENTOUT / ADC4_IN3 / ADC1_IN11 / COMP7_INM / OPAMP4_VOUT / OPAMP6_VINP  | 🔵 CS_INFINEON | Chip select Infineon            |
+| 27 | PB13 / SPI2_SCK/I2S2_CK / TIM1_CH1N / USART3_CTS / LPUART1_CTS / FDCAN2_TX / EVENTOUT / ADC3_IN5 / COMP5_INP / OPAMP3_VINP / OPAMP4_VINP / OPAMP6_VINP | 🔵 SPI2_SCK | Communication witn Infineon MCU |
+| 28 | PB14 / TIM15_CH1 / SPI2_MISO / TIM1_CH2N / USART3_RTS_DE / COMP4_OUT / EVENTOUT / ADC4_IN4 / ADC1_IN5 / COMP7_INP / OPAMP2_VINP / OPAMP5_VINP          | 🔵 SPI2_MISO    | Communication witn Infineon MCU |
+| 29 | PB15 / RTC_REFIN / TIM15_CH2 / TIM15_CH1N / COMP3_OUT / TIM1_CH3N / SPI2_MOSI/I2S2_SD / EVENTOUT / ADC4_IN5 / ADC2_IN15 / COMP6_INM / OPAMP5_VINM      | 🔵 SPI2_MOSI    | Communication witn Infineon MCU |
 | 30 | PA8                      | 🟢 I2C2_SDA     | Communication with ATmega328p   |
 | 31 | PA9                      | 🟢 I2C2_SDL     | Communication with ATmega328p   |
 | 32 | PA10                     |       |             |
