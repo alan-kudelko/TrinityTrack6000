@@ -298,7 +298,7 @@ Colors and hardware related to them are described below:
 
 ## 4. System's architecture
 
-
+![System's architecture](Media/Systems_Architecture.drawio.svg)
 
 ---
 
