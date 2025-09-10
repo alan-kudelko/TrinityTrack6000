@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0" version="28.2.0">
   <diagram name="Page-1" id="_fgNbCBozK9R5fLy6JvO">
-    <mxGraphModel dx="4760" dy="2888" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#0D1117,#0D1117)" math="0" shadow="0">
+    <mxGraphModel dx="2156" dy="1738" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#0D1117,#0D1117)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -97,9 +97,6 @@
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-84" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;&lt;font face=&quot;-apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji&quot; color=&quot;#f0f6fc&quot;&gt;&lt;b&gt;DS18B20&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" parent="1" vertex="1">
           <mxGeometry x="703" y="667" width="150" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="urWOwsYpe-8lvMp6Ferf-86" value="200 pt" style="text;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-1521.147989908854" y="-1048.851806640625" width="61" height="36" as="geometry" />
         </mxCell>
         <mxCell id="urWOwsYpe-8lvMp6Ferf-91" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font face=&quot;-apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji&quot; color=&quot;#f0f6fc&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: rgb(13, 17, 23);&quot;&gt;&lt;b&gt;Motor driver 4&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" parent="1" vertex="1">
           <mxGeometry x="982" y="601" width="150" height="40" as="geometry" />
