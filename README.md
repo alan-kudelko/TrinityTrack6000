@@ -32,11 +32,11 @@ Powering the tank is a **custom-designed switching power supply**, built from sc
 - **Nucleo STM-64 STM32L4RGT6 board** for rapid prototyping and learning STM32
 - Custom PCB hosting all MCUs:
   - **STM32G473CET6 MCU** – Handles high-level coordination tasks and system management
-  - **Infineon MCU** – Controls precise motor and servo operations with real-time current monitoring
+  - **Infineon XMC4200F64K256BAXQSA1 MCU** – Controls precise motor and servo operations with real-time current monitoring
   - **ATmega AVR MCU** as I²C Slave – Reads data from 1-Wire temperature sensors
 - **nRF24l01** module
 - **ADXL345** module
-- **EEPROM** IC for storing data and settings for MCUs between bootups (Yet to be selected)
+- **FM25L16B-GTR** FRAM IC for storing data and settings for MCUs between bootups
 - Separate custom switching power supply PCB – Provides stable voltage rails for all MCUs and high-current peripherals
 
 ### 🧠 System Architecture & Concepts
@@ -108,7 +108,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [2.1 SPI Max frequency vs line length and type](#21-spi-max-frequency-vs-line-length-and-type)
 3. [MCU's pinouts](#3-mcus-pinouts)
    - [3.1 STM32G473CET6 Pinout (LQFP-48)](#31-stm32g473cet6-pinout-lqfp-48)
-   - [3.2 Infineon Pinout](#32-infineon-pinout)
+   - [3.2 XMC4200F64K256BAXQSA1 Pinout](#32-XMC4200F64K256BAXQSA1-pinout)
    - [3.3 ATmega328p Pinout](#33-atmega328p-pinout-tqfp-32)
 4. [System's architecture](#4-systems-architecture)
 5. [STM32G473CET6](#5-stm32g473cet6)
@@ -255,9 +255,74 @@ Colors and hardware related to them are described below:
 | 47 | VSS                      | GND      |             |
 | 48 | VDD                      | +3.3V    |             |
 
-### 3.2 Infineon Pinout
+### 3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)
 
-(soon)
+| #  | Pin / Function | Usage | Description |
+|----|----------------|-------|-------------|
+| 1  |                |       |             |
+| 2  |                |       |             |
+| 3  |                |       |             |
+| 4  |                |       |             |
+| 5  |                |       |             |
+| 6  |                |       |             |
+| 7  |                |       |             |
+| 8  |                |       |             |
+| 9  |                |       |             |
+| 10 |                |       |             |
+| 11 |                |       |             |
+| 12 |                |       |             |
+| 13 |                |       |             |
+| 14 |                |       |             |
+| 15 |                |       |             |
+| 16 |                |       |             |
+| 17 |                |       |             |
+| 18 |                |       |             |
+| 19 |                |       |             |
+| 20 |                |       |             |
+| 21 |                |       |             |
+| 22 |                |       |             |
+| 23 |                |       |             |
+| 24 |                |       |             |
+| 25 |                |       |             |
+| 26 |                |       |             |
+| 27 |                |       |             |
+| 28 |                |       |             |
+| 29 |                |       |             |
+| 30 |                |       |             |
+| 31 |                |       |             |
+| 32 |                |       |             |
+| 33 |                |       |             |
+| 34 |                |       |             |
+| 35 |                |       |             |
+| 36 |                |       |             |
+| 37 |                |       |             |
+| 38 |                |       |             |
+| 39 |                |       |             |
+| 40 |                |       |             |
+| 41 |                |       |             |
+| 42 |                |       |             |
+| 43 |                |       |             |
+| 44 |                |       |             |
+| 45 |                |       |             |
+| 46 |                |       |             |
+| 47 |                |       |             |
+| 48 |                |       |             |
+| 49 |                |       |             |
+| 50 |                |       |             |
+| 51 |                |       |             |
+| 52 |                |       |             |
+| 53 |                |       |             |
+| 54 |                |       |             |
+| 55 |                |       |             |
+| 56 |                |       |             |
+| 57 |                |       |             |
+| 58 |                |       |             |
+| 59 |                |       |             |
+| 60 |                |       |             |
+| 61 |                |       |             |
+| 62 |                |       |             |
+| 63 |                |       |             |
+| 64 |                |       |             |
 
 ### 3.3 ATmega328p Pinout (TQFP-32)
 
