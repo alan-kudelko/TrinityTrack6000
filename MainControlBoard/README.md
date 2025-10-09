@@ -1,4 +1,4 @@
-#**ControlBoard** – **STM32 + Infineon**  
+# **ControlBoard** – **STM32 + Infineon**  
 
 **STM32**: Main logic and system coordination, communication via radio and Bluetooth  
 **Infineon**: Motor and servo control, current and temperature monitoring  
