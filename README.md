@@ -33,8 +33,7 @@ Given the project’s complexity, it is developed in stages, focusing on one PCB
 
 ---
 
-## 🔧 Status
-Planning phase and component selection for **ControlBoard** (STM32 + Infineon)
+## 🔧 Status - Planning phase and component selection for **ControlBoard** (STM32 + Infineon)
 
 ---
 
