@@ -12,7 +12,7 @@ All tasks on STM32 and Infineon MCUs are allocated with **guard zones** in RAM, 
 
 The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, and portable code. The ControlBoard includes **robust diagnostics and fault-handling mechanisms**, such as monitoring RAM and CPU usage, task stack overflows, and EEPROM-based error logging.
 
-> ✅ Status: Currently in active development and prototyping
+> ✅ Status: Currently in active development and prototyping  
 > 🔧 Goal: Serve as an educational platform for learning **STM32**, **Infineon MCUs**, and real-time systems **ThreadX** and **Micrium µC/OS**, while exploring multi-MCU coordination and embedded system design  
 
 ---
