@@ -1,5 +1,3 @@
-# RadarBoard README
-
 **RadarBoard** – **NXP / IXYS (TBD)**  
 
 This board is intended for the integration of a custom radar system for object detection.  
