@@ -110,7 +110,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ## Technical Table of Contents
 
-1. [ControlBoard Module Structure & File Overview](#1--project-structure--file-overview)
+1. [ControlBoard Module Structure & File Overview](#1--controlboard-module-structure-file-overview)
 2. [Design considerations](#2-design-considerations)
 3. [MCU's pinouts](#3-mcus-pinouts)
    - [3.1 STM32G473CET6 Pinout (LQFP-48)](#31-stm32g473cet6-pinout-lqfp-48)
