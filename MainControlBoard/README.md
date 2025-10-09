@@ -1,17 +1,12 @@
 # **ControlBoard** – **STM32 + Infineon**  
 
-**STM32**: Main logic and system coordination, communication via radio and Bluetooth  
-**Infineon**: Motor and servo control, current and temperature monitoring  
+**STM32**: Main logic and system coordination, communication via radio and Bluetooth
+**Infineon**: Motor and servo control, current and temperature monitoring
 
-**ControlBoard** – **STM32 + Infineon**  
+The system runs on a custom PCB integrating **STM32** and **Infineon** microcontrollers, designed with **fully deterministic memory allocation** and task management.
 
-**STM32**: High-level system coordination, communication via radio and Bluetooth  
-**Infineon**: Motor and servo control, current and temperature monitoring   
-
-The system runs on a custom PCB integrating **STM32** and **Infineon** microcontrollers, designed with **fully deterministic memory allocation** and task management.  
-
-- **STM32** leverages **ThreadX RTOS** for high-level coordination  
-- **Infineon** uses **Micrium µC/OS RTOS** for precise motor and servo control  
+- **STM32** leverages **ThreadX RTOS** for high-level coordination
+- **Infineon** uses **Micrium µC/OS RTOS** for precise motor and servo control
 
 All tasks on STM32 and Infineon MCUs are allocated with **guard zones** in RAM, using custom **linker scripts** to arrange task stacks and guard areas contiguously. This enables continuous memory monitoring and deterministic stack overflow detection, fully compatible with static memory allocation principles.  
 
@@ -24,7 +19,14 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 
 ## ✳️ Planned Technologies & Tools
 
-**TrinityTrack6000** is an advanced embedded system project that combines hardware, software, and system-level design principles typically seen in professional-grade applications. The project is focused on precise tracking and control, integrating multiple peripherals and sensors to achieve robust and reliable performance.
+- **MCUs**: STM32 (high-level coordination, RTOS), Infineon XMC (motor & servo control, real-time monitoring)
+- **RTOS**: ThreadX on STM32, Micrium µC/OS on Infineon
+- **Memory Management**: Guard zones, static memory allocation, custom linker scripts
+- **Interfaces**: UART, SPI, and I²C for peripheral communication
+- **Communication Modules**: nRF24L01 for radio control, HC-05 for bluetooth control
+- **Development Tools**: VS Code, CMake, Ninja, arm-gcc toolchain
+- **Software Libraries**: STM32 HAL/LL drivers, Infineon low-level drivers
+- **Diagnostics & Monitoring**: RAM and CPU usage tracking, EEPROM fault logging
 
 ## Development Strategy
 
