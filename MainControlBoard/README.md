@@ -1,15 +1,24 @@
-TrinityTrack6000 is a custom-built, multi-MCU remote-controlled tank constructed from 2 mm and 3 mm steel sheets. The system runs on a custom PCB integrating STM32, Infineon, and AVR microcontrollers, designed from scratch with fully deterministic memory allocation and task management.
+**ControlBoard** – **STM32 + Infineon**  
 
-The project leverages **ThreadX RTOS** on the STM32 for high-level coordination and **Micrium µC/OS RTOS** on the Infineon MCU for precise motor and servo control. The AVR MCU functions as an I²C slave for reading data from 1-Wire temperature sensors, allowing time-critical acquisition without blocking main task execution.
+**STM32**: Main logic and system coordination, communication via radio and Bluetooth  
+**Infineon**: Motor and servo control, current and temperature monitoring  
 
-All tasks on STM32 and Infineon MCUs are allocated with **guard zones** in RAM, using custom **linker scripts** to arrange task stacks and guard areas contiguously. This setup enables continuous memory monitoring and deterministic stack overflow detection, fully compatible with static memory allocation principles.
+**ControlBoard** – **STM32 + Infineon**  
 
-The project is developed according to **MISRA C:2025** standards, ensuring safe, maintainable, and portable code. The system includes robust diagnostics and fault-handling mechanisms, including monitoring of RAM and CPU usage, task stack overflows, and EEPROM-based error logging.
+**STM32**: High-level system coordination, communication via radio and Bluetooth  
+**Infineon**: Motor and servo control, current and temperature monitoring   
 
-Powering the tank is a **custom-designed switching power supply**, built from scratch to provide stable and reliable voltage for all MCUs and high-current peripherals.
+The system runs on a custom PCB integrating **STM32** and **Infineon** microcontrollers, designed with **fully deterministic memory allocation** and task management.  
 
-> 🔧 Status: Planned after finishing DrinkCreator6000  
-> 🧪 Goal: Serve as a futuristic, educational platform for learning **STM32**, **Infineon MCUs**, and real-time operating systems **ThreadX** and **Micrium µC/OS**, while exploring multi-MCU coordination and embedded system design  
+- **STM32** leverages **ThreadX RTOS** for high-level coordination  
+- **Infineon** uses **Micrium µC/OS RTOS** for precise motor and servo control  
+
+All tasks on STM32 and Infineon MCUs are allocated with **guard zones** in RAM, using custom **linker scripts** to arrange task stacks and guard areas contiguously. This enables continuous memory monitoring and deterministic stack overflow detection, fully compatible with static memory allocation principles.  
+
+The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, and portable code. The ControlBoard includes **robust diagnostics and fault-handling mechanisms**, such as monitoring RAM and CPU usage, task stack overflows, and EEPROM-based error logging.
+
+> ✅ Status: Currently in active development and prototyping
+> 🔧 Goal: Serve as an educational platform for learning **STM32**, **Infineon MCUs**, and real-time systems **ThreadX** and **Micrium µC/OS**, while exploring multi-MCU coordination and embedded system design  
 
 ---
 
@@ -121,8 +130,6 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
      - [5.8.1 ThreadX Tasks Diagnostics](#581-threadx-tasks-diagnostics)
      - [5.8.2 RAM Usage Diagnostics](#582-ram-usage-diagnostics)
 6. [Infineon](#6-infineon)
-7. [ATmega328p](#7-atmega328p)
-8. [Mechanical Overview](#8-mechanical-overview)
 ---
 
 ## ⚙️ Technical Overview STM32 Part
@@ -621,120 +628,4 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 
 ---
 
-## 7. ATmega328p
-
-## 8. Mechanical Overview
-
-### 8.0 Tank Dimensions and weight
-
-| Dimension    |         |
-|--------------|---------|
-| $Length$     | 70 [cm] |
-| $Width_{1}$  | 32 [cm] |
-| $Width_{2}$  | 42 [cm] |
-| $Height$     | 20 [cm] |
-| $Ground\ clearance$ | 5 [cm] |
-| $Weight$     | 25 [kg] |
-
-###### $Width_{1}$ - Width of tank without tracks  
-###### $Width_{2}$ - Width of tank with tracks  
-
-Speed of the tank has to be at least $V_{Max}=5\frac{km}{h}$
-
-### 8.1 Tank Body Overview
-
-![Tank Chassis](Media/Tank_Body_1.jpg)
-![Tank Chassis](Media/Tank_Body_2.jpg)
-
-### 8.2 Drive Train Components
-
-#### 8.2.1 Tracks and Sprocket Wheels
-
-![Tank Tracks](Media/Tank_Tracks.png)
-![Tank Tracks](Media/Sprocket_Wheel.png)
-
-#### 8.2.2 DC Motors
-
-The selected DC motors are Injora 540 13T models. They were chosen primarily due to their low cost and relatively high peak power output of up to 300 W.  
-The main drawback of these motors is their high RPM, which requires the use of a reduction gearbox to achieve suitable torque and speed for the application.
-
-![Tank Tracks](Media/Injora540_13T_Parameters.png)
-![Tank Tracks](Media/Injora540_Parameters_Comparison.png)
-![Tank Tracks](Media/DC_Motor_Selection.png)
-
-The performance graphs were generated in **MATLAB** based on the manufacturer’s specifications and the fundamental DC motor equations.  
-
-According to these graphs, the Injora 540 13T motor reaches a peak power of around **300 W**, but its RPM is too high for practical use in an RC tank. In order to move a heavy vehicle, a reduction gearbox is required to convert the excessive RPM into usable torque.
-
-
-#### 8.2.3 Reduction Gearbox
-
-| Drivetrain parameters    |         |
-|--------------|---------|
-| Sprocket wheel diameter     | D=48 [mm] |
-| Motor RPM  | n=32500 [rpm] |
-| Gearbox reduction  ratio | r=1:50 |
-
-![Tank Tracks](Media/DC_Motor_Gearbox_1_50.png)
-![Tank Tracks](Media/DC_Motor_Gearbox_dims_1.png)
-![Tank Tracks](Media/DC_Motor_Gearbox_dims_2.png)
-![Tank Tracks](Media/DC_Motor_Gearbox_Selection.png)
-
-With the selected **DC motor** and **1:50 reduction gearbox**, the theoretical sprocket speed is:  
-
-$n_{out} = \frac{n}{r} = \frac{32500}{50} \approx 650 \ \text{rpm}$
-
-$V_{max} = \frac{\pi \cdot D \cdot n_{out}}{60} = \frac{\pi \cdot 0.048 \cdot 650}{60} \approx 1.63 \ \text{m/s} \approx 5.88 \ \text{km/h}$
-
-
-
----
-
-### X. Pinout overview
-
-#### X.1 Required signals list STM32
-
-USART_RX
-USART_TX
-
-SPI1_MOSI
-SPI1_MISO
-SPI1_SCK
-
-SPIn_MOSI
-SPIn_MISO
-SPIn_SCK
-
-CS_NRF24L01
-CS_STM32
-CS_EEPROM
-CS_INFINEON
-
-SPI1_REQ
-SPI1_BUSY
-
-I2Cn_SDA
-I2Cn_SCL
-
-SWDIO
-SWDCLK
-NRST
-SWO
-
-D+
-D-
-
-SMOKE_ON
-LED_LIGHTS
-CHASSIS_FANS
-GUN_LOCK
-POWER_LED_ON
-BUZZER_DIAG
-LED_ARMED
-LED_UNARMED
-LED_GUN_READY
-INFINEON_KILL_SWITCH
-
-AVR_RESTART
-INFINEON_RESTART
 
