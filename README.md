@@ -199,10 +199,24 @@ For connection of the data lines, I decided to use **JST PH 2.0 mm pitch conne
 
 Power distribution between PCBs will utilize high-current connectors capable of handling both continuous and peak loads. Proper conductor sizing, contact materials, and secure locking mechanisms will be considered to ensure safe and stable voltage supply across all modules.
 
-All system boards and peripherals will receive power through **Phoenix Contact connectors**. These connectors provide secure and high-current-capable connections for modular assembly. Maximum current rating: ___ A (to be determined).
+All system boards and peripherals will receive power through **Phoenix Contact connectors**. These connectors provide secure and high-current-capable connections for modular assembly. Maximum current rating: 40 A for **PowerControlBoard** , 20 A for **HardwareControlBoard** (DC motors and H-Bridge) 
 
-For power connections to the PowerControlBoard, a **Phoenix Contact 1017521 connector** will be used. This connector can safely handle currents up to **40 A**, ensuring reliable power delivery to all system boards and high-current peripherals.
+**Logic & Low-Power Boards**  
+   - Connections with Phoenix Contact COMBICON connectors (2–6 A rated)  
+   - Handles power for logic and low-current peripherals safely
 
+![Phoenix Contact 1764875](/Media/ElectricalComponents/PHOENIX_1764875_Connector.png)
+
+**Motor H-Bridge Board**  
+   - Connections with Phoenix Contact COMBICON / screw-terminal style (up to 20 A)  
+   - Supplies motors and servo power with robust connections
+
+![Phoenix Contact 1804810](/Media/ElectricalComponents/PHOENIX_1804810_Connector.png)
+
+**PowerControlBoard (Main Supply Input)**  
+   - Phoenix Contact 1017521 connector (up to 40 A)  
+   - Main battery input to deliver high-current power reliably
+   - 
 ![Phoenix Contact 1017521](/Media/ElectricalComponents/PHOENIX_1017521_Connector.png)
 
 
