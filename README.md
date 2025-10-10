@@ -151,7 +151,6 @@ The process for each board includes:
   	 ├── Media/                   # Folder containing all the drawings and schematics
      |
 	 ├── tools/                  # Helper tools
-	 │   ├── avr8-gnu-toolchain-win32_x86_64/                                     # avr-gcc toolchain
  	 │   └── arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/          # arm-gcc toolchain                         
      |
  	 ├── .gitignore            # Git ignore configuration
