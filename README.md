@@ -216,7 +216,7 @@ All system boards and peripherals will receive power through **Phoenix Contact c
 **PowerControlBoard (Main Supply Input)**  
    - Phoenix Contact 1017521 connector (up to 40 A)  
    - Main battery input to deliver high-current power reliably
-   - 
+     
 ![Phoenix Contact 1017521](/Media/ElectricalComponents/PHOENIX_1017521_Connector.png)
 
 
