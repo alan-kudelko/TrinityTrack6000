@@ -159,6 +159,9 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 	│   │   |   └── STM32L476RGTX_FLASH.ld     # Linker script with custom memory sections	
 	|   |   |
 	|   |   ├── STM32G473CET6/       # STM32 target MCU production files
+	|   |   |
+	|   |   ├── Readme.md            # MainControlBoard overview and documentation
+	|   |   |
 	│   |   └── ... (other files)    # Yet to be added after prototyping phase
 	|   |
 	| 	└── Infineon/                # Infineon MCU files
