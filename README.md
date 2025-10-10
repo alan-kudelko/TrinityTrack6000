@@ -199,7 +199,11 @@ For connection of the data lines, I decided to use **JST PH 2.0 mm pitch conne
 
 Power distribution between PCBs will utilize high-current connectors capable of handling both continuous and peak loads. Proper conductor sizing, contact materials, and secure locking mechanisms will be considered to ensure safe and stable voltage supply across all modules.
 
+All system boards and peripherals will receive power through **Phoenix Contact connectors**. These connectors provide secure and high-current-capable connections for modular assembly. Maximum current rating: ___ A (to be determined).
 
+For power connections to the PowerControlBoard, a **Phoenix Contact 1017521 connector** will be used. This connector can safely handle currents up to **40 A**, ensuring reliable power delivery to all system boards and high-current peripherals.
+
+![Phoenix Contact 1017521](/Media/ElectricalComponents/PHOENIX_1017521_Connector.png)
 
 
 ##### 2.2.2 SPI Max frequency vs line length and type
