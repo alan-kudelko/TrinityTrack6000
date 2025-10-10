@@ -201,10 +201,10 @@ Role of this MCU is high level system supervision, it is basically the brain of 
 In this project, the Infineon MCU will be responsible for all the hardware control including generating PWM for DC motors, servos, and the heater used in the smoke generator. Additionally, this MCU will process all the corresponding measurements of motor temperature, current, and in some cases their rotational speed via encoder signals. This MCU will control all the power-demanding components of the system.
 
 *List of responsibilities of this MCU*
--1
--2
--3
--4
+- 1
+- 2
+- 3
+- 4
 
 ---
 
