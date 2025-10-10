@@ -47,6 +47,7 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
   - **Infineon XMC4200F64K256BAXQSA1 MCU** – Controls precise motor and servo operations with real-time current monitoring
 - **nRF24l01** module
 - **FM25L16B-GTR** FRAM IC for storing data and settings for MCUs between bootups
+- **EEPROM** for storing long term data
 
 ### 🧠 System Architecture & Concepts
 - Real-time system based on **ThreadX** (STM32) and **Micrium µC/OS** (Infineon)
