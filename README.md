@@ -59,8 +59,8 @@ Given the project’s complexity, it is developed in stages, focusing on one PCB
 - **Power Electronics**: Switch-mode power supplies, battery voltage conversion, power distribution  
 - **Software / RTOS**: ThreadX, Micrium uC (TBD)  
 - **Development Tools**: VS Code, CMake, Ninja, ARM-GCC toolchain  
-- **PCB Design**: EasyEDA or Altium (TBD)  
-- **Debugging & Monitoring**: Multimeter, oscilloscope
+- **PCB Design**: KiCAD 
+- **Debugging & Monitoring**: Multimeter, Oscilloscope
 
 ---
 
