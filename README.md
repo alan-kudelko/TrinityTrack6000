@@ -190,6 +190,11 @@ Interconnections between PCBs will be implemented using a set of standardized co
 
 The digital communication between boards, including SPI, I²C, and UART signals, will be routed through dedicated data connectors. The choice of connector type and layout will aim to minimize crosstalk, signal reflections, and propagation delays while supporting the required bus speeds.
 
+For connection of the data lines, I decided to use **JST PH 2.0 mm pitch connectors**. These will carry the necessary control and feedback signals between the PCBs.
+
+![JST](/Media/ElectricalComponents/JST_Connectors.png)
+
+
 ##### 2.2.1.2 **Power lines:**  
 
 Power distribution between PCBs will utilize high-current connectors capable of handling both continuous and peak loads. Proper conductor sizing, contact materials, and secure locking mechanisms will be considered to ensure safe and stable voltage supply across all modules.
