@@ -159,16 +159,64 @@ The process for each board includes:
 
 ---
 
-### 2. Design considerations
+### 2. Design Considerations
 
-#### 2.1 SPI Max frequency vs line length and type
+Given the complexity of the TrinityTrack6000 project, both mechanically and electronically, it is essential to define clear design requirements to guide the development process. 
 
-| Line type         | Length [cm] | Frequency min [MHz] | Frequency max [MHz] | Single bit period [ns/bit] | Packet transfer time [μs] |
-|-------------------|-------------|---------------------|--------------------|-----------------------------|---------------------------|
-| PCB trace         | 15          | 20                  | 25                 | 50                          | 51.2                      |
-| Unshielded wire   | 15          | 5                   | 10                 | 100                         | 102.4                     |
-| Unshielded wire   | 30          | 2                   | 5                  | 200                         | 204.8                     |
+Mechanically, the tank must be equipped with a robust drivetrain capable of moving a substantial mass from a standstill. This requires careful selection of motors with sufficient torque, appropriate gear ratios, and high-quality mechanical components to ensure reliability and longevity under load.
 
-*Note:* Packet size is 128 bytes (1024 bits).
+From an electronic and system perspective, the modularity of the platform imposes strict requirements on inter-board connections. Communication protocols must be chosen with care to ensure reliable data transfer between multiple MCUs and peripheral boards. Signal integrity, latency, and potential interference must be considered, especially given the combination of SPI, I²C, UART, and wireless links.
+
+Additionally, to simplify the interconnections between boards and reduce potential points of failure, the design aims to minimize the number of signals physically routed between PCBs. Wherever possible, data will be transmitted digitally rather than as separate analog or discrete control lines, ensuring a cleaner layout, reduced wiring complexity, and more reliable communication across the modular system.
+
+Proper planning of these design constraints helps prevent integration issues, ensures smooth operation across all modules, and allows the platform to be both expandable and maintainable for future upgrades and experiments.
+
+#### 2.1 Mechanical Considerations
+
+#### 2.2 Electrical Considerations
+
+Given the modular nature of the TrinityTrack6000 and the high current and data requirements of its subsystems, careful planning of inter-board electrical connections is crucial. This includes minimizing signal lines, ensuring reliable data transmission, and safely distributing power to all PCBs.
+
+- **Signal count per board**: Determine the minimum number of control and feedback signals required between each PCB to ensure full functionality while minimizing wiring complexity.
+- **Connector selection**: Choose robust connectors suitable for modular stacking and repeated assembly/disassembly. Consider mechanical alignment, current rating, and pin density.
+- **Data bus frequency & throughput**: Define the operating frequency for digital communication buses (I²C, SPI, or UART) and estimate achievable data rates to meet system requirements.
+- **Power connectors**: Select power connectors capable of handling the maximum current demand of each PCB, including peak currents for motors and servos, while ensuring safe voltage distribution.
+
+##### 2.2.1 Interconnection between boards
+
+Interconnections between PCBs will be implemented using a set of standardized connectors to ensure reliable mechanical and electrical connections, ease of assembly, and maintainability. Each connector will be selected based on pin count, current rating, and mechanical robustness.
+
+##### 2.2.1.1 **Data lines:**  
+
+The digital communication between boards, including SPI, I²C, and UART signals, will be routed through dedicated data connectors. The choice of connector type and layout will aim to minimize crosstalk, signal reflections, and propagation delays while supporting the required bus speeds.
+
+##### 2.2.1.2 **Power lines:**  
+
+Power distribution between PCBs will utilize high-current connectors capable of handling both continuous and peak loads. Proper conductor sizing, contact materials, and secure locking mechanisms will be considered to ensure safe and stable voltage supply across all modules.
+
+
+
+
+##### 2.2.2 SPI Max frequency vs line length and type
+
+| Line type         | Length [cm] | Frequency max [MHz] | Single bit period [ns/bit] | Packet transfer time [μs] |
+|-------------------|-------------|--------------------|----------------------------|--------------------------|
+| PCB trace         | 15          | 25                 | 40                         | 40.96                    |
+| Unshielded wire   | 15          | 10                 | 100                        | 102.4                    |
+| Unshielded wire   | 30          | 5                  | 200                        | 204.8                    |
+
+*Note:* Example packet size is 128 bytes (1024 bits) to estimate transmission period
+
+---
+
+##### 2.2.3 I²C Max frequency vs line length and type
+
+| Line type         | Length [cm] | Frequency max [MHz] | Single bit period [ns/bit] | Packet transfer time [μs] |
+|------------------|-------------|--------------------|----------------------------|--------------------------|
+| PCB trace         | 15          | 1                  | 1000                       | 1024                     |
+| Unshielded wire   | 15          | 0.8                | 1250                       | 1280                     |
+| Unshielded wire   | 30          | 0.5                | 2000                       | 2048                     |
+
+*Note:* Example packet size is 128 bytes (1024 bits) to estimate transmission period
 
 ---
