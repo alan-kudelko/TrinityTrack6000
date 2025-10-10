@@ -5,7 +5,7 @@
 The system consists of multiple PCBs based on STM32, Infineon, NXP, IXYS and FPGA microcontrollers, responsible for:
 
 1. **ControlBoard** – **STM32 + Infineon**  
-   - **STM32**: Main logic and system coordination, communication via radio and Bluetooth  
+   - **STM32**: Main logic and system coordination, communication via radio 
    - **Infineon**: Motor and servo control, current and temperature monitoring
 2. **SensorHub** – **Sensor Interface Board**  
    - Handles integration of various sensors: temperature, acceleration, gas sensors (CO₂, O₂, ethanol, methane, butane), GPS, and others
@@ -53,7 +53,7 @@ Given the project’s complexity, it is developed in stages, focusing on one PCB
 
 - **MCUs & Processors**: STM32, Infineon, NXP, IXYS, FPGA  
 - **Sensor Modules**: Temperature, acceleration, gas sensors (CO₂, O₂, ethanol, methane, butane), GPS (TBD)  
-- **Communication**: Radio modules, Bluetooth, Wi-Fi (TBD)  
+- **Communication**: Radio modules
 - **Motor Control**: H-bridge, servo drivers, current and temperature monitoring  
 - **Audio/Video**: FPGA-based capture, hardware compression (H.264/265), transmission  
 - **Power Electronics**: Switch-mode power supplies, battery voltage conversion, power distribution  
@@ -98,7 +98,7 @@ The process for each board includes:
 
 ## 🗺️ Project Roadmap
 
-1. **ControlBoard** — Develop main logic and motor/servo interface, implement communication (radio/Bluetooth) and current/temperature monitoring.  
+1. **ControlBoard** — Develop main logic and motor/servo interface, implement communication (radio) and current/temperature monitoring.  
 2. **SensorHub** — Integrate and validate all environmental sensors, GPS, and accelerometers.  
 3. **Motor & Servo Interface Board** — Finalize H-bridge, signal routing, and power distribution for motors and servos.  
 4. **PowerControlBoard** — Design and test battery voltage conversion and power distribution.  
