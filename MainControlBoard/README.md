@@ -45,9 +45,9 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 - Custom PCB hosting:
   - **STM32G473CET6 MCU** – Handles high-level coordination tasks and system management
   - **Infineon XMC4200F64K256BAXQSA1 MCU** – Controls precise motor and servo operations with real-time current monitoring
-- **nRF24l01** module
-- **FM25L16B-GTR** FRAM IC for storing data and settings for MCUs between bootups
-- **EEPROM** for storing long term data
+  - **nRF24l01** module
+  - **FM25L16B-GTR** FRAM IC for storing data and settings for MCUs between bootups
+  - **FRAM** for storing long term data
 
 ### 🧠 System Architecture & Concepts
 - Real-time system based on **ThreadX** (STM32) and **Micrium µC/OS** (Infineon)
@@ -189,10 +189,17 @@ Due to the complexity of the system, it is essential to clearly define the respo
 Role of this MCU is high level system supervision, it is basically the brain of this project. It coordinates all the MCUs together, performs their reset in case of response timeout. The multi-MCU communication will be held by a dedicated high-speed SPI interface alongside dedicated CS pins and reset pins, which will enable restart of the module in case of fault. Additionally, it handles wireless communication and reads data from all the sensors which are not related to power electronics. It also controls the system's buzzer indicating potential faults and tone generation. This MCU also communicates with an on-board FRAM module to store important data between startups such as errors.
 
 *List of responsibilities of this MCU*
-- 1
-- 2
-- 3
-- 4
+- 1. System high-level supervision and synchronization
+- 2. Communication – sending and receiving data from all system MCUs
+- 3. Wireless communication via NRF24L01 2.4 GHz module
+- 4. Reading data from L76K GPS module
+- 5. Reading data from MQ-6 LPG / flammable gas sensor
+- 6. Reading data from MQ-7 carbon monoxide gas sensor
+- 7. Reading data from ADXL345 digital accelerometer
+- 8. Reading outside temperature and humidity from (TBD)
+- 9. Reading and saving data to FM25L16B-GTR FRAM
+- 10. Control of low-power electronics such as LEDs, lighting via MCP23S17 and system buzzer
+- 11. Arming, disarming and firing control for the BB gun mounted in the turret
 
 ---
 
@@ -201,10 +208,12 @@ Role of this MCU is high level system supervision, it is basically the brain of 
 In this project, the Infineon MCU will be responsible for all the hardware control including generating PWM for DC motors, servos, and the heater used in the smoke generator. Additionally, this MCU will process all the corresponding measurements of motor temperature, current, and in some cases their rotational speed via encoder signals. This MCU will control all the power-demanding components of the system.
 
 *List of responsibilities of this MCU*
-- 1
-- 2
-- 3
-- 4
+- 1. Generating control signals for DC motors and servos
+- 2. Reading position or speed of DC motors or high-precision servos (used in **RadarModuleBoard** or **FireControlBoard**)
+- 3. Reading temperature and current from ADCs installed on **HardwareControlBoard** via dedicated I²C bus
+- 4. Controlling electrical heater and glycerin pump used in the smoke generator
+- 5. Monitoring current limits and implementing basic fault protection for high-power components
+- 6. Processing encoder feedback from the radar servo for precise positioning
 
 ---
 
