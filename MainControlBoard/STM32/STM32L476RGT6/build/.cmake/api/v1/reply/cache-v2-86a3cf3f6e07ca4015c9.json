@@ -107,7 +107,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-g"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_ASM_FLAGS_MINSIZEREL",
@@ -123,7 +123,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-Os -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_ASM_FLAGS_RELEASE",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-O3 -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_ASM_FLAGS_RELWITHDEBINFO",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-O2 -g -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -179,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build"
+			"value" : "d:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -315,7 +315,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-g"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
@@ -331,7 +331,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-Os -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_RELEASE",
@@ -347,7 +347,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-O3 -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",
@@ -363,7 +363,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-O2 -g -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -427,7 +427,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-g"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_MINSIZEREL",
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-Os -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_RELEASE",
@@ -459,7 +459,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-O3 -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_RELWITHDEBINFO",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-O2 -g -DNDEBUG"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_DLLTOOL",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "ELF"
+			"value" : "Unknown"
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -707,7 +707,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6"
+			"value" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1026,16 +1026,12 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : "noop for ranlib"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.exe"
+			"type" : "INTERNAL",
+			"value" : ":"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1315,7 +1311,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build"
+			"value" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/build"
 		},
 		{
 			"name" : "STM32L476RGT6_IS_TOP_LEVEL",
@@ -1339,7 +1335,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6"
+			"value" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6"
 		}
 	],
 	"kind" : "cache",

@@ -506,8 +506,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
- .debug_line    0x00000000      0xc9f CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
- .debug_str     0x00000000    0xe10e4 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
+ .debug_line    0x00000000      0xd05 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
+ .debug_str     0x00000000    0xe1103 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .debug_frame   0x00000000      0x204 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .ARM.attributes
@@ -588,8 +588,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
- .debug_line    0x00000000      0x6b8 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
- .debug_str     0x00000000    0xe0c54 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
+ .debug_line    0x00000000      0x71e CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
+ .debug_str     0x00000000    0xe0c73 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
@@ -689,8 +689,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
- .debug_line    0x00000000      0xa35 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
- .debug_str     0x00000000    0xe0f33 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
+ .debug_line    0x00000000      0xa9b CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
+ .debug_str     0x00000000    0xe0f52 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .debug_frame   0x00000000      0x174 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .ARM.attributes
@@ -802,8 +802,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
- .debug_line    0x00000000      0xa44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
- .debug_str     0x00000000    0xe1126 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
+ .debug_line    0x00000000      0xaaa CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
+ .debug_str     0x00000000    0xe1145 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .debug_frame   0x00000000      0x204 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .ARM.attributes
@@ -916,8 +916,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
- .debug_line    0x00000000      0xceb CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
- .debug_str     0x00000000    0xe1184 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
+ .debug_line    0x00000000      0xd51 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
+ .debug_str     0x00000000    0xe11a3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .debug_frame   0x00000000      0x248 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .ARM.attributes
@@ -1001,8 +1001,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
- .debug_line    0x00000000      0x6e4 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
- .debug_str     0x00000000    0xe0d66 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
+ .debug_line    0x00000000      0x74a CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
+ .debug_str     0x00000000    0xe0d85 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .debug_frame   0x00000000       0x50 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .ARM.attributes
@@ -1168,8 +1168,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
- .debug_line    0x00000000      0x6b5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
- .debug_str     0x00000000    0xe0c51 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
+ .debug_line    0x00000000      0x71b CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
+ .debug_str     0x00000000    0xe0c70 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
@@ -1249,8 +1249,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
- .debug_line    0x00000000      0x6b8 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
- .debug_str     0x00000000    0xe0c54 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
+ .debug_line    0x00000000      0x71e CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
+ .debug_str     0x00000000    0xe0c73 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
@@ -1364,8 +1364,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
- .debug_line    0x00000000      0x890 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
- .debug_str     0x00000000    0xe11e5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
+ .debug_line    0x00000000      0x8f6 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
+ .debug_str     0x00000000    0xe1204 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .debug_frame   0x00000000      0x230 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .ARM.attributes
@@ -2006,8 +2006,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .debug_macro   0x00000000      0x330 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
- .debug_line    0x00000000      0xb5c CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
- .debug_str     0x00000000    0xe13fe CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
+ .debug_line    0x00000000      0xbc2 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
+ .debug_str     0x00000000    0xe141d CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .comment       0x00000000       0x47 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .debug_frame   0x00000000      0x204 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .ARM.attributes
@@ -4608,44 +4608,44 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_macro   0x00026ac3      0x2d6 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00026d99       0x1c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_line     0x00000000     0xc400
- .debug_line    0x00000000      0xac5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
- .debug_line    0x00000ac5      0xc60 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
- .debug_line    0x00001725      0xb19 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .debug_line    0x0000223e      0xca7 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
- .debug_line    0x00002ee5     0x101a CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
- .debug_line    0x00003eff     0x14e7 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
- .debug_line    0x000053e6     0x2ce8 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
- .debug_line    0x000080ce      0x75b CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_line    0x00008829      0x7a7 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_line    0x00008fd0      0x6a7 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
- .debug_line    0x00009677      0x383 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x000099fa      0x4ad CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_line    0x00009ea7      0x939 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_line    0x0000a7e0      0x6f4 CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_line    0x0000aed4      0x873 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_line    0x0000b747      0x2e2 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_line    0x0000ba29      0x9d7 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+.debug_line     0x00000000     0xc9fa
+ .debug_line    0x00000000      0xb2b CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+ .debug_line    0x00000b2b      0xcc6 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_line    0x000017f1      0xb7f CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_line    0x00002370      0xd0d CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_line    0x0000307d     0x1080 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_line    0x000040fd     0x154d CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_line    0x0000564a     0x2d4e CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_line    0x00008398      0x7d2 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_line    0x00008b6a      0x81e CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_line    0x00009388      0x6b8 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00009a40      0x394 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x00009dd4      0x4e0 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_line    0x0000a2b4      0x9c1 CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_line    0x0000ac75      0x76b CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_line    0x0000b3e0      0x8ea CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ .debug_line    0x0000bcca      0x2f3 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_line    0x0000bfbd      0xa3d CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_str      0x00000000    0xe9b21
- .debug_str     0x00000000    0xe9b21 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
-                              0xe1a0d (size before relaxing)
- .debug_str     0x000e9b21    0xe16f3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
- .debug_str     0x000e9b21    0xe0ff3 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .debug_str     0x000e9b21    0xe13d5 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
- .debug_str     0x000e9b21    0xe14c0 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
- .debug_str     0x000e9b21    0xe1639 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
- .debug_str     0x000e9b21    0xe1bd2 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
- .debug_str     0x000e9b21    0xe158a CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_str     0x000e9b21    0xe0cec CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_str     0x000e9b21     0x941b CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
- .debug_str     0x000e9b21     0x7120 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
- .debug_str     0x000e9b21    0x9ebd3 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_str     0x000e9b21    0xe412f CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_str     0x000e9b21    0xe10ee CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_str     0x000e9b21    0xe45e1 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
- .debug_str     0x000e9b21     0x3e5d CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_str     0x000e9b21    0xe4b42 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+.debug_str      0x00000000    0xe9c50
+ .debug_str     0x00000000    0xe9c50 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+                              0xe1a2c (size before relaxing)
+ .debug_str     0x000e9c50    0xe1712 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_str     0x000e9c50    0xe1012 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_str     0x000e9c50    0xe13f4 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000e9c50    0xe14df CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_str     0x000e9c50    0xe1658 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_str     0x000e9c50    0xe1bf1 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_str     0x000e9c50    0xe15a9 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_str     0x000e9c50    0xe0d0b CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_str     0x000e9c50     0x943a CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x000e9c50     0x713f CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x000e9c50    0x9ebf2 CMakeFiles/STM32L476RGT6.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_str     0x000e9c50    0xe414e CMakeFiles/STM32L476RGT6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_str     0x000e9c50    0xe110d CMakeFiles/STM32L476RGT6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_str     0x000e9c50    0xe4600 CMakeFiles/STM32L476RGT6.elf.dir/Src/main.c.obj
+ .debug_str     0x000e9c50     0x3e7c CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_str     0x000e9c50    0xe4b61 CMakeFiles/STM32L476RGT6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
 .comment        0x00000000       0x46
  .comment       0x00000000       0x46 CMakeFiles/STM32L476RGT6.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj

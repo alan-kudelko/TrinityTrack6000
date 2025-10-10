@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 149,
+				"line" : 150,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 138,
+				"line" : 139,
 				"parent" : 0
 			}
 		]
@@ -42,42 +42,42 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g -std=gnu11"
+					"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -std=gnu11"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Core/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Utils"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Init"
 				}
 			],
 			"language" : "C",
@@ -131,35 +131,35 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Drivers/CMSIS/Include"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Core/Inc"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Core/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Include"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Utils"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Utils"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/Init"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/Init"
 				}
 			],
 			"language" : "ASM",
@@ -175,11 +175,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0 -g",
+				"fragment" : "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32L476xx -std=gnu11 -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections -g3 -O0",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-TD:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/STM32L476RGTX_FLASH.ld -Wl,--gc-sections -Wl,-Map=D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build/Debug/STM32L476RGT6.map",
+				"fragment" : "-TD:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/STM32L476RGTX_FLASH.ld -Wl,--gc-sections -Wl,-Map=D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/build/Debug/STM32L476RGT6.map",
 				"role" : "flags"
 			}
 		],

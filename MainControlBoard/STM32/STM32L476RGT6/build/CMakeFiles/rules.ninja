@@ -52,7 +52,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Projekty\TrinityTrack6000\STM32\STM32L476RGT6 -BD:\Projekty\TrinityTrack6000\STM32\STM32L476RGT6\build
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32L476RGT6 -BD:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32L476RGT6\build
   description = Re-running CMake...
   generator = 1
 

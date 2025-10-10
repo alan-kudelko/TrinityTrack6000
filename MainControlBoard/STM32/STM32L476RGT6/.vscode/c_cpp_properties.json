@@ -2,7 +2,7 @@
   "configurations": [
     {
       "name": "arm",
-      "compilerPath": "D:/Projekty/TrinityTrack6000/STM32/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+      "compilerPath": "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
       "intelliSenseMode": "gcc-arm",
       "includePath": [
           "${workspaceFolder}/Core/Inc",

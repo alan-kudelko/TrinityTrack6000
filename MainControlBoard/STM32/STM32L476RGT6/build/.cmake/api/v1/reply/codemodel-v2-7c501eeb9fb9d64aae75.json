@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "STM32L476RGT6.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-STM32L476RGT6.elf-Debug-0c7c9071501d283593e6.json",
+					"jsonFile" : "target-STM32L476RGT6.elf-Debug-3de2c905deceaa86cd0d.json",
 					"name" : "STM32L476RGT6.elf",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build",
-		"source" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6"
+		"build" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/build",
+		"source" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6"
 	},
 	"version" : 
 	{

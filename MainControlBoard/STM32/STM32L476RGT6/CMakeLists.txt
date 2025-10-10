@@ -28,6 +28,7 @@ message(STATUS "[2] C/C++ standards: ${CMAKE_C_STANDARD}/${CMAKE_CXX_STANDARD}")
 # ARM toolchain
 get_filename_component(ARM_ROOT "${CMAKE_SOURCE_DIR}" DIRECTORY)
 get_filename_component(ARM_ROOT "${ARM_ROOT}" DIRECTORY)
+get_filename_component(ARM_ROOT "${ARM_ROOT}" DIRECTORY)
 set(ARM_ROOT "${ARM_ROOT}/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi")
 message(STATUS "[3] ARM toolchain set (local toolchain): ${ARM_ROOT}")
 

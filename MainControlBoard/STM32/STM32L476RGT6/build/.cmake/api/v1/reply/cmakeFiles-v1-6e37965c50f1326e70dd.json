@@ -154,8 +154,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6/build",
-		"source" : "D:/Projekty/TrinityTrack6000/STM32/STM32L476RGT6"
+		"build" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6/build",
+		"source" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32L476RGT6"
 	},
 	"version" : 
 	{
