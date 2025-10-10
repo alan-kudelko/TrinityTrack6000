@@ -180,6 +180,32 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ### 2. Design considerations
 
+#### 2.1 MCU Responsibilities / Scope of Control
+
+Due to the complexity of the system, it is essential to clearly define the responsibilities and scope of each MCU during the theoretical design stage to ensure proper modularization, communication efficiency, and maintainability. During the design phase, it is difficult to predict all possible scenarios or critical connections, which is why the design process follows an iterative improvement loop.
+
+##### 2.1.1 STM32's Responsibilities
+
+Role of this MCU is high level system supervision, it is basically the brain of this project. It coordinates all the MCUs together, performs their reset in case of response timeout. The multi-MCU communication will be held by a dedicated high-speed SPI interface alongside dedicated CS pins and reset pins, which will enable restart of the module in case of fault. Additionally, it handles wireless communication and reads data from all the sensors which are not related to power electronics. It also controls the system's buzzer indicating potential faults and tone generation. This MCU also communicates with an on-board FRAM module to store important data between startups such as errors.
+
+*List of responsibilities of this MCU*
+- 1
+- 2
+- 3
+- 4
+
+---
+
+##### 2.1.2 Infineon's Responsibilities
+
+In this project, the Infineon MCU will be responsible for all the hardware control including generating PWM for DC motors, servos, and the heater used in the smoke generator. Additionally, this MCU will process all the corresponding measurements of motor temperature, current, and in some cases their rotational speed via encoder signals. This MCU will control all the power-demanding components of the system.
+
+*List of responsibilities of this MCU*
+-1
+-2
+-3
+-4
+
 ---
 
 ### 3. MCU's pinouts
