@@ -292,22 +292,22 @@ Due to the extensive configuration options of Infineon MCUs, I chose to use the 
 
 | #  | Pin / Function | Usage/Label | Description |
 |----|----------------|-------|-------------|
-| 1  |                |       |             |
-| 2  |                |       |             |
-| 3  |                |       |             |
-| 4  |                |       |             |
-| 5  |                |       |             |
-| 6  |                |       |             |
-| 7  |                |       |             |
-| 8  |                |       |             |
-| 9  |                |       |             |
-| 10 |                |       |             |
-| 11 |                |       |             |
-| 12 |                |       |             |
-| 13 |                |       |             |
-| 14 |                |       |             |
-| 15 |                |       |             |
-| 16 |                |       |             |
+| 1  | P0.1 / U1C1 / DOUT0 / CCU80 / OUT11 / LEDTS0 / COL3 / ERU0.0 / A0 / HRPWM / 0.C2INB                                        |       |             |
+| 2  | P0.0 / CAN / N0_TXD / CCU80 / OUT21 / LEDTS0 / COL2 / U1C1 / DX0D / ERU0.0 / B0 / USB.VB / USDETE / CT A / HRPWM / 0.C1INB |       |             |
+| 3  | P0.10 / U1C1 / SCLKO / UT / CCU80 / OUT02 / LEDTS0 / COL1 / U1C1 / DX1A / ERU0.1 / A0                                      |       |             |
+| 4  | P0.9 / HRPWM / 0.HROU / T31 / U1C1 / SELO0 / CCU80 / OUT12 / LEDTS0 / COL0 / U1C1 / DX2A / ERU0.1 / B0                     |       |             |
+| 5  | P3.0 / U0C1 / SCLKO / UT / U0C1.D / X1B / CCU80.I / N2C                                                                    |       |             |
+| 6  | USB_DM                                                                                                                     |       |             |
+| 7  | USB_DP                                                                                                                     |       |             |
+| 8  | VDDP                |       |             |
+| 9  | VDDC               |       |             |
+| 10 | HIB_IO_0 / HIBOUT / WWDT / SERVICE_OUT / WAKEUPA / USB.VB / USDETE / CT C                                                  |       |             |
+| 11 | RTC_XTAL1 / ERU0.1 / B1                                                                                                    |       |             |
+| 12 | RTC_XTAL2                                                                                                                  |       |             |
+| 13 | VBAT               |       |             |
+| 14 | P14.14 / VADC.G1CH6 / G1ORC6                                                                                               |       |             |
+| 15 | P14.7 / VADC.G0CH7 / POSIF0.IN0B                                                                                           |       |             |
+| 16 | P14.6 / VADC.G0CH6 / POSIF0.IN1B / G0ORC6                                                                                  |       |             |
 | 17 |                |       |             |
 | 18 |                |       |             |
 | 19 |                |       |             |
