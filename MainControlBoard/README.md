@@ -221,13 +221,13 @@ In this project, the Infineon MCU will be responsible for all the hardware contr
 
 Due to the large number of pins, I decided to use colors to group them.  
 Colors and hardware related to them are described below:
-- 🟠 USART2 used to communicate with PC via Nucleo Board Programmer  
-- 🔵 Infineon MCU related pins, SPI2 communication, kill switch and reset
-- 🟢 ATmega328p and MCP230017 related pins, I2C2 communication and reset
-- 🟣 SPI1 - communication with external EEPROM, NRF240L01 and ADXL345 accelerometer
-- 🔴 ST-Link / Debug / SWD  
-- ⚪ Unused / General Purpose  
-- 🟡 Basic GPIO used to control various tank components such as LED's, smoke generator etc. 
+- 🟠 UART2 - Communication with L76K GPS
+- 🔵 SPI2, GPIO - Inter-MCU communication pins and MCU's reset pins
+- 🟢 I²C - Communication with ADXL345 accelerometer
+- 🟣 SPI1 - Communication with FM25L16B-GTR FRAM, NRF240L01 radio module and MCP23S17 pin expander
+- 🔴 ST-Link, UART1 - Debug, SWD, Programming 
+- ⚪ Unused - General Purpose  
+- 🟡 GPIO - used to control various tank components such as LED's, smoke generator etc. 
 - 🔷 RTC / Backup / LPTIM  
 
 
@@ -246,17 +246,17 @@ Colors and hardware related to them are described below:
 | 9  | PA1 / RTC_REFIN / TIM2_CH2 / TIM5_CH2 / USART2_RTS_DE / TIM15_CH1N / EVENTOUT / ADC12_IN2 / COMP1_INP / OPAMP1_VINP / OPAMP3_VINP / OPAMP6_VINM        | 🟡              |             |
 | 10 | PA2 / TIM2_CH3 / TIM5_CH3 / USART2_TX / COMP2_OUT / TIM15_CH1 / QUADSPI1_BK1_NCS / LPUART1_TX / UCPD1_FRSTX / EVENTOUT / ADC1_IN3 / COMP2_INM / OPAMP1_VOUT / WKUP4/LSCO           | 🟠 USART2_TX | Used for communication with GPS module |
 | 11 | PA3 / TIM2_CH4 / TIM5_CH4 / SAI1_CK1 / USART2_RX / TIM15_CH2 / QUADSPI1_CLK / LPUART1_RX / SAI1_MCLK_A / EVENTOUT ADC1_IN4 / COMP2_INP / OPAMP1_VINM/OPAMP / 1_VINP / OPAMP5_VINM  | 🟠 USART2_RX | Used for communication with GPS module |
-| 12 | PA4 / TIM3_CH2 / SPI1_NSS / SPI3_NSS/I2S3_WS / USART2_CK / SAI1_FS_B / EVENTOUT / ADC2_IN17 / DAC1_OUT1 / COMP1_INM                                                       |        | 🟣 ADXL345_CS             | Used to select ADXL345 as SPI slave   
+| 12 | PA4 / TIM3_CH2 / SPI1_NSS / SPI3_NSS/I2S3_WS / USART2_CK / SAI1_FS_B / EVENTOUT / ADC2_IN17 / DAC1_OUT1 / COMP1_INM                                                       |        |            |  
 | 13 | PA5 / TIM2_CH1 / TIM2_ETR / SPI1_SCK / UCPD1_FRSTX / EVENTOUT / ADC2_IN13 / DAC1_OUT2 / COMP2_INM / OPAMP2_VINM                                                           | 🟣 SPI1_SCK  | Used for communication with nRF24L01 module and external EEPROM |
 | 14 | PA6 / TIM16_CH1 / TIM3_CH1 / TIM8_BKIN / SPI1_MISO / TIM1_BKIN / COMP1_OUT / QUADSPI1_BK1_IO3 / LPUART1_CTS / EVENTOUT / ADC2_IN3 / DAC2_OUT1 / OPAMP2_VOUT               | 🟣 SPI1_MISO | Used for communication with nRF24L01 module and external EEPROM |
 | 15 | PA7 / TIM17_CH1 / TIM3_CH2 / TIM8_CH1N / SPI1_MOSI / TIM1_CH1N / COMP2_OUT / QUADSPI1_BK1_IO2 / UCPD1_FRSTX / EVENTOUT / ADC2_IN4 / COMP2_INP / OPAMP1_VINP / OPAMP2_VINP | 🟣 SPI1_MOSI | Used for communication with nRF24L01 module and external EEPROM |
 | 16 | PB0 / TIM3_CH3 / TIM8_CH2N / TIM1_CH2N / QUADSPI1_BK1_IO1 / UCPD1_FRSTX / EVENTOUT / ADC3_IN12 / ADC1_IN15 / COMP4_INP / OPAMP2_VINP / OPAMP3_VINP                        | 🟣 NRF24L01_CS | Used to select NRF24L01 as SPI slave                          |
 | 17 | PB1 / TIM3_CH4 / TIM8_CH3N / TIM1_CH3N / COMP4_OUT / QUADSPI1_BK1_IO0 / EVENTOUT / ADC3_IN1 / ADC1_IN12 / COMP1_INP / OPAMP3_VOUT / OPAMP6_VINM                           | 🟣 EEPROM_CS | Used to select external EEPROM as SPI slave                     |
-| 18 | PB2 / RTC_OUT2 / LPTIM1_OUT / TIM5_CH1 / TIM20_CH1 / I2C3_SMBA / QUADSPI1_BK2_IO1 / EVENTOUT / ADC2_IN12 / COMP4_INM / OPAMP3_VINM                    | 🟡      |             |
+| 18 | PB2 / RTC_OUT2 / LPTIM1_OUT / TIM5_CH1 / TIM20_CH1 / I2C3_SMBA / QUADSPI1_BK2_IO1 / EVENTOUT / ADC2_IN12 / COMP4_INM / OPAMP3_VINM                    | 🔵      |             |
 | 19 | VSSA                     | GND        |  No need to filter analog section since analog inputs are not used in the project |
 | 20 | VREF+                    | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
 | 21 | VDDA                     | +3.3V      |  No need to filter analog section since analog inputs are not used in the project |
-| 22 | PB10 / TIM2_CH3 / USART3_TX / LPUART1_RX / QUADSPI1_CLK / TIM1_BKIN / SAI1_SCK_A / EVENTOUT / COMP5_INM / OPAMP3_VINM / OPAMP4_VINM                  | 🟡      |             |
+| 22 | PB10 / TIM2_CH3 / USART3_TX / LPUART1_RX / QUADSPI1_CLK / TIM1_BKIN / SAI1_SCK_A / EVENTOUT / COMP5_INM / OPAMP3_VINM / OPAMP4_VINM                  | 🔵      |             |
 | 23 | VSS                      | GND      |             |
 | 24 | VDD                      | +3.3V    |             |
 | 25 | PB11 / TIM2_CH4 / USART3_RX / LPUART1_TX / QUADSPI1_BK1_NCS / EVENTOUT / ADC12_IN14 / COMP6_INP / OPAMP4_VINP / OPAMP6_VOUT                   | 🔵 INFINEON_KILL_SWITCH                 | Used to provide kill switch for Infineon MCU in case of emergency  |
