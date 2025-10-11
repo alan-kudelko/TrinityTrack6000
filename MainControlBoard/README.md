@@ -69,6 +69,7 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 - **ThreadX** for STM32, **Micrium µC/OS** for Infineon
 - **VS Code, CMake, Ninja** for building and managing the project
 - **Doxygen** for automatic code documentation
+- **XMC Pinout Tool** for selecting pins on XMC4200 MCU
 
 ### 📚 Documentation
 The source code is fully documented using **Doxygen**, which generates up-to-date, browsable documentation from the annotated source files. The generated docs can be found in the `docs/MainControlBoard` directory and are updated as part of the build process.
@@ -100,6 +101,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - 🔄 Implement initialization functions to initialize STM32
 - 🔄✅ Implement a diagnostic function to display RAM usage over UART, including `.bss`, `.data`, `.heap`, `.stack`, and other linker sections such as `.tdat`
 - 🔄 Integrate ThreadX RTOS: add CMake build configuration, system setup, memory layout adjustments, and initial task scheduling
+- 🔄 Plan out overall logic of **ControlBoard** along with used components
 
 
 ## 🗺️ Production Roadmap
@@ -286,7 +288,9 @@ Colors and hardware related to them are described below:
 
 #### 3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)
 
-| #  | Pin / Function | Usage | Description |
+Due to the extensive configuration options of Infineon MCUs, I chose to use the official **XMC Pinout Tool** provided on Infineon's website.
+
+| #  | Pin / Function | Usage/Label | Description |
 |----|----------------|-------|-------------|
 | 1  |                |       |             |
 | 2  |                |       |             |
