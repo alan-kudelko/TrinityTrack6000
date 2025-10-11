@@ -269,8 +269,8 @@ Colors and hardware related to them are described below:
 | 32 | PA10 / TIM17_BKIN / USB_CRS_SYNC / I2C2_SMBA / SPI2_MISO / TIM1_CH3 / USART1_RX / COMP6_OUT / TIM2_CH4 / TIM8_BKIN / SAI1_D1 / SAI1_SD_A / EVENTOUT / UCPD1_DBCC2 / PVD_IN         | 🔵 NXP_CS      | Chip select NXP MCU |
 | 33 | PA11 / SPI2_MOSI / I2S2_SD / TIM1_CH1N / USART1_CTS / COMP1_OUT / FDCAN1_RX / TIM4_CH1 / TIM1_CH4 / TIM1_BKIN2 / EVENTOUT / USB_DM                                                 | 🔵 FPGA_CS     | Chip select FPGA MCU |
 | 34 | PA12 / TIM16_CH1 / I2SCKIN / TIM1_CH2N / USART1_RTS_DE / COMP2_OUT / FDCAN1_TX / TIM4_CH2 / TIM1_ETR / EVENTOUT / USB_DP                                                           | 🔵 NXP_RST     | Used to reset NXP MCU in case of fault |
-| 35 | VSS                      | GND     |             |
-| 36 | VDD                      | +3.3V   |             |
+| 35 | VSS                      | GND     | Common ground            |
+| 36 | VDD                      | +3.3V   | Supply voltage from low ripple linear voltage regulator            |
 | 37 | PA13 / SWDIO-JTMS / TIM16_CH1N / I2C4_SCL / I2C1_SCL / IR_OUT / USART3_CTS / TIM4_CH3 / SAI1_SD_B / EVENTOUT                    | 🔴 ST-Link      | JTAG data input (JTDI); used for programming/debugging via ST-Link |
 | 38 | PA14 / SWCLK-JTCK / LPTIM1_OUT / I2C4_SMBA / I2C1_SDA / TIM8_CH2 / TIM1_BKIN / USART2_TX / SAI1_FS_B / EVENTOUT                 | 🔴 ST-Link      | Debug clock input for SWD interface; used for programming and debugging via ST-Link |
 | 39 | PA15 / JTDI / TIM2_CH1 / TIM8_CH1 / I2C1_SCL / SPI1_NSS / SPI3_NSS / I2S3_WS / USART2_RX / UART4_RTS_DE / TIM1_BKIN / FDCAN3_TX / TIM2_ETR / EVENTOUT                              | 🔵 RENESANS_RST | Used to reset RENESANS MCU in case of fault |
@@ -281,8 +281,8 @@ Colors and hardware related to them are described below:
 | 44 | PB7 / TIM17_CH1N / TIM4_CH2 / I2C4_SDA / I2C1_SDA / TIM8_BKIN / USART1_RX / COMP3_OUT / TIM3_CH4 / LPTIM1_IN2 / FMC_NL / UART4_CTS / EVENTOUT      | 🔴 USART1_RX      | Used to communicate with PC's serial port via Nucleo Board Programmer |
 | 45 | PB8 / BOOT0 / TIM16_CH1 / TIM4_CH3 / SAI1_CK1 / I2C1_SCL / USART3_RX / COMP1_OUT / FDCAN1_RX / TIM8_CH2 / TIM1_BKIN / SAI1_MCLK_A / EVENTOUT       | ⚪ NC           | Not used                                    |
 | 46 | PB9 / TIM17_CH1 / TIM4_CH4 / SAI1_D2 / I2C1_SDA / IR_OUT / USART3_TX / COMP2_OUT / FDCAN1_TX / TIM8_CH3 / TIM1_CH3N / SAI1_FS_A / EVENTOUT         | ⚪ NC           | Not used                                    |
-| 47 | VSS                      | GND      |             |
-| 48 | VDD                      | +3.3V    |             |
+| 47 | VSS                      | GND      | Common ground            |
+| 48 | VDD                      | +3.3V    | Supply voltage from low ripple linear voltage regulator            |
 
 #### 3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)
 
