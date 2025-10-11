@@ -301,10 +301,10 @@ Colors and hardware related to them are described below:
 
 | #  | Pin / Function | Usage/Label | Description |
 |----|----------------|-------|-------------|
-| 1  | P0.1 / U1C1 / DOUT0 / CCU80 / OUT11 / LEDTS0 / COL3 / ERU0.0 / A0 / HRPWM / 0.C2INB                                        | 🔵 U1C1 SPI_MISO    | Communication with STM32 |
-| 2  | P0.0 / CAN / N0_TXD / CCU80 / OUT21 / LEDTS0 / COL2 / U1C1 / DX0D / ERU0.0 / B0 / USB.VB / USDETE / CT A / HRPWM / 0.C1INB | 🔵 U1C1 SPI_MOSI    | Communication with STM32 |
-| 3  | P0.10 / U1C1 / SCLKO / UT / CCU80 / OUT02 / LEDTS0 / COL1 / U1C1 / DX1A / ERU0.1 / A0                                      | 🔵 U1C1 SPI_SCK     | Communication with STM32 |
-| 4  | P0.9 / HRPWM / 0.HROU / T31 / U1C1 / SELO0 / CCU80 / OUT12 / LEDTS0 / COL0 / U1C1 / DX2A / ERU0.1 / B0                     | 🔵 U1C1 CS_INFINEON | Communication with STM32 |
+| 1  | P0.1 / **U1C1** / DOUT0 / CCU80 / OUT11 / LEDTS0 / COL3 / ERU0.0 / A0 / HRPWM / 0.C2INB                                        | 🔵 U1C1 SPI_MISO    | Communication with STM32 |
+| 2  | P0.0 / CAN / N0_TXD / CCU80 / OUT21 / LEDTS0 / COL2 / **U1C1** / DX0D / ERU0.0 / B0 / USB.VB / USDETE / CT A / HRPWM / 0.C1INB | 🔵 U1C1 SPI_MOSI    | Communication with STM32 |
+| 3  | P0.10 / **U1C1** / SCLKO / UT / CCU80 / OUT02 / LEDTS0 / COL1 / U1C1 / DX1A / ERU0.1 / A0                                      | 🔵 U1C1 SPI_SCK     | Communication with STM32 |
+| 4  | P0.9 / HRPWM / 0.HROU / T31 / **U1C1** / SELO0 / CCU80 / OUT12 / LEDTS0 / COL0 / U1C1 / DX2A / ERU0.1 / B0                     | 🔵 U1C1 CS_INFINEON | Communication with STM32 |
 | 5  | P3.0 / U0C1 / SCLKO / UT / U0C1.D / X1B / CCU80.I / N2C                                                                    |       |             |
 | 6  | USB_DM                                                                                                                     |       |             |
 | 7  | USB_DP                                                                                                                     |       |             |
@@ -329,8 +329,8 @@ Colors and hardware related to them are described below:
 | 26 | P2.14 / VADC.E.MUX11 / U1C0.DOUT0 / CCU80.OUT21 / U1C0.DX0D                                                                |       |             |
 | 27 | P2.9 / CCU80.OUT22 / LEDTS0.LINE5 / LEDTS0.EXTENDED5 / LEDTS0.TSIN5A / DAC.TRIGGER4 / CCU41.IN0B / CCU41.IN1B / CCU41.IN2B / CCU41.IN3B |       |             |
 | 28 | P2.8 / CCU80.OUT32 / LEDTS0.LINE4 / LEDTS0.EXTENDED4 / LEDTS0.TSIN4A / DAC.TRIGGER5 / CCU40.IN0B / CCU40.IN1B / CCU40.IN2B / CCU40.IN3B |       |             |
-| 29 | P2.5 / U0C1.DOUT0 / CCU41.OUT0 / LEDTS0.LINE3 / LEDTS0.EXTENDED3 / LEDTS0.TSIN3A / U0C1.DX0B / ERU0.0.A2 / CCU41.IN0A / HRPWM0.BL2A                           | 🟢 U0C1 I²C SDA     | Used to communicate with ADC converter on **HardwareControlBoard** |
-| 30 | P2.4 / VADC.E.MUX02 / U0C1.SCLKO / U0C1.UT / CCU41.OUT1 / LEDTS0.LINE2 / LEDTS0.EXTENDED2 / LEDTS0.TSIN2A / U0C1.DX1A / ERU0.0.B2 / CCU41.IN1A / HRPWM0.BL1A  | 🟢 U0C1 I²C SCL     | Used to communicate with ADC converter on **HardwareControlBoard** |
+| 29 | P2.5 / U0C1.DOUT0 / CCU41.OUT0 / LEDTS0.LINE3 / LEDTS0.EXTENDED3 / LEDTS0.TSIN3A / **U0C1.DX0B** / ERU0.0.A2 / CCU41.IN0A / HRPWM0.BL2A | 🟢 U0C1 I²C SDA     | Used to communicate with ADC converter on **HardwareControlBoard** |
+| 30 | P2.4 / VADC.E.MUX02 / U0C1.SCLKO / U0C1.UT / CCU41.OUT1 / LEDTS0.LINE2 / LEDTS0.EXTENDED2 / LEDTS0.TSIN2A / **U0C1.DX1A** / ERU0.0.B2 / CCU41.IN1A / HRPWM0.BL1A | 🟢 U0C1 I²C SCL     | Used to communicate with ADC converter on **HardwareControlBoard** |
 | 31 | P2.3 / VADC.E.MUX01 / U0C1.SELO0 / CCU41.OUT2 / LEDTS0.LINE1 / LEDTS0.EXTENDED1 / LEDTS0.TSIN1A / U0C1.DX2A / ERU0.1.A2 / CCU41.IN2A    |       |             |
 | 32 | P2.2 / VADC.E.MUX00 / CCU41.OUT3 / LEDTS0.LINE0 / LEDTS0.EXTENDED0 / LEDTS0.TSIN0A / U0C1.DX0A / ERU0.1.B2 / CCU41.IN3A                 |       |             |
 | 33 | P2.1 / LEDTS0.COL0 / DB.TDO / TRACES.WO / ERU1.0.B0 / CCU40.I.N0C                                                                       |       |             |
@@ -350,14 +350,14 @@ Colors and hardware related to them are described below:
 | 47 | P1.5 / CAN.N1_TXD / U0C0.DOUT0 / CCU80.OUT23 / U0C0.DOUT0 / U0C0.HWIN0 / U0C0.DX0A / CAN.N0_RXDA / ERU0.2.A0 / ERU1.0.A0 / CCU41.I.N1C  |       |             |
 | 48 | P1.4 / WWDT.SERVICE_OUT / CAN.N0_TXD / CCU80.OUT33 / U0C0.DOUT1 / U0C0.HWIN1 / U0C0.DX0B / CAN.N1_RXDD / ERU0.2.B0 / CCU41.I.N0C / HRPWM0.BL0A  |       |             |
 | 49 | P1.3 / U0C0.MCLKO / UT / CCU40.OUT0 / ERU1.PDOUT0 / U0C0.DOUT2 / U0C0.HWIN2 / POSIF0.IN0A / ERU1.2.A0 / CCU40.I.N0A / HRPWM0.C0INB      |       |             |
-| 50 | P1.2 / CCU40.OUT1 / ERU1.PDOUT1 / U0C0.DOUT3 / U0C0.HWIN3 / POSIF0.IN1A / ERU1.2.B0 / CCU40.I.N1A / HRPWM0.C2INA                        |🔷 HRPWM RADAR_SERVO_ENC       | Encoder for radar's servomechanism |
+| 50 | P1.2 / CCU40.OUT1 / ERU1.PDOUT1 / U0C0.DOUT3 / U0C0.HWIN3 / POSIF0.IN1A / ERU1.2.B0 / CCU40.I.N1A / **HRPWM0.C2INA**                    |🔷 HRPWM RADAR_SERVO_ENC       | Encoder for radar's servomechanism |
 | 51 | P1.1 / U0C0.SCLKO / UT / CCU40.OUT2 / ERU1.PDOUT2 / U0C0.DX1A / POSIF0.IN2A / ERU0.3.A0 / CCU40.I.N2A / HRPWM0.C1INA                    |       |             |
 | 52 | P1.0 / U0C0.SELO0 / CCU40.OUT3 / ERU1.PDOUT3 / U0C0.DX2A / ERU0.3.B0 / CCU40.I.N3A / HRPWM0.C0INA                                       |       |             |
 | 53 | P1.9 / U0C0.SCLKO / U1C1.DOUT0               |       |             |
 | 54 | P1.8 / U0C0.SELO1 / U1C1.SCLKO               |       |             |
 | 55 | P1.7 / U0C0.DOUT0 / U1C1.SELO2 / USB.VB / USDETE / CT_B            |       |             |
 | 56 | VDDP                |       |             |
-| 57 | P0.8 / SCU.EXTCLK / U0C0.SCLKO / UT / **HRPWM0.HROUT10** / DB.TRST / U0C0.DX1B / ERU0.2.A1 / CCU80.IN1B               |       |             |
+| 57 | P0.8 / SCU.EXTCLK / U0C0.SCLKO / UT / HRPWM0.HROUT10 / DB.TRST / U0C0.DX1B / ERU0.2.A1 / CCU80.IN1B               |       |             |
 | 58 | P0.7 / WWDT.SERVICE_OUT / U0C0.SELO0 / **HRPWM0.HROUT11** / DB.TDI / U0C0.DX2B / ERU0.2.B1 / CCU80.IN0A / CCU80.IN1A / CCU80.IN2A / CCU80.IN3A               | 🔷 HRPWM RADAR_SERVO_PWM      | High precision PWM signal for radar's servomechanism |
 | 59 | P0.11 / U1C0.SCLKO / UT / CCU80.OUT31 / U1C0.DX1A / ERU0.3.A2               |       |             |
 | 60 | P0.6 / U1C0.SELO0 / CCU80.OUT30 / HRPWM0.HROU.T30 / U1C0.DX2A / ERU0.3.B2 / CCU80.I.N2B               |       |             |
