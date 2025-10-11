@@ -352,10 +352,10 @@ Due to the extensive configuration options of Infineon MCUs, I chose to use the 
 | 58 | P0.7 / WWDT.SERVICE_OUT / U0C0.SELO0 / HRPWM0.HROU / T11 / DB.TDI / U0C0.DX2B / ERU0.2.B1 / CCU80.IN0A / CCU80.IN1A / CCU80.IN2A / CCU80.IN3A               |       |             |
 | 59 | P0.11 / U1C0.SCLKO / UT / CCU80.OUT31 / U1C0.DX1A / ERU0.3.A2               |       |             |
 | 60 | P0.6 / U1C0.SELO0 / CCU80.OUT30 / HRPWM0.HROU.T30 / U1C0.DX2A / ERU0.3.B2 / CCU80.I.N2B               |       |             |
-| 61 |                |       |             |
-| 62 |                |       |             |
-| 63 |                |       |             |
-| 64 |                |       |             |
+| 61 | P0.5 / U1C0.DOUT0 / CCU80.OUT00 / HRPWM0.HROUT00 / U1C0.HWIN0 / U1C0.DX0B / ERU1.3.A0                 |       |             |
+| 62 | P0.4 / CCU80.OUT10 / HRPWM0.HROUT21 / U1C0.DOUT1 / U1C0.HWIN1 / U1C0.DX0A / ERU0.2.B3                 |       |             |
+| 63 | P0.3 / CCU80.OUT20 / HRPWM0.HROUT20 / U1C0.DOUT2 / U1C0.HWIN2 / ERU1.3.B0                             |       |             |
+| 64 | P0.2 / U1C1.SELO1 / CCU80.OUT01 / HRPWM0.HROUT01 / U1C0.DOUT3 / U1C0.HWIN3 / ERU0.3.B3                |       |             |
 
 ---
 
