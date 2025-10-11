@@ -355,9 +355,9 @@ Colors and hardware related to them are described below:
 
 ---
 
-### 4. System's architecture
+### 4. Control board logic diagram
 
-![System's architecture](/Media/Systems_Architecture.drawio.png)
+![Control board logic diagram](/Media/Systems_Architecture.drawio.png)
 
 ---
 
