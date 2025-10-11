@@ -289,22 +289,31 @@ Colors and hardware related to them are described below:
 #### 3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)
 
 Due to the extensive configuration options of Infineon MCUs, I chose to use the official **XMC Pinout Tool** provided on Infineon's website.
+Additionally due to the large number of pins, I decided to use colors to group them.  
+Colors and hardware related to them are described below:
+- 🟠 UART2 - Communication
+- 🔵 U1C1 SPI, GPIO - Communication with STM32
+- 🟢 U0C1 I²C - Communication with ADC converters on **HardwareControlBoard**
+- 🔴 ST-Link, UART1 - Debug, SWD, Programming 
+- ⚪ Unused
+- 🟡 GPIO - used to control various tank components such as LED's, smoke generator etc.
+- 🔷 HRPWM - PWM/Encoder signals for radar servo positioning with position feedback
 
 | #  | Pin / Function | Usage/Label | Description |
 |----|----------------|-------|-------------|
-| 1  | P0.1 / U1C1 / DOUT0 / CCU80 / OUT11 / LEDTS0 / COL3 / ERU0.0 / A0 / HRPWM / 0.C2INB                                        |       |             |
-| 2  | P0.0 / CAN / N0_TXD / CCU80 / OUT21 / LEDTS0 / COL2 / U1C1 / DX0D / ERU0.0 / B0 / USB.VB / USDETE / CT A / HRPWM / 0.C1INB |       |             |
-| 3  | P0.10 / U1C1 / SCLKO / UT / CCU80 / OUT02 / LEDTS0 / COL1 / U1C1 / DX1A / ERU0.1 / A0                                      |       |             |
-| 4  | P0.9 / HRPWM / 0.HROU / T31 / U1C1 / SELO0 / CCU80 / OUT12 / LEDTS0 / COL0 / U1C1 / DX2A / ERU0.1 / B0                     |       |             |
+| 1  | P0.1 / U1C1 / DOUT0 / CCU80 / OUT11 / LEDTS0 / COL3 / ERU0.0 / A0 / HRPWM / 0.C2INB                                        | 🔵 U1C1 SPI_MISO    | Communication with STM32 |
+| 2  | P0.0 / CAN / N0_TXD / CCU80 / OUT21 / LEDTS0 / COL2 / U1C1 / DX0D / ERU0.0 / B0 / USB.VB / USDETE / CT A / HRPWM / 0.C1INB | 🔵 U1C1 SPI_MOSI    | Communication with STM32 |
+| 3  | P0.10 / U1C1 / SCLKO / UT / CCU80 / OUT02 / LEDTS0 / COL1 / U1C1 / DX1A / ERU0.1 / A0                                      | 🔵 U1C1 SPI_SCK     | Communication with STM32 |
+| 4  | P0.9 / HRPWM / 0.HROU / T31 / U1C1 / SELO0 / CCU80 / OUT12 / LEDTS0 / COL0 / U1C1 / DX2A / ERU0.1 / B0                     | 🔵 U1C1 CS_INFINEON | Communication with STM32 |
 | 5  | P3.0 / U0C1 / SCLKO / UT / U0C1.D / X1B / CCU80.I / N2C                                                                    |       |             |
 | 6  | USB_DM                                                                                                                     |       |             |
 | 7  | USB_DP                                                                                                                     |       |             |
 | 8  | VDDP                |       |             |
 | 9  | VDDC               |       |             |
-| 10 | HIB_IO_0 / HIBOUT / WWDT / SERVICE_OUT / WAKEUPA / USB.VB / USDETE / CT C                                                  |       |             |
-| 11 | RTC_XTAL1 / ERU0.1 / B1                                                                                                    |       |             |
-| 12 | RTC_XTAL2                                                                                                                  |       |             |
-| 13 | VBAT               |       |             |
+| 10 | HIB_IO_0 / HIBOUT / WWDT / SERVICE_OUT / WAKEUPA / USB.VB / USDETE / CT C                                                  |                     |             |
+| 11 | RTC_XTAL1 / ERU0.1 / B1                                                                                                    | ⚪ NC               | Not used                |
+| 12 | RTC_XTAL2                                                                                                                  | ⚪ NC               | Not used                |
+| 13 | VBAT                                                                                                                       | ⚪ NC               | Not used                |
 | 14 | P14.14 / VADC.G1CH6 / G1ORC6                                                                                               |       |             |
 | 15 | P14.7 / VADC.G0CH7 / POSIF0.IN0B                                                                                           |       |             |
 | 16 | P14.6 / VADC.G0CH6 / POSIF0.IN1B / G0ORC6                                                                                  |       |             |
@@ -312,7 +321,7 @@ Due to the extensive configuration options of Infineon MCUs, I chose to use the 
 | 18 | P14.4 / VADC.G0CH4                                                                                                         |       |             |
 | 19 | P14.3 / VADC.G0CH3 / VADC.G1CH3 / CAN.N0_RXDB                                                                              |       |             |
 | 20 | P14.0 / VADC.G0CH0                                                                                                         |       |             |
-| 21 | VSSA/VAGND                |       |             |
+| 21 | VSSA/VAGND                | GND       | Unfiltered common ground as internal ADC won't be used             |
 | 22 | VDDA/VAREF               |       |             |
 | 23 | P14.9 / DAC.OUT_1 / VADC.G1CH1                                                                                             |       |             |
 | 24 | P14.8 / DAC.OUT_0 / VADC.G1CH0                                                                                             |       |             |
@@ -320,36 +329,36 @@ Due to the extensive configuration options of Infineon MCUs, I chose to use the 
 | 26 | P2.14 / VADC.E.MUX11 / U1C0.DOUT0 / CCU80.OUT21 / U1C0.DX0D                                                                |       |             |
 | 27 | P2.9 / CCU80.OUT22 / LEDTS0.LINE5 / LEDTS0.EXTENDED5 / LEDTS0.TSIN5A / DAC.TRIGGER4 / CCU41.IN0B / CCU41.IN1B / CCU41.IN2B / CCU41.IN3B |       |             |
 | 28 | P2.8 / CCU80.OUT32 / LEDTS0.LINE4 / LEDTS0.EXTENDED4 / LEDTS0.TSIN4A / DAC.TRIGGER5 / CCU40.IN0B / CCU40.IN1B / CCU40.IN2B / CCU40.IN3B |       |             |
-| 29 | P2.5 / U0C1.DOUT0 / CCU41.OUT0 / LEDTS0.LINE3 / LEDTS0.EXTENDED3 / LEDTS0.TSIN3A / U0C1.DX0B / ERU0.0.A2 / CCU41.IN0A / HRPWM0.BL2A     |       |             |
-| 30 | P2.4 / VADC.E.MUX02 / U0C1.SCLKO / U0C1.UT / CCU41.OUT1 / LEDTS0.LINE2 / LEDTS0.EXTENDED2 / LEDTS0.TSIN2A / U0C1.DX1A / ERU0.0.B2 / CCU41.IN1A / HRPWM0.BL1A  |       |             |
+| 29 | P2.5 / U0C1.DOUT0 / CCU41.OUT0 / LEDTS0.LINE3 / LEDTS0.EXTENDED3 / LEDTS0.TSIN3A / U0C1.DX0B / ERU0.0.A2 / CCU41.IN0A / HRPWM0.BL2A                           | 🟢 U0C1 I²C SDA     | Used to communicate with ADC converter on **HardwareControlBoard** |
+| 30 | P2.4 / VADC.E.MUX02 / U0C1.SCLKO / U0C1.UT / CCU41.OUT1 / LEDTS0.LINE2 / LEDTS0.EXTENDED2 / LEDTS0.TSIN2A / U0C1.DX1A / ERU0.0.B2 / CCU41.IN1A / HRPWM0.BL1A  | 🟢 U0C1 I²C SCL     | Used to communicate with ADC converter on **HardwareControlBoard** |
 | 31 | P2.3 / VADC.E.MUX01 / U0C1.SELO0 / CCU41.OUT2 / LEDTS0.LINE1 / LEDTS0.EXTENDED1 / LEDTS0.TSIN1A / U0C1.DX2A / ERU0.1.A2 / CCU41.IN2A    |       |             |
 | 32 | P2.2 / VADC.E.MUX00 / CCU41.OUT3 / LEDTS0.LINE0 / LEDTS0.EXTENDED0 / LEDTS0.TSIN0A / U0C1.DX0A / ERU0.1.B2 / CCU41.IN3A                 |       |             |
 | 33 | P2.1 / LEDTS0.COL0 / DB.TDO / TRACES.WO / ERU1.0.B0 / CCU40.I.N0C                                                                       |       |             |
 | 34 | P2.0 / CAN.N0_TXD / LEDTS0.COL1 / ERU0.0.B3 / CCU40.I.N1C                                                                               |       |             |
 | 35 | P2.7 / CAN.N1_TXD / CCU80.OUT03 / LEDTS0.COL2 / ERU1.1.B0 / CCU40.I.N2C                                                                 |       |             |
 | 36 | P2.6 / CCU80.OUT13 / LEDTS0.COL3 / CAN.N1_RXDA / ERU0.1.B3 / CCU40.I.N3C                                                                |       |             |
-| 37 | VSS               |       |             |
-| 38 | VDDP               |       |             |
+| 37 | VSS               | GND      | Unfiltered common ground as internal ADC won't be used            |
+| 38 | VDDP               | +3.3V    | Supply voltage from low ripple linear voltage regulator            |
 | 39 | XTAL1 / U0C0.D.X0F / U0C1.D.X0F / U1C0.D.X0F / U1C1.D.X0F                                                                               |       |             |
 | 40 | XTAL2                |       |             |
 | 41 | VSSO               |       |             |
 | 42 | VDDC               |       |             |
-| 43 | PORST               |       |             |
+| 43 | PORST               | MCU's reset                            | Used to reset the MCU either by button or programmer |
 | 44 | TMS / DB.TMS / SWDIO                |       |             |
 | 45 | TCK / DB.TCK / SWCLK                |       |             |
 | 46 | P1.15 / SCU.EXTCLK / U1C0.D.OUT0 / ERU1.1.A0                                                                                            |       |             |
 | 47 | P1.5 / CAN.N1_TXD / U0C0.DOUT0 / CCU80.OUT23 / U0C0.DOUT0 / U0C0.HWIN0 / U0C0.DX0A / CAN.N0_RXDA / ERU0.2.A0 / ERU1.0.A0 / CCU41.I.N1C  |       |             |
 | 48 | P1.4 / WWDT.SERVICE_OUT / CAN.N0_TXD / CCU80.OUT33 / U0C0.DOUT1 / U0C0.HWIN1 / U0C0.DX0B / CAN.N1_RXDD / ERU0.2.B0 / CCU41.I.N0C / HRPWM0.BL0A  |       |             |
 | 49 | P1.3 / U0C0.MCLKO / UT / CCU40.OUT0 / ERU1.PDOUT0 / U0C0.DOUT2 / U0C0.HWIN2 / POSIF0.IN0A / ERU1.2.A0 / CCU40.I.N0A / HRPWM0.C0INB      |       |             |
-| 50 | P1.2 / CCU40.OUT1 / ERU1.PDOUT1 / U0C0.DOUT3 / U0C0.HWIN3 / POSIF0.IN1A / ERU1.2.B0 / CCU40.I.N1A / HRPWM0.C2INA                        |       |             |
+| 50 | P1.2 / CCU40.OUT1 / ERU1.PDOUT1 / U0C0.DOUT3 / U0C0.HWIN3 / POSIF0.IN1A / ERU1.2.B0 / CCU40.I.N1A / HRPWM0.C2INA                        |🔷 HRPWM RADAR_SERVO_ENC       | Encoder for radar's servomechanism |
 | 51 | P1.1 / U0C0.SCLKO / UT / CCU40.OUT2 / ERU1.PDOUT2 / U0C0.DX1A / POSIF0.IN2A / ERU0.3.A0 / CCU40.I.N2A / HRPWM0.C1INA                    |       |             |
 | 52 | P1.0 / U0C0.SELO0 / CCU40.OUT3 / ERU1.PDOUT3 / U0C0.DX2A / ERU0.3.B0 / CCU40.I.N3A / HRPWM0.C0INA                                       |       |             |
 | 53 | P1.9 / U0C0.SCLKO / U1C1.DOUT0               |       |             |
 | 54 | P1.8 / U0C0.SELO1 / U1C1.SCLKO               |       |             |
 | 55 | P1.7 / U0C0.DOUT0 / U1C1.SELO2 / USB.VB / USDETE / CT_B            |       |             |
 | 56 | VDDP                |       |             |
-| 57 | P0.8 / SCU.EXTCLK / U0C0.SCLKO / UT / HRPWM0.HROU / T10 / DB.TRST / U0C0.DX1B / ERU0.2.A1 / CCU80.IN1B               |       |             |
-| 58 | P0.7 / WWDT.SERVICE_OUT / U0C0.SELO0 / HRPWM0.HROU / T11 / DB.TDI / U0C0.DX2B / ERU0.2.B1 / CCU80.IN0A / CCU80.IN1A / CCU80.IN2A / CCU80.IN3A               |       |             |
+| 57 | P0.8 / SCU.EXTCLK / U0C0.SCLKO / UT / **HRPWM0.HROUT10** / DB.TRST / U0C0.DX1B / ERU0.2.A1 / CCU80.IN1B               |       |             |
+| 58 | P0.7 / WWDT.SERVICE_OUT / U0C0.SELO0 / **HRPWM0.HROUT11** / DB.TDI / U0C0.DX2B / ERU0.2.B1 / CCU80.IN0A / CCU80.IN1A / CCU80.IN2A / CCU80.IN3A               | 🔷 HRPWM RADAR_SERVO_PWM      | High precision PWM signal for radar's servomechanism |
 | 59 | P0.11 / U1C0.SCLKO / UT / CCU80.OUT31 / U1C0.DX1A / ERU0.3.A2               |       |             |
 | 60 | P0.6 / U1C0.SELO0 / CCU80.OUT30 / HRPWM0.HROU.T30 / U1C0.DX2A / ERU0.3.B2 / CCU80.I.N2B               |       |             |
 | 61 | P0.5 / U1C0.DOUT0 / CCU80.OUT00 / HRPWM0.HROUT00 / U1C0.HWIN0 / U1C0.DX0B / ERU1.3.A0                 |       |             |
