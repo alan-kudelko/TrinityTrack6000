@@ -2,7 +2,7 @@
 
 **TrinityTrack6000** is a physically built, custom, multi-MCU remote-controlled tank, constructed from 2 mm and 3 mm steel sheets. It features a suspension system and a movable turret equipped with a BB‑pellet pistol for non-lethal target practice and sensor payload mounting. The project emphasizes a modular hardware approach: each functionality is implemented on a dedicated PCB module, enabling easy system expansion, parallel development of hardware and firmware, and straightforward integration of new features. This platform combines real-world mechanical construction with advanced electronics, serving both as a functional robotic vehicle and as an educational system for exploring embedded multi-MCU coordination, real-time control, and hardware integration.
 
-The system consists of multiple PCBs based on STM32, Infineon, NXP, IXYS and FPGA microcontrollers, responsible for:
+The system consists of multiple PCBs based on STM32, Infineon, NXP, RENESANS and FPGA microcontrollers, responsible for:
 
 1. **ControlBoard** – **STM32 + Infineon**  
    - **STM32**: Main logic and system coordination, communication via radio 
@@ -15,9 +15,9 @@ The system consists of multiple PCBs based on STM32, Infineon, NXP, IXYS and FPG
    - Converts battery voltage to the required voltages for all system boards; manages power distribution and protection
 5. **VideoAudioBoard** – **FPGA**  
    - Handles audio and video capture, hardware compression (H.264/265), and transmission back to the operator
-6. **FireControlBoard** – **NXP / IXYS (TBD)**  
+6. **FireControlBoard** – **NXP / RENESANS (TBD)**  
    - Responsible for the fire control system using a laser rangefinder
-7. **RadarBoard** – **NXP / IXYS (TBD)**  
+7. **RadarBoard** – **NXP / RENESANS (TBD)**  
    - Responsible for integration of a custom radar for object detection
 
 The project serves as a learning platform for:
@@ -51,7 +51,7 @@ Given the project’s complexity, it is developed in stages, focusing on one PCB
 
 ## ✳️ Planned Technologies & Tools
 
-- **MCUs & Processors**: STM32, Infineon, NXP, IXYS, FPGA  
+- **MCUs & Processors**: STM32, Infineon, NXP, RENESANS, FPGA  
 - **Sensor Modules**: Temperature, acceleration, gas sensors (CO₂, O₂, ethanol, methane, butane), GPS (TBD)  
 - **Communication**: Radio modules
 - **Motor Control**: H-bridge, servo drivers, current and temperature monitoring  
