@@ -626,4 +626,10 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 
 ---
 
+### 7. 🔌 Electrical Schematic
+
+---
+
+### 8. 🧩 PCB
+
 
