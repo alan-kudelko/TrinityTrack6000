@@ -101,8 +101,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - 🔄 Implement initialization functions to initialize STM32
 - 🔄✅ Implement a diagnostic function to display RAM usage over UART, including `.bss`, `.data`, `.heap`, `.stack`, and other linker sections such as `.tdat`
 - 🔄 Integrate ThreadX RTOS: add CMake build configuration, system setup, memory layout adjustments, and initial task scheduling
-- 🔄 Plan out overall logic of **ControlBoard** along with used components
-
+- 🔄✅ Plan out overall logic of **ControlBoard** along with used components
+- 🔄 Confirm successful programming and communication of STM32 and Infineon XMC4200 MCUs on breadboard, together with peripheral components and sensors.
 
 ## 🗺️ Production Roadmap
 
