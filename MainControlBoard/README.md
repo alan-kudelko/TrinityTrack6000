@@ -255,7 +255,7 @@ Colors and hardware related to them are described below:
 | #  | Pin / Function                                                                                    | Usage/Label                            | Description                              |
 |----|---------------------------------------------------------------------------------------------------|----------------------------------------|------------------------------------------|
 | 1  | VBAT                                                                                              | 🔷 Supply for RTC and backup registers | Used to power Backup Domain with CR2032  |
-| 2  | PC13 / TIM1_BKIN / TIM1_CH1N / TIM8_CH4N / EVENTOUT / WKUP2 / RTC_TAMP1 / RTC_TS / RTC_OUT1       | ⚪ NC                                  | Not used                                 |
+| 2  | PC13 / TIM1_BKIN / TIM1_CH1N / TIM8_CH4N / EVENTOUT / WKUP2 / RTC_TAMP1 / RTC_TS / RTC_OUT1       | 🟡 GPIO BUZZER                         | Used to generate PWM for on-board buzzer |
 | 3  | PC14 / EVENTOUT / OSC32_IN                                                                        | 🔷 Quartz 32kHz                        | Used to provide high precision RTC       |
 | 4  | PC15 / EVENTOUT / OSC32_OUT                                                                       | 🔷 Quartz 32kHz                        | Used to provide high precision RTC       |
 | 5  | PF0 / I2C2_SDA / SPI2_NSS/I2S2_WS / TIM1_CH3N / EVENTOUT / ADC1_IN10 / OSC_IN                     | 🟡 GPIO - ARM BB Gun                   | Used to arm/enable BB gun                |
