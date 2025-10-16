@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "arm",
+      "compilerPath": "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+      "intelliSenseMode": "gcc-arm",
+      "includePath": [
+          "${workspaceFolder}/Dave/Generated",
+          "${workspaceFolder}/Dave/Generated/CLOCK_XMC4",
+          "${workspaceFolder}/Libraries/CMSIS/Include",
+          "${workspaceFolder}/Libraries/CMSIS/Infineon/XMC4500_series/include",
+		      "${workspaceFolder}/Libraries/XMCLib/inc"
+        ],		  
+      "browse": {
+        "path": [
+          "${workspaceFolder}/Dave/Generated",
+          "${workspaceFolder}/Dave/Generated/CLOCK_XMC4",
+          "${workspaceFolder}/Libraries/CMSIS/Include",
+          "${workspaceFolder}/Libraries/CMSIS/Infineon/XMC4500_series/include",
+		      "${workspaceFolder}/Libraries/XMCLib/inc"
+        ],		  
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "defines": ["XMC4500_F100x1024"]
+    }
+  ],
+  "version": 4
+}
