@@ -667,6 +667,38 @@ The diagnostics interface is structured similarly to the diagrams below, providi
 
 ### 7. 🔌 Electrical Schematic
 
+#### 7.1 Gas Sensors
+
+Gas sensors from the MQ family require an initial **preheating period** of approximately **48 hours** to stabilize their sensing elements. During normal operation, they follow a **heating cycle**: 60 seconds of heating followed by 90 seconds without heating. 
+
+To safely control the heating element, it is recommended to use a **switching device**, such as a **BJT transistor**, capable of handling the required current.
+
+According to the datasheets, the **maximum heater power** should not exceed **950 mW for MQ-6** and **900 mW for MQ-7**.
+
+
+##### 7.1.1 MQ-6 LPG/Flammable gas sensor
+
+| Parameter                              | Value  |
+|----------------------------------------|--------|
+| Minimum Heater Resistance (R<sub>h</sub>)      | 23 Ω   |
+| Maximum Heater Power (P<sub>max</sub>) | 950 mW |
+| Maximum Loop Voltage (V<sub>c</sub>)   | 5 V    |
+
+
+##### 7.1.2 MQ-7 Carbon monoxide gas sensor
+
+| Parameter                              | Value  |
+|----------------------------------------|--------|
+| Minimum Heater Resistance (R<sub>h</sub>)      | 26 Ω   |
+| Maximum Heater Power (P<sub>max</sub>) | 900 mW |
+| Maximum Loop Voltage (V<sub>c</sub>)   | 5 V    |
+
+
+##### 7.1.3 Gas sensor circuit and calculation
+
+![MQ-X Sensors](/MainControlBoard/Media/MQ_X_Sensors_Schematic.png)
+
+
 ---
 
 ### 8. 🧩 PCB
