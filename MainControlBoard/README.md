@@ -396,7 +396,7 @@ Colors and hardware related to them are described below:
 
 #### 5.1 Clock configuration
 
-![STM32G473_RAM_MAP](/ControlBoard/Media/STM32G473CET6_ClockConfiguration.png)
+![STM32G473 Clock Configuration](/MainControlBoard/Media/STM32G473CET6_ClockConfiguration.png)
 
 #### 5.2 Task Overview
 
