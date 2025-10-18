@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['global_5ferror_5fcode_0',['global_error_code',['../_trinity_track6000___errors_8c.html#aca80c01a1561847c41fcf93d9d304009',1,'TrinityTrack6000_Errors.c']]],
-  ['gpio_5f_5f_5farm_5fbb_5fgun_5fgpio_5fport_1',['GPIO___ARM_BB_Gun_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ae78016f0439ddff5efd3849608ab9529',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5farm_5fbb_5fgun_5fpin_2',['GPIO___ARM_BB_Gun_Pin',['../_trinity_track6000___pinout_8h.html#a7e006edb82c08093866b536eff6adf45',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fbuzzer_5fgpio_5fport_3',['GPIO___BUZZER_GPIO_Port',['../_trinity_track6000___pinout_8h.html#abc041df339f68621034d21196c269e4f',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fbuzzer_5fpin_4',['GPIO___BUZZER_Pin',['../_trinity_track6000___pinout_8h.html#a5cf31b42c2bf5122fe3715a171b8d4af',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5ffire_5fbb_5fgun_5fgpio_5fport_5',['GPIO___Fire_BB_Gun_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a4bbe4d117f7b301e29f8fd4caf4cf6e6',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5ffire_5fbb_5fgun_5fpin_6',['GPIO___Fire_BB_Gun_Pin',['../_trinity_track6000___pinout_8h.html#aa9825bf88d935d5c7363955bfca8fa36',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fmq_5fheaters_5fgpio_5fport_7',['GPIO___MQ_HEATERS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ac3f98923170f866069502405d7d21615',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fmq_5fheaters_5fpin_8',['GPIO___MQ_HEATERS_Pin',['../_trinity_track6000___pinout_8h.html#a4c8e76d73d4a6a8721f17a8894ecfab0',1,'TrinityTrack6000_Pinout.h']]]
+  ['error_5fcommunication_5ftimeout_5fflag_0',['ERROR_COMMUNICATION_TIMEOUT_FLAG',['../_trinity_track6000___errors_8h.html#ae5a7016d67fbb4e3e0723e8c4d7a8cd9',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5fcordic_5finit_1',['ERROR_HAL_CORDIC_Init',['../_trinity_track6000___errors_8h.html#a22fe4792616800920de750994c769576',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5fpwrex_5fcontrolvoltagescaling_2',['ERROR_HAL_PWREx_ControlVoltageScaling',['../_trinity_track6000___errors_8h.html#a9328741c60e22bdae1ce75bfbe43248c',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5frcc_5fclockconfig_3',['ERROR_HAL_RCC_ClockConfig',['../_trinity_track6000___errors_8h.html#a3f7a56a6e328cd69a51ead8c4655f174',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5frcc_5foscconfig_4',['ERROR_HAL_RCC_OscConfig',['../_trinity_track6000___errors_8h.html#aaa8a1230e462e8d1ff90e3e3ff1924af',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5fuart_5finit_5',['ERROR_HAL_UART_Init',['../_trinity_track6000___errors_8h.html#a2a541dae73af06cb39658cdc34df25d7',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhandler_6',['Error_Handler',['../_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;TrinityTrack6000_Errors.c'],['../_trinity_track6000___errors_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;TrinityTrack6000_Errors.c'],['../_trinity_track6000___mem_info_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;TrinityTrack6000_Errors.c']]],
+  ['error_5fmeminfo_5fccsram_5fusage_5foverflow_7',['ERROR_MEMINFO_CCSRAM_USAGE_OVERFLOW',['../_trinity_track6000___errors_8h.html#a8920a45563ea582d60ac0a6894b2cac7',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fmeminfo_5fram1_5fusage_5foverflow_8',['ERROR_MEMINFO_RAM1_USAGE_OVERFLOW',['../_trinity_track6000___errors_8h.html#ac0ea7751a0216e489f9f719cbb413732',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fmeminfo_5fram2_5fusage_5foverflow_9',['ERROR_MEMINFO_RAM2_USAGE_OVERFLOW',['../_trinity_track6000___errors_8h.html#a6bf1955903a0c940be640d338b83fd43',1,'TrinityTrack6000_Errors.h']]]
 ];

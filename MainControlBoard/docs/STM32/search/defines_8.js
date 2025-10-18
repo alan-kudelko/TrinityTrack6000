@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['usart1_5fbaud_5frate_0',['USART1_BAUD_RATE',['../_trinity_track6000___config_8h.html#afe113e56a05bd5097639092b7cabf908',1,'TrinityTrack6000_Config.h']]],
-  ['usart2_5fbaud_5frate_1',['USART2_BAUD_RATE',['../_trinity_track6000___config_8h.html#aa32c17a1ef01a9fcb5487d1efe4a8e19',1,'TrinityTrack6000_Config.h']]]
+  ['renesans_5fcs_5fgpio_5fport_0',['RENESANS_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#aeee621a43a4b6be654df06a59658b3f6',1,'TrinityTrack6000_Pinout.h']]],
+  ['renesans_5fcs_5fpin_1',['RENESANS_CS_Pin',['../_trinity_track6000___pinout_8h.html#a7aeaa3ebd3732f2d0096e4017e965f04',1,'TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frst_5fgpio_5fport_2',['RENESANS_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#af7982d37025ad7e4783760872a56407b',1,'TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frst_5fpin_3',['RENESANS_RST_Pin',['../_trinity_track6000___pinout_8h.html#a1b0eb94840b017c0b8ae5e1e3607d0b1',1,'TrinityTrack6000_Pinout.h']]]
 ];

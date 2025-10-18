@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['renesans_5fcs_5fgpio_5fport_0',['RENESANS_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#aeee621a43a4b6be654df06a59658b3f6',1,'TrinityTrack6000_Pinout.h']]],
-  ['renesans_5fcs_5fpin_1',['RENESANS_CS_Pin',['../_trinity_track6000___pinout_8h.html#a7aeaa3ebd3732f2d0096e4017e965f04',1,'TrinityTrack6000_Pinout.h']]],
-  ['renesans_5frst_5fgpio_5fport_2',['RENESANS_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#af7982d37025ad7e4783760872a56407b',1,'TrinityTrack6000_Pinout.h']]],
-  ['renesans_5frst_5fpin_3',['RENESANS_RST_Pin',['../_trinity_track6000___pinout_8h.html#a1b0eb94840b017c0b8ae5e1e3607d0b1',1,'TrinityTrack6000_Pinout.h']]]
+  ['quartz_5f32khz_5fgpio_5fport_0',['QUARTZ_32kHz_GPIO_Port',['../_trinity_track6000___pinout_8h.html#af485232533f32d82b8178f50729a7772',1,'TrinityTrack6000_Pinout.h']]],
+  ['quartz_5f32khz_5fpin_1',['QUARTZ_32kHz_Pin',['../_trinity_track6000___pinout_8h.html#a8097bda749bc17a52789beb5c6b44afc',1,'TrinityTrack6000_Pinout.h']]],
+  ['quartz_5f32khzc15_5fgpio_5fport_2',['QUARTZ_32kHzC15_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a9c130fa8256dce859e2ddadaca454c19',1,'TrinityTrack6000_Pinout.h']]],
+  ['quartz_5f32khzc15_5fpin_3',['QUARTZ_32kHzC15_Pin',['../_trinity_track6000___pinout_8h.html#a8e63874f958c587ad7789789e0afc7d2',1,'TrinityTrack6000_Pinout.h']]]
 ];

@@ -6,10 +6,12 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,51,199,88,195,84,238,47"/>
 <area shape="rect" id="Node000006" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="272,96,443,123"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="290,47,333,84,330,88,286,51"/>
-<area shape="rect" id="Node000007" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="467,96,640,123"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="336,45,494,89,493,94,334,50"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="467,96,640,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="336,45,494,89,493,94,334,50"/>
 <area shape="rect" id="Node000004" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="84,171,258,197"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,123,174,155,168,155,168,123"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="111,245,231,272"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,198,174,230,168,230,168,198"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="325,171,390,197"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="360,123,360,155,355,155,355,123"/>
 </map>

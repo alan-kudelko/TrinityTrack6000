@@ -1,5 +1,6 @@
 var files_dup =
 [
+    [ "Devices", "dir_036ba507fe550560010f008cfcb3a881.html", "dir_036ba507fe550560010f008cfcb3a881" ],
     [ "Include", "dir_856524284ebe840938865dc061f982fb.html", "dir_856524284ebe840938865dc061f982fb" ],
     [ "Init", "dir_a5b3e9180a1e475273c0bead1f569fbf.html", "dir_a5b3e9180a1e475273c0bead1f569fbf" ],
     [ "Src", "dir_413f4e031a85da0d68269c6fd2f76e1c.html", "dir_413f4e031a85da0d68269c6fd2f76e1c" ],

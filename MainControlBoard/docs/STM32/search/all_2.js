@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['fpga_5fcs_5fgpio_5fport_0',['FPGA_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a423bb1d6c5023cdf8e71274bb3f56dc4',1,'TrinityTrack6000_Pinout.h']]],
-  ['fpga_5fcs_5fpin_1',['FPGA_CS_Pin',['../_trinity_track6000___pinout_8h.html#a6ec13573e727dee621002af383144518',1,'TrinityTrack6000_Pinout.h']]],
-  ['fpga_5frst_5fgpio_5fport_2',['FPGA_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1cc82a035b2945c430f814d3e7a80a7c',1,'TrinityTrack6000_Pinout.h']]],
-  ['fpga_5frst_5fpin_3',['FPGA_RST_Pin',['../_trinity_track6000___pinout_8h.html#a4ba5ff1fd3512a0213703efcef2c8f0e',1,'TrinityTrack6000_Pinout.h']]],
-  ['fram_5fcs_5fgpio_5fport_4',['FRAM_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a6638d7258dd0b24f000e1c1fcf859397',1,'TrinityTrack6000_Pinout.h']]],
-  ['fram_5fcs_5fpin_5',['FRAM_CS_Pin',['../_trinity_track6000___pinout_8h.html#a81521b4b6598c949aee7c02b94f798dd',1,'TrinityTrack6000_Pinout.h']]]
+  ['diagnostics_5fbar_5fbuffer_5fsize_0',['DIAGNOSTICS_BAR_BUFFER_SIZE',['../_trinity_track6000___diagnostics_8h.html#a8c5a5b1ea95abc1466fe08341e51e7ce',1,'TrinityTrack6000_Diagnostics.h']]],
+  ['diagnostics_5fline_5fbuffer_5fsize_1',['DIAGNOSTICS_LINE_BUFFER_SIZE',['../_trinity_track6000___diagnostics_8h.html#a2940d3b517e87398821eaa34ec46d3d5',1,'TrinityTrack6000_Diagnostics.h']]],
+  ['diagnostics_5fstatus_5fcount_2',['DIAGNOSTICS_STATUS_COUNT',['../_trinity_track6000___diagnostics_8h.html#a91f849d2ec8112f7862a9b98fb5654b8',1,'TrinityTrack6000_Diagnostics.h']]],
+  ['diagnostics_5fuart_5ftimeout_3',['DIAGNOSTICS_UART_TIMEOUT',['../_trinity_track6000___diagnostics_8h.html#a5fa9f70dad871ab26daa0c3b49ff0ff9',1,'TrinityTrack6000_Diagnostics.h']]]
 ];

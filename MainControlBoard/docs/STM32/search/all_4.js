@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['hadc1_0',['hadc1',['../_trinity_track6000___config_8h.html#a22b804736f5648d52f639b2647d4ed13',1,'hadc1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a22b804736f5648d52f639b2647d4ed13',1,'hadc1:&#160;TrinityTrack6000_Config.c']]],
-  ['hal_5ftim_5fmsppostinit_1',['HAL_TIM_MspPostInit',['../_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b',1,'TrinityTrack6000_Init.h']]],
-  ['hcordic_2',['hcordic',['../_trinity_track6000___config_8h.html#a12a49867e76bf8c5652a8aa16caccc34',1,'hcordic:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a12a49867e76bf8c5652a8aa16caccc34',1,'hcordic:&#160;TrinityTrack6000_Config.c']]],
-  ['hi2c2_3',['hi2c2',['../_trinity_track6000___config_8h.html#ac379bcc152d860f08b1279fd3e232295',1,'hi2c2:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#ac379bcc152d860f08b1279fd3e232295',1,'hi2c2:&#160;TrinityTrack6000_Config.c']]],
-  ['hspi1_4',['hspi1',['../_trinity_track6000___config_8h.html#a9c6222bae4d0328dd843ae099623b40b',1,'hspi1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a9c6222bae4d0328dd843ae099623b40b',1,'hspi1:&#160;TrinityTrack6000_Config.c']]],
-  ['hspi2_5',['hspi2',['../_trinity_track6000___config_8h.html#ab9da65f935e805137e2eb4e18c5ab224',1,'hspi2:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#ab9da65f935e805137e2eb4e18c5ab224',1,'hspi2:&#160;TrinityTrack6000_Config.c']]],
-  ['htim8_6',['htim8',['../_trinity_track6000___config_8h.html#a5faa27108379f799afb6984010bf0384',1,'htim8:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a5faa27108379f799afb6984010bf0384',1,'htim8:&#160;TrinityTrack6000_Config.c']]],
-  ['huart1_7',['huart1',['../_trinity_track6000___config_8h.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;TrinityTrack6000_Config.c']]],
-  ['huart2_8',['huart2',['../_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2:&#160;TrinityTrack6000_Config.c']]]
+  ['fpga_5fcs_5fgpio_5fport_0',['FPGA_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a423bb1d6c5023cdf8e71274bb3f56dc4',1,'TrinityTrack6000_Pinout.h']]],
+  ['fpga_5fcs_5fpin_1',['FPGA_CS_Pin',['../_trinity_track6000___pinout_8h.html#a6ec13573e727dee621002af383144518',1,'TrinityTrack6000_Pinout.h']]],
+  ['fpga_5ferror_2',['fpga_error',['../struct_system_error_status__t.html#adffd2dfe57cd7747122c57d52b9bac41',1,'SystemErrorStatus_t']]],
+  ['fpga_5frst_5fgpio_5fport_3',['FPGA_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1cc82a035b2945c430f814d3e7a80a7c',1,'TrinityTrack6000_Pinout.h']]],
+  ['fpga_5frst_5fpin_4',['FPGA_RST_Pin',['../_trinity_track6000___pinout_8h.html#a4ba5ff1fd3512a0213703efcef2c8f0e',1,'TrinityTrack6000_Pinout.h']]],
+  ['fram_5fcs_5fgpio_5fport_5',['FRAM_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a6638d7258dd0b24f000e1c1fcf859397',1,'TrinityTrack6000_Pinout.h']]],
+  ['fram_5fcs_5fpin_6',['FRAM_CS_Pin',['../_trinity_track6000___pinout_8h.html#a81521b4b6598c949aee7c02b94f798dd',1,'TrinityTrack6000_Pinout.h']]],
+  ['fram_5ferror_7',['fram_error',['../struct_system_error_status__t.html#a97cc7dc84ba127de74d9571bff505177',1,'SystemErrorStatus_t']]]
 ];

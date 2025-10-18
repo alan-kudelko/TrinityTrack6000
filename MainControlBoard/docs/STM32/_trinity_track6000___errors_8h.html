@@ -101,23 +101,43 @@ $(function(){initNavTree('_trinity_track6000___errors_8h.html','',''); });
 
 <p>Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout the TrinityTrack6000 project to standardize error handling and reporting.  
 <a href="#details">More...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for TrinityTrack6000_Errors.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___errors_8h__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___errors_8h" loading="lazy" alt=""/></div>
+<map name="a_utils_2_trinity_track6000___errors_8h" id="a_utils_2_trinity_track6000___errors_8h">
+<area shape="rect" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="5,5,155,48"/>
+<area shape="rect" title=" " alt="" coords="48,96,112,123"/>
+<area shape="poly" title=" " alt="" coords="83,49,83,80,77,80,77,49"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___errors_8h__dep__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___errors_8hdep" loading="lazy" alt=""/></div>
 <map name="a_utils_2_trinity_track6000___errors_8hdep" id="a_utils_2_trinity_track6000___errors_8hdep">
-<area shape="rect" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="85,5,234,48"/>
+<area shape="rect" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="208,5,357,48"/>
 <area shape="rect" href="_trinity_track6000___init_8c.html" title="Implementation of TrinityTrack6000_Init.h Initialization of HAL, Clock, GPIO, UART and Memory Diagnos..." alt="" coords="5,96,146,139"/>
-<area shape="poly" title=" " alt="" coords="131,61,97,98,93,94,128,58"/>
-<area shape="rect" href="_trinity_track6000___errors_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="170,96,320,139"/>
-<area shape="poly" title=" " alt="" coords="192,58,227,94,223,98,188,61"/>
+<area shape="poly" title=" " alt="" coords="221,57,125,98,123,93,219,52"/>
+<area shape="rect" href="main_8c.html" title="Main program body." alt="" coords="169,104,254,131"/>
+<area shape="poly" title=" " alt="" coords="259,62,224,105,219,102,254,58"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="278,96,428,139"/>
+<area shape="poly" title=" " alt="" coords="310,59,339,94,334,97,306,62"/>
+<area shape="rect" href="_trinity_track6000___errors_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="452,96,601,139"/>
+<area shape="poly" title=" " alt="" coords="354,51,470,93,468,98,353,56"/>
 </map>
 </div>
 </div>
 <p><a href="_trinity_track6000___errors_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:SystemErrorStatus_5Ft" id="r_SystemErrorStatus_5Ft"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_system_error_status__t.html">SystemErrorStatus_t</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ae5a7016d67fbb4e3e0723e8c4d7a8cd9" id="r_ae5a7016d67fbb4e3e0723e8c4d7a8cd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a7016d67fbb4e3e0723e8c4d7a8cd9">ERROR_COMMUNICATION_TIMEOUT_FLAG</a>&#160;&#160;&#160;0x01</td></tr>
 <tr id="define-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Error Codes</div></td></tr>
 <tr class="memitem:a9328741c60e22bdae1ce75bfbe43248c" id="r_a9328741c60e22bdae1ce75bfbe43248c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9328741c60e22bdae1ce75bfbe43248c">ERROR_HAL_PWREx_ControlVoltageScaling</a>&#160;&#160;&#160;0x100</td></tr>
 <tr class="memitem:aaa8a1230e462e8d1ff90e3e3ff1924af" id="r_aaa8a1230e462e8d1ff90e3e3ff1924af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8a1230e462e8d1ff90e3e3ff1924af">ERROR_HAL_RCC_OscConfig</a>&#160;&#160;&#160;0x101</td></tr>
@@ -130,8 +150,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ada6631461502109beb2857edde534974" id="r_ada6631461502109beb2857edde534974"><td class="memItemLeft" align="right" valign="top">uint32_t <a class="el" href="_trinity_track6000___errors_8c.html#aca80c01a1561847c41fcf93d9d304009">global_error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6631461502109beb2857edde534974">__attribute</a> ((section(&quot;.sysDiag&quot;)))</td></tr>
-<tr class="memdesc:ada6631461502109beb2857edde534974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global error code variable. This variable holds the current error code for the system.  <br /></td></tr>
+<tr class="memitem:a11bbac8f4748eb8c204ab8ef946e833c" id="r_a11bbac8f4748eb8c204ab8ef946e833c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_system_error_status__t.html">SystemErrorStatus_t</a> <a class="el" href="_trinity_track6000___errors_8c.html#a028fe4c4e145fdf2ad4223fd7273e654">g_SystemErrors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11bbac8f4748eb8c204ab8ef946e833c">__attribute</a> ((section(&quot;.sysDiag&quot;)))</td></tr>
+<tr class="memdesc:a11bbac8f4748eb8c204ab8ef946e833c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global error code variable. This variable holds the current error code for the system.  <br /></td></tr>
 <tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
 <tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
 </table>
@@ -143,6 +163,20 @@ Functions</h2></td></tr>
  For educational and research purposes only. <br  />
  Redistribution, modification, or commercial use prohibited without explicit written permission. </dd></dl>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="ae5a7016d67fbb4e3e0723e8c4d7a8cd9" name="ae5a7016d67fbb4e3e0723e8c4d7a8cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a7016d67fbb4e3e0723e8c4d7a8cd9">&#9670;&#160;</a></span>ERROR_COMMUNICATION_TIMEOUT_FLAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_COMMUNICATION_TIMEOUT_FLAG&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a22fe4792616800920de750994c769576" name="a22fe4792616800920de750994c769576"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22fe4792616800920de750994c769576">&#9670;&#160;</a></span>ERROR_HAL_CORDIC_Init</h2>
 
@@ -256,8 +290,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ada6631461502109beb2857edde534974" name="ada6631461502109beb2857edde534974"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada6631461502109beb2857edde534974">&#9670;&#160;</a></span>__attribute()</h2>
+<a id="a11bbac8f4748eb8c204ab8ef946e833c" name="a11bbac8f4748eb8c204ab8ef946e833c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bbac8f4748eb8c204ab8ef946e833c">&#9670;&#160;</a></span>__attribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +300,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="_trinity_track6000___errors_8c.html#aca80c01a1561847c41fcf93d9d304009">global_error_code</a> __attribute </td>
+          <td class="memname"><a class="el" href="struct_system_error_status__t.html">SystemErrorStatus_t</a> <a class="el" href="_trinity_track6000___errors_8c.html#a028fe4c4e145fdf2ad4223fd7273e654">g_SystemErrors</a> __attribute </td>
           <td>(</td>
           <td class="paramtype">(section(&quot;.sysDiag&quot;))</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>

@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['fpga_5fcs_5fgpio_5fport_0',['FPGA_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a423bb1d6c5023cdf8e71274bb3f56dc4',1,'TrinityTrack6000_Pinout.h']]],
-  ['fpga_5fcs_5fpin_1',['FPGA_CS_Pin',['../_trinity_track6000___pinout_8h.html#a6ec13573e727dee621002af383144518',1,'TrinityTrack6000_Pinout.h']]],
-  ['fpga_5frst_5fgpio_5fport_2',['FPGA_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1cc82a035b2945c430f814d3e7a80a7c',1,'TrinityTrack6000_Pinout.h']]],
-  ['fpga_5frst_5fpin_3',['FPGA_RST_Pin',['../_trinity_track6000___pinout_8h.html#a4ba5ff1fd3512a0213703efcef2c8f0e',1,'TrinityTrack6000_Pinout.h']]],
-  ['fram_5fcs_5fgpio_5fport_4',['FRAM_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a6638d7258dd0b24f000e1c1fcf859397',1,'TrinityTrack6000_Pinout.h']]],
-  ['fram_5fcs_5fpin_5',['FRAM_CS_Pin',['../_trinity_track6000___pinout_8h.html#a81521b4b6598c949aee7c02b94f798dd',1,'TrinityTrack6000_Pinout.h']]]
+  ['error_5fcommunication_5ftimeout_5fflag_0',['ERROR_COMMUNICATION_TIMEOUT_FLAG',['../_trinity_track6000___errors_8h.html#ae5a7016d67fbb4e3e0723e8c4d7a8cd9',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5fcordic_5finit_1',['ERROR_HAL_CORDIC_Init',['../_trinity_track6000___errors_8h.html#a22fe4792616800920de750994c769576',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5fpwrex_5fcontrolvoltagescaling_2',['ERROR_HAL_PWREx_ControlVoltageScaling',['../_trinity_track6000___errors_8h.html#a9328741c60e22bdae1ce75bfbe43248c',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5frcc_5fclockconfig_3',['ERROR_HAL_RCC_ClockConfig',['../_trinity_track6000___errors_8h.html#a3f7a56a6e328cd69a51ead8c4655f174',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5frcc_5foscconfig_4',['ERROR_HAL_RCC_OscConfig',['../_trinity_track6000___errors_8h.html#aaa8a1230e462e8d1ff90e3e3ff1924af',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fhal_5fuart_5finit_5',['ERROR_HAL_UART_Init',['../_trinity_track6000___errors_8h.html#a2a541dae73af06cb39658cdc34df25d7',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fmeminfo_5fccsram_5fusage_5foverflow_6',['ERROR_MEMINFO_CCSRAM_USAGE_OVERFLOW',['../_trinity_track6000___errors_8h.html#a8920a45563ea582d60ac0a6894b2cac7',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fmeminfo_5fram1_5fusage_5foverflow_7',['ERROR_MEMINFO_RAM1_USAGE_OVERFLOW',['../_trinity_track6000___errors_8h.html#ac0ea7751a0216e489f9f719cbb413732',1,'TrinityTrack6000_Errors.h']]],
+  ['error_5fmeminfo_5fram2_5fusage_5foverflow_8',['ERROR_MEMINFO_RAM2_USAGE_OVERFLOW',['../_trinity_track6000___errors_8h.html#a6bf1955903a0c940be640d338b83fd43',1,'TrinityTrack6000_Errors.h']]]
 ];

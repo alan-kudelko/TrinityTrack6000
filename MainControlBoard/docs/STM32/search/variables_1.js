@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['global_5ferror_5fcode_0',['global_error_code',['../_trinity_track6000___errors_8c.html#aca80c01a1561847c41fcf93d9d304009',1,'TrinityTrack6000_Errors.c']]]
+  ['adxl_5ferror_0',['adxl_error',['../struct_system_error_status__t.html#a5f03fd3d3d0a5605b27c34d29171470a',1,'SystemErrorStatus_t']]]
 ];

@@ -16,8 +16,8 @@
 <area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="494,270,433,300,401,311,399,306,431,295,491,266"/>
 <area shape="rect" id="Node000011" href="$_trinity_track6000___init_8c.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="264,360,432,387"/>
 <area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="513,275,479,314,434,350,410,362,407,357,431,346,475,310,509,271"/>
-<area shape="rect" id="Node000012" href="$_trinity_track6000___mem_info_8c.html#a7495f12a597ba8acbc8a69b55cec5d0d" title="Print general RAM usage information." alt="" coords="270,411,427,437"/>
-<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="521,275,489,338,464,372,434,401,414,412,411,408,431,397,460,368,484,336,517,273"/>
+<area shape="rect" id="Node000012" href="$_trinity_track6000___mem_info_8c.html#a75f7392b5b07ca86de67a446dba6e336" title="Print general RAM usage information." alt="" coords="293,411,403,437"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="521,275,489,338,464,372,434,401,405,416,403,411,431,396,460,368,484,336,517,273"/>
 <area shape="rect" id="Node000013" href="$_trinity_track6000___init_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="276,461,421,488"/>
 <area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="526,276,515,315,497,362,470,410,434,451,416,463,413,459,431,447,466,407,492,360,510,313,521,274"/>
 <area shape="rect" id="Node000003" href="$_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b" title="System Initialization Function." alt="" coords="103,208,216,235"/>

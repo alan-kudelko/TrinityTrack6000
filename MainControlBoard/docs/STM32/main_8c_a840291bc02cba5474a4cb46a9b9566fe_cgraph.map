@@ -1,43 +1,63 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title="The application entry point." alt="" coords="5,259,55,285"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b" title="System Initialization Function." alt="" coords="103,259,216,285"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,269,87,269,87,275,55,275"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8c.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="290,5,406,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,258,169,216,188,158,218,96,238,67,262,42,275,33,278,38,266,46,242,71,223,99,193,160,175,217,165,259"/>
-<area shape="rect" id="Node000006" href="$_trinity_track6000___init_8c.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="294,56,403,83"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="162,257,174,224,195,179,224,133,262,93,278,83,281,87,266,97,228,136,200,182,179,226,167,259"/>
-<area shape="rect" id="Node000008" href="$_trinity_track6000___init_8c.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="284,107,412,133"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="166,257,202,202,230,170,262,143,271,138,274,143,266,148,234,174,207,205,170,260"/>
-<area shape="rect" id="Node000009" href="$_trinity_track6000___init_8c.html#ac724e431d2af879252de35615be2bdea" title="GPIO Initialization Function." alt="" coords="295,157,401,184"/>
-<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="174,256,213,225,263,194,279,186,281,191,265,198,216,229,178,260"/>
-<area shape="rect" id="Node000010" href="$_trinity_track6000___init_8c.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="298,208,399,235"/>
-<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="211,255,282,236,283,241,213,261"/>
-<area shape="rect" id="Node000011" href="$_trinity_track6000___init_8c.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="297,259,399,285"/>
-<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="217,269,282,269,282,275,217,275"/>
-<area shape="rect" id="Node000012" href="$_trinity_track6000___init_8c.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="297,309,399,336"/>
-<area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="213,283,283,303,282,308,211,289"/>
-<area shape="rect" id="Node000013" href="$_trinity_track6000___init_8c.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="296,512,400,539"/>
-<area shape="poly" id="edge16_Node000002_Node000013" title=" " alt="" coords="165,285,175,327,193,384,223,445,242,473,266,498,284,509,281,514,262,502,238,477,218,448,188,386,169,328,160,286"/>
-<area shape="rect" id="Node000015" href="$_trinity_track6000___init_8c.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="264,360,432,387"/>
-<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="178,284,216,315,265,346,279,352,277,357,263,350,213,319,174,288"/>
-<area shape="rect" id="Node000016" href="$_trinity_track6000___init_8c.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="264,411,432,437"/>
-<area shape="poly" id="edge21_Node000002_Node000016" title=" " alt="" coords="170,284,207,339,234,370,266,396,274,401,271,406,262,401,230,374,202,342,166,287"/>
-<area shape="rect" id="Node000017" href="$_trinity_track6000___init_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="276,461,421,488"/>
-<area shape="poly" id="edge23_Node000002_Node000017" title=" " alt="" coords="167,285,179,318,200,362,228,408,266,447,272,452,269,456,262,451,224,411,195,365,174,320,162,287"/>
-<area shape="rect" id="Node000004" href="$_trinity_track6000___mem_info_8c.html#aa5e3ce1bf3a934fd19f10e08449605d9" title="Initialize RAM diagnostics." alt="" coords="492,5,623,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="406,16,477,16,477,21,406,21"/>
-<area shape="rect" id="Node000005" href="$_trinity_track6000___mem_info_8c.html#a8d8cd8168e4d497f63c8f751e9d64b0c" title="Refresh RAM diagnostics data." alt="" coords="683,5,841,32"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="623,16,667,16,667,21,623,21"/>
-<area shape="rect" id="Node000007" href="$_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="507,309,608,336"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="405,77,434,93,458,115,478,140,512,196,536,250,551,294,546,296,531,252,507,198,474,143,454,119,431,97,402,82"/>
-<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="413,132,434,143,472,178,504,219,529,259,546,294,542,296,524,262,500,222,468,182,431,148,410,136"/>
-<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="400,232,433,244,483,271,526,298,524,303,481,275,431,249,398,237"/>
-<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="400,282,492,304,491,309,399,287"/>
-<area shape="poly" id="edge15_Node000012_Node000007" title=" " alt="" coords="400,320,491,320,491,325,400,325"/>
-<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="399,513,431,498,468,464,500,423,524,383,542,349,546,351,529,386,504,426,472,467,434,502,401,518"/>
-<area shape="rect" id="Node000014" href="$_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title="TIM MSP Post Initialization." alt="" coords="480,512,635,539"/>
-<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="400,523,465,523,465,528,400,528"/>
-<area shape="poly" id="edge20_Node000015_Node000007" title=" " alt="" coords="406,357,491,336,492,341,407,362"/>
-<area shape="poly" id="edge22_Node000016_Node000007" title=" " alt="" coords="401,408,431,396,481,370,524,343,526,347,483,375,433,401,403,413"/>
-<area shape="poly" id="edge24_Node000017_Node000007" title=" " alt="" coords="407,458,431,447,462,424,491,398,535,347,539,350,495,401,466,428,434,452,409,463"/>
+<area shape="rect" id="Node000001" title="The application entry point." alt="" coords="5,537,55,564"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b" title="System Initialization Function." alt="" coords="113,284,226,311"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="37,535,151,323,156,325,41,538"/>
+<area shape="rect" id="Node000018" href="$_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,740,236,767"/>
+<area shape="poly" id="edge25_Node000001_Node000018" title=" " alt="" coords="43,563,153,726,148,729,39,566"/>
+<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8c.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="334,5,449,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,283,179,237,199,172,213,136,232,102,255,70,282,42,299,31,318,24,320,29,302,36,286,46,259,73,236,105,218,139,204,173,184,238,175,284"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___init_8c.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="337,56,446,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="172,283,184,244,206,193,238,139,259,114,282,93,301,82,321,74,323,79,303,86,286,97,263,118,242,142,210,195,189,246,177,284"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___init_8c.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="328,107,455,133"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="175,282,190,253,213,215,244,176,283,143,312,129,314,134,285,148,248,180,217,218,194,255,179,285"/>
+<area shape="rect" id="Node000009" href="$_trinity_track6000___init_8c.html#ac724e431d2af879252de35615be2bdea" title="GPIO Initialization Function." alt="" coords="338,157,445,184"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="180,282,222,238,251,214,283,194,323,179,325,184,285,198,254,218,226,242,184,285"/>
+<area shape="rect" id="Node000010" href="$_trinity_track6000___init_8c.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="341,208,442,235"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="197,281,283,244,325,232,327,237,285,249,199,286"/>
+<area shape="rect" id="Node000011" href="$_trinity_track6000___init_8c.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="340,259,443,285"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="226,288,325,277,326,282,227,294"/>
+<area shape="rect" id="Node000012" href="$_trinity_track6000___init_8c.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="340,309,443,336"/>
+<area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="227,301,326,313,325,318,226,306"/>
+<area shape="rect" id="Node000013" href="$_trinity_track6000___init_8c.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="340,512,443,539"/>
+<area shape="poly" id="edge16_Node000002_Node000013" title=" " alt="" coords="177,310,189,348,210,399,242,453,263,477,286,498,304,509,326,516,324,521,302,514,282,502,259,481,238,456,206,402,184,350,172,312"/>
+<area shape="rect" id="Node000015" href="$_trinity_track6000___init_8c.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="308,360,476,387"/>
+<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="199,309,285,345,310,353,308,358,283,351,197,314"/>
+<area shape="rect" id="Node000016" href="$_trinity_track6000___init_8c.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="308,411,476,437"/>
+<area shape="poly" id="edge21_Node000002_Node000016" title=" " alt="" coords="184,309,226,353,254,376,285,396,299,403,297,407,283,401,251,381,222,357,180,313"/>
+<area shape="rect" id="Node000017" href="$_trinity_track6000___init_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="319,461,464,488"/>
+<area shape="poly" id="edge23_Node000002_Node000017" title=" " alt="" coords="179,310,194,339,217,377,248,415,285,447,306,458,303,462,283,452,244,419,213,380,190,342,175,312"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___mem_info_8c.html#a3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="583,5,666,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,16,567,16,567,21,450,21"/>
+<area shape="rect" id="Node000005" href="$_trinity_track6000___mem_info_8c.html#a28cd6ca417d0332298ba1dc946e34444" title="Refresh RAM diagnostics data." alt="" coords="750,5,861,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="667,16,734,16,734,21,667,21"/>
+<area shape="rect" id="Node000007" href="$_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="574,309,675,336"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="447,71,475,78,501,92,525,114,546,139,580,194,604,249,619,294,613,295,599,251,575,197,542,142,521,118,498,97,473,83,446,76"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="457,125,479,132,501,143,540,177,572,218,597,259,614,294,609,296,592,262,568,221,536,181,498,148,477,137,455,130"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="443,227,500,244,551,270,594,298,591,302,548,275,498,249,442,232"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="444,280,559,306,558,311,442,286"/>
+<area shape="poly" id="edge15_Node000012_Node000007" title=" " alt="" coords="443,320,558,320,558,325,443,325"/>
+<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="443,518,471,511,498,498,536,464,568,424,592,384,609,349,614,351,597,386,572,427,540,468,501,502,473,516,444,523"/>
+<area shape="rect" id="Node000014" href="$_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title="TIM MSP Post Initialization." alt="" coords="547,512,702,539"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="444,523,532,523,532,528,444,528"/>
+<area shape="poly" id="edge20_Node000015_Node000007" title=" " alt="" coords="456,357,558,334,559,339,457,362"/>
+<area shape="poly" id="edge22_Node000016_Node000007" title=" " alt="" coords="464,408,498,396,548,371,591,343,594,347,551,375,500,401,466,413"/>
+<area shape="poly" id="edge24_Node000017_Node000007" title=" " alt="" coords="464,461,498,447,530,425,559,399,603,347,607,351,562,402,533,429,501,452,466,466"/>
+<area shape="rect" id="Node000019" href="$_trinity_track6000___diagnostics_8c.html#a3887036d47f0561b14042f61c88438b0" title="Perform ADXL345 specific diagnostics. This function checks the functionality of the ADXL345 module,..." alt="" coords="304,563,479,589"/>
+<area shape="poly" id="edge26_Node000018_Node000019" title=" " alt="" coords="175,738,190,709,213,671,244,632,282,599,291,594,294,598,286,604,248,636,217,674,194,711,179,741"/>
+<area shape="rect" id="Node000020" href="$_trinity_track6000___diagnostics_8c.html#a105685449de4c7628dd777fa71659896" title="Perform FPGA specific diagnostics. This function checks the SPI communication with the FPGA." alt="" coords="304,613,480,640"/>
+<area shape="poly" id="edge27_Node000018_Node000020" title=" " alt="" coords="180,738,222,694,251,670,283,650,297,643,299,648,285,654,254,674,226,698,184,741"/>
+<area shape="rect" id="Node000021" href="$_trinity_track6000___diagnostics_8c.html#ac9b91f450819a8d17e0a96ad6e3259b0" title="Perform FM25L16B&#45;GTR FRAM specific diagnostics. This function checks the functionality of the FRAM mo..." alt="" coords="302,664,481,691"/>
+<area shape="poly" id="edge28_Node000018_Node000021" title=" " alt="" coords="197,737,283,700,308,692,310,698,285,705,199,742"/>
+<area shape="rect" id="Node000022" href="$_trinity_track6000___diagnostics_8c.html#a3d30f9327e19f8d8f8fee7d9c8a41559" title="Perform Infineon XMC4200 specific diagnostics. This function checks the SPI communication with the In..." alt="" coords="298,715,485,741"/>
+<area shape="poly" id="edge29_Node000018_Node000022" title=" " alt="" coords="236,743,283,738,283,743,237,748"/>
+<area shape="rect" id="Node000023" href="$_trinity_track6000___diagnostics_8c.html#a3703ce47b3ea33eee1e1014f5f844482" title="Perform L76K GPS module specific diagnostics. This function checks the functionality of the L76K GPS ..." alt="" coords="306,765,477,792"/>
+<area shape="poly" id="edge30_Node000018_Node000023" title=" " alt="" coords="237,758,292,765,291,770,236,764"/>
+<area shape="rect" id="Node000024" href="$_trinity_track6000___diagnostics_8c.html#ab4bf9cae1ce1e689f1755f93c9a52aa9" title="Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module,..." alt="" coords="306,816,477,843"/>
+<area shape="poly" id="edge31_Node000018_Node000024" title=" " alt="" coords="199,765,285,801,310,809,308,814,283,807,197,770"/>
+<area shape="rect" id="Node000025" href="$_trinity_track6000___diagnostics_8c.html#a3e99b168d34a29027d41469ab63fc686" title="Perform NRF24L01+ specific diagnostics. This function checks the functionality of the NRF24L01+ modul..." alt="" coords="308,867,476,893"/>
+<area shape="poly" id="edge32_Node000018_Node000025" title=" " alt="" coords="184,765,226,809,254,832,285,852,299,859,297,863,283,857,251,837,222,813,180,769"/>
+<area shape="rect" id="Node000026" href="$_trinity_track6000___diagnostics_8c.html#a1292eb0f197f9af5d467708ab31f565e" title="Perform NXP TBD specific diagnostics. This function checks the SPI communication with the NXP MCU." alt="" coords="308,917,476,944"/>
+<area shape="poly" id="edge33_Node000018_Node000026" title=" " alt="" coords="179,766,194,795,217,833,248,871,286,903,295,909,292,913,282,908,244,875,213,836,190,798,175,768"/>
+<area shape="rect" id="Node000027" href="$_trinity_track6000___diagnostics_8c.html#aeb2237b21ba2fdbc4f9d7d2b3ad36041" title="Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS..." alt="" coords="284,968,499,995"/>
+<area shape="poly" id="edge34_Node000018_Node000027" title=" " alt="" coords="177,766,189,804,210,855,242,909,263,933,286,954,292,958,289,963,282,958,259,937,238,912,206,858,184,806,172,768"/>
 </map>

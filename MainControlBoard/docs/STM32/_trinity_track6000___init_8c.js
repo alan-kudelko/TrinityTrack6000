@@ -11,7 +11,7 @@ var _trinity_track6000___init_8c =
     [ "MX_TIM8_Init", "_trinity_track6000___init_8c.html#a265aef7a46164094e791259bf59d9cb4", null ],
     [ "MX_USART1_UART_Init", "_trinity_track6000___init_8c.html#a57d1167735baafab8e3288526c424929", null ],
     [ "MX_USART2_UART_Init", "_trinity_track6000___init_8c.html#a052088fe5bb3f807a4b2502e664fd4fd", null ],
-    [ "ramDiagnositcsInit", "_trinity_track6000___init_8c.html#aa5e3ce1bf3a934fd19f10e08449605d9", null ],
+    [ "ramInfoInit", "_trinity_track6000___init_8c.html#a3ef2b47170729565a03ab59854758b18", null ],
     [ "SystemClock_Config", "_trinity_track6000___init_8c.html#a70af21c671abfcc773614a9a4f63d920", null ],
     [ "msg_initializeClock_info", "_trinity_track6000___init_8c.html#a24ae4d0d268cd40965f8caa97a7a70da", null ],
     [ "msg_initializeGPIO_info", "_trinity_track6000___init_8c.html#a31741fda4ac72ffceae097b375b10553", null ],
