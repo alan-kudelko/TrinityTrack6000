@@ -127,6 +127,7 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Utils/*.c"
     "${CMAKE_SOURCE_DIR}/Init/*.cpp"
     "${CMAKE_SOURCE_DIR}/Init/*.c"
+    "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
 )
 message(STATUS "[12] Adding project headers")
 file(GLOB PROJECT_HEADERS
@@ -134,6 +135,7 @@ file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Include/*.hpp"
     "${CMAKE_SOURCE_DIR}/Utils/*.h"
     "${CMAKE_SOURCE_DIR}/Init/*.h"
+    "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*.h"
 )
 #
 include_directories(
@@ -145,6 +147,7 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Include"
     "${CMAKE_SOURCE_DIR}/Utils"
     "${CMAKE_SOURCE_DIR}/Init"
+    "${CMAKE_SOURCE_DIR}/Devices/MCP23S17"
 )
 
 add_executable(${PROJECT_NAME}.elf

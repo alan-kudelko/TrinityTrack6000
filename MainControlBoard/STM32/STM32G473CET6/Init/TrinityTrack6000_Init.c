@@ -22,7 +22,7 @@
 #include <TrinityTrack6000_Errors.h>
 #include <TrinityTrack6000_Pinout.h>
 
-extern void ramDiagnositcsInit(void);
+extern void ramInfoInit(void);
 
 const char msg_initializeHAL_info[]   ="| 00 HAL Initialized\r\n";
 const char msg_initializeClock_info[] ="| 01 Clock Initialized\r\n";
@@ -65,7 +65,7 @@ void SystemClock_Config(void){
   	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   	if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct,FLASH_LATENCY_4)!=HAL_OK){
-    	global_error_code=ERROR_HAL_RCC_OscConfig;
+    	g_SystemErrors.hal_error=ERROR_HAL_RCC_OscConfig;
     	Error_Handler();
   	}
 }
@@ -340,7 +340,7 @@ void MX_GPIO_Init(void){
 }
 
 void initializeMemory(void){
-	ramDiagnositcsInit();
+	ramInfoInit();
 
 	HAL_UART_Transmit(&huart1,(uint8_t*)msg_initializeRAMDia_info,strlen(msg_initializeRAMDia_info),1000);
 }
@@ -349,15 +349,15 @@ void initializeSystem(void){
 // STM32CubeIDE generated initialization sequence
 	HAL_Init();
 	SystemClock_Config();
+	MX_CORDIC_Init();
 	MX_GPIO_Init();
+	MX_TIM8_Init();
 	MX_ADC1_Init();
+	MX_USART1_UART_Init();
+	MX_USART2_UART_Init();
 	MX_I2C2_Init();
 	MX_SPI1_Init();
 	MX_SPI2_Init();
-	MX_TIM8_Init();
-	MX_USART1_UART_Init();
-	MX_USART2_UART_Init();
-	MX_CORDIC_Init();
 // Custom initialization sequence
 	initializeMemory();
 }

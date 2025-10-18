@@ -16,12 +16,17 @@
  * - Allocation of diagnostic variables in separate linker sections
  *
  * Usage:
- * - Call `ramDiagnositcsInit()` during system initialization to set up total sizes
- * - Call `ramDiagnosticsRefresh()` on-demand or periodically to update usage data
- * - Use `ramDiagnosticsGeneral()`, `ramDiagnosticsRAM1()`, etc. to print details
+ * - Call `ramInfoInit()` during system initialization to set up total sizes
+ * - Call `ramInfoRefresh()` on-demand or periodically to update usage data
+ * - Use `ramInfoGeneral()`, `ramInfoRAM1()`, etc. to print details
  *
- * @date 2025.09.08
  * @author Alan Kudełko
+ * @copyright
+ * Copyright (c) 2025 Alan Kudełko.  
+ * All rights reserved.  
+ * For educational and research purposes only.  
+ * Redistribution, modification, or commercial use prohibited without
+ * explicit written permission.
  */
 #ifndef TRINITYTRACK6000_MEMINFO_H_
     #define TRINITYTRACK6000_MEMINFO_H_
@@ -102,7 +107,7 @@ extern uint8_t ramDiagnosticsCCSRAM_crit_size __attribute((section(".ramDiagnost
  * This function should be called once during system initialization 
  * (e.g., inside `initializeSystem()`).
  */
-void ramDiagnositcsInit(void);
+void ramInfoInit(void);
 
 /**
  * @brief Refresh RAM diagnostics data.
@@ -111,7 +116,7 @@ void ramDiagnositcsInit(void);
  * Should be called periodically or on-demand when up-to-date memory 
  * information is required.
  */
-void ramDiagnosticsRefresh(void);
+void ramInfoRefresh(void);
 
 /**
  * @brief Print general RAM usage information.
@@ -119,7 +124,7 @@ void ramDiagnosticsRefresh(void);
  * Displays an overview of all RAM banks, including start/end addresses, 
  * total sizes, usage bars, and percentage utilization.
  */
-void ramDiagnosticsGeneral(void);
+void ramInfoGeneral(void);
 
 /**
  * @brief Print detailed RAM1 diagnostics.
@@ -127,7 +132,7 @@ void ramDiagnosticsGeneral(void);
  * Displays section-level information for RAM1, including `.data`, `.bss`, 
  * `.heap`, and `.stack` sizes, usage, and high-water marks.
  */
-void ramDiagnosticsRAM1(void);
+void ramInfoRAM1(void);
 
 /**
  * @brief Print detailed RAM2 diagnostics.
@@ -136,7 +141,7 @@ void ramDiagnosticsRAM1(void);
  * By default, this includes `.ramDiagnostics` or any custom sections 
  * assigned to RAM2.
  */
-void ramDiagnosticsRAM2(void);
+void ramInfoRAM2(void);
 
 /**
  * @brief Print detailed CCSRAM diagnostics.
@@ -144,7 +149,7 @@ void ramDiagnosticsRAM2(void);
  * Displays section-level information for CCMRAM/CCSRAM.
  * Yes to be implemented
  */
-void ramDiagnosticsCCSRAM(void);
+void ramInfoCCSRAM(void);
 
 
 #ifdef __cplusplus

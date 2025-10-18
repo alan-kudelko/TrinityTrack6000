@@ -13,7 +13,8 @@
 		      "${workspaceFolder}/Include",
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Init",
-          "${workspaceFolder}/Src"
+          "${workspaceFolder}/Src",
+          "${workspaceFolder}/Devices/MCP23S17"
         ],		  
       "browse": {
         "path": [
@@ -28,7 +29,8 @@
 		      "${workspaceFolder}/Include",
           "${workspaceFolder}/Src",
           "${workspaceFolder}/Utils",
-          "${workspaceFolder}/Init"
+          "${workspaceFolder}/Init",
+          "${workspaceFolder}/Devices/MCP23S17"
         ],		  
         "limitSymbolsToIncludedHeaders": false
       },

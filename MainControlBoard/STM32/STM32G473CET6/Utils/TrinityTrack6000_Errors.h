@@ -16,11 +16,13 @@
 #ifndef TRINITY_TRACK6000_ERRORS_H_
     #define TRINITY_TRACK6000_ERRORS_H_
 
+#include <stdint.h>
+
 /**
  * @name Error Codes
  * @{
  */
-
+// Needs revision
 #define ERROR_HAL_PWREx_ControlVoltageScaling 0x100 /**<  */
 #define ERROR_HAL_RCC_OscConfig               0x101 /**<  */
 #define ERROR_HAL_RCC_ClockConfig             0x102 /**<  */
@@ -33,11 +35,31 @@
 
 /** @} */
 
+
+#define ERROR_COMMUNICATION_TIMEOUT_FLAG 0x01
+
+/**
+ * 
+ */
+
+typedef struct{
+    uint16_t hal_error;
+    uint8_t nrf_error;
+    uint8_t fram_error;
+    uint8_t mcp_error;
+    uint8_t adxl_error;
+    uint8_t l76k_error;
+    uint8_t infineon_error;
+    uint8_t nxp_error;
+    uint8_t renesans_error;
+    uint8_t fpga_error;
+}SystemErrorStatus_t;
+
 /**
  * @brief Global error code variable.
  * This variable holds the current error code for the system.
  */
-extern uint32_t global_error_code __attribute((section(".sysDiag")));
+extern SystemErrorStatus_t g_SystemErrors __attribute((section(".sysDiag")));
 
 /**
   * @brief  This function is executed in case of error occurrence.

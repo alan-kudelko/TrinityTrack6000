@@ -47,7 +47,7 @@ extern uint32_t __CRIT_END__; // Defined in the linker script by me for end of c
 
 extern uint8_t* __sbrk_heap_end; // Defined in sysmem.c
 
-extern UART_HandleTypeDef uart;
+extern UART_HandleTypeDef huart1;
 
 extern void Error_Handler(void);
 
@@ -130,7 +130,7 @@ uint8_t ramDiagnosticsRAM2_sysDiagnostics_size=0;
 
 uint8_t ramDiagnosticsCCSRAM_crit_size=0;
 
-void ramDiagnositcsInit(void){
+void ramInfoInit(void){
 	ramDiagnosticsRAM1_total_size=((uint32_t)&__RAM1_end__-(uint32_t)&__RAM1_start__)/1024;
 	ramDiagnosticsRAM2_total_size=((uint32_t)&__RAM2_end__-(uint32_t)&__RAM2_start__)/1024;
 	ramDiagnosticsCCSRAM_total_size=((uint32_t)&__CCSRAM_end__-(uint32_t)&__CCSRAM_start__)/1024;
@@ -145,9 +145,9 @@ void ramDiagnositcsInit(void){
 
 	ramDiagnosticsCCSRAM_crit_size=((uint32_t)&__CRIT_END__-(uint32_t)&__CRIT_START__)/1024;
 
-	ramDiagnosticsRefresh();
+	ramInfoRefresh();
 }
-void ramDiagnosticsRefresh(){
+void ramInfoRefresh(){
 // RAM1 heap usage
 	if(__sbrk_heap_end==NULL){
 		ramDiagnosticsRAM1_lastHeapEnd=(uint32_t)&_end;
@@ -173,15 +173,15 @@ void ramDiagnosticsRefresh(){
 	ramDiagnosticsCCSRAM_crit_size=((uint32_t)&__CRIT_END__-(uint32_t)&__CRIT_START__)/1024;
 }
 														
-void ramDiagnosticsGeneral(){
+void ramInfoGeneral(){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 	char bar_buffer[MEMINFO_BAR_BUFFER_SIZE]={0};
 
 	uint8_t usage_percent=0; // Used for bar graph calculation
 // Send General RAM diagnostics headers 1-3
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_header1,strlen(msg_ramDiagnosticsGeneral_header1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_header2,strlen(msg_ramDiagnosticsGeneral_header2),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header1,strlen(msg_ramDiagnosticsGeneral_header1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header2,strlen(msg_ramDiagnosticsGeneral_header2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3),MEMINFO_UART_TIMEOUT);
 // Send RAM1 info
 	usage_percent=((uint16_t)ramDiagnosticsRAM1_used*100)/ramDiagnosticsRAM1_total_size;
 	memset(bar_buffer,'-',MEMINFO_BAR_BUFFER_SIZE-1);
@@ -201,7 +201,7 @@ void ramDiagnosticsGeneral(){
 		bar_buffer,                    // RAM1 usage bar
 		usage_percent                  // RAM1 usage percent
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send RAM2 info
 	usage_percent=((uint16_t)ramDiagnosticsRAM2_used*100)/ramDiagnosticsRAM2_total_size;
 	memset(bar_buffer,'-',MEMINFO_BAR_BUFFER_SIZE-1);
@@ -221,7 +221,7 @@ void ramDiagnosticsGeneral(){
 		bar_buffer,                    // RAM2 usage bar
 		usage_percent                  // RAM2 usage percent
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send CCSRAM info
 	usage_percent=((uint16_t)ramDiagnosticsCCSRAM_used*100)/ramDiagnosticsCCSRAM_total_size;
 	memset(bar_buffer,'-',MEMINFO_BAR_BUFFER_SIZE-1);
@@ -239,26 +239,26 @@ void ramDiagnosticsGeneral(){
 		bar_buffer,                      // CCSRAM usage bar
 		usage_percent                    // CCSRAM usage percent
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send RAM diagnostics header 4
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3),MEMINFO_UART_TIMEOUT);
 // Send Free RAM total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsGeneral_formatStringFreeRAM,ramDiagnosticsGeneral_total_size-ramDiagnosticsGeneral_used);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
 // Send empty line
-	HAL_UART_Transmit(&uart,(uint8_t*)"\r\n",2,MEMINFO_UART_TIMEOUT);	
+	HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,MEMINFO_UART_TIMEOUT);	
 }
 
-void ramDiagnosticsRAM1(){
+void ramInfoRAM1(){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 
 // Send RAM1 diagnostics headers 1-3	
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header1,strlen(msg_ramDiagnosticsRAM1_header1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header1,strlen(msg_ramDiagnosticsRAM1_header1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 // Send .data section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringData,
 		(uint32_t)&__RAM1_start__,	    // .data start
@@ -266,7 +266,7 @@ void ramDiagnosticsRAM1(){
 		ramDiagnosticsRAM1_data_size,   // .data size in KB
 		ramDiagnosticsRAM1_data_size    // .data used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send .bss section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringBSS,
 		(uint32_t)&__bss_start__,		 // .bss start
@@ -274,7 +274,7 @@ void ramDiagnosticsRAM1(){
 		ramDiagnosticsRAM1_bss_size,     // .bss size in KB
 		ramDiagnosticsRAM1_bss_size      // .bss used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send .tdat section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTData,
 		0UL,                             // .tdat start
@@ -282,7 +282,7 @@ void ramDiagnosticsRAM1(){
 		ramDiagnosticsRAM1_tdat_size,    // .tdat size in KB
 		ramDiagnosticsRAM1_tdat_size     // .tdat used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send .heap section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringHeap,
 		(uint32_t)&_end,                          // .heap start
@@ -290,7 +290,7 @@ void ramDiagnosticsRAM1(){
 		ramDiagnosticsRAM1_heap_size,             // .heap size in KB
 		ramDiagnosticsRAM1_heap_size              // .heap used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send .stack section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringStack,
 		(uint32_t)&__RAM1_end__,              // .stack start
@@ -298,25 +298,25 @@ void ramDiagnosticsRAM1(){
 		ramDiagnosticsRAM1_stack_size,        // .stack size in KB
 		ramDiagnosticsRAM1_stack_size         // .stack used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send RAM1 diagnostics footers
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 	
 // Send Free RAM total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringFreeRAM,ramDiagnosticsRAM1_total_size-ramDiagnosticsRAM1_used);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
 }
 
-void ramDiagnosticsRAM2(){
+void ramInfoRAM2(){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 // Send RAM2 diagnostics headers 1-3
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM2_header1,strlen(msg_ramDiagnosticsRAM2_header1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM2_header1,strlen(msg_ramDiagnosticsRAM2_header1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 // Send .ramDiagnostics section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM2_formatStringRamDia,
 		(uint32_t)&__RAM_DIAGNOSTICS_START__,	     // .ramDiagnostics start
@@ -324,7 +324,7 @@ void ramDiagnosticsRAM2(){
 		ramDiagnosticsRAM2_ramDiagnostics_size,      // .ramDiagnostics size in KB
 		ramDiagnosticsRAM2_ramDiagnostics_size       // .ramDiagnostics used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send .sysDiag section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM2_formatStringSysDia,
 		(uint32_t)&__SYS_DIAGNOSTICS_START__,        // .sysDiag start
@@ -332,24 +332,24 @@ void ramDiagnosticsRAM2(){
 		ramDiagnosticsRAM2_sysDiagnostics_size,      // .sysDiag size in KB
 		ramDiagnosticsRAM2_sysDiagnostics_size       // .sysDiag size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);	
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);	
 // Send RAM2 diagnostics footers
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 // Send Free RAM total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringFreeRAM,ramDiagnosticsRAM2_total_size-ramDiagnosticsRAM2_used);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
 }
 
-void ramDiagnosticsCCSRAM(){
+void ramInfoCCSRAM(){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 
 // Send CCSRAM diagnostics headers 1-3
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsCCSRAM_header1,strlen(msg_ramDiagnosticsCCSRAM_header1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsCCSRAM_header1,strlen(msg_ramDiagnosticsCCSRAM_header1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),MEMINFO_UART_TIMEOUT);
 // Send .crit section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsCCSRAM_formatStringCrit,
 		(uint32_t)&__CRIT_START__,	      // .crit start
@@ -357,9 +357,9 @@ void ramDiagnosticsCCSRAM(){
 		ramDiagnosticsCCSRAM_crit_size,   // .crit size in KB
 		ramDiagnosticsCCSRAM_crit_size    // .crit used size in KB
 	);
-	HAL_UART_Transmit(&uart,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),MEMINFO_UART_TIMEOUT);
 // Send CCSRAM diagnostics footers
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
-	HAL_UART_Transmit(&uart,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),MEMINFO_UART_TIMEOUT);
+	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),MEMINFO_UART_TIMEOUT);
 }
 

@@ -19,12 +19,18 @@
 
 // Probabbly in the future I will expand error handling
 
-uint32_t global_error_code=0;
+SystemErrorStatus_t g_SystemErrors={0};
 
 void Error_Handler(void){
+	// Called only when error is critical and not recoverable
+	// MCU should reset after this kind of fault either by external watchdog timer
+	// or by software
 	__disable_irq();
+
 	while(1){
 		// Debug Loop
+		// If UART is initialized, we can send error code over UART
+		// If GPIO is initialized, we activate buzzer
 		// In the future restart of the system
 	}
 }

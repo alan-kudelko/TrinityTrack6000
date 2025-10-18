@@ -13,7 +13,7 @@ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fwalk.o)
                               D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o) (_fwalk_sglue)
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-snprintf.o)
-                              CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj (snprintf)
+                              CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj (snprintf)
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-stdio.o)
                               D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o) (__sread)
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
@@ -37,7 +37,7 @@ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
                               D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o) (__retarget_lock_init_recursive)
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
-                              CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj (strlen)
+                              CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj (strlen)
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
                               D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-exit.o) (__call_exitprocs)
 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
@@ -4400,6 +4400,116 @@ Discarded input sections
  .text          0x00000000       0x14 CMakeFiles/STM32G473CET6.elf.dir/Core/Startup/startup_stm32g473cetx.s.obj
  .data          0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Core/Startup/startup_stm32g473cetx.s.obj
  .bss           0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Core/Startup/startup_stm32g473cetx.s.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .text          0x00000000       0x64 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .data          0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .bss           0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_info    0x00000000      0x957 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_abbrev  0x00000000      0x213 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_aranges
+                0x00000000       0x20 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x238 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0xc16 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x173 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x28 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0xfb CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000     0x1011 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000    0x130df CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000     0x3558 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x197 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x5c CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000     0x16d9 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x600 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x1b6 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x336 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x50b CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x18b CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x43 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x23d CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000     0x1112 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x72e CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x391 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x1f4 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x211 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x45c CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x11c CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0x61 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x122 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x3d1 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x2fe CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0xc0b CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x718 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x693 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000       0xa6 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x34a CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_macro   0x00000000      0x1d2 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_line    0x00000000      0x84b CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_str     0x00000000    0xeb964 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .comment       0x00000000       0x47 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .debug_frame   0x00000000       0x88 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
@@ -4675,6 +4785,8 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
@@ -4725,6 +4837,176 @@ Discarded input sections
  .debug_macro   0x00000000       0xa6 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .debug_macro   0x00000000      0x34a CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .debug_macro   0x00000000       0xd0 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_macro   0x00000000       0x40 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .text          0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .data          0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_header1
+                0x00000000       0x49 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_header2
+                0x00000000       0x49 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_header3
+                0x00000000       0x49 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_NRF_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_FRAM_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_MCP_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_ADXL_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_L76K_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_Infineon_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_NXP_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_RENESANS_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_FPGA_status_formatString
+                0x00000000       0x1e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_footer1
+                0x00000000       0x49 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata.msg_Diagnostics_footer2
+                0x00000000       0x49 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .rodata        0x00000000       0x2b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .data.msg_Diagnostics_status
+                0x00000000       0x10 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .text.systemDiagnostics_PrintStatus
+                0x00000000      0x250 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0xacc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x75 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x2a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x94 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x57 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x364 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x4a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x1e5 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x170 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x173 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x28 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0xfb CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000     0x1011 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000    0x130df CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000     0x3558 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x56 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000     0x16d9 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x600 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x1b6 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x336 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x50b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x18b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x43 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x23d CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000     0x1112 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x72e CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x391 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x1f4 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x211 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x45c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x11c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x61 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x122 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x3d1 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x2fe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0xc0b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x718 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x693 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0xa6 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000      0x34a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00000000       0x40 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
@@ -4821,7 +5103,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x693 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .debug_macro   0x00000000       0xa6 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .debug_macro   0x00000000      0x34a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_macro   0x00000000       0x3a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_macro   0x00000000       0x40 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
@@ -4940,13 +5222,13 @@ Discarded input sections
  .rodata.msg_ramDiagnosticsCCSRAM_formatStringCrit
                 0x00000000       0x45 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .rodata        0x00000000        0x3 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .text.ramDiagnosticsGeneral
+ .text.ramInfoGeneral
                 0x00000000      0x30c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .text.ramDiagnosticsRAM1
+ .text.ramInfoRAM1
                 0x00000000      0x224 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .text.ramDiagnosticsRAM2
+ .text.ramInfoRAM2
                 0x00000000      0x150 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .text.ramDiagnosticsCCSRAM
+ .text.ramInfoCCSRAM
                 0x00000000       0xc0 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000      0xacc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
@@ -4970,6 +5252,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x3c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000       0x10 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000      0x170 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
@@ -5881,11 +6164,15 @@ LOAD CMakeFiles/STM32G473CET6.elf.dir/Core/Src/syscalls.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Core/Src/sysmem.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Core/Startup/startup_stm32g473cetx.s.obj
+LOAD CMakeFiles/STM32G473CET6.elf.dir/Devices/MCP23S17/MCP23S17.cpp.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+LOAD CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
 LOAD CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++.a
+LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 START GROUP
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a
@@ -5910,7 +6197,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x08000000                g_pfnVectors
                 0x080001d8                        . = ALIGN (0x4)
 
-.text           0x080001d8     0x5b54
+.text           0x080001d8     0x5c04
                 0x080001d8                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001d8       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
@@ -6314,136 +6601,167 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .text.initializeSystem
                 0x0800560c       0x38 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
                 0x0800560c                initializeSystem
- .text.main     0x08005644        0xc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .text.main     0x08005644       0x10 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
                 0x08005644                main
+ .text.systemDiagnostics
+                0x08005654       0x2c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x08005654                systemDiagnostics
+ .text.systemDiagnostics_NRF
+                0x08005680        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x08005680                systemDiagnostics_NRF
+ .text.systemDiagnostics_FRAM
+                0x0800568e        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x0800568e                systemDiagnostics_FRAM
+ .text.systemDiagnostics_MCP
+                0x0800569c        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x0800569c                systemDiagnostics_MCP
+ .text.systemDiagnostics_ADXL
+                0x080056aa        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x080056aa                systemDiagnostics_ADXL
+ .text.systemDiagnostics_L76K
+                0x080056b8        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x080056b8                systemDiagnostics_L76K
+ .text.systemDiagnostics_Infineon
+                0x080056c6        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x080056c6                systemDiagnostics_Infineon
+ .text.systemDiagnostics_NXP
+                0x080056d4        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x080056d4                systemDiagnostics_NXP
+ .text.systemDiagnostics_RENESANS
+                0x080056e2        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x080056e2                systemDiagnostics_RENESANS
+ .text.systemDiagnostics_FPGA
+                0x080056f0        0xe CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+                0x080056f0                systemDiagnostics_FPGA
  .text.Error_Handler
-                0x08005650        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
-                0x08005650                Error_Handler
- .text.ramDiagnositcsInit
-                0x0800565c      0x104 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x0800565c                ramDiagnositcsInit
- .text.ramDiagnosticsRefresh
-                0x08005760      0x100 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
-                0x08005760                ramDiagnosticsRefresh
+                0x080056fe        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+                0x080056fe                Error_Handler
+ *fill*         0x0800570a        0x2 
+ .text.ramInfoInit
+                0x0800570c      0x104 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0800570c                ramInfoInit
+ .text.ramInfoRefresh
+                0x08005810      0x100 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x08005810                ramInfoRefresh
  .text.__udivmoddi4
-                0x08005860      0x2f8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08005860                __udivmoddi4
- .text.memset   0x08005b58       0x9c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
-                0x08005b58                memset
+                0x08005910      0x2f8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08005910                __udivmoddi4
+ .text.memset   0x08005c08       0x9c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+                0x08005c08                memset
  .text.__libc_init_array
-                0x08005bf4       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
-                0x08005bf4                __libc_init_array
+                0x08005ca4       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+                0x08005ca4                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08005c44        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08005c44                __retarget_lock_acquire_recursive
+                0x08005cf4        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x08005cf4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08005c48        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08005c48                __retarget_lock_release_recursive
+                0x08005cf8        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x08005cf8                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x08005c4c       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x08005c60        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
-                0x08005c60                atexit
+                0x08005cfc       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x08005d10        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+                0x08005d10                atexit
  .text.__libc_fini_array
-                0x08005c6c       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
-                0x08005c6c                __libc_fini_array
+                0x08005d1c       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+                0x08005d1c                __libc_fini_array
  .text.__register_exitproc
-                0x08005c94       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x08005c94                __register_exitproc
+                0x08005d44       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x08005d44                __register_exitproc
  *(.glue_7)
- .glue_7        0x08005d14        0x0 linker stubs
+ .glue_7        0x08005dc4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08005d14        0x0 linker stubs
+ .glue_7t       0x08005dc4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08005d14        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08005dc4        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08005d14        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005d14                _init
- .init          0x08005d18        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08005dc4        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005dc4                _init
+ .init          0x08005dc8        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08005d20        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005d20                _fini
- .fini          0x08005d24        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08005d2c                        . = ALIGN (0x4)
-                0x08005d2c                        _etext = .
+ .fini          0x08005dd0        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005dd0                _fini
+ .fini          0x08005dd4        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08005ddc                        . = ALIGN (0x4)
+                0x08005ddc                        _etext = .
 
-.vfp11_veneer   0x08005d2c        0x0
- .vfp11_veneer  0x08005d2c        0x0 linker stubs
+.vfp11_veneer   0x08005ddc        0x0
+ .vfp11_veneer  0x08005ddc        0x0 linker stubs
 
-.v4_bx          0x08005d2c        0x0
- .v4_bx         0x08005d2c        0x0 linker stubs
+.v4_bx          0x08005ddc        0x0
+ .v4_bx         0x08005ddc        0x0 linker stubs
 
-.iplt           0x08005d2c        0x0
- .iplt          0x08005d2c        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08005ddc        0x0
+ .iplt          0x08005ddc        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08005d2c       0x68
-                0x08005d2c                        . = ALIGN (0x4)
+.rodata         0x08005ddc       0x68
+                0x08005ddc                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.UARTPrescTable
-                0x08005d2c       0x18 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
-                0x08005d2c                UARTPrescTable
+                0x08005ddc       0x18 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+                0x08005ddc                UARTPrescTable
  .rodata.numerator.1
-                0x08005d44        0x8 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+                0x08005df4        0x8 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
  .rodata.denominator.0
-                0x08005d4c        0x8 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+                0x08005dfc        0x8 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
  .rodata.AHBPrescTable
-                0x08005d54       0x10 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
-                0x08005d54                AHBPrescTable
+                0x08005e04       0x10 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
+                0x08005e04                AHBPrescTable
  .rodata.APBPrescTable
-                0x08005d64        0x8 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
-                0x08005d64                APBPrescTable
+                0x08005e14        0x8 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
+                0x08005e14                APBPrescTable
  .rodata.msg_initializeRAMDia_info
-                0x08005d6c       0x26 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
-                0x08005d6c                msg_initializeRAMDia_info
-                0x08005d94                        . = ALIGN (0x4)
- *fill*         0x08005d92        0x2 
+                0x08005e1c       0x26 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+                0x08005e1c                msg_initializeRAMDia_info
+                0x08005e44                        . = ALIGN (0x4)
+ *fill*         0x08005e42        0x2 
 
-.ARM.extab      0x08005d94        0x0
-                0x08005d94                        . = ALIGN (0x4)
+.ARM.extab      0x08005e44        0x0
+                0x08005e44                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005d94                        . = ALIGN (0x4)
+                0x08005e44                        . = ALIGN (0x4)
 
-.ARM            0x08005d94        0x8
-                0x08005d94                        . = ALIGN (0x4)
-                0x08005d94                        __exidx_start = .
+.ARM            0x08005e44        0x8
+                0x08005e44                        . = ALIGN (0x4)
+                0x08005e44                        __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.__udivmoddi4
-                0x08005d94        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08005d9c                        __exidx_end = .
-                0x08005d9c                        . = ALIGN (0x4)
+                0x08005e44        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08005e4c                        __exidx_end = .
+                0x08005e4c                        . = ALIGN (0x4)
 
-.preinit_array  0x08005d9c        0x0
-                0x08005d9c                        . = ALIGN (0x4)
-                0x08005d9c                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08005e4c        0x0
+                0x08005e4c                        . = ALIGN (0x4)
+                0x08005e4c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08005d9c                        PROVIDE (__preinit_array_end = .)
-                0x08005d9c                        . = ALIGN (0x4)
+                0x08005e4c                        PROVIDE (__preinit_array_end = .)
+                0x08005e4c                        . = ALIGN (0x4)
 
-.init_array     0x08005d9c        0x8
-                0x08005d9c                        . = ALIGN (0x4)
-                0x08005d9c                        PROVIDE (__init_array_start = .)
+.init_array     0x08005e4c        0x8
+                0x08005e4c                        . = ALIGN (0x4)
+                0x08005e4c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08005d9c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x08005e4c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08005da0        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08005da4                        PROVIDE (__init_array_end = .)
-                0x08005da4                        . = ALIGN (0x4)
+ .init_array    0x08005e50        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08005e54                        PROVIDE (__init_array_end = .)
+                0x08005e54                        . = ALIGN (0x4)
 
-.fini_array     0x08005da4        0x4
-                0x08005da4                        . = ALIGN (0x4)
-                0x08005da4                        PROVIDE (__fini_array_start = .)
+.fini_array     0x08005e54        0x4
+                0x08005e54                        . = ALIGN (0x4)
+                0x08005e54                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08005da4        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08005da8                        PROVIDE (__fini_array_end = .)
-                0x08005da8                        . = ALIGN (0x4)
-                0x08005da8                        _sidata = LOADADDR (.data)
+ .fini_array    0x08005e54        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08005e58                        PROVIDE (__fini_array_end = .)
+                0x08005e58                        . = ALIGN (0x4)
+                0x08005e58                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08005da8        0x0
- .rel.iplt      0x08005da8        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08005e58        0x0
+ .rel.iplt      0x08005e58        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000       0x10 load address 0x08005da8
+.data           0x20000000       0x10 load address 0x08005e58
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -6466,17 +6784,17 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x20000010                        _edata = .
 
 .tm_clone_table
-                0x20000010        0x0 load address 0x08005db8
+                0x20000010        0x0 load address 0x08005e68
  .tm_clone_table
                 0x20000010        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x20000010        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x20000010        0x0 load address 0x08005db8
+.igot.plt       0x20000010        0x0 load address 0x08005e68
  .igot.plt      0x20000010        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20000010                        . = ALIGN (0x4)
 
-.bss            0x20000010      0x4e0 load address 0x08005db8
+.bss            0x20000010      0x4e0 load address 0x08005e68
                 0x20000010                        _sbss = .
                 0x20000010                        __bss_start__ = _sbss
  *(.bss)
@@ -6521,7 +6839,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x200004f0                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200004f0      0x800 load address 0x08005db8
+                0x200004f0      0x800 load address 0x08005e68
                 0x200004f0                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x200004f0                        PROVIDE (_end = .)
@@ -6568,13 +6886,13 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x20014018                ramDiagnosticsRAM1_lastHeapEnd
                 0x2001401c                        PROVIDE (__RAM_DIAGNOSTICS_END__ = .)
 
-.sysDiag        0x2001401c        0x4
+.sysDiag        0x2001401c        0xc
                 0x2001401c                        PROVIDE (__SYS_DIAGNOSTICS_START__ = .)
                 0x2001401c                        . = ALIGN (0x4)
  *(sysDiag)
                 0x2001401c                        PROVIDE (__SYS_DIAGNOSTICS_END__ = .)
- .sysDiag       0x2001401c        0x4 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
-                0x2001401c                global_error_code
+ .sysDiag       0x2001401c        0xc CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+                0x2001401c                g_SystemErrors
 
 .crit           0x10000000        0x0
                 0x10000000                        PROVIDE (__CRIT_START__ = .)
@@ -6644,40 +6962,42 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .ARM.attributes
                 0x000004ef       0x34 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .ARM.attributes
-                0x00000523       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+                0x00000523       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
  .ARM.attributes
-                0x00000557       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x00000557       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .ARM.attributes
-                0x0000058b       0x22 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x0000058b       0x34 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
  .ARM.attributes
-                0x000005ad       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x000005bf       0x22 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000005e1       0x22 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x000005e1       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000603       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+                0x00000615       0x22 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000637       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+                0x00000637       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
  .ARM.attributes
-                0x0000066b       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x0000066b       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
  .ARM.attributes
-                0x0000069f       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x0000069f       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
  .ARM.attributes
-                0x000006d3       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+                0x000006d3       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
  .ARM.attributes
-                0x00000707       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+                0x00000707       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
  .ARM.attributes
-                0x0000073b       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x0000073b       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
  .ARM.attributes
-                0x0000076f       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
+                0x0000076f       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
  .ARM.attributes
-                0x000007a3       0x22 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x000007a3       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .ARM.attributes
+                0x000007d7       0x22 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
 OUTPUT(Debug\STM32G473CET6.elf elf32-littlearm)
 LOAD linker stubs
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x1e2a2
+.debug_info     0x00000000    0x1f059
  .debug_info    0x00000000      0xb65 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_info    0x00000b65     0x2063 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_info    0x00002bc8     0x1d80 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -6698,13 +7018,14 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_info    0x00018f73      0x113 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/stm32g4xx_it.c.obj
  .debug_info    0x00019086      0x169 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/sysmem.c.obj
  .debug_info    0x000191ef      0x587 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
- .debug_info    0x00019776     0x2372 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_info    0x0001bae8     0x1744 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_info    0x0001d22c       0x9d CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_info    0x0001d2c9       0xda CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_info    0x0001d3a3      0xeff CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_info    0x00019776     0x2409 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_info    0x0001bb7f     0x1744 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_info    0x0001d2c3      0x16d CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_info    0x0001d430      0xbaa CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_info    0x0001dfda      0x180 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_info    0x0001e15a      0xeff CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_abbrev   0x00000000     0x3536
+.debug_abbrev   0x00000000     0x3779
  .debug_abbrev  0x00000000      0x271 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_abbrev  0x00000271      0x2d3 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_abbrev  0x00000544      0x2ee CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -6727,11 +7048,12 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_abbrev  0x00002c3d      0x11a CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
  .debug_abbrev  0x00002d57      0x2e1 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .debug_abbrev  0x00003038      0x194 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_abbrev  0x000031cc       0x5a CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_abbrev  0x00003226       0x9a CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_abbrev  0x000032c0      0x276 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_abbrev  0x000031cc       0x9e CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_abbrev  0x0000326a      0x1de CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_abbrev  0x00003448       0xbb CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_abbrev  0x00003503      0x276 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_aranges  0x00000000     0x1a20
+.debug_aranges  0x00000000     0x1a90
  .debug_aranges
                 0x00000000      0x148 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_aranges
@@ -6779,12 +7101,14 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_aranges
                 0x00001998       0x20 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .debug_aranges
-                0x000019b8       0x20 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+                0x000019b8       0x70 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
  .debug_aranges
-                0x000019d8       0x48 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x00001a28       0x20 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_aranges
+                0x00001a48       0x48 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
 .debug_rnglists
-                0x00000000     0x1464
+                0x00000000     0x14b4
  .debug_rnglists
                 0x00000000       0xf1 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_rnglists
@@ -6830,11 +7154,13 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_rnglists
                 0x00001407       0x13 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
  .debug_rnglists
-                0x0000141a       0x13 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+                0x0000141a       0x50 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
  .debug_rnglists
-                0x0000142d       0x37 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+                0x0000146a       0x13 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_rnglists
+                0x0000147d       0x37 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_macro    0x00000000    0x241da
+.debug_macro    0x00000000    0x2453b
  .debug_macro   0x00000000      0x272 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_macro   0x00000272      0xacc CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_macro   0x00000d3e      0x173 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
@@ -6907,18 +7233,20 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_macro   0x00023592       0x10 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .debug_macro   0x000235a2       0x56 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .debug_macro   0x000235f8       0x10 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_macro   0x00023608       0x3a CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_macro   0x00023642       0xd6 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_macro   0x00023718      0x233 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_macro   0x0002394b      0x246 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_macro   0x00023b91       0x16 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_macro   0x00023ba7      0x22d CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_macro   0x00023dd4      0x353 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_macro   0x00024127       0x7b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_macro   0x000241a2       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_macro   0x000241be       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x00023608       0x40 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_macro   0x00023648       0xd6 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_macro   0x0002371e      0x233 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_macro   0x00023951      0x258 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_macro   0x00023ba9       0x16 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_macro   0x00023bbf       0x22 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_macro   0x00023be1      0x327 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00023f08       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_macro   0x00023f24      0x22d CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_macro   0x00024151      0x353 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x000244a4       0x7b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x0002451f       0x1c CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_line     0x00000000    0x1fdda
+.debug_line     0x00000000    0x20966
  .debug_line    0x00000000      0xc6c CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_line    0x00000c6c     0x233a CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_line    0x00002fa6     0x1c93 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -6941,37 +7269,39 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_line    0x0001c634      0x4af CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
  .debug_line    0x0001cae3      0xd75 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .debug_line    0x0001d858      0x879 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_line    0x0001e0d1      0x8e9 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_line    0x0001e9ba      0x855 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_line    0x0001f20f      0xbcb CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_line    0x0001e0d1      0x971 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_line    0x0001ea42      0xb04 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_line    0x0001f546      0x855 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_line    0x0001fd9b      0xbcb CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_str      0x00000000    0xf6d47
- .debug_str     0x00000000    0xf6d47 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+.debug_str      0x00000000    0xf71db
+ .debug_str     0x00000000    0xf71db CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
                               0xeb185 (size before relaxing)
- .debug_str     0x000f6d47    0xeb529 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
- .debug_str     0x000f6d47    0xeb4cf CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
- .debug_str     0x000f6d47    0xea9a2 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c.obj
- .debug_str     0x000f6d47    0xeae41 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_str     0x000f6d47    0xea687 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_str     0x000f6d47    0xeb806 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
- .debug_str     0x000f6d47    0xeab1b CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
- .debug_str     0x000f6d47    0xea9ea CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_str     0x000f6d47    0xeac1b CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
- .debug_str     0x000f6d47    0xeac45 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
- .debug_str     0x000f6d47    0xeae2e CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_str     0x000f6d47    0xeb9fa CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_str     0x000f6d47    0xeb66e CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
- .debug_str     0x000f6d47    0xeb4b7 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
- .debug_str     0x000f6d47    0xeacb5 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
- .debug_str     0x000f6d47    0xebc08 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_str     0x000f6d47    0xea733 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_str     0x000f6d47     0x7142 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/sysmem.c.obj
- .debug_str     0x000f6d47    0x7b828 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
- .debug_str     0x000f6d47    0xeecfd CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
- .debug_str     0x000f6d47    0xeb420 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
- .debug_str     0x000f6d47    0xea6f8 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_str     0x000f6d47    0xea445 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_str     0x000f6d47    0xee36b CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_str     0x000f71db    0xeb529 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+ .debug_str     0x000f71db    0xeb4cf CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+ .debug_str     0x000f71db    0xea9a2 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c.obj
+ .debug_str     0x000f71db    0xeae41 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_str     0x000f71db    0xea687 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_str     0x000f71db    0xeb806 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_str     0x000f71db    0xeab1b CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_str     0x000f71db    0xea9ea CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000f71db    0xeac1b CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_str     0x000f71db    0xeac45 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_str     0x000f71db    0xeae2e CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_str     0x000f71db    0xeb9fa CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_str     0x000f71db    0xeb66e CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+ .debug_str     0x000f71db    0xeb4b7 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_str     0x000f71db    0xeacb5 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_str     0x000f71db    0xebc08 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_str     0x000f71db    0xea733 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_str     0x000f71db     0x7142 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x000f71db    0x7b828 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
+ .debug_str     0x000f71db    0xeed9f CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
+ .debug_str     0x000f71db    0xeb420 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
+ .debug_str     0x000f71db    0xea9bc CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .debug_str     0x000f71db    0xee0ba CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_str     0x000f71db    0xea500 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_str     0x000f71db    0xee343 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
 .comment        0x00000000       0x46
  .comment       0x00000000       0x46 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
@@ -6998,10 +7328,11 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .comment       0x00000046       0x47 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .comment       0x00000046       0x47 CMakeFiles/STM32G473CET6.elf.dir/Src/TrinityTrack6000_Config.c.obj
  .comment       0x00000046       0x47 CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
  .comment       0x00000046       0x47 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
  .comment       0x00000046       0x47 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
 
-.debug_frame    0x00000000     0x7328
+.debug_frame    0x00000000     0x749c
  .debug_frame   0x00000000      0x500 CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_frame   0x00000500      0xacc CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_frame   0x00000fcc      0x81c CMakeFiles/STM32G473CET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -7024,17 +7355,18 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_frame   0x00006db8       0x58 CMakeFiles/STM32G473CET6.elf.dir/Core/Src/system_stm32g4xx.c.obj
  .debug_frame   0x00006e10      0x180 CMakeFiles/STM32G473CET6.elf.dir/Init/TrinityTrack6000_Init.c.obj
  .debug_frame   0x00006f90       0x2c CMakeFiles/STM32G473CET6.elf.dir/Src/main.c.obj
- .debug_frame   0x00006fbc       0x28 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_frame   0x00006fe4       0xf8 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_frame   0x000070dc       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00007108       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000713c       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
- .debug_frame   0x00007168       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
- .debug_frame   0x00007194       0xb0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
- .debug_frame   0x00007244       0x5c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x000072a0       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
- .debug_frame   0x000072c0       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
- .debug_frame   0x000072f4       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+ .debug_frame   0x00006fbc      0x174 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Diagnostics.c.obj
+ .debug_frame   0x00007130       0x28 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_frame   0x00007158       0xf8 CMakeFiles/STM32G473CET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_frame   0x00007250       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000727c       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000072b0       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+ .debug_frame   0x000072dc       0x2c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+ .debug_frame   0x00007308       0xb0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+ .debug_frame   0x000073b8       0x5c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00007414       0x20 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+ .debug_frame   0x00007434       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+ .debug_frame   0x00007468       0x34 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
 
 .debug_line_str
                 0x00000000       0xd9
