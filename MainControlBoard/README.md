@@ -420,7 +420,7 @@ Colors and hardware related to them are described below:
 
 This section provides a detailed description of the memory sections and their roles within the project. It covers the organization of all RAM banks (RAM1, RAM2, and CCSRAM), custom linker-defined sections, and their purpose in task management, memory diagnostics, and system operation.
 
-![STM32G473_RAM_MAP](/Media/STM32G473_RAM_MAP.png)
+![STM32G473_RAM_MAP](/MainControlBoard/Media/STM32G473_RAM_MAP.png)
 
 ###### 5.8.1.1 RAM1
 - `__DATA_start__` is a custom linker symbol representing the starting address of the `.data` section in RAM1 on STM32G473CET6
