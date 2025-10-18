@@ -397,22 +397,25 @@ Colors and hardware related to them are described below:
 
 ![STM32G473 Clock Configuration](/MainControlBoard/Media/STM32G473CET6_ClockConfiguration.png)
 
-#### 5.2 Task Overview
+#### 5.2 System initialization
+
+The system initialization process on the STM32G4 microcontroller is one of the most critical stages in the TrinityTrack6000 startup sequence.
+As the main MCU in a distributed, multi-controller architecture, it is responsible for establishing a stable runtime environment and verifying the integrity of all essential hardware components before launching the operating system.
+
+#### 5.3 Normal start
+
+#### 5.4 Fault start
+
+#### 5.5 Normal operation
+
+#### 5.6 Task Overview
 
 | Task ID | Task Name                  | Description                                                                                                               | Priority | Stack Size | Free Stack |
 |---------|----------------------------|---------------------------------------------------------------------------------------------------------------------------|----------|------------|------------|
 | 00      | `taskErrorHandler`         | Handles critical faults such as stack overflows and guard zone corruption, and logs errors to EEPROM                      |    3     |    256     |     50     |
 | 01      | `taskSerialDiagnostics`    |                                                                                                                           |    1     |    x       |     x      |
 
-#### 5.3 ThreadX Architecture
-
-#### 5.4 System initialization
-
-#### 5.5 Normal start
-
-#### 5.6 Fault start
-
-#### 5.7 Normal operation
+#### 5.7 ThreadX Architecture
 
 #### 5.8 💾 Memory Layout
 
