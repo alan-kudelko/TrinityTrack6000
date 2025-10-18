@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['_5f_5fattribute_0',['__attribute',['../_trinity_track6000___errors_8h.html#ada6631461502109beb2857edde534974',1,'__attribute((section(&quot;.sysDiag&quot;))):&#160;TrinityTrack6000_Errors.h'],['../_trinity_track6000___mem_info_8h.html#aae8a396c4dfa175d3fd3437134a69d8b',1,'__attribute((section(&quot;.ramDiagnostics.uint16_t&quot;))):&#160;TrinityTrack6000_MemInfo.h'],['../_trinity_track6000___mem_info_8h.html#a4c48fad4b2ebd75c4b31ae0a2b6a1f22',1,'__attribute((section(&quot;.ramDiagnostics.uint8_t&quot;))):&#160;TrinityTrack6000_MemInfo.h'],['../_trinity_track6000___mem_info_8h.html#a2dc1e5ecdb9280b20d2933850e626a86',1,'__attribute((section(&quot;.ramDiagnostics.uint32_t&quot;))):&#160;TrinityTrack6000_MemInfo.h']]],
+  ['_5f_5fbss_5fend_5f_5f_1',['__bss_end__',['../_trinity_track6000___mem_info_8c.html#a2ba38e14d0dfe1bc01684b717aac665a',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fbss_5fstart_5f_5f_2',['__bss_start__',['../_trinity_track6000___mem_info_8c.html#a3ac1a82676c1ee9d53371718c06fe849',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fccsram_5fend_5f_5f_3',['__CCSRAM_end__',['../_trinity_track6000___mem_info_8c.html#adde5d6d0c01fbe3cd18d9731d50064d3',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fccsram_5fstart_5f_5f_4',['__CCSRAM_start__',['../_trinity_track6000___mem_info_8c.html#af4e778e2b9d815c54cf1d7c38968ecf7',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fcrit_5fend_5f_5f_5',['__CRIT_END__',['../_trinity_track6000___mem_info_8c.html#a5ca7e9264effd09066e3a314830fb245',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fcrit_5fstart_5f_5f_6',['__CRIT_START__',['../_trinity_track6000___mem_info_8c.html#a0816fccd2716b8007747a8c2a835f877',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fram1_5fend_5f_5f_7',['__RAM1_end__',['../_trinity_track6000___mem_info_8c.html#a44697845feed06d75947c80f4a0cc69d',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fram1_5fstart_5f_5f_8',['__RAM1_start__',['../_trinity_track6000___mem_info_8c.html#a45718420e39c57e24bbf4cecb6e6a6db',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fram2_5fend_5f_5f_9',['__RAM2_end__',['../_trinity_track6000___mem_info_8c.html#ad89bc08241c120cd99f2215e14cb10ba',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fram2_5fstart_5f_5f_10',['__RAM2_start__',['../_trinity_track6000___mem_info_8c.html#a7a262ec869198c39ea2780d1c34a25ab',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fram_5fdiagnostics_5fend_5f_5f_11',['__RAM_DIAGNOSTICS_END__',['../_trinity_track6000___mem_info_8c.html#a49433164e75bde7c33a071580ffe6f8e',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fram_5fdiagnostics_5fstart_5f_5f_12',['__RAM_DIAGNOSTICS_START__',['../_trinity_track6000___mem_info_8c.html#a490f63abeb05d97d096a7e8dca7a479f',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fsbrk_5fheap_5fend_13',['__sbrk_heap_end',['../_trinity_track6000___mem_info_8c.html#a2cf862d604e9c7cfcf0528a0f539a6a5',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fsys_5fdiagnostics_5fend_5f_5f_14',['__SYS_DIAGNOSTICS_END__',['../_trinity_track6000___mem_info_8c.html#a112036e9eeadd8c14fab46d2949f24f6',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fsys_5fdiagnostics_5fstart_5f_5f_15',['__SYS_DIAGNOSTICS_START__',['../_trinity_track6000___mem_info_8c.html#a59ff0a30009e0e8f5ff83e81320dc621',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5fedata_16',['_edata',['../_trinity_track6000___mem_info_8c.html#a1fc4a71c31f5b048d3b1b7b2d10684d1',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5fend_17',['_end',['../_trinity_track6000___mem_info_8c.html#a10ffe3e8daa368a6b01ef89985e057b5',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5fheap_5fstart_18',['_heap_start',['../_trinity_track6000___mem_info_8c.html#a79f79b82457083df3e8a583cef06bfa2',1,'TrinityTrack6000_MemInfo.c']]]
+];

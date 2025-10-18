@@ -1,0 +1,9 @@
+<map id="Utils/TrinityTrack6000_Errors.c" name="Utils/TrinityTrack6000_Errors.c">
+<area shape="rect" id="Node000001" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="79,5,228,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,70,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,51,69,89,66,85,122,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,96,214,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,49,156,80,151,80,151,49"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="237,96,408,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,46,284,87,281,91,196,51"/>
+</map>

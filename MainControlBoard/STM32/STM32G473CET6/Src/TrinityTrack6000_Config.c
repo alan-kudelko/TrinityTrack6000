@@ -1,0 +1,28 @@
+/**
+ * @file TrinityTrack6000_Config.c
+ * @brief Implementation of TrinityTrack6000_Config.h
+ * 
+ * @author Alan Kudełko
+ * @copyright
+ * Copyright (c) 2025 Alan Kudełko.  
+ * All rights reserved.  
+ * For educational and research purposes only.  
+ * Redistribution, modification, or commercial use prohibited without
+ * explicit written permission.
+ */
+
+#include <TrinityTrack6000_Config.h>
+
+ADC_HandleTypeDef hadc1;
+
+CORDIC_HandleTypeDef hcordic;
+
+I2C_HandleTypeDef hi2c2;
+
+SPI_HandleTypeDef hspi1;
+SPI_HandleTypeDef hspi2;
+
+TIM_HandleTypeDef htim8;
+
+UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;

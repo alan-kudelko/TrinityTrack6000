@@ -1,0 +1,7 @@
+<map id="Utils/TrinityTrack6000_Errors.h" name="Utils/TrinityTrack6000_Errors.h">
+<area shape="rect" id="Node000001" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="85,5,234,48"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8c.html" title="Implementation of TrinityTrack6000_Init.h Initialization of HAL, Clock, GPIO, UART and Memory Diagnos..." alt="" coords="5,96,146,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,61,97,98,93,94,128,58"/>
+<area shape="rect" id="Node000003" href="$_trinity_track6000___errors_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="170,96,320,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,58,227,94,223,98,188,61"/>
+</map>

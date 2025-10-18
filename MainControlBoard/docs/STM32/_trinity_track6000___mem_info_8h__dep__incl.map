@@ -1,0 +1,5 @@
+<map id="Utils/TrinityTrack6000_MemInfo.h" name="Utils/TrinityTrack6000_MemInfo.h">
+<area shape="rect" id="Node000001" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="5,5,155,48"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___mem_info_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="5,96,155,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,64,83,96,77,96,77,64"/>
+</map>
