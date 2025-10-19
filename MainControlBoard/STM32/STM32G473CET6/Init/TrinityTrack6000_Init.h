@@ -11,23 +11,27 @@
  */
 
 #ifndef TRINITY_TRACK6000_INIT_H_
-	#define TRINITY_TRACK6000_INIT_H_
+    #define TRINITY_TRACK6000_INIT_H_
 
 #include <TrinityTrack6000_Config.h>
+#include <TrinityTrack6000_Errors.h>
+
+#define INIT_LINE_BUFFER_SIZE 90
 
 /** @name Bootup sequence diagnostics strings
  *  @{
  */
-
-extern const char msg_initializeHAL_info[]; /**< Info1 */
-extern const char msg_initializeClock_info[]; /**< Info1 */
-extern const char msg_initializeGPIO_info[]; /**< Info1 */
-extern const char msg_initializeUART_info[]; /**< Info1 */
-extern const char msg_initializeRAMDia_info[]; /**< Info1 */
+extern const char msg_init_mcuInitialized_info[]; /**< Info1 */
+extern const char msg_init_GPIOInitialized_info[]; /**< Info2 */
+extern const char msg_init_memoryInitialized_info[]; /**< Info3 */
+extern const char msg_init_NRF_initialized_format_string[]; /**< Info4 */
+extern const char msg_init_MCP_initialized_format_string[]; /**< Info5 */
 /** @} */
+extern const char msg_init_status_ok[];
+extern const char msg_init_status_nok[];
 
 #ifdef __cplusplus
-	extern "C"{
+	  extern "C"{
 #endif // __cplusplus
 
 /**
@@ -125,7 +129,7 @@ void initializeMemory(void);
  * @param None
  * @retval None
  */
-void initializeSystem(void);
+void initializeSystem();
 
 #ifdef USE_FULL_ASSERT
 /**
@@ -144,7 +148,7 @@ void assert_failed(uint8_t *file, uint32_t line){
 #endif /* USE_FULL_ASSERT */
 
 #ifdef __cplusplus
-	}
+	  }
 #endif // __cplusplus
 	
 #endif // TRINITY_TRACK6000_INIT_H_

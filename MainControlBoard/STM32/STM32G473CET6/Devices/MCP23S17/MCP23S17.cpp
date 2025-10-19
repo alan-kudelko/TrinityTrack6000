@@ -19,9 +19,31 @@ MCP23S17::MCP23S17(SPI_HandleTypeDef*hspi,GPIO_TypeDef*cs_port,uint16_t cs_pin,G
     _rst_port=rst_port;
     _rst_pin=rst_pin;
 }
+
 MCP23S17::~MCP23S17(){
 
 }
+
 void MCP23S17::init(){
     // Initialization code and reset of the IC
+    HAL_GPIO_WritePin(_rst_port,_rst_pin,GPIO_PIN_SET);
+    HAL_Delay(1);
+    HAL_GPIO_WritePin(_rst_port,_rst_pin,GPIO_PIN_RESET);
+}
+// Fix this
+HAL_StatusTypeDef MCP23S17::write(uint8_t reg,uint8_t value){
+    uint8_t data[2]={reg,value};
+    HAL_StatusTypeDef status{};
+    HAL_GPIO_WritePin(_cs_port,_cs_pin,GPIO_PIN_RESET);
+    HAL_SPI_Transmit(_hspi,data,sizeof(data),1000);
+    HAL_GPIO_WritePin(_cs_port,_cs_pin,GPIO_PIN_SET);
+    return status;
+}
+
+HAL_StatusTypeDef MCP23S17::read(uint8_t reg,uint8_t*value){
+    HAL_StatusTypeDef status{};
+    HAL_GPIO_WritePin(_cs_port,_cs_pin,GPIO_PIN_RESET);
+    HAL_SPI_Receive(_hspi,value,1,1000);
+    HAL_GPIO_WritePin(_cs_port,_cs_pin,GPIO_PIN_SET);
+    return status;
 }

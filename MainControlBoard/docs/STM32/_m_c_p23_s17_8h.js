@@ -1,5 +1,6 @@
 var _m_c_p23_s17_8h =
 [
+    [ "MCP23S17", "class_m_c_p23_s17.html", "class_m_c_p23_s17" ],
     [ "MCP23S17_DEFVAL_DEF0", "_m_c_p23_s17_8h.html#a4c62e58c6cfcba1ecd07133223835627", null ],
     [ "MCP23S17_DEFVAL_DEF1", "_m_c_p23_s17_8h.html#a6067d79136de3acb817ed80f15a0edca", null ],
     [ "MCP23S17_DEFVAL_DEF2", "_m_c_p23_s17_8h.html#aecb44545bbba08292c663e7b9253458b", null ],

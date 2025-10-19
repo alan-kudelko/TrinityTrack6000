@@ -1,5 +1,9 @@
 <map id="Include/TrinityTrack6000_Config.h" name="Include/TrinityTrack6000_Config.h">
-<area shape="rect" id="Node000001" title="Configuration header for TrinityTrack6000 project." alt="" coords="5,5,170,48"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="27,96,148,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,49,90,80,85,80,85,49"/>
+<area shape="rect" id="Node000001" title="Configuration header for TrinityTrack6000 project." alt="" coords="67,5,232,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,126,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,51,92,87,88,83,126,47"/>
+<area shape="rect" id="Node000003" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="149,96,320,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,47,212,83,209,87,170,51"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,171,267,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,123,238,155,232,155,232,123"/>
 </map>

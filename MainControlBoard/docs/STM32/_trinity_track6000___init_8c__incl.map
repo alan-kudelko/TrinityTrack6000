@@ -1,17 +1,19 @@
 <map id="Init/TrinityTrack6000_Init.c" name="Init/TrinityTrack6000_Init.c">
-<area shape="rect" id="Node000001" title="Implementation of TrinityTrack6000_Init.h Initialization of HAL, Clock, GPIO, UART and Memory Diagnos..." alt="" coords="194,5,334,48"/>
+<area shape="rect" id="Node000001" title="Implementation of TrinityTrack6000_Init.h Initialization of HAL, Clock, GPIO, UART and Memory Diagnos..." alt="" coords="158,5,298,48"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,96,70,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,51,85,94,83,89,205,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,51,82,92,80,87,178,46"/>
 <area shape="rect" id="Node000003" href="$_trinity_track6000___init_8h.html" title="System initialization functions for TrinityTrack6000 project." alt="" coords="94,96,248,123"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,51,199,88,195,84,238,47"/>
-<area shape="rect" id="Node000006" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="272,96,443,123"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="290,47,333,84,330,88,286,51"/>
-<area shape="rect" id="Node000008" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="467,96,640,123"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="336,45,494,89,493,94,334,50"/>
-<area shape="rect" id="Node000004" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="84,171,258,197"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,123,174,155,168,155,168,123"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="111,245,231,272"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,198,174,230,168,230,168,198"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="325,171,390,197"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="360,123,360,155,355,155,355,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,50,191,85,186,82,211,47"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="172,245,343,272"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="243,47,254,70,263,95,268,132,269,168,264,230,259,230,264,168,263,132,258,97,249,72,238,50"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="323,96,496,123"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="276,46,368,87,366,92,274,51"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="24,171,198,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="162,125,133,161,129,157,158,122"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="181,121,212,169,246,230,241,233,207,172,177,124"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="28,245,148,272"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="109,199,99,231,94,230,104,197"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="138,195,219,236,217,240,135,200"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="225,320,290,347"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="260,273,260,304,255,304,255,273"/>
 </map>

@@ -15,7 +15,12 @@ var searchData=
   ['_5f_5fsbrk_5fheap_5fend_12',['__sbrk_heap_end',['../_trinity_track6000___mem_info_8c.html#a2cf862d604e9c7cfcf0528a0f539a6a5',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5f_5fsys_5fdiagnostics_5fend_5f_5f_13',['__SYS_DIAGNOSTICS_END__',['../_trinity_track6000___mem_info_8c.html#a112036e9eeadd8c14fab46d2949f24f6',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5f_5fsys_5fdiagnostics_5fstart_5f_5f_14',['__SYS_DIAGNOSTICS_START__',['../_trinity_track6000___mem_info_8c.html#a59ff0a30009e0e8f5ff83e81320dc621',1,'TrinityTrack6000_MemInfo.c']]],
-  ['_5fedata_15',['_edata',['../_trinity_track6000___mem_info_8c.html#a1fc4a71c31f5b048d3b1b7b2d10684d1',1,'TrinityTrack6000_MemInfo.c']]],
-  ['_5fend_16',['_end',['../_trinity_track6000___mem_info_8c.html#a10ffe3e8daa368a6b01ef89985e057b5',1,'TrinityTrack6000_MemInfo.c']]],
-  ['_5fheap_5fstart_17',['_heap_start',['../_trinity_track6000___mem_info_8c.html#a79f79b82457083df3e8a583cef06bfa2',1,'TrinityTrack6000_MemInfo.c']]]
+  ['_5fcs_5fpin_15',['_cs_pin',['../class_m_c_p23_s17.html#ab79f1cf7b5da1a726d962bb9db4ee875',1,'MCP23S17']]],
+  ['_5fcs_5fport_16',['_cs_port',['../class_m_c_p23_s17.html#add3107a504d81efd7262dfe8c5335fdd',1,'MCP23S17']]],
+  ['_5fedata_17',['_edata',['../_trinity_track6000___mem_info_8c.html#a1fc4a71c31f5b048d3b1b7b2d10684d1',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5fend_18',['_end',['../_trinity_track6000___mem_info_8c.html#a10ffe3e8daa368a6b01ef89985e057b5',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5fheap_5fstart_19',['_heap_start',['../_trinity_track6000___mem_info_8c.html#a79f79b82457083df3e8a583cef06bfa2',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5fhspi_20',['_hspi',['../class_m_c_p23_s17.html#a77e0ee7aed9e898e16bdf558a2c8deaf',1,'MCP23S17']]],
+  ['_5frst_5fpin_21',['_rst_pin',['../class_m_c_p23_s17.html#a16cf3fdfaeffabb87192511986d48c6a',1,'MCP23S17']]],
+  ['_5frst_5fport_22',['_rst_port',['../class_m_c_p23_s17.html#ac25c7df19963e11feb8f2682538ed260',1,'MCP23S17']]]
 ];

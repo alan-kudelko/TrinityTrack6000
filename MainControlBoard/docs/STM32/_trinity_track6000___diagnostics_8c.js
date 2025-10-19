@@ -1,7 +1,7 @@
 var _trinity_track6000___diagnostics_8c =
 [
-    [ "systemDiagnostics", "_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f", null ],
     [ "systemDiagnostics_ADXL", "_trinity_track6000___diagnostics_8c.html#a3887036d47f0561b14042f61c88438b0", null ],
+    [ "systemDiagnostics_devices", "_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823", null ],
     [ "systemDiagnostics_FPGA", "_trinity_track6000___diagnostics_8c.html#a105685449de4c7628dd777fa71659896", null ],
     [ "systemDiagnostics_FRAM", "_trinity_track6000___diagnostics_8c.html#ac9b91f450819a8d17e0a96ad6e3259b0", null ],
     [ "systemDiagnostics_Infineon", "_trinity_track6000___diagnostics_8c.html#a3d30f9327e19f8d8f8fee7d9c8a41559", null ],
@@ -9,9 +9,10 @@ var _trinity_track6000___diagnostics_8c =
     [ "systemDiagnostics_MCP", "_trinity_track6000___diagnostics_8c.html#ab4bf9cae1ce1e689f1755f93c9a52aa9", null ],
     [ "systemDiagnostics_NRF", "_trinity_track6000___diagnostics_8c.html#a3e99b168d34a29027d41469ab63fc686", null ],
     [ "systemDiagnostics_NXP", "_trinity_track6000___diagnostics_8c.html#a1292eb0f197f9af5d467708ab31f565e", null ],
-    [ "systemDiagnostics_PrintStatus", "_trinity_track6000___diagnostics_8c.html#a5ca4c11b3b6a22e8738b951d58a5c5f1", null ],
+    [ "systemDiagnostics_print_devices_Status", "_trinity_track6000___diagnostics_8c.html#a72c484ee59d91208f2f77a9437f86ddb", null ],
     [ "systemDiagnostics_RENESANS", "_trinity_track6000___diagnostics_8c.html#aeb2237b21ba2fdbc4f9d7d2b3ad36041", null ],
     [ "msg_Diagnostics_ADXL_status_formatString", "_trinity_track6000___diagnostics_8c.html#aeaea6327fc4e4df9340319ede357d0d7", null ],
+    [ "msg_Diagnostics_device_status", "_trinity_track6000___diagnostics_8c.html#ada5b1c7b1fc729f5ad10c1c8de3771c2", null ],
     [ "msg_Diagnostics_footer1", "_trinity_track6000___diagnostics_8c.html#aa5feaabb3216acce63d4a1bd8df891d7", null ],
     [ "msg_Diagnostics_footer2", "_trinity_track6000___diagnostics_8c.html#a35e688718f8b630a865d0a72c36ee0d4", null ],
     [ "msg_Diagnostics_FPGA_status_formatString", "_trinity_track6000___diagnostics_8c.html#ad265b2b271d3ac67866384ac22dab62e", null ],
@@ -24,6 +25,5 @@ var _trinity_track6000___diagnostics_8c =
     [ "msg_Diagnostics_MCP_status_formatString", "_trinity_track6000___diagnostics_8c.html#a82dfedbc0386e6ab723ce8bf284e4abc", null ],
     [ "msg_Diagnostics_NRF_status_formatString", "_trinity_track6000___diagnostics_8c.html#ab0f862491ac3184f4d7d4145f36900ac", null ],
     [ "msg_Diagnostics_NXP_status_formatString", "_trinity_track6000___diagnostics_8c.html#a3dc2700dda45fe252d8663d421b9e349", null ],
-    [ "msg_Diagnostics_RENESANS_status_formatString", "_trinity_track6000___diagnostics_8c.html#ae73584782c644f896f3bf258ceb34043", null ],
-    [ "msg_Diagnostics_status", "_trinity_track6000___diagnostics_8c.html#aec548ff29fe85b895d9ea3e7f52ef9d1", null ]
+    [ "msg_Diagnostics_RENESANS_status_formatString", "_trinity_track6000___diagnostics_8c.html#ae73584782c644f896f3bf258ceb34043", null ]
 ];

@@ -25,12 +25,10 @@
 #ifndef TRINITY_TRACK6000_DIAGNOSTICS_H_
     #define TRINITY_TRACK6000_DIAGNOSTICS_H_
 
+#include <TrinityTrack6000_Errors.h>
 
-#define DIAGNOSTICS_UART_TIMEOUT 1000
 #define DIAGNOSTICS_LINE_BUFFER_SIZE 90
 #define DIAGNOSTICS_BAR_BUFFER_SIZE 11
-
-#define DIAGNOSTICS_STATUS_COUNT 4
 
 extern const char msg_Diagnostics_header1[];
 extern const char msg_Diagnostics_header2[];
@@ -48,7 +46,7 @@ extern const char msg_Diagnostics_NXP_status_formatString[];
 extern const char msg_Diagnostics_RENESANS_status_formatString[];
 extern const char msg_Diagnostics_FPGA_status_formatString[];
 
-extern const char*msg_Diagnostics_status[DIAGNOSTICS_STATUS_COUNT];
+extern const char*msg_Diagnostics_status[ERROR_DEVICE_STATUS_COUNT];
 
 #ifdef __cplusplus
 extern "C"{
@@ -65,8 +63,7 @@ extern "C"{
  * @return void
  * @retval None
  */
-
-void systemDiagnostics(void);
+void systemDiagnostics_devices(void);
 
 
 /**
@@ -155,7 +152,7 @@ void systemDiagnostics_FPGA(void);
  * @retval None
  */
 
-void systemDiagnostics_PrintStatus(void);
+void systemDiagnostics_print_devices_Status(void);
 
 #ifdef __cplusplus
     }

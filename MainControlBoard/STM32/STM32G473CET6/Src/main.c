@@ -17,6 +17,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include <main.h>
 
+#include <TrinityTrack6000_Config.h>
 #include <TrinityTrack6000_Init.h>
 #include <TrinityTrack6000_Diagnostics.h>
 #include <TrinityTrack6000_Errors.h>
@@ -28,11 +29,9 @@
 int main(void){
     initializeSystem();
 
-    if(g_SystemErrors.hal_error){
-        // Nie wiem czy to powinno byc tutaj ale na razie wstawie szablon
-    }
+    // Handle non critical errors which in worst case result
+    // in system's few functionalities unavailiable
 
-    systemDiagnostics();
 
     while(1){
 

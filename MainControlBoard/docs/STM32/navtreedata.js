@@ -25,11 +25,13 @@
 var NAVTREE =
 [
   [ "TrinityTrack6000", "index.html", [
+    [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -48,7 +50,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_m_c_p23_s17_8cpp.html",
-"_trinity_track6000___mem_info_8c.html#a59ff0a30009e0e8f5ff83e81320dc621"
+"_trinity_track6000___mem_info_8c.html#a543c4df7f8c35ecbe95dba9cb92601c2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -26,3 +26,5 @@ TIM_HandleTypeDef htim8;
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
+
+SystemErrorStatus_t g_SystemErrors={0};

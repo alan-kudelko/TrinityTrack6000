@@ -101,7 +101,20 @@ $(function(){initNavTree('_trinity_track6000___diagnostics_8h.html','',''); });
 
 <p>Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnostics functions, including memory diagnostics and overall system health checks after initialization and before entering the main application loop in <a class="el" href="main_8c.html" title="Main program body.">main.c</a>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;<a class="el" href="_trinity_track6000___errors_8h_source.html">TrinityTrack6000_Errors.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for TrinityTrack6000_Diagnostics.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___diagnostics_8h__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___diagnostics_8h" loading="lazy" alt=""/></div>
+<map name="a_utils_2_trinity_track6000___diagnostics_8h" id="a_utils_2_trinity_track6000___diagnostics_8h">
+<area shape="rect" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="16,5,166,48"/>
+<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="5,96,177,123"/>
+<area shape="poly" title=" " alt="" coords="94,49,94,80,88,80,88,49"/>
+<area shape="rect" title=" " alt="" coords="59,171,123,197"/>
+<area shape="poly" title=" " alt="" coords="94,123,94,155,88,155,88,123"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h__dep__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___diagnostics_8hdep" loading="lazy" alt=""/></div>
@@ -118,21 +131,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a5fa9f70dad871ab26daa0c3b49ff0ff9" id="r_a5fa9f70dad871ab26daa0c3b49ff0ff9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa9f70dad871ab26daa0c3b49ff0ff9">DIAGNOSTICS_UART_TIMEOUT</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="memitem:a2940d3b517e87398821eaa34ec46d3d5" id="r_a2940d3b517e87398821eaa34ec46d3d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2940d3b517e87398821eaa34ec46d3d5">DIAGNOSTICS_LINE_BUFFER_SIZE</a>&#160;&#160;&#160;90</td></tr>
 <tr class="memitem:a8c5a5b1ea95abc1466fe08341e51e7ce" id="r_a8c5a5b1ea95abc1466fe08341e51e7ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c5a5b1ea95abc1466fe08341e51e7ce">DIAGNOSTICS_BAR_BUFFER_SIZE</a>&#160;&#160;&#160;11</td></tr>
-<tr class="memitem:a91f849d2ec8112f7862a9b98fb5654b8" id="r_a91f849d2ec8112f7862a9b98fb5654b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91f849d2ec8112f7862a9b98fb5654b8">DIAGNOSTICS_STATUS_COUNT</a>&#160;&#160;&#160;4</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa22d6ebb13c2a59c943304639e14037f" id="r_aa22d6ebb13c2a59c943304639e14037f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa22d6ebb13c2a59c943304639e14037f">systemDiagnostics</a> (void)</td></tr>
-<tr class="memdesc:aa22d6ebb13c2a59c943304639e14037f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and functionality of the system components after initialization.  <br /></td></tr>
+<tr class="memitem:a38e1fd0858ecefc951f9aa52aec30823" id="r_a38e1fd0858ecefc951f9aa52aec30823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e1fd0858ecefc951f9aa52aec30823">systemDiagnostics_devices</a> (void)</td></tr>
+<tr class="memdesc:a38e1fd0858ecefc951f9aa52aec30823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and functionality of the system components after initialization.  <br /></td></tr>
 <tr class="memitem:a3e99b168d34a29027d41469ab63fc686" id="r_a3e99b168d34a29027d41469ab63fc686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e99b168d34a29027d41469ab63fc686">systemDiagnostics_NRF</a> (void)</td></tr>
 <tr class="memdesc:a3e99b168d34a29027d41469ab63fc686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform NRF24L01+ specific diagnostics. This function checks the functionality of the NRF24L01+ module, including SPI communication and basic operation tests.  <br /></td></tr>
 <tr class="memitem:ac9b91f450819a8d17e0a96ad6e3259b0" id="r_ac9b91f450819a8d17e0a96ad6e3259b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9b91f450819a8d17e0a96ad6e3259b0">systemDiagnostics_FRAM</a> (void)</td></tr>
 <tr class="memdesc:ac9b91f450819a8d17e0a96ad6e3259b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform FM25L16B-GTR FRAM specific diagnostics. This function checks the functionality of the FRAM module, including SPI communication and basic read/write tests.  <br /></td></tr>
 <tr class="memitem:ab4bf9cae1ce1e689f1755f93c9a52aa9" id="r_ab4bf9cae1ce1e689f1755f93c9a52aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4bf9cae1ce1e689f1755f93c9a52aa9">systemDiagnostics_MCP</a> (void)</td></tr>
-<tr class="memdesc:ab4bf9cae1ce1e689f1755f93c9a52aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module, including SPI communication and basic operation tests.  <br /></td></tr>
+<tr class="memdesc:ab4bf9cae1ce1e689f1755f93c9a52aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform <a class="el" href="class_m_c_p23_s17.html">MCP23S17</a> specific diagnostics. This function checks the functionality of the <a class="el" href="class_m_c_p23_s17.html">MCP23S17</a> module, including SPI communication and basic operation tests.  <br /></td></tr>
 <tr class="memitem:a3887036d47f0561b14042f61c88438b0" id="r_a3887036d47f0561b14042f61c88438b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3887036d47f0561b14042f61c88438b0">systemDiagnostics_ADXL</a> (void)</td></tr>
 <tr class="memdesc:a3887036d47f0561b14042f61c88438b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform ADXL345 specific diagnostics. This function checks the functionality of the ADXL345 module, including SPI communication and basic operation tests.  <br /></td></tr>
 <tr class="memitem:a3703ce47b3ea33eee1e1014f5f844482" id="r_a3703ce47b3ea33eee1e1014f5f844482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3703ce47b3ea33eee1e1014f5f844482">systemDiagnostics_L76K</a> (void)</td></tr>
@@ -145,8 +156,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:aeb2237b21ba2fdbc4f9d7d2b3ad36041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS MCU.  <br /></td></tr>
 <tr class="memitem:a105685449de4c7628dd777fa71659896" id="r_a105685449de4c7628dd777fa71659896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105685449de4c7628dd777fa71659896">systemDiagnostics_FPGA</a> (void)</td></tr>
 <tr class="memdesc:a105685449de4c7628dd777fa71659896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform FPGA specific diagnostics. This function checks the SPI communication with the FPGA.  <br /></td></tr>
-<tr class="memitem:a5ca4c11b3b6a22e8738b951d58a5c5f1" id="r_a5ca4c11b3b6a22e8738b951d58a5c5f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ca4c11b3b6a22e8738b951d58a5c5f1">systemDiagnostics_PrintStatus</a> (void)</td></tr>
-<tr class="memdesc:a5ca4c11b3b6a22e8738b951d58a5c5f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints system's status on serial port.  <br /></td></tr>
+<tr class="memitem:a72c484ee59d91208f2f77a9437f86ddb" id="r_a72c484ee59d91208f2f77a9437f86ddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72c484ee59d91208f2f77a9437f86ddb">systemDiagnostics_print_devices_Status</a> (void)</td></tr>
+<tr class="memdesc:a72c484ee59d91208f2f77a9437f86ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints system's status on serial port.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -164,13 +175,13 @@ Variables</h2></td></tr>
 <tr class="memitem:a3dc2700dda45fe252d8663d421b9e349" id="r_a3dc2700dda45fe252d8663d421b9e349"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dc2700dda45fe252d8663d421b9e349">msg_Diagnostics_NXP_status_formatString</a> []</td></tr>
 <tr class="memitem:ae73584782c644f896f3bf258ceb34043" id="r_ae73584782c644f896f3bf258ceb34043"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae73584782c644f896f3bf258ceb34043">msg_Diagnostics_RENESANS_status_formatString</a> []</td></tr>
 <tr class="memitem:ad265b2b271d3ac67866384ac22dab62e" id="r_ad265b2b271d3ac67866384ac22dab62e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad265b2b271d3ac67866384ac22dab62e">msg_Diagnostics_FPGA_status_formatString</a> []</td></tr>
-<tr class="memitem:aec548ff29fe85b895d9ea3e7f52ef9d1" id="r_aec548ff29fe85b895d9ea3e7f52ef9d1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec548ff29fe85b895d9ea3e7f52ef9d1">msg_Diagnostics_status</a> [<a class="el" href="#a91f849d2ec8112f7862a9b98fb5654b8">DIAGNOSTICS_STATUS_COUNT</a>]</td></tr>
+<tr class="memitem:a5c0fe8532aa78a9a5b41fec65c2a93f4" id="r_a5c0fe8532aa78a9a5b41fec65c2a93f4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c0fe8532aa78a9a5b41fec65c2a93f4">msg_Diagnostics_status</a> [<a class="el" href="_trinity_track6000___errors_8h.html#a48f0a84690ce9913f70d2101ccea15ba">ERROR_DEVICE_STATUS_COUNT</a>]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnostics functions, including memory diagnostics and overall system health checks after initialization and before entering the main application loop in <a class="el" href="main_8c.html" title="Main program body.">main.c</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>All functions set global_error_code in case of failure, which can be used by <a class="el" href="_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence.">Error_Handler()</a> for debugging or startup without faulty functionalities.</dd>
 <dd>
-All functions can be called within <a class="el" href="#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu...">systemDiagnostics()</a> or separately if needed.</dd></dl>
+All functions can be called within systemDiagnostics() or separately if needed.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Alan Kudełko </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Alan Kudełko. <br  />
  All rights reserved. <br  />
@@ -205,98 +216,7 @@ All functions can be called within <a class="el" href="#aa22d6ebb13c2a59c9433046
 
 </div>
 </div>
-<a id="a91f849d2ec8112f7862a9b98fb5654b8" name="a91f849d2ec8112f7862a9b98fb5654b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91f849d2ec8112f7862a9b98fb5654b8">&#9670;&#160;</a></span>DIAGNOSTICS_STATUS_COUNT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DIAGNOSTICS_STATUS_COUNT&#160;&#160;&#160;4</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5fa9f70dad871ab26daa0c3b49ff0ff9" name="a5fa9f70dad871ab26daa0c3b49ff0ff9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa9f70dad871ab26daa0c3b49ff0ff9">&#9670;&#160;</a></span>DIAGNOSTICS_UART_TIMEOUT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DIAGNOSTICS_UART_TIMEOUT&#160;&#160;&#160;1000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="aa22d6ebb13c2a59c943304639e14037f" name="aa22d6ebb13c2a59c943304639e14037f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa22d6ebb13c2a59c943304639e14037f">&#9670;&#160;</a></span>systemDiagnostics()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void systemDiagnostics </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and functionality of the system components after initialization. </p>
-<dl class="section note"><dt>Note</dt><dd>This function should be called after <a class="el" href="_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b" title="System Initialization Function.">initializeSystem()</a> in <a class="el" href="main_8c.html" title="Main program body.">main.c</a> and before entering the main application loop. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">None</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_cgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_cgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_cgraph" id="a_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_cgraph">
-<area shape="rect" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,208,139,235"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3887036d47f0561b14042f61c88438b0" title="Perform ADXL345 specific diagnostics. This function checks the functionality of the ADXL345 module,..." alt="" coords="207,5,382,32"/>
-<area shape="poly" title=" " alt="" coords="75,207,89,173,112,128,144,81,163,60,185,42,193,37,196,41,188,46,167,64,148,85,116,131,94,175,80,209"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a105685449de4c7628dd777fa71659896" title="Perform FPGA specific diagnostics. This function checks the SPI communication with the FPGA." alt="" coords="206,56,382,83"/>
-<area shape="poly" title=" " alt="" coords="80,206,120,150,150,119,185,92,196,87,199,91,188,97,154,123,124,154,84,209"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#ac9b91f450819a8d17e0a96ad6e3259b0" title="Perform FM25L16B&#45;GTR FRAM specific diagnostics. This function checks the functionality of the FRAM mo..." alt="" coords="205,107,384,133"/>
-<area shape="poly" title=" " alt="" coords="88,205,131,174,186,143,204,136,206,141,188,148,134,178,91,210"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3d30f9327e19f8d8f8fee7d9c8a41559" title="Perform Infineon XMC4200 specific diagnostics. This function checks the SPI communication with the In..." alt="" coords="201,157,388,184"/>
-<area shape="poly" title=" " alt="" coords="133,205,217,185,218,191,135,210"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3703ce47b3ea33eee1e1014f5f844482" title="Perform L76K GPS module specific diagnostics. This function checks the functionality of the L76K GPS ..." alt="" coords="209,208,380,235"/>
-<area shape="poly" title=" " alt="" coords="139,219,193,219,193,224,139,224"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#ab4bf9cae1ce1e689f1755f93c9a52aa9" title="Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module,..." alt="" coords="209,259,380,285"/>
-<area shape="poly" title=" " alt="" coords="135,233,218,252,217,257,133,238"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3e99b168d34a29027d41469ab63fc686" title="Perform NRF24L01+ specific diagnostics. This function checks the functionality of the NRF24L01+ modul..." alt="" coords="210,309,378,336"/>
-<area shape="poly" title=" " alt="" coords="91,233,134,264,188,295,206,302,204,307,186,300,131,269,88,237"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a1292eb0f197f9af5d467708ab31f565e" title="Perform NXP TBD specific diagnostics. This function checks the SPI communication with the NXP MCU." alt="" coords="210,360,378,387"/>
-<area shape="poly" title=" " alt="" coords="84,234,124,289,154,320,188,346,199,351,196,356,185,350,150,324,120,292,80,237"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aeb2237b21ba2fdbc4f9d7d2b3ad36041" title="Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS..." alt="" coords="187,411,402,437"/>
-<area shape="poly" title=" " alt="" coords="80,234,94,268,116,312,148,358,167,379,188,397,196,401,193,406,185,401,163,383,144,361,112,315,89,270,75,236"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_icgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_icgraph" id="a_trinity_track6000___diagnostics_8h_aa22d6ebb13c2a59c943304639e14037f_icgraph">
-<area shape="rect" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a3887036d47f0561b14042f61c88438b0" name="a3887036d47f0561b14042f61c88438b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3887036d47f0561b14042f61c88438b0">&#9670;&#160;</a></span>systemDiagnostics_ADXL()</h2>
 
@@ -325,11 +245,62 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_a3887036d47f0561b14042f61c88438b0_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a3887036d47f0561b14042f61c88438b0_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_a3887036d47f0561b14042f61c88438b0_icgraph" id="a_trinity_track6000___diagnostics_8h_a3887036d47f0561b14042f61c88438b0_icgraph">
-<area shape="rect" title="Perform ADXL345 specific diagnostics. This function checks the functionality of the ADXL345 module,..." alt="" coords="284,5,459,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="268,21,236,21,236,16,268,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform ADXL345 specific diagnostics. This function checks the functionality of the ADXL345 module,..." alt="" coords="239,5,414,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38e1fd0858ecefc951f9aa52aec30823" name="a38e1fd0858ecefc951f9aa52aec30823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e1fd0858ecefc951f9aa52aec30823">&#9670;&#160;</a></span>systemDiagnostics_devices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void systemDiagnostics_devices </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and functionality of the system components after initialization. </p>
+<dl class="section note"><dt>Note</dt><dd>This function should be called after <a class="el" href="_trinity_track6000___init_8c.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function.">initializeSystem()</a> in <a class="el" href="main_8c.html" title="Main program body.">main.c</a> and before entering the main application loop. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___diagnostics_8h_a38e1fd0858ecefc951f9aa52aec30823_cgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a38e1fd0858ecefc951f9aa52aec30823_cgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___diagnostics_8h_a38e1fd0858ecefc951f9aa52aec30823_cgraph" id="a_trinity_track6000___diagnostics_8h_a38e1fd0858ecefc951f9aa52aec30823_cgraph">
+<area shape="rect" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,208,191,235"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3887036d47f0561b14042f61c88438b0" title="Perform ADXL345 specific diagnostics. This function checks the functionality of the ADXL345 module,..." alt="" coords="259,5,434,32"/>
+<area shape="poly" title=" " alt="" coords="104,206,122,173,151,128,190,81,237,42,247,36,249,41,240,46,194,85,156,131,127,175,108,209"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a105685449de4c7628dd777fa71659896" title="Perform FPGA specific diagnostics. This function checks the SPI communication with the FPGA." alt="" coords="258,56,434,83"/>
+<area shape="poly" title=" " alt="" coords="108,206,160,150,197,119,237,92,251,86,253,91,240,97,200,123,164,154,112,209"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#ac9b91f450819a8d17e0a96ad6e3259b0" title="Perform FM25L16B&#45;GTR FRAM specific diagnostics. This function checks the functionality of the FRAM mo..." alt="" coords="257,107,436,133"/>
+<area shape="poly" title=" " alt="" coords="119,205,172,174,238,143,260,135,261,140,240,148,174,179,122,210"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3d30f9327e19f8d8f8fee7d9c8a41559" title="Perform Infineon XMC4200 specific diagnostics. This function checks the SPI communication with the In..." alt="" coords="253,157,440,184"/>
+<area shape="poly" title=" " alt="" coords="167,205,262,185,263,190,168,210"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3703ce47b3ea33eee1e1014f5f844482" title="Perform L76K GPS module specific diagnostics. This function checks the functionality of the L76K GPS ..." alt="" coords="261,208,432,235"/>
+<area shape="poly" title=" " alt="" coords="191,219,246,219,246,224,191,224"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#ab4bf9cae1ce1e689f1755f93c9a52aa9" title="Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module,..." alt="" coords="261,259,432,285"/>
+<area shape="poly" title=" " alt="" coords="168,233,263,252,262,258,167,238"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a3e99b168d34a29027d41469ab63fc686" title="Perform NRF24L01+ specific diagnostics. This function checks the functionality of the NRF24L01+ modul..." alt="" coords="262,309,430,336"/>
+<area shape="poly" title=" " alt="" coords="122,233,174,264,240,295,261,302,260,307,238,300,172,269,119,238"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a1292eb0f197f9af5d467708ab31f565e" title="Perform NXP TBD specific diagnostics. This function checks the SPI communication with the NXP MCU." alt="" coords="262,360,430,387"/>
+<area shape="poly" title=" " alt="" coords="112,233,164,288,200,320,240,346,253,352,251,357,237,350,197,324,160,292,108,237"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aeb2237b21ba2fdbc4f9d7d2b3ad36041" title="Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS..." alt="" coords="239,411,454,437"/>
+<area shape="poly" title=" " alt="" coords="108,234,127,267,156,312,194,358,240,396,249,402,247,406,237,401,190,362,151,315,122,270,104,236"/>
 </map>
 </div>
 
@@ -363,11 +334,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_a105685449de4c7628dd777fa71659896_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a105685449de4c7628dd777fa71659896_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_a105685449de4c7628dd777fa71659896_icgraph" id="a_trinity_track6000___diagnostics_8h_a105685449de4c7628dd777fa71659896_icgraph">
-<area shape="rect" title="Perform FPGA specific diagnostics. This function checks the SPI communication with the FPGA." alt="" coords="284,5,460,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="268,21,237,21,237,16,268,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform FPGA specific diagnostics. This function checks the SPI communication with the FPGA." alt="" coords="239,5,415,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -401,11 +370,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_ac9b91f450819a8d17e0a96ad6e3259b0_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_ac9b91f450819a8d17e0a96ad6e3259b0_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_ac9b91f450819a8d17e0a96ad6e3259b0_icgraph" id="a_trinity_track6000___diagnostics_8h_ac9b91f450819a8d17e0a96ad6e3259b0_icgraph">
-<area shape="rect" title="Perform FM25L16B&#45;GTR FRAM specific diagnostics. This function checks the functionality of the FRAM mo..." alt="" coords="284,5,462,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="268,21,236,21,236,16,268,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform FM25L16B&#45;GTR FRAM specific diagnostics. This function checks the functionality of the FRAM mo..." alt="" coords="239,5,417,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -439,11 +406,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_a3d30f9327e19f8d8f8fee7d9c8a41559_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a3d30f9327e19f8d8f8fee7d9c8a41559_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_a3d30f9327e19f8d8f8fee7d9c8a41559_icgraph" id="a_trinity_track6000___diagnostics_8h_a3d30f9327e19f8d8f8fee7d9c8a41559_icgraph">
-<area shape="rect" title="Perform Infineon XMC4200 specific diagnostics. This function checks the SPI communication with the In..." alt="" coords="284,5,470,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="268,21,236,21,236,16,268,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform Infineon XMC4200 specific diagnostics. This function checks the SPI communication with the In..." alt="" coords="239,5,425,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -477,11 +442,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_a3703ce47b3ea33eee1e1014f5f844482_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a3703ce47b3ea33eee1e1014f5f844482_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_a3703ce47b3ea33eee1e1014f5f844482_icgraph" id="a_trinity_track6000___diagnostics_8h_a3703ce47b3ea33eee1e1014f5f844482_icgraph">
-<area shape="rect" title="Perform L76K GPS module specific diagnostics. This function checks the functionality of the L76K GPS ..." alt="" coords="284,5,454,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="269,21,236,21,236,16,269,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform L76K GPS module specific diagnostics. This function checks the functionality of the L76K GPS ..." alt="" coords="239,5,409,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -502,7 +465,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module, including SPI communication and basic operation tests. </p>
+<p>Perform <a class="el" href="class_m_c_p23_s17.html">MCP23S17</a> specific diagnostics. This function checks the functionality of the <a class="el" href="class_m_c_p23_s17.html">MCP23S17</a> module, including SPI communication and basic operation tests. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -515,11 +478,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_ab4bf9cae1ce1e689f1755f93c9a52aa9_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_ab4bf9cae1ce1e689f1755f93c9a52aa9_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_ab4bf9cae1ce1e689f1755f93c9a52aa9_icgraph" id="a_trinity_track6000___diagnostics_8h_ab4bf9cae1ce1e689f1755f93c9a52aa9_icgraph">
-<area shape="rect" title="Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module,..." alt="" coords="284,5,454,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="269,21,236,21,236,16,269,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform MCP23S17 specific diagnostics. This function checks the functionality of the MCP23S17 module,..." alt="" coords="239,5,409,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -553,11 +514,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_a3e99b168d34a29027d41469ab63fc686_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a3e99b168d34a29027d41469ab63fc686_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_a3e99b168d34a29027d41469ab63fc686_icgraph" id="a_trinity_track6000___diagnostics_8h_a3e99b168d34a29027d41469ab63fc686_icgraph">
-<area shape="rect" title="Perform NRF24L01+ specific diagnostics. This function checks the functionality of the NRF24L01+ modul..." alt="" coords="284,5,452,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="269,21,236,21,236,16,269,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform NRF24L01+ specific diagnostics. This function checks the functionality of the NRF24L01+ modul..." alt="" coords="239,5,407,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -591,24 +550,22 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_a1292eb0f197f9af5d467708ab31f565e_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_a1292eb0f197f9af5d467708ab31f565e_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_a1292eb0f197f9af5d467708ab31f565e_icgraph" id="a_trinity_track6000___diagnostics_8h_a1292eb0f197f9af5d467708ab31f565e_icgraph">
-<area shape="rect" title="Perform NXP TBD specific diagnostics. This function checks the SPI communication with the NXP MCU." alt="" coords="284,5,452,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="269,21,236,21,236,16,269,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform NXP TBD specific diagnostics. This function checks the SPI communication with the NXP MCU." alt="" coords="239,5,407,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5ca4c11b3b6a22e8738b951d58a5c5f1" name="a5ca4c11b3b6a22e8738b951d58a5c5f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ca4c11b3b6a22e8738b951d58a5c5f1">&#9670;&#160;</a></span>systemDiagnostics_PrintStatus()</h2>
+<a id="a72c484ee59d91208f2f77a9437f86ddb" name="a72c484ee59d91208f2f77a9437f86ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c484ee59d91208f2f77a9437f86ddb">&#9670;&#160;</a></span>systemDiagnostics_print_devices_Status()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void systemDiagnostics_PrintStatus </td>
+          <td class="memname">void systemDiagnostics_print_devices_Status </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -655,11 +612,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h_aeb2237b21ba2fdbc4f9d7d2b3ad36041_icgraph.png" border="0" usemap="#a_trinity_track6000___diagnostics_8h_aeb2237b21ba2fdbc4f9d7d2b3ad36041_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___diagnostics_8h_aeb2237b21ba2fdbc4f9d7d2b3ad36041_icgraph" id="a_trinity_track6000___diagnostics_8h_aeb2237b21ba2fdbc4f9d7d2b3ad36041_icgraph">
-<area shape="rect" title="Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS..." alt="" coords="284,5,499,32"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#aa22d6ebb13c2a59c943304639e14037f" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="103,5,236,32"/>
-<area shape="poly" title=" " alt="" coords="269,21,236,21,236,16,269,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS..." alt="" coords="239,5,454,32"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
 </map>
 </div>
 
@@ -974,8 +929,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aec548ff29fe85b895d9ea3e7f52ef9d1" name="aec548ff29fe85b895d9ea3e7f52ef9d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec548ff29fe85b895d9ea3e7f52ef9d1">&#9670;&#160;</a></span>msg_Diagnostics_status</h2>
+<a id="a5c0fe8532aa78a9a5b41fec65c2a93f4" name="a5c0fe8532aa78a9a5b41fec65c2a93f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0fe8532aa78a9a5b41fec65c2a93f4">&#9670;&#160;</a></span>msg_Diagnostics_status</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -984,7 +939,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* msg_Diagnostics_status[<a class="el" href="#a91f849d2ec8112f7862a9b98fb5654b8">DIAGNOSTICS_STATUS_COUNT</a>]</td>
+          <td class="memname">const char* msg_Diagnostics_status[<a class="el" href="_trinity_track6000___errors_8h.html#a48f0a84690ce9913f70d2101ccea15ba">ERROR_DEVICE_STATUS_COUNT</a>]</td>
         </tr>
       </table>
   </td>

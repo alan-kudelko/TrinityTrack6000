@@ -22,28 +22,21 @@
  * @name Error Codes
  * @{
  */
-// Needs revision
-#define ERROR_HAL_PWREx_ControlVoltageScaling 0x100 /**<  */
-#define ERROR_HAL_RCC_OscConfig               0x101 /**<  */
-#define ERROR_HAL_RCC_ClockConfig             0x102 /**<  */
-#define ERROR_HAL_UART_Init                   0x103 /**<  */
-#define ERROR_HAL_CORDIC_Init                 0x104
-
-#define ERROR_MEMINFO_RAM1_USAGE_OVERFLOW       0x200 /**<  */
-#define ERROR_MEMINFO_RAM2_USAGE_OVERFLOW       0x201 
-#define ERROR_MEMINFO_CCSRAM_USAGE_OVERFLOW     0x202
+#define ERROR_MEMINFO_RAM1_USAGE_OVERFLOW       0x01 /**<  */
+#define ERROR_MEMINFO_RAM2_USAGE_OVERFLOW       0x02 
+#define ERROR_MEMINFO_CCSRAM_USAGE_OVERFLOW     0x03
 
 /** @} */
 
+#define ERROR_DEVICE_STATUS_COUNT 4
 
-#define ERROR_COMMUNICATION_TIMEOUT_FLAG 0x01
-
-/**
- * 
- */
+#define ERROR_DEVICE_STATUS_OK      0x00
+#define ERROR_DEVICE_STATUS_OFFLINE 0x01
+#define ERROR_DEVICE_STATUS_TIMEOUT 0x02
+#define ERROR_DEVICE_STATUS_UNKNOWN 0x03
 
 typedef struct{
-    uint16_t hal_error;
+    uint16_t system_error;
     uint8_t nrf_error;
     uint8_t fram_error;
     uint8_t mcp_error;
@@ -54,12 +47,6 @@ typedef struct{
     uint8_t renesans_error;
     uint8_t fpga_error;
 }SystemErrorStatus_t;
-
-/**
- * @brief Global error code variable.
- * This variable holds the current error code for the system.
- */
-extern SystemErrorStatus_t g_SystemErrors __attribute((section(".sysDiag")));
 
 /**
   * @brief  This function is executed in case of error occurrence.

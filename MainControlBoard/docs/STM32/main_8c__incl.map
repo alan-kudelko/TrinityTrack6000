@@ -1,18 +1,22 @@
 <map id="Src/main.c" name="Src/main.c">
-<area shape="rect" id="Node000001" title="Main program body." alt="" coords="229,5,314,32"/>
-<area shape="rect" id="Node000002" href="$main_8h.html" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="5,155,66,181"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,27,195,33,156,43,117,59,83,82,60,110,46,141,41,139,56,107,79,78,115,55,154,38,193,28,228,21"/>
-<area shape="rect" id="Node000004" href="$_trinity_track6000___init_8h.html" title="System initialization functions for TrinityTrack6000 project." alt="" coords="93,80,247,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="255,35,202,73,199,68,252,30"/>
-<area shape="rect" id="Node000006" href="$_trinity_track6000___diagnostics_8h.html" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="272,80,477,107"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="291,30,345,68,342,73,288,35"/>
-<area shape="rect" id="Node000007" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="500,80,672,107"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="315,27,517,73,516,79,313,32"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="46,229,166,256"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="50,180,85,216,82,220,46,184"/>
-<area shape="rect" id="Node000005" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="90,155,264,181"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,107,177,139,172,139,169,107"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="166,184,131,220,127,216,163,180"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="554,155,618,181"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="589,107,589,139,584,139,584,107"/>
+<area shape="rect" id="Node000001" title="Main program body." alt="" coords="208,5,292,32"/>
+<area shape="rect" id="Node000002" href="$main_8h.html" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="5,80,66,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,35,81,79,79,74,212,30"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="42,155,216,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,35,192,54,163,82,147,110,137,140,132,139,142,108,159,78,189,50,222,30"/>
+<area shape="rect" id="Node000005" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="208,229,380,256"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="294,26,346,40,407,65,437,82,465,102,489,126,510,153,517,172,515,188,505,202,490,213,447,228,396,237,395,232,445,223,487,208,501,198,510,186,511,172,505,156,485,129,461,106,434,86,404,70,345,45,292,31"/>
+<area shape="rect" id="Node000007" href="$_trinity_track6000___init_8h.html" title="System initialization functions for TrinityTrack6000 project." alt="" coords="173,80,327,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="253,33,253,64,248,64,248,33"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___diagnostics_8h.html" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="290,155,496,181"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="276,30,309,51,341,78,365,109,383,139,378,142,361,112,338,82,306,55,273,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,229,146,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="34,107,28,141,28,161,33,180,44,200,59,217,56,221,40,203,28,182,23,162,23,141,29,106"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="124,183,103,217,99,215,119,181"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="159,179,252,220,250,225,157,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="262,304,326,331"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="297,257,297,288,292,288,292,257"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="230,110,165,149,162,144,228,105"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="256,106,289,213,283,215,251,108"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="377,184,325,222,322,218,374,180"/>
 </map>

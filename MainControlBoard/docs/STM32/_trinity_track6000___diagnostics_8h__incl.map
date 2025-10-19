@@ -1,0 +1,7 @@
+<map id="Utils/TrinityTrack6000_Diagnostics.h" name="Utils/TrinityTrack6000_Diagnostics.h">
+<area shape="rect" id="Node000001" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="16,5,166,48"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="5,96,177,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,49,94,80,88,80,88,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="59,171,123,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,123,94,155,88,155,88,123"/>
+</map>

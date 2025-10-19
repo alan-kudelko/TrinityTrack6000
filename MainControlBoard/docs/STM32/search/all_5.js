@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['g_5fsystemerrors_0',['g_SystemErrors',['../_trinity_track6000___errors_8c.html#a028fe4c4e145fdf2ad4223fd7273e654',1,'TrinityTrack6000_Errors.c']]],
-  ['gpio_5f_5f_5farm_5fbb_5fgun_5fgpio_5fport_1',['GPIO___ARM_BB_Gun_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ae78016f0439ddff5efd3849608ab9529',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5farm_5fbb_5fgun_5fpin_2',['GPIO___ARM_BB_Gun_Pin',['../_trinity_track6000___pinout_8h.html#a7e006edb82c08093866b536eff6adf45',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fbuzzer_5fgpio_5fport_3',['GPIO___BUZZER_GPIO_Port',['../_trinity_track6000___pinout_8h.html#abc041df339f68621034d21196c269e4f',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fbuzzer_5fpin_4',['GPIO___BUZZER_Pin',['../_trinity_track6000___pinout_8h.html#a5cf31b42c2bf5122fe3715a171b8d4af',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5ffire_5fbb_5fgun_5fgpio_5fport_5',['GPIO___Fire_BB_Gun_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a4bbe4d117f7b301e29f8fd4caf4cf6e6',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5ffire_5fbb_5fgun_5fpin_6',['GPIO___Fire_BB_Gun_Pin',['../_trinity_track6000___pinout_8h.html#aa9825bf88d935d5c7363955bfca8fa36',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fmq_5fheaters_5fgpio_5fport_7',['GPIO___MQ_HEATERS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ac3f98923170f866069502405d7d21615',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fmq_5fheaters_5fpin_8',['GPIO___MQ_HEATERS_Pin',['../_trinity_track6000___pinout_8h.html#a4c8e76d73d4a6a8721f17a8894ecfab0',1,'TrinityTrack6000_Pinout.h']]]
+  ['f_5fcpu_0',['F_CPU',['../_trinity_track6000___config_8h.html#a43bafb28b29491ec7f871319b5a3b2f8',1,'TrinityTrack6000_Config.h']]],
+  ['fpga_5fcs_5fgpio_5fport_1',['FPGA_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a423bb1d6c5023cdf8e71274bb3f56dc4',1,'TrinityTrack6000_Pinout.h']]],
+  ['fpga_5fcs_5fpin_2',['FPGA_CS_Pin',['../_trinity_track6000___pinout_8h.html#a6ec13573e727dee621002af383144518',1,'TrinityTrack6000_Pinout.h']]],
+  ['fpga_5ferror_3',['fpga_error',['../struct_system_error_status__t.html#adffd2dfe57cd7747122c57d52b9bac41',1,'SystemErrorStatus_t']]],
+  ['fpga_5frst_5fgpio_5fport_4',['FPGA_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1cc82a035b2945c430f814d3e7a80a7c',1,'TrinityTrack6000_Pinout.h']]],
+  ['fpga_5frst_5fpin_5',['FPGA_RST_Pin',['../_trinity_track6000___pinout_8h.html#a4ba5ff1fd3512a0213703efcef2c8f0e',1,'TrinityTrack6000_Pinout.h']]],
+  ['fram_5fcs_5fgpio_5fport_6',['FRAM_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a6638d7258dd0b24f000e1c1fcf859397',1,'TrinityTrack6000_Pinout.h']]],
+  ['fram_5fcs_5fpin_7',['FRAM_CS_Pin',['../_trinity_track6000___pinout_8h.html#a81521b4b6598c949aee7c02b94f798dd',1,'TrinityTrack6000_Pinout.h']]],
+  ['fram_5ferror_8',['fram_error',['../struct_system_error_status__t.html#a97cc7dc84ba127de74d9571bff505177',1,'SystemErrorStatus_t']]]
 ];

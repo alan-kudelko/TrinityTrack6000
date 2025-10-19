@@ -1,11 +1,27 @@
 <map id="Utils/TrinityTrack6000_Errors.h" name="Utils/TrinityTrack6000_Errors.h">
-<area shape="rect" id="Node000001" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="208,5,357,48"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8c.html" title="Implementation of TrinityTrack6000_Init.h Initialization of HAL, Clock, GPIO, UART and Memory Diagnos..." alt="" coords="5,96,146,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,57,125,98,123,93,219,52"/>
-<area shape="rect" id="Node000003" href="$main_8c.html" title="Main program body." alt="" coords="169,104,254,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,62,224,105,219,102,254,58"/>
-<area shape="rect" id="Node000004" href="$_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="278,96,428,139"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="310,59,339,94,334,97,306,62"/>
-<area shape="rect" id="Node000005" href="$_trinity_track6000___errors_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="452,96,601,139"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="354,51,470,93,468,98,353,56"/>
+<area shape="rect" id="Node000001" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="521,5,670,48"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="404,96,568,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="560,60,513,97,510,93,557,56"/>
+<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8h.html" title="System initialization functions for TrinityTrack6000 project." alt="" coords="59,187,199,229"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="516,56,392,98,275,146,175,189,173,184,273,141,391,94,514,51"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___init_8c.html" title="Implementation of TrinityTrack6000_Init.h Initialization of HAL, Clock, GPIO, UART and Memory Diagnos..." alt="" coords="5,277,146,320"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="506,43,382,64,243,96,178,115,121,137,77,162,48,188,41,209,43,233,52,256,63,276,58,278,47,258,38,234,36,209,44,185,74,157,119,132,176,110,241,90,381,59,505,38"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title="Main program body." alt="" coords="645,285,730,312"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="686,41,734,62,757,76,776,94,801,127,813,159,813,193,798,231,784,250,765,265,726,287,723,282,762,261,780,246,793,228,807,192,808,160,796,130,772,98,754,80,732,66,684,46"/>
+<area shape="rect" id="Node000009" href="$_trinity_track6000___diagnostics_8h.html" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="613,96,762,139"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="629,57,668,94,664,98,626,61"/>
+<area shape="rect" id="Node000010" href="$_trinity_track6000___errors_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="888,96,1037,139"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="686,47,888,95,887,101,685,52"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,145,200,192,199,187,388,140"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="518,148,603,227,672,283,669,287,599,231,515,152"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___config_8c.html" title="Implementation of TrinityTrack6000_Config.h." alt="" coords="396,187,539,229"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="481,154,474,187,469,186,476,153"/>
+<area shape="rect" id="Node000007" href="$_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="613,187,762,229"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="548,143,641,184,639,188,546,148"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___mem_info_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="224,187,373,229"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="430,148,343,189,341,184,427,143"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,244,90,278,86,276,106,241"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="215,227,463,267,646,290,645,295,462,272,214,232"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="742,146,761,164,777,186,783,208,777,230,765,249,749,264,716,287,713,283,746,260,760,245,772,228,778,208,772,188,757,167,738,150"/>
+<area shape="poly" id="edge14_Node000009_Node000007" title=" " alt="" coords="690,154,690,186,685,186,685,154"/>
 </map>

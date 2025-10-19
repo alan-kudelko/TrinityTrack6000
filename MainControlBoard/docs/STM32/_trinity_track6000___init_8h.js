@@ -1,8 +1,9 @@
 var _trinity_track6000___init_8h =
 [
+    [ "INIT_LINE_BUFFER_SIZE", "_trinity_track6000___init_8h.html#a5df001d02f4666a60867341a7b4bbb77", null ],
     [ "HAL_TIM_MspPostInit", "_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b", null ],
     [ "initializeMemory", "_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8", null ],
-    [ "initializeSystem", "_trinity_track6000___init_8h.html#a19ebe9f470610e6867c7f4724aa5da9b", null ],
+    [ "initializeSystem", "_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3", null ],
     [ "MQ_GPIO_Init", "_trinity_track6000___init_8h.html#a06522493c5458ecce58b627a985d653d", null ],
     [ "MX_ADC1_Init", "_trinity_track6000___init_8h.html#acccd58aa70215a6b184ad242312ffd0c", null ],
     [ "MX_CORDIC_Init", "_trinity_track6000___init_8h.html#abaa7174b8ca9458dc28ada25ee797b78", null ],
@@ -14,9 +15,11 @@ var _trinity_track6000___init_8h =
     [ "MX_USART1_UART_Init", "_trinity_track6000___init_8h.html#a57d1167735baafab8e3288526c424929", null ],
     [ "MX_USART2_UART_Init", "_trinity_track6000___init_8h.html#a052088fe5bb3f807a4b2502e664fd4fd", null ],
     [ "SystemClock_Config", "_trinity_track6000___init_8h.html#a70af21c671abfcc773614a9a4f63d920", null ],
-    [ "msg_initializeClock_info", "_trinity_track6000___init_8h.html#a24ae4d0d268cd40965f8caa97a7a70da", null ],
-    [ "msg_initializeGPIO_info", "_trinity_track6000___init_8h.html#a31741fda4ac72ffceae097b375b10553", null ],
-    [ "msg_initializeHAL_info", "_trinity_track6000___init_8h.html#aa7703fc1eab3f8de776e7af1786cd9c3", null ],
-    [ "msg_initializeRAMDia_info", "_trinity_track6000___init_8h.html#a10d7f5865bc756957ef12a1c8ea51fb5", null ],
-    [ "msg_initializeUART_info", "_trinity_track6000___init_8h.html#a6caad32ce4047916c6f74797ea2067ef", null ]
+    [ "msg_init_GPIOInitialized_info", "_trinity_track6000___init_8h.html#a369c77c334891f5b2be65934c0e71832", null ],
+    [ "msg_init_MCP_initialized_format_string", "_trinity_track6000___init_8h.html#a5937febae9974b15178b1cd9ee563ae7", null ],
+    [ "msg_init_mcuInitialized_info", "_trinity_track6000___init_8h.html#a4f950368b34aa934622037e8d0257765", null ],
+    [ "msg_init_memoryInitialized_info", "_trinity_track6000___init_8h.html#aabd130baae9e73db3c2321cbb77e902c", null ],
+    [ "msg_init_NRF_initialized_format_string", "_trinity_track6000___init_8h.html#a04f2a160088cddd4e062788fbd2459be", null ],
+    [ "msg_init_status_nok", "_trinity_track6000___init_8h.html#a2a9ba5b0559431b40151cb3a674ca7c3", null ],
+    [ "msg_init_status_ok", "_trinity_track6000___init_8h.html#a658d4a2c3a2311402b67fa6f78dd7a5e", null ]
 ];

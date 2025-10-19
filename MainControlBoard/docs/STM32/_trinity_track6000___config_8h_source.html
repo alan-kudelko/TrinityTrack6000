@@ -105,29 +105,55 @@ $(function(){initNavTree('_trinity_track6000___config_8h_source.html','',''); })
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;stm32g4xx_hal.h&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// ========================</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// UART Configuration</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// ========================</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_trinity_track6000___config_8h.html#afe113e56a05bd5097639092b7cabf908">   25</a></span><span class="preprocessor">#define USART1_BAUD_RATE 115200;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_trinity_track6000___config_8h.html#aa32c17a1ef01a9fcb5487d1efe4a8e19">   26</a></span><span class="preprocessor">#define USART2_BAUD_RATE 115200;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">extern</span> ADC_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a22b804736f5648d52f639b2647d4ed13">hadc1</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">extern</span> CORDIC_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a12a49867e76bf8c5652a8aa16caccc34">hcordic</a>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">extern</span> I2C_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#ac379bcc152d860f08b1279fd3e232295">hi2c2</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">extern</span> SPI_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a9c6222bae4d0328dd843ae099623b40b">hspi1</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">extern</span> SPI_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#ab9da65f935e805137e2eb4e18c5ab224">hspi2</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">extern</span> TIM_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a5faa27108379f799afb6984010bf0384">htim8</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// Uart Handler used for debugging and logging</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">extern</span> UART_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">extern</span> UART_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// TRINITY_TRACK6000_CONFIG_H_</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="_trinity_track6000___errors_8h.html">TrinityTrack6000_Errors.h</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_trinity_track6000___config_8h.html#a43bafb28b29491ec7f871319b5a3b2f8">   29</a></span><span class="preprocessor">#define F_CPU 170000000UL</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group___u_a_r_t___config.html#gafe113e56a05bd5097639092b7cabf908">   38</a></span><span class="preprocessor">#define USART1_BAUD_RATE 115200</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group___u_a_r_t___config.html#gaa32c17a1ef01a9fcb5487d1efe4a8e19">   41</a></span><span class="preprocessor">#define USART2_BAUD_RATE 115200</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group___u_a_r_t___config.html#ga25d9853ef0052c1020968ebcd17f2db4">   44</a></span><span class="preprocessor">#define DEBUG_UART_TIMEOUT 1000</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group___s_p_i___config.html#gadc83b92395e9e71db98501fa95445470">   53</a></span><span class="preprocessor">#define SPI1_RESPONSE_TIMEOUT 1000</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group___s_p_i___config.html#ga85f9e768dce01353694cc51f6ddaefff">   54</a></span><span class="preprocessor">#define SPI2_RESPONSE_TIMEOUT 2000</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group___s_p_i___config.html#ga935ad78a45c830fd807215ee47df1eff">   56</a></span><span class="preprocessor">#define SPI1_TIMEOUT_RETRY_COUNT 3</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="group___s_p_i___config.html#ga9257f5d774f0d50b45f1d9a97c79cb79">   57</a></span><span class="preprocessor">#define SPI2_TIMEOUT_RETRY_COUNT 3</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group___i2_c___config.html#gaeaecff8f40016a4a2abe1161728e2a8c">   66</a></span><span class="preprocessor">#define I2C2_RESPONSE_TIMEOUT 1000</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group___i2_c___config.html#gac51d273517b4a132e5a6161309b15eb1">   68</a></span><span class="preprocessor">#define I2C2_TIMEOUT_RETRY_COUNT 3</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">extern</span> ADC_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a22b804736f5648d52f639b2647d4ed13">hadc1</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">extern</span> CORDIC_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a12a49867e76bf8c5652a8aa16caccc34">hcordic</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">extern</span> I2C_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#ac379bcc152d860f08b1279fd3e232295">hi2c2</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">extern</span> SPI_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a9c6222bae4d0328dd843ae099623b40b">hspi1</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">extern</span> SPI_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#ab9da65f935e805137e2eb4e18c5ab224">hspi2</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">extern</span> TIM_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a5faa27108379f799afb6984010bf0384">htim8</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// Uart Handler used for debugging and logging</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">extern</span> UART_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">extern</span> UART_HandleTypeDef <a class="code hl_variable" href="_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// ========================</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// Global control variables</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// ========================</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="_trinity_track6000___config_8h.html#a11bbac8f4748eb8c204ab8ef946e833c">   91</a></span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_system_error_status__t.html">SystemErrorStatus_t</a> <a class="code hl_variable" href="_trinity_track6000___config_8c.html#a028fe4c4e145fdf2ad4223fd7273e654">g_SystemErrors</a> <a class="code hl_function" href="_trinity_track6000___config_8h.html#a11bbac8f4748eb8c204ab8ef946e833c">__attribute</a>((section(<span class="stringliteral">&quot;.sysDiag&quot;</span>)));</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">// TRINITY_TRACK6000_CONFIG_H_</span></div>
+<div class="ttc" id="a_trinity_track6000___config_8c_html_a028fe4c4e145fdf2ad4223fd7273e654"><div class="ttname"><a href="_trinity_track6000___config_8c.html#a028fe4c4e145fdf2ad4223fd7273e654">g_SystemErrors</a></div><div class="ttdeci">SystemErrorStatus_t g_SystemErrors</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:30</div></div>
+<div class="ttc" id="a_trinity_track6000___config_8h_html_a11bbac8f4748eb8c204ab8ef946e833c"><div class="ttname"><a href="_trinity_track6000___config_8h.html#a11bbac8f4748eb8c204ab8ef946e833c">__attribute</a></div><div class="ttdeci">SystemErrorStatus_t g_SystemErrors __attribute((section(&quot;.sysDiag&quot;)))</div></div>
 <div class="ttc" id="a_trinity_track6000___config_8h_html_a12a49867e76bf8c5652a8aa16caccc34"><div class="ttname"><a href="_trinity_track6000___config_8h.html#a12a49867e76bf8c5652a8aa16caccc34">hcordic</a></div><div class="ttdeci">CORDIC_HandleTypeDef hcordic</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:18</div></div>
 <div class="ttc" id="a_trinity_track6000___config_8h_html_a22b804736f5648d52f639b2647d4ed13"><div class="ttname"><a href="_trinity_track6000___config_8h.html#a22b804736f5648d52f639b2647d4ed13">hadc1</a></div><div class="ttdeci">ADC_HandleTypeDef hadc1</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:16</div></div>
 <div class="ttc" id="a_trinity_track6000___config_8h_html_a2cf715bef37f7e8ef385a30974a5f0d5"><div class="ttname"><a href="_trinity_track6000___config_8h.html#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></div><div class="ttdeci">UART_HandleTypeDef huart1</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:27</div></div>
@@ -136,6 +162,8 @@ $(function(){initNavTree('_trinity_track6000___config_8h_source.html','',''); })
 <div class="ttc" id="a_trinity_track6000___config_8h_html_aa9479c261d65eecedd3d9582f7f0f89c"><div class="ttname"><a href="_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a></div><div class="ttdeci">UART_HandleTypeDef huart2</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:28</div></div>
 <div class="ttc" id="a_trinity_track6000___config_8h_html_ab9da65f935e805137e2eb4e18c5ab224"><div class="ttname"><a href="_trinity_track6000___config_8h.html#ab9da65f935e805137e2eb4e18c5ab224">hspi2</a></div><div class="ttdeci">SPI_HandleTypeDef hspi2</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:23</div></div>
 <div class="ttc" id="a_trinity_track6000___config_8h_html_ac379bcc152d860f08b1279fd3e232295"><div class="ttname"><a href="_trinity_track6000___config_8h.html#ac379bcc152d860f08b1279fd3e232295">hi2c2</a></div><div class="ttdeci">I2C_HandleTypeDef hi2c2</div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Config.c:20</div></div>
+<div class="ttc" id="a_trinity_track6000___errors_8h_html"><div class="ttname"><a href="_trinity_track6000___errors_8h.html">TrinityTrack6000_Errors.h</a></div><div class="ttdoc">Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout...</div></div>
+<div class="ttc" id="astruct_system_error_status__t_html"><div class="ttname"><a href="struct_system_error_status__t.html">SystemErrorStatus_t</a></div><div class="ttdef"><b>Definition</b> TrinityTrack6000_Errors.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

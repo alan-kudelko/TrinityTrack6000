@@ -121,7 +121,6 @@ class MCP23S17{
     SPI_HandleTypeDef*_hspi;
     GPIO_TypeDef*_cs_port;
     uint16_t _cs_pin;
-
     GPIO_TypeDef*_rst_port;
     uint16_t _rst_pin;
     public:
@@ -129,6 +128,9 @@ class MCP23S17{
     ~MCP23S17();
 
     void init(); // Reset MCU to ensure default IOBANK and correct writting operations
+
+    HAL_StatusTypeDef write(uint8_t reg,uint8_t value);
+    HAL_StatusTypeDef read(uint8_t reg,uint8_t*value);
 };
 
 #endif // MCP23S17_H_

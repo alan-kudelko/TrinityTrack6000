@@ -17,20 +17,17 @@
 
 #include <TrinityTrack6000_Errors.h>
 
-// Probabbly in the future I will expand error handling
-
-SystemErrorStatus_t g_SystemErrors={0};
-
 void Error_Handler(void){
-	// Called only when error is critical and not recoverable
+	// Called only when error is CRITICAL AND NOT RECOVERABLE
+	// Non critical errors should be handled inside main or during
+	// ThreadX kernel operation
+	
 	// MCU should reset after this kind of fault either by external watchdog timer
 	// or by software
 	__disable_irq();
 
 	while(1){
 		// Debug Loop
-		// If UART is initialized, we can send error code over UART
 		// If GPIO is initialized, we activate buzzer
-		// In the future restart of the system
 	}
 }

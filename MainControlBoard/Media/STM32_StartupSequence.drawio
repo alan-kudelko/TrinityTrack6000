@@ -8,7 +8,7 @@
           <mxGeometry x="32" y="-151" width="631" height="689" as="geometry" />
         </mxCell>
         <mxCell id="UJRjLYV5v_oAAFYebKkd-4" value="&lt;div&gt;1.&amp;nbsp; HAL_Init();&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(201, 209, 217), rgb(52, 59, 65));&quot;&gt;2.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;SystemClock_Config();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(201, 209, 217), rgb(52, 59, 65));&quot;&gt;3.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;MX_CORDIC_Init();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;4.&amp;nbsp; MX_GPIO_Init();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(201, 209, 217), rgb(52, 59, 65));&quot;&gt;5.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;MX_TIM8_Init();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;6.&amp;nbsp; MX_ADC1_Init();&lt;/div&gt;&lt;div&gt;7.&amp;nbsp; MX_USART1_UART_Init();&lt;/div&gt;&lt;div&gt;8.&amp;nbsp; MX_USART2_UART_Init();&lt;/div&gt;&lt;div&gt;9.&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;MX_I2C2_Init();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(201, 209, 217), rgb(52, 59, 65));&quot;&gt;10.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;MX_SPI1_Init();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;11.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;MX_SPI2_Init();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;12. initializeMemory();&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;glass=0;shadow=0;strokeWidth=1;perimeterSpacing=0;strokeColor=#FFFFFF;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;dashed=1;" parent="1" vertex="1">
-          <mxGeometry x="244" y="20" width="150" height="170" as="geometry" />
+          <mxGeometry x="244" y="20" width="170" height="170" as="geometry" />
         </mxCell>
         <mxCell id="AeENMbu1BnPiWdSSfwAq-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#FFFFFF;" edge="1" parent="1" source="AeENMbu1BnPiWdSSfwAq-2" target="AeENMbu1BnPiWdSSfwAq-11">
           <mxGeometry relative="1" as="geometry" />
@@ -20,7 +20,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AeENMbu1BnPiWdSSfwAq-4" value="&lt;div&gt;&amp;nbsp; • Power on reset&lt;/div&gt;&lt;div&gt;&amp;nbsp; • Manual reset pin&lt;/div&gt;&lt;div&gt;&amp;nbsp; • Watchdog timeout&lt;/div&gt;&lt;div&gt;&amp;nbsp; • Software reset&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;glass=0;shadow=0;strokeWidth=1;perimeterSpacing=0;strokeColor=#FFFFFF;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="244" y="-105" width="150" height="60" as="geometry" />
+          <mxGeometry x="244" y="-105" width="170" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AeENMbu1BnPiWdSSfwAq-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FFFFFF;strokeWidth=2;" edge="1" parent="1" source="AeENMbu1BnPiWdSSfwAq-11" target="UJRjLYV5v_oAAFYebKkd-4">
           <mxGeometry relative="1" as="geometry" />
@@ -31,8 +31,14 @@
         <mxCell id="AeENMbu1BnPiWdSSfwAq-11" value="&lt;div&gt;void initializeSystem();&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="58" y="90" width="130" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="AeENMbu1BnPiWdSSfwAq-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FFFFFF;strokeWidth=2;" edge="1" parent="1" source="AeENMbu1BnPiWdSSfwAq-24" target="AeENMbu1BnPiWdSSfwAq-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="AeENMbu1BnPiWdSSfwAq-24" value="&lt;div&gt;void systemDiagnostics();&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=center;glass=0;shadow=0;strokeWidth=2;perimeterSpacing=0;strokeColor=#4C566A;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="58" y="269.5" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AeENMbu1BnPiWdSSfwAq-26" value="&lt;div&gt;1. systemDiagnostics_NRF();&lt;/div&gt;&lt;div&gt;2. systemDiagnostics_FRAM();&lt;/div&gt;&lt;div&gt;3. systemDiagnostics_MCP();&lt;/div&gt;&lt;div&gt;4. systemDiagnostics_ADXL();&lt;/div&gt;&lt;div&gt;5. systemDiagnostics_L76K();&lt;/div&gt;&lt;div&gt;6. systemDiagnostics_Infineon();&lt;/div&gt;&lt;div&gt;7. systemDiagnostics_NXP();&lt;/div&gt;&lt;div&gt;8. systemDiagnostics_RENESANS();&lt;/div&gt;&lt;div&gt;9. systemDiagnostics_FPGA();&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;glass=0;shadow=0;strokeWidth=1;perimeterSpacing=0;strokeColor=#FFFFFF;fillColor=none;fontColor=#C9D1D9;verticalAlign=middle;spacingLeft=0;spacingTop=0;fontFamily=Helvetica;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="244" y="225" width="170" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

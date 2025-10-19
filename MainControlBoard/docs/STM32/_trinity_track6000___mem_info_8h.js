@@ -2,7 +2,6 @@ var _trinity_track6000___mem_info_8h =
 [
     [ "MEMINFO_BAR_BUFFER_SIZE", "_trinity_track6000___mem_info_8h.html#a719f554899aae9a479121eebd01288fc", null ],
     [ "MEMINFO_LINE_BUFFER_SIZE", "_trinity_track6000___mem_info_8h.html#abf854acc92fc314246208c4e970bbe9b", null ],
-    [ "MEMINFO_UART_TIMEOUT", "_trinity_track6000___mem_info_8h.html#ab03add7be2d532720007c14003ccef17", null ],
     [ "__attribute", "_trinity_track6000___mem_info_8h.html#aae8a396c4dfa175d3fd3437134a69d8b", null ],
     [ "__attribute", "_trinity_track6000___mem_info_8h.html#a2dc1e5ecdb9280b20d2933850e626a86", null ],
     [ "__attribute", "_trinity_track6000___mem_info_8h.html#a4c48fad4b2ebd75c4b31ae0a2b6a1f22", null ],

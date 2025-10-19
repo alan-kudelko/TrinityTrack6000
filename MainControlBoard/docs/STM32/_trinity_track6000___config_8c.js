@@ -1,5 +1,6 @@
 var _trinity_track6000___config_8c =
 [
+    [ "g_SystemErrors", "_trinity_track6000___config_8c.html#a028fe4c4e145fdf2ad4223fd7273e654", null ],
     [ "hadc1", "_trinity_track6000___config_8c.html#a22b804736f5648d52f639b2647d4ed13", null ],
     [ "hcordic", "_trinity_track6000___config_8c.html#a12a49867e76bf8c5652a8aa16caccc34", null ],
     [ "hi2c2", "_trinity_track6000___config_8c.html#ac379bcc152d860f08b1279fd3e232295", null ],

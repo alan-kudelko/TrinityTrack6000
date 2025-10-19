@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['infineon_5fcs_5fgpio_5fport_0',['INFINEON_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a101f9355cec739bdc9888f27703350e6',1,'TrinityTrack6000_Pinout.h']]],
-  ['infineon_5fcs_5fpin_1',['INFINEON_CS_Pin',['../_trinity_track6000___pinout_8h.html#a05447d58b7228f5adde4d5b0d936f960',1,'TrinityTrack6000_Pinout.h']]],
-  ['infineon_5ferror_2',['infineon_error',['../struct_system_error_status__t.html#aa2766fc5860c43b7d8f1825be456cf69',1,'SystemErrorStatus_t']]],
-  ['infineon_5frst_5fgpio_5fport_3',['INFINEON_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#af7c1c9156a4f426196a0fdf9ef79e9ef',1,'TrinityTrack6000_Pinout.h']]],
-  ['infineon_5frst_5fpin_4',['INFINEON_RST_Pin',['../_trinity_track6000___pinout_8h.html#a6234f4f56297dacb17c73ca6e7ac8005',1,'TrinityTrack6000_Pinout.h']]],
-  ['initializememory_5',['initializeMemory',['../_trinity_track6000___init_8c.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.c'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.c']]],
-  ['initializesystem_6',['initializeSystem',['../_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b',1,'initializeSystem(void):&#160;TrinityTrack6000_Init.c'],['../_trinity_track6000___init_8h.html#a19ebe9f470610e6867c7f4724aa5da9b',1,'initializeSystem(void):&#160;TrinityTrack6000_Init.c']]]
+  ['hadc1_0',['hadc1',['../_trinity_track6000___config_8h.html#a22b804736f5648d52f639b2647d4ed13',1,'hadc1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a22b804736f5648d52f639b2647d4ed13',1,'hadc1:&#160;TrinityTrack6000_Config.c']]],
+  ['hal_5ftim_5fmsppostinit_1',['HAL_TIM_MspPostInit',['../_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b',1,'TrinityTrack6000_Init.h']]],
+  ['hcordic_2',['hcordic',['../_trinity_track6000___config_8h.html#a12a49867e76bf8c5652a8aa16caccc34',1,'hcordic:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a12a49867e76bf8c5652a8aa16caccc34',1,'hcordic:&#160;TrinityTrack6000_Config.c']]],
+  ['hi2c2_3',['hi2c2',['../_trinity_track6000___config_8h.html#ac379bcc152d860f08b1279fd3e232295',1,'hi2c2:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#ac379bcc152d860f08b1279fd3e232295',1,'hi2c2:&#160;TrinityTrack6000_Config.c']]],
+  ['hspi1_4',['hspi1',['../_trinity_track6000___config_8h.html#a9c6222bae4d0328dd843ae099623b40b',1,'hspi1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a9c6222bae4d0328dd843ae099623b40b',1,'hspi1:&#160;TrinityTrack6000_Config.c']]],
+  ['hspi2_5',['hspi2',['../_trinity_track6000___config_8h.html#ab9da65f935e805137e2eb4e18c5ab224',1,'hspi2:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#ab9da65f935e805137e2eb4e18c5ab224',1,'hspi2:&#160;TrinityTrack6000_Config.c']]],
+  ['htim8_6',['htim8',['../_trinity_track6000___config_8h.html#a5faa27108379f799afb6984010bf0384',1,'htim8:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a5faa27108379f799afb6984010bf0384',1,'htim8:&#160;TrinityTrack6000_Config.c']]],
+  ['huart1_7',['huart1',['../_trinity_track6000___config_8h.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___mem_info_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;TrinityTrack6000_Config.c']]],
+  ['huart2_8',['huart2',['../_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2:&#160;TrinityTrack6000_Config.c'],['../_trinity_track6000___config_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2:&#160;TrinityTrack6000_Config.c']]]
 ];

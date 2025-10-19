@@ -18,7 +18,7 @@
  * Usage:
  * - Call `ramInfoInit()` during system initialization to set up total sizes
  * - Call `ramInfoRefresh()` on-demand or periodically to update usage data
- * - Use `ramInfoGeneral()`, `ramInfoRAM1()`, etc. to print details
+ * - Call `ramInfoGeneral()`, `ramInfoRAM1()`, etc. to print details
  *
  * @author Alan Kudełko
  * @copyright
@@ -31,7 +31,6 @@
 #ifndef TRINITYTRACK6000_MEMINFO_H_
     #define TRINITYTRACK6000_MEMINFO_H_
 
-#define MEMINFO_UART_TIMEOUT 1000
 #define MEMINFO_LINE_BUFFER_SIZE 90
 #define MEMINFO_BAR_BUFFER_SIZE 11
 

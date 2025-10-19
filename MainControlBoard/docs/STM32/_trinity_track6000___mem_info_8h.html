@@ -116,7 +116,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab03add7be2d532720007c14003ccef17" id="r_ab03add7be2d532720007c14003ccef17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab03add7be2d532720007c14003ccef17">MEMINFO_UART_TIMEOUT</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="memitem:abf854acc92fc314246208c4e970bbe9b" id="r_abf854acc92fc314246208c4e970bbe9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf854acc92fc314246208c4e970bbe9b">MEMINFO_LINE_BUFFER_SIZE</a>&#160;&#160;&#160;90</td></tr>
 <tr class="memitem:a719f554899aae9a479121eebd01288fc" id="r_a719f554899aae9a479121eebd01288fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a719f554899aae9a479121eebd01288fc">MEMINFO_BAR_BUFFER_SIZE</a>&#160;&#160;&#160;11</td></tr>
 </table><table class="memberdecls">
@@ -177,9 +176,9 @@ Variables</h2></td></tr>
 <li>Allocation of diagnostic variables in separate linker sections</li>
 </ul>
 <p>Usage:</p><ul>
-<li>Call <span class="tt">ramDiagnositcsInit()</span> during system initialization to set up total sizes</li>
-<li>Call <span class="tt">ramDiagnosticsRefresh()</span> on-demand or periodically to update usage data</li>
-<li>Use <span class="tt">ramDiagnosticsGeneral()</span>, <span class="tt">ramDiagnosticsRAM1()</span>, etc. to print details</li>
+<li>Call <span class="tt"><a class="el" href="#a3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics.">ramInfoInit()</a></span> during system initialization to set up total sizes</li>
+<li>Call <span class="tt"><a class="el" href="#a3f8a2d6d7be7bf049aaa5429a534366c" title="Refresh RAM diagnostics data.">ramInfoRefresh()</a></span> on-demand or periodically to update usage data</li>
+<li>Call <span class="tt"><a class="el" href="#a13fa979499422cf70155ac9854e45924" title="Print general RAM usage information.">ramInfoGeneral()</a></span>, <span class="tt"><a class="el" href="#a0cb7a9994151f20453f5e378f55cea76" title="Print detailed RAM1 diagnostics.">ramInfoRAM1()</a></span>, etc. to print details</li>
 </ul>
 <dl class="section author"><dt>Author</dt><dd>Alan Kudełko </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Alan Kudełko. <br  />
@@ -209,20 +208,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MEMINFO_LINE_BUFFER_SIZE&#160;&#160;&#160;90</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab03add7be2d532720007c14003ccef17" name="ab03add7be2d532720007c14003ccef17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab03add7be2d532720007c14003ccef17">&#9670;&#160;</a></span>MEMINFO_UART_TIMEOUT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MEMINFO_UART_TIMEOUT&#160;&#160;&#160;1000</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -362,16 +347,6 @@ Variables</h2></td></tr>
 
 <p>Print general RAM usage information. </p>
 <p>Displays an overview of all RAM banks, including start/end addresses, total sizes, usage bars, and percentage utilization. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___mem_info_8h_a13fa979499422cf70155ac9854e45924_cgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8h_a13fa979499422cf70155ac9854e45924_cgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___mem_info_8h_a13fa979499422cf70155ac9854e45924_cgraph" id="a_trinity_track6000___mem_info_8h_a13fa979499422cf70155ac9854e45924_cgraph">
-<area shape="rect" title="Print general RAM usage information." alt="" coords="5,5,116,32"/>
-<area shape="rect" href="_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="164,5,265,32"/>
-<area shape="poly" title=" " alt="" coords="116,16,148,16,148,21,116,21"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -392,7 +367,7 @@ Here is the call graph for this function:</div>
 
 <p>Initialize RAM diagnostics. </p>
 <p>Calculates the total sizes of all RAM banks and refreshes the current usage. <br  />
- This function should be called once during system initialization (e.g., inside <span class="tt"><a class="el" href="_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b" title="System Initialization Function.">initializeSystem()</a></span>). </p>
+ This function should be called once during system initialization (e.g., inside <span class="tt"><a class="el" href="_trinity_track6000___init_8c.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function.">initializeSystem()</a></span>). </p>
 
 </div>
 </div>
@@ -465,7 +440,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="543,21,511,21,511,16,543,16"/>
 <area shape="rect" href="_trinity_track6000___init_8c.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,5,379,32"/>
 <area shape="poly" title=" " alt="" coords="412,21,380,21,380,16,412,16"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a19ebe9f470610e6867c7f4724aa5da9b" title="System Initialization Function." alt="" coords="103,5,216,32"/>
+<area shape="rect" href="_trinity_track6000___init_8c.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
 <area shape="poly" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
