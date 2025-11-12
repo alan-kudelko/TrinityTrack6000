@@ -1,4 +1,6 @@
-activeproject.background=XMC4200F64K256BAXQSA1
+SHOW_TEXT_ON_PERSPECTIVE_BAR=true
+activeproject.background=XMC4200
+activeproject.background.color=255,255,255
 com.ifx.davex.ce.ui.views.linkbutton=true
 com.ifx.davex.enable.log=false
 com.ifx.davex.preferences.closeeditors=true
@@ -7,8 +9,8 @@ com.ifx.davex.preferences.latestversionenabled=true
 com.ifx.davex.preferences.remember.prev.mappings=false
 com.ifx.davex.preferences.restore.date=true
 com.ifx.davex.preferences.scripting=false
-com.ifx.davex.preferences.showbetaapps=false
-com.ifx.davex.preferences.showhiddencategories=false
+com.ifx.davex.preferences.showbetaapps=true
+com.ifx.davex.preferences.showhiddencategories=true
 com.ifx.davex.sdk.error=false
 com.ifx.librarymanager.davesites=<?xml version\="1.0" encoding\="utf-8"?><Pref version\="1.0"><Lib uri\="https\://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml" provider\="Infineon Technologies AG" displayName\="DAVE Project Library Manager" enabled\="Yes"/><Lib uri\="https\://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml" provider\="Infineon Technologies AG" displayName\="DAVE APPs Library Manager" enabled\="Yes"/><Lib uri\="https\://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml" provider\="Infineon Technologies AG" displayName\="Contributed DAVE APPs Library Manager" enabled\="Yes"/></Pref>
 com.ifx.librarymanager.libstore=D\:/Programy/4.5.0.202105191637/D_LibraryStore_4.4

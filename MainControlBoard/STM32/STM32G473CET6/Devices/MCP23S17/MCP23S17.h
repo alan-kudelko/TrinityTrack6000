@@ -123,6 +123,12 @@ class MCP23S17{
     uint16_t _cs_pin;
     GPIO_TypeDef*_rst_port;
     uint16_t _rst_pin;
+
+    uint8_t*_tx_buffer;
+    uint8_t*_rx_buffer;
+
+    uint8_t _tx_buffer_size;
+    uint8_t _rx_buffer_size;
     public:
     MCP23S17(SPI_HandleTypeDef*hspi,GPIO_TypeDef*cs_port,uint16_t cs_pin,GPIO_TypeDef*rst_port,uint16_t rst_pin);
     ~MCP23S17();

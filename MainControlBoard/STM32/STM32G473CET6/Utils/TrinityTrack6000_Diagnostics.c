@@ -13,8 +13,6 @@
 #include <string.h>
 #include <stdio.h>
 
-#include <stm32g4xx_hal.h>
-
 #include <TrinityTrack6000_Diagnostics.h>
 #include <TrinityTrack6000_Config.h>
 
@@ -25,7 +23,7 @@ const char msg_Diagnostics_NRF_status_formatString[]     ="| NRF24L01         | 
 const char msg_Diagnostics_FRAM_status_formatString[]    ="| FM25L16B-GTR     | %30s |\r\n";
 const char msg_Diagnostics_MCP_status_formatString[]     ="| MCP23S17         | %30s |\r\n";
 const char msg_Diagnostics_ADXL_status_formatString[]    ="| ADXL345          | %30s |\r\n";
-const char msg_Diagnostics_L76K_status_formatString[]    ="| L76K GPS         | %30s |\r\n";
+const char msg_Diagnostics_GPS_status_formatString[]     ="| L76K GPS         | %30s |\r\n";
 const char msg_Diagnostics_Infineon_status_formatString[]="| XMC4200          | %30s |\r\n";
 const char msg_Diagnostics_NXP_status_formatString[]     ="| NXP              | %30s |\r\n";
 const char msg_Diagnostics_RENESANS_status_formatString[]="| RENESANS         | %30s |\r\n";
@@ -46,7 +44,7 @@ void systemDiagnostics_devices(void){
     systemDiagnostics_FRAM();
     systemDiagnostics_MCP();
     systemDiagnostics_ADXL();
-    systemDiagnostics_L76K();  
+    systemDiagnostics_GPS();  
     systemDiagnostics_Infineon();
     systemDiagnostics_NXP();
     systemDiagnostics_RENESANS();
@@ -78,7 +76,7 @@ void systemDiagnostics_ADXL(void){
     // after which we set global_error_code
 }
 
-void systemDiagnostics_L76K(void){
+void systemDiagnostics_GPS(void){
     // Basic read/write test over UART
     // with given timeouts
     // after which we set global_error_code
@@ -141,8 +139,8 @@ void systemDiagnostics_print_devices_Status(void){
     );
     HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
 // Send System Diagnostics L76K status
-    snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_L76K_status_formatString,
-        msg_Diagnostics_device_status[g_SystemErrors.l76k_error]
+    snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_GPS_status_formatString,
+        msg_Diagnostics_device_status[g_SystemErrors.gps_error]
     );
     HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
 // Send System Diagnostics Infineon status

@@ -40,7 +40,7 @@ extern const char msg_Diagnostics_NRF_status_formatString[];
 extern const char msg_Diagnostics_FRAM_status_formatString[];
 extern const char msg_Diagnostics_MCP_status_formatString[];
 extern const char msg_Diagnostics_ADXL_status_formatString[];
-extern const char msg_Diagnostics_L76K_status_formatString[];
+extern const char msg_Diagnostics_GPS_status_formatString[];
 extern const char msg_Diagnostics_Infineon_status_formatString[];
 extern const char msg_Diagnostics_NXP_status_formatString[];
 extern const char msg_Diagnostics_RENESANS_status_formatString[];
@@ -111,7 +111,7 @@ void systemDiagnostics_ADXL(void);
  * @return void
  * @retval None
  */
-void systemDiagnostics_L76K(void);
+void systemDiagnostics_GPS(void);
 
 /**
  * @brief Perform Infineon XMC4200 specific diagnostics. 

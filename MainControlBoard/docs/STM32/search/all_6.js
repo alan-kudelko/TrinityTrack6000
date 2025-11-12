@@ -8,5 +8,6 @@ var searchData=
   ['gpio_5f_5f_5ffire_5fbb_5fgun_5fgpio_5fport_5',['GPIO___Fire_BB_Gun_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a4bbe4d117f7b301e29f8fd4caf4cf6e6',1,'TrinityTrack6000_Pinout.h']]],
   ['gpio_5f_5f_5ffire_5fbb_5fgun_5fpin_6',['GPIO___Fire_BB_Gun_Pin',['../_trinity_track6000___pinout_8h.html#aa9825bf88d935d5c7363955bfca8fa36',1,'TrinityTrack6000_Pinout.h']]],
   ['gpio_5f_5f_5fmq_5fheaters_5fgpio_5fport_7',['GPIO___MQ_HEATERS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ac3f98923170f866069502405d7d21615',1,'TrinityTrack6000_Pinout.h']]],
-  ['gpio_5f_5f_5fmq_5fheaters_5fpin_8',['GPIO___MQ_HEATERS_Pin',['../_trinity_track6000___pinout_8h.html#a4c8e76d73d4a6a8721f17a8894ecfab0',1,'TrinityTrack6000_Pinout.h']]]
+  ['gpio_5f_5f_5fmq_5fheaters_5fpin_8',['GPIO___MQ_HEATERS_Pin',['../_trinity_track6000___pinout_8h.html#a4c8e76d73d4a6a8721f17a8894ecfab0',1,'TrinityTrack6000_Pinout.h']]],
+  ['gps_5ferror_9',['gps_error',['../struct_system_error_status__t.html#ae6aaea2929238f1bd130b660e9c56628',1,'SystemErrorStatus_t']]]
 ];

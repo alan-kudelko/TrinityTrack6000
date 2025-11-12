@@ -18,6 +18,12 @@ MCP23S17::MCP23S17(SPI_HandleTypeDef*hspi,GPIO_TypeDef*cs_port,uint16_t cs_pin,G
     _cs_pin=cs_pin;
     _rst_port=rst_port;
     _rst_pin=rst_pin;
+
+    _tx_buffer=nullptr;
+    _rx_buffer=nullptr;
+
+    _tx_buffer_size=0;
+    _rx_buffer_size=0;
 }
 
 MCP23S17::~MCP23S17(){

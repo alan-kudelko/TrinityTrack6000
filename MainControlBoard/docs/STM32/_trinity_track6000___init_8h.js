@@ -2,6 +2,7 @@ var _trinity_track6000___init_8h =
 [
     [ "INIT_LINE_BUFFER_SIZE", "_trinity_track6000___init_8h.html#a5df001d02f4666a60867341a7b4bbb77", null ],
     [ "HAL_TIM_MspPostInit", "_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b", null ],
+    [ "initializeMCP", "_trinity_track6000___init_8h.html#a77dc374f08bff5b7968adfa3aff0fc7e", null ],
     [ "initializeMemory", "_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8", null ],
     [ "initializeSystem", "_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3", null ],
     [ "MQ_GPIO_Init", "_trinity_track6000___init_8h.html#a06522493c5458ecce58b627a985d653d", null ],

@@ -22,7 +22,7 @@
 #include <TrinityTrack6000_Errors.h>
 
 /**
- * @brief CPU Clock speed
+ * @brief CPU Clock speed 170MHz
  * @note Chaning this define will not result in changed MCU's frequency.
  * It this just an information
  */
@@ -68,8 +68,6 @@
 #define I2C2_TIMEOUT_RETRY_COUNT 3
 
 /** @} */
-
-
 
 extern ADC_HandleTypeDef hadc1;
 

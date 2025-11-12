@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\kujon\Desktop\infineon-counter-example-xmc13-code-example-en"/>
+	</list>
 	<list key="installedFeatures">
 		<item value="ilg.gnuarmeclipse.debug.gdbjtag.jlink.ifx:4.1.4.201704251808"/>
 		<item value="org.codehaus.groovy.compilerless.feature:2.9.2.xx-201706090625-e46"/>
@@ -49,4 +52,10 @@
 		<item value="org.eclipse.xtext.xbase:2.10.0.v201605250459"/>
 		<item value="org.eclipse.xtext.xtext.ui:2.10.0.v201605250459"/>
 	</list>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.cdt.ui.wizards.NewCWizard2" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.cdt.ui.newCWizards"/>
+		</list>
+	</section>
 </section>

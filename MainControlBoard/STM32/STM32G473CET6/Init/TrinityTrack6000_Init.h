@@ -14,7 +14,6 @@
     #define TRINITY_TRACK6000_INIT_H_
 
 #include <TrinityTrack6000_Config.h>
-#include <TrinityTrack6000_Errors.h>
 
 #define INIT_LINE_BUFFER_SIZE 90
 
@@ -31,8 +30,8 @@ extern const char msg_init_status_ok[];
 extern const char msg_init_status_nok[];
 
 #ifdef __cplusplus
-	  extern "C"{
-#endif // __cplusplus
+  extern "C"{
+#endif
 
 /**
   * @brief System Clock Configuration
@@ -124,12 +123,29 @@ void MX_GPIO_Init(void);
   */
 void initializeMemory(void);
 
+//void initializeNRF(void);
+//void initializeFRAM(void);
+
+void initializeMCP(void);
+
+//void initializeADXL(void);
+//void initializeGPS(void);
+//void initializeInfineon(void)
+//void initializeNXP(void);
+//void initializeRENESANS(void);
+//void initializeFPGA(void);
+
+
 /**
  * @brief System Initialization Function
  * @param None
  * @retval None
  */
 void initializeSystem();
+
+#ifdef __cplusplus
+  }
+#endif
 
 #ifdef USE_FULL_ASSERT
 /**
@@ -147,8 +163,5 @@ void assert_failed(uint8_t *file, uint32_t line){
 }
 #endif /* USE_FULL_ASSERT */
 
-#ifdef __cplusplus
-	  }
-#endif // __cplusplus
 	
 #endif // TRINITY_TRACK6000_INIT_H_

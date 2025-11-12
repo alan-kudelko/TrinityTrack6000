@@ -11,15 +11,14 @@
  * explicit written permission.
  */
 
-#include <stdint.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stm32g4xx_hal.h>
-#include <core_cm4.h>
 
 #include <TrinityTrack6000_MemInfo.h>
 #include <TrinityTrack6000_Config.h>
+
+#include <core_cm4.h>
 
 extern uint32_t __RAM1_start__; // Defined in the linker script by me for RAM1 start
 extern uint32_t __RAM1_end__;   // Defined in the linker script by me for RAM1 end

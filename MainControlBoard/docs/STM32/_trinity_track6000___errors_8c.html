@@ -101,29 +101,27 @@ $(function(){initNavTree('_trinity_track6000___errors_8c.html','',''); });
 
 <p>Implementation of <a class="el" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout...">TrinityTrack6000_Errors.h</a>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stm32g4xx_hal.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;stm32g4xx_hal.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="_trinity_track6000___errors_8h_source.html">TrinityTrack6000_Errors.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TrinityTrack6000_Errors.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___errors_8c__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___errors_8c" loading="lazy" alt=""/></div>
 <map name="a_utils_2_trinity_track6000___errors_8c" id="a_utils_2_trinity_track6000___errors_8c">
-<area shape="rect" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="8,5,157,48"/>
-<area shape="rect" title=" " alt="" coords="86,171,151,197"/>
-<area shape="poly" title=" " alt="" coords="51,50,32,66,16,84,9,102,13,122,25,136,39,149,74,167,71,172,36,153,21,140,8,124,4,102,12,81,28,62,47,46"/>
-<area shape="rect" title=" " alt="" coords="22,96,143,123"/>
-<area shape="poly" title=" " alt="" coords="85,49,85,80,80,80,80,49"/>
-<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="166,96,338,123"/>
-<area shape="poly" title=" " alt="" coords="127,46,213,87,210,91,125,51"/>
-<area shape="poly" title=" " alt="" coords="230,126,156,165,154,161,227,121"/>
+<area shape="rect" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="75,5,224,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,126,123"/>
+<area shape="poly" title=" " alt="" coords="130,51,92,87,88,83,126,47"/>
+<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="149,96,320,123"/>
+<area shape="poly" title=" " alt="" coords="173,47,212,83,209,87,170,51"/>
+<area shape="rect" title=" " alt="" coords="203,171,267,197"/>
+<area shape="poly" title=" " alt="" coords="238,123,238,155,232,155,232,123"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
-<tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
+<tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of critical error occurrence from which system can no safely recover. Each time critical error occurs this function should be called.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of <a class="el" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout...">TrinityTrack6000_Errors.h</a>. </p>
@@ -148,7 +146,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function is executed in case of error occurrence. </p>
+<p>This function is executed in case of critical error occurrence from which system can no safely recover. Each time critical error occurs this function should be called. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">None</td><td></td></tr>
@@ -160,28 +158,28 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___errors_8c_a1730ffe1e560465665eb47d9264826f9_icgraph.png" border="0" usemap="#a_trinity_track6000___errors_8c_a1730ffe1e560465665eb47d9264826f9_icgraph" loading="lazy" alt=""/></div>
 <map name="a_trinity_track6000___errors_8c_a1730ffe1e560465665eb47d9264826f9_icgraph" id="a_trinity_track6000___errors_8c_a1730ffe1e560465665eb47d9264826f9_icgraph">
-<area shape="rect" title="This function is executed in case of error occurrence." alt="" coords="480,208,582,235"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="294,5,403,32"/>
+<area shape="rect" title="This function is executed in case of critical error occurrence from which system can no safely recove..." alt="" coords="480,208,582,235"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="294,5,403,32"/>
 <area shape="poly" title=" " alt="" coords="519,194,507,160,488,120,463,80,431,46,402,31,405,26,434,42,467,77,493,117,512,158,524,192"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="284,56,412,83"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="284,56,412,83"/>
 <area shape="poly" title=" " alt="" coords="513,196,480,145,457,119,431,97,410,86,412,81,434,92,461,115,484,142,518,193"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="298,107,399,133"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="298,107,399,133"/>
 <area shape="poly" title=" " alt="" coords="503,200,470,173,431,148,398,134,400,130,434,143,473,168,506,196"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="297,157,399,184"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="297,157,399,184"/>
 <area shape="poly" title=" " alt="" coords="465,206,398,187,400,182,466,201"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="297,208,399,235"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="297,208,399,235"/>
 <area shape="poly" title=" " alt="" coords="465,224,400,224,400,219,465,219"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="296,259,400,285"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="296,259,400,285"/>
 <area shape="poly" title=" " alt="" coords="466,242,400,261,398,255,465,237"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="264,309,432,336"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="264,309,432,336"/>
 <area shape="poly" title=" " alt="" coords="506,247,473,274,434,300,406,311,404,306,431,295,470,270,503,243"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="264,360,432,387"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="264,360,432,387"/>
 <area shape="poly" title=" " alt="" coords="518,250,484,301,461,327,434,350,412,362,410,357,431,346,457,324,480,298,513,247"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="276,411,421,437"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="276,411,421,437"/>
 <area shape="poly" title=" " alt="" coords="524,250,512,285,493,325,467,366,434,401,415,412,412,408,431,397,463,363,488,323,507,283,519,249"/>
-<area shape="rect" href="_trinity_track6000___init_8c.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,208,216,235"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,208,216,235"/>
 <area shape="poly" title=" " alt="" coords="281,37,266,46,228,85,200,131,179,175,167,208,162,207,174,173,195,129,224,82,262,42,278,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,208,55,235"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,208,55,235"/>
 <area shape="poly" title=" " alt="" coords="87,224,55,224,55,219,87,219"/>
 <area shape="poly" title=" " alt="" coords="274,92,266,97,234,123,207,155,170,209,166,206,202,151,230,120,262,92,271,87"/>
 <area shape="poly" title=" " alt="" coords="284,140,265,148,216,179,178,209,174,205,213,174,263,143,282,135"/>

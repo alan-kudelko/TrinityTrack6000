@@ -22,5 +22,9 @@ var searchData=
   ['_5fheap_5fstart_19',['_heap_start',['../_trinity_track6000___mem_info_8c.html#a79f79b82457083df3e8a583cef06bfa2',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5fhspi_20',['_hspi',['../class_m_c_p23_s17.html#a77e0ee7aed9e898e16bdf558a2c8deaf',1,'MCP23S17']]],
   ['_5frst_5fpin_21',['_rst_pin',['../class_m_c_p23_s17.html#a16cf3fdfaeffabb87192511986d48c6a',1,'MCP23S17']]],
-  ['_5frst_5fport_22',['_rst_port',['../class_m_c_p23_s17.html#ac25c7df19963e11feb8f2682538ed260',1,'MCP23S17']]]
+  ['_5frst_5fport_22',['_rst_port',['../class_m_c_p23_s17.html#ac25c7df19963e11feb8f2682538ed260',1,'MCP23S17']]],
+  ['_5frx_5fbuffer_23',['_rx_buffer',['../class_m_c_p23_s17.html#a81d50088ba0ba4f3e6dbc13de010684e',1,'MCP23S17']]],
+  ['_5frx_5fbuffer_5fsize_24',['_rx_buffer_size',['../class_m_c_p23_s17.html#a36abff4ff8aef2646be589df1020ec2b',1,'MCP23S17']]],
+  ['_5ftx_5fbuffer_25',['_tx_buffer',['../class_m_c_p23_s17.html#a57044955da8381a5b2a4a1ba5dd578da',1,'MCP23S17']]],
+  ['_5ftx_5fbuffer_5fsize_26',['_tx_buffer_size',['../class_m_c_p23_s17.html#aa197232de69d1197587d45ccda7f36b5',1,'MCP23S17']]]
 ];

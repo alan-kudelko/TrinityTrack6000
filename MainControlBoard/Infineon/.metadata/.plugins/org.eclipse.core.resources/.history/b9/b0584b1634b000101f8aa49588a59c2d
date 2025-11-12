@@ -1,0 +1,12 @@
+ACTIVE_CONFIG_NAME=Debug
+AppCompatibilitySet=1
+DEVICE_NAME=XMC4502-F100x768
+DEVICE_PACKAGE=LQFP100
+DEVICE_PACK_VERSION=2.2.12
+DEVICE_PATH=/DeviceRoot/Microcontrollers/XMC4000/XMC4500 Series/XMC4502-F100x768
+FLASH_SIZE=768
+MBS_PROVIDER_ID_KEY=com.dave.mbs.xmc4000.xmc4000MbsFactory
+SOFTWARE_ID=XMC4.5.02.F100.ALL
+TEMPLATE_KEY=com.ifx.xmc4000.appEmptyMainTemplate
+eclipse.preferences.version=1
+minDaveVersion=4.4.2

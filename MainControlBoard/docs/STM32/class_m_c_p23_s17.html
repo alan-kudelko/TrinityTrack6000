@@ -116,6 +116,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab79f1cf7b5da1a726d962bb9db4ee875" id="r_ab79f1cf7b5da1a726d962bb9db4ee875"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab79f1cf7b5da1a726d962bb9db4ee875">_cs_pin</a></td></tr>
 <tr class="memitem:ac25c7df19963e11feb8f2682538ed260" id="r_ac25c7df19963e11feb8f2682538ed260"><td class="memItemLeft" align="right" valign="top">GPIO_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac25c7df19963e11feb8f2682538ed260">_rst_port</a></td></tr>
 <tr class="memitem:a16cf3fdfaeffabb87192511986d48c6a" id="r_a16cf3fdfaeffabb87192511986d48c6a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16cf3fdfaeffabb87192511986d48c6a">_rst_pin</a></td></tr>
+<tr class="memitem:a57044955da8381a5b2a4a1ba5dd578da" id="r_a57044955da8381a5b2a4a1ba5dd578da"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57044955da8381a5b2a4a1ba5dd578da">_tx_buffer</a></td></tr>
+<tr class="memitem:a81d50088ba0ba4f3e6dbc13de010684e" id="r_a81d50088ba0ba4f3e6dbc13de010684e"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81d50088ba0ba4f3e6dbc13de010684e">_rx_buffer</a></td></tr>
+<tr class="memitem:aa197232de69d1197587d45ccda7f36b5" id="r_aa197232de69d1197587d45ccda7f36b5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa197232de69d1197587d45ccda7f36b5">_tx_buffer_size</a></td></tr>
+<tr class="memitem:a36abff4ff8aef2646be589df1020ec2b" id="r_a36abff4ff8aef2646be589df1020ec2b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36abff4ff8aef2646be589df1020ec2b">_rx_buffer_size</a></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a30a846434a6c6579ad70b71ecaedbd68" name="a30a846434a6c6579ad70b71ecaedbd68"></a>
@@ -331,6 +335,94 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">GPIO_TypeDef* MCP23S17::_rst_port</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81d50088ba0ba4f3e6dbc13de010684e" name="a81d50088ba0ba4f3e6dbc13de010684e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d50088ba0ba4f3e6dbc13de010684e">&#9670;&#160;</a></span>_rx_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* MCP23S17::_rx_buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36abff4ff8aef2646be589df1020ec2b" name="a36abff4ff8aef2646be589df1020ec2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36abff4ff8aef2646be589df1020ec2b">&#9670;&#160;</a></span>_rx_buffer_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MCP23S17::_rx_buffer_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57044955da8381a5b2a4a1ba5dd578da" name="a57044955da8381a5b2a4a1ba5dd578da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57044955da8381a5b2a4a1ba5dd578da">&#9670;&#160;</a></span>_tx_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* MCP23S17::_tx_buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa197232de69d1197587d45ccda7f36b5" name="aa197232de69d1197587d45ccda7f36b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa197232de69d1197587d45ccda7f36b5">&#9670;&#160;</a></span>_tx_buffer_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MCP23S17::_tx_buffer_size</td>
         </tr>
       </table>
   </td>

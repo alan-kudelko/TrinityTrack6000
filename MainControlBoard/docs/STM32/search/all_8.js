@@ -10,6 +10,7 @@ var searchData=
   ['infineon_5frst_5fpin_7',['INFINEON_RST_Pin',['../_trinity_track6000___pinout_8h.html#a6234f4f56297dacb17c73ca6e7ac8005',1,'TrinityTrack6000_Pinout.h']]],
   ['init_8',['init',['../class_m_c_p23_s17.html#a268dd286302d2c3f1d42807c2e238a13',1,'MCP23S17']]],
   ['init_5fline_5fbuffer_5fsize_9',['INIT_LINE_BUFFER_SIZE',['../_trinity_track6000___init_8h.html#a5df001d02f4666a60867341a7b4bbb77',1,'TrinityTrack6000_Init.h']]],
-  ['initializememory_10',['initializeMemory',['../_trinity_track6000___init_8c.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.c'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.c']]],
-  ['initializesystem_11',['initializeSystem',['../_trinity_track6000___init_8c.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.c'],['../_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.c']]]
+  ['initializemcp_10',['initializeMCP',['../_trinity_track6000___init_8h.html#a77dc374f08bff5b7968adfa3aff0fc7e',1,'TrinityTrack6000_Init.h']]],
+  ['initializememory_11',['initializeMemory',['../_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp']]],
+  ['initializesystem_12',['initializeSystem',['../_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp']]]
 ];

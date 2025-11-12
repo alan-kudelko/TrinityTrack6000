@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1760619802974_1" label="ActiveProject" name="ActiveProject">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XMC4200F64K256BAXQSA1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XMC4200" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1760619663955_0" label="Window Working Set" name="Aggregate for window 1760619663953">
+<workingSet IMemento.internal.id="ActiveProject"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1761324579316_2" label="Window Working Set" name="Aggregate for window 1761324579316">
 <workingSet IMemento.internal.id="ActiveProject"/>
 </workingSet>
 </workingSetManager>
