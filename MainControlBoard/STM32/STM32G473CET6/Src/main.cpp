@@ -16,10 +16,12 @@
  */
 /* Includes ------------------------------------------------------------------*/
 #include <main.h>
+#include <string.h>
 
 #include <TrinityTrack6000_Config.h>
 #include <TrinityTrack6000_Init.h>
 #include <TrinityTrack6000_Diagnostics.h>
+#include <TrinityTrack6000_MemInfo.h>
 
 /**
  * @brief  The application entry point.
@@ -31,9 +33,14 @@ int main(void){
     // Handle non critical errors which in worst case result
     // in system's few functionalities unavailiable
 
+    ramInfoGeneral();
+    ramInfoRAM1();
+    ramInfoRAM2();
+    ramInfoCCSRAM();
 
     while(1){
-
+    HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+    HAL_Delay(1000);
     }
 
     return 0;

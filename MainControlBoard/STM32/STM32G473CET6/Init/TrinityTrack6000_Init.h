@@ -75,6 +75,13 @@ void MX_SPI1_Init(void);
 void MX_SPI2_Init(void);
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+void MX_TIM3_Init(void);
+
+/**
   * @brief TIM8 Initialization Function
   * @param None
   * @retval None
@@ -94,6 +101,13 @@ void MX_USART1_UART_Init(void);
   * @retval None
   */
 void MX_USART2_UART_Init(void);
+
+/**
+  * @brief  Enable DMA controller clock
+  * @param None
+  * @retval None
+  */
+void MX_DMA_Init(void);
 
 /**
   * @brief GPIO Initialization Function

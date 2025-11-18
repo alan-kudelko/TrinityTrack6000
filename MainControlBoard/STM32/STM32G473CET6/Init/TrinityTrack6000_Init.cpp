@@ -183,7 +183,7 @@ void MX_SPI2_Init(void){
   	hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
   	hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
   	hspi2.Init.NSS = SPI_NSS_SOFT;
-  	hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  	hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   	hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
   	hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
   	hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -193,6 +193,43 @@ void MX_SPI2_Init(void){
   	if(HAL_SPI_Init(&hspi2)!=HAL_OK){
     	Error_Handler();
   	}
+}
+
+void MX_TIM3_Init(void){
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 0;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 65535;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+  HAL_TIM_MspPostInit(&htim3);	
 }
 
 void MX_TIM8_Init(void){
@@ -298,49 +335,102 @@ void MX_USART2_UART_Init(void){
   	}
 }
 
+void MX_DMA_Init(void){
+  /* DMA controller clock enable */
+  __HAL_RCC_DMAMUX1_CLK_ENABLE();
+  __HAL_RCC_DMA1_CLK_ENABLE();
+  __HAL_RCC_DMA2_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+  /* DMA1_Channel3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
+  /* DMA1_Channel4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
+  /* DMA1_Channel5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+  /* DMA1_Channel6_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
+  /* DMA1_Channel7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+  /* DMA2_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Channel1_IRQn);
+  /* DMA2_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Channel2_IRQn);
+  /* DMA1_Channel8_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel8_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel8_IRQn);	
+}
+
 void MX_GPIO_Init(void){
-  	GPIO_InitTypeDef GPIO_InitStruct = {0};
-  	/* GPIO Ports Clock Enable */
-  	__HAL_RCC_GPIOC_CLK_ENABLE();
-  	__HAL_RCC_GPIOF_CLK_ENABLE();
-  	__HAL_RCC_GPIOA_CLK_ENABLE();
-  	__HAL_RCC_GPIOB_CLK_ENABLE();
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
 
-  	/*Configure GPIO pin Output Level */
-  	HAL_GPIO_WritePin(GPIOF, GPIO___ARM_BB_Gun_Pin|GPIO___Fire_BB_Gun_Pin, GPIO_PIN_RESET);
+  /* USER CODE END MX_GPIO_Init_1 */
 
-  	/*Configure GPIO pin Output Level */
-  	HAL_GPIO_WritePin(GPIOA, GPIO___MQ_HEATERS_Pin|NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin
-                          |RENESANS_RST_Pin, GPIO_PIN_RESET);
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  	/*Configure GPIO pin Output Level */
-  	HAL_GPIO_WritePin(GPIOB, NRF24L01_CS_Pin|FRAM_CS_Pin|MCP_CS_Pin|INFINEON_RST_Pin
-                          |RENESANS_CS_Pin|INFINEON_CS_Pin|FPGA_RST_Pin, GPIO_PIN_RESET);
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, KILL_SWITCH_Pin|NRF24L01_CE_Pin, GPIO_PIN_RESET);
 
-  	/*Configure GPIO pins : GPIO___ARM_BB_Gun_Pin GPIO___Fire_BB_Gun_Pin */
-  	GPIO_InitStruct.Pin = GPIO___ARM_BB_Gun_Pin|GPIO___Fire_BB_Gun_Pin;
-  	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  	GPIO_InitStruct.Pull = GPIO_NOPULL;
-  	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  	HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOF, ARM_GUN_Pin|FIRE_GUN_Pin, GPIO_PIN_RESET);
 
-  	/*Configure GPIO pins : GPIO___MQ_HEATERS_Pin NXP_CS_Pin FPGA_CS_Pin NXP_RST_Pin
-                           RENESANS_RST_Pin */
-  	GPIO_InitStruct.Pin = GPIO___MQ_HEATERS_Pin|NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin
-                          |RENESANS_RST_Pin;
-  	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  	GPIO_InitStruct.Pull = GPIO_NOPULL;
-  	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, NRF24L01_CS_Pin|FRAM_CS_Pin|MCP_CS_Pin|INFINEON_RST_Pin
+                          |RENESANS_CS_Pin|INFINEON_CS_Pin|FPGA_RST_Pin|WATCHDOG_FEED_Pin
+                          |NC_Pin|GPS_RST_Pin|MCP_RST_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin|RENESANS_RST_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : KILL_SWITCH_Pin NRF24L01_CE_Pin */
+  GPIO_InitStruct.Pin = KILL_SWITCH_Pin|NRF24L01_CE_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ARM_GUN_Pin FIRE_GUN_Pin */
+  GPIO_InitStruct.Pin = ARM_GUN_Pin|FIRE_GUN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
   /*Configure GPIO pins : NRF24L01_CS_Pin FRAM_CS_Pin MCP_CS_Pin INFINEON_RST_Pin
-                           RENESANS_CS_Pin INFINEON_CS_Pin FPGA_RST_Pin */
-  	GPIO_InitStruct.Pin = NRF24L01_CS_Pin|FRAM_CS_Pin|MCP_CS_Pin|INFINEON_RST_Pin
-                          |RENESANS_CS_Pin|INFINEON_CS_Pin|FPGA_RST_Pin;
-  	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  	GPIO_InitStruct.Pull = GPIO_NOPULL;
-  	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+                           RENESANS_CS_Pin INFINEON_CS_Pin FPGA_RST_Pin WATCHDOG_FEED_Pin
+                           NC_Pin GPS_RST_Pin MCP_RST_Pin */
+  GPIO_InitStruct.Pin = NRF24L01_CS_Pin|FRAM_CS_Pin|MCP_CS_Pin|INFINEON_RST_Pin
+                          |RENESANS_CS_Pin|INFINEON_CS_Pin|FPGA_RST_Pin|WATCHDOG_FEED_Pin
+                          |NC_Pin|GPS_RST_Pin|MCP_RST_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : NXP_CS_Pin FPGA_CS_Pin NXP_RST_Pin RENESANS_RST_Pin */
+  GPIO_InitStruct.Pin = NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin|RENESANS_RST_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }
 
 void initializeMemory(void){

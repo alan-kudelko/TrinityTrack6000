@@ -35,7 +35,7 @@
  */
 
 /** Baud rate for USART1 */
-#define USART1_BAUD_RATE 115200
+#define USART1_BAUD_RATE 19200
 
 /** Baud rate for USART2 */
 #define USART2_BAUD_RATE 115200
@@ -74,14 +74,25 @@ extern ADC_HandleTypeDef hadc1;
 extern CORDIC_HandleTypeDef hcordic;
 
 extern I2C_HandleTypeDef hi2c2;
+extern DMA_HandleTypeDef hdma_i2c2_tx;
+extern DMA_HandleTypeDef hdma_i2c2_rx;
 
 extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi2;
+extern DMA_HandleTypeDef hdma_spi1_rx;
+extern DMA_HandleTypeDef hdma_spi1_tx;
+extern DMA_HandleTypeDef hdma_spi2_rx;
+extern DMA_HandleTypeDef hdma_spi2_tx;
 
+extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim8;
 // Uart Handler used for debugging and logging
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
+extern DMA_HandleTypeDef hdma_usart1_rx;
+extern DMA_HandleTypeDef hdma_usart1_tx;
+extern DMA_HandleTypeDef hdma_usart2_rx;
+extern DMA_HandleTypeDef hdma_usart2_tx;
 
 // ========================
 // Global control variables

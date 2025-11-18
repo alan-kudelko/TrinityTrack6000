@@ -114,6 +114,8 @@ file(GLOB ARM_CORE_SOURCES
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.s"
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.S"
 )
+list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/main.c")
+# Note file /Core/main.c is intentionally excluded here
 message(STATUS "[10] Adding STM32 Core headers")
 file(GLOB ARM_CORE_HEADERS
     "${CMAKE_SOURCE_DIR}/Core/Inc/*.h"
