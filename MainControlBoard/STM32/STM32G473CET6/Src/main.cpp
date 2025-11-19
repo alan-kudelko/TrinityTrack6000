@@ -31,8 +31,8 @@ int main(void){
     initializeSystem();
 
     // Handle non critical errors which in worst case result
-    // in system's few functionalities unavailiable
-
+    // in system's few functionalities unavailable
+    ramInfoRefresh();
     ramInfoGeneral();
     ramInfoRAM1();
     ramInfoRAM2();

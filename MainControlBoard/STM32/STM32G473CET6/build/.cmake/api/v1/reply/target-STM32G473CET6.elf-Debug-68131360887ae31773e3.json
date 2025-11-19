@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 155,
+				"line" : 158,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 143,
+				"line" : 145,
 				"parent" : 0
 			}
 		]
@@ -82,6 +82,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/MCP23S17"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/USART_Dma"
 				}
 			],
 			"language" : "C",
@@ -125,10 +129,11 @@
 				27,
 				28,
 				29,
-				34,
-				36,
+				31,
+				35,
 				37,
-				38
+				38,
+				39
 			]
 		},
 		{
@@ -175,6 +180,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/MCP23S17"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/USART_Dma"
 				}
 			],
 			"language" : "ASM",
@@ -227,6 +236,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/MCP23S17"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/USART_Dma"
 				}
 			],
 			"language" : "CXX",
@@ -240,9 +253,9 @@
 			},
 			"sourceIndexes" : 
 			[
-				31,
-				33,
-				35
+				32,
+				34,
+				36
 			]
 		}
 	],
@@ -306,12 +319,13 @@
 				28,
 				29,
 				31,
-				33,
+				32,
 				34,
 				35,
 				36,
 				37,
-				38
+				38,
+				39
 			]
 		},
 		{
@@ -325,7 +339,7 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				32
+				33
 			]
 		}
 	],
@@ -516,6 +530,12 @@
 			"compileGroupIndex" : 1,
 			"path" : "Core/Startup/startup_stm32g473cetx.s",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Comm/USART_Dma/USART1_Dma.c",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

@@ -99,5 +99,4 @@ extern DMA_HandleTypeDef hdma_usart2_tx;
 // ========================
 extern SystemErrorStatus_t g_SystemErrors __attribute((section(".sysDiag")));
 
-	
 #endif // TRINITY_TRACK6000_CONFIG_H_

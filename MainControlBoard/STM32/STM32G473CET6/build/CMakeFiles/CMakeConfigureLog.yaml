@@ -36,6 +36,8 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -46,7 +48,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
@@ -105,6 +106,8 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -115,7 +118,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
@@ -161,6 +163,8 @@ events:
       - "ar"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -171,12 +175,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -187,7 +192,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -211,6 +215,8 @@ events:
       - "ranlib"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -221,12 +227,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -237,7 +244,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -261,6 +267,8 @@ events:
       - "strip"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -271,12 +279,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-strip.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-strip.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -287,7 +296,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -311,6 +319,8 @@ events:
       - "ld"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -321,12 +331,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ld.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ld.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -337,7 +348,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -361,6 +371,8 @@ events:
       - "nm"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -371,12 +383,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-nm.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-nm.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -387,7 +400,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -411,6 +423,8 @@ events:
       - "objdump"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -421,12 +435,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -437,7 +452,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -461,6 +475,8 @@ events:
       - "objcopy"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -471,12 +487,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -487,7 +504,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -511,6 +527,8 @@ events:
       - "readelf"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -521,12 +539,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -537,7 +556,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -561,6 +579,8 @@ events:
       - "dlltool"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -571,11 +591,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-dlltool.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-dlltool"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-dlltool.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-dlltool"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-dlltool.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-dlltool.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-dlltool"
@@ -606,12 +631,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-dlltool.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-dlltool.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-dlltool"
-      - "C:/Infineon/LauncherService/arm-none-eabi-dlltool.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-dlltool.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-dlltool"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/dlltool"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/dlltool.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/dlltool.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/dlltool"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/dlltool.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/dlltool.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/dlltool"
       - "C:/Program Files (x86)/M1 Licensing/dlltool.com"
       - "C:/Program Files (x86)/M1 Licensing/dlltool.exe"
       - "C:/Program Files (x86)/M1 Licensing/dlltool"
@@ -642,12 +670,11 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/dlltool.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/dlltool.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/dlltool"
-      - "C:/Infineon/LauncherService/dlltool.com"
-      - "C:/Infineon/LauncherService/dlltool.exe"
-      - "C:/Infineon/LauncherService/dlltool"
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -658,7 +685,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -682,6 +708,8 @@ events:
       - "addr2line"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -692,12 +720,13 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -708,7 +737,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -732,6 +760,8 @@ events:
       - "tapi"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -742,11 +772,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-tapi.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-tapi.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-tapi"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-tapi.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-tapi.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-tapi"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-tapi.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-tapi.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-tapi"
@@ -777,12 +812,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-tapi.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-tapi.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-tapi"
-      - "C:/Infineon/LauncherService/arm-none-eabi-tapi.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-tapi.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-tapi"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/tapi"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/tapi.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/tapi.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/tapi"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/tapi.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/tapi.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/tapi"
       - "C:/Program Files (x86)/M1 Licensing/tapi.com"
       - "C:/Program Files (x86)/M1 Licensing/tapi.exe"
       - "C:/Program Files (x86)/M1 Licensing/tapi"
@@ -813,12 +851,11 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/tapi.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/tapi.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/tapi"
-      - "C:/Infineon/LauncherService/tapi.com"
-      - "C:/Infineon/LauncherService/tapi.exe"
-      - "C:/Infineon/LauncherService/tapi"
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -829,7 +866,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -855,6 +891,8 @@ events:
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -865,11 +903,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.3"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.3.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.3.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.3"
@@ -900,12 +943,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.3.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.3.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.3"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14"
@@ -936,12 +982,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar14"
@@ -972,13 +1021,12 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -989,7 +1037,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -1015,6 +1062,8 @@ events:
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -1025,11 +1074,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.3"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.3.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.3"
@@ -1060,12 +1114,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.3.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.3.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.3"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14"
@@ -1096,12 +1153,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib14"
@@ -1132,13 +1192,12 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1149,7 +1208,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -1178,6 +1236,8 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1188,7 +1248,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
@@ -1247,6 +1306,8 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1257,7 +1318,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
@@ -1305,6 +1365,8 @@ events:
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -1315,11 +1377,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.3"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.3.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.3.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.3"
@@ -1350,12 +1417,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.3"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.3.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.3.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.3"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-14"
@@ -1386,12 +1456,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar14"
@@ -1422,13 +1495,12 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1439,7 +1511,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -1465,6 +1536,8 @@ events:
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -1475,11 +1548,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.3"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.3.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.3"
@@ -1510,12 +1588,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.3"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.3.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.3.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.3"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-14"
@@ -1546,12 +1627,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib14"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib14.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib14.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib14"
@@ -1582,13 +1666,12 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib14"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib14.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib14.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib14"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1599,7 +1682,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "message-v1"
@@ -1639,6 +1721,8 @@ events:
       - "arm-none-eabi-gcc-ar"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -1649,11 +1733,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-"
@@ -1684,12 +1773,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ar-"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ar-"
@@ -1720,13 +1812,12 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ar-"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ar-"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1737,7 +1828,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "find-v1"
@@ -1763,6 +1853,8 @@ events:
       - "arm-none-eabi-gcc-ranlib"
     candidate_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Program Files (x86)/M1 Licensing/"
       - "C:/Windows/System32/"
       - "C:/Program Files/CMake/bin/"
@@ -1773,11 +1865,16 @@ events:
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
       - "D:/Projekty/AVR_FreeRTOS/tools/"
-      - "C:/Infineon/LauncherService/"
     searched_directories:
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-"
@@ -1808,12 +1905,15 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/arm-none-eabi-gcc-ranlib-"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-.com"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-.exe"
       - "C:/Program Files (x86)/M1 Licensing/arm-none-eabi-gcc-ranlib-"
@@ -1844,13 +1944,12 @@ events:
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Projekty/AVR_FreeRTOS/tools/arm-none-eabi-gcc-ranlib-"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-.com"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-.exe"
-      - "C:/Infineon/LauncherService/arm-none-eabi-gcc-ranlib-"
       - "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.com"
     found: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Program Files (x86)\\M1 Licensing"
         - "C:\\WINDOWS\\system32"
         - "C:\\Program Files\\CMake\\bin"
@@ -1861,7 +1960,6 @@ events:
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
         - "D:\\Projekty\\AVR_FreeRTOS\\tools"
-        - "C:\\Infineon\\LauncherService"
       CMAKE_FIND_ROOT_PATH: "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi"
   -
     kind: "try_compile-v1"
@@ -1872,8 +1970,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tq05n7"
-      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tq05n7"
+      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-3xt8v5"
+      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-3xt8v5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1882,10 +1980,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tq05n7'
+        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-3xt8v5'
         
-        Run Build Command(s): ninja -v cmTC_8c94a
-        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): ninja -v cmTC_d79cc
+        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -1893,8 +1991,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_8c94a.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8c94a.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccLVbCZS.s
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d79cc.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d79cc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccYK4dNS.s
         GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -1911,13 +2009,13 @@ events:
          D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 1ef75dace964d07dc45f44c52d1314e5
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_8c94a.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccLVbCZS.s
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d79cc.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccYK4dNS.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_8c94a.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_8c94a.a  CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_8c94a.a && cd ."
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_d79cc.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_d79cc.a  CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_d79cc.a && cd ."
         
       exitCode: 0
   -
@@ -1950,10 +2048,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tq05n7']
+        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-3xt8v5']
         ignore line: []
-        ignore line: [Run Build Command(s): ninja -v cmTC_8c94a]
-        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): ninja -v cmTC_d79cc]
+        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -1961,8 +2059,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_8c94a.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8c94a.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccLVbCZS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d79cc.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d79cc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccYK4dNS.s]
         ignore line: [GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -1979,8 +2077,8 @@ events:
         ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 1ef75dace964d07dc45f44c52d1314e5]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_8c94a.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccLVbCZS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d79cc.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccYK4dNS.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
@@ -1989,8 +2087,8 @@ events:
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_8c94a.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_8c94a.a  CMakeFiles/cmTC_8c94a.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_8c94a.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_d79cc.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_d79cc.a  CMakeFiles/cmTC_d79cc.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_d79cc.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -2008,8 +2106,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-0cc091"
-      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-0cc091"
+      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tnn0g8"
+      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tnn0g8"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2019,10 +2117,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-0cc091'
+        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tnn0g8'
         
-        Run Build Command(s): ninja -v cmTC_f4aaa
-        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): ninja -v cmTC_a653e
+        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -2030,8 +2128,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f4aaa.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f4aaa.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccOIbB3a.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a653e.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a653e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7Y5xFd.s
         GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2054,13 +2152,13 @@ events:
          D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: bed1a8c09af7a45230275f732365cbb8
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f4aaa.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccOIbB3a.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a653e.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7Y5xFd.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_f4aaa.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_f4aaa.a  CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_f4aaa.a && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_a653e.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_a653e.a  CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_a653e.a && cd ."
         
       exitCode: 0
   -
@@ -2099,10 +2197,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-0cc091']
+        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-tnn0g8']
         ignore line: []
-        ignore line: [Run Build Command(s): ninja -v cmTC_f4aaa]
-        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): ninja -v cmTC_a653e]
+        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -2110,8 +2208,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f4aaa.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f4aaa.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccOIbB3a.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a653e.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a653e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7Y5xFd.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -2134,8 +2232,8 @@ events:
         ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: bed1a8c09af7a45230275f732365cbb8]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f4aaa.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccOIbB3a.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a653e.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7Y5xFd.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
@@ -2144,8 +2242,8 @@ events:
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_f4aaa.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_f4aaa.a  CMakeFiles/cmTC_f4aaa.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_f4aaa.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_a653e.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_a653e.a  CMakeFiles/cmTC_a653e.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_a653e.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []

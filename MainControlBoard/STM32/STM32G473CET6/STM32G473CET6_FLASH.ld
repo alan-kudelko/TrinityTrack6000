@@ -213,11 +213,19 @@ SECTIONS
   {
     PROVIDE ( __CRIT_START__ = . );
     . = ALIGN(4);
-    *(crit);
-    *(crit*);
+    KEEP(*(.crit));
+    KEEP(*(.crit*));
     PROVIDE ( __CRIT_END__ = . );
   } >CCSRAM
-
+  /* DMA Buffers section */
+  .dmaBuff :
+  {
+    PROVIDE ( __DMA_START__ = . );
+    . = ALIGN(4);
+    KEEP(*(.dmaBuff));
+    KEEP(*(.dmaBuff*));
+    PROVIDE ( __DMA_END__ = . );
+  } >CCSRAM
   /* Remove information from the compiler libraries */
   /DISCARD/ :
   {

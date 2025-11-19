@@ -14,7 +14,8 @@
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Init",
           "${workspaceFolder}/Src",
-          "${workspaceFolder}/Devices/MCP23S17"
+          "${workspaceFolder}/Devices/MCP23S17",
+          "${workspaceFolder}/Comm/USART_Dma"
         ],		  
       "browse": {
         "path": [
@@ -30,7 +31,8 @@
           "${workspaceFolder}/Src",
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Init",
-          "${workspaceFolder}/Devices/MCP23S17"
+          "${workspaceFolder}/Devices/MCP23S17",
+          "${workspaceFolder}/Comm/USART_Dma"
         ],		  
         "limitSymbolsToIncludedHeaders": false
       },

@@ -67,6 +67,7 @@ extern const char msg_ramDiagnosticsRAM2_formatStringSysDia[]; /**< RAM2 diagnos
 
 extern const char msg_ramDiagnosticsCCSRAM_header1[]; /**< CCSRAM diagnostics header line 1 */
 extern const char msg_ramDiagnosticsCCSRAM_formatStringCrit[]; /**< CCSRAM diagnostics format string for .crit section */
+extern const char msg_ramDiagnosticsCCSRAM_formatStringDmaBuff[]; /**< CCSRAM diagnostics format string for .dmaBuff section */
 /** @} */
 
 /**
@@ -95,6 +96,7 @@ extern uint8_t ramDiagnosticsRAM2_ramDiagnostics_size __attribute((section(".ram
 extern uint8_t ramDiagnosticsRAM2_sysDiagnostics_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .sysDiagnostics section in RAM2 */
 
 extern uint8_t ramDiagnosticsCCSRAM_crit_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .crit section in CCSRAM */
+extern uint8_t ramDiagnosticsCCSRAM_dmaBuff_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .dmaBuff section in CCSRAM */
 /** @} */
 
 #ifdef __cplusplus
