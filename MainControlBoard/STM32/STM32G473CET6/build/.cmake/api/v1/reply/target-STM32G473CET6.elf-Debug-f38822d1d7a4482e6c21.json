@@ -130,10 +130,11 @@
 				28,
 				29,
 				31,
-				35,
-				37,
+				32,
+				36,
 				38,
-				39
+				39,
+				40
 			]
 		},
 		{
@@ -253,9 +254,9 @@
 			},
 			"sourceIndexes" : 
 			[
-				32,
-				34,
-				36
+				33,
+				35,
+				37
 			]
 		}
 	],
@@ -320,12 +321,13 @@
 				29,
 				31,
 				32,
-				34,
+				33,
 				35,
 				36,
 				37,
 				38,
-				39
+				39,
+				40
 			]
 		},
 		{
@@ -339,7 +341,7 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				33
+				34
 			]
 		}
 	],
@@ -535,6 +537,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Comm/USART_Dma/USART1_Dma.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Comm/USART_Dma/USART_Callbacks.c",
 			"sourceGroupIndex" : 0
 		},
 		{

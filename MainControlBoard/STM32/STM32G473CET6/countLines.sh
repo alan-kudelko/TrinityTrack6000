@@ -1,1 +1,1 @@
-wc -l Init/*.c* Init/*.h* Utils/*.c* Utils/*.h* Src/*.c* Include/*.h* Devices/*/*.c* Devices/*/*.h | nl
+wc -l Init/*.c* Init/*.h* Utils/*.c* Utils/*.h* Src/*.c* Include/*.h* Devices/*/*.c* Devices/*/*.h Comm/*/*.c* Comm/*/*.h | nl

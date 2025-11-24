@@ -22,6 +22,7 @@
 #include <TrinityTrack6000_Init.h>
 #include <TrinityTrack6000_Diagnostics.h>
 #include <TrinityTrack6000_MemInfo.h>
+#include <USART1_Dma.h>
 
 /**
  * @brief  The application entry point.
@@ -37,6 +38,11 @@ int main(void){
     ramInfoRAM1();
     ramInfoRAM2();
     ramInfoCCSRAM();
+
+    uint8_t testData[]="Hello\r\n";
+    uint16_t testDataLength=strlen((const char*)testData);
+
+    usart1_dma_enq_data(testData,testDataLength);
 
     while(1){
     HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);

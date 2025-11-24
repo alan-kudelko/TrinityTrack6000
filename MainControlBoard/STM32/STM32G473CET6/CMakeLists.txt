@@ -152,7 +152,7 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Utils"
     "${CMAKE_SOURCE_DIR}/Init"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17"
-    "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/"
+    "${CMAKE_SOURCE_DIR}/Comm/USART_Dma"
 )
 
 add_executable(${PROJECT_NAME}.elf

@@ -442,6 +442,7 @@ void initializeSystem(){
 // STM32CubeIDE generated initialization sequence
 	HAL_Init();
 	SystemClock_Config();
+	MX_DMA_Init();
 	MX_CORDIC_Init();
 	MX_TIM8_Init();
 	MX_ADC1_Init();
