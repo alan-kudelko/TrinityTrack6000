@@ -22,6 +22,8 @@
 
 extern void HAL_UART_TxCpltCallback(UART_HandleTypeDef*huart);
 
+extern void HAL_UART_RxCpltCallback(UART_HandleTypeDef*huart);
+
 #ifdef __cplusplus
     }
 #endif // __cplusplus

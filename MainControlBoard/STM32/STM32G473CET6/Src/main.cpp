@@ -42,6 +42,10 @@ int main(void){
     uint8_t testData[]="Hello\r\n";
     uint16_t testDataLength=strlen((const char*)testData);
 
+    uint8_t receivedData[128]={0};
+    uint8_t receivedDataLength=0;
+
+    usart1_dma_read_data(receivedData,&receivedDataLength,128);
     usart1_dma_enq_data(testData,testDataLength);
 
     while(1){

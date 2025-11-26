@@ -32,7 +32,7 @@
  /** @} */
 
 extern uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE] __attribute((section(".dmaBuff")));
-extern uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE];
+extern uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE] __attribute((section(".dmaBuff")));
 
 extern volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE] __attribute((section(".dmaBuff")));
 extern volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE] __attribute((section(".dmaBuff")));
@@ -77,6 +77,33 @@ extern void usart1_dma_copy_to_tx_buffer(uint8_t*dst);
  * @warning This function is intended for internal use only.
  */
 extern void usart1_dma_tx_complete(void);
+
+/**
+ * @brief Reads data from the receive ring buffer into the provided destination buffer.
+ * 
+ */
+extern bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength);
+
+/**
+ * @brief Copies data from the provided source DMA buffer to the receive ring buffer.
+ * @param src Pointer to the source DMA buffer.
+ * @param length Length of the data to be copied in bytes.
+ * @note This function is dedicated to process debug terminal incoming data.
+ * Which means that it copies data until reaching /r/n sequence.
+ * If there is no /r/n sequence in the buffer, no data is copied and the ring buffer is cleared.
+ * @warning This function is intended for internal use only.
+ */
+extern void usart1_dma_copy_from_rx_buffer(uint8_t*src,const uint16_t length);
+
+/**
+ * @brief Callback function called when USART1 DMA reception is complete.
+ * @note This function is called from the HAL_UART_RxCpltCallback when USART1 reception is complete.
+ * It copies received data from the DMA buffer to the receive ring buffer
+ * and initiates another DMA reception if needed along with updating the ring buffer pointers and
+ * dma_rx_buffer_length variable.
+ * @warning This function is intended for internal use only.
+ */
+extern void usart1_dma_rx_complete(void);
 
 #ifdef __cplusplus
     }

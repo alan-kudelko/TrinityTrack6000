@@ -16,6 +16,9 @@
 extern void usart1_dma_tx_complete(void);
 //extern void usart2_dma_tx_complete(void);
 
+extern void usart1_dma_rx_complete(void);
+//extern void usart2_dma_rx_complete(void);
+
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef*huart){
     if(huart->Instance==USART1){
         usart1_dma_tx_complete();

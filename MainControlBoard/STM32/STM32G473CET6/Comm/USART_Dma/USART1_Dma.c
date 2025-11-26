@@ -20,14 +20,14 @@
 uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE]={0};
 uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE]={0};
 
-volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={0};
+volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={'H','e','l','l','o','\r','\n'};
 volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE]={0};
 
 volatile uint16_t huart1_dma_tx_buffer_length=0;
 
-volatile uint16_t huart1_dma_rx_ring_buffer_head=0;
+volatile uint16_t huart1_dma_rx_ring_buffer_head=7;
 volatile uint16_t huart1_dma_rx_ring_buffer_tail=0;
-volatile uint16_t huart1_dma_rx_ring_buffer_length=0;
+volatile uint16_t huart1_dma_rx_ring_buffer_length=7;
 
 volatile uint16_t huart1_dma_tx_ring_buffer_head=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_tail=0;
@@ -48,6 +48,7 @@ bool usart1_dma_enq_data(const uint8_t*data,const uint16_t length){
 
     if(free_space>length){
         // There is enough space, enqueue the data
+        __disable_irq();
         for(uint16_t i=0;i<length;i++){
             huart1_dma_tx_ring_buffer[huart1_dma_tx_ring_buffer_head]=data[i];
             huart1_dma_tx_ring_buffer_head=(huart1_dma_tx_ring_buffer_head+1)%UART1_DMA_TX_RING_BUFFER_SIZE;
@@ -59,6 +60,7 @@ bool usart1_dma_enq_data(const uint8_t*data,const uint16_t length){
             usart1_dma_copy_to_tx_buffer(huart1_dma_tx_buffer);
             HAL_UART_Transmit_DMA(&huart1,huart1_dma_tx_buffer,huart1_dma_tx_buffer_length);
         }
+        __enable_irq();
         // If DMA is active, data will be sent upon DMA completion interrupt
         return true;
     }
@@ -91,5 +93,62 @@ void usart1_dma_copy_to_tx_buffer(uint8_t*dst){
 }
 
 void usart1_dma_tx_complete(void){
-    
+    if(huart1_dma_tx_ring_buffer_length>0){
+        // More data to send
+        usart1_dma_copy_to_tx_buffer(huart1_dma_tx_buffer);
+        HAL_UART_Transmit_DMA(&huart1,huart1_dma_tx_buffer,huart1_dma_tx_buffer_length);
+    }
+}
+
+bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
+    // Check if there is data available in the receive ring buffer
+    if(huart1_dma_rx_ring_buffer_length==0){
+        // No data available
+        *length=0;
+        return false;
+    }
+    // Copy data from the receive ring buffer to the provided destination buffer
+    // Note data is copied until reaching /r/n sequence
+    // If there is no /r/n sequence in the buffer, no data is copied
+    uint8_t rn_found=0;
+    uint16_t i=0;
+    (*length)=0;
+    // Update condition in the loop !FIX!
+    for(i=0;(i<maxLength)&&(i<huart1_dma_rx_ring_buffer_length);i++){
+        if(huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail]=='\r'){
+            rn_found=1;
+        }
+        else if(huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail]=='\n'){
+            rn_found=2;
+        }
+        else{
+            dst[i]=huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail];
+            (*length)++;
+        }
+        huart1_dma_rx_ring_buffer_tail=(huart1_dma_rx_ring_buffer_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
+        huart1_dma_rx_ring_buffer_length--;
+        if(rn_found==2){
+            break;
+        }
+    }
+    if(rn_found!=2){
+        // Clear the buffer - command was too long or incomplete
+        huart1_dma_rx_ring_buffer_head=0;
+        huart1_dma_rx_ring_buffer_tail=0;
+        huart1_dma_rx_ring_buffer_length=0;
+        *length=0;
+        return false;
+    }
+    dst[*length]='\0'; // Null terminate the string
+    return true;
+    // Determine how much data to read
+}
+
+void usart1_dma_copy_from_rx_buffer(uint8_t*dst,const uint16_t length){
+    // Copy data from the receive ring
+    // Called in callback when data transfer is complete
+}
+
+void usart1_dma_rx_complete(void){
+    // Update ring buffer head and length based on DMA transfer size
 }
