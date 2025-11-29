@@ -79,31 +79,36 @@ extern void usart1_dma_copy_to_tx_buffer(uint8_t*dst);
 extern void usart1_dma_tx_complete(void);
 
 /**
- * @brief Reads data from the receive ring buffer into the provided destination buffer.
- * 
+ * @brief Initializes DMA for USART1 reception.
+ * @note This function sets up the DMA to start receiving data into the RX DMA buffer.
+ */
+extern void usart1_dma_rx_init(void);
+
+/**
+ * @brief Reads data from the USART1 receive ring buffer into the provided destination buffer.
+ * @param dst Pointer to the destination buffer where received data will be copied.
+ * @param length Pointer to a variable where the length of the copied data will be stored.
+ * @param maxLength Maximum length of data to be read in bytes.
+ * @return true if data was successfully read, false if no complete command was available.
+ * @note This function copies data until reaching a \r, \n or \r\n sequence or until maxLength is reached.
+ * @warning This function is dedicated to process debug terminal incoming data.
  */
 extern bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength);
 
 /**
- * @brief Copies data from the provided source DMA buffer to the receive ring buffer.
- * @param src Pointer to the source DMA buffer.
- * @param length Length of the data to be copied in bytes.
- * @note This function is dedicated to process debug terminal incoming data.
- * Which means that it copies data until reaching /r/n sequence.
- * If there is no /r/n sequence in the buffer, no data is copied and the ring buffer is cleared.
+ * @brief Copies data from the source DMA buffer to the receive ring buffer.
+ * @param dma_transfer_size Length of the data to be copied in bytes.
  * @warning This function is intended for internal use only.
  */
-extern void usart1_dma_copy_from_rx_buffer(uint8_t*src,const uint16_t length);
+extern void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size);
 
 /**
  * @brief Callback function called when USART1 DMA reception is complete.
+ * @param dma_transfer_size Size of the data transferred by DMA in bytes.
  * @note This function is called from the HAL_UART_RxCpltCallback when USART1 reception is complete.
- * It copies received data from the DMA buffer to the receive ring buffer
- * and initiates another DMA reception if needed along with updating the ring buffer pointers and
- * dma_rx_buffer_length variable.
  * @warning This function is intended for internal use only.
  */
-extern void usart1_dma_rx_complete(void);
+extern void usart1_dma_rx_complete(const uint16_t dma_transfer_size);
 
 #ifdef __cplusplus
     }

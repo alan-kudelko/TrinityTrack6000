@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @file           main.c
+ * @file           main.cpp
  * @brief          Main program body
  ******************************************************************************
  * @attention
@@ -30,7 +30,6 @@
  */
 int main(void){
     initializeSystem();
-
     // Handle non critical errors which in worst case result
     // in system's few functionalities unavailable
     ramInfoRefresh();
@@ -45,12 +44,19 @@ int main(void){
     uint8_t receivedData[128]={0};
     uint8_t receivedDataLength=0;
 
-    usart1_dma_read_data(receivedData,&receivedDataLength,128);
-    usart1_dma_enq_data(testData,testDataLength);
+    UNUSED(receivedData);
+    UNUSED(receivedDataLength);
+    UNUSED(testDataLength);
+
+    usart1_dma_rx_init();
+    //usart1_dma_enq_data(testData,testDataLength);
 
     while(1){
-    HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-    HAL_Delay(1000);
+        //HAL_UART_Receive(&huart1,receivedData,128,DEBUG_UART_TIMEOUT);
+        //receivedDataLength=strlen((const char*)receivedData);
+        //HAL_UART_Transmit(&huart1,receivedData,receivedDataLength,DEBUG_UART_TIMEOUT);
+        //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+        //HAL_Delay(1000);
     }
 
     return 0;

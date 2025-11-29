@@ -442,6 +442,7 @@ void initializeSystem(){
 // STM32CubeIDE generated initialization sequence
 	HAL_Init();
 	SystemClock_Config();
+	MX_GPIO_Init(); // Set default POR state
 	MX_DMA_Init();
 	MX_CORDIC_Init();
 	MX_TIM8_Init();
@@ -451,9 +452,8 @@ void initializeSystem(){
 	MX_I2C2_Init();
 	MX_SPI1_Init();
 	MX_SPI2_Init();
+
 	HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info),DEBUG_UART_TIMEOUT);
-	
-	MX_GPIO_Init(); // Set default POR state
 	HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_GPIO_initialized_info,strlen(msg_init_GPIO_initialized_info),DEBUG_UART_TIMEOUT);
 // Custom initialization sequence
 	initializeMemory();

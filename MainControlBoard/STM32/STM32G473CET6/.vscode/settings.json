@@ -11,7 +11,9 @@
     "functional": "c",
     "trinitytrack6000_init.h": "c",
     "trinitytrack6000_errors.h": "c",
-    "main.h": "c"
+    "main.h": "c",
+    "cstdint": "cpp",
+    "stm32g4xx_hal.h": "c"
   },
   "cmake.buildtypes":[
     "Debug",

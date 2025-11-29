@@ -17,17 +17,19 @@
 
 #include <stm32g4xx_hal.h>
 
+#include <TrinityTrack6000_Pinout.h>
+
 uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE]={0};
 uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE]={0};
 
-volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={'H','e','l','l','o','\r','\n'};
+volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={0};
 volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE]={0};
 
 volatile uint16_t huart1_dma_tx_buffer_length=0;
 
-volatile uint16_t huart1_dma_rx_ring_buffer_head=7;
+volatile uint16_t huart1_dma_rx_ring_buffer_head=0;
 volatile uint16_t huart1_dma_rx_ring_buffer_tail=0;
-volatile uint16_t huart1_dma_rx_ring_buffer_length=7;
+volatile uint16_t huart1_dma_rx_ring_buffer_length=0;
 
 volatile uint16_t huart1_dma_tx_ring_buffer_head=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_tail=0;
@@ -100,55 +102,58 @@ void usart1_dma_tx_complete(void){
     }
 }
 
+void usart1_dma_rx_init(void){
+    // Initialize DMA for USART1 RX
+    // Start the first DMA reception
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
+    // Check HAL status
+    __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
+}
+
 bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
+    // Disable only USART1 and DMA1_Channel7 interrupts to avoid inconsistencies during buffer update
+    __NVIC_DisableIRQ(USART1_IRQn);
+    __NVIC_DisableIRQ(DMA1_Channel7_IRQn);
     // Check if there is data available in the receive ring buffer
     if(huart1_dma_rx_ring_buffer_length==0){
         // No data available
         *length=0;
+        __NVIC_EnableIRQ(USART1_IRQn);
+        __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
         return false;
     }
-    // Copy data from the receive ring buffer to the provided destination buffer
-    // Note data is copied until reaching /r/n sequence
-    // If there is no /r/n sequence in the buffer, no data is copied
-    uint8_t rn_found=0;
-    uint16_t i=0;
-    (*length)=0;
-    // Update condition in the loop !FIX!
-    for(i=0;(i<maxLength)&&(i<huart1_dma_rx_ring_buffer_length);i++){
-        if(huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail]=='\r'){
-            rn_found=1;
-        }
-        else if(huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail]=='\n'){
-            rn_found=2;
-        }
-        else{
-            dst[i]=huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail];
-            (*length)++;
-        }
-        huart1_dma_rx_ring_buffer_tail=(huart1_dma_rx_ring_buffer_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
-        huart1_dma_rx_ring_buffer_length--;
-        if(rn_found==2){
-            break;
-        }
-    }
-    if(rn_found!=2){
-        // Clear the buffer - command was too long or incomplete
-        huart1_dma_rx_ring_buffer_head=0;
-        huart1_dma_rx_ring_buffer_tail=0;
-        huart1_dma_rx_ring_buffer_length=0;
-        *length=0;
-        return false;
-    }
-    dst[*length]='\0'; // Null terminate the string
-    return true;
     // Determine how much data to read
+    uint16_t i=0;
+    uint16_t new_tail=huart1_dma_rx_ring_buffer_tail;
+    for(;i<huart1_dma_rx_ring_buffer_length;i++){
+        // Iterate until /r or /n is found or maxLength is reached
+    }
+    // Re-enable USART1 and DMA1_Channel7 interrupts
+    __NVIC_EnableIRQ(USART1_IRQn);
+    __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+    return false;
 }
 
-void usart1_dma_copy_from_rx_buffer(uint8_t*dst,const uint16_t length){
+void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size){
     // Copy data from the receive ring
     // Called in callback when data transfer is complete
+    for(uint16_t i=0;i<dma_transfer_size;i++){
+        huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_head]=huart1_dma_rx_buffer[i];
+        huart1_dma_rx_ring_buffer_head=(huart1_dma_rx_ring_buffer_head+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
+    }
+    huart1_dma_rx_ring_buffer_length+=dma_transfer_size;
 }
 
-void usart1_dma_rx_complete(void){
-    // Update ring buffer head and length based on DMA transfer size
+void usart1_dma_rx_complete(const uint16_t dma_transfer_size){
+    // For now a debug diode
+    HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+    if((huart1_dma_rx_ring_buffer_length+dma_transfer_size)>UART1_DMA_RX_RING_BUFFER_SIZE){
+        // Overflow - reset buffer
+        // Don't copy new data
+        return;
+    }
+    usart1_dma_copy_from_rx_buffer(dma_transfer_size);
+    // Restart DMA reception
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
+    // Check HAL status
 }
