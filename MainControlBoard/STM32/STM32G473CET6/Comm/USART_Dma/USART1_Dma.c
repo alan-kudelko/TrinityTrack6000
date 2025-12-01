@@ -137,6 +137,7 @@ bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
 void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size){
     // Copy data from the receive ring
     // Called in callback when data transfer is complete
+    // Called inside usart1_dma_rx_complete function
     for(uint16_t i=0;i<dma_transfer_size;i++){
         huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_head]=huart1_dma_rx_buffer[i];
         huart1_dma_rx_ring_buffer_head=(huart1_dma_rx_ring_buffer_head+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
@@ -146,6 +147,7 @@ void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size){
 
 void usart1_dma_rx_complete(const uint16_t dma_transfer_size){
     // For now a debug diode
+    // Called inside HAL_UARTEx_RxEventCallback when data reception is complete
     HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
     if((huart1_dma_rx_ring_buffer_length+dma_transfer_size)>UART1_DMA_RX_RING_BUFFER_SIZE){
         // Overflow - reset buffer
