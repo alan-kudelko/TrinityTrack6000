@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['nrf24l01_5fcs_5fgpio_5fport_0',['NRF24L01_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a5d1cd1d2b9b111e11fa4de774a24a9b6',1,'TrinityTrack6000_Pinout.h']]],
-  ['nrf24l01_5fcs_5fpin_1',['NRF24L01_CS_Pin',['../_trinity_track6000___pinout_8h.html#ac4eb3e135935ff06c4d9eecb69c2b959',1,'TrinityTrack6000_Pinout.h']]],
-  ['nxp_5fcs_5fgpio_5fport_2',['NXP_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a26d0a561984818b38d1136ced0a7a354',1,'TrinityTrack6000_Pinout.h']]],
-  ['nxp_5fcs_5fpin_3',['NXP_CS_Pin',['../_trinity_track6000___pinout_8h.html#adf3d2823e6f99266b0e3eeffda4fbf08',1,'TrinityTrack6000_Pinout.h']]],
-  ['nxp_5frst_5fgpio_5fport_4',['NXP_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a7b37198ca99bdd8cf9bbb1c03cd82e0e',1,'TrinityTrack6000_Pinout.h']]],
-  ['nxp_5frst_5fpin_5',['NXP_RST_Pin',['../_trinity_track6000___pinout_8h.html#aa4aade8653cefe17cd9b0713a38bc0dc',1,'TrinityTrack6000_Pinout.h']]]
+  ['infineon_5fcs_5fgpio_5fport_0',['INFINEON_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a101f9355cec739bdc9888f27703350e6',1,'TrinityTrack6000_Pinout.h']]],
+  ['infineon_5fcs_5fpin_1',['INFINEON_CS_Pin',['../_trinity_track6000___pinout_8h.html#a05447d58b7228f5adde4d5b0d936f960',1,'TrinityTrack6000_Pinout.h']]],
+  ['infineon_5frst_5fgpio_5fport_2',['INFINEON_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#af7c1c9156a4f426196a0fdf9ef79e9ef',1,'TrinityTrack6000_Pinout.h']]],
+  ['infineon_5frst_5fpin_3',['INFINEON_RST_Pin',['../_trinity_track6000___pinout_8h.html#a6234f4f56297dacb17c73ca6e7ac8005',1,'TrinityTrack6000_Pinout.h']]],
+  ['init_5fline_5fbuffer_5fsize_4',['INIT_LINE_BUFFER_SIZE',['../_trinity_track6000___init_8h.html#a5df001d02f4666a60867341a7b4bbb77',1,'TrinityTrack6000_Init.h']]]
 ];

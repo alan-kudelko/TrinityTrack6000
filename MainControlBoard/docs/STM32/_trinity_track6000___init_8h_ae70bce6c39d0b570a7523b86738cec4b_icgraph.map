@@ -1,9 +1,11 @@
 <map id="HAL_TIM_MspPostInit" name="HAL_TIM_MspPostInit">
-<area shape="rect" id="Node000001" title="TIM MSP Post Initialization." alt="" coords="415,5,570,32"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="264,5,367,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="400,21,368,21,368,16,400,16"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,21,217,21,217,16,248,16"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" id="Node000001" title="TIM MSP Post Initialization." alt="" coords="415,31,570,57"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#a7912f2916786a2c33cb6fb8259ade58c" title="TIM3 Initialization Function." alt="" coords="264,5,367,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="399,33,367,29,368,23,400,28"/>
+<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="264,56,367,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="400,60,368,65,367,59,399,55"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,56,216,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="248,72,217,72,217,67,248,67"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
 </map>

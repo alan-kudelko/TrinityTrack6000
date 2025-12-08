@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['diagnostics_5fbar_5fbuffer_5fsize_0',['DIAGNOSTICS_BAR_BUFFER_SIZE',['../_trinity_track6000___diagnostics_8h.html#a8c5a5b1ea95abc1466fe08341e51e7ce',1,'TrinityTrack6000_Diagnostics.h']]],
-  ['diagnostics_5fline_5fbuffer_5fsize_1',['DIAGNOSTICS_LINE_BUFFER_SIZE',['../_trinity_track6000___diagnostics_8h.html#a2940d3b517e87398821eaa34ec46d3d5',1,'TrinityTrack6000_Diagnostics.h']]]
+  ['arm_5fgun_5fgpio_5fport_0',['ARM_GUN_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a51b54f401f3ff447468429a0bc26b222',1,'TrinityTrack6000_Pinout.h']]],
+  ['arm_5fgun_5fpin_1',['ARM_GUN_Pin',['../_trinity_track6000___pinout_8h.html#ad38e72998dbd4f640605fe6db1e31d2f',1,'TrinityTrack6000_Pinout.h']]]
 ];

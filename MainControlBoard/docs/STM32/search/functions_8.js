@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emcp23s17_0',['~MCP23S17',['../class_m_c_p23_s17.html#aff8d80f9b741d1bc4734fe6aaa29e853',1,'MCP23S17']]]
+  ['write_0',['write',['../class_m_c_p23_s17.html#a893c14d3cc112b9b3737f51502f2c20b',1,'MCP23S17']]]
 ];

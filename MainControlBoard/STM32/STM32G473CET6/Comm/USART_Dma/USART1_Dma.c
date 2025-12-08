@@ -34,6 +34,8 @@ volatile uint16_t huart1_dma_rx_ring_buffer_length=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_head=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_tail=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_length=0;
+// Decide if use of volatile is necessary for these variables
+// This is a low level driver so it has to be as efficient as possible
 
 extern UART_HandleTypeDef huart1;
 extern DMA_HandleTypeDef hdma_usart1_tx;
@@ -125,12 +127,47 @@ bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
     // Determine how much data to read
     uint16_t i=0;
     uint16_t new_tail=huart1_dma_rx_ring_buffer_tail;
-    for(;i<huart1_dma_rx_ring_buffer_length;i++){
+    uint16_t parse_status=0; // 0 - sequence with \r or \n on beggining - invalid
+                             // 1 - \r or \n found
+                             // 2 - \r\n found
+    UNUSED(parse_status);
+    for(;(i<maxLength)&&(i<huart1_dma_rx_ring_buffer_length);i++){
         // Iterate until /r or /n is found or maxLength is reached
+        if(huart1_dma_rx_ring_buffer[new_tail]=='\r'){
+            // End of command
+            parse_status=1;
+            break;
+        }
+        else if(huart1_dma_rx_ring_buffer[new_tail]=='\n'){
+            // End of command
+            parse_status=1;
+            break;
+        }
+        dst[i]=huart1_dma_rx_ring_buffer[new_tail];
+
+        new_tail=(new_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
     }
-    // Re-enable USART1 and DMA1_Channel7 interrupts
-    __NVIC_EnableIRQ(USART1_IRQn);
-    __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+    // *length is 0 no matter what
+    // FIX
+    if(*length==0){
+        // No valid data
+        // Re-enable USART1 and DMA1_Channel7 interrupts
+        __NVIC_EnableIRQ(USART1_IRQn);
+        __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+        return false;
+    }
+    else if(*length>0){
+        // Valid data
+        i++;
+        *length=i;
+        dst[i]='\0'; // Null terminate
+        huart1_dma_rx_ring_buffer_tail=new_tail;
+        huart1_dma_rx_ring_buffer_length-=i;
+        // Re-enable USART1 and DMA1_Channel7 interrupts
+        __NVIC_EnableIRQ(USART1_IRQn);
+        __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+        return true;
+    }
     return false;
 }
 
@@ -156,6 +193,7 @@ void usart1_dma_rx_complete(const uint16_t dma_transfer_size){
     }
     usart1_dma_copy_from_rx_buffer(dma_transfer_size);
     // Restart DMA reception
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
+    // HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
+    usart1_dma_rx_init();
     // Check HAL status
 }

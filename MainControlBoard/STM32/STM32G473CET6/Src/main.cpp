@@ -38,7 +38,7 @@ int main(void){
     ramInfoRAM2();
     ramInfoCCSRAM();
 
-    uint8_t testData[]="Hello\r\n";
+    uint8_t testData[]="Hello world this is DMA test\r\n";
     uint16_t testDataLength=strlen((const char*)testData);
 
     uint8_t receivedData[128]={0};
@@ -49,14 +49,22 @@ int main(void){
     UNUSED(testDataLength);
 
     usart1_dma_rx_init();
-    //usart1_dma_enq_data(testData,testDataLength);
 
     while(1){
+        while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
+            // Wait for data
+        }
+        receivedData[receivedDataLength]='\r';
+        receivedData[receivedDataLength+1]='\n';
+        receivedDataLength+=2;
+        usart1_dma_enq_data(receivedData,receivedDataLength);
+        // Simple echo test
+
         //HAL_UART_Receive(&huart1,receivedData,128,DEBUG_UART_TIMEOUT);
         //receivedDataLength=strlen((const char*)receivedData);
         //HAL_UART_Transmit(&huart1,receivedData,receivedDataLength,DEBUG_UART_TIMEOUT);
         //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-        //HAL_Delay(1000);
+        //HAL_Delay(500);
     }
 
     return 0;

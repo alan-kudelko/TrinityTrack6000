@@ -1,0 +1,7 @@
+<map id="HAL_UARTEx_RxEventCallback" name="HAL_UARTEx_RxEventCallback">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,221,40"/>
+<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,13,436,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,24,253,24,253,29,221,29"/>
+<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af" title="Copies data from the provided source DMA buffer to the receive ring buffer." alt="" coords="484,5,641,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,24,468,24,468,29,436,29"/>
+</map>

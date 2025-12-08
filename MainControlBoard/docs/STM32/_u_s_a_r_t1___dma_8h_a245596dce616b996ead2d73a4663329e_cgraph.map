@@ -1,0 +1,5 @@
+<map id="usart1_dma_enq_data" name="usart1_dma_enq_data">
+<area shape="rect" id="Node000001" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="5,13,155,40"/>
+<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="203,5,345,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,24,188,24,188,29,155,29"/>
+</map>

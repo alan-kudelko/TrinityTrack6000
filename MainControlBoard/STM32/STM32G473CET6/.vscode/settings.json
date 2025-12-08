@@ -18,5 +18,6 @@
   "cmake.buildtypes":[
     "Debug",
     "Release"
-  ]
+  ],
+  "doki.background.path": "D:\\VS_Code_Assets\\kali-linux-3840x2160-18037.jpg"
 }
