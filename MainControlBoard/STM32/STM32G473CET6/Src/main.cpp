@@ -54,9 +54,9 @@ int main(void){
         while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
             // Wait for data
         }
-        receivedData[receivedDataLength]='\r';
-        receivedData[receivedDataLength+1]='\n';
-        receivedDataLength+=2;
+        receivedData[receivedDataLength-1]='\r';
+        receivedData[receivedDataLength]='\n';
+        receivedDataLength+=1;
         usart1_dma_enq_data(receivedData,receivedDataLength);
         // Simple echo test
 

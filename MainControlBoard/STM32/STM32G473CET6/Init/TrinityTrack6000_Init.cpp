@@ -35,6 +35,8 @@ const char msg_init_status_nok[]="FAILED";
 
 //const char msg_init_
 
+extern "C" void usart1_dma_init(void);
+
 void SystemClock_Config(void){
   	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
@@ -434,7 +436,11 @@ void MX_GPIO_Init(void){
 }
 
 void initializeMemory(void){
+// Initialize RAM info variables
 	ramInfoInit();
+// DMA memory zeroing and testing could be added here
+	usart1_dma_init();
+	//usart2_dma_init();
 // TheadX memory allocation etc.
 }
 

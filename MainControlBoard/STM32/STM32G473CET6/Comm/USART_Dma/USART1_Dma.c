@@ -14,6 +14,7 @@
 #include <USART1_Dma.h>
 
 #include <stdbool.h>
+#include <string.h>
 
 #include <stm32g4xx_hal.h>
 
@@ -39,6 +40,26 @@ volatile uint16_t huart1_dma_tx_ring_buffer_length=0;
 
 extern UART_HandleTypeDef huart1;
 extern DMA_HandleTypeDef hdma_usart1_tx;
+
+void usart1_dma_init(void){
+    // Initialize ring buffer variables
+    // all variables are stored in .dmaBuff section in CCSRAM memory region
+
+    huart1_dma_rx_ring_buffer_head=0;
+    huart1_dma_rx_ring_buffer_tail=0;
+    huart1_dma_rx_ring_buffer_length=0;
+
+    huart1_dma_tx_ring_buffer_head=0;
+    huart1_dma_tx_ring_buffer_tail=0;
+    huart1_dma_tx_ring_buffer_length=0;
+
+    huart1_dma_tx_buffer_length=0;
+
+    memset((void*)huart1_dma_rx_buffer,0,UART1_DMA_RX_BUFFER_SIZE);
+    memset((void*)huart1_dma_tx_buffer,0,UART1_DMA_TX_BUFFER_SIZE);
+    memset((void*)huart1_dma_rx_ring_buffer,0,UART1_DMA_RX_RING_BUFFER_SIZE);
+    memset((void*)huart1_dma_tx_ring_buffer,0,UART1_DMA_TX_RING_BUFFER_SIZE);
+}
 
 bool usart1_dma_enq_data(const uint8_t*data,const uint16_t length){
     // Check if there is enough space in the transmit ring buffer
@@ -117,6 +138,7 @@ bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
     __NVIC_DisableIRQ(USART1_IRQn);
     __NVIC_DisableIRQ(DMA1_Channel7_IRQn);
     // Check if there is data available in the receive ring buffer
+    // This is correct
     if(huart1_dma_rx_ring_buffer_length==0){
         // No data available
         *length=0;
@@ -124,51 +146,67 @@ bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
         __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
         return false;
     }
-    // Determine how much data to read
-    uint16_t i=0;
-    uint16_t new_tail=huart1_dma_rx_ring_buffer_tail;
-    uint16_t parse_status=0; // 0 - sequence with \r or \n on beggining - invalid
-                             // 1 - \r or \n found
-                             // 2 - \r\n found
-    UNUSED(parse_status);
-    for(;(i<maxLength)&&(i<huart1_dma_rx_ring_buffer_length);i++){
-        // Iterate until /r or /n is found or maxLength is reached
-        if(huart1_dma_rx_ring_buffer[new_tail]=='\r'){
-            // End of command
-            parse_status=1;
-            break;
-        }
-        else if(huart1_dma_rx_ring_buffer[new_tail]=='\n'){
-            // End of command
-            parse_status=1;
-            break;
-        }
-        dst[i]=huart1_dma_rx_ring_buffer[new_tail];
+    // Determine if there is a complete command in the buffer
+    // A complete command ends with \r or \n or \r\n
+    // Iterate through the ring buffer to find the end of command
+    uint16_t temp_tail=huart1_dma_rx_ring_buffer_tail;
+    uint8_t command_found=0; // 0 - no command, 1 - \r found, 2 - \n found
+    // Check if first character is end of command
+    // In case someone send only \r or \n or combination by clicking enter multiple times
 
-        new_tail=(new_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
+    while(temp_tail!=huart1_dma_rx_ring_buffer_head){
+        if(huart1_dma_rx_ring_buffer[temp_tail]=='\r'){
+            command_found=1;
+            break;
+        }
+        else if(huart1_dma_rx_ring_buffer[temp_tail]=='\n'){
+            command_found=2;
+            break;
+        }
+        temp_tail=(temp_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
     }
-    // *length is 0 no matter what
-    // FIX
-    if(*length==0){
-        // No valid data
-        // Re-enable USART1 and DMA1_Channel7 interrupts
-        __NVIC_EnableIRQ(USART1_IRQn);
-        __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
-        return false;
+    temp_tail=(temp_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
+    // FIX magic numbers according to MISRA C:2025
+    // FIX/Check longer strings in putty
+    switch(command_found){
+        case 0:
+            // No complete command found
+            *length=0;
+            __NVIC_EnableIRQ(USART1_IRQn);
+            __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+            return false;
+        case 1:
+        case 2:
+            // Complete command found
+            // Determine how much data to copy including the end character
+            // End character is switched to \0
+            uint16_t command_length=0;
+
+            if(temp_tail>huart1_dma_rx_ring_buffer_tail){
+                command_length=temp_tail-huart1_dma_rx_ring_buffer_tail;
+            }
+            else{
+                command_length=UART1_DMA_RX_RING_BUFFER_SIZE-(huart1_dma_rx_ring_buffer_tail-temp_tail);
+            }
+            uint16_t i=0;
+            for(;i<command_length;i++){
+                dst[i]=huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail];
+                huart1_dma_rx_ring_buffer_tail=(huart1_dma_rx_ring_buffer_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
+            }
+            *length=i;
+            // Check for \r\n sequence or \n\r sequence and adjust temp_tail accordingly
+            // Or any other combination of two end characters to make this robust
+            huart1_dma_rx_ring_buffer_length-=command_length;
+            __NVIC_EnableIRQ(USART1_IRQn);
+            __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+            return true;
+
+        default:
+            *length=0;
+            __NVIC_EnableIRQ(USART1_IRQn);
+            __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+            return false;
     }
-    else if(*length>0){
-        // Valid data
-        i++;
-        *length=i;
-        dst[i]='\0'; // Null terminate
-        huart1_dma_rx_ring_buffer_tail=new_tail;
-        huart1_dma_rx_ring_buffer_length-=i;
-        // Re-enable USART1 and DMA1_Channel7 interrupts
-        __NVIC_EnableIRQ(USART1_IRQn);
-        __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
-        return true;
-    }
-    return false;
 }
 
 void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size){

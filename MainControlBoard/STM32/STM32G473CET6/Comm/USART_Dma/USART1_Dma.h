@@ -52,6 +52,14 @@ extern volatile uint16_t huart1_dma_tx_ring_buffer_length;
 #endif // __cplusplus
 
 /**
+ * @brief Initializes USART1 DMA functionality, ring buffers and variables.
+ * @note This function must be called before using any other USART1 DMA functions.
+ * It sets up the necessary buffers and prepares USART1 for DMA operations.
+ * @warning This function should be called only once during system initialization.
+ */
+extern void usart1_dma_init(void);
+
+/**
  * @brief Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space.
  * @param data Pointer to the data buffer to be sent.
  * @param length Length of the data to be sent in bytes.
