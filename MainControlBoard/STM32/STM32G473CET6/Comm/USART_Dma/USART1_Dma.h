@@ -29,6 +29,13 @@
 #define UART1_DMA_RX_RING_BUFFER_SIZE 512
 #define UART1_DMA_TX_RING_BUFFER_SIZE 512
 
+#define UART1_DMA_RX_R_CHAR '\r'
+#define UART1_DMA_RX_N_CHAR '\n'
+
+#define UART1_DMA_RX_NO_COMMAND 0
+#define UART1_DMA_RX_R_FOUND 1
+#define UART1_DMA_RX_N_FOUND 2
+
  /** @} */
 
 extern uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE] __attribute((section(".dmaBuff")));
@@ -101,7 +108,7 @@ extern void usart1_dma_rx_init(void);
  * @note This function copies data until reaching a \r, \n or \r\n sequence or until maxLength is reached.
  * @warning This function is dedicated to process debug terminal incoming data.
  */
-extern bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength);
+extern bool usart1_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength);
 
 /**
  * @brief Copies data from the source DMA buffer to the receive ring buffer.

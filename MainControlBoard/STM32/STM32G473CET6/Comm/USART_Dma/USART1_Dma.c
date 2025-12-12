@@ -40,6 +40,7 @@ volatile uint16_t huart1_dma_tx_ring_buffer_length=0;
 
 extern UART_HandleTypeDef huart1;
 extern DMA_HandleTypeDef hdma_usart1_tx;
+extern DMA_HandleTypeDef hdma_usart1_rx;
 
 void usart1_dma_init(void){
     // Initialize ring buffer variables
@@ -126,41 +127,70 @@ void usart1_dma_tx_complete(void){
 }
 
 void usart1_dma_rx_init(void){
+    HAL_StatusTypeDef hal_status;
     // Initialize DMA for USART1 RX
     // Start the first DMA reception
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
     // Check HAL status
+    hal_status=HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
+
+    // Check for errorrs
+    if(hal_status!=HAL_OK){
+        // Error handling
+        // For now just a debug loop
+        while(1){
+            // Debug loop
+        }
+    }
+    // If there is an error withing HAL
+    // Try to reinitialize DMA reception
+    // Change signature of function to return HAL_StatusTypeDef
+    // To allow error handling by caller
+
+    // Enable IDLE line detection interrupt
     __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
+    // Disable Half Transfer interrupt to avoid unnecessary interrupts
+    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx,DMA_IT_HT);
 }
 
-bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
+bool usart1_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength){
+    // Check if parameters are valid
+    if((dst==NULL)||(length==NULL)||(maxLength==0)){
+        // Invalid parameters
+        return false;
+    }
     // Disable only USART1 and DMA1_Channel7 interrupts to avoid inconsistencies during buffer update
-    __NVIC_DisableIRQ(USART1_IRQn);
     __NVIC_DisableIRQ(DMA1_Channel7_IRQn);
+    __NVIC_DisableIRQ(USART1_IRQn);
     // Check if there is data available in the receive ring buffer
     // This is correct
     if(huart1_dma_rx_ring_buffer_length==0){
         // No data available
         *length=0;
-        __NVIC_EnableIRQ(USART1_IRQn);
         __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+        __NVIC_EnableIRQ(USART1_IRQn);
         return false;
     }
     // Determine if there is a complete command in the buffer
     // A complete command ends with \r or \n or \r\n
     // Iterate through the ring buffer to find the end of command
     uint16_t temp_tail=huart1_dma_rx_ring_buffer_tail;
-    uint8_t command_found=0; // 0 - no command, 1 - \r found, 2 - \n found
+    uint8_t command_found=UART1_DMA_RX_NO_COMMAND; // 0 - no command, 1 - \r found, 2 - \n found
     // Check if first character is end of command
-    // In case someone send only \r or \n or combination by clicking enter multiple times
-
+    // In case someone sends only \r or \n or combination by clicking enter multiple times
+    while(((huart1_dma_rx_ring_buffer[temp_tail]==UART1_DMA_RX_R_CHAR)||(huart1_dma_rx_ring_buffer[temp_tail]==UART1_DMA_RX_N_CHAR))&&
+          (temp_tail!=huart1_dma_rx_ring_buffer_head)){
+        // Skip end characters at the beginning
+        // May be used if someone presses enter multiple times
+        temp_tail=(temp_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
+    }
+    // Now search for end character
     while(temp_tail!=huart1_dma_rx_ring_buffer_head){
-        if(huart1_dma_rx_ring_buffer[temp_tail]=='\r'){
-            command_found=1;
+        if(huart1_dma_rx_ring_buffer[temp_tail]==UART1_DMA_RX_R_CHAR){
+            command_found=UART1_DMA_RX_R_FOUND;
             break;
         }
-        else if(huart1_dma_rx_ring_buffer[temp_tail]=='\n'){
-            command_found=2;
+        else if(huart1_dma_rx_ring_buffer[temp_tail]==UART1_DMA_RX_N_CHAR){
+            command_found=UART1_DMA_RX_N_FOUND;
             break;
         }
         temp_tail=(temp_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
@@ -169,14 +199,8 @@ bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
     // FIX magic numbers according to MISRA C:2025
     // FIX/Check longer strings in putty
     switch(command_found){
-        case 0:
-            // No complete command found
-            *length=0;
-            __NVIC_EnableIRQ(USART1_IRQn);
-            __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
-            return false;
-        case 1:
-        case 2:
+        case UART1_DMA_RX_R_FOUND:
+        case UART1_DMA_RX_N_FOUND:
             // Complete command found
             // Determine how much data to copy including the end character
             // End character is switched to \0
@@ -193,18 +217,23 @@ bool usart1_dma_read_data(uint8_t*dst,uint8_t*length,const uint16_t maxLength){
                 dst[i]=huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_tail];
                 huart1_dma_rx_ring_buffer_tail=(huart1_dma_rx_ring_buffer_tail+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
             }
+            dst[i-1]='\0';
             *length=i;
             // Check for \r\n sequence or \n\r sequence and adjust temp_tail accordingly
             // Or any other combination of two end characters to make this robust
             huart1_dma_rx_ring_buffer_length-=command_length;
-            __NVIC_EnableIRQ(USART1_IRQn);
             __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+            __NVIC_EnableIRQ(USART1_IRQn);
             return true;
-
+        case UART1_DMA_RX_NO_COMMAND:
+            // No complete command found
         default:
+            // Should not happen
             *length=0;
-            __NVIC_EnableIRQ(USART1_IRQn);
+            huart1_dma_rx_ring_buffer_tail=huart1_dma_tx_ring_buffer_head;
+            huart1_dma_rx_ring_buffer_length=0;
             __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+            __NVIC_EnableIRQ(USART1_IRQn);
             return false;
     }
 }
@@ -226,12 +255,12 @@ void usart1_dma_rx_complete(const uint16_t dma_transfer_size){
     HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
     if((huart1_dma_rx_ring_buffer_length+dma_transfer_size)>UART1_DMA_RX_RING_BUFFER_SIZE){
         // Overflow - reset buffer
-        // Don't copy new data
-        return;
+        // Overwrite data
+        huart1_dma_rx_ring_buffer_head=0;
+        huart1_dma_rx_ring_buffer_tail=0;
+        huart1_dma_rx_ring_buffer_length=0;
     }
     usart1_dma_copy_from_rx_buffer(dma_transfer_size);
     // Restart DMA reception
-    // HAL_UARTEx_ReceiveToIdle_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
     usart1_dma_rx_init();
-    // Check HAL status
 }

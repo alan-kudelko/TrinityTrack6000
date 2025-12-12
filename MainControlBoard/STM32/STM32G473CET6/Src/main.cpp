@@ -42,7 +42,7 @@ int main(void){
     uint16_t testDataLength=strlen((const char*)testData);
 
     uint8_t receivedData[128]={0};
-    uint8_t receivedDataLength=0;
+    uint16_t receivedDataLength=0;
 
     UNUSED(receivedData);
     UNUSED(receivedDataLength);
@@ -51,9 +51,12 @@ int main(void){
     usart1_dma_rx_init();
 
     while(1){
-        while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
+        //while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
             // Wait for data
-        }
+       // }
+       while(1){
+        // Debug loop
+       }
         receivedData[receivedDataLength-1]='\r';
         receivedData[receivedDataLength]='\n';
         receivedDataLength+=1;
