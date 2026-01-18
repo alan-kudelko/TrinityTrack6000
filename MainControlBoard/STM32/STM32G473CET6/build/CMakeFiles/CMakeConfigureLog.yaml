@@ -5,10 +5,10 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:207 (message)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       The target system is: Generic -  - arm
-      The host system is: Windows - 10.0.26100 - AMD64
+      The host system is: Windows - 10.0.26200 - AMD64
   -
     kind: "find-v1"
     backtrace:
@@ -17,7 +17,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -44,6 +44,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -55,7 +56,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
       Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe 
@@ -87,7 +88,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -114,6 +115,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -125,7 +127,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe 
@@ -146,7 +148,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -171,6 +173,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -188,6 +191,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -198,7 +202,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -223,6 +227,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -240,6 +245,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -250,7 +256,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -275,6 +281,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -292,6 +299,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -302,7 +310,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -327,6 +335,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -344,6 +353,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -354,7 +364,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -379,6 +389,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -396,6 +407,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -406,7 +418,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -431,6 +443,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -448,6 +461,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -458,7 +472,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -483,6 +497,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -500,6 +515,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -510,7 +526,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -535,6 +551,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -552,6 +569,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -562,7 +580,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -587,6 +605,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -619,6 +638,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-dlltool.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-dlltool.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-dlltool.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-dlltool"
       - "C:/Windows/arm-none-eabi-dlltool.com"
       - "C:/Windows/arm-none-eabi-dlltool.exe"
       - "C:/Windows/arm-none-eabi-dlltool"
@@ -658,6 +680,9 @@ events:
       - "D:/Programy/Graphviz/bin/dlltool.com"
       - "D:/Programy/Graphviz/bin/dlltool.exe"
       - "D:/Programy/Graphviz/bin/dlltool"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/dlltool.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/dlltool.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/dlltool"
       - "C:/Windows/dlltool.com"
       - "C:/Windows/dlltool.exe"
       - "C:/Windows/dlltool"
@@ -681,6 +706,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -691,7 +717,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -716,6 +742,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -733,6 +760,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -743,7 +771,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -768,6 +796,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -800,6 +829,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-tapi.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-tapi.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-tapi"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-tapi.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-tapi.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-tapi"
       - "C:/Windows/arm-none-eabi-tapi.com"
       - "C:/Windows/arm-none-eabi-tapi.exe"
       - "C:/Windows/arm-none-eabi-tapi"
@@ -839,6 +871,9 @@ events:
       - "D:/Programy/Graphviz/bin/tapi.com"
       - "D:/Programy/Graphviz/bin/tapi.exe"
       - "D:/Programy/Graphviz/bin/tapi"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/tapi.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/tapi.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/tapi"
       - "C:/Windows/tapi.com"
       - "C:/Windows/tapi.exe"
       - "C:/Windows/tapi"
@@ -862,6 +897,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -872,7 +908,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -899,6 +935,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -931,6 +968,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.3"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.3.com"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.3.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.3"
@@ -970,6 +1010,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.com"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar-14"
@@ -1009,6 +1052,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar14"
       - "C:/Windows/arm-none-eabi-gcc-ar14.com"
       - "C:/Windows/arm-none-eabi-gcc-ar14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar14"
@@ -1033,6 +1079,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1043,7 +1090,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1070,6 +1117,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -1102,6 +1150,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.3"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3"
@@ -1141,6 +1192,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14"
@@ -1180,6 +1234,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib14"
       - "C:/Windows/arm-none-eabi-gcc-ranlib14.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib14"
@@ -1204,6 +1261,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1217,7 +1275,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1244,6 +1302,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1255,7 +1314,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
       Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-g++.exe 
@@ -1287,7 +1346,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1314,6 +1373,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1325,7 +1385,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-g++.exe 
@@ -1346,7 +1406,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1373,6 +1433,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -1405,6 +1466,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.3"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.3.com"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.3.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.3"
@@ -1444,6 +1508,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-14"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.com"
       - "C:/Windows/arm-none-eabi-gcc-ar-14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar-14"
@@ -1483,6 +1550,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar14"
       - "C:/Windows/arm-none-eabi-gcc-ar14.com"
       - "C:/Windows/arm-none-eabi-gcc-ar14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar14"
@@ -1507,6 +1577,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1517,7 +1588,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1544,6 +1615,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -1576,6 +1648,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.3"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3"
@@ -1615,6 +1690,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-14"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-14"
@@ -1654,6 +1732,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib14"
       - "C:/Windows/arm-none-eabi-gcc-ranlib14.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib14.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib14"
@@ -1678,6 +1759,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1688,7 +1770,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       GNU assembler (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
@@ -1702,7 +1784,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1729,6 +1811,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -1761,6 +1844,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-"
       - "C:/Windows/arm-none-eabi-gcc-ar-.com"
       - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar-"
@@ -1800,6 +1886,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ar-"
       - "C:/Windows/arm-none-eabi-gcc-ar-.com"
       - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
       - "C:/Windows/arm-none-eabi-gcc-ar-"
@@ -1824,6 +1913,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1834,7 +1924,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1861,6 +1951,7 @@ events:
       - "C:/Program Files/PuTTY/"
       - "D:/Programy/doxygen/bin/"
       - "D:/Programy/Graphviz/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
       - "C:/Windows/"
       - "C:/Users/kujon/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "D:/Programy/ninja/"
@@ -1893,6 +1984,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-"
@@ -1932,6 +2026,9 @@ events:
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Programy/Graphviz/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/arm-none-eabi-gcc-ranlib-"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
       - "C:/Windows/arm-none-eabi-gcc-ranlib-"
@@ -1956,6 +2053,7 @@ events:
         - "C:\\Program Files\\PuTTY\\"
         - "D:\\Programy\\doxygen\\bin"
         - "D:\\Programy\\Graphviz\\bin"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
         - "C:\\WINDOWS"
         - "C:\\Users\\kujon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "D:\\Programy\\ninja"
@@ -1966,12 +2064,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-pi31rp"
-      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-pi31rp"
+      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-xbl270"
+      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-xbl270"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1980,10 +2078,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-pi31rp'
+        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-xbl270'
         
-        Run Build Command(s): ninja -v cmTC_03d0c
-        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): ninja -v cmTC_9c2e9
+        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -1991,8 +2089,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_03d0c.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_03d0c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cchMZcma.s
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_9c2e9.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_9c2e9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccdy8rPQ.s
         GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2009,13 +2107,13 @@ events:
          D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 1ef75dace964d07dc45f44c52d1314e5
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_03d0c.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cchMZcma.s
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_9c2e9.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccdy8rPQ.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_03d0c.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_03d0c.a  CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_03d0c.a && cd ."
+        COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_9c2e9.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_9c2e9.a  CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_9c2e9.a && cd ."
         
       exitCode: 0
   -
@@ -2023,7 +2121,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -2043,15 +2141,15 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-pi31rp']
+        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-xbl270']
         ignore line: []
-        ignore line: [Run Build Command(s): ninja -v cmTC_03d0c]
-        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): ninja -v cmTC_9c2e9]
+        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe   -std=gnu11   -v -o CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -2059,8 +2157,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_03d0c.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_03d0c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cchMZcma.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_9c2e9.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_9c2e9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -std=gnu11 -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\ccdy8rPQ.s]
         ignore line: [GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -2077,8 +2175,8 @@ events:
         ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 1ef75dace964d07dc45f44c52d1314e5]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_03d0c.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cchMZcma.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_9c2e9.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\ccdy8rPQ.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
@@ -2087,8 +2185,8 @@ events:
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_03d0c.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_03d0c.a  CMakeFiles/cmTC_03d0c.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_03d0c.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_9c2e9.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_9c2e9.a  CMakeFiles/cmTC_9c2e9.dir/CMakeCCompilerABI.c.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_9c2e9.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -2102,12 +2200,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-v9o7am"
-      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-v9o7am"
+      source: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-ifl5zr"
+      binary: "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-ifl5zr"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2117,10 +2215,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-v9o7am'
+        Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-ifl5zr'
         
-        Run Build Command(s): ninja -v cmTC_6518a
-        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): ninja -v cmTC_2f591
+        [1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -2128,8 +2226,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_6518a.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6518a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7mfeRL.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_2f591.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2f591.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cctw2AJj.s
         GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2152,13 +2250,13 @@ events:
          D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: bed1a8c09af7a45230275f732365cbb8
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_6518a.dir/'
-         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7mfeRL.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_2f591.dir/'
+         D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cctw2AJj.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_6518a.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_6518a.a  CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_6518a.a && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_2f591.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_2f591.a  CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_2f591.a && cd ."
         
       exitCode: 0
   -
@@ -2166,7 +2264,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -2192,15 +2290,15 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:64 (project)"
+      - "CMakeLists.txt:66 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-v9o7am']
+        ignore line: [Change Dir: 'D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/CMakeFiles/CMakeScratch/TryCompile-ifl5zr']
         ignore line: []
-        ignore line: [Run Build Command(s): ninja -v cmTC_6518a]
-        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): ninja -v cmTC_2f591]
+        ignore line: [[1/2] D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -2208,8 +2306,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_6518a.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6518a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7mfeRL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_2f591.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2f591.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\kujon\\AppData\\Local\\Temp\\cctw2AJj.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -2232,8 +2330,8 @@ events:
         ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: bed1a8c09af7a45230275f732365cbb8]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_6518a.dir/']
-        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cc7mfeRL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_2f591.dir/']
+        ignore line: [ D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\kujon\\AppData\\Local\\Temp\\cctw2AJj.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../libexec/gcc/]
@@ -2242,8 +2340,8 @@ events:
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_6518a.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_6518a.a  CMakeFiles/cmTC_6518a.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_6518a.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_2f591.a && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ar.exe qc libcmTC_2f591.a  CMakeFiles/cmTC_2f591.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Projekty\\TrinityTrack6000\\tools\\arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi\\bin\\arm-none-eabi-ranlib.exe libcmTC_2f591.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []

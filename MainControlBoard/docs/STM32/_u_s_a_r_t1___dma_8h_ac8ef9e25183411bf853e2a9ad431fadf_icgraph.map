@@ -1,0 +1,9 @@
+<map id="usart1_dma_rx_init" name="usart1_dma_rx_init">
+<area shape="rect" id="Node000001" title="Initializes DMA for USART1 reception." alt="" coords="484,31,615,57"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="328,5,377,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,36,377,24,378,19,469,31"/>
+<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,56,436,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="469,57,437,61,436,56,468,52"/>
+<area shape="rect" id="Node000004" href="$_u_s_a_r_t___callbacks_8c.html#a78aac784638b94dd20e0f8a0f3e9ddcc" title=" " alt="" coords="5,56,221,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="253,72,221,72,221,67,253,67"/>
+</map>

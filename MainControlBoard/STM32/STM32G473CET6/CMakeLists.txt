@@ -29,8 +29,10 @@ message(STATUS "[2] C/C++ standards: ${CMAKE_C_STANDARD}/${CMAKE_CXX_STANDARD}")
 get_filename_component(ARM_ROOT "${CMAKE_SOURCE_DIR}" DIRECTORY)
 get_filename_component(ARM_ROOT "${ARM_ROOT}" DIRECTORY)
 get_filename_component(ARM_ROOT "${ARM_ROOT}" DIRECTORY)
+set(THREADX_ROOT "${ARM_ROOT}/tools/threadx-master")
 set(ARM_ROOT "${ARM_ROOT}/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi")
 message(STATUS "[3] ARM toolchain set (local toolchain): ${ARM_ROOT}")
+message(STATUS "    ThreadX root path: ${THREADX_ROOT}")
 
 # Setting up compilers for ARM
 set(CMAKE_C_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
@@ -121,7 +123,19 @@ file(GLOB ARM_CORE_HEADERS
     "${CMAKE_SOURCE_DIR}/Core/Inc/*.h"
     "${CMAKE_SOURCE_DIR}/Drivers/CMSIS/Include/*.h"
 )
-message(STATUS "[11] Adding project sources")
+message(STATUS "[11] Adding ThreadX sources")
+file(GLOB THREADX_SOURCES
+    "${THREADX_ROOT}/common/src/*.c"
+    "${THREADX_ROOT}/ports/cortex_m4/gnu/src/*.c"
+    "${THREADX_ROOT}/ports/cortex_m4/gnu/src/*.S"
+)
+message(STATUS "[12] Adding ThreadX headers")
+file(GLOB THREADX_HEADERS
+    "${THREADX_ROOT}/common/inc/*.h"
+    "${THREADX_ROOT}/ports/cortex_m4/gnu/inc/*.h"
+)
+
+message(STATUS "[12] Adding project sources")
 file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Src/*.cpp"
     "${CMAKE_SOURCE_DIR}/Src/*.c"
@@ -132,7 +146,7 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/*.c"
 )
-message(STATUS "[12] Adding project headers")
+message(STATUS "[13] Adding project headers")
 file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Include/*.h"
     "${CMAKE_SOURCE_DIR}/Include/*.hpp"
@@ -153,6 +167,8 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Init"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma"
+    "${THREADX_ROOT}/common/inc"
+    "${THREADX_ROOT}/ports/cortex_m4/gnu/inc"
 )
 
 add_executable(${PROJECT_NAME}.elf
@@ -162,9 +178,13 @@ add_executable(${PROJECT_NAME}.elf
 )
 
 message(STATUS "Final sources for ${PROJECT_NAME}:")
-foreach(src ${PROJECT_SOURCES} ${PROJECT_HEADERS} ${ARM_CORE_SOURCES} ${ARM_CORE_HEADERS} ${HAL_CORE_SOURCES} ${HAL_CORE_HEADERS})
+set(TOTAL_FILE_COUNT 0)
+foreach(src ${PROJECT_SOURCES} ${PROJECT_HEADERS} ${ARM_CORE_SOURCES} ${ARM_CORE_HEADERS} ${HAL_CORE_SOURCES} ${HAL_CORE_HEADERS} ${THREADX_SOURCES} ${THREADX_HEADERS})
     message(STATUS "${src}")
+    math(EXPR TOTAL_FILE_COUNT "${TOTAL_FILE_COUNT} + 1")
 endforeach()
+
+message(STATUS "Total file count: ${TOTAL_FILE_COUNT}")
 
 add_custom_target(Generate_Doc
     COMMAND doxygen ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile

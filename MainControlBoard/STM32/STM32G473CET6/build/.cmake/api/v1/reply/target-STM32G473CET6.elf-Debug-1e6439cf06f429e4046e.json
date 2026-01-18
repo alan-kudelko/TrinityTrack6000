@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 158,
+				"line" : 174,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 145,
+				"line" : 159,
 				"parent" : 0
 			}
 		]
@@ -86,6 +86,14 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/USART_Dma"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/tools/threadx-master/common/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/tools/threadx-master/ports/cortex_m4/gnu/inc"
 				}
 			],
 			"language" : "C",
@@ -185,6 +193,14 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/USART_Dma"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/tools/threadx-master/common/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/tools/threadx-master/ports/cortex_m4/gnu/inc"
 				}
 			],
 			"language" : "ASM",
@@ -241,6 +257,14 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/USART_Dma"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/tools/threadx-master/common/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/tools/threadx-master/ports/cortex_m4/gnu/inc"
 				}
 			],
 			"language" : "CXX",

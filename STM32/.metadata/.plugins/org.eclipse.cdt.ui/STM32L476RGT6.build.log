@@ -1,0 +1,7 @@
+17:43:59 **** Incremental Build of configuration Debug for project STM32L476RGT6 ****
+make -j12 all 
+make: *** No rule to make target 'all'.  Stop.
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+17:43:59 Build Failed. 1 errors, 0 warnings. (took 127ms)
+

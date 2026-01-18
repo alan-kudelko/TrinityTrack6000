@@ -140,6 +140,8 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acf5215498e261477337e09911cd11640" id="r_acf5215498e261477337e09911cd11640"><td class="memItemLeft" align="right" valign="top">uint8_t <a class="el" href="_u_s_a_r_t1___dma_8c.html#afd73b79ebb85acf21442209088919ee4">huart1_dma_rx_buffer</a>[<a class="el" href="group___d_m_a___buffers___config.html#ga4e32fa92147fa17efa7394e45ec6dcf7">UART1_DMA_RX_BUFFER_SIZE</a>]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf5215498e261477337e09911cd11640">__attribute</a> ((section(&quot;.dmaBuff&quot;)))</td></tr>
+<tr class="memitem:a79e119baa565a33480ab200c72fd6d3e" id="r_a79e119baa565a33480ab200c72fd6d3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e119baa565a33480ab200c72fd6d3e">usart1_dma_init</a> (void)</td></tr>
+<tr class="memdesc:a79e119baa565a33480ab200c72fd6d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes USART1 DMA functionality, ring buffers and variables.  <br /></td></tr>
 <tr class="memitem:a245596dce616b996ead2d73a4663329e" id="r_a245596dce616b996ead2d73a4663329e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a245596dce616b996ead2d73a4663329e">usart1_dma_enq_data</a> (const uint8_t *data, const uint16_t length)</td></tr>
 <tr class="memdesc:a245596dce616b996ead2d73a4663329e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space.  <br /></td></tr>
 <tr class="memitem:a7d797b1036e2eff931e508c48810143b" id="r_a7d797b1036e2eff931e508c48810143b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d797b1036e2eff931e508c48810143b">usart1_dma_copy_to_tx_buffer</a> (uint8_t *dst)</td></tr>
@@ -151,7 +153,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5a84756d8607d4e5d6ca97bd76e8a1b3" id="r_a5a84756d8607d4e5d6ca97bd76e8a1b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a84756d8607d4e5d6ca97bd76e8a1b3">usart1_dma_read_data</a> (uint8_t *dst, uint8_t *length, const uint16_t maxLength)</td></tr>
 <tr class="memdesc:a5a84756d8607d4e5d6ca97bd76e8a1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the USART1 receive ring buffer into the provided destination buffer.  <br /></td></tr>
 <tr class="memitem:a9c8112fb591c08eeb982df2f8e0048af" id="r_a9c8112fb591c08eeb982df2f8e0048af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c8112fb591c08eeb982df2f8e0048af">usart1_dma_copy_from_rx_buffer</a> (const uint16_t dma_transfer_size)</td></tr>
-<tr class="memdesc:a9c8112fb591c08eeb982df2f8e0048af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from the provided source DMA buffer to the receive ring buffer.  <br /></td></tr>
+<tr class="memdesc:a9c8112fb591c08eeb982df2f8e0048af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from the source DMA buffer to the receive ring buffer.  <br /></td></tr>
 <tr class="memitem:a85b4ee3a11083efdb77f4622a19bc817" id="r_a85b4ee3a11083efdb77f4622a19bc817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85b4ee3a11083efdb77f4622a19bc817">usart1_dma_rx_complete</a> (const uint16_t dma_transfer_size)</td></tr>
 <tr class="memdesc:a85b4ee3a11083efdb77f4622a19bc817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA reception is complete.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -221,21 +223,20 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Copies data from the provided source DMA buffer to the receive ring buffer. </p>
+<p>Copies data from the source DMA buffer to the receive ring buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dma_transfer_size</td><td>Length of the data to be copied in bytes. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This function is dedicated to process debug terminal incoming data. Which means that it copies data until reaching /r/n sequence. If there is no /r/n sequence in the buffer, no data is copied and the ring buffer is cleared. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This function is intended for internal use only. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t1___dma_8h_a9c8112fb591c08eeb982df2f8e0048af_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8h_a9c8112fb591c08eeb982df2f8e0048af_icgraph" loading="lazy" alt=""/></div>
 <map name="a_u_s_a_r_t1___dma_8h_a9c8112fb591c08eeb982df2f8e0048af_icgraph" id="a_u_s_a_r_t1___dma_8h_a9c8112fb591c08eeb982df2f8e0048af_icgraph">
-<area shape="rect" title="Copies data from the provided source DMA buffer to the receive ring buffer." alt="" coords="484,5,641,48"/>
+<area shape="rect" title="Copies data from the source DMA buffer to the receive ring buffer." alt="" coords="484,5,641,48"/>
 <area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,13,436,40"/>
 <area shape="poly" title=" " alt="" coords="468,29,437,29,437,24,468,24"/>
 <area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#a78aac784638b94dd20e0f8a0f3e9ddcc" title=" " alt="" coords="5,13,221,40"/>
@@ -287,6 +288,8 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="441,36,399,31,400,25,441,31"/>
 <area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="241,56,408,83"/>
 <area shape="poly" title=" " alt="" coords="441,57,409,62,408,56,440,52"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="74,5,124,32"/>
+<area shape="poly" title=" " alt="" coords="234,21,124,21,124,16,234,16"/>
 <area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="5,56,193,83"/>
 <area shape="poly" title=" " alt="" coords="225,72,193,72,193,67,225,67"/>
 </map>
@@ -341,6 +344,45 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="155,24,188,24,188,29,155,29"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_u_s_a_r_t1___dma_8h_a245596dce616b996ead2d73a4663329e_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8h_a245596dce616b996ead2d73a4663329e_icgraph" loading="lazy" alt=""/></div>
+<map name="a_u_s_a_r_t1___dma_8h_a245596dce616b996ead2d73a4663329e_icgraph" id="a_u_s_a_r_t1___dma_8h_a245596dce616b996ead2d73a4663329e_icgraph">
+<area shape="rect" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="103,5,252,32"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a79e119baa565a33480ab200c72fd6d3e" name="a79e119baa565a33480ab200c72fd6d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e119baa565a33480ab200c72fd6d3e">&#9670;&#160;</a></span>usart1_dma_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usart1_dma_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes USART1 DMA functionality, ring buffers and variables. </p>
+<dl class="section note"><dt>Note</dt><dd>This function must be called before using any other USART1 DMA functions. It sets up the necessary buffers and prepares USART1 for DMA operations. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function should be called only once during system initialization. </dd></dl>
 
 </div>
 </div>
@@ -386,8 +428,20 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if data was successfully read, false if no complete command was available. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function copies data until reaching a /r/n sequence. If there is no /r/n sequence in the buffer, no data is copied and the ring buffer is cleared. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function copies data until reaching a \r, <br  />
+ or \r<br  />
+ sequence or until maxLength is reached. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This function is dedicated to process debug terminal incoming data. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_u_s_a_r_t1___dma_8h_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8h_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph" loading="lazy" alt=""/></div>
+<map name="a_u_s_a_r_t1___dma_8h_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph" id="a_u_s_a_r_t1___dma_8h_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph">
+<area shape="rect" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="103,5,256,32"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -421,7 +475,7 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This function is called from the HAL_UART_RxCpltCallback when USART1 reception is complete. It copies received data from the DMA buffer to the receive ring buffer and initiates another DMA reception if needed along with updating the ring buffer pointers and dma_rx_buffer_length variable. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is called from the HAL_UART_RxCpltCallback when USART1 reception is complete. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This function is intended for internal use only. </dd></dl>
 
 </div>
@@ -451,6 +505,20 @@ Here is the call graph for this function:</div>
 
 <p>Initializes DMA for USART1 reception. </p>
 <dl class="section note"><dt>Note</dt><dd>This function sets up the DMA to start receiving data into the RX DMA buffer. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_u_s_a_r_t1___dma_8h_ac8ef9e25183411bf853e2a9ad431fadf_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8h_ac8ef9e25183411bf853e2a9ad431fadf_icgraph" loading="lazy" alt=""/></div>
+<map name="a_u_s_a_r_t1___dma_8h_ac8ef9e25183411bf853e2a9ad431fadf_icgraph" id="a_u_s_a_r_t1___dma_8h_ac8ef9e25183411bf853e2a9ad431fadf_icgraph">
+<area shape="rect" title="Initializes DMA for USART1 reception." alt="" coords="484,31,615,57"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="328,5,377,32"/>
+<area shape="poly" title=" " alt="" coords="468,36,377,24,378,19,469,31"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,56,436,83"/>
+<area shape="poly" title=" " alt="" coords="469,57,437,61,436,56,468,52"/>
+<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#a78aac784638b94dd20e0f8a0f3e9ddcc" title=" " alt="" coords="5,56,221,83"/>
+<area shape="poly" title=" " alt="" coords="253,72,221,72,221,67,253,67"/>
+</map>
+</div>
 
 </div>
 </div>

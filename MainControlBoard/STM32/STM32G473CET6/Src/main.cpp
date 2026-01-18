@@ -24,6 +24,8 @@
 #include <TrinityTrack6000_MemInfo.h>
 #include <USART1_Dma.h>
 
+#include <tx_api.h>
+
 /**
  * @brief  The application entry point.
  * @retval int
@@ -69,6 +71,7 @@ int main(void){
         //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
         //HAL_Delay(500);
     }
+    tx_kernel_enter();
 
     return 0;
 }

@@ -3,6 +3,7 @@ var _u_s_a_r_t1___dma_8c =
     [ "usart1_dma_copy_from_rx_buffer", "_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af", null ],
     [ "usart1_dma_copy_to_tx_buffer", "_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b", null ],
     [ "usart1_dma_enq_data", "_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e", null ],
+    [ "usart1_dma_init", "_u_s_a_r_t1___dma_8c.html#a79e119baa565a33480ab200c72fd6d3e", null ],
     [ "usart1_dma_read_data", "_u_s_a_r_t1___dma_8c.html#a5a84756d8607d4e5d6ca97bd76e8a1b3", null ],
     [ "usart1_dma_rx_complete", "_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817", null ],
     [ "usart1_dma_rx_init", "_u_s_a_r_t1___dma_8c.html#ac8ef9e25183411bf853e2a9ad431fadf", null ],

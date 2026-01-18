@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"group___d_m_a___buffers___config.html#ga0ac63b57bf57f94703540d51295cd010":[0,3,1],
+"group___d_m_a___buffers___config.html#ga283a165aa2d852238e0740cd8c39d7ea":[0,3,2],
+"group___d_m_a___buffers___config.html#ga4e32fa92147fa17efa7394e45ec6dcf7":[0,3,0],
 "group___d_m_a___buffers___config.html#ga4f267f63c6a473d5de70339e59e3c409":[0,3,3],
 "group___i2_c___config.html":[0,2],
 "group___i2_c___config.html#gac51d273517b4a132e5a6161309b15eb1":[0,2,1],

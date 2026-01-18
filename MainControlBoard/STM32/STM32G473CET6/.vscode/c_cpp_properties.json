@@ -15,7 +15,9 @@
           "${workspaceFolder}/Init",
           "${workspaceFolder}/Src",
           "${workspaceFolder}/Devices/MCP23S17",
-          "${workspaceFolder}/Comm/USART_Dma"
+          "${workspaceFolder}/Comm/USART_Dma",
+          "D:/Projekty/TrinityTrack6000/tools/threadx-master/common/inc",
+          "D:/Projekty/TrinityTrack6000/tools/threadx-master/ports/cortex_m4/gnu/inc"
         ],		  
       "browse": {
         "path": [
@@ -32,7 +34,9 @@
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Init",
           "${workspaceFolder}/Devices/MCP23S17",
-          "${workspaceFolder}/Comm/USART_Dma"
+          "${workspaceFolder}/Comm/USART_Dma",
+          "D:/Projekty/TrinityTrack6000/tools/threadx-master/common/inc",
+          "D:/Projekty/TrinityTrack6000/tools/threadx-master/ports/cortex_m4/gnu/inc"
         ],		  
         "limitSymbolsToIncludedHeaders": false
       },

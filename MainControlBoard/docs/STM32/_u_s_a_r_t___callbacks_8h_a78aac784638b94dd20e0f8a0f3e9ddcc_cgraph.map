@@ -1,7 +1,9 @@
 <map id="HAL_UARTEx_RxEventCallback" name="HAL_UARTEx_RxEventCallback">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,221,40"/>
-<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,13,436,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,24,253,24,253,29,221,29"/>
-<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af" title="Copies data from the provided source DMA buffer to the receive ring buffer." alt="" coords="484,5,641,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,24,468,24,468,29,436,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,221,69"/>
+<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,43,436,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,53,253,53,253,59,221,59"/>
+<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af" title="Copies data from the source DMA buffer to the receive ring buffer." alt="" coords="484,5,641,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,42,468,37,469,42,437,47"/>
+<area shape="rect" id="Node000004" href="$_u_s_a_r_t1___dma_8c.html#ac8ef9e25183411bf853e2a9ad431fadf" title="Initializes DMA for USART1 reception." alt="" coords="497,72,628,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="437,65,482,71,481,77,436,70"/>
 </map>
