@@ -37,7 +37,16 @@ message(STATUS "    ThreadX root path: ${THREADX_ROOT}")
 # Setting up compilers for ARM
 set(CMAKE_C_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_CXX_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-g++.exe")
-set(CMAKE_ASM_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-as.exe")
+set(CMAKE_ASM_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
+# ThreadX settings
+set(CMAKE_SYSTEM_PROCESSOR cortex-m4)
+
+set(THREADX_ARCH "cortex_m4")
+set(THREADX_TOOLCHAIN "gnu")
+
+set(MCPU_FLAGS "-mthumb -mcpu=cortex-m4")
+set(VFP_FLAGS "")
+set(SPEC_FLAGS "--specs=nosys.specs")
 # No resource compiler
 set(CMAKE_RC_COMPILER " ")
 
@@ -78,7 +87,7 @@ endif()
 # Setting up compiler flags
 set(CMAKE_C_FLAGS "${CPU_FLAGS_C} -std=gnu${CMAKE_C_STANDARD} -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections ${DEBUG_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CPU_FLAGS_C} -std=gnu++${CMAKE_CXX_STANDARD} -Wall -Werror -fno-exceptions -fno-rtti ${DEBUG_FLAGS}")
-set(CMAKE_ASM_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
+set(CMAKE_ASM_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -x assembler-with-cpp")
 
 # Need to added explicitly, because ninja generator does add -O3 flag automatically
 set(CMAKE_ASM_FLAGS_RELEASE "${CPU_FLAGS_ASM}")
@@ -116,6 +125,9 @@ file(GLOB ARM_CORE_SOURCES
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.s"
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.S"
 )
+# Exlucde stm32g4xx_it.c as it's redefined with threadx support
+list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/stm32g4xx_it.c")
+
 list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/main.c")
 # Note file /Core/main.c is intentionally excluded here
 message(STATUS "[10] Adding STM32 Core headers")
@@ -175,6 +187,7 @@ add_executable(${PROJECT_NAME}.elf
     ${HAL_CORE_SOURCES}
     ${ARM_CORE_SOURCES}
     ${PROJECT_SOURCES}
+    ${THREADX_SOURCES}
 )
 
 message(STATUS "Final sources for ${PROJECT_NAME}:")

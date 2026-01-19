@@ -1,4 +1,4 @@
-set(CMAKE_ASM_COMPILER "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-as.exe")
+set(CMAKE_ASM_COMPILER "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_ASM_COMPILER_ARG1 "")
 set(CMAKE_AR "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-ar.exe")
 set(CMAKE_ASM_COMPILER_AR "D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe")
@@ -17,7 +17,7 @@ set(CMAKE_ASM_COMPILER_LOADED 1)
 set(CMAKE_ASM_COMPILER_ID "GNU")
 set(CMAKE_ASM_COMPILER_VERSION "")
 set(CMAKE_ASM_COMPILER_ENV_VAR "ASM")
-set(CMAKE_ASM_COMPILER_ID_VENDOR_MATCH [==[GNU assembler]==])
+
 set(CMAKE_ASM_ARCHITECTURE_ID "")
 
 

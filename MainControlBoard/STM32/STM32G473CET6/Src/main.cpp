@@ -26,6 +26,18 @@
 
 #include <tx_api.h>
 
+extern "C"{
+
+void tx_application_define(void* first_unused_memory){
+    // Create threads, queues, semaphores, mutexes here
+}
+
+void _tx_initialize_low_level(void){
+    // Low level initialization before ThreadX starts
+}
+
+}
+
 /**
  * @brief  The application entry point.
  * @retval int
@@ -52,6 +64,7 @@ int main(void){
 
     usart1_dma_rx_init();
 
+    tx_kernel_enter();
     while(1){
         //while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
             // Wait for data
@@ -71,7 +84,6 @@ int main(void){
         //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
         //HAL_Delay(500);
     }
-    tx_kernel_enter();
 
     return 0;
 }
