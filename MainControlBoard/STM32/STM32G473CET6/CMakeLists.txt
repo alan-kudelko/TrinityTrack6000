@@ -126,7 +126,7 @@ file(GLOB ARM_CORE_SOURCES
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.S"
 )
 # Exlucde stm32g4xx_it.c as it's redefined with threadx support
-list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/stm32g4xx_it.c")
+#list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/stm32g4xx_it.c")
 
 list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/main.c")
 # Note file /Core/main.c is intentionally excluded here

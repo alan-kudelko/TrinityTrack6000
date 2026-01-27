@@ -61,10 +61,11 @@ int main(void){
     UNUSED(receivedData);
     UNUSED(receivedDataLength);
     UNUSED(testDataLength);
+    HAL_Delay(5000);
 
     usart1_dma_rx_init();
 
-    tx_kernel_enter();
+    //tx_kernel_enter();
     while(1){
         //while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
             // Wait for data
