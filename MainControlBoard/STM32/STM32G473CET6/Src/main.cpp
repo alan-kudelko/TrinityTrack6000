@@ -32,9 +32,6 @@ void tx_application_define(void* first_unused_memory){
     // Create threads, queues, semaphores, mutexes here
 }
 
-void _tx_initialize_low_level(void){
-    // Low level initialization before ThreadX starts
-}
 
 }
 
@@ -61,17 +58,14 @@ int main(void){
     UNUSED(receivedData);
     UNUSED(receivedDataLength);
     UNUSED(testDataLength);
-    HAL_Delay(5000);
+    //HAL_Delay(5000);
 
     usart1_dma_rx_init();
 
     //tx_kernel_enter();
     while(1){
-        //while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
+        while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
             // Wait for data
-       // }
-       while(1){
-        // Debug loop
        }
         receivedData[receivedDataLength-1]='\r';
         receivedData[receivedDataLength]='\n';

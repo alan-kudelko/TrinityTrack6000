@@ -11,4 +11,5 @@
 ../Core/Src/main.c:590:13:MX_USART2_UART_Init	5
 ../Core/Src/main.c:636:13:MX_DMA_Init	1
 ../Core/Src/main.c:683:13:MX_GPIO_Init	1
-../Core/Src/main.c:755:6:Error_Handler	1
+../Core/Src/main.c:759:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:777:6:Error_Handler	1

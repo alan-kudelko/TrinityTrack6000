@@ -11,4 +11,5 @@
 ../Core/Src/main.c:590:13:MX_USART2_UART_Init	8	static
 ../Core/Src/main.c:636:13:MX_DMA_Init	24	static
 ../Core/Src/main.c:683:13:MX_GPIO_Init	48	static
-../Core/Src/main.c:755:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:759:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:777:6:Error_Handler	4	static,ignoring_inline_asm
