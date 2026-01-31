@@ -28,8 +28,32 @@
 
 extern "C"{
 
+// Test blink task
+
+TX_THREAD task_blink_handle;
+ULONG task_blink_stack[128];
+
+void task_blink(ULONG arg){
+    UNUSED(arg);
+    while(1){
+        HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+        tx_thread_sleep(500);
+    }
+}
+
 void tx_application_define(void* first_unused_memory){
     // Create threads, queues, semaphores, mutexes here
+    UNUSED(first_unused_memory);
+    tx_thread_create(&task_blink_handle,
+                    (char*)"Blink Task",
+                    task_blink,
+                    0,
+                    &task_blink_stack,
+                    sizeof(task_blink_stack),
+                    1,
+                    1,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
 }
 
 
@@ -60,9 +84,9 @@ int main(void){
     UNUSED(testDataLength);
     //HAL_Delay(5000);
 
-    usart1_dma_rx_init();
+    //usart1_dma_rx_init();
 
-    //tx_kernel_enter();
+    tx_kernel_enter();
     while(1){
         while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
             // Wait for data

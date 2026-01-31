@@ -37,7 +37,7 @@ message(STATUS "    ThreadX root path: ${THREADX_ROOT}")
 # Setting up compilers for ARM
 set(CMAKE_C_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_CXX_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-g++.exe")
-set(CMAKE_ASM_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
+set(CMAKE_ASM_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-as.exe")
 # ThreadX settings
 set(CMAKE_SYSTEM_PROCESSOR cortex-m4)
 
@@ -87,7 +87,7 @@ endif()
 # Setting up compiler flags
 set(CMAKE_C_FLAGS "${CPU_FLAGS_C} -std=gnu${CMAKE_C_STANDARD} -Wall -Werror -Wno-unused-function -fdata-sections -ffunction-sections ${DEBUG_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CPU_FLAGS_C} -std=gnu++${CMAKE_CXX_STANDARD} -Wall -Werror -fno-exceptions -fno-rtti ${DEBUG_FLAGS}")
-set(CMAKE_ASM_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -x assembler-with-cpp")
+set(CMAKE_ASM_FLAGS "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
 
 # Need to added explicitly, because ninja generator does add -O3 flag automatically
 set(CMAKE_ASM_FLAGS_RELEASE "${CPU_FLAGS_ASM}")
@@ -126,7 +126,7 @@ file(GLOB ARM_CORE_SOURCES
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.S"
 )
 # Exlucde stm32g4xx_it.c as it's redefined with threadx support
-list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/stm32g4xx_it.c")
+#list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/stm32g4xx_it.c")
 
 list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/main.c")
 # Note file /Core/main.c is intentionally excluded here
@@ -137,14 +137,15 @@ file(GLOB ARM_CORE_HEADERS
 )
 message(STATUS "[11] Adding ThreadX sources")
 file(GLOB THREADX_SOURCES
-    "${THREADX_ROOT}/common/src/*.c"
-    "${THREADX_ROOT}/ports/cortex_m4/gnu/src/*.c"
-    "${THREADX_ROOT}/ports/cortex_m4/gnu/src/*.S"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/common/src/*.c"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/*.c"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/*.S"
+    "${CMAKE_SOURCE_DIR}/Core/Src/*.S"
 )
 message(STATUS "[12] Adding ThreadX headers")
 file(GLOB THREADX_HEADERS
-    "${THREADX_ROOT}/common/inc/*.h"
-    "${THREADX_ROOT}/ports/cortex_m4/gnu/inc/*.h"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/common/inc/*.h"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/*.h"
 )
 
 message(STATUS "[12] Adding project sources")
@@ -158,6 +159,8 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/*.c"
 )
+list(REMOVE_ITEM PROJECT_SOURCES "${CMAKE_SOURCE_DIR}/Src/stm32g4xx_it.c")
+
 message(STATUS "[13] Adding project headers")
 file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Include/*.h"
@@ -179,8 +182,8 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Init"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma"
-    "${THREADX_ROOT}/common/inc"
-    "${THREADX_ROOT}/ports/cortex_m4/gnu/inc"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/common/inc"
+    "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
 )
 
 add_executable(${PROJECT_NAME}.elf
