@@ -131,6 +131,13 @@ void MX_DMA_Init(void);
 void MX_GPIO_Init(void);
 
 /**
+ * @brief ThreadX Memory Initialization Function
+ * @param None
+ * @retval None
+ */
+void initializeThreadXMemory(void);
+
+/**
   * @brief Memory Initialization Function
   * @param None
   * @retval None

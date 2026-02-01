@@ -176,6 +176,23 @@ SECTIONS
     _ebss = .;         /* define a global symbol at bss end */
     __bss_end__ = _ebss;
   } >RAM
+  . = ALIGN(4);
+  .task_handles :
+  {
+    PROVIDE ( __TASK_HANDLES_START__ = . );
+    . = ALIGN(4);
+    KEEP(*(.task_handles));
+    KEEP(*(.task_handles*));
+    PROVIDE ( __TASK_HANDLES_END__ = . );
+  } >RAM
+  .task_stacks :
+  {
+    PROVIDE ( __TASK_STACKS_START__ = . );
+    . = ALIGN(4);
+    KEEP(*(.task_stacks));
+    KEEP(*(.task_stacks*));
+    PROVIDE ( __TASK_STACKS_END__ = . );
+  } >RAM
 
   /* User_heap_stack section, used to check that there is enough "RAM" Ram  type memory left */
   ._user_heap_stack :

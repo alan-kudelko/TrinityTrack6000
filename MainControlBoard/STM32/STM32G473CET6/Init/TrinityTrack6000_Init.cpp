@@ -435,6 +435,12 @@ void MX_GPIO_Init(void){
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }
 
+void initializeThreadXMemory(void){
+	// Allocate memory for ThreadX objects from statically allocated pool
+	// to avoid fragmentation and issues with dynamic memory allocation
+	// in embedded systems.
+}
+
 void initializeMemory(void){
 // Initialize RAM info variables
 	ramInfoInit();
@@ -442,6 +448,7 @@ void initializeMemory(void){
 	usart1_dma_init();
 	//usart2_dma_init();
 // TheadX memory allocation etc.
+	initializeThreadXMemory();
 }
 
 void initializeSystem(){

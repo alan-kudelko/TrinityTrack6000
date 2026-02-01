@@ -1848,3 +1848,24 @@ Finished building: default.size.stdout
  
 Finished building: STM32G473CET6.list
  
+15:53:35 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
+make -j12 all 
+arm-none-eabi-size  STM32G473CET6.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34148	     16	   6160	  40324	   9d84	STM32G473CET6.elf
+Finished building: default.size.stdout
+ 
+20:17:54 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
+make -j12 all 
+arm-none-eabi-size  STM32G473CET6.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34148	     16	   6160	  40324	   9d84	STM32G473CET6.elf
+Finished building: default.size.stdout
+ 
+20:25:27 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
+make -j12 all 
+arm-none-eabi-size  STM32G473CET6.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34148	     16	   6160	  40324	   9d84	STM32G473CET6.elf
+Finished building: default.size.stdout
+ 

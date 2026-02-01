@@ -33,7 +33,7 @@
 
 #include <stdint.h>
 
-#define MEMINFO_LINE_BUFFER_SIZE 90
+#define MEMINFO_LINE_BUFFER_SIZE 95
 #define MEMINFO_BAR_BUFFER_SIZE 11
 
 /** @name Headers and footers for RAM memory dumps
@@ -56,6 +56,8 @@ extern const char msg_ramDiagnosticsRAM1_header3[];  /**< RAM1 diagnostics heade
 extern const char msg_ramDiagnosticsRAM1_formatStringData[];   /**< RAM1 diagnostics format string for .data section */
 extern const char msg_ramDiagnosticsRAM1_formatStringBSS[];    /**< RAM1 diagnostics format string for .bss section */
 extern const char msg_ramDiagnosticsRAM1_formatStringHeap[];   /**< RAM1 diagnostics format string for .heap section */
+extern const char msg_ramDiagnosticsRAM1_formatStringTaskHandles[];  /**< RAM1 diagnostics format string for .taskHandles section */
+extern const char msg_ramDiagnosticsRAM1_formatStringTaskStacks[];  /**< RAM1 diagnostics format string for .taskStacks section */
 extern const char msg_ramDiagnosticsRAM1_formatStringStack[];  /**< RAM1 diagnostics format string for .stack section */
 
 extern const char msg_ramDiagnosticsRAM1_formatStringFreeRAM[];  /**< RAM1 diagnostics format string for free RAM */
@@ -89,6 +91,8 @@ extern uint32_t ramDiagnosticsRAM1_lastHeapEnd   __attribute((section(".ramDiagn
 extern uint8_t ramDiagnosticsRAM1_data_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .data section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_bss_size       __attribute((section(".ramDiagnostics.uint8_t")));   /**<  Size of .bss section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_tdat_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .tdat section in RAM1 */
+extern uint8_t ramDiagnosticsRAM1_taskHandles_size __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .taskHandles section in RAM1 */
+extern uint8_t ramDiagnosticsRAM1_taskStacks_size __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .taskStacks section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_heap_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .heap section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_stack_size     __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Size of .stack section in RAM1 */
 

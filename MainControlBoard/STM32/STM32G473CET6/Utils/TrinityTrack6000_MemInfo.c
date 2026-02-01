@@ -35,6 +35,12 @@ extern uint32_t __RAM2_end__; // Defined in the linker script by me for RAM2 end
 extern uint32_t __CCSRAM_start__; // Defined in the linker script by me for CCSRAM start
 extern uint32_t __CCSRAM_end__; // Defined in the linker script by me for CCSRAM end
 
+extern uint32_t __TASK_HANDLES_START__; // Defined in the linker script by me for start of taskHandles section in RAM1
+extern uint32_t __TASK_HANDLES_END__; // Defined in the linker script by me for end of taskHandles section in RAM1
+
+extern uint32_t __TASK_STACKS_START__; // Defined in the linker script by me for start of taskStacks section in RAM1
+extern uint32_t __TASK_STACKS_END__; // Defined in the linker script by me for end of taskStacks section in RAM1
+
 extern uint32_t __RAM_DIAGNOSTICS_START__; // Defined in the linker script be me for start of ramDiagnostics section in RAM2
 extern uint32_t __RAM_DIAGNOSTICS_END__; // Defined in the linker script by me for end of ramDiagnostics section in RAM2
 
@@ -52,61 +58,65 @@ extern UART_HandleTypeDef huart1;
 
 extern void Error_Handler(void);
 
-const char msg_ramDiagnosticsGeneral_header1[]            ="+-------------------------[ RAM DIAGNOSTICS ]--------------------------+\r\n";
-const char msg_ramDiagnosticsGeneral_header2[]            ="| Bank   | Start      | End        | Size    | Usage      | Used       |\r\n"; 
-const char msg_ramDiagnosticsGeneral_header3[]            ="+--------+------------+------------+---------+------------+------------+\r\n";
-                                                        //  | RAM1   | 0x20000000 | 0x2001FFFF | 128 KB  | ########## | 80%        |
-const char msg_ramDiagnosticsGeneral_formatStringRAM1[]   ="│ RAM1   │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";			  
-								                        //  | RAM2   | 0x20020000 | 0x2003FFFF |  64 KB  | ####------| 40%         |
-const char msg_ramDiagnosticsGeneral_formatStringRAM2[]   ="│ RAM2   │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";
-								                        //  | CCSRAM | 0x10000000 | 0x10003FFF |  16 KB  | ##--------| 20%         |
-const char msg_ramDiagnosticsGeneral_formatStringCCSRAM[] ="│ CCSRAM │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";
-                                                        //  +--------+------------+------------+---------+-----------+-------------+
-                                                        //  | FREE RAM TOTAL: 600 KB                                               |
-const char msg_ramDiagnosticsGeneral_formatStringFreeRAM[]="│ FREE RAM TOTAL: %3u KB                                               │\r\n";
-const char msg_ramDiagnosticsGeneral_footer1[]            ="| Commands: s(snapshot) b(bank) q(quit)                                |\r\n"; 
-const char msg_ramDiagnosticsGeneral_footer2[]            ="+----------------------------------------------------------------------+\r\n";       	
+const char msg_ramDiagnosticsGeneral_header1[]               ="+----------------------------[ RAM DIAGNOSTICS ]-----------------------------+\r\n";
+const char msg_ramDiagnosticsGeneral_header2[]               ="| Bank         | Start      | End        | Size    | Usage      | Used       |\r\n"; 
+const char msg_ramDiagnosticsGeneral_header3[]               ="+--------------+------------+------------+---------+------------+------------+\r\n";
+                                                           //  | RAM1         | 0x20000000 | 0x2001FFFF | 128 KB  | ########## | 80%        |
+const char msg_ramDiagnosticsGeneral_formatStringRAM1[]      ="│ RAM1         │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";			  
+								                           //  | RAM2         | 0x20020000 | 0x2003FFFF |  64 KB  | ####------| 40%         |
+const char msg_ramDiagnosticsGeneral_formatStringRAM2[]      ="│ RAM2         │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";
+								                           //  | CCSRAM       | 0x10000000 | 0x10003FFF |  16 KB  | ##--------| 20%         |
+const char msg_ramDiagnosticsGeneral_formatStringCCSRAM[]    ="│ CCSRAM       │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";
+                                                           //  +--------------+------------+------------+---------+-----------+-------------+
+                                                           //  | FREE RAM TOTAL: 600 KB                                                     |
+const char msg_ramDiagnosticsGeneral_formatStringFreeRAM[]   ="│ FREE RAM TOTAL: %3u KB                                                     │\r\n";
+const char msg_ramDiagnosticsGeneral_footer1[]               ="| Commands: s(snapshot) b(bank) q(quit)                                      |\r\n"; 
+const char msg_ramDiagnosticsGeneral_footer2[]               ="+----------------------------------------------------------------------------+\r\n";       	
 
-const char msg_ramDiagnosticsRAM1_header1[]               ="+------------------------[ BANK RAM1 DETAILS ]-------------------------+\r\n";
-const char msg_ramDiagnosticsRAM1_header2[]               ="| Section | Start      | End        | Size    | Usage     |            |\r\n"; 
-const char msg_ramDiagnosticsRAM1_header3[]               ="+---------+------------+------------+---------+-----------+------------+\r\n";
-                                                        //  | .DATA   | 0x20000000 | 0x20007FFF | 32 KB   | 32 KB     |            |
-const char msg_ramDiagnosticsRAM1_formatStringData[]      ="| .DATA   | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
-												        //  | .BSS    | 0x20008000 | 0x2000DFFF | 24 KB   | 18 KB     |            |
-const char msg_ramDiagnosticsRAM1_formatStringBSS[]       ="| .BSS    | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
-												        //  | .TDAT   |   4 KB |   4 KB   | ##-------- | 20%  | N/A                |
-const char msg_ramDiagnosticsRAM1_formatStringTData[]     ="| .TDAT   | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
-                                                        //  | .HEAP   | 0x2000E000 | 0x2000FFFF | 16 KB   | 8 KB      |            |
-const char msg_ramDiagnosticsRAM1_formatStringHeap[]      ="| .HEAP   | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
-												        //  | .STACK  | 0x20010000 | 0x20013FFF | 16 KB   | 4 KB      |            |
-const char msg_ramDiagnosticsRAM1_formatStringStack[]     ="| .STACK  | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
-												        //  +---------+--------+----------+------------+------+--------------------+
-                                                        //  | FREE RAM TOTAL: 60 KB                                                |                                             
-const char msg_ramDiagnosticsRAM1_formatStringFreeRAM[]   ="| FREE RAM TOTAL: %3u KB                                               |\r\n";      			
-                                                        //  | Commands: s(snapshot) b(bank) q(quit)                                |
-														//  +----------------------------------------------------------------------+
+const char msg_ramDiagnosticsRAM1_header1[]                  ="+---------------------------[ BANK RAM1 DETAILS ]----------------------------+\r\n";
+const char msg_ramDiagnosticsRAM1_header2[]                  ="| Section       | Start      | End        | Size    | Usage     |            |\r\n"; 
+const char msg_ramDiagnosticsRAM1_header3[]                  ="+---------------+------------+------------+---------+-----------+------------+\r\n";
+                                                           //  | .DATA         | 0x20000000 | 0x20007FFF | 32 KB   | 32 KB     |            |
+const char msg_ramDiagnosticsRAM1_formatStringData[]         ="| .DATA         | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
+												           //  | .BSS          | 0x20008000 | 0x2000DFFF | 24 KB   | 18 KB     |            |
+const char msg_ramDiagnosticsRAM1_formatStringBSS[]          ="| .BSS          | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+												           //  | .TDAT         |   4 KB |   4 KB   | ##-------- | 20%  | N/A                |
+const char msg_ramDiagnosticsRAM1_formatStringTData[]        ="| .TDAT         | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+                                                           //  | .HEAP         | 0x2000E000 | 0x2000FFFF | 16 KB   | 8 KB      |            |
+const char msg_ramDiagnosticsRAM1_formatStringHeap[]         ="| .HEAP         | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+												           //  | .taskHandles  | 0x20010000 | 0x20013FFF | 16 KB   | 4 KB      |            |
+const char msg_ramDiagnosticsRAM1_formatStringTaskHandles[]  ="| .taskHandles  | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+												           //  | .taskStacks   | 0x20010000 | 0x20013FFF | 16 KB   | 4 KB      |            |
+const char msg_ramDiagnosticsRAM1_formatStringTaskStacks[]   ="| .taskStacks   | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+												           //  | .STACK        | 0x20010000 | 0x20013FFF | 16 KB   | 4 KB      |            |														
+const char msg_ramDiagnosticsRAM1_formatStringStack[]        ="| .STACK        | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+												           //  +---------------+--------+----------+------------+------+--------------------+
+                                                           //  | FREE RAM TOTAL: 60 KB                                                      |                                             
+const char msg_ramDiagnosticsRAM1_formatStringFreeRAM[]      ="| FREE RAM TOTAL: %3u KB                                                     |\r\n";      			
+                                                           //  | Commands: s(snapshot) b(bank) q(quit)                                      |
+														   //  +----------------------------------------------------------------------------+
 
-const char msg_ramDiagnosticsRAM2_header1[]               ="+------------------------[ BANK RAM2 DETAILS ]-------------------------+\r\n";
-                                                        //  | Section | Start      | End        | Size    | Usage     |            |
-                                                        //  +---------+------------+------------+---------+-----------+------------+
-                                                        //  | .ramDia | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
-const char msg_ramDiagnosticsRAM2_formatStringRamDia[]    ="| .ramDia | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
-                                                        //  | .sysDia | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
-const char msg_ramDiagnosticsRAM2_formatStringSysDia[]    ="| .sysDia | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
-                                                        //  +---------+--------+----------+------------+------+--------------------+
-                                                        //  | FREE RAM TOTAL: 60 KB                                                |                                      
-                                                        //  | Commands: s(snapshot) b(bank) q(quit)                                |
-														//  +----------------------------------------------------------------------+
+const char msg_ramDiagnosticsRAM2_header1[]                  ="+---------------------------[ BANK RAM2 DETAILS ]----------------------------+\r\n";
+                                                           //  | Section       | Start      | End        | Size    | Usage     |            |
+                                                           //  +---------------+------------+------------+---------+-----------+------------+
+                                                           //  | .ramDia       | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
+const char msg_ramDiagnosticsRAM2_formatStringRamDia[]       ="| .ramDia       | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+                                                           //  | .sysDia       | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
+const char msg_ramDiagnosticsRAM2_formatStringSysDia[]       ="| .sysDia       | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
+                                                           //  +---------------+--------+----------+------------+------+--------------------+
+                                                           //  | FREE RAM TOTAL: 60 KB                                                      |                                      
+                                                           //  | Commands: s(snapshot) b(bank) q(quit)                                      |
+														   //  +----------------------------------------------------------------------------+
 
-const char msg_ramDiagnosticsCCSRAM_header1[]             ="+-----------------------[ BANK CCSRAM DETAILS ]------------------------+\r\n";
-                                                        //  | Section | Start      | End        | Size    | Usage     |            |
-                                                        //  +---------+------------+------------+---------+-----------+------------+
-const char msg_ramDiagnosticsCCSRAM_formatStringCrit[]    ="| .crit   | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
-const char msg_ramDiagnosticsCCSRAM_formatStringDmaBuff[] ="| .dmaBuf | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
-														//  +---------+--------+----------+------------+------+--------------------+
-                                                        //  | FREE RAM TOTAL: 60 KB                                                |                                      
-                                                        //  | Commands: s(snapshot) b(bank) q(quit)                                |
-														//  +----------------------------------------------------------------------+
+const char msg_ramDiagnosticsCCSRAM_header1[]                ="+---------------------------[ BANK CCSRAM DETAILS ]--------------------------+\r\n";
+                                                           //  | Section       | Start      | End        | Size    | Usage     |            |
+                                                           //  +---------------+------------+------------+---------+-----------+------------+
+const char msg_ramDiagnosticsCCSRAM_formatStringCrit[]       ="| .crit         | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";
+const char msg_ramDiagnosticsCCSRAM_formatStringDmaBuff[]    ="| .dmaBuf       | 0x%08lX | 0x%08lX | %3u  KB | %3u  KB   |            |\r\n";			  
+														   //  +---------------+--------+----------+------------+------+--------------------+
+                                                           //  | FREE RAM TOTAL: 60 KB                                                      |                                      
+                                                           //  | Commands: s(snapshot) b(bank) q(quit)                                      |
+														   //  +----------------------------------------------------------------------------+
 
 														
 uint16_t ramDiagnosticsGeneral_total_size=0;
@@ -124,6 +134,8 @@ uint32_t ramDiagnosticsRAM1_lastHeapEnd=0;
 uint8_t ramDiagnosticsRAM1_data_size=0;
 uint8_t ramDiagnosticsRAM1_bss_size=0;
 uint8_t ramDiagnosticsRAM1_tdat_size=0;
+uint8_t ramDiagnosticsRAM1_taskHandles_size=0;
+uint8_t ramDiagnosticsRAM1_taskStacks_size=0;
 uint8_t ramDiagnosticsRAM1_heap_size=0;
 uint8_t ramDiagnosticsRAM1_stack_size=0;
 
@@ -142,6 +154,8 @@ void ramInfoInit(void){
 	ramDiagnosticsRAM1_data_size=(((uint32_t)&_edata-(uint32_t)&__RAM1_start__)/1024);
 	ramDiagnosticsRAM1_bss_size=(((uint32_t)&__bss_end__-(uint32_t)&__bss_start__)/1024);
 	ramDiagnosticsRAM1_tdat_size=0; // Will be implemented after adding ThreadX to the project
+	ramDiagnosticsRAM1_taskHandles_size=(((uint32_t)&__TASK_HANDLES_END__-(uint32_t)&__TASK_HANDLES_START__)/1024);
+	ramDiagnosticsRAM1_taskStacks_size=(((uint32_t)&__TASK_STACKS_END__-(uint32_t)&__TASK_STACKS_START__)/1024);
 
 	ramDiagnosticsRAM2_ramDiagnostics_size=((uint32_t)&__RAM_DIAGNOSTICS_END__-(uint32_t)&__RAM_DIAGNOSTICS_START__)/1024;
 	ramDiagnosticsRAM2_sysDiagnostics_size=((uint32_t)&__SYS_DIAGNOSTICS_END__-(uint32_t)&__SYS_DIAGNOSTICS_END__)/1024;
@@ -296,6 +310,23 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_heap_size              // .heap used size in KB
 	);
 	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+// Send .taskHandles section info
+	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTaskHandles,
+		(uint32_t)&__TASK_HANDLES_START__,	     // .taskHandles start
+		(uint32_t)&__TASK_HANDLES_END__,          // .taskHandles end
+		ramDiagnosticsRAM1_taskHandles_size,     // .taskHandles size in KB
+		ramDiagnosticsRAM1_taskHandles_size      // .taskHandles used size in KB
+	);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+// Send .taskStacks section info
+	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTaskStacks,
+		(uint32_t)&__TASK_STACKS_START__,	     // .taskStacks start
+		(uint32_t)&__TASK_STACKS_END__,          // .taskStacks end
+		ramDiagnosticsRAM1_taskStacks_size,      // .taskStacks size in KB
+		ramDiagnosticsRAM1_taskStacks_size       // .taskStacks used size in KB
+	);
+	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+
 // Send .stack section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringStack,
 		(uint32_t)&__RAM1_end__,              // .stack start

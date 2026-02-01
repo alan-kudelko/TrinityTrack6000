@@ -37,7 +37,7 @@ message(STATUS "    ThreadX root path: ${THREADX_ROOT}")
 # Setting up compilers for ARM
 set(CMAKE_C_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_CXX_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-g++.exe")
-set(CMAKE_ASM_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-as.exe")
+set(CMAKE_ASM_COMPILER "${ARM_ROOT}/bin/arm-none-eabi-gcc.exe")
 # ThreadX settings
 set(CMAKE_SYSTEM_PROCESSOR cortex-m4)
 
@@ -158,6 +158,8 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Init/*.c"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/*.c"
+    "${CMAKE_SOURCE_DIR}/Tasks/*.c"
+    "${CMAKE_SOURCE_DIR}/Tasks/*.cpp"
 )
 list(REMOVE_ITEM PROJECT_SOURCES "${CMAKE_SOURCE_DIR}/Src/stm32g4xx_it.c")
 
@@ -169,6 +171,7 @@ file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Init/*.h"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*.h"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/*.h"
+    "${CMAKE_SOURCE_DIR}/Tasks/*.h"
 )
 #
 include_directories(
@@ -180,6 +183,7 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Include"
     "${CMAKE_SOURCE_DIR}/Utils"
     "${CMAKE_SOURCE_DIR}/Init"
+    "${CMAKE_SOURCE_DIR}/Tasks"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17"
     "${CMAKE_SOURCE_DIR}/Comm/USART_Dma"
     "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/common/inc"

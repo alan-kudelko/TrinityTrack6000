@@ -26,6 +26,8 @@
 
 #include <tx_api.h>
 
+#include <tasks.h>
+
 extern "C"{
 
 // Test blink task
@@ -36,7 +38,7 @@ ULONG task_blink_stack[128];
 void task_blink(ULONG arg){
     UNUSED(arg);
     while(1){
-        HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+        //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
         tx_thread_sleep(500);
     }
 }
@@ -52,6 +54,17 @@ void tx_application_define(void* first_unused_memory){
                     sizeof(task_blink_stack),
                     1,
                     1,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
+
+    tx_thread_create(&task_diagnostics_handle,
+                    (char*)task_diagnostics_name,
+                    task_diagnostics,
+                    0,
+                    &task_diagnostics_stack,
+                    sizeof(task_diagnostics_stack),
+                    TASKS_DIAGNOSTICS_PRIORITY,
+                    TASKS_DIAGNOSTICS_PRIORITY,
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
 }
