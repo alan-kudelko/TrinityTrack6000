@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['trinitytrack6000_5fconfig_2ec_0',['TrinityTrack6000_Config.c',['../_trinity_track6000___config_8c.html',1,'']]],
-  ['trinitytrack6000_5fconfig_2eh_1',['TrinityTrack6000_Config.h',['../_trinity_track6000___config_8h.html',1,'']]],
-  ['trinitytrack6000_5fdiagnostics_2ec_2',['TrinityTrack6000_Diagnostics.c',['../_trinity_track6000___diagnostics_8c.html',1,'']]],
-  ['trinitytrack6000_5fdiagnostics_2eh_3',['TrinityTrack6000_Diagnostics.h',['../_trinity_track6000___diagnostics_8h.html',1,'']]],
-  ['trinitytrack6000_5ferrors_2ec_4',['TrinityTrack6000_Errors.c',['../_trinity_track6000___errors_8c.html',1,'']]],
-  ['trinitytrack6000_5ferrors_2eh_5',['TrinityTrack6000_Errors.h',['../_trinity_track6000___errors_8h.html',1,'']]],
-  ['trinitytrack6000_5finit_2ecpp_6',['TrinityTrack6000_Init.cpp',['../_trinity_track6000___init_8cpp.html',1,'']]],
-  ['trinitytrack6000_5finit_2eh_7',['TrinityTrack6000_Init.h',['../_trinity_track6000___init_8h.html',1,'']]],
-  ['trinitytrack6000_5fmeminfo_2ec_8',['TrinityTrack6000_MemInfo.c',['../_trinity_track6000___mem_info_8c.html',1,'']]],
-  ['trinitytrack6000_5fmeminfo_2eh_9',['TrinityTrack6000_MemInfo.h',['../_trinity_track6000___mem_info_8h.html',1,'']]],
-  ['trinitytrack6000_5fpinout_2eh_10',['TrinityTrack6000_Pinout.h',['../_trinity_track6000___pinout_8h.html',1,'']]]
+  ['task_5fblink_0',['task_blink',['../main_8cpp.html#a0443eb7a80a5df8845d2d0e788013b45',1,'main.cpp']]],
+  ['task_5fblink_5fhandle_1',['task_blink_handle',['../main_8cpp.html#a122d41f15400e36427a2195b304ba4bc',1,'main.cpp']]],
+  ['task_5fblink_5fstack_2',['task_blink_stack',['../main_8cpp.html#abe23b7eef9fb7c568ab2459b3553ac56',1,'main.cpp']]],
+  ['tim6_5fdac_5firqhandler_3',['TIM6_DAC_IRQHandler',['../stm32g4xx__it_8c.html#a0839a45f331c4c067939b9c4533bbf4d',1,'stm32g4xx_it.c']]],
+  ['trinitytrack6000_5fconfig_2ec_4',['TrinityTrack6000_Config.c',['../_trinity_track6000___config_8c.html',1,'']]],
+  ['trinitytrack6000_5fconfig_2eh_5',['TrinityTrack6000_Config.h',['../_trinity_track6000___config_8h.html',1,'']]],
+  ['trinitytrack6000_5fdiagnostics_2ec_6',['TrinityTrack6000_Diagnostics.c',['../_trinity_track6000___diagnostics_8c.html',1,'']]],
+  ['trinitytrack6000_5fdiagnostics_2eh_7',['TrinityTrack6000_Diagnostics.h',['../_trinity_track6000___diagnostics_8h.html',1,'']]],
+  ['trinitytrack6000_5ferrors_2ec_8',['TrinityTrack6000_Errors.c',['../_trinity_track6000___errors_8c.html',1,'']]],
+  ['trinitytrack6000_5ferrors_2eh_9',['TrinityTrack6000_Errors.h',['../_trinity_track6000___errors_8h.html',1,'']]],
+  ['trinitytrack6000_5finit_2ecpp_10',['TrinityTrack6000_Init.cpp',['../_trinity_track6000___init_8cpp.html',1,'']]],
+  ['trinitytrack6000_5finit_2eh_11',['TrinityTrack6000_Init.h',['../_trinity_track6000___init_8h.html',1,'']]],
+  ['trinitytrack6000_5fmeminfo_2ec_12',['TrinityTrack6000_MemInfo.c',['../_trinity_track6000___mem_info_8c.html',1,'']]],
+  ['trinitytrack6000_5fmeminfo_2eh_13',['TrinityTrack6000_MemInfo.h',['../_trinity_track6000___mem_info_8h.html',1,'']]],
+  ['trinitytrack6000_5fpinout_2eh_14',['TrinityTrack6000_Pinout.h',['../_trinity_track6000___pinout_8h.html',1,'']]],
+  ['tx_5fapplication_5fdefine_15',['tx_application_define',['../main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9',1,'main.cpp']]]
 ];

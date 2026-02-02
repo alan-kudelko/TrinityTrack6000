@@ -1,0 +1,9 @@
+<map id="Src/stm32g4xx_it.c" name="Src/stm32g4xx_it.c">
+<area shape="rect" id="Node000001" title="Interrupt Service Routines." alt="" coords="53,5,187,32"/>
+<area shape="rect" id="Node000002" href="$main_8h.html" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="35,80,96,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,34,86,69,82,66,109,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,80,230,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,31,158,66,154,69,128,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,126,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,107,68,139,63,139,63,107"/>
+</map>

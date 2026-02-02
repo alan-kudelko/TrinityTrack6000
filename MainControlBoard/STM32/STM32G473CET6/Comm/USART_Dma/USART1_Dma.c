@@ -19,6 +19,7 @@
 #include <stm32g4xx_hal.h>
 
 #include <TrinityTrack6000_Pinout.h>
+#include <task_diagnostics.h>
 
 uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE]={0};
 uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE]={0};
@@ -145,7 +146,6 @@ void usart1_dma_rx_init(void){
     // Try to reinitialize DMA reception
     // Change signature of function to return HAL_StatusTypeDef
     // To allow error handling by caller
-
     // Enable IDLE line detection interrupt
     __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
     // Disable Half Transfer interrupt to avoid unnecessary interrupts
@@ -252,7 +252,7 @@ void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size){
 void usart1_dma_rx_complete(const uint16_t dma_transfer_size){
     // For now a debug diode
     // Called inside HAL_UARTEx_RxEventCallback when data reception is complete
-    HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+    //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
     if((huart1_dma_rx_ring_buffer_length+dma_transfer_size)>UART1_DMA_RX_RING_BUFFER_SIZE){
         // Overflow - reset buffer
         // Overwrite data
@@ -263,4 +263,6 @@ void usart1_dma_rx_complete(const uint16_t dma_transfer_size){
     usart1_dma_copy_from_rx_buffer(dma_transfer_size);
     // Restart DMA reception
     usart1_dma_rx_init();
+    // Signal diagnostics task that command is ready to parse
+    tx_semaphore_put(&sem_task_diagnostics_command_ready);
 }

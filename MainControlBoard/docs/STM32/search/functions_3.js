@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['init_0',['init',['../class_m_c_p23_s17.html#a268dd286302d2c3f1d42807c2e238a13',1,'MCP23S17']]],
-  ['initializemcp_1',['initializeMCP',['../_trinity_track6000___init_8h.html#a77dc374f08bff5b7968adfa3aff0fc7e',1,'TrinityTrack6000_Init.h']]],
-  ['initializememory_2',['initializeMemory',['../_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['initializesystem_3',['initializeSystem',['../_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp']]]
+  ['error_5fhandler_0',['Error_Handler',['../_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;TrinityTrack6000_Errors.c'],['../_trinity_track6000___errors_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;TrinityTrack6000_Errors.c'],['../_trinity_track6000___mem_info_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;TrinityTrack6000_Errors.c']]]
 ];

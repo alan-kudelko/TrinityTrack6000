@@ -28,6 +28,8 @@ var _trinity_track6000___mem_info_8h =
     [ "msg_ramDiagnosticsRAM1_formatStringFreeRAM", "_trinity_track6000___mem_info_8h.html#a1abce695c93d0f5842e854e157aaf71e", null ],
     [ "msg_ramDiagnosticsRAM1_formatStringHeap", "_trinity_track6000___mem_info_8h.html#aba71546a058108ad7f5478ed243b2884", null ],
     [ "msg_ramDiagnosticsRAM1_formatStringStack", "_trinity_track6000___mem_info_8h.html#aa43957dc463e803138ffcd0ac37717b9", null ],
+    [ "msg_ramDiagnosticsRAM1_formatStringTaskHandles", "_trinity_track6000___mem_info_8h.html#a8dd50c540d4d6bcb5b2b2dbe0546bab9", null ],
+    [ "msg_ramDiagnosticsRAM1_formatStringTaskStacks", "_trinity_track6000___mem_info_8h.html#a747fc36d48474021c22ddb08bfe238a6", null ],
     [ "msg_ramDiagnosticsRAM1_header1", "_trinity_track6000___mem_info_8h.html#a5c28174f30534d34928544caf29ccbc2", null ],
     [ "msg_ramDiagnosticsRAM1_header2", "_trinity_track6000___mem_info_8h.html#a115be848bd3c640cc2b7cf3c13dcc5fa", null ],
     [ "msg_ramDiagnosticsRAM1_header3", "_trinity_track6000___mem_info_8h.html#ad1262d763992e5c8041a568701508232", null ],

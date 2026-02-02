@@ -38,24 +38,24 @@ ULONG task_blink_stack[128];
 void task_blink(ULONG arg){
     UNUSED(arg);
     while(1){
-        //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-        tx_thread_sleep(500);
+        HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+        tx_thread_sleep(250);
     }
 }
 
 void tx_application_define(void* first_unused_memory){
     // Create threads, queues, semaphores, mutexes here
     UNUSED(first_unused_memory);
-    tx_thread_create(&task_blink_handle,
-                    (char*)"Blink Task",
-                    task_blink,
-                    0,
-                    &task_blink_stack,
-                    sizeof(task_blink_stack),
-                    1,
-                    1,
-                    TX_NO_TIME_SLICE,
-                    TX_AUTO_START);
+    // tx_thread_create(&task_blink_handle,
+    //                 (char*)"Blink Task",
+    //                 task_blink,
+    //                 0,
+    //                 &task_blink_stack,
+    //                 sizeof(task_blink_stack),
+    //                 1,
+    //                 1,
+    //                 TX_NO_TIME_SLICE,
+    //                 TX_AUTO_START);
 
     tx_thread_create(&task_diagnostics_handle,
                     (char*)task_diagnostics_name,
@@ -96,8 +96,6 @@ int main(void){
     UNUSED(receivedDataLength);
     UNUSED(testDataLength);
     //HAL_Delay(5000);
-
-    //usart1_dma_rx_init();
 
     tx_kernel_enter();
     while(1){

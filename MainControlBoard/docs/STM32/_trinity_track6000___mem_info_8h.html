@@ -129,7 +129,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abf854acc92fc314246208c4e970bbe9b" id="r_abf854acc92fc314246208c4e970bbe9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf854acc92fc314246208c4e970bbe9b">MEMINFO_LINE_BUFFER_SIZE</a>&#160;&#160;&#160;90</td></tr>
+<tr class="memitem:abf854acc92fc314246208c4e970bbe9b" id="r_abf854acc92fc314246208c4e970bbe9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf854acc92fc314246208c4e970bbe9b">MEMINFO_LINE_BUFFER_SIZE</a>&#160;&#160;&#160;95</td></tr>
 <tr class="memitem:a719f554899aae9a479121eebd01288fc" id="r_a719f554899aae9a479121eebd01288fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a719f554899aae9a479121eebd01288fc">MEMINFO_BAR_BUFFER_SIZE</a>&#160;&#160;&#160;11</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -170,6 +170,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a8d025f0cb3013e7821131052a63f73d3" id="r_a8d025f0cb3013e7821131052a63f73d3"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d025f0cb3013e7821131052a63f73d3">msg_ramDiagnosticsRAM1_formatStringData</a> []</td></tr>
 <tr class="memitem:a4fc4ae81e928d414744b0f8798f1e8cf" id="r_a4fc4ae81e928d414744b0f8798f1e8cf"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc4ae81e928d414744b0f8798f1e8cf">msg_ramDiagnosticsRAM1_formatStringBSS</a> []</td></tr>
 <tr class="memitem:aba71546a058108ad7f5478ed243b2884" id="r_aba71546a058108ad7f5478ed243b2884"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba71546a058108ad7f5478ed243b2884">msg_ramDiagnosticsRAM1_formatStringHeap</a> []</td></tr>
+<tr class="memitem:a8dd50c540d4d6bcb5b2b2dbe0546bab9" id="r_a8dd50c540d4d6bcb5b2b2dbe0546bab9"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd50c540d4d6bcb5b2b2dbe0546bab9">msg_ramDiagnosticsRAM1_formatStringTaskHandles</a> []</td></tr>
+<tr class="memitem:a747fc36d48474021c22ddb08bfe238a6" id="r_a747fc36d48474021c22ddb08bfe238a6"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a747fc36d48474021c22ddb08bfe238a6">msg_ramDiagnosticsRAM1_formatStringTaskStacks</a> []</td></tr>
 <tr class="memitem:aa43957dc463e803138ffcd0ac37717b9" id="r_aa43957dc463e803138ffcd0ac37717b9"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa43957dc463e803138ffcd0ac37717b9">msg_ramDiagnosticsRAM1_formatStringStack</a> []</td></tr>
 <tr class="memitem:a1abce695c93d0f5842e854e157aaf71e" id="r_a1abce695c93d0f5842e854e157aaf71e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1abce695c93d0f5842e854e157aaf71e">msg_ramDiagnosticsRAM1_formatStringFreeRAM</a> []</td></tr>
 <tr class="memitem:a83bc029906959a225494b684d6afcaf0" id="r_a83bc029906959a225494b684d6afcaf0"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83bc029906959a225494b684d6afcaf0">msg_ramDiagnosticsRAM2_header1</a> []</td></tr>
@@ -221,7 +223,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MEMINFO_LINE_BUFFER_SIZE&#160;&#160;&#160;90</td>
+          <td class="memname">#define MEMINFO_LINE_BUFFER_SIZE&#160;&#160;&#160;95</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -316,6 +318,8 @@ Variables</h2></td></tr>
 <p>Size of .data section in RAM1</p>
 <p>Size of .bss section in RAM1</p>
 <p>Size of .tdat section in RAM1</p>
+<p>Size of .taskHandles section in RAM1</p>
+<p>Size of .taskStacks section in RAM1</p>
 <p>Size of .heap section in RAM1</p>
 <p>Size of .stack section in RAM1</p>
 <p>Size of .ramDiagnostics section in RAM2</p>
@@ -894,6 +898,52 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <p>RAM1 diagnostics format string for .stack section </p>
+
+</div>
+</div>
+<a id="a8dd50c540d4d6bcb5b2b2dbe0546bab9" name="a8dd50c540d4d6bcb5b2b2dbe0546bab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd50c540d4d6bcb5b2b2dbe0546bab9">&#9670;&#160;</a></span>msg_ramDiagnosticsRAM1_formatStringTaskHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_ramDiagnosticsRAM1_formatStringTaskHandles[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>RAM1 diagnostics format string for .taskHandles section </p>
+
+</div>
+</div>
+<a id="a747fc36d48474021c22ddb08bfe238a6" name="a747fc36d48474021c22ddb08bfe238a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747fc36d48474021c22ddb08bfe238a6">&#9670;&#160;</a></span>msg_ramDiagnosticsRAM1_formatStringTaskStacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_ramDiagnosticsRAM1_formatStringTaskStacks[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>RAM1 diagnostics format string for .taskStacks section </p>
 
 </div>
 </div>

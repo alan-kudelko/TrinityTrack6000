@@ -21,6 +21,9 @@
 #include <TrinityTrack6000_Init.h>
 #include <TrinityTrack6000_Errors.h>
 #include <TrinityTrack6000_Pinout.h>
+#include <USART1_Dma.h>
+
+#include <tasks.h>
 
 extern "C" void ramInfoInit(void);
 
@@ -439,6 +442,10 @@ void initializeThreadXMemory(void){
 	// Allocate memory for ThreadX objects from statically allocated pool
 	// to avoid fragmentation and issues with dynamic memory allocation
 	// in embedded systems.
+	
+	// Clear all stacks
+	task_diagnostics_init();
+	
 }
 
 void initializeMemory(void){
@@ -471,7 +478,8 @@ void initializeSystem(){
 // Custom initialization sequence
 	initializeMemory();
 	HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_memory_initialized_info,strlen(msg_init_memory_initialized_info),DEBUG_UART_TIMEOUT);
-
+	// Initialize USART1 DMA for diagnostics interface
+	usart1_dma_rx_init();
 	//char buffer[INIT_LINE_BUFFER_SIZE]={0};
 	//buffer[0]='1';
 

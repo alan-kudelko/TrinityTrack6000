@@ -1,4 +1,4 @@
-20:25:27 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
+15:14:33 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
 make -j12 all 
 arm-none-eabi-size  STM32G473CET6.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  STM32G473CET6.elf
 Finished building: default.size.stdout
  
 
-20:25:28 Build Finished. 0 errors, 0 warnings. (took 1s.400ms)
+15:14:33 Build Finished. 0 errors, 0 warnings. (took 827ms)
 

@@ -108,46 +108,59 @@ $(function(){initNavTree('main_8cpp.html','',''); });
 <code>#include &lt;<a class="el" href="_trinity_track6000___diagnostics_8h_source.html">TrinityTrack6000_Diagnostics.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_trinity_track6000___mem_info_8h_source.html">TrinityTrack6000_MemInfo.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_u_s_a_r_t1___dma_8h_source.html">USART1_Dma.h</a>&gt;</code><br />
+<code>#include &lt;tx_api.h&gt;</code><br />
+<code>#include &lt;tasks.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#a_src_2main_8cpp" loading="lazy" alt=""/></div>
 <map name="a_src_2main_8cpp" id="a_src_2main_8cpp">
-<area shape="rect" title="Main program body." alt="" coords="241,5,339,32"/>
+<area shape="rect" title="Main program body." alt="" coords="393,5,491,32"/>
 <area shape="rect" href="main_8h.html" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="5,155,66,181"/>
-<area shape="poly" title=" " alt="" coords="241,22,198,26,151,36,104,54,64,82,54,94,47,109,40,140,35,138,42,107,50,92,60,78,102,49,149,31,197,21,240,17"/>
-<area shape="rect" title=" " alt="" coords="74,80,138,107"/>
-<area shape="poly" title=" " alt="" coords="259,35,153,76,151,71,257,30"/>
+<area shape="poly" title=" " alt="" coords="393,27,234,46,155,62,124,72,101,82,71,110,50,142,46,139,67,107,98,78,122,67,153,57,233,41,392,21"/>
+<area shape="rect" title=" " alt="" coords="111,80,176,107"/>
+<area shape="poly" title=" " alt="" coords="393,35,192,83,190,78,392,29"/>
 <area shape="rect" href="_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="90,155,264,181"/>
-<area shape="poly" title=" " alt="" coords="263,35,231,54,203,82,189,110,182,140,177,139,184,109,199,78,228,50,260,30"/>
-<area shape="rect" href="_trinity_track6000___init_8h.html" title="System initialization functions for TrinityTrack6000 project." alt="" coords="213,80,367,107"/>
-<area shape="poly" title=" " alt="" coords="293,33,293,64,288,64,288,33"/>
+<area shape="poly" title=" " alt="" coords="393,28,317,45,277,61,240,82,212,111,191,142,187,139,207,107,237,78,274,56,315,40,392,23"/>
+<area shape="rect" href="_trinity_track6000___init_8h.html" title="System initialization functions for TrinityTrack6000 project." alt="" coords="250,80,405,107"/>
+<area shape="poly" title=" " alt="" coords="424,35,362,74,359,69,421,30"/>
 <area shape="rect" href="_trinity_track6000___diagnostics_8h.html" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="288,155,493,181"/>
-<area shape="poly" title=" " alt="" coords="322,30,354,50,382,79,393,109,395,139,390,139,387,110,377,81,351,54,320,35"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8h.html" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="419,229,606,256"/>
-<area shape="poly" title=" " alt="" coords="333,30,376,47,425,73,471,108,491,130,507,153,517,184,519,214,513,214,512,185,502,156,487,133,467,112,422,78,374,52,331,35"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="584,80,703,107"/>
-<area shape="poly" title=" " alt="" coords="340,27,570,74,569,79,339,33"/>
-<area shape="rect" title=" " alt="" coords="27,229,148,256"/>
-<area shape="poly" title=" " alt="" coords="47,180,72,215,68,218,42,183"/>
-<area shape="poly" title=" " alt="" coords="163,184,116,221,113,217,160,180"/>
-<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="223,229,394,256"/>
-<area shape="poly" title=" " alt="" coords="201,180,274,219,272,224,199,184"/>
-<area shape="rect" title=" " alt="" coords="481,304,545,331"/>
-<area shape="poly" title=" " alt="" coords="345,254,467,297,465,302,343,259"/>
-<area shape="poly" title=" " alt="" coords="272,109,211,148,208,144,269,105"/>
-<area shape="poly" title=" " alt="" coords="378,184,336,221,332,217,374,180"/>
-<area shape="poly" title=" " alt="" coords="516,257,516,288,510,288,510,257"/>
-<area shape="poly" title=" " alt="" coords="648,107,649,136,647,175,639,218,620,258,593,284,561,303,558,298,590,280,616,254,634,216,642,175,644,136,642,107"/>
-<area shape="rect" title=" " alt="" coords="681,155,755,181"/>
-<area shape="poly" title=" " alt="" coords="658,105,696,142,693,146,655,109"/>
+<area shape="poly" title=" " alt="" coords="442,33,419,108,405,142,400,140,414,106,437,32"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8h.html" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="403,229,590,256"/>
+<area shape="poly" title=" " alt="" coords="453,31,481,83,496,118,507,154,510,185,506,215,501,214,504,185,502,155,491,119,477,85,448,34"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="568,80,687,107"/>
+<area shape="poly" title=" " alt="" coords="475,30,582,71,580,76,473,35"/>
+<area shape="rect" title=" " alt="" coords="711,80,778,107"/>
+<area shape="poly" title=" " alt="" coords="492,28,697,77,695,82,491,34"/>
+<area shape="rect" title=" " alt="" coords="802,80,866,107"/>
+<area shape="poly" title=" " alt="" coords="492,24,622,45,787,77,786,82,621,50,491,30"/>
+<area shape="rect" title=" " alt="" coords="19,229,140,256"/>
+<area shape="poly" title=" " alt="" coords="45,180,66,215,62,217,41,183"/>
+<area shape="poly" title=" " alt="" coords="161,184,110,222,107,218,158,180"/>
+<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="207,229,378,256"/>
+<area shape="poly" title=" " alt="" coords="198,180,261,218,258,223,196,184"/>
+<area shape="rect" title=" " alt="" coords="465,304,529,331"/>
+<area shape="poly" title=" " alt="" coords="329,254,451,297,449,302,327,259"/>
+<area shape="poly" title=" " alt="" coords="302,110,218,150,216,145,300,105"/>
+<area shape="poly" title=" " alt="" coords="375,184,323,222,320,218,372,180"/>
+<area shape="poly" title=" " alt="" coords="500,257,500,288,494,288,494,257"/>
+<area shape="poly" title=" " alt="" coords="632,107,633,136,631,175,623,218,604,258,577,284,545,303,542,298,574,280,600,254,618,216,626,175,628,136,626,107"/>
+<area shape="rect" title=" " alt="" coords="665,155,739,181"/>
+<area shape="poly" title=" " alt="" coords="642,105,680,142,677,146,639,109"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a0443eb7a80a5df8845d2d0e788013b45" id="r_a0443eb7a80a5df8845d2d0e788013b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0443eb7a80a5df8845d2d0e788013b45">task_blink</a> (ULONG arg)</td></tr>
+<tr class="memitem:af2e15798c128e90cab0c5d02b5bbf9a9" id="r_af2e15798c128e90cab0c5d02b5bbf9a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2e15798c128e90cab0c5d02b5bbf9a9">tx_application_define</a> (void *first_unused_memory)</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
 <tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a122d41f15400e36427a2195b304ba4bc" id="r_a122d41f15400e36427a2195b304ba4bc"><td class="memItemLeft" align="right" valign="top">TX_THREAD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a122d41f15400e36427a2195b304ba4bc">task_blink_handle</a></td></tr>
+<tr class="memitem:abe23b7eef9fb7c568ab2459b3553ac56" id="r_abe23b7eef9fb7c568ab2459b3553ac56"><td class="memItemLeft" align="right" valign="top">ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe23b7eef9fb7c568ab2459b3553ac56">task_blink_stack</a> [128]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main program body. </p>
@@ -183,69 +196,152 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="main_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph" loading="lazy" alt=""/></div>
 <map name="amain_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
 <area shape="rect" title="The application entry point." alt="" coords="5,765,55,792"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="123,309,236,336"/>
-<area shape="poly" title=" " alt="" coords="33,764,166,350,171,352,38,766"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a28cd6ca417d0332298ba1dc946e34444" title="Refresh RAM diagnostics data." alt="" coords="723,309,834,336"/>
-<area shape="poly" title=" " alt="" coords="32,764,40,739,53,707,74,675,101,650,141,628,180,614,217,607,254,605,325,613,394,630,462,646,496,651,530,653,565,649,600,640,636,624,673,599,700,574,721,543,738,510,751,475,767,406,773,352,779,352,772,407,756,476,743,512,726,546,704,577,676,603,638,628,602,645,565,654,530,658,495,657,461,652,392,636,324,619,254,610,218,612,181,619,143,633,104,654,78,679,58,710,45,741,37,766"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a543c4df7f8c35ecbe95dba9cb92601c2" title="Print detailed CCSRAM diagnostics." alt="" coords="117,664,242,691"/>
-<area shape="poly" title=" " alt="" coords="39,763,65,732,101,700,110,695,113,700,104,705,69,736,43,767"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a75f7392b5b07ca86de67a446dba6e336" title="Print general RAM usage information." alt="" coords="124,715,234,741"/>
-<area shape="poly" title=" " alt="" coords="54,768,102,751,121,744,123,749,104,756,56,773"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a51ae4fe12207c2c3c32b3b1126bbf51f" title="Print detailed RAM1 diagnostics." alt="" coords="128,765,230,792"/>
-<area shape="poly" title=" " alt="" coords="55,776,113,776,113,781,55,781"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9e50d8d069310b6642d405eed5a8723c" title="Print detailed RAM2 diagnostics." alt="" coords="128,816,230,843"/>
-<area shape="poly" title=" " alt="" coords="56,785,104,801,123,808,121,813,102,807,54,790"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="105,867,254,893"/>
-<area shape="poly" title=" " alt="" coords="43,791,69,822,104,852,113,857,110,862,101,857,65,825,39,794"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a5a84756d8607d4e5d6ca97bd76e8a1b3" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="103,917,256,944"/>
-<area shape="poly" title=" " alt="" coords="38,791,60,846,80,877,104,903,110,907,106,912,101,907,75,880,56,848,33,793"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#ac8ef9e25183411bf853e2a9ad431fadf" title="Initializes DMA for USART1 reception." alt="" coords="114,968,245,995"/>
-<area shape="poly" title=" " alt="" coords="36,792,41,825,54,868,74,914,88,935,105,954,108,957,105,961,101,958,84,939,69,917,49,870,36,826,30,793"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="330,5,446,32"/>
-<area shape="poly" title=" " alt="" coords="180,308,190,258,212,187,228,148,248,109,273,73,302,42,315,33,318,38,306,46,277,77,253,112,233,150,217,188,195,259,185,309"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="334,56,443,83"/>
-<area shape="poly" title=" " alt="" coords="182,308,195,266,218,208,254,146,276,118,302,93,318,83,321,87,306,97,280,121,258,149,223,211,200,268,187,310"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="324,107,452,133"/>
-<area shape="poly" title=" " alt="" coords="184,308,200,274,225,230,260,183,302,143,310,138,313,143,306,147,264,187,230,233,205,277,189,310"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a323249dac769f9855c10b4ec9446b707" title="Enable DMA controller clock." alt="" coords="336,157,440,184"/>
-<area shape="poly" title=" " alt="" coords="188,307,233,253,266,221,303,194,321,185,323,189,305,198,269,225,237,256,192,311"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac724e431d2af879252de35615be2bdea" title="GPIO Initialization Function." alt="" coords="335,208,441,235"/>
-<area shape="poly" title=" " alt="" coords="198,307,244,276,303,244,319,238,321,243,305,249,247,281,201,311"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="338,259,439,285"/>
-<area shape="poly" title=" " alt="" coords="236,306,322,285,323,290,237,312"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="337,309,439,336"/>
-<area shape="poly" title=" " alt="" coords="236,320,322,320,322,325,236,325"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="337,360,439,387"/>
-<area shape="poly" title=" " alt="" coords="237,334,323,355,321,360,236,339"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="336,563,440,589"/>
-<area shape="poly" title=" " alt="" coords="187,336,200,377,223,435,258,496,280,524,306,549,323,559,320,564,302,553,276,528,254,499,218,437,195,379,182,337"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="304,411,472,437"/>
-<area shape="poly" title=" " alt="" coords="201,334,247,365,305,396,321,403,319,408,303,401,244,369,198,339"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="304,461,472,488"/>
-<area shape="poly" title=" " alt="" coords="192,335,237,389,269,420,305,447,315,453,313,457,303,452,266,424,233,393,188,338"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="316,512,461,539"/>
-<area shape="poly" title=" " alt="" coords="189,335,205,369,230,413,264,458,306,498,313,503,310,507,302,502,260,462,225,415,200,371,184,338"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="556,5,639,32"/>
-<area shape="poly" title=" " alt="" coords="446,16,540,16,540,21,446,21"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a79e119baa565a33480ab200c72fd6d3e" title=" " alt="" coords="541,56,654,83"/>
-<area shape="poly" title=" " alt="" coords="447,30,526,49,525,55,445,35"/>
-<area shape="poly" title=" " alt="" coords="640,23,659,30,676,42,701,71,722,103,752,173,769,240,777,293,772,294,764,241,747,175,717,106,697,74,673,46,657,35,638,28"/>
-<area shape="rect" href="_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of critical error occurrence from which system can no safely recove..." alt="" coords="547,360,648,387"/>
-<area shape="poly" title=" " alt="" coords="445,76,474,93,501,121,524,153,559,223,582,291,594,344,589,345,577,292,554,225,520,156,497,124,471,97,442,81"/>
-<area shape="poly" title=" " alt="" coords="454,131,474,143,498,166,518,191,552,246,576,301,591,345,586,346,571,302,547,249,514,194,494,169,471,147,451,136"/>
-<area shape="poly" title=" " alt="" coords="440,282,473,295,523,321,566,349,564,353,521,326,471,300,438,287"/>
-<area shape="poly" title=" " alt="" coords="440,332,532,355,531,360,439,338"/>
-<area shape="poly" title=" " alt="" coords="440,371,531,371,531,376,440,376"/>
-<area shape="poly" title=" " alt="" coords="439,564,471,548,508,514,540,474,564,434,582,400,586,402,569,437,544,477,512,518,474,553,441,569"/>
-<area shape="rect" href="_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title="TIM MSP Post Initialization." alt="" coords="520,563,675,589"/>
-<area shape="poly" title=" " alt="" coords="440,573,505,573,505,579,440,579"/>
-<area shape="poly" title=" " alt="" coords="446,407,531,387,532,392,447,413"/>
-<area shape="poly" title=" " alt="" coords="441,458,471,447,521,421,564,393,566,398,523,425,473,452,443,463"/>
-<area shape="poly" title=" " alt="" coords="447,509,471,498,502,475,531,448,575,397,579,401,535,452,506,479,474,502,449,514"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="317,859,459,901"/>
-<area shape="poly" title=" " alt="" coords="255,877,301,877,301,883,255,883"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="123,335,236,361"/>
+<area shape="poly" title=" " alt="" coords="34,764,166,375,171,377,39,766"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a28cd6ca417d0332298ba1dc946e34444" title="Refresh RAM diagnostics data." alt="" coords="733,360,844,387"/>
+<area shape="poly" title=" " alt="" coords="34,764,58,719,77,694,101,675,143,655,183,642,222,635,259,634,331,642,400,659,469,674,537,679,572,675,608,665,645,649,683,625,708,602,728,575,745,545,758,514,774,452,782,402,787,403,780,453,763,515,749,547,733,578,712,605,686,629,647,654,610,670,573,680,537,684,468,679,399,664,330,648,259,639,222,640,184,647,145,660,104,680,81,698,62,722,39,766"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a543c4df7f8c35ecbe95dba9cb92601c2" title="Print detailed CCSRAM diagnostics." alt="" coords="117,689,242,716"/>
+<area shape="poly" title=" " alt="" coords="46,763,72,744,101,726,114,720,117,724,104,730,75,748,50,767"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a75f7392b5b07ca86de67a446dba6e336" title="Print general RAM usage information." alt="" coords="124,740,234,767"/>
+<area shape="poly" title=" " alt="" coords="54,772,109,763,110,768,55,777"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a51ae4fe12207c2c3c32b3b1126bbf51f" title="Print detailed RAM1 diagnostics." alt="" coords="128,791,230,817"/>
+<area shape="poly" title=" " alt="" coords="55,780,113,790,112,795,54,785"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9e50d8d069310b6642d405eed5a8723c" title="Print detailed RAM2 diagnostics." alt="" coords="128,841,230,868"/>
+<area shape="poly" title=" " alt="" coords="50,791,75,809,104,827,117,833,114,838,101,832,72,814,46,795"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="105,892,254,919"/>
+<area shape="poly" title=" " alt="" coords="40,791,64,834,83,858,104,878,111,882,108,887,101,882,79,861,60,837,35,794"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a5c81b8f300eba80193fcb84729ba8529" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="103,943,256,969"/>
+<area shape="poly" title=" " alt="" coords="37,792,44,821,57,857,77,896,105,929,109,932,106,936,101,933,72,899,52,859,39,822,31,793"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="330,31,446,57"/>
+<area shape="poly" title=" " alt="" coords="180,333,190,283,212,212,228,173,248,135,273,99,302,67,315,59,318,63,306,71,277,102,253,137,233,175,217,214,195,285,185,335"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="334,81,443,108"/>
+<area shape="poly" title=" " alt="" coords="182,334,195,292,218,234,254,172,276,143,302,118,318,108,321,113,306,122,280,147,258,175,223,236,200,294,187,335"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="324,132,452,159"/>
+<area shape="poly" title=" " alt="" coords="184,333,200,300,225,255,260,209,302,169,310,164,313,168,306,173,264,212,230,258,205,302,189,335"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a323249dac769f9855c10b4ec9446b707" title="Enable DMA controller clock." alt="" coords="336,183,440,209"/>
+<area shape="poly" title=" " alt="" coords="188,333,233,278,266,246,303,219,321,210,323,215,305,224,269,250,237,282,192,336"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac724e431d2af879252de35615be2bdea" title="GPIO Initialization Function." alt="" coords="335,233,441,260"/>
+<area shape="poly" title=" " alt="" coords="198,332,244,301,303,270,319,263,321,268,305,274,247,306,201,337"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="338,284,439,311"/>
+<area shape="poly" title=" " alt="" coords="236,332,322,311,323,316,237,337"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="337,335,439,361"/>
+<area shape="poly" title=" " alt="" coords="236,345,322,345,322,351,236,351"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="337,385,439,412"/>
+<area shape="poly" title=" " alt="" coords="237,359,323,380,321,385,236,364"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="336,588,440,615"/>
+<area shape="poly" title=" " alt="" coords="187,361,200,402,223,460,258,521,280,549,306,574,323,585,320,589,302,578,276,553,254,524,218,462,195,404,182,362"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="304,436,472,463"/>
+<area shape="poly" title=" " alt="" coords="201,359,247,390,305,422,321,428,319,433,303,426,244,395,198,364"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="304,487,472,513"/>
+<area shape="poly" title=" " alt="" coords="192,360,237,414,269,446,305,472,315,478,313,483,303,477,266,450,233,418,188,363"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="316,537,461,564"/>
+<area shape="poly" title=" " alt="" coords="189,361,205,394,230,438,264,484,306,523,313,528,310,532,302,527,260,487,225,441,200,396,184,363"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="520,5,685,32"/>
+<area shape="poly" title=" " alt="" coords="446,35,505,28,505,33,447,40"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="561,56,644,83"/>
+<area shape="poly" title=" " alt="" coords="447,48,546,60,545,65,446,53"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a79e119baa565a33480ab200c72fd6d3e" title=" " alt="" coords="546,107,659,133"/>
+<area shape="poly" title=" " alt="" coords="441,55,473,67,521,92,538,99,536,104,519,97,471,72,440,60"/>
+<area shape="poly" title=" " alt="" coords="645,72,667,80,686,93,712,121,732,154,762,223,779,291,787,344,782,345,774,292,757,225,728,156,707,124,683,97,665,84,644,77"/>
+<area shape="rect" href="_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of critical error occurrence from which system can no safely recove..." alt="" coords="552,385,653,412"/>
+<area shape="poly" title=" " alt="" coords="445,102,474,118,502,146,525,178,561,248,585,316,599,369,593,370,580,317,557,250,521,181,498,150,471,122,442,106"/>
+<area shape="poly" title=" " alt="" coords="454,157,474,169,498,191,519,216,554,272,579,326,596,370,590,372,575,328,550,274,515,219,494,195,471,173,451,161"/>
+<area shape="poly" title=" " alt="" coords="440,308,473,320,525,347,570,374,567,379,522,351,471,325,438,313"/>
+<area shape="poly" title=" " alt="" coords="440,357,537,381,536,386,439,363"/>
+<area shape="poly" title=" " alt="" coords="440,396,536,396,536,401,440,401"/>
+<area shape="poly" title=" " alt="" coords="439,589,471,574,509,540,542,499,567,459,586,425,591,428,572,462,546,502,513,543,474,578,441,594"/>
+<area shape="rect" href="_trinity_track6000___init_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title="TIM MSP Post Initialization." alt="" coords="525,588,680,615"/>
+<area shape="poly" title=" " alt="" coords="440,599,510,599,510,604,440,604"/>
+<area shape="poly" title=" " alt="" coords="447,433,536,412,537,417,449,438"/>
+<area shape="poly" title=" " alt="" coords="441,484,471,472,522,446,567,419,570,423,525,451,473,477,443,489"/>
+<area shape="poly" title=" " alt="" coords="446,534,471,523,504,500,533,473,580,422,584,426,537,477,507,504,474,528,449,539"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="317,884,459,927"/>
+<area shape="poly" title=" " alt="" coords="255,903,301,903,301,908,255,908"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a0443eb7a80a5df8845d2d0e788013b45" name="a0443eb7a80a5df8845d2d0e788013b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0443eb7a80a5df8845d2d0e788013b45">&#9670;&#160;</a></span>task_blink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_blink </td>
+          <td>(</td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a0443eb7a80a5df8845d2d0e788013b45_icgraph.png" border="0" usemap="#amain_8cpp_a0443eb7a80a5df8845d2d0e788013b45_icgraph" loading="lazy" alt=""/></div>
+<map name="amain_8cpp_a0443eb7a80a5df8845d2d0e788013b45_icgraph" id="amain_8cpp_a0443eb7a80a5df8845d2d0e788013b45_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,277,32"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af2e15798c128e90cab0c5d02b5bbf9a9" name="af2e15798c128e90cab0c5d02b5bbf9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e15798c128e90cab0c5d02b5bbf9a9">&#9670;&#160;</a></span>tx_application_define()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tx_application_define </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>first_unused_memory</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_af2e15798c128e90cab0c5d02b5bbf9a9_cgraph.png" border="0" usemap="#amain_8cpp_af2e15798c128e90cab0c5d02b5bbf9a9_cgraph" loading="lazy" alt=""/></div>
+<map name="amain_8cpp_af2e15798c128e90cab0c5d02b5bbf9a9_cgraph" id="amain_8cpp_af2e15798c128e90cab0c5d02b5bbf9a9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" href="main_8cpp.html#a0443eb7a80a5df8845d2d0e788013b45" title=" " alt="" coords="197,5,277,32"/>
+<area shape="poly" title=" " alt="" coords="149,16,181,16,181,21,149,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a122d41f15400e36427a2195b304ba4bc" name="a122d41f15400e36427a2195b304ba4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122d41f15400e36427a2195b304ba4bc">&#9670;&#160;</a></span>task_blink_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TX_THREAD task_blink_handle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe23b7eef9fb7c568ab2459b3553ac56" name="abe23b7eef9fb7c568ab2459b3553ac56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe23b7eef9fb7c568ab2459b3553ac56">&#9670;&#160;</a></span>task_blink_stack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ULONG task_blink_stack[128]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

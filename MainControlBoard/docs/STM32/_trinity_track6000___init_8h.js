@@ -5,6 +5,7 @@ var _trinity_track6000___init_8h =
     [ "initializeMCP", "_trinity_track6000___init_8h.html#a77dc374f08bff5b7968adfa3aff0fc7e", null ],
     [ "initializeMemory", "_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8", null ],
     [ "initializeSystem", "_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3", null ],
+    [ "initializeThreadXMemory", "_trinity_track6000___init_8h.html#ac5a71095e7ff4714d2248ed6dde28647", null ],
     [ "MQ_GPIO_Init", "_trinity_track6000___init_8h.html#a06522493c5458ecce58b627a985d653d", null ],
     [ "MX_ADC1_Init", "_trinity_track6000___init_8h.html#acccd58aa70215a6b184ad242312ffd0c", null ],
     [ "MX_CORDIC_Init", "_trinity_track6000___init_8h.html#abaa7174b8ca9458dc28ada25ee797b78", null ],

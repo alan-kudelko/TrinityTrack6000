@@ -1,5 +1,7 @@
 <map id="Include/main.h" name="Include/main.h">
-<area shape="rect" id="Node000001" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="5,5,112,32"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Main program body." alt="" coords="9,80,108,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,48,61,80,56,80,56,48"/>
+<area shape="rect" id="Node000001" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="71,5,177,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Main program body." alt="" coords="5,80,104,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,45,68,81,65,78,100,41"/>
+<area shape="rect" id="Node000003" href="$stm32g4xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="127,80,262,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,41,184,78,180,81,145,45"/>
 </map>

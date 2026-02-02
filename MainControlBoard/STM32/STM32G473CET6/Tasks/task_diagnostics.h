@@ -16,18 +16,28 @@
 
 #include <tx_api.h>
 
-#define TASK_DIAGNOSTICS_STACK_SIZE 256  /**< Stack size for diagnostics task */
+#define TASK_DIAGNOSTICS_STACK_SIZE 512  /**< Stack size for diagnostics task */
 #define TASKS_DIAGNOSTICS_PRIORITY    2  /**< Priority for diagnostics task */
 
 extern const char task_diagnostics_name[];  /**< Name of the diagnostics task */
 
 extern TX_THREAD task_diagnostics_handle __attribute((section(".task_handles.task_diagnostics"))); /**< Thread handlefor diagnostics task */
 extern ULONG task_diagnostics_stack[TASK_DIAGNOSTICS_STACK_SIZE] __attribute((section(".task_stacks.task_diagnostics"))); /**< Stack for diagnostics task */
+extern TX_SEMAPHORE sem_task_diagnostics_command_ready __attribute((section(".task_semaphores.task_diagnostics"))); /**< Semaphore for diagnostics task indicating command ready to parse */
 
 
 #ifdef __cplusplus
     extern "C"{
 #endif // __cplusplus
+
+/**
+ * @brief Initialize diagnostics task.
+ * This function sets up necessary resources for the diagnostics task,
+ * such as semaphores.
+ * @param None.
+ * @return None.
+ */
+void task_diagnostics_init(void);
 
 /**
  * @brief Diagnostics task function.

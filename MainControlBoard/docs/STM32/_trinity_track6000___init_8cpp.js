@@ -2,6 +2,7 @@ var _trinity_track6000___init_8cpp =
 [
     [ "initializeMemory", "_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8", null ],
     [ "initializeSystem", "_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3", null ],
+    [ "initializeThreadXMemory", "_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647", null ],
     [ "MX_ADC1_Init", "_trinity_track6000___init_8cpp.html#acccd58aa70215a6b184ad242312ffd0c", null ],
     [ "MX_CORDIC_Init", "_trinity_track6000___init_8cpp.html#abaa7174b8ca9458dc28ada25ee797b78", null ],
     [ "MX_DMA_Init", "_trinity_track6000___init_8cpp.html#a323249dac769f9855c10b4ec9446b707", null ],

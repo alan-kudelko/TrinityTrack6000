@@ -140,8 +140,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a0803a38b4f987d37a2a165e9cb48e085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA transmission is complete.  <br /></td></tr>
 <tr class="memitem:ac8ef9e25183411bf853e2a9ad431fadf" id="r_ac8ef9e25183411bf853e2a9ad431fadf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8ef9e25183411bf853e2a9ad431fadf">usart1_dma_rx_init</a> (void)</td></tr>
 <tr class="memdesc:ac8ef9e25183411bf853e2a9ad431fadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes DMA for USART1 reception.  <br /></td></tr>
-<tr class="memitem:a5a84756d8607d4e5d6ca97bd76e8a1b3" id="r_a5a84756d8607d4e5d6ca97bd76e8a1b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a84756d8607d4e5d6ca97bd76e8a1b3">usart1_dma_read_data</a> (uint8_t *dst, uint8_t *length, const uint16_t maxLength)</td></tr>
-<tr class="memdesc:a5a84756d8607d4e5d6ca97bd76e8a1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the USART1 receive ring buffer into the provided destination buffer.  <br /></td></tr>
+<tr class="memitem:a5c81b8f300eba80193fcb84729ba8529" id="r_a5c81b8f300eba80193fcb84729ba8529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c81b8f300eba80193fcb84729ba8529">usart1_dma_read_data</a> (uint8_t *dst, uint16_t *length, const uint16_t maxLength)</td></tr>
+<tr class="memdesc:a5c81b8f300eba80193fcb84729ba8529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the USART1 receive ring buffer into the provided destination buffer.  <br /></td></tr>
 <tr class="memitem:a9c8112fb591c08eeb982df2f8e0048af" id="r_a9c8112fb591c08eeb982df2f8e0048af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c8112fb591c08eeb982df2f8e0048af">usart1_dma_copy_from_rx_buffer</a> (const uint16_t dma_transfer_size)</td></tr>
 <tr class="memdesc:a9c8112fb591c08eeb982df2f8e0048af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from the source DMA buffer to the receive ring buffer.  <br /></td></tr>
 <tr class="memitem:a85b4ee3a11083efdb77f4622a19bc817" id="r_a85b4ee3a11083efdb77f4622a19bc817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85b4ee3a11083efdb77f4622a19bc817">usart1_dma_rx_complete</a> (const uint16_t dma_transfer_size)</td></tr>
@@ -162,6 +162,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a07c247294961289672bac2581bd83e05" id="r_a07c247294961289672bac2581bd83e05"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c247294961289672bac2581bd83e05">huart1_dma_tx_ring_buffer_length</a> =0</td></tr>
 <tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
 <tr class="memitem:a5af94ab36bfe698db3e6beea96d10a90" id="r_a5af94ab36bfe698db3e6beea96d10a90"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5af94ab36bfe698db3e6beea96d10a90">hdma_usart1_tx</a></td></tr>
+<tr class="memitem:a34251392f0d5e2461e3aef615918c235" id="r_a34251392f0d5e2461e3aef615918c235"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34251392f0d5e2461e3aef615918c235">hdma_usart1_rx</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of USART1 with DMA functionality and dedicated ring buffer. </p>
@@ -339,8 +340,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5a84756d8607d4e5d6ca97bd76e8a1b3" name="a5a84756d8607d4e5d6ca97bd76e8a1b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a84756d8607d4e5d6ca97bd76e8a1b3">&#9670;&#160;</a></span>usart1_dma_read_data()</h2>
+<a id="a5c81b8f300eba80193fcb84729ba8529" name="a5c81b8f300eba80193fcb84729ba8529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c81b8f300eba80193fcb84729ba8529">&#9670;&#160;</a></span>usart1_dma_read_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +354,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -380,8 +381,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph" id="a_u_s_a_r_t1___dma_8c_a5a84756d8607d4e5d6ca97bd76e8a1b3_icgraph">
+<div class="center"><img src="_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph" loading="lazy" alt=""/></div>
+<map name="a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph" id="a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph">
 <area shape="rect" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="103,5,256,32"/>
 <area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -461,13 +462,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph" loading="lazy" alt=""/></div>
 <map name="a_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph" id="a_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph">
-<area shape="rect" title="Initializes DMA for USART1 reception." alt="" coords="484,31,615,57"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="328,5,377,32"/>
-<area shape="poly" title=" " alt="" coords="468,36,377,24,378,19,469,31"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,56,436,83"/>
-<area shape="poly" title=" " alt="" coords="469,57,437,61,436,56,468,52"/>
-<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#a78aac784638b94dd20e0f8a0f3e9ddcc" title=" " alt="" coords="5,56,221,83"/>
-<area shape="poly" title=" " alt="" coords="253,72,221,72,221,67,253,67"/>
+<area shape="rect" title="Initializes DMA for USART1 reception." alt="" coords="484,5,615,32"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,5,436,32"/>
+<area shape="poly" title=" " alt="" coords="468,21,437,21,437,16,468,16"/>
+<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#a78aac784638b94dd20e0f8a0f3e9ddcc" title=" " alt="" coords="5,5,221,32"/>
+<area shape="poly" title=" " alt="" coords="253,21,221,21,221,16,253,16"/>
 </map>
 </div>
 
@@ -515,6 +514,28 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a34251392f0d5e2461e3aef615918c235" name="a34251392f0d5e2461e3aef615918c235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34251392f0d5e2461e3aef615918c235">&#9670;&#160;</a></span>hdma_usart1_rx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DMA_HandleTypeDef hdma_usart1_rx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5af94ab36bfe698db3e6beea96d10a90" name="a5af94ab36bfe698db3e6beea96d10a90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5af94ab36bfe698db3e6beea96d10a90">&#9670;&#160;</a></span>hdma_usart1_tx</h2>
 

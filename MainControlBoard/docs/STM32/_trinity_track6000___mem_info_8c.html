@@ -165,6 +165,10 @@ Variables</h2></td></tr>
 <tr class="memitem:ad89bc08241c120cd99f2215e14cb10ba" id="r_ad89bc08241c120cd99f2215e14cb10ba"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad89bc08241c120cd99f2215e14cb10ba">__RAM2_end__</a></td></tr>
 <tr class="memitem:af4e778e2b9d815c54cf1d7c38968ecf7" id="r_af4e778e2b9d815c54cf1d7c38968ecf7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4e778e2b9d815c54cf1d7c38968ecf7">__CCSRAM_start__</a></td></tr>
 <tr class="memitem:adde5d6d0c01fbe3cd18d9731d50064d3" id="r_adde5d6d0c01fbe3cd18d9731d50064d3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde5d6d0c01fbe3cd18d9731d50064d3">__CCSRAM_end__</a></td></tr>
+<tr class="memitem:aa176183cf4015a8f7e8365f702b47782" id="r_aa176183cf4015a8f7e8365f702b47782"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa176183cf4015a8f7e8365f702b47782">__TASK_HANDLES_START__</a></td></tr>
+<tr class="memitem:a0f7fa4ea5916b672de0d42e81c155d88" id="r_a0f7fa4ea5916b672de0d42e81c155d88"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f7fa4ea5916b672de0d42e81c155d88">__TASK_HANDLES_END__</a></td></tr>
+<tr class="memitem:a9b0bc5fb2485dbd956cbcad1ff48c3aa" id="r_a9b0bc5fb2485dbd956cbcad1ff48c3aa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b0bc5fb2485dbd956cbcad1ff48c3aa">__TASK_STACKS_START__</a></td></tr>
+<tr class="memitem:a9f74c13747e18daba158180f1726e4c6" id="r_a9f74c13747e18daba158180f1726e4c6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f74c13747e18daba158180f1726e4c6">__TASK_STACKS_END__</a></td></tr>
 <tr class="memitem:a490f63abeb05d97d096a7e8dca7a479f" id="r_a490f63abeb05d97d096a7e8dca7a479f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a490f63abeb05d97d096a7e8dca7a479f">__RAM_DIAGNOSTICS_START__</a></td></tr>
 <tr class="memitem:a49433164e75bde7c33a071580ffe6f8e" id="r_a49433164e75bde7c33a071580ffe6f8e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49433164e75bde7c33a071580ffe6f8e">__RAM_DIAGNOSTICS_END__</a></td></tr>
 <tr class="memitem:a59ff0a30009e0e8f5ff83e81320dc621" id="r_a59ff0a30009e0e8f5ff83e81320dc621"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59ff0a30009e0e8f5ff83e81320dc621">__SYS_DIAGNOSTICS_START__</a></td></tr>
@@ -175,28 +179,30 @@ Variables</h2></td></tr>
 <tr class="memitem:aa2821b7ba9fd6c75c45e106a2ea544c4" id="r_aa2821b7ba9fd6c75c45e106a2ea544c4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2821b7ba9fd6c75c45e106a2ea544c4">__DMA_END__</a></td></tr>
 <tr class="memitem:a2cf862d604e9c7cfcf0528a0f539a6a5" id="r_a2cf862d604e9c7cfcf0528a0f539a6a5"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf862d604e9c7cfcf0528a0f539a6a5">__sbrk_heap_end</a></td></tr>
 <tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
-<tr class="memitem:a322e88092787cb5fab8d065979f92ce8" id="r_a322e88092787cb5fab8d065979f92ce8"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a322e88092787cb5fab8d065979f92ce8">msg_ramDiagnosticsGeneral_header1</a> [] =&quot;+-------------------------[ RAM DIAGNOSTICS ]--------------------------+\r\n&quot;</td></tr>
+<tr class="memitem:a322e88092787cb5fab8d065979f92ce8" id="r_a322e88092787cb5fab8d065979f92ce8"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a322e88092787cb5fab8d065979f92ce8">msg_ramDiagnosticsGeneral_header1</a> [] =&quot;+----------------------------[ RAM DIAGNOSTICS ]-----------------------------+\r\n&quot;</td></tr>
 <tr class="memitem:a2c94bd67996549203d2ca442a74a04ae" id="r_a2c94bd67996549203d2ca442a74a04ae"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c94bd67996549203d2ca442a74a04ae">msg_ramDiagnosticsGeneral_header2</a> [] =&quot;| Bank | Start | End | Size | Usage | Used |\r\n&quot;</td></tr>
-<tr class="memitem:a8926c7c5f39e66cd6db9e710e24dd78d" id="r_a8926c7c5f39e66cd6db9e710e24dd78d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8926c7c5f39e66cd6db9e710e24dd78d">msg_ramDiagnosticsGeneral_header3</a> [] =&quot;+--------+------------+------------+---------+------------+------------+\r\n&quot;</td></tr>
+<tr class="memitem:a8926c7c5f39e66cd6db9e710e24dd78d" id="r_a8926c7c5f39e66cd6db9e710e24dd78d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8926c7c5f39e66cd6db9e710e24dd78d">msg_ramDiagnosticsGeneral_header3</a> [] =&quot;+--------------+------------+------------+---------+------------+------------+\r\n&quot;</td></tr>
 <tr class="memitem:abb2a8789d5718c8a7e5a526183751ebb" id="r_abb2a8789d5718c8a7e5a526183751ebb"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2a8789d5718c8a7e5a526183751ebb">msg_ramDiagnosticsGeneral_formatStringRAM1</a> [] =&quot;│ RAM1 │ 0x%08lX │ 0x%08lX │ %3u KB │%11s │ %3u%% │\r\n&quot;</td></tr>
 <tr class="memitem:a8451f39aecc451d2dae38247d951e119" id="r_a8451f39aecc451d2dae38247d951e119"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8451f39aecc451d2dae38247d951e119">msg_ramDiagnosticsGeneral_formatStringRAM2</a> [] =&quot;│ RAM2 │ 0x%08lX │ 0x%08lX │ %3u KB │%11s │ %3u%% │\r\n&quot;</td></tr>
 <tr class="memitem:a27721cbc97d19e0e65b8588ffb6d35df" id="r_a27721cbc97d19e0e65b8588ffb6d35df"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27721cbc97d19e0e65b8588ffb6d35df">msg_ramDiagnosticsGeneral_formatStringCCSRAM</a> [] =&quot;│ CCSRAM │ 0x%08lX │ 0x%08lX │ %3u KB │%11s │ %3u%% │\r\n&quot;</td></tr>
 <tr class="memitem:a4fd1d721ca466e8d20df28e39d5acf86" id="r_a4fd1d721ca466e8d20df28e39d5acf86"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fd1d721ca466e8d20df28e39d5acf86">msg_ramDiagnosticsGeneral_formatStringFreeRAM</a> [] =&quot;│ FREE RAM TOTAL: %3u KB │\r\n&quot;</td></tr>
 <tr class="memitem:a3d61b1577a05ce010ef283279aad990f" id="r_a3d61b1577a05ce010ef283279aad990f"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d61b1577a05ce010ef283279aad990f">msg_ramDiagnosticsGeneral_footer1</a> [] =&quot;| Commands: s(snapshot) b(bank) q(quit) |\r\n&quot;</td></tr>
-<tr class="memitem:a1dd35215307608269156853b75240b74" id="r_a1dd35215307608269156853b75240b74"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dd35215307608269156853b75240b74">msg_ramDiagnosticsGeneral_footer2</a> [] =&quot;+----------------------------------------------------------------------+\r\n&quot;</td></tr>
-<tr class="memitem:a5c28174f30534d34928544caf29ccbc2" id="r_a5c28174f30534d34928544caf29ccbc2"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c28174f30534d34928544caf29ccbc2">msg_ramDiagnosticsRAM1_header1</a> [] =&quot;+------------------------[ BANK RAM1 DETAILS ]-------------------------+\r\n&quot;</td></tr>
+<tr class="memitem:a1dd35215307608269156853b75240b74" id="r_a1dd35215307608269156853b75240b74"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dd35215307608269156853b75240b74">msg_ramDiagnosticsGeneral_footer2</a> [] =&quot;+----------------------------------------------------------------------------+\r\n&quot;</td></tr>
+<tr class="memitem:a5c28174f30534d34928544caf29ccbc2" id="r_a5c28174f30534d34928544caf29ccbc2"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c28174f30534d34928544caf29ccbc2">msg_ramDiagnosticsRAM1_header1</a> [] =&quot;+---------------------------[ BANK RAM1 DETAILS ]----------------------------+\r\n&quot;</td></tr>
 <tr class="memitem:a115be848bd3c640cc2b7cf3c13dcc5fa" id="r_a115be848bd3c640cc2b7cf3c13dcc5fa"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a115be848bd3c640cc2b7cf3c13dcc5fa">msg_ramDiagnosticsRAM1_header2</a> [] =&quot;| Section | Start | End | Size | Usage | |\r\n&quot;</td></tr>
-<tr class="memitem:ad1262d763992e5c8041a568701508232" id="r_ad1262d763992e5c8041a568701508232"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1262d763992e5c8041a568701508232">msg_ramDiagnosticsRAM1_header3</a> [] =&quot;+---------+------------+------------+---------+-----------+------------+\r\n&quot;</td></tr>
+<tr class="memitem:ad1262d763992e5c8041a568701508232" id="r_ad1262d763992e5c8041a568701508232"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1262d763992e5c8041a568701508232">msg_ramDiagnosticsRAM1_header3</a> [] =&quot;+---------------+------------+------------+---------+-----------+------------+\r\n&quot;</td></tr>
 <tr class="memitem:a8d025f0cb3013e7821131052a63f73d3" id="r_a8d025f0cb3013e7821131052a63f73d3"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d025f0cb3013e7821131052a63f73d3">msg_ramDiagnosticsRAM1_formatStringData</a> [] =&quot;| .DATA | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:a4fc4ae81e928d414744b0f8798f1e8cf" id="r_a4fc4ae81e928d414744b0f8798f1e8cf"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc4ae81e928d414744b0f8798f1e8cf">msg_ramDiagnosticsRAM1_formatStringBSS</a> [] =&quot;| .BSS | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:a33b62b03af5cd28c6ef23d079e9011da" id="r_a33b62b03af5cd28c6ef23d079e9011da"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33b62b03af5cd28c6ef23d079e9011da">msg_ramDiagnosticsRAM1_formatStringTData</a> [] =&quot;| .TDAT | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:aba71546a058108ad7f5478ed243b2884" id="r_aba71546a058108ad7f5478ed243b2884"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba71546a058108ad7f5478ed243b2884">msg_ramDiagnosticsRAM1_formatStringHeap</a> [] =&quot;| .HEAP | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
+<tr class="memitem:a8dd50c540d4d6bcb5b2b2dbe0546bab9" id="r_a8dd50c540d4d6bcb5b2b2dbe0546bab9"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd50c540d4d6bcb5b2b2dbe0546bab9">msg_ramDiagnosticsRAM1_formatStringTaskHandles</a> [] =&quot;| .taskHandles | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
+<tr class="memitem:a747fc36d48474021c22ddb08bfe238a6" id="r_a747fc36d48474021c22ddb08bfe238a6"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a747fc36d48474021c22ddb08bfe238a6">msg_ramDiagnosticsRAM1_formatStringTaskStacks</a> [] =&quot;| .taskStacks | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:aa43957dc463e803138ffcd0ac37717b9" id="r_aa43957dc463e803138ffcd0ac37717b9"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa43957dc463e803138ffcd0ac37717b9">msg_ramDiagnosticsRAM1_formatStringStack</a> [] =&quot;| .STACK | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:a1abce695c93d0f5842e854e157aaf71e" id="r_a1abce695c93d0f5842e854e157aaf71e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1abce695c93d0f5842e854e157aaf71e">msg_ramDiagnosticsRAM1_formatStringFreeRAM</a> [] =&quot;| FREE RAM TOTAL: %3u KB |\r\n&quot;</td></tr>
-<tr class="memitem:a83bc029906959a225494b684d6afcaf0" id="r_a83bc029906959a225494b684d6afcaf0"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83bc029906959a225494b684d6afcaf0">msg_ramDiagnosticsRAM2_header1</a> [] =&quot;+------------------------[ BANK RAM2 DETAILS ]-------------------------+\r\n&quot;</td></tr>
+<tr class="memitem:a83bc029906959a225494b684d6afcaf0" id="r_a83bc029906959a225494b684d6afcaf0"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83bc029906959a225494b684d6afcaf0">msg_ramDiagnosticsRAM2_header1</a> [] =&quot;+---------------------------[ BANK RAM2 DETAILS ]----------------------------+\r\n&quot;</td></tr>
 <tr class="memitem:ac2e8fdb0c0e3d9ae4e95facdaa512797" id="r_ac2e8fdb0c0e3d9ae4e95facdaa512797"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e8fdb0c0e3d9ae4e95facdaa512797">msg_ramDiagnosticsRAM2_formatStringRamDia</a> [] =&quot;| .ramDia | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:adfd4758ffaed715940419abc4c718478" id="r_adfd4758ffaed715940419abc4c718478"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfd4758ffaed715940419abc4c718478">msg_ramDiagnosticsRAM2_formatStringSysDia</a> [] =&quot;| .sysDia | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
-<tr class="memitem:af2089e35c26c76b5afd008279cdecdd1" id="r_af2089e35c26c76b5afd008279cdecdd1"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2089e35c26c76b5afd008279cdecdd1">msg_ramDiagnosticsCCSRAM_header1</a> [] =&quot;+-----------------------[ BANK CCSRAM DETAILS ]------------------------+\r\n&quot;</td></tr>
+<tr class="memitem:af2089e35c26c76b5afd008279cdecdd1" id="r_af2089e35c26c76b5afd008279cdecdd1"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2089e35c26c76b5afd008279cdecdd1">msg_ramDiagnosticsCCSRAM_header1</a> [] =&quot;+---------------------------[ BANK CCSRAM DETAILS ]--------------------------+\r\n&quot;</td></tr>
 <tr class="memitem:acf9bef1226bd77ce8b38c251a8f62bbd" id="r_acf9bef1226bd77ce8b38c251a8f62bbd"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf9bef1226bd77ce8b38c251a8f62bbd">msg_ramDiagnosticsCCSRAM_formatStringCrit</a> [] =&quot;| .crit | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:a8c23e80fbc27c1c1f77e28ef24fb9bf1" id="r_a8c23e80fbc27c1c1f77e28ef24fb9bf1"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c23e80fbc27c1c1f77e28ef24fb9bf1">msg_ramDiagnosticsCCSRAM_formatStringDmaBuff</a> [] =&quot;| .dmaBuf | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td></tr>
 <tr class="memitem:a1c962ba3aa1f47d915f6ec6a41d8f210" id="r_a1c962ba3aa1f47d915f6ec6a41d8f210"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c962ba3aa1f47d915f6ec6a41d8f210">ramDiagnosticsGeneral_total_size</a> =0</td></tr>
@@ -212,6 +218,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a3d8f9229eba357df2a423437fd98938f" id="r_a3d8f9229eba357df2a423437fd98938f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d8f9229eba357df2a423437fd98938f">ramDiagnosticsRAM1_data_size</a> =0</td></tr>
 <tr class="memitem:ab74cfac7d5d2af682007a8ce72b2a6f9" id="r_ab74cfac7d5d2af682007a8ce72b2a6f9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab74cfac7d5d2af682007a8ce72b2a6f9">ramDiagnosticsRAM1_bss_size</a> =0</td></tr>
 <tr class="memitem:a4acfa4c90a0c0391a9809182096553a4" id="r_a4acfa4c90a0c0391a9809182096553a4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4acfa4c90a0c0391a9809182096553a4">ramDiagnosticsRAM1_tdat_size</a> =0</td></tr>
+<tr class="memitem:aaed39008e3f8f0bee3b8fbdd954878b2" id="r_aaed39008e3f8f0bee3b8fbdd954878b2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaed39008e3f8f0bee3b8fbdd954878b2">ramDiagnosticsRAM1_taskHandles_size</a> =0</td></tr>
+<tr class="memitem:a28b30cb9d124fdb72e27b867e1a186e6" id="r_a28b30cb9d124fdb72e27b867e1a186e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28b30cb9d124fdb72e27b867e1a186e6">ramDiagnosticsRAM1_taskStacks_size</a> =0</td></tr>
 <tr class="memitem:a97f9eb90424420bc18bbec5ae5a015e6" id="r_a97f9eb90424420bc18bbec5ae5a015e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97f9eb90424420bc18bbec5ae5a015e6">ramDiagnosticsRAM1_heap_size</a> =0</td></tr>
 <tr class="memitem:a5128ea0b8dc5feabcf2fed87ad53074f" id="r_a5128ea0b8dc5feabcf2fed87ad53074f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5128ea0b8dc5feabcf2fed87ad53074f">ramDiagnosticsRAM1_stack_size</a> =0</td></tr>
 <tr class="memitem:a89fcaeb9b84b6baeaa4f15cec0d17e1e" id="r_a89fcaeb9b84b6baeaa4f15cec0d17e1e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89fcaeb9b84b6baeaa4f15cec0d17e1e">ramDiagnosticsRAM2_ramDiagnostics_size</a> =0</td></tr>
@@ -879,6 +887,94 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a0f7fa4ea5916b672de0d42e81c155d88" name="a0f7fa4ea5916b672de0d42e81c155d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7fa4ea5916b672de0d42e81c155d88">&#9670;&#160;</a></span>__TASK_HANDLES_END__</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t __TASK_HANDLES_END__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa176183cf4015a8f7e8365f702b47782" name="aa176183cf4015a8f7e8365f702b47782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa176183cf4015a8f7e8365f702b47782">&#9670;&#160;</a></span>__TASK_HANDLES_START__</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t __TASK_HANDLES_START__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f74c13747e18daba158180f1726e4c6" name="a9f74c13747e18daba158180f1726e4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f74c13747e18daba158180f1726e4c6">&#9670;&#160;</a></span>__TASK_STACKS_END__</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t __TASK_STACKS_END__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b0bc5fb2485dbd956cbcad1ff48c3aa" name="a9b0bc5fb2485dbd956cbcad1ff48c3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0bc5fb2485dbd956cbcad1ff48c3aa">&#9670;&#160;</a></span>__TASK_STACKS_START__</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t __TASK_STACKS_START__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1fc4a71c31f5b048d3b1b7b2d10684d1" name="a1fc4a71c31f5b048d3b1b7b2d10684d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fc4a71c31f5b048d3b1b7b2d10684d1">&#9670;&#160;</a></span>_edata</h2>
 
@@ -1004,7 +1100,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsCCSRAM_header1[] =&quot;+-----------------------[ BANK CCSRAM DETAILS ]------------------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsCCSRAM_header1[] =&quot;+---------------------------[ BANK CCSRAM DETAILS ]--------------------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1034,7 +1130,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsGeneral_footer2[] =&quot;+----------------------------------------------------------------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsGeneral_footer2[] =&quot;+----------------------------------------------------------------------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1109,7 +1205,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsGeneral_header1[] =&quot;+-------------------------[ RAM DIAGNOSTICS ]--------------------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsGeneral_header1[] =&quot;+----------------------------[ RAM DIAGNOSTICS ]-----------------------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1139,7 +1235,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsGeneral_header3[] =&quot;+--------+------------+------------+---------+------------+------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsGeneral_header3[] =&quot;+--------------+------------+------------+---------+------------+------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1222,6 +1318,36 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a8dd50c540d4d6bcb5b2b2dbe0546bab9" name="a8dd50c540d4d6bcb5b2b2dbe0546bab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd50c540d4d6bcb5b2b2dbe0546bab9">&#9670;&#160;</a></span>msg_ramDiagnosticsRAM1_formatStringTaskHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_ramDiagnosticsRAM1_formatStringTaskHandles[] =&quot;| .taskHandles | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RAM1 diagnostics format string for .taskHandles section </p>
+
+</div>
+</div>
+<a id="a747fc36d48474021c22ddb08bfe238a6" name="a747fc36d48474021c22ddb08bfe238a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747fc36d48474021c22ddb08bfe238a6">&#9670;&#160;</a></span>msg_ramDiagnosticsRAM1_formatStringTaskStacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_ramDiagnosticsRAM1_formatStringTaskStacks[] =&quot;| .taskStacks | 0x%08lX | 0x%08lX | %3u KB | %3u KB | |\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RAM1 diagnostics format string for .taskStacks section </p>
+
+</div>
+</div>
 <a id="a33b62b03af5cd28c6ef23d079e9011da" name="a33b62b03af5cd28c6ef23d079e9011da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33b62b03af5cd28c6ef23d079e9011da">&#9670;&#160;</a></span>msg_ramDiagnosticsRAM1_formatStringTData</h2>
 
@@ -1243,7 +1369,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsRAM1_header1[] =&quot;+------------------------[ BANK RAM1 DETAILS ]-------------------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsRAM1_header1[] =&quot;+---------------------------[ BANK RAM1 DETAILS ]----------------------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1273,7 +1399,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsRAM1_header3[] =&quot;+---------+------------+------------+---------+-----------+------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsRAM1_header3[] =&quot;+---------------+------------+------------+---------+-----------+------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1318,7 +1444,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_ramDiagnosticsRAM2_header1[] =&quot;+------------------------[ BANK RAM2 DETAILS ]-------------------------+\r\n&quot;</td>
+          <td class="memname">const char msg_ramDiagnosticsRAM2_header1[] =&quot;+---------------------------[ BANK RAM2 DETAILS ]----------------------------+\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1488,6 +1614,34 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">uint8_t ramDiagnosticsRAM1_stack_size =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaed39008e3f8f0bee3b8fbdd954878b2" name="aaed39008e3f8f0bee3b8fbdd954878b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed39008e3f8f0bee3b8fbdd954878b2">&#9670;&#160;</a></span>ramDiagnosticsRAM1_taskHandles_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ramDiagnosticsRAM1_taskHandles_size =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28b30cb9d124fdb72e27b867e1a186e6" name="a28b30cb9d124fdb72e27b867e1a186e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b30cb9d124fdb72e27b867e1a186e6">&#9670;&#160;</a></span>ramDiagnosticsRAM1_taskStacks_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ramDiagnosticsRAM1_taskStacks_size =0</td>
         </tr>
       </table>
 </div><div class="memdoc">
