@@ -1,6 +1,7 @@
 /**
  * @file USART1_Dma.h
  * @brief Header for USART1 with DMA functionality and dedicated ring buffer.
+ * @note This module uses modified USART1_IRQHandler in stm32g4xx_it.c to handle USART1 rx interrupts.
  * 
  * @author Alan Kudełko
  * @copyright
@@ -46,6 +47,7 @@ extern volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE]
 
 extern volatile uint16_t huart1_dma_tx_buffer_length;
 
+extern volatile uint16_t huart1_dma_rx_old_pos;
 extern volatile uint16_t huart1_dma_rx_ring_buffer_head;
 extern volatile uint16_t huart1_dma_rx_ring_buffer_tail;
 extern volatile uint16_t huart1_dma_rx_ring_buffer_length;
@@ -119,11 +121,11 @@ extern void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size);
 
 /**
  * @brief Callback function called when USART1 DMA reception is complete.
- * @param dma_transfer_size Size of the data transferred by DMA in bytes.
- * @note This function is called from the HAL_UART_RxCpltCallback when USART1 reception is complete.
+ * @param None
+ * @note This function is called from the USART1_IRQHandler when USART1 reception is complete.
  * @warning This function is intended for internal use only.
  */
-extern void usart1_dma_rx_complete(const uint16_t dma_transfer_size);
+extern void usart1_dma_rx_complete(void);
 
 #ifdef __cplusplus
     }

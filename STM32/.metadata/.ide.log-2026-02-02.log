@@ -1,0 +1,6 @@
+2026-02-02 18:06:59,408 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-02-02 18:07:05,126 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 7551mS.
+2026-02-02 18:07:05,130 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-02-02 18:07:05,140 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-02-02 19:12:52,268 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 895317264 Bytes (1073741824)
+2026-02-02 19:31:22,147 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

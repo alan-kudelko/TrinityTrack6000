@@ -12,6 +12,10 @@
  */
 
 #include <USART_Callbacks.h>
+#include <TrinityTrack6000_Pinout.h>
+
+extern UART_HandleTypeDef huart1;
+//extern UART_HandleTypeDef huart2;
 
 extern void usart1_dma_tx_complete(void);
 //extern void usart2_dma_tx_complete(void);
@@ -30,7 +34,7 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef*huart){
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef*huart,uint16_t size){
     if(huart->Instance==USART1){
-        usart1_dma_rx_complete(size);
+        //usart1_dma_rx_complete(size);
     }
     else if(huart->Instance==USART2){
         //usart2_dma_rx_complete();

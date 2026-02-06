@@ -22,6 +22,7 @@
 #include "stm32g4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <USART1_Dma.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -275,7 +276,11 @@ void DMA1_Channel7_IRQHandler(void)
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
-
+  if(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_IDLE)){
+      __HAL_UART_CLEAR_IDLEFLAG(&huart1);
+      // Handle IDLE line detected interrupt for USART1 with DMA
+      usart1_dma_rx_complete();
+  }
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
