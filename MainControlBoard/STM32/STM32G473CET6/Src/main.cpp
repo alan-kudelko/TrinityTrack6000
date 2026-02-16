@@ -35,27 +35,31 @@ extern "C"{
 TX_THREAD task_blink_handle;
 ULONG task_blink_stack[128];
 
+void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout);
+UINT delay_function(ULONG timeout);
+
 void task_blink(ULONG arg){
     UNUSED(arg);
     while(1){
         HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-        tx_thread_sleep(250);
+        test_function(tx_thread_sleep,1000);
+        
     }
 }
 
 void tx_application_define(void* first_unused_memory){
     // Create threads, queues, semaphores, mutexes here
     UNUSED(first_unused_memory);
-    // tx_thread_create(&task_blink_handle,
-    //                 (char*)"Blink Task",
-    //                 task_blink,
-    //                 0,
-    //                 &task_blink_stack,
-    //                 sizeof(task_blink_stack),
-    //                 1,
-    //                 1,
-    //                 TX_NO_TIME_SLICE,
-    //                 TX_AUTO_START);
+    tx_thread_create(&task_blink_handle,
+                    (char*)"Blink Task",
+                    task_blink,
+                    0,
+                    &task_blink_stack,
+                    sizeof(task_blink_stack),
+                    1,
+                    1,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
 
     tx_thread_create(&task_diagnostics_handle,
                     (char*)task_diagnostics_name,
@@ -69,7 +73,31 @@ void tx_application_define(void* first_unused_memory){
                     TX_AUTO_START);
 }
 
+void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout){
+    fptr(retryTimeout);
+}
 
+UINT delay_function(ULONG timeout){
+    HAL_Delay(timeout);
+    return 0;
+}
+
+}
+
+UINT (*ptr)(ULONG);
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM6)
+  {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
 }
 
 /**
@@ -81,10 +109,10 @@ int main(void){
     // Handle non critical errors which in worst case result
     // in system's few functionalities unavailable
     ramInfoRefresh();
-    ramInfoGeneral();
-    ramInfoRAM1();
-    ramInfoRAM2();
-    ramInfoCCSRAM();
+    ramInfoGeneral(delay_function,100);
+    ramInfoRAM1(delay_function,100);
+    ramInfoRAM2(delay_function,100);
+    ramInfoCCSRAM(delay_function,100);
 
     uint8_t testData[]="Hello world this is DMA test\r\n";
     uint16_t testDataLength=strlen((const char*)testData);

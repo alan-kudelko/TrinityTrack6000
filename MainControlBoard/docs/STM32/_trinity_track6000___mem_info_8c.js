@@ -1,11 +1,11 @@
 var _trinity_track6000___mem_info_8c =
 [
     [ "Error_Handler", "_trinity_track6000___mem_info_8c.html#a1730ffe1e560465665eb47d9264826f9", null ],
-    [ "ramInfoCCSRAM", "_trinity_track6000___mem_info_8c.html#a543c4df7f8c35ecbe95dba9cb92601c2", null ],
-    [ "ramInfoGeneral", "_trinity_track6000___mem_info_8c.html#a75f7392b5b07ca86de67a446dba6e336", null ],
+    [ "ramInfoCCSRAM", "_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915", null ],
+    [ "ramInfoGeneral", "_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a", null ],
     [ "ramInfoInit", "_trinity_track6000___mem_info_8c.html#a3ef2b47170729565a03ab59854758b18", null ],
-    [ "ramInfoRAM1", "_trinity_track6000___mem_info_8c.html#a51ae4fe12207c2c3c32b3b1126bbf51f", null ],
-    [ "ramInfoRAM2", "_trinity_track6000___mem_info_8c.html#a9e50d8d069310b6642d405eed5a8723c", null ],
+    [ "ramInfoRAM1", "_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f", null ],
+    [ "ramInfoRAM2", "_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504", null ],
     [ "ramInfoRefresh", "_trinity_track6000___mem_info_8c.html#a28cd6ca417d0332298ba1dc946e34444", null ],
     [ "__bss_end__", "_trinity_track6000___mem_info_8c.html#a2ba38e14d0dfe1bc01684b717aac665a", null ],
     [ "__bss_start__", "_trinity_track6000___mem_info_8c.html#a3ac1a82676c1ee9d53371718c06fe849", null ],

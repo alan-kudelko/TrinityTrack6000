@@ -32,6 +32,7 @@
     #define TRINITYTRACK6000_MEMINFO_H_
 
 #include <stdint.h>
+#include <tx_port.h>
 
 #define MEMINFO_LINE_BUFFER_SIZE 95
 #define MEMINFO_BAR_BUFFER_SIZE 11
@@ -126,37 +127,42 @@ void ramInfoInit(void);
 void ramInfoRefresh(void);
 
 /**
- * @brief Print general RAM usage information.
- *
+ * @brief Print general RAM usage information via dedicated UART with DMA support.
+ * @param pSleepFn Pointer to a sleep function (e.g., `tx_thread_sleep` or 'HAL_Delay') for delaying between prints
+ * @param sleepTimeout Timeout value to pass to the sleep function for delaying between prints
  * Displays an overview of all RAM banks, including start/end addresses, 
  * total sizes, usage bars, and percentage utilization.
+ * @warning HAL_Delay can be used as the sleep function only when called outside of any ThreadX thread context (e.g., during initialization before starting the scheduler).
  */
-void ramInfoGeneral(void);
+void ramInfoGeneral(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
 
 /**
  * @brief Print detailed RAM1 diagnostics.
- *
+ * @param pSleepFn Pointer to a sleep function (e.g., `tx_thread_sleep` or 'HAL_Delay') for delaying between prints
+ * @param sleepTimeout Timeout value to pass to the sleep function for delaying between prints
  * Displays section-level information for RAM1, including `.data`, `.bss`, 
  * `.heap`, and `.stack` sizes, usage, and high-water marks.
  */
-void ramInfoRAM1(void);
+void ramInfoRAM1(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
 
 /**
  * @brief Print detailed RAM2 diagnostics.
- *
+ * @param pSleepFn Pointer to a sleep function (e.g., `tx_thread_sleep` or 'HAL_Delay') for delaying between prints
+ * @param sleepTimeout Timeout value to pass to the sleep function for delaying between prints
  * Displays section-level information for RAM2.  
  * By default, this includes `.ramDiagnostics` or any custom sections 
  * assigned to RAM2.
  */
-void ramInfoRAM2(void);
+void ramInfoRAM2(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
 
 /**
  * @brief Print detailed CCSRAM diagnostics.
- *
+ * @param pSleepFn Pointer to a sleep function (e.g., `tx_thread_sleep` or 'HAL_Delay') for delaying between prints
+ * @param sleepTimeout Timeout value to pass to the sleep function for delaying between prints
  * Displays section-level information for CCMRAM/CCSRAM.
  * Yes to be implemented
  */
-void ramInfoCCSRAM(void);
+void ramInfoCCSRAM(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
 
 
 #ifdef __cplusplus

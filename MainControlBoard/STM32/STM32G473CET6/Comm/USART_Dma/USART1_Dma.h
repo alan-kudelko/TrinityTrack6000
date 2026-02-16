@@ -56,6 +56,8 @@ extern volatile uint16_t huart1_dma_tx_ring_buffer_head;
 extern volatile uint16_t huart1_dma_tx_ring_buffer_tail;
 extern volatile uint16_t huart1_dma_tx_ring_buffer_length;
 
+extern volatile bool huart1_dma_tx_active;
+
 #ifdef __cplusplus
     extern "C" {
 #endif // __cplusplus
@@ -111,13 +113,6 @@ extern void usart1_dma_rx_init(void);
  * @warning This function is dedicated to process debug terminal incoming data.
  */
 extern bool usart1_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength);
-
-/**
- * @brief Copies data from the source DMA buffer to the receive ring buffer.
- * @param dma_transfer_size Length of the data to be copied in bytes.
- * @warning This function is intended for internal use only.
- */
-extern void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size);
 
 /**
  * @brief Callback function called when USART1 DMA reception is complete.

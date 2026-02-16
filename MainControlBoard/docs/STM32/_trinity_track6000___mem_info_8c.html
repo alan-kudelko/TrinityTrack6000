@@ -104,34 +104,44 @@ $(function(){initNavTree('_trinity_track6000___mem_info_8c.html','',''); });
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;tx_port.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="_trinity_track6000___mem_info_8h_source.html">TrinityTrack6000_MemInfo.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_trinity_track6000___config_8h_source.html">TrinityTrack6000_Config.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_u_s_a_r_t1___dma_8h_source.html">USART1_Dma.h</a>&gt;</code><br />
 <code>#include &lt;core_cm4.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TrinityTrack6000_MemInfo.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___mem_info_8c__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___mem_info_8c" loading="lazy" alt=""/></div>
 <map name="a_utils_2_trinity_track6000___mem_info_8c" id="a_utils_2_trinity_track6000___mem_info_8c">
-<area shape="rect" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="170,5,319,48"/>
+<area shape="rect" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="270,5,419,48"/>
 <area shape="rect" title=" " alt="" coords="5,96,70,123"/>
-<area shape="poly" title=" " alt="" coords="192,51,85,92,83,87,190,46"/>
+<area shape="poly" title=" " alt="" coords="270,50,86,98,84,93,269,45"/>
 <area shape="rect" title=" " alt="" coords="94,96,154,123"/>
-<area shape="poly" title=" " alt="" coords="215,51,157,89,154,85,212,46"/>
+<area shape="poly" title=" " alt="" coords="288,51,170,94,168,89,287,46"/>
 <area shape="rect" title=" " alt="" coords="178,96,241,123"/>
-<area shape="poly" title=" " alt="" coords="238,50,223,83,218,81,233,48"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8h.html" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="132,171,319,197"/>
-<area shape="poly" title=" " alt="" coords="253,48,258,83,256,123,243,158,238,156,251,122,253,84,247,49"/>
-<area shape="rect" href="_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="316,96,490,123"/>
-<area shape="poly" title=" " alt="" coords="286,46,366,86,363,91,284,51"/>
-<area shape="rect" title=" " alt="" coords="514,96,604,123"/>
-<area shape="poly" title=" " alt="" coords="320,44,500,90,499,95,318,50"/>
-<area shape="rect" title=" " alt="" coords="367,245,431,272"/>
-<area shape="poly" title=" " alt="" coords="257,195,356,236,353,241,255,200"/>
-<area shape="rect" title=" " alt="" coords="343,171,463,197"/>
-<area shape="poly" title=" " alt="" coords="406,123,406,155,400,155,400,123"/>
-<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="486,171,658,197"/>
-<area shape="poly" title=" " alt="" coords="433,121,529,162,527,167,431,126"/>
-<area shape="poly" title=" " alt="" coords="543,200,444,241,442,236,541,195"/>
+<area shape="poly" title=" " alt="" coords="311,51,245,90,242,85,308,46"/>
+<area shape="rect" title=" " alt="" coords="265,171,338,197"/>
+<area shape="poly" title=" " alt="" coords="331,50,317,72,307,97,302,126,302,155,296,155,297,126,302,95,313,69,326,47"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8h.html" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="316,96,503,123"/>
+<area shape="poly" title=" " alt="" coords="363,47,392,82,388,86,359,50"/>
+<area shape="rect" href="_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="528,96,702,123"/>
+<area shape="poly" title=" " alt="" coords="415,46,558,88,557,94,413,51"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="726,96,845,123"/>
+<area shape="poly" title=" " alt="" coords="420,39,711,92,710,97,419,44"/>
+<area shape="rect" title=" " alt="" coords="869,96,958,123"/>
+<area shape="poly" title=" " alt="" coords="420,33,612,57,854,93,853,98,612,62,419,39"/>
+<area shape="poly" title=" " alt="" coords="392,125,335,164,332,159,389,121"/>
+<area shape="rect" title=" " alt="" coords="631,245,695,272"/>
+<area shape="poly" title=" " alt="" coords="410,123,409,159,414,179,424,196,436,205,455,214,505,230,616,249,615,254,504,235,453,219,433,210,419,199,409,181,404,160,405,123"/>
+<area shape="rect" title=" " alt="" coords="433,171,554,197"/>
+<area shape="poly" title=" " alt="" coords="595,126,529,165,526,160,592,121"/>
+<area shape="rect" href="_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="577,171,748,197"/>
+<area shape="poly" title=" " alt="" coords="625,122,648,156,644,159,621,125"/>
+<area shape="poly" title=" " alt="" coords="666,198,666,230,660,230,660,198"/>
+<area shape="poly" title=" " alt="" coords="787,124,781,159,773,180,762,199,738,223,710,240,707,236,735,218,758,196,769,178,776,158,782,123"/>
+<area shape="rect" title=" " alt="" coords="823,171,897,197"/>
+<area shape="poly" title=" " alt="" coords="800,121,838,158,835,162,797,125"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -143,14 +153,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3ef2b47170729565a03ab59854758b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize RAM diagnostics.  <br /></td></tr>
 <tr class="memitem:a28cd6ca417d0332298ba1dc946e34444" id="r_a28cd6ca417d0332298ba1dc946e34444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28cd6ca417d0332298ba1dc946e34444">ramInfoRefresh</a> ()</td></tr>
 <tr class="memdesc:a28cd6ca417d0332298ba1dc946e34444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh RAM diagnostics data.  <br /></td></tr>
-<tr class="memitem:a75f7392b5b07ca86de67a446dba6e336" id="r_a75f7392b5b07ca86de67a446dba6e336"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75f7392b5b07ca86de67a446dba6e336">ramInfoGeneral</a> ()</td></tr>
-<tr class="memdesc:a75f7392b5b07ca86de67a446dba6e336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print general RAM usage information.  <br /></td></tr>
-<tr class="memitem:a51ae4fe12207c2c3c32b3b1126bbf51f" id="r_a51ae4fe12207c2c3c32b3b1126bbf51f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51ae4fe12207c2c3c32b3b1126bbf51f">ramInfoRAM1</a> ()</td></tr>
-<tr class="memdesc:a51ae4fe12207c2c3c32b3b1126bbf51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print detailed RAM1 diagnostics.  <br /></td></tr>
-<tr class="memitem:a9e50d8d069310b6642d405eed5a8723c" id="r_a9e50d8d069310b6642d405eed5a8723c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e50d8d069310b6642d405eed5a8723c">ramInfoRAM2</a> ()</td></tr>
-<tr class="memdesc:a9e50d8d069310b6642d405eed5a8723c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print detailed RAM2 diagnostics.  <br /></td></tr>
-<tr class="memitem:a543c4df7f8c35ecbe95dba9cb92601c2" id="r_a543c4df7f8c35ecbe95dba9cb92601c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a543c4df7f8c35ecbe95dba9cb92601c2">ramInfoCCSRAM</a> ()</td></tr>
-<tr class="memdesc:a543c4df7f8c35ecbe95dba9cb92601c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print detailed CCSRAM diagnostics.  <br /></td></tr>
+<tr class="memitem:aa48ab58ff320a5df5eb89661c8a7481a" id="r_aa48ab58ff320a5df5eb89661c8a7481a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa48ab58ff320a5df5eb89661c8a7481a">ramInfoGeneral</a> (UINT(*pSleepFn)(ULONG timeout), ULONG sleepTimeout)</td></tr>
+<tr class="memdesc:aa48ab58ff320a5df5eb89661c8a7481a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print general RAM usage information via dedicated UART with DMA support.  <br /></td></tr>
+<tr class="memitem:a4e1e8cacf31413d3521761f8f6a7170f" id="r_a4e1e8cacf31413d3521761f8f6a7170f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1e8cacf31413d3521761f8f6a7170f">ramInfoRAM1</a> (UINT(*pSleepFn)(ULONG timeout), ULONG sleepTimeout)</td></tr>
+<tr class="memdesc:a4e1e8cacf31413d3521761f8f6a7170f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print detailed RAM1 diagnostics.  <br /></td></tr>
+<tr class="memitem:a9d3a9f1daf5dd097138738d27b93b504" id="r_a9d3a9f1daf5dd097138738d27b93b504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d3a9f1daf5dd097138738d27b93b504">ramInfoRAM2</a> (UINT(*pSleepFn)(ULONG timeout), ULONG sleepTimeout)</td></tr>
+<tr class="memdesc:a9d3a9f1daf5dd097138738d27b93b504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print detailed RAM2 diagnostics.  <br /></td></tr>
+<tr class="memitem:a92d37852195d387827a2b3834e2cf915" id="r_a92d37852195d387827a2b3834e2cf915"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92d37852195d387827a2b3834e2cf915">ramInfoCCSRAM</a> (UINT(*pSleepFn)(ULONG timeout), ULONG sleepTimeout)</td></tr>
+<tr class="memdesc:a92d37852195d387827a2b3834e2cf915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print detailed CCSRAM diagnostics.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -308,8 +318,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a543c4df7f8c35ecbe95dba9cb92601c2" name="a543c4df7f8c35ecbe95dba9cb92601c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a543c4df7f8c35ecbe95dba9cb92601c2">&#9670;&#160;</a></span>ramInfoCCSRAM()</h2>
+<a id="a92d37852195d387827a2b3834e2cf915" name="a92d37852195d387827a2b3834e2cf915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d37852195d387827a2b3834e2cf915">&#9670;&#160;</a></span>ramInfoCCSRAM()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,19 +327,41 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void ramInfoCCSRAM </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">UINT(*</td>          <td class="paramname"><span class="paramname"><em>pSleepFn&#160;</em></span>)(ULONG timeout), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>sleepTimeout</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Print detailed CCSRAM diagnostics. </p>
-<p>Displays section-level information for CCMRAM/CCSRAM. Yes to be implemented </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSleepFn</td><td>Pointer to a sleep function (e.g., <span class="tt">tx_thread_sleep</span> or 'HAL_Delay') for delaying between prints </td></tr>
+    <tr><td class="paramname">sleepTimeout</td><td>Timeout value to pass to the sleep function for delaying between prints Displays section-level information for CCMRAM/CCSRAM. Yes to be implemented </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_cgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_cgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_cgraph" id="a_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_cgraph">
+<area shape="rect" title="Print detailed CCSRAM diagnostics." alt="" coords="5,13,130,40"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="178,13,327,40"/>
+<area shape="poly" title=" " alt="" coords="130,24,162,24,162,29,130,29"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="375,5,517,48"/>
+<area shape="poly" title=" " alt="" coords="328,24,360,24,360,29,328,29"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___mem_info_8c_a543c4df7f8c35ecbe95dba9cb92601c2_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a543c4df7f8c35ecbe95dba9cb92601c2_icgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___mem_info_8c_a543c4df7f8c35ecbe95dba9cb92601c2_icgraph" id="a_trinity_track6000___mem_info_8c_a543c4df7f8c35ecbe95dba9cb92601c2_icgraph">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_icgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_icgraph" id="a_trinity_track6000___mem_info_8c_a92d37852195d387827a2b3834e2cf915_icgraph">
 <area shape="rect" title="Print detailed CCSRAM diagnostics." alt="" coords="103,5,227,32"/>
 <area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -338,8 +370,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a75f7392b5b07ca86de67a446dba6e336" name="a75f7392b5b07ca86de67a446dba6e336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75f7392b5b07ca86de67a446dba6e336">&#9670;&#160;</a></span>ramInfoGeneral()</h2>
+<a id="aa48ab58ff320a5df5eb89661c8a7481a" name="aa48ab58ff320a5df5eb89661c8a7481a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48ab58ff320a5df5eb89661c8a7481a">&#9670;&#160;</a></span>ramInfoGeneral()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,20 +379,43 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void ramInfoGeneral </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">UINT(*</td>          <td class="paramname"><span class="paramname"><em>pSleepFn&#160;</em></span>)(ULONG timeout), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>sleepTimeout</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print general RAM usage information. </p>
-<p>Displays an overview of all RAM banks, including start/end addresses, total sizes, usage bars, and percentage utilization. </p>
+<p>Print general RAM usage information via dedicated UART with DMA support. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSleepFn</td><td>Pointer to a sleep function (e.g., <span class="tt">tx_thread_sleep</span> or 'HAL_Delay') for delaying between prints </td></tr>
+    <tr><td class="paramname">sleepTimeout</td><td>Timeout value to pass to the sleep function for delaying between prints Displays an overview of all RAM banks, including start/end addresses, total sizes, usage bars, and percentage utilization. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>HAL_Delay can be used as the sleep function only when called outside of any ThreadX thread context (e.g., during initialization before starting the scheduler). </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_cgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_cgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_cgraph" id="a_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_cgraph">
+<area shape="rect" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="5,13,116,40"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="164,13,313,40"/>
+<area shape="poly" title=" " alt="" coords="116,24,148,24,148,29,116,29"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="361,5,503,48"/>
+<area shape="poly" title=" " alt="" coords="314,24,346,24,346,29,314,29"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___mem_info_8c_a75f7392b5b07ca86de67a446dba6e336_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a75f7392b5b07ca86de67a446dba6e336_icgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___mem_info_8c_a75f7392b5b07ca86de67a446dba6e336_icgraph" id="a_trinity_track6000___mem_info_8c_a75f7392b5b07ca86de67a446dba6e336_icgraph">
-<area shape="rect" title="Print general RAM usage information." alt="" coords="103,5,213,32"/>
+<div class="center"><img src="_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_icgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_icgraph" id="a_trinity_track6000___mem_info_8c_aa48ab58ff320a5df5eb89661c8a7481a_icgraph">
+<area shape="rect" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="103,5,213,32"/>
 <area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -413,8 +468,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a51ae4fe12207c2c3c32b3b1126bbf51f" name="a51ae4fe12207c2c3c32b3b1126bbf51f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51ae4fe12207c2c3c32b3b1126bbf51f">&#9670;&#160;</a></span>ramInfoRAM1()</h2>
+<a id="a4e1e8cacf31413d3521761f8f6a7170f" name="a4e1e8cacf31413d3521761f8f6a7170f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1e8cacf31413d3521761f8f6a7170f">&#9670;&#160;</a></span>ramInfoRAM1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,19 +477,41 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void ramInfoRAM1 </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">UINT(*</td>          <td class="paramname"><span class="paramname"><em>pSleepFn&#160;</em></span>)(ULONG timeout), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>sleepTimeout</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Print detailed RAM1 diagnostics. </p>
-<p>Displays section-level information for RAM1, including <span class="tt">.data</span>, <span class="tt">.bss</span>, <span class="tt">.heap</span>, and <span class="tt">.stack</span> sizes, usage, and high-water marks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSleepFn</td><td>Pointer to a sleep function (e.g., <span class="tt">tx_thread_sleep</span> or 'HAL_Delay') for delaying between prints </td></tr>
+    <tr><td class="paramname">sleepTimeout</td><td>Timeout value to pass to the sleep function for delaying between prints Displays section-level information for RAM1, including <span class="tt">.data</span>, <span class="tt">.bss</span>, <span class="tt">.heap</span>, and <span class="tt">.stack</span> sizes, usage, and high-water marks. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_cgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_cgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_cgraph" id="a_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_cgraph">
+<area shape="rect" title="Print detailed RAM1 diagnostics." alt="" coords="5,13,108,40"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="156,13,305,40"/>
+<area shape="poly" title=" " alt="" coords="108,24,140,24,140,29,108,29"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="353,5,495,48"/>
+<area shape="poly" title=" " alt="" coords="306,24,338,24,338,29,306,29"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___mem_info_8c_a51ae4fe12207c2c3c32b3b1126bbf51f_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a51ae4fe12207c2c3c32b3b1126bbf51f_icgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___mem_info_8c_a51ae4fe12207c2c3c32b3b1126bbf51f_icgraph" id="a_trinity_track6000___mem_info_8c_a51ae4fe12207c2c3c32b3b1126bbf51f_icgraph">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_icgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_icgraph" id="a_trinity_track6000___mem_info_8c_a4e1e8cacf31413d3521761f8f6a7170f_icgraph">
 <area shape="rect" title="Print detailed RAM1 diagnostics." alt="" coords="103,5,205,32"/>
 <area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -443,8 +520,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a9e50d8d069310b6642d405eed5a8723c" name="a9e50d8d069310b6642d405eed5a8723c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e50d8d069310b6642d405eed5a8723c">&#9670;&#160;</a></span>ramInfoRAM2()</h2>
+<a id="a9d3a9f1daf5dd097138738d27b93b504" name="a9d3a9f1daf5dd097138738d27b93b504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3a9f1daf5dd097138738d27b93b504">&#9670;&#160;</a></span>ramInfoRAM2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,20 +529,42 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void ramInfoRAM2 </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">UINT(*</td>          <td class="paramname"><span class="paramname"><em>pSleepFn&#160;</em></span>)(ULONG timeout), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>sleepTimeout</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Print detailed RAM2 diagnostics. </p>
-<p>Displays section-level information for RAM2. <br  />
- By default, this includes <span class="tt">.ramDiagnostics</span> or any custom sections assigned to RAM2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSleepFn</td><td>Pointer to a sleep function (e.g., <span class="tt">tx_thread_sleep</span> or 'HAL_Delay') for delaying between prints </td></tr>
+    <tr><td class="paramname">sleepTimeout</td><td>Timeout value to pass to the sleep function for delaying between prints Displays section-level information for RAM2. <br  />
+ By default, this includes <span class="tt">.ramDiagnostics</span> or any custom sections assigned to RAM2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_cgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_cgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_cgraph" id="a_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_cgraph">
+<area shape="rect" title="Print detailed RAM2 diagnostics." alt="" coords="5,13,108,40"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="156,13,305,40"/>
+<area shape="poly" title=" " alt="" coords="108,24,140,24,140,29,108,29"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="353,5,495,48"/>
+<area shape="poly" title=" " alt="" coords="306,24,338,24,338,29,306,29"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_trinity_track6000___mem_info_8c_a9e50d8d069310b6642d405eed5a8723c_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a9e50d8d069310b6642d405eed5a8723c_icgraph" loading="lazy" alt=""/></div>
-<map name="a_trinity_track6000___mem_info_8c_a9e50d8d069310b6642d405eed5a8723c_icgraph" id="a_trinity_track6000___mem_info_8c_a9e50d8d069310b6642d405eed5a8723c_icgraph">
+<div class="center"><img src="_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_icgraph.png" border="0" usemap="#a_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_icgraph" loading="lazy" alt=""/></div>
+<map name="a_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_icgraph" id="a_trinity_track6000___mem_info_8c_a9d3a9f1daf5dd097138738d27b93b504_icgraph">
 <area shape="rect" title="Print detailed RAM2 diagnostics." alt="" coords="103,5,205,32"/>
 <area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>

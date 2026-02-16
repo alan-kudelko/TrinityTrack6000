@@ -102,16 +102,19 @@ $(function(){initNavTree('_u_s_a_r_t___callbacks_8c.html','',''); });
 <p>Implementation of USART DMA Callbacks.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="_u_s_a_r_t___callbacks_8h_source.html">USART_Callbacks.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_trinity_track6000___pinout_8h_source.html">TrinityTrack6000_Pinout.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for USART_Callbacks.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t___callbacks_8c__incl.png" border="0" usemap="#a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t___callbacks_8c" loading="lazy" alt=""/></div>
 <map name="a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t___callbacks_8c" id="a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t___callbacks_8c">
-<area shape="rect" title="Implementation of USART DMA Callbacks." alt="" coords="5,5,199,48"/>
-<area shape="rect" href="_u_s_a_r_t___callbacks_8h.html" title="Header for USART DMA Callbacks." alt="" coords="31,96,173,123"/>
-<area shape="poly" title=" " alt="" coords="105,49,105,80,99,80,99,49"/>
-<area shape="rect" title=" " alt="" coords="42,171,162,197"/>
-<area shape="poly" title=" " alt="" coords="105,123,105,155,99,155,99,123"/>
+<area shape="rect" title="Implementation of USART DMA Callbacks." alt="" coords="70,5,264,48"/>
+<area shape="rect" href="_u_s_a_r_t___callbacks_8h.html" title="Header for USART DMA Callbacks." alt="" coords="5,96,148,123"/>
+<area shape="poly" title=" " alt="" coords="146,51,104,88,100,84,142,47"/>
+<area shape="rect" href="_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="171,96,344,123"/>
+<area shape="poly" title=" " alt="" coords="192,47,234,84,231,88,189,51"/>
+<area shape="rect" title=" " alt="" coords="16,171,137,197"/>
+<area shape="poly" title=" " alt="" coords="79,123,79,155,74,155,74,123"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -120,9 +123,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a0803a38b4f987d37a2a165e9cb48e085" id="r_a0803a38b4f987d37a2a165e9cb48e085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0803a38b4f987d37a2a165e9cb48e085">usart1_dma_tx_complete</a> (void)</td></tr>
 <tr class="memdesc:a0803a38b4f987d37a2a165e9cb48e085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA transmission is complete.  <br /></td></tr>
 <tr class="memitem:a9a7eca34f538d98470c5eb2d6bf3f4a7" id="r_a9a7eca34f538d98470c5eb2d6bf3f4a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a7eca34f538d98470c5eb2d6bf3f4a7">usart1_dma_rx_complete</a> (uint16_t dma_transfer_size)</td></tr>
-<tr class="memdesc:a9a7eca34f538d98470c5eb2d6bf3f4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA reception is complete.  <br /></td></tr>
 <tr class="memitem:abcdf9b59049eccbc87d54042f9235b1a" id="r_abcdf9b59049eccbc87d54042f9235b1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcdf9b59049eccbc87d54042f9235b1a">HAL_UART_TxCpltCallback</a> (UART_HandleTypeDef *huart)</td></tr>
-<tr class="memitem:a78aac784638b94dd20e0f8a0f3e9ddcc" id="r_a78aac784638b94dd20e0f8a0f3e9ddcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78aac784638b94dd20e0f8a0f3e9ddcc">HAL_UARTEx_RxEventCallback</a> (UART_HandleTypeDef *huart, uint16_t size)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of USART DMA Callbacks. </p>
@@ -161,41 +166,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a78aac784638b94dd20e0f8a0f3e9ddcc" name="a78aac784638b94dd20e0f8a0f3e9ddcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78aac784638b94dd20e0f8a0f3e9ddcc">&#9670;&#160;</a></span>HAL_UARTEx_RxEventCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void HAL_UARTEx_RxEventCallback </td>
-          <td>(</td>
-          <td class="paramtype">UART_HandleTypeDef *</td>          <td class="paramname"><span class="paramname"><em>huart</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t___callbacks_8c_a78aac784638b94dd20e0f8a0f3e9ddcc_cgraph.png" border="0" usemap="#a_u_s_a_r_t___callbacks_8c_a78aac784638b94dd20e0f8a0f3e9ddcc_cgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t___callbacks_8c_a78aac784638b94dd20e0f8a0f3e9ddcc_cgraph" id="a_u_s_a_r_t___callbacks_8c_a78aac784638b94dd20e0f8a0f3e9ddcc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,43,221,69"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a85b4ee3a11083efdb77f4622a19bc817" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,43,436,69"/>
-<area shape="poly" title=" " alt="" coords="221,53,253,53,253,59,221,59"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af" title="Copies data from the source DMA buffer to the receive ring buffer." alt="" coords="484,5,641,48"/>
-<area shape="poly" title=" " alt="" coords="436,42,468,37,469,42,437,47"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#ac8ef9e25183411bf853e2a9ad431fadf" title="Initializes DMA for USART1 reception." alt="" coords="497,72,628,99"/>
-<area shape="poly" title=" " alt="" coords="437,65,482,71,481,77,436,70"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a9a7eca34f538d98470c5eb2d6bf3f4a7" name="a9a7eca34f538d98470c5eb2d6bf3f4a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a7eca34f538d98470c5eb2d6bf3f4a7">&#9670;&#160;</a></span>usart1_dma_rx_complete()</h2>
 
@@ -218,38 +188,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Callback function called when USART1 DMA reception is complete. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dma_transfer_size</td><td>Size of the data transferred by DMA in bytes. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function is called from the HAL_UART_RxCpltCallback when USART1 reception is complete. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function is intended for internal use only. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_cgraph.png" border="0" usemap="#a_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_cgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_cgraph" id="a_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_cgraph">
-<area shape="rect" title="Callback function called when USART1 DMA reception is complete." alt="" coords="5,43,173,69"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af" title="Copies data from the source DMA buffer to the receive ring buffer." alt="" coords="221,5,378,48"/>
-<area shape="poly" title=" " alt="" coords="173,42,205,37,205,42,173,47"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#ac8ef9e25183411bf853e2a9ad431fadf" title="Initializes DMA for USART1 reception." alt="" coords="234,72,365,99"/>
-<area shape="poly" title=" " alt="" coords="173,65,219,71,218,77,173,70"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_icgraph.png" border="0" usemap="#a_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_icgraph" id="a_u_s_a_r_t___callbacks_8c_a9a7eca34f538d98470c5eb2d6bf3f4a7_icgraph">
-<area shape="rect" title="Callback function called when USART1 DMA reception is complete." alt="" coords="269,5,436,32"/>
-<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#a78aac784638b94dd20e0f8a0f3e9ddcc" title=" " alt="" coords="5,5,221,32"/>
-<area shape="poly" title=" " alt="" coords="253,21,221,21,221,16,253,16"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -299,6 +237,29 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="225,21,193,21,193,16,225,16"/>
 </map>
 </div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a2cf715bef37f7e8ef385a30974a5f0d5" name="a2cf715bef37f7e8ef385a30974a5f0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf715bef37f7e8ef385a30974a5f0d5">&#9670;&#160;</a></span>huart1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

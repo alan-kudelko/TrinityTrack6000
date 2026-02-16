@@ -15,8 +15,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <tx_port.h>
+
 #include <TrinityTrack6000_MemInfo.h>
 #include <TrinityTrack6000_Config.h>
+#include <USART1_Dma.h>
 
 #include <core_cm4.h>
 
@@ -193,15 +196,24 @@ void ramInfoRefresh(){
 	ramDiagnosticsCCSRAM_crit_size=((uint32_t)&__DMA_END__-(uint32_t)&__DMA_END__)/1024;
 }
 														
-void ramInfoGeneral(){
+void ramInfoGeneral(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 	char bar_buffer[MEMINFO_BAR_BUFFER_SIZE]={0};
 
 	uint8_t usage_percent=0; // Used for bar graph calculation
 // Send General RAM diagnostics headers 1-3
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header1,strlen(msg_ramDiagnosticsGeneral_header1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header2,strlen(msg_ramDiagnosticsGeneral_header2),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_header1,strlen(msg_ramDiagnosticsGeneral_header1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_header2,strlen(msg_ramDiagnosticsGeneral_header2))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(huart1_dma_tx_active==true){
+		pSleepFn(100);
+	}
 // Send RAM1 info
 	usage_percent=((uint16_t)ramDiagnosticsRAM1_used*100)/ramDiagnosticsRAM1_total_size;
 	memset(bar_buffer,'-',MEMINFO_BAR_BUFFER_SIZE-1);
@@ -221,7 +233,9 @@ void ramInfoGeneral(){
 		bar_buffer,                    // RAM1 usage bar
 		usage_percent                  // RAM1 usage percent
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM2 info
 	usage_percent=((uint16_t)ramDiagnosticsRAM2_used*100)/ramDiagnosticsRAM2_total_size;
 	memset(bar_buffer,'-',MEMINFO_BAR_BUFFER_SIZE-1);
@@ -241,7 +255,9 @@ void ramInfoGeneral(){
 		bar_buffer,                    // RAM2 usage bar
 		usage_percent                  // RAM2 usage percent
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send CCSRAM info
 	usage_percent=((uint16_t)ramDiagnosticsCCSRAM_used*100)/ramDiagnosticsCCSRAM_total_size;
 	memset(bar_buffer,'-',MEMINFO_BAR_BUFFER_SIZE-1);
@@ -259,25 +275,43 @@ void ramInfoGeneral(){
 		bar_buffer,                      // CCSRAM usage bar
 		usage_percent                    // CCSRAM usage percent
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM diagnostics header 4
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send Free RAM total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsGeneral_formatStringFreeRAM,ramDiagnosticsGeneral_total_size-ramDiagnosticsGeneral_used);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send empty line
-	HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,DEBUG_UART_TIMEOUT);	
+	while(usart1_dma_enq_data((uint8_t*)"\r\n",2)!=true){
+		pSleepFn(sleepTimeout);
+	}
 }
 
-void ramInfoRAM1(){
+void ramInfoRAM1(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
-// Send RAM1 diagnostics headers 1-3	
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header1,strlen(msg_ramDiagnosticsRAM1_header1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),DEBUG_UART_TIMEOUT);
+// Send RAM1 diagnostics headers 1-3
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header1,strlen(msg_ramDiagnosticsRAM1_header1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .data section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringData,
 		(uint32_t)&__RAM1_start__,	    // .data start
@@ -285,7 +319,9 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_data_size,   // .data size in KB
 		ramDiagnosticsRAM1_data_size    // .data used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .bss section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringBSS,
 		(uint32_t)&__bss_start__,		 // .bss start
@@ -293,7 +329,9 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_bss_size,     // .bss size in KB
 		ramDiagnosticsRAM1_bss_size      // .bss used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .tdat section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTData,
 		0UL,                             // .tdat start
@@ -301,7 +339,9 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_tdat_size,    // .tdat size in KB
 		ramDiagnosticsRAM1_tdat_size     // .tdat used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .heap section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringHeap,
 		(uint32_t)&_end,                          // .heap start
@@ -309,7 +349,9 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_heap_size,             // .heap size in KB
 		ramDiagnosticsRAM1_heap_size              // .heap used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .taskHandles section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTaskHandles,
 		(uint32_t)&__TASK_HANDLES_START__,	     // .taskHandles start
@@ -317,7 +359,9 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_taskHandles_size,     // .taskHandles size in KB
 		ramDiagnosticsRAM1_taskHandles_size      // .taskHandles used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .taskStacks section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTaskStacks,
 		(uint32_t)&__TASK_STACKS_START__,	     // .taskStacks start
@@ -325,8 +369,9 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_taskStacks_size,      // .taskStacks size in KB
 		ramDiagnosticsRAM1_taskStacks_size       // .taskStacks used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
-
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .stack section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringStack,
 		(uint32_t)&__RAM1_end__,              // .stack start
@@ -334,23 +379,39 @@ void ramInfoRAM1(){
 		ramDiagnosticsRAM1_stack_size,        // .stack size in KB
 		ramDiagnosticsRAM1_stack_size         // .stack used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM1 diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send Free RAM1 total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringFreeRAM,ramDiagnosticsRAM1_total_size-ramDiagnosticsRAM1_used);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2))!=true){
+		pSleepFn(sleepTimeout);
+	}
 }
 
-void ramInfoRAM2(){
+void ramInfoRAM2(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 // Send RAM2 diagnostics headers 1-3
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM2_header1,strlen(msg_ramDiagnosticsRAM2_header1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM2_header1,strlen(msg_ramDiagnosticsRAM2_header1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .ramDiagnostics section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM2_formatStringRamDia,
 		(uint32_t)&__RAM_DIAGNOSTICS_START__,	     // .ramDiagnostics start
@@ -358,7 +419,9 @@ void ramInfoRAM2(){
 		ramDiagnosticsRAM2_ramDiagnostics_size,      // .ramDiagnostics size in KB
 		ramDiagnosticsRAM2_ramDiagnostics_size       // .ramDiagnostics used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .sysDiag section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM2_formatStringSysDia,
 		(uint32_t)&__SYS_DIAGNOSTICS_START__,        // .sysDiag start
@@ -366,24 +429,40 @@ void ramInfoRAM2(){
 		ramDiagnosticsRAM2_sysDiagnostics_size,      // .sysDiag size in KB
 		ramDiagnosticsRAM2_sysDiagnostics_size       // .sysDiag size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);	
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM2 diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send Free RAM2 total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringFreeRAM,ramDiagnosticsRAM2_total_size-ramDiagnosticsRAM2_used);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2))!=true){
+		pSleepFn(sleepTimeout);
+	}
 }
 
-void ramInfoCCSRAM(){
+void ramInfoCCSRAM(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	char buffer[MEMINFO_LINE_BUFFER_SIZE]={0};
 
 // Send CCSRAM diagnostics headers 1-3
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsCCSRAM_header1,strlen(msg_ramDiagnosticsCCSRAM_header1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsCCSRAM_header1,strlen(msg_ramDiagnosticsCCSRAM_header1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header2,strlen(msg_ramDiagnosticsRAM1_header2))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .crit section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsCCSRAM_formatStringCrit,
 		(uint32_t)&__CRIT_START__,	      // .crit start
@@ -391,7 +470,9 @@ void ramInfoCCSRAM(){
 		ramDiagnosticsCCSRAM_crit_size,   // .crit size in KB
 		ramDiagnosticsCCSRAM_crit_size    // .crit used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send .dmaBuff section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsCCSRAM_formatStringDmaBuff,
 		(uint32_t)&__DMA_START__,	      // .dmaBuff start
@@ -399,14 +480,24 @@ void ramInfoCCSRAM(){
 		ramDiagnosticsCCSRAM_dmaBuff_size,   // .dmaBuff size in KB
 		ramDiagnosticsCCSRAM_dmaBuff_size    // .dmaBuff used size in KB
 	);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send CCSRAM diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsRAM1_header3,strlen(msg_ramDiagnosticsRAM1_header3))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send Free CCSRAM total
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringFreeRAM,ramDiagnosticsCCSRAM_total_size-ramDiagnosticsCCSRAM_used);
-	HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
 // Send RAM diagnostics footers
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer1,strlen(msg_ramDiagnosticsGeneral_footer1))!=true){
+		pSleepFn(sleepTimeout);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_footer2,strlen(msg_ramDiagnosticsGeneral_footer2))!=true){
+		pSleepFn(sleepTimeout);
+	}
 }
 

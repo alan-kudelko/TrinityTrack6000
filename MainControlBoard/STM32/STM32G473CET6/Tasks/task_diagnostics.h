@@ -25,6 +25,7 @@ extern TX_THREAD task_diagnostics_handle __attribute((section(".task_handles.tas
 extern ULONG task_diagnostics_stack[TASK_DIAGNOSTICS_STACK_SIZE] __attribute((section(".task_stacks.task_diagnostics"))); /**< Stack for diagnostics task */
 extern TX_SEMAPHORE sem_task_diagnostics_command_ready __attribute((section(".task_semaphores.task_diagnostics"))); /**< Semaphore for diagnostics task indicating command ready to parse */
 
+extern const char command_show[]; /**< Command string for showing diagnostics information */
 
 #ifdef __cplusplus
     extern "C"{
@@ -38,6 +39,16 @@ extern TX_SEMAPHORE sem_task_diagnostics_command_ready __attribute((section(".ta
  * @return None.
  */
 void task_diagnostics_init(void);
+
+/**
+ * @brief Parse received command from CLI interface.
+ * This function takes a received command and its length, parses it,
+ * and executes corresponding actions based on the command.
+ * @param command: Pointer to the received command data.
+ * @param length: Length of the received command data in bytes.
+ * @return None.
+ */
+void parse_command(const uint8_t*command,uint16_t length);
 
 /**
  * @brief Diagnostics task function.

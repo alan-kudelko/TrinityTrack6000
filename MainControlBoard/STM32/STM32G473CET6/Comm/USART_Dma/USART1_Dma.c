@@ -37,6 +37,8 @@ volatile uint16_t huart1_dma_rx_ring_buffer_length=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_head=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_tail=0;
 volatile uint16_t huart1_dma_tx_ring_buffer_length=0;
+
+volatile bool huart1_dma_tx_active=false;
 // Decide if use of volatile is necessary for these variables
 // This is a low level driver so it has to be as efficient as possible
 
@@ -57,6 +59,7 @@ void usart1_dma_init(void){
     huart1_dma_tx_ring_buffer_length=0;
 
     huart1_dma_tx_buffer_length=0;
+    huart1_dma_tx_active=false;
 
     memset((void*)huart1_dma_rx_buffer,0,UART1_DMA_RX_BUFFER_SIZE);
     memset((void*)huart1_dma_tx_buffer,0,UART1_DMA_TX_BUFFER_SIZE);
@@ -65,6 +68,11 @@ void usart1_dma_init(void){
 }
 
 bool usart1_dma_enq_data(const uint8_t*data,const uint16_t length){
+    // Need fixing
+    // Possible deadlock
+    // IRQ may be pending
+    // If there is a pending IRQ, it will not be handled until this function exits
+    
     // Check if there is enough space in the transmit ring buffer
     uint16_t free_space=0;
     if(huart1_dma_tx_ring_buffer_head>=huart1_dma_tx_ring_buffer_tail){
@@ -83,9 +91,10 @@ bool usart1_dma_enq_data(const uint8_t*data,const uint16_t length){
         }
         huart1_dma_tx_ring_buffer_length+=length;
         // If DMA is not active, copy data to the DMA buffer and start transmission
-        if(HAL_UART_GetState(&huart1)!=HAL_UART_STATE_BUSY_TX){
+        if(huart1_dma_tx_active==false){
             // Check if data will fit into DMA buffer
             usart1_dma_copy_to_tx_buffer(huart1_dma_tx_buffer);
+            huart1_dma_tx_active=true;
             HAL_UART_Transmit_DMA(&huart1,huart1_dma_tx_buffer,huart1_dma_tx_buffer_length);
         }
         __enable_irq();
@@ -124,7 +133,12 @@ void usart1_dma_tx_complete(void){
     if(huart1_dma_tx_ring_buffer_length>0){
         // More data to send
         usart1_dma_copy_to_tx_buffer(huart1_dma_tx_buffer);
+        huart1_dma_tx_active=true;
         HAL_UART_Transmit_DMA(&huart1,huart1_dma_tx_buffer,huart1_dma_tx_buffer_length);
+    }
+    else{
+        // No more data to send
+        huart1_dma_tx_active=false;
     }
 }
 
@@ -230,23 +244,12 @@ bool usart1_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength){
         default:
             // Should not happen
             *length=0;
-            huart1_dma_rx_ring_buffer_tail=huart1_dma_tx_ring_buffer_head;
+            huart1_dma_rx_ring_buffer_tail=huart1_dma_rx_ring_buffer_head;
             huart1_dma_rx_ring_buffer_length=0;
             __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
             __NVIC_EnableIRQ(USART1_IRQn);
             return false;
     }
-}
-
-void usart1_dma_copy_from_rx_buffer(const uint16_t dma_transfer_size){
-    // Copy data from the receive ring
-    // Called in callback when data transfer is complete
-    // Called inside usart1_dma_rx_complete function
-    for(uint16_t i=0;i<dma_transfer_size;i++){
-        huart1_dma_rx_ring_buffer[huart1_dma_rx_ring_buffer_head]=huart1_dma_rx_buffer[i];
-        huart1_dma_rx_ring_buffer_head=(huart1_dma_rx_ring_buffer_head+1)%UART1_DMA_RX_RING_BUFFER_SIZE;
-    }
-    huart1_dma_rx_ring_buffer_length+=dma_transfer_size;
 }
 
 void usart1_dma_rx_complete(void){
@@ -276,6 +279,8 @@ void usart1_dma_rx_complete(void){
         // Don't copy data
         // Update old position to current DMA position to avoid copying the same data again in the next callback
         huart1_dma_rx_old_pos=dma_pos;
+        
+        return;
     }
     else{
         // Enough space, copy data to the ring buffer
@@ -293,7 +298,7 @@ void usart1_dma_rx_complete(void){
     // Note that USART1 is used only for diagnostics task and this semaphore is used only to signal that command is ready to parse
     // Parsing if left to diagnostics task to allow for more flexible command handling and avoid blocking USART1 interrupt handler
     if((huart1_dma_rx_ring_buffer[(huart1_dma_rx_ring_buffer_head-1)%UART1_DMA_RX_RING_BUFFER_SIZE]=='\n')||(huart1_dma_rx_ring_buffer[(huart1_dma_rx_ring_buffer_head-1)%UART1_DMA_RX_RING_BUFFER_SIZE]=='\r')){
-        HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
+        //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
         tx_semaphore_put(&sem_task_diagnostics_command_ready);
     }
 }

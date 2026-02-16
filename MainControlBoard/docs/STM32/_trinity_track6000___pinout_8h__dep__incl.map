@@ -1,7 +1,9 @@
 <map id="Utils/TrinityTrack6000_Pinout.h" name="Utils/TrinityTrack6000_Pinout.h">
-<area shape="rect" id="Node000001" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="128,5,278,48"/>
+<area shape="rect" id="Node000001" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="252,5,402,48"/>
 <area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html" title="Implementation of USART1 with DMA functionality and dedicated ring buffer." alt="" coords="5,96,206,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,61,130,97,127,93,167,57"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="230,96,370,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,57,279,93,276,97,235,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,57,158,98,156,93,260,52"/>
+<area shape="rect" id="Node000003" href="$_u_s_a_r_t___callbacks_8c.html" title="Implementation of USART DMA Callbacks." alt="" coords="230,96,424,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="330,64,330,96,324,96,324,64"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="447,96,588,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="386,53,474,93,472,98,384,57"/>
 </map>

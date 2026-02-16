@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['task_5fblink_5fhandle_0',['task_blink_handle',['../main_8cpp.html#a122d41f15400e36427a2195b304ba4bc',1,'main.cpp']]],
-  ['task_5fblink_5fstack_1',['task_blink_stack',['../main_8cpp.html#abe23b7eef9fb7c568ab2459b3553ac56',1,'main.cpp']]]
+  ['system_5ferror_0',['system_error',['../struct_system_error_status__t.html#a6abd80709cb13b8ab6f557cf2c7474a8',1,'SystemErrorStatus_t']]]
 ];

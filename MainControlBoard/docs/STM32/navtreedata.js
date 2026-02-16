@@ -51,7 +51,7 @@ var NAVTREEINDEX =
 [
 "_m_c_p23_s17_8cpp.html",
 "_trinity_track6000___mem_info_8c.html#a10ffe3e8daa368a6b01ef89985e057b5",
-"globals_func.html"
+"globals_f.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

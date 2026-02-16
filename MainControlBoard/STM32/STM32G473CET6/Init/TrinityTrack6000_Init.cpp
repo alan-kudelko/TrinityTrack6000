@@ -473,11 +473,11 @@ void initializeSystem(){
 	MX_SPI1_Init();
 	MX_SPI2_Init();
 
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info),DEBUG_UART_TIMEOUT);
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_GPIO_initialized_info,strlen(msg_init_GPIO_initialized_info),DEBUG_UART_TIMEOUT);
+	//HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info),DEBUG_UART_TIMEOUT);
+	//HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_GPIO_initialized_info,strlen(msg_init_GPIO_initialized_info),DEBUG_UART_TIMEOUT);
 // Custom initialization sequence
 	initializeMemory();
-	HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_memory_initialized_info,strlen(msg_init_memory_initialized_info),DEBUG_UART_TIMEOUT);
+	//HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_memory_initialized_info,strlen(msg_init_memory_initialized_info),DEBUG_UART_TIMEOUT);
 	// Initialize USART1 DMA for diagnostics interface
 	usart1_dma_rx_init();
 	//char buffer[INIT_LINE_BUFFER_SIZE]={0};
