@@ -136,7 +136,6 @@ uint32_t ramDiagnosticsRAM1_lastMSP=0;
 uint32_t ramDiagnosticsRAM1_lastHeapEnd=0;
 uint8_t ramDiagnosticsRAM1_data_size=0;
 uint8_t ramDiagnosticsRAM1_bss_size=0;
-uint8_t ramDiagnosticsRAM1_tdat_size=0;
 uint8_t ramDiagnosticsRAM1_taskHandles_size=0;
 uint8_t ramDiagnosticsRAM1_taskStacks_size=0;
 uint8_t ramDiagnosticsRAM1_heap_size=0;
@@ -156,7 +155,6 @@ void ramInfoInit(void){
 
 	ramDiagnosticsRAM1_data_size=(((uint32_t)&_edata-(uint32_t)&__RAM1_start__)/1024);
 	ramDiagnosticsRAM1_bss_size=(((uint32_t)&__bss_end__-(uint32_t)&__bss_start__)/1024);
-	ramDiagnosticsRAM1_tdat_size=0; // Will be implemented after adding ThreadX to the project
 	ramDiagnosticsRAM1_taskHandles_size=(((uint32_t)&__TASK_HANDLES_END__-(uint32_t)&__TASK_HANDLES_START__)/1024);
 	ramDiagnosticsRAM1_taskStacks_size=(((uint32_t)&__TASK_STACKS_END__-(uint32_t)&__TASK_STACKS_START__)/1024);
 
@@ -332,26 +330,6 @@ void ramInfoRAM1(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
 		pSleepFn(sleepTimeout);
 	}
-// Send .tdat section info
-	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTData,
-		0UL,                             // .tdat start
-		0UL,							 // .tdat end
-		ramDiagnosticsRAM1_tdat_size,    // .tdat size in KB
-		ramDiagnosticsRAM1_tdat_size     // .tdat used size in KB
-	);
-	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
-		pSleepFn(sleepTimeout);
-	}
-// Send .heap section info
-	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringHeap,
-		(uint32_t)&_end,                          // .heap start
-		(uint32_t)ramDiagnosticsRAM1_lastHeapEnd, // .heap end
-		ramDiagnosticsRAM1_heap_size,             // .heap size in KB
-		ramDiagnosticsRAM1_heap_size              // .heap used size in KB
-	);
-	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
-		pSleepFn(sleepTimeout);
-	}
 // Send .taskHandles section info
 	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringTaskHandles,
 		(uint32_t)&__TASK_HANDLES_START__,	     // .taskHandles start
@@ -368,6 +346,16 @@ void ramInfoRAM1(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 		(uint32_t)&__TASK_STACKS_END__,          // .taskStacks end
 		ramDiagnosticsRAM1_taskStacks_size,      // .taskStacks size in KB
 		ramDiagnosticsRAM1_taskStacks_size       // .taskStacks used size in KB
+	);
+	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
+		pSleepFn(sleepTimeout);
+	}
+// Send .heap section info
+	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsRAM1_formatStringHeap,
+		(uint32_t)&_end,                          // .heap start
+		(uint32_t)ramDiagnosticsRAM1_lastHeapEnd, // .heap end
+		ramDiagnosticsRAM1_heap_size,             // .heap size in KB
+		ramDiagnosticsRAM1_heap_size              // .heap used size in KB
 	);
 	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
 		pSleepFn(sleepTimeout);

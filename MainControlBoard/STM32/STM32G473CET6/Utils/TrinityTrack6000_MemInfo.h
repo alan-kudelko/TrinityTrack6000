@@ -91,7 +91,6 @@ extern uint32_t ramDiagnosticsRAM1_lastMSP       __attribute((section(".ramDiagn
 extern uint32_t ramDiagnosticsRAM1_lastHeapEnd   __attribute((section(".ramDiagnostics.uint32_t"))); /**<  Last value of heap end pointer in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_data_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .data section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_bss_size       __attribute((section(".ramDiagnostics.uint8_t")));   /**<  Size of .bss section in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_tdat_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .tdat section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_taskHandles_size __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .taskHandles section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_taskStacks_size __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .taskStacks section in RAM1 */
 extern uint8_t ramDiagnosticsRAM1_heap_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .heap section in RAM1 */
@@ -151,7 +150,7 @@ void ramInfoRAM1(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
  * @param sleepTimeout Timeout value to pass to the sleep function for delaying between prints
  * Displays section-level information for RAM2.  
  * By default, this includes `.ramDiagnostics` or any custom sections 
- * assigned to RAM2.
+ * assigned to RAM2.>
  */
 void ramInfoRAM2(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
 

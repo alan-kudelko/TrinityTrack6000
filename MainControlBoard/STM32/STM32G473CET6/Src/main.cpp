@@ -61,14 +61,14 @@ void tx_application_define(void* first_unused_memory){
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
 
-    tx_thread_create(&task_diagnostics_handle,
-                    (char*)task_diagnostics_name,
-                    task_diagnostics,
+    tx_thread_create(&task_CLI_handle,
+                    (char*)task_CLI_name,
+                    task_CLI,
                     0,
-                    &task_diagnostics_stack,
-                    sizeof(task_diagnostics_stack),
-                    TASKS_DIAGNOSTICS_PRIORITY,
-                    TASKS_DIAGNOSTICS_PRIORITY,
+                    &task_CLI_stack,
+                    sizeof(task_CLI_stack),
+                    TASKS_CLI_PRIORITY,
+                    TASKS_CLI_PRIORITY,
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
 }

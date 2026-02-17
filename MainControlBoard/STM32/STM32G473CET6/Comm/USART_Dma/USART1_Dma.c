@@ -19,7 +19,6 @@
 #include <stm32g4xx_hal.h>
 
 #include <TrinityTrack6000_Pinout.h>
-#include <task_diagnostics.h>
 
 uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE]={0};
 uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE]={0};
@@ -45,6 +44,7 @@ volatile bool huart1_dma_tx_active=false;
 extern UART_HandleTypeDef huart1;
 extern DMA_HandleTypeDef hdma_usart1_tx;
 extern DMA_HandleTypeDef hdma_usart1_rx;
+extern TX_SEMAPHORE sem_task_CLI_command_ready;
 
 void usart1_dma_init(void){
     // Initialize ring buffer variables
@@ -299,6 +299,6 @@ void usart1_dma_rx_complete(void){
     // Parsing if left to diagnostics task to allow for more flexible command handling and avoid blocking USART1 interrupt handler
     if((huart1_dma_rx_ring_buffer[(huart1_dma_rx_ring_buffer_head-1)%UART1_DMA_RX_RING_BUFFER_SIZE]=='\n')||(huart1_dma_rx_ring_buffer[(huart1_dma_rx_ring_buffer_head-1)%UART1_DMA_RX_RING_BUFFER_SIZE]=='\r')){
         //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-        tx_semaphore_put(&sem_task_diagnostics_command_ready);
+        tx_semaphore_put(&sem_task_CLI_command_ready);
     }
 }

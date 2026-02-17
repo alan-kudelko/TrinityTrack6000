@@ -18,6 +18,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include <tx_api.h>
+
 /**
  * @brief USART1 DMA Buffers Configuration
  * @defgroup DMA_Buffers_Config DMA Buffers Configuration
@@ -57,6 +59,8 @@ extern volatile uint16_t huart1_dma_tx_ring_buffer_tail;
 extern volatile uint16_t huart1_dma_tx_ring_buffer_length;
 
 extern volatile bool huart1_dma_tx_active;
+
+extern TX_SEMAPHORE sem_task_CLI_command_ready;
 
 #ifdef __cplusplus
     extern "C" {

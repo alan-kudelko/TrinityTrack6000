@@ -963,7 +963,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Tasks/task_diagnostics.c",
+			"path" : "Tasks/task_CLI.c",
 			"sourceGroupIndex" : 0
 		},
 		{

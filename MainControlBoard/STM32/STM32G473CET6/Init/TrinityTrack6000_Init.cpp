@@ -444,7 +444,7 @@ void initializeThreadXMemory(void){
 	// in embedded systems.
 	
 	// Clear all stacks
-	task_diagnostics_init();
+	task_CLI_init();
 	
 }
 
@@ -472,12 +472,17 @@ void initializeSystem(){
 	MX_I2C2_Init();
 	MX_SPI1_Init();
 	MX_SPI2_Init();
-
-	//HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info),DEBUG_UART_TIMEOUT);
-	//HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_GPIO_initialized_info,strlen(msg_init_GPIO_initialized_info),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info))!=true){
+		HAL_Delay(10);
+	}
+	while(usart1_dma_enq_data((uint8_t*)msg_init_GPIO_initialized_info,strlen(msg_init_GPIO_initialized_info))!=true){
+		HAL_Delay(10);
+	}
 // Custom initialization sequence
 	initializeMemory();
-	//HAL_UART_Transmit(&huart1,(uint8_t*)msg_init_memory_initialized_info,strlen(msg_init_memory_initialized_info),DEBUG_UART_TIMEOUT);
+	while(usart1_dma_enq_data((uint8_t*)msg_init_memory_initialized_info,strlen(msg_init_memory_initialized_info))!=true){
+		HAL_Delay(10);
+	}
 	// Initialize USART1 DMA for diagnostics interface
 	usart1_dma_rx_init();
 	//char buffer[INIT_LINE_BUFFER_SIZE]={0};

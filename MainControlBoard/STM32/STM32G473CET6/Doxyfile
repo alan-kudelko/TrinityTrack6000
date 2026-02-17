@@ -1,7 +1,7 @@
 # === Main settings ===
 PROJECT_NAME           = "TrinityTrack6000"
 OUTPUT_DIRECTORY       = ../../docs
-INPUT                  = Include Src Utils Init Devices Comm
+INPUT                  = Include Src Utils Init Devices Comm Tasks
 RECURSIVE              = YES
 FILE_PATTERNS          = *.h *.c *.cpp
 

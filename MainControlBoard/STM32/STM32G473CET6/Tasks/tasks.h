@@ -11,4 +11,4 @@
  * explicit written permission.
  */
 
-#include <task_diagnostics.h>
+#include <task_CLI.h>
