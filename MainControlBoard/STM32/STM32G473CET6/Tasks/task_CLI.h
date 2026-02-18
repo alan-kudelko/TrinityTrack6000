@@ -21,6 +21,9 @@
 
 #define TASK_CLI_RETRY_DELAY_MS 100 /**< Delay in milliseconds before retrying to enqueue data to UART1 DMA if it fails */
 
+#define TOKENS_MAX_COUNT 10 /**< Maximum number of tokens in a command */
+#define COMMANDS_MAX_COUNT 2 /**< Maximum number of supported commands, can be adjusted as needed */
+
 /**
  * @brief CLI Task FSM States
  * This enumeration defines the possible states of the CLI task's finite state machine (FSM).
@@ -48,11 +51,33 @@ extern TX_THREAD task_CLI_handle __attribute((section(".task_handles.task_CLI"))
 extern ULONG task_CLI_stack[TASK_CLI_STACK_SIZE] __attribute((section(".task_stacks.task_CLI"))); /**< Stack for CLI task */
 extern TX_SEMAPHORE sem_task_CLI_command_ready __attribute((section(".task_semaphores.task_CLI"))); /**< Semaphore for CLI task indicating command ready to parse */
 
-extern const char command_show[]; /**< Command string for showing diagnostics information */
+/**
+ * @brief CLI Task command strings and messages
+ * These are constant strings used for command recognition and user feedback in the CLI task.
+ * @{
+ */
 
-extern const char msg_task_CLI_default_menu_header[]; /**< Default menu header for CLI task */
+extern const char command_help[]; /**< Command string for "help" command */
+
+extern const char command_switch_mode[]; /**< Command string for switching CLI mode */
+extern const char command_switch_mode_diag[]; /**< Child command string for switching to diagnostics mode */
+extern const char command_switch_mode_test[]; /**< Child command string for switching to test mode */
+extern const char*command_switch_mode_children[]; /**< Array of child command strings for the "mode" command */
+
+extern const char*command_array[COMMANDS_MAX_COUNT]; /**< Array of command strings for command recognition, indexed by command type */
+
+extern const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[]); /**< Array of function pointers for parsing commands, indexed by command type */
+
+/** @} */
+
+extern const char msg_task_CLI_help[]; /**< Help message for all the CLI task commands*/
+
+extern const char msg_task_CLI_diag_menu_header[]; /**< Default menu header for CLI task */
 extern const char msg_task_CLI_test_menu_header[]; /**< Test menu header for CLI task */
 extern const char msg_task_CLI_unknown_command[]; /**< Message indicating unknown command received in CLI task */
+extern const char msg_task_CLI_mode_switched_to_diag[]; /**< Message indicating that CLI mode has been switched to diagnostics mode */
+extern const char msg_task_CLI_mode_switched_to_test[]; /**< Message indicating that CLI mode has been switched to test mode */
+extern const char msg_task_CLI_mode_switch_failed[]; /**< Message indicating that CLI mode switch failed with correct usage hint */ 
 
 #ifdef __cplusplus
     extern "C"{
@@ -85,7 +110,29 @@ void display_menu_header(void);
  * @param length: Length of the received command data in bytes.
  * @return None.
  */
-void parse_command(const uint8_t*command,uint16_t length);
+void parse_command(char*command,uint16_t length);
+
+/**
+ * @brief Parse "help" command to display CLI help information.
+ * This function is called when the "help" command is received in the CLI interface.
+ * It provides information about available commands and their usage to the user.
+ * @param argc: Number of arguments in the command (including the main command and child command).
+ * @param argv: Array of strings representing the command and its arguments, where argv[0] is the main command ("help").
+ * @return None.
+ */
+void parse_command_help(uint8_t argc,char*argv[]);
+
+/**
+ * @brief Parse "mode" command to switch CLI mode.
+ * This function is called when the "mode" command is received in the CLI interface.
+ * It parses the child command to determine which mode to switch to (diagnostics or test).
+ * Based on the child command, it updates the CLI task's FSM state and sends a confirmation message back to the terminal.
+ * @param argc: Number of arguments in the command (including the main command and child command).
+ * @param argv: Array of strings representing the command and its arguments, where argv[0]
+ * is the main command ("mode") and argv[1] is the child command ("diag" or "test").
+ * @return None.
+ */
+void parse_command_switch_mode(uint8_t argc,char*argv[]);
 
 /**
  * @brief CLI task function.
