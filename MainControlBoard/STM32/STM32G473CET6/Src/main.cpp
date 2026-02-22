@@ -23,6 +23,7 @@
 #include <TrinityTrack6000_Diagnostics.h>
 #include <TrinityTrack6000_MemInfo.h>
 #include <USART1_Dma.h>
+#include <SPI1_Dma.h>
 
 #include <tx_api.h>
 
@@ -35,8 +36,13 @@ extern "C"{
 TX_THREAD task_blink_handle;
 ULONG task_blink_stack[128];
 
+TX_THREAD task_spi1_handle;
+ULONG task_spi1_stack[128];
+
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout);
 UINT delay_function(ULONG timeout);
+
+void spi1_dma_test(ULONG arg);
 
 void task_blink(ULONG arg){
     UNUSED(arg);
@@ -71,6 +77,7 @@ void tx_application_define(void* first_unused_memory){
                     TASKS_CLI_PRIORITY,
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
+    tx_thread_create(&task_spi1_handle,(char*)"SPI1 Task",spi1_dma_test,0,&task_spi1_stack,sizeof(task_spi1_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
 }
 
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout){
@@ -100,6 +107,137 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE END Callback 1 */
 }
 
+void test_SPI_communication(){
+    // Test will be conducted with two MCP23S17 IO expanders
+    // Reset pin is PB2(18) for both devices
+    // CS pin for green LED is PB0(17), for red LED is PB1(16)
+    // Both devices are on SPI1, so we will use software CS control
+
+    // During the test, there should be reset of both devices
+    // Then, according to the datasheet, we need to disable auto-increment mode by writing 0x00 to IOCON register (address 0x0A)
+    // After that, we will configure bank A to output
+    // Finally, we will write different values to each device to see if they
+    // respond correctly (green LED should blink, red LED should be off)
+
+    // After this test, we can be sure that the SPI communication is working correctly and we can proceed with more complex tasks
+    // And so that, we can work on SPI1 DMA driver
+
+    uint8_t txData[5]={0};
+    uint8_t rxData[5]={0};
+    UNUSED(rxData);
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2,GPIO_PIN_RESET); // Reset both devices
+    HAL_Delay(1); // Wait for devices to reset
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2,GPIO_PIN_SET); // Release reset
+    HAL_Delay(1); // Wait for devices to be ready
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0|GPIO_PIN_1,GPIO_PIN_SET);
+
+    while(true){
+// Disable auto-increment mode for device 1 (green LED)
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET); // Select device 1
+    // Write to IOCON register (0x0A) with value 0x00
+    txData[0]|=(1<<6); // Device OP-Code
+    txData[1]=0x0A; // Register address
+    txData[2]|=(1<<5); // SEQOP bit set to 1 to disable auto-increment mode
+    //HAL_Delay(10); // Short delay between transactions
+    HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
+    //HAL_Delay(10); // Wait for transmission to complete
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET); // Deselect device 1
+    memset(txData,0,sizeof(txData)); // Clear txData for next transaction
+
+    //HAL_Delay(10); // Short delay between transactions
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET); // Select device 1
+    //HAL_Delay(10); // Short delay between transactions
+    // Set all GPIO to output for device 1 (green LED)
+    txData[0]|=(1<<6); // Device OP-Code
+    txData[1]=0x00; // IODIRA register address
+    txData[2]=0x00; // Set all pins of bank A to output
+    HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
+    //HAL_Delay(10); // Wait for transmission to complete
+
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET); // Deselect device 1
+
+    memset(txData,0,sizeof(txData)); // Clear txData for next transaction
+
+    //HAL_Delay(10); // Short delay between transactions
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET); // Select device 1
+    //HAL_Delay(10); // Short delay between transactions
+    // Set all GPIO to output for device 1 (green LED)
+    txData[0]|=(1<<6); // Device OP-Code
+    txData[1]=0x12; // IODIRA register address
+    txData[2]=0xFF; // Set all pins of bank A to output
+    HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
+    //HAL_Delay(10); // Wait for transmission to complete
+
+    memset(txData,0,sizeof(txData)); // Clear txData for next transaction
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET); // Deselect device 1
+// Disable auto-increment mode for device 2 (red LED)
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET); // Select device 2
+    // Write to IOCON register (0x0A) with value 0x00
+    txData[0]|=(1<<6); // Device OP-Code
+    txData[1]=0x0A; // Register address
+    txData[2]|=(1<<5); // SEQOP bit set to 1 to disable auto-increment mode
+    //HAL_Delay(10); // Short delay between transactions
+    HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
+    //HAL_Delay(10); // Wait for transmission to complete
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET); // Deselect device 2
+    memset(txData,0,sizeof(txData)); // Clear txData for next transaction
+
+    //HAL_Delay(10); // Short delay between transactions
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET); // Select device 1
+    //HAL_Delay(10); // Short delay between transactions
+    // Set all GPIO to output for device 1 (green LED)
+    txData[0]|=(1<<6); // Device OP-Code
+    txData[1]=0x00; // IODIRA register address
+    txData[2]=0x00; // Set all pins of bank A to output
+    HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
+    //HAL_Delay(10); // Wait for transmission to complete
+
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET); // Deselect device 1
+
+    memset(txData,0,sizeof(txData)); // Clear txData for next transaction
+
+    //HAL_Delay(10); // Short delay between transactions
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET); // Select device 1
+    //HAL_Delay(10); // Short delay between transactions
+    // Set all GPIO to output for device 1 (green LED)
+    txData[0]|=(1<<6); // Device OP-Code
+    txData[1]=0x12; // IODIRA register address
+    txData[2]=0xFF; // Set all pins of bank A to output
+    HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
+    //HAL_Delay(10); // Wait for transmission to complete
+
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET); // Deselect device 1
+    break;
+    }
+    // Check ioc, there is a pending code generation
+}
+
+extern "C" void spi1_dma_test(ULONG arg){
+    hspi_data sampleData{0};
+    uint8_t sampleTxBuffer[3]{0};
+    uint16_t sampleTxBufferLength=3;
+    uint8_t sampleRxBuffer[3]{0};
+    uint16_t sampleRxBufferLength=3;
+    volatile uint8_t sampleStatus=0;
+
+    UNUSED(sampleRxBuffer);
+
+    sampleData.txBuffer=sampleTxBuffer;
+    sampleData.txLength=sampleTxBufferLength;
+    sampleData.rxBuffer=NULL;
+    sampleData.rxLength=sampleRxBufferLength;
+    sampleData.transmissionStatus=&sampleStatus;
+    sampleData.gpio_port=GPIOB;
+    sampleData.gpio_pin=GPIO_PIN_1;
+
+    while(true){
+        spi1_dma_enq_data(&sampleData);
+        tx_thread_sleep(100);
+        (*sampleData.transmissionStatus)=0;
+
+    }
+}
+
 /**
  * @brief  The application entry point.
  * @retval int
@@ -114,34 +252,9 @@ int main(void){
     ramInfoRAM2(delay_function,100);
     ramInfoCCSRAM(delay_function,100);
 
-    uint8_t testData[]="Hello world this is DMA test\r\n";
-    uint16_t testDataLength=strlen((const char*)testData);
-
-    uint8_t receivedData[128]={0};
-    uint16_t receivedDataLength=0;
-
-    UNUSED(receivedData);
-    UNUSED(receivedDataLength);
-    UNUSED(testDataLength);
-    //HAL_Delay(5000);
+        test_SPI_communication();
 
     tx_kernel_enter();
-    while(1){
-        while(!usart1_dma_read_data(receivedData,&receivedDataLength,128)){
-            // Wait for data
-       }
-        receivedData[receivedDataLength-1]='\r';
-        receivedData[receivedDataLength]='\n';
-        receivedDataLength+=1;
-        usart1_dma_enq_data(receivedData,receivedDataLength);
-        // Simple echo test
-
-        //HAL_UART_Receive(&huart1,receivedData,128,DEBUG_UART_TIMEOUT);
-        //receivedDataLength=strlen((const char*)receivedData);
-        //HAL_UART_Transmit(&huart1,receivedData,receivedDataLength,DEBUG_UART_TIMEOUT);
-        //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-        //HAL_Delay(500);
-    }
 
     return 0;
 }

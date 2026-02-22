@@ -16,6 +16,7 @@
           "${workspaceFolder}/Tasks",
           "${workspaceFolder}/Src",
           "${workspaceFolder}/Devices/MCP23S17",
+          "${workspaceFolder}/Comm/SPI_Dma",
           "${workspaceFolder}/Comm/USART_Dma",
           "${workspaceFolder}/Middlewares/ST/threadx/common/inc",
           "${workspaceFolder}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
@@ -36,6 +37,7 @@
           "${workspaceFolder}/Init",
           "${workspaceFolder}/Tasks",
           "${workspaceFolder}/Devices/MCP23S17",
+          "${workspaceFolder}/Comm/SPI_Dma",
           "${workspaceFolder}/Comm/USART_Dma",
           "${workspaceFolder}/Middlewares/ST/threadx/common/inc",
           "${workspaceFolder}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"

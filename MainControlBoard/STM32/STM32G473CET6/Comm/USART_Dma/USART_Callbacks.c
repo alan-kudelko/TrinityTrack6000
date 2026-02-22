@@ -14,9 +14,6 @@
 #include <USART_Callbacks.h>
 #include <TrinityTrack6000_Pinout.h>
 
-extern UART_HandleTypeDef huart1;
-//extern UART_HandleTypeDef huart2;
-
 extern void usart1_dma_tx_complete(void);
 //extern void usart2_dma_tx_complete(void);
 

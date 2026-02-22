@@ -19,6 +19,7 @@
 #include <TrinityTrack6000_Pinout.h>
 
 #include <USART1_Dma.h>
+#include <TrinityTrack6000_MemInfo.h>
 
 CLI_Task_State cli_task_state=CLI_STATE_DIAG_MENU; // Default state is diagnostics menu, can be changed to test menu by command
 
@@ -34,9 +35,18 @@ const char command_switch_mode_diag[]="diag";
 const char command_switch_mode_test[]="test";
 const char*command_switch_mode_children[]={command_switch_mode_diag,command_switch_mode_test};
 
-const char*command_array[COMMANDS_MAX_COUNT]={command_help,command_switch_mode};
+const char command_show[]="show";
+const char command_show_mem[]="memory";
+const char*command_show_children[]={command_show_mem};
 
-const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={parse_command_help,parse_command_switch_mode};
+const char command_show_mem_ram1[]="ram1";
+const char command_show_mem_ram2[]="ram2";
+const char command_show_mem_ccsram[]="ccsram";
+const char*command_show_mem_children[]={command_show_mem_ram1,command_show_mem_ram2,command_show_mem_ccsram};
+
+const char*command_array[COMMANDS_MAX_COUNT]={command_help,command_switch_mode,command_show};
+
+const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={parse_command_help,parse_command_switch_mode,parse_command_show};
 
 /*
     For now let's assume that commands are divided into 2 categories
@@ -45,7 +55,12 @@ const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={parse_comman
 const char msg_task_CLI_help[]=
 "[CLI] Available commands:\r\n\
       help - Show this help message\r\n\
-      mode <diag/test> - Switch CLI mode between diagnostics and test menu\r\n";
+      mode <diag/test> - Switch CLI mode between diagnostics and test menu\r\n\
+      show - Show various system information. Use help show for more details\r\n";
+
+const char msg_task_CLI_help_show[]=
+"[CLI] Available show commands:\r\n\
+      show memory - <ram1/ram2/ccsram> Show memory information\r\n";
 
 const char msg_task_CLI_diag_menu_header[]="[CLI] DIAG> ";
 const char msg_task_CLI_test_menu_header[]="[CLI] TEST> ";
@@ -113,7 +128,7 @@ void parse_command(char*command,uint16_t length){
 
     uint8_t command_index=COMMANDS_MAX_COUNT; // Index of the recognized command in the command table
     for(uint8_t i=0;i<COMMANDS_MAX_COUNT;i++){
-        if(strncmp(tokens[0],command_array[i],strlen(command_array[i])-1)==0){
+        if(strncmp(tokens[0],command_array[i],strlen(command_array[i]))==0){
             command_index=i;
             break;
         }
@@ -137,9 +152,24 @@ void parse_command(char*command,uint16_t length){
 void parse_command_help(uint8_t argc,char*argv[]){
     // This function is called when the "help" command is received in the CLI interface
     // It provides information about available commands and their usage to the user
+    if(argc>1){
+        // If there are more than 1 arguments, we can check if the second argument is a valid command to provide more specific help information about that command
+        if(strncmp(argv[1],command_show,strlen(command_show))==0){
+            // User requested help for the "show" command, send help information for the "show" command
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_show,strlen(msg_task_CLI_help_show))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+            }
+            return;
+        }
+        else{
+            // Invalid command provided as an argument, send error message back to the terminal
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+            }
+            return;
+        }
+    }
 
-    // For now just a placeholder implementation that sends a static help message back to the terminal
-    // In the future we can implement a more dynamic help system that generates help messages based on the available commands and their usage information
     while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help,strlen(msg_task_CLI_help))!=true){
         tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
     }
@@ -181,6 +211,52 @@ void parse_command_switch_mode(uint8_t argc,char*argv[]){
     // execuite task to disable control
 }
 
+void parse_command_show(uint8_t argc,char*argv[]){
+    // This function is called when the "show" command is received
+    // It parses the child command to determine what information to show
+    // Possible the most complex command to implement due to ambiguity of the "show" command,
+    // For instance "show mem" command can have multiple child commands to specify which memory
+    // information to show, so we need to implement a more complex parsing logic to handle that
+    // For now just a placeholder implementation that sends a static message back to the terminal
+
+    if(strncmp(argv[1],command_show_mem,strlen(command_show_mem))==0){
+        // Show memory information
+        // For now just a placeholder message, in the future we can implement a function that retrieves actual memory information and sends it back to the terminal
+        if(argc>2){
+            // Check which memory information to show based on the child command
+            if(strncmp(argv[2],command_show_mem_ram1,strlen(command_show_mem_ram1))==0){
+                // Show RAM1 information
+                ramInfoRAM1(tx_thread_sleep,TASK_CLI_RETRY_DELAY_MS);
+            }
+            else if(strncmp(argv[2],command_show_mem_ram2,strlen(command_show_mem_ram2))==0){
+                // Show RAM2 information
+                ramInfoRAM2(tx_thread_sleep,TASK_CLI_RETRY_DELAY_MS);
+            }
+            else if(strncmp(argv[2],command_show_mem_ccsram,strlen(command_show_mem_ccsram))==0){
+                // Show CCSRAM information
+                ramInfoCCSRAM(tx_thread_sleep,TASK_CLI_RETRY_DELAY_MS);
+            }
+            else{
+                // Invalid child command, send hint back to terminal indicating correct usage of the command
+                while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+                }
+            }
+        }
+        else{
+            // No child command provided, show general memory information
+            ramInfoGeneral(tx_thread_sleep,TASK_CLI_RETRY_DELAY_MS);
+        }
+
+    }
+    else{
+        // Too few arguments or invalid child command, send hint back to terminal indicating correct usage of the command
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_show,strlen(msg_task_CLI_help_show))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+        }
+    }
+}
+
 void display_menu_header(void){
     // Display menu header based on current FSM state
     switch(cli_task_state){
@@ -220,6 +296,8 @@ void task_CLI(ULONG arg){
             // Data is valid
             // Parse command and execute corresponding actions
             parse_command(rx_buffer,rx_length);
+            // This call should be FSM state depended, for instance commands used in diagnostics menu
+            // may not be available in test menu and vice versa, so we can check the current FSM state and parse commands accordingly
         }
         else{
             // Data corrupted or error

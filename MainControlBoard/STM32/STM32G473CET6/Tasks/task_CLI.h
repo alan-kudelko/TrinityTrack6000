@@ -19,10 +19,10 @@
 #define TASK_CLI_STACK_SIZE 512  /**< Stack size for CLI task */
 #define TASKS_CLI_PRIORITY    2  /**< Priority for CLI task */
 
-#define TASK_CLI_RETRY_DELAY_MS 100 /**< Delay in milliseconds before retrying to enqueue data to UART1 DMA if it fails */
+#define TASK_CLI_RETRY_DELAY_MS 30 /**< Delay in milliseconds before retrying to enqueue data to UART1 DMA if it fails */
 
 #define TOKENS_MAX_COUNT 10 /**< Maximum number of tokens in a command */
-#define COMMANDS_MAX_COUNT 2 /**< Maximum number of supported commands, can be adjusted as needed */
+#define COMMANDS_MAX_COUNT 3 /**< Maximum number of supported commands, can be adjusted as needed */
 
 /**
  * @brief CLI Task FSM States
@@ -64,6 +64,15 @@ extern const char command_switch_mode_diag[]; /**< Child command string for swit
 extern const char command_switch_mode_test[]; /**< Child command string for switching to test mode */
 extern const char*command_switch_mode_children[]; /**< Array of child command strings for the "mode" command */
 
+extern const char command_show[]; /**< Command string for "show" command, can be used for showing various system information */
+extern const char command_show_mem[]; /**< Child command string for showing memory information */
+extern const char*command_show_children[]; /**< Array of child command strings for the "show" command */
+
+extern const char command_show_mem_ram1[]; /**< Child command string for showing RAM1 information */
+extern const char command_show_mem_ram2[]; /**< Child command string for showing RAM2 information */
+extern const char command_show_mem_ccsram[]; /**< Child command string for showing CCSRAM information */
+extern const char*command_show_mem_children[]; /**< Array of child command strings for the "show memory" command */
+
 extern const char*command_array[COMMANDS_MAX_COUNT]; /**< Array of command strings for command recognition, indexed by command type */
 
 extern const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[]); /**< Array of function pointers for parsing commands, indexed by command type */
@@ -71,6 +80,7 @@ extern const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[]); /**< 
 /** @} */
 
 extern const char msg_task_CLI_help[]; /**< Help message for all the CLI task commands*/
+extern const char msg_task_CLI_help_show[]; /**< Help message for "show" command and its child commands */
 
 extern const char msg_task_CLI_diag_menu_header[]; /**< Default menu header for CLI task */
 extern const char msg_task_CLI_test_menu_header[]; /**< Test menu header for CLI task */
@@ -135,13 +145,24 @@ void parse_command_help(uint8_t argc,char*argv[]);
 void parse_command_switch_mode(uint8_t argc,char*argv[]);
 
 /**
+ * @brief Parse "show" command to display system information.
+ * This function is called when the "show" command is received in the CLI interface.
+ * It parses the child command to determine what information to show (e.g., memory information).
+ * Based on the child command, it retrieves the requested information and sends it back to the terminal.
+ * @param argc: Number of arguments in the command (including the main command and child command).
+ * @param argv: Array of strings representing the command and its arguments, where argv[0]
+ * is the main command ("show") and argv[1] is the child command (e.g., "memory").
+ * @return None.
+ */
+void parse_command_show(uint8_t argc,char*argv[]);
+
+/**
  * @brief CLI task function.
  * This task handles system diagnostics and provides a CLI interface
  * for monitoring system status and performance.
  * @param arg: Argument passed to the task (not used).
  * @return None.
  */
-
 void task_CLI(ULONG arg);
 
 #ifdef __cplusplus
