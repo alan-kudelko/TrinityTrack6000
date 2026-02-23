@@ -17193,3 +17193,203 @@ rg_constraint_property_value('pwm_ccu4$2093922737$3', speed_class of rg_property
 
 !ENTRY SOLVER 1 0 2025-10-25 19:21:57.868
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2026-02-18 20:16:21.506 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_222
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2026-02-18 20:16:50.372
+!MESSAGE USER_ACTION : Default solver exe path is: D:\Programy\4.5.0.202105191637\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2026-02-18 20:16:50.501
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2026-02-18 20:16:50.501
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2026-02-18 20:16:50.888
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:16:54.564
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 1350 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:16:55.122
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:16:55.819
+!MESSAGE USER_ACTION : Active project:XMC4200[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2026-02-18 20:16:59.280
+!MESSAGE Time Taken By De-Serialization  : 1912 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-02-18 20:16:59.338
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:00.270
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 4451 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:00.299
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 27 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:00.319
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 20 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:00.320
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:03.275
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2954 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:04.646
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 9528 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:17:05.740
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-02-18 20:17:05.957
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-02-18 20:17:07.723
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-02-18 20:17:07.749
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-02-18 20:17:08.728
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/CE/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-02-18 20:17:08.730
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-02-18 20:17:09.017
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/ARM-GCC-Update/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-02-18 20:17:09.018
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-02-18 20:17:09.374
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/Solver_emWin_update/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-02-18 20:17:09.374
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-02-18 20:17:10.124
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/Debugger/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-02-18 20:17:10.124
+!MESSAGE General connection error with response code=202
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.320
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\XMC4.2.00.F64.ALL\device\xmc4200\0\MANIFEST\xmc4200.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.364
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\LQFP64.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.395
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\0\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.435
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.473
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\2\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.503
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\3\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.534
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\14\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.552
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\usb_port\0\MANIFEST\usb_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.574
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.0\port\hcu_port\0\MANIFEST\hcu_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.593
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\debug_port\0\MANIFEST\debug_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.609
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\reset_port\0\MANIFEST\reset_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.627
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\crystal_port\0\MANIFEST\crystal_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.644
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.0\port\rtc_port\0\MANIFEST\rtc_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.665
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\power_port\0\MANIFEST\power_port.dd
+
+!ENTRY APPSTORE 1 0 2026-02-18 20:17:13.682
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\analogpower_port\0\MANIFEST\analogpower_port.dd
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-02-18 20:18:07.470
+!MESSAGE USER_ACTION : Time taken for opening editor is: 1263 msec 
+
+!ENTRY PIN_CONFIG 1 0 2026-02-18 20:19:05.469
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY SOLVER 1 0 2026-02-18 20:19:11.960
+!MESSAGE USER_ACTION : Library store ECO file :D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\XMC4.2.00.F64.ALL\device\xmc4200\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2026-02-18 20:19:12.047
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2026-02-18 20:19:14.008
+!MESSAGE USER_ACTION : Loaded ECO file :D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+
+!ENTRY PIN_CONFIG 1 0 2026-02-18 20:19:14.372
+!MESSAGE USER_ACTION : Pins Load : 2429
+
+!ENTRY PIN_CONFIG 1 0 2026-02-18 20:19:20.030
+!MESSAGE USER_ACTION : Pins Load : 341
+
+!ENTRY PIN_CONFIG 1 0 2026-02-18 20:19:22.533
+!MESSAGE USER_ACTION : Pins Load : 339
+
+!ENTRY PIN_CONFIG 1 0 2026-02-18 20:19:25.270
+!MESSAGE USER_ACTION : Pins Load : 332
+
+!ENTRY PIN_CONFIG 1 0 2026-02-18 20:19:44.922
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY com.dave.mbs.common 1 0 2026-02-18 20:22:35.842
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-02-18 20:22:36.047
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-02-18 20:22:36.298
+!MESSAGE Time Taken By Serialization  : 250 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-02-18 20:22:36.865
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-02-18 20:22:36.879
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 459 msec 
+
+!ENTRY SOLVER 1 0 2026-02-18 20:22:36.880
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-02-18 20:22:37.145
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED

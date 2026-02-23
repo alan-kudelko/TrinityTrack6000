@@ -1,7 +1,9 @@
 <map id="Utils/TrinityTrack6000_MemInfo.h" name="Utils/TrinityTrack6000_MemInfo.h">
-<area shape="rect" id="Node000001" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="53,5,202,48"/>
+<area shape="rect" id="Node000001" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="116,5,265,48"/>
 <area shape="rect" id="Node000002" href="$main_8cpp.html" title="Main program body." alt="" coords="5,104,104,131"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,62,67,105,63,102,99,58"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___mem_info_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="128,96,277,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,58,187,94,183,97,153,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,59,75,106,73,101,145,55"/>
+<area shape="rect" id="Node000003" href="$task___c_l_i_8c.html" title=" " alt="" coords="128,104,253,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,64,193,104,188,104,188,64"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___mem_info_8c.html" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="277,96,426,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,54,316,93,313,98,240,58"/>
 </map>

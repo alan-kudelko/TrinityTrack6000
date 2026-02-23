@@ -1,7 +1,9 @@
 <map id="Comm/USART_Dma/USART1_Dma.h" name="Comm/USART_Dma/USART1_Dma.h">
-<area shape="rect" id="Node000001" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="5,5,206,48"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="27,96,91,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,50,76,84,71,81,91,47"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="115,96,189,123"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,47,140,81,135,84,115,50"/>
+<area shape="rect" id="Node000001" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="31,5,231,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,70,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,51,65,88,62,84,105,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,96,168,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,49,134,80,128,80,128,49"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="192,96,259,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,47,201,84,197,88,153,51"/>
 </map>

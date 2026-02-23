@@ -67,13 +67,6 @@ bool spi1_dma_enq_data(hspi_data*transactionData){
 
             hspi1_dma_active=true;
             spi1_send_data();
-            // Transmit SPI DMA
-            // Ustawienie pinu
-            // Operacja
-            // No i tak kiedy przychodzi callback w takim razie?
-            // Tutaj na pewno rozróżnienie, jeżeli rx jest null to poszło całe
-            // Ale jeżeli rx!=null to trzeba powtórzyć operację
-            // Ustawienie pinu
         }
         __enable_irq();
         // If DMA is active, data will be sent upon DMA completion interrupt
@@ -101,7 +94,9 @@ uint8_t spi1_send_data(void){
             hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txLength);
     }
     else{
-
+        HAL_SPI_Receive_DMA(&hspi1,
+            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer,
+            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxLength);
     }
     return 0;
 }
@@ -110,23 +105,24 @@ void spi1_dma_tx_complete(void){
     // Check if there was a read operation
     // Read operation requires rx buffer to be provided
     // If there is no rx buffer (NULL or nullptr) move on to the next package
-    if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer!=NULL){
-        HAL_SPI_Receive_DMA(&hspi1,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxLength);
+    if((hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer!=NULL)&&(hspi1_tx_processed==false)){
+        hspi1_tx_processed=true;
+        // Send rx frame
     }
     else{
         // Notify the owner of the data that the transmission was complete
         *(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].transmissionStatus)++;
-        HAL_GPIO_WritePin(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
+        HAL_GPIO_WritePin(
+            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
             hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,
             GPIO_PIN_SET);
-        hspi1_transaction_buffer_tail++;
+        hspi1_transaction_buffer_tail=(hspi1_transaction_buffer_tail+1)%SPI1_HSPI_DATA_BUFFER_SIZE;
         hspi1_transaction_buffer_length--;
+        hspi1_tx_processed=false;
     }
     // If there is more data to send
     if(hspi1_transaction_buffer_length>0){
-        hspi1_dma_active=true;
+        //hspi1_dma_active=true; // Probably not needed
         spi1_send_data();
     }
     else{

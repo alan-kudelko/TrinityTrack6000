@@ -1,25 +1,5 @@
 var searchData=
 [
-  ['ramdiagnosticsccsram_5fcrit_5fsize_0',['ramDiagnosticsCCSRAM_crit_size',['../_trinity_track6000___mem_info_8c.html#abeb2f7ff275d0144de914a9b8397e9f4',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsccsram_5fdmabuff_5fsize_1',['ramDiagnosticsCCSRAM_dmaBuff_size',['../_trinity_track6000___mem_info_8c.html#a528cc68b96d04b7aeaa95d6aa9d42d23',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsccsram_5ftotal_5fsize_2',['ramDiagnosticsCCSRAM_total_size',['../_trinity_track6000___mem_info_8c.html#ac72a807af1a0c90127b757d99c693906',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsccsram_5fused_3',['ramDiagnosticsCCSRAM_used',['../_trinity_track6000___mem_info_8c.html#a95444d8893b7179084cff5bd6ad3f293',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsgeneral_5ftotal_5fsize_4',['ramDiagnosticsGeneral_total_size',['../_trinity_track6000___mem_info_8c.html#a1c962ba3aa1f47d915f6ec6a41d8f210',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsgeneral_5fused_5',['ramDiagnosticsGeneral_used',['../_trinity_track6000___mem_info_8c.html#add938ba31baa356e0f924ae8ed97397a',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5fbss_5fsize_6',['ramDiagnosticsRAM1_bss_size',['../_trinity_track6000___mem_info_8c.html#ab74cfac7d5d2af682007a8ce72b2a6f9',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5fdata_5fsize_7',['ramDiagnosticsRAM1_data_size',['../_trinity_track6000___mem_info_8c.html#a3d8f9229eba357df2a423437fd98938f',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5fheap_5fsize_8',['ramDiagnosticsRAM1_heap_size',['../_trinity_track6000___mem_info_8c.html#a97f9eb90424420bc18bbec5ae5a015e6',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5flastheapend_9',['ramDiagnosticsRAM1_lastHeapEnd',['../_trinity_track6000___mem_info_8c.html#a3050ce671857acce370bdb0ab91aa7fa',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5flastmsp_10',['ramDiagnosticsRAM1_lastMSP',['../_trinity_track6000___mem_info_8c.html#a4b3466030b284c4ac943b5c6837d79fb',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5fstack_5fsize_11',['ramDiagnosticsRAM1_stack_size',['../_trinity_track6000___mem_info_8c.html#a5128ea0b8dc5feabcf2fed87ad53074f',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5ftaskhandles_5fsize_12',['ramDiagnosticsRAM1_taskHandles_size',['../_trinity_track6000___mem_info_8c.html#aaed39008e3f8f0bee3b8fbdd954878b2',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5ftaskstacks_5fsize_13',['ramDiagnosticsRAM1_taskStacks_size',['../_trinity_track6000___mem_info_8c.html#a28b30cb9d124fdb72e27b867e1a186e6',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5ftdat_5fsize_14',['ramDiagnosticsRAM1_tdat_size',['../_trinity_track6000___mem_info_8c.html#a4acfa4c90a0c0391a9809182096553a4',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5ftotal_5fsize_15',['ramDiagnosticsRAM1_total_size',['../_trinity_track6000___mem_info_8c.html#af55afbe56b955c17a6303bae6e2f46e8',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram1_5fused_16',['ramDiagnosticsRAM1_used',['../_trinity_track6000___mem_info_8c.html#a87ee06503f29371f5def1abd49d34640',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram2_5framdiagnostics_5fsize_17',['ramDiagnosticsRAM2_ramDiagnostics_size',['../_trinity_track6000___mem_info_8c.html#a89fcaeb9b84b6baeaa4f15cec0d17e1e',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram2_5fsysdiagnostics_5fsize_18',['ramDiagnosticsRAM2_sysDiagnostics_size',['../_trinity_track6000___mem_info_8c.html#acd47bea8328e181435ec8244d2420081',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram2_5ftotal_5fsize_19',['ramDiagnosticsRAM2_total_size',['../_trinity_track6000___mem_info_8c.html#af2015a75ea6d0f375ad05e76d64a7d8e',1,'TrinityTrack6000_MemInfo.c']]],
-  ['ramdiagnosticsram2_5fused_20',['ramDiagnosticsRAM2_used',['../_trinity_track6000___mem_info_8c.html#afc15ba086d825e7e33674ef28ee9f964',1,'TrinityTrack6000_MemInfo.c']]],
-  ['renesans_5ferror_21',['renesans_error',['../struct_system_error_status__t.html#a6b4c61038fce9643df4bc318f31bead8',1,'SystemErrorStatus_t']]]
+  ['parse_5ffunctions_0',['parse_functions',['../task___c_l_i_8c.html#ac139e23e80fcc8769512f7a203fc2706',1,'parse_functions:&#160;task_CLI.c'],['../task___c_l_i_8h.html#ac139e23e80fcc8769512f7a203fc2706',1,'parse_functions:&#160;task_CLI.c']]],
+  ['ptr_1',['ptr',['../main_8cpp.html#a2b3501294b0eee0578affe01ffd7d783',1,'main.cpp']]]
 ];

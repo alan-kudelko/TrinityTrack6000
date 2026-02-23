@@ -1,5 +1,17 @@
 var searchData=
 [
-  ['fpga_5ferror_0',['fpga_error',['../struct_system_error_status__t.html#adffd2dfe57cd7747122c57d52b9bac41',1,'SystemErrorStatus_t']]],
-  ['fram_5ferror_1',['fram_error',['../struct_system_error_status__t.html#a97cc7dc84ba127de74d9571bff505177',1,'SystemErrorStatus_t']]]
+  ['cli_5ftask_5fstate_0',['cli_task_state',['../task___c_l_i_8c.html#a74e543d2ef299953e408dda48c0aa6ad',1,'task_CLI.c']]],
+  ['command_5farray_1',['command_array',['../task___c_l_i_8c.html#aea5a326ee38a4c786d021325c8fb7dbe',1,'command_array:&#160;task_CLI.c'],['../task___c_l_i_8h.html#aea5a326ee38a4c786d021325c8fb7dbe',1,'command_array:&#160;task_CLI.c']]],
+  ['command_5fhelp_2',['command_help',['../task___c_l_i_8c.html#a1a07f0c7de5d8a0e10bde6205f5429b3',1,'command_help:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a1a07f0c7de5d8a0e10bde6205f5429b3',1,'command_help:&#160;task_CLI.c']]],
+  ['command_5fshow_3',['command_show',['../task___c_l_i_8c.html#a04e5f021a853090f9aeca63986a3d375',1,'command_show:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a04e5f021a853090f9aeca63986a3d375',1,'command_show:&#160;task_CLI.c']]],
+  ['command_5fshow_5fchildren_4',['command_show_children',['../task___c_l_i_8c.html#a49dcd58430ec104f7c5e6c0218debbae',1,'command_show_children:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a49dcd58430ec104f7c5e6c0218debbae',1,'command_show_children:&#160;task_CLI.c']]],
+  ['command_5fshow_5fmem_5',['command_show_mem',['../task___c_l_i_8c.html#a628518c9e8b10b7168e4899ed13f67e7',1,'command_show_mem:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a628518c9e8b10b7168e4899ed13f67e7',1,'command_show_mem:&#160;task_CLI.c']]],
+  ['command_5fshow_5fmem_5fccsram_6',['command_show_mem_ccsram',['../task___c_l_i_8c.html#a8ec0c92e5c5ef2b36ea0e553912a964d',1,'command_show_mem_ccsram:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a8ec0c92e5c5ef2b36ea0e553912a964d',1,'command_show_mem_ccsram:&#160;task_CLI.c']]],
+  ['command_5fshow_5fmem_5fchildren_7',['command_show_mem_children',['../task___c_l_i_8c.html#a89c62ba6983f4ba756858b84cb9b5805',1,'command_show_mem_children:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a89c62ba6983f4ba756858b84cb9b5805',1,'command_show_mem_children:&#160;task_CLI.c']]],
+  ['command_5fshow_5fmem_5fram1_8',['command_show_mem_ram1',['../task___c_l_i_8c.html#a21363c4c2db60ee76fca646a2e5fbfa5',1,'command_show_mem_ram1:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a21363c4c2db60ee76fca646a2e5fbfa5',1,'command_show_mem_ram1:&#160;task_CLI.c']]],
+  ['command_5fshow_5fmem_5fram2_9',['command_show_mem_ram2',['../task___c_l_i_8c.html#aa5c2920aafd4c44e97ad54efeb9aeb05',1,'command_show_mem_ram2:&#160;task_CLI.c'],['../task___c_l_i_8h.html#aa5c2920aafd4c44e97ad54efeb9aeb05',1,'command_show_mem_ram2:&#160;task_CLI.c']]],
+  ['command_5fswitch_5fmode_10',['command_switch_mode',['../task___c_l_i_8c.html#a68fce5355de167da549766e0a43e5447',1,'command_switch_mode:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a68fce5355de167da549766e0a43e5447',1,'command_switch_mode:&#160;task_CLI.c']]],
+  ['command_5fswitch_5fmode_5fchildren_11',['command_switch_mode_children',['../task___c_l_i_8c.html#a360bcdfadfcefb526948e1df6e36e8f6',1,'command_switch_mode_children:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a360bcdfadfcefb526948e1df6e36e8f6',1,'command_switch_mode_children:&#160;task_CLI.c']]],
+  ['command_5fswitch_5fmode_5fdiag_12',['command_switch_mode_diag',['../task___c_l_i_8c.html#a5ef81e4f594c28cbff92069111b31d83',1,'command_switch_mode_diag:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a5ef81e4f594c28cbff92069111b31d83',1,'command_switch_mode_diag:&#160;task_CLI.c']]],
+  ['command_5fswitch_5fmode_5ftest_13',['command_switch_mode_test',['../task___c_l_i_8c.html#a714bca0dc915ef779a5df24e99260d6d',1,'command_switch_mode_test:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a714bca0dc915ef779a5df24e99260d6d',1,'command_switch_mode_test:&#160;task_CLI.c']]]
 ];

@@ -1,0 +1,9 @@
+<map id="Comm/SPI_Dma/SPI1_Dma.h" name="Comm/SPI_Dma/SPI1_Dma.h">
+<area shape="rect" id="Node000001" title="Header for SPI1 with DMA functionality and dedicated ring buffer." alt="" coords="31,5,231,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,70,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,35,67,73,64,68,113,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,80,168,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,33,134,64,128,64,128,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="192,80,312,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,30,219,69,216,74,151,35"/>
+</map>

@@ -22,6 +22,8 @@
 
 extern void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef*hspi);
 
+extern void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef*hspi);
+
 #ifdef __cplusplus
     }
 #endif // __cplusplus

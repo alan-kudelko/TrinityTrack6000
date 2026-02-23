@@ -72,7 +72,6 @@ var _trinity_track6000___mem_info_8c =
     [ "ramDiagnosticsRAM1_stack_size", "_trinity_track6000___mem_info_8c.html#a5128ea0b8dc5feabcf2fed87ad53074f", null ],
     [ "ramDiagnosticsRAM1_taskHandles_size", "_trinity_track6000___mem_info_8c.html#aaed39008e3f8f0bee3b8fbdd954878b2", null ],
     [ "ramDiagnosticsRAM1_taskStacks_size", "_trinity_track6000___mem_info_8c.html#a28b30cb9d124fdb72e27b867e1a186e6", null ],
-    [ "ramDiagnosticsRAM1_tdat_size", "_trinity_track6000___mem_info_8c.html#a4acfa4c90a0c0391a9809182096553a4", null ],
     [ "ramDiagnosticsRAM1_total_size", "_trinity_track6000___mem_info_8c.html#af55afbe56b955c17a6303bae6e2f46e8", null ],
     [ "ramDiagnosticsRAM1_used", "_trinity_track6000___mem_info_8c.html#a87ee06503f29371f5def1abd49d34640", null ],
     [ "ramDiagnosticsRAM2_ramDiagnostics_size", "_trinity_track6000___mem_info_8c.html#a89fcaeb9b84b6baeaa4f15cec0d17e1e", null ],

@@ -1,5 +1,7 @@
 <map id="ramInfoGeneral" name="ramInfoGeneral">
-<area shape="rect" id="Node000001" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="103,5,213,32"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" id="Node000001" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="209,31,319,57"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="58,5,108,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,37,108,25,109,19,194,32"/>
+<area shape="rect" id="Node000003" href="$task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="5,56,161,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,57,161,61,160,56,193,51"/>
 </map>

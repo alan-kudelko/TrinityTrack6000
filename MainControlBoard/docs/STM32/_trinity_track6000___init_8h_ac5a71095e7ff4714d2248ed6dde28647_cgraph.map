@@ -1,0 +1,5 @@
+<map id="initializeThreadXMemory" name="initializeThreadXMemory">
+<area shape="rect" id="Node000001" title="ThreadX Memory Initialization Function." alt="" coords="5,5,170,32"/>
+<area shape="rect" id="Node000002" href="$task___c_l_i_8c.html#aff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="218,5,316,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,16,202,16,202,21,170,21"/>
+</map>

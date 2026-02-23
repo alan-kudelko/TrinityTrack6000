@@ -22,5 +22,6 @@ var _u_s_a_r_t1___dma_8c =
     [ "huart1_dma_tx_ring_buffer", "_u_s_a_r_t1___dma_8c.html#a846c8ea2f77a2dffb7a70f92555a8860", null ],
     [ "huart1_dma_tx_ring_buffer_head", "_u_s_a_r_t1___dma_8c.html#a629e98ab0942debe4010e3e3b6451d0d", null ],
     [ "huart1_dma_tx_ring_buffer_length", "_u_s_a_r_t1___dma_8c.html#a07c247294961289672bac2581bd83e05", null ],
-    [ "huart1_dma_tx_ring_buffer_tail", "_u_s_a_r_t1___dma_8c.html#a1a9989f07c2cf3e78d8a2647fbffb6e3", null ]
+    [ "huart1_dma_tx_ring_buffer_tail", "_u_s_a_r_t1___dma_8c.html#a1a9989f07c2cf3e78d8a2647fbffb6e3", null ],
+    [ "sem_task_CLI_command_ready", "_u_s_a_r_t1___dma_8c.html#a141e3a915cbb88e50e41e065a68dc0a7", null ]
 ];

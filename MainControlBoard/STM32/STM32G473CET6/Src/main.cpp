@@ -39,10 +39,14 @@ ULONG task_blink_stack[128];
 TX_THREAD task_spi1_handle;
 ULONG task_spi1_stack[128];
 
+TX_THREAD task_second_device_handle;
+ULONG task_second_device_stack[128];
+
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout);
 UINT delay_function(ULONG timeout);
 
 void spi1_dma_test(ULONG arg);
+void spi1_dma_second_device(ULONG arg);
 
 void task_blink(ULONG arg){
     UNUSED(arg);
@@ -78,6 +82,7 @@ void tx_application_define(void* first_unused_memory){
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
     tx_thread_create(&task_spi1_handle,(char*)"SPI1 Task",spi1_dma_test,0,&task_spi1_stack,sizeof(task_spi1_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
+    tx_thread_create(&task_second_device_handle,(char*)"SPI1 Second",spi1_dma_second_device,0,&task_second_device_stack,sizeof(task_second_device_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
 }
 
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout){
@@ -214,10 +219,10 @@ void test_SPI_communication(){
 
 extern "C" void spi1_dma_test(ULONG arg){
     hspi_data sampleData{0};
-    uint8_t sampleTxBuffer[3]{0};
+    uint8_t sampleTxBuffer[3]{((1<<6)|(0<<0)),0x12,0xff};
     uint16_t sampleTxBufferLength=3;
-    uint8_t sampleRxBuffer[3]{0};
-    uint16_t sampleRxBufferLength=3;
+    uint8_t sampleRxBuffer[5]{0};
+    uint16_t sampleRxBufferLength=1;
     volatile uint8_t sampleStatus=0;
 
     UNUSED(sampleRxBuffer);
@@ -232,10 +237,44 @@ extern "C" void spi1_dma_test(ULONG arg){
 
     while(true){
         spi1_dma_enq_data(&sampleData);
-        tx_thread_sleep(100);
-        (*sampleData.transmissionStatus)=0;
+        tx_thread_sleep(500);
+
+        //while(usart1_dma_enq_data(sampleData.rxBuffer,sampleData.rxLength)==false){
+        //    tx_thread_sleep(10);
+        //}
+        sampleTxBuffer[2]^=0xff;
 
     }
+}
+
+extern "C" void spi1_dma_second_device(ULONG arg){
+    hspi_data sampleData{0};
+    uint8_t sampleTxBuffer[3]{((1<<6)|(0<<0)),0x12,0x00};
+    uint16_t sampleTxBufferLength=3;
+    uint8_t sampleRxBuffer[5]{0};
+    uint16_t sampleRxBufferLength=1;
+    volatile uint8_t sampleStatus=0;
+
+    UNUSED(sampleRxBuffer);
+
+    sampleData.txBuffer=sampleTxBuffer;
+    sampleData.txLength=sampleTxBufferLength;
+    sampleData.rxBuffer=NULL;
+    sampleData.rxLength=sampleRxBufferLength;
+    sampleData.transmissionStatus=&sampleStatus;
+    sampleData.gpio_port=GPIOB;
+    sampleData.gpio_pin=GPIO_PIN_0;
+
+    while(true){
+        spi1_dma_enq_data(&sampleData);
+        tx_thread_sleep(1000);
+
+        //while(usart1_dma_enq_data(sampleData.rxBuffer,sampleData.rxLength)==false){
+        //    tx_thread_sleep(10);
+        //}
+        sampleTxBuffer[2]^=0xff;
+
+    }    
 }
 
 /**
@@ -253,6 +292,8 @@ int main(void){
     ramInfoCCSRAM(delay_function,100);
 
         test_SPI_communication();
+
+    HAL_Delay(100);
 
     tx_kernel_enter();
 

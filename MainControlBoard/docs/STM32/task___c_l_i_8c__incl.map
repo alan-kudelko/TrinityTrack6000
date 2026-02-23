@@ -1,0 +1,25 @@
+<map id="Tasks/task_CLI.c" name="Tasks/task_CLI.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="294,5,418,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,126,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="306,35,132,78,130,73,305,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="149,80,214,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="327,35,227,76,225,71,325,30"/>
+<area shape="rect" id="Node000004" href="$task___c_l_i_8h.html" title=" " alt="" coords="238,80,323,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="345,34,306,71,302,67,341,31"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="347,80,520,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="371,31,411,67,407,71,368,34"/>
+<area shape="rect" id="Node000007" href="$_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="544,80,664,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="400,30,547,73,545,78,399,35"/>
+<area shape="rect" id="Node000010" href="$_trinity_track6000___mem_info_8h.html" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="688,80,875,107"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="419,28,693,74,692,80,418,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="361,155,428,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="302,105,363,144,360,148,299,109"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="569,110,444,152,443,147,567,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="661,155,726,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="621,105,668,143,665,147,618,109"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="563,155,637,181"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="606,107,604,139,599,139,601,107"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="768,109,722,147,719,143,764,105"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="749,155,822,181"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="785,107,787,139,781,139,780,107"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="spi1_send_data" name="spi1_send_data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="623,81,736,108"/>
+<area shape="rect" id="Node000002" href="$_s_p_i1___dma_8c.html#a2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="429,56,566,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="608,87,567,82,567,76,608,82"/>
+<area shape="rect" id="Node000006" href="$_s_p_i1___dma_8c.html#aaf195c00da311f0133f4f43085e64653" title=" " alt="" coords="420,107,575,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="608,107,576,112,575,107,607,102"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#af53fb4d09b4f356c9b8558baaee3b966" title=" " alt="" coords="199,5,370,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="423,54,343,35,344,30,424,49"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a045eeb96a50d7b0b3c51e2ada63e8c6a" title=" " alt="" coords="231,56,338,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="413,72,338,72,338,67,413,67"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,31,149,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,34,149,38,149,33,183,28"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="215,64,149,55,149,50,216,58"/>
+<area shape="rect" id="Node000007" href="$_s_p_i___callabacks_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" title=" " alt="" coords="197,107,372,133"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="404,123,373,123,373,117,404,117"/>
+<area shape="rect" id="Node000008" href="$_s_p_i___callabacks_8c.html#a0a99ab4f6aa6ee7dc2abca5483910dde" title=" " alt="" coords="198,157,371,184"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="424,140,344,159,343,154,423,135"/>
+</map>

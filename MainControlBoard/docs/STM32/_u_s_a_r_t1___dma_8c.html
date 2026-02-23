@@ -106,28 +106,27 @@ $(function(){initNavTree('_u_s_a_r_t1___dma_8c.html','',''); });
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stm32g4xx_hal.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="_trinity_track6000___pinout_8h_source.html">TrinityTrack6000_Pinout.h</a>&gt;</code><br />
-<code>#include &lt;task_diagnostics.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for USART1_Dma.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t1___dma_8c__incl.png" border="0" usemap="#a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t1___dma_8c" loading="lazy" alt=""/></div>
 <map name="a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t1___dma_8c" id="a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t1___dma_8c">
-<area shape="rect" title="Implementation of USART1 with DMA functionality and dedicated ring buffer." alt="" coords="189,5,389,48"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="5,96,125,123"/>
-<area shape="poly" title=" " alt="" coords="232,51,115,93,113,88,230,46"/>
-<area shape="rect" title=" " alt="" coords="122,171,197,197"/>
-<area shape="poly" title=" " alt="" coords="247,51,216,71,190,98,175,126,166,156,161,155,170,124,186,94,213,67,244,46"/>
-<area shape="rect" title=" " alt="" coords="200,96,264,123"/>
-<area shape="poly" title=" " alt="" coords="276,50,252,85,247,82,272,47"/>
-<area shape="rect" title=" " alt="" coords="288,96,408,123"/>
-<area shape="poly" title=" " alt="" coords="306,47,332,82,327,85,302,50"/>
-<area shape="rect" href="_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="432,96,605,123"/>
-<area shape="poly" title=" " alt="" coords="349,46,469,88,467,93,347,51"/>
-<area shape="rect" title=" " alt="" coords="629,96,760,123"/>
-<area shape="poly" title=" " alt="" coords="390,45,616,90,615,95,389,50"/>
-<area shape="rect" title=" " alt="" coords="33,171,97,197"/>
-<area shape="poly" title=" " alt="" coords="68,123,68,155,62,155,62,123"/>
-<area shape="poly" title=" " alt="" coords="83,121,133,159,130,163,80,125"/>
+<area shape="rect" title="Implementation of USART1 with DMA functionality and dedicated ring buffer." alt="" coords="192,5,392,48"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="66,96,185,123"/>
+<area shape="poly" title=" " alt="" coords="250,51,166,91,164,87,248,46"/>
+<area shape="rect" title=" " alt="" coords="186,171,260,197"/>
+<area shape="poly" title=" " alt="" coords="279,50,251,97,231,157,226,155,246,95,274,47"/>
+<area shape="rect" title=" " alt="" coords="260,96,324,123"/>
+<area shape="poly" title=" " alt="" coords="295,49,295,80,290,80,290,49"/>
+<area shape="rect" title=" " alt="" coords="348,96,468,123"/>
+<area shape="poly" title=" " alt="" coords="324,46,379,85,376,89,321,51"/>
+<area shape="rect" href="_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="492,96,666,123"/>
+<area shape="poly" title=" " alt="" coords="367,46,520,89,518,94,365,51"/>
+<area shape="rect" title=" " alt="" coords="5,171,70,197"/>
+<area shape="poly" title=" " alt="" coords="112,125,66,163,63,159,108,121"/>
+<area shape="poly" title=" " alt="" coords="144,121,196,159,193,164,141,125"/>
+<area shape="rect" title=" " alt="" coords="93,171,160,197"/>
+<area shape="poly" title=" " alt="" coords="128,123,129,155,124,155,123,123"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -166,6 +165,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
 <tr class="memitem:a5af94ab36bfe698db3e6beea96d10a90" id="r_a5af94ab36bfe698db3e6beea96d10a90"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5af94ab36bfe698db3e6beea96d10a90">hdma_usart1_tx</a></td></tr>
 <tr class="memitem:a34251392f0d5e2461e3aef615918c235" id="r_a34251392f0d5e2461e3aef615918c235"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34251392f0d5e2461e3aef615918c235">hdma_usart1_rx</a></td></tr>
+<tr class="memitem:a141e3a915cbb88e50e41e065a68dc0a7" id="r_a141e3a915cbb88e50e41e065a68dc0a7"><td class="memItemLeft" align="right" valign="top">TX_SEMAPHORE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a141e3a915cbb88e50e41e065a68dc0a7">sem_task_CLI_command_ready</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of USART1 with DMA functionality and dedicated ring buffer. </p>
@@ -204,27 +204,49 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph" loading="lazy" alt=""/></div>
 <map name="a_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph" id="a_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph">
-<area shape="rect" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="553,159,696,202"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="347,116,496,143"/>
-<area shape="poly" title=" " alt="" coords="538,161,477,146,479,141,539,156"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="338,192,505,219"/>
-<area shape="poly" title=" " alt="" coords="538,194,506,198,505,192,538,188"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,91,55,118"/>
-<area shape="poly" title=" " alt="" coords="396,107,350,65,321,45,289,31,238,15,195,8,154,13,104,31,84,43,66,59,41,92,37,89,62,55,80,39,102,26,153,8,196,3,239,10,291,26,323,41,353,61,400,103"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="134,40,258,67"/>
-<area shape="poly" title=" " alt="" coords="372,112,289,81,251,70,253,65,291,76,374,107"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="141,91,252,118"/>
-<area shape="poly" title=" " alt="" coords="331,122,252,113,252,108,332,117"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="145,142,248,168"/>
-<area shape="poly" title=" " alt="" coords="332,142,248,152,248,147,331,137"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="145,192,248,219"/>
-<area shape="poly" title=" " alt="" coords="374,152,291,183,249,195,247,190,289,178,372,147"/>
-<area shape="poly" title=" " alt="" coords="128,74,103,81,56,98,54,93,102,76,126,69"/>
-<area shape="poly" title=" " alt="" coords="125,107,55,107,55,102,125,102"/>
-<area shape="poly" title=" " alt="" coords="130,140,102,132,54,116,56,111,103,127,131,135"/>
-<area shape="poly" title=" " alt="" coords="129,195,101,183,64,152,39,120,43,117,68,148,104,178,131,190"/>
-<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="103,243,290,270"/>
-<area shape="poly" title=" " alt="" coords="345,225,259,245,258,240,344,220"/>
+<area shape="rect" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="865,395,1007,438"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="658,276,808,303"/>
+<area shape="poly" title=" " alt="" coords="886,389,755,305,757,301,889,384"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="649,428,817,455"/>
+<area shape="poly" title=" " alt="" coords="850,430,817,434,817,428,849,424"/>
+<area shape="rect" href="task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="427,150,574,176"/>
+<area shape="poly" title=" " alt="" coords="706,268,659,228,600,191,571,179,573,174,603,186,662,224,709,263"/>
+<area shape="rect" href="task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="237,150,312,176"/>
+<area shape="poly" title=" " alt="" coords="724,262,712,210,688,148,672,116,652,86,628,60,600,38,548,14,525,9,503,8,456,18,401,39,362,62,329,93,304,125,286,151,282,148,299,121,326,89,359,58,399,34,455,12,503,3,526,4,550,9,603,34,632,56,656,83,676,113,693,146,717,209,729,260"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="444,504,557,531"/>
+<area shape="poly" title=" " alt="" coords="717,317,652,417,632,459,622,477,603,494,582,506,559,514,557,508,579,501,600,490,617,473,627,457,647,415,712,314"/>
+<area shape="rect" href="task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="442,200,559,227"/>
+<area shape="poly" title=" " alt="" coords="676,273,600,248,545,230,546,225,602,243,678,268"/>
+<area shape="rect" href="task___c_l_i_8c.html#a804c51bf9d9a919cbf34f9f9dd0c6c35" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="426,48,575,75"/>
+<area shape="poly" title=" " alt="" coords="719,262,702,223,676,176,642,129,600,89,574,76,577,71,603,85,646,125,681,173,706,221,724,260"/>
+<area shape="rect" href="task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="197,352,352,379"/>
+<area shape="poly" title=" " alt="" coords="643,279,588,275,526,275,463,280,401,292,369,304,339,321,293,354,290,350,337,316,367,299,399,287,462,274,526,269,588,270,644,274"/>
+<area shape="rect" href="task___c_l_i_8c.html#ab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="400,99,601,126"/>
+<area shape="poly" title=" " alt="" coords="714,264,668,201,636,168,600,140,576,128,578,124,603,135,640,164,672,197,718,261"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="438,403,563,430"/>
+<area shape="poly" title=" " alt="" coords="709,316,662,355,603,393,564,407,562,402,600,388,659,351,706,311"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="446,454,556,480"/>
+<area shape="poly" title=" " alt="" coords="718,318,672,382,640,415,603,444,581,455,557,462,556,457,579,450,600,439,636,411,668,378,714,315"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="450,302,552,328"/>
+<area shape="poly" title=" " alt="" coords="643,302,552,312,552,307,643,297"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="450,352,552,379"/>
+<area shape="poly" title=" " alt="" coords="686,312,602,343,553,356,552,351,601,338,684,307"/>
+<area shape="poly" title=" " alt="" coords="412,166,312,166,312,160,412,160"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,150,149,176"/>
+<area shape="poly" title=" " alt="" coords="221,166,149,166,149,160,221,160"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="250,403,299,430"/>
+<area shape="poly" title=" " alt="" coords="428,505,399,495,339,463,293,432,296,428,342,459,401,490,430,500"/>
+<area shape="poly" title=" " alt="" coords="426,200,311,174,313,168,427,194"/>
+<area shape="poly" title=" " alt="" coords="423,419,299,419,299,414,423,414"/>
+<area shape="poly" title=" " alt="" coords="423,402,337,382,338,377,424,396"/>
+<area shape="poly" title=" " alt="" coords="430,454,299,424,300,419,431,449"/>
+<area shape="poly" title=" " alt="" coords="430,457,399,444,383,431,374,418,365,405,351,393,328,382,330,377,353,389,369,402,378,415,387,427,401,439,432,452"/>
+<area shape="poly" title=" " alt="" coords="436,328,401,342,387,354,378,367,369,380,353,393,327,406,300,414,299,409,325,401,351,389,365,376,374,364,383,351,399,338,434,323"/>
+<area shape="poly" title=" " alt="" coords="435,332,338,354,337,349,434,327"/>
+<area shape="poly" title=" " alt="" coords="435,383,300,413,299,408,434,378"/>
+<area shape="poly" title=" " alt="" coords="434,368,352,368,352,363,434,363"/>
+<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="407,555,594,582"/>
+<area shape="poly" title=" " alt="" coords="709,468,662,507,603,545,573,557,571,552,600,540,659,503,706,463"/>
 </map>
 </div>
 
@@ -274,21 +296,43 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph" loading="lazy" alt=""/></div>
 <map name="a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph" id="a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph">
-<area shape="rect" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="275,82,424,109"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,82,55,109"/>
-<area shape="poly" title=" " alt="" coords="320,75,277,45,226,22,192,13,164,8,137,11,104,22,84,34,66,50,41,83,37,80,62,47,80,30,102,17,135,6,164,3,193,8,228,17,280,41,323,70"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="103,32,227,58"/>
-<area shape="poly" title=" " alt="" coords="283,80,216,62,217,56,285,75"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="110,82,220,109"/>
-<area shape="poly" title=" " alt="" coords="260,98,220,98,220,93,260,93"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="114,133,216,160"/>
-<area shape="poly" title=" " alt="" coords="285,116,217,135,216,130,283,111"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="114,184,216,210"/>
-<area shape="poly" title=" " alt="" coords="317,120,228,174,203,186,201,181,226,169,314,116"/>
-<area shape="poly" title=" " alt="" coords="114,67,56,89,54,84,112,62"/>
-<area shape="poly" title=" " alt="" coords="94,98,55,98,55,93,94,93"/>
-<area shape="poly" title=" " alt="" coords="112,130,54,107,56,102,114,125"/>
-<area shape="poly" title=" " alt="" coords="109,179,101,174,65,142,39,111,43,107,69,138,104,170,112,174"/>
+<area shape="rect" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="649,248,799,275"/>
+<area shape="rect" href="task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="427,45,574,72"/>
+<area shape="poly" title=" " alt="" coords="709,235,692,200,668,160,637,120,600,86,574,73,576,68,603,82,641,116,673,157,697,198,714,233"/>
+<area shape="rect" href="task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="237,45,312,72"/>
+<area shape="poly" title=" " alt="" coords="715,233,702,187,680,132,647,77,625,54,600,36,563,19,524,10,483,8,443,11,367,27,308,47,307,42,366,22,442,6,483,3,525,5,565,14,603,31,629,50,651,74,685,129,707,185,720,232"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="444,147,557,173"/>
+<area shape="poly" title=" " alt="" coords="691,241,649,213,600,188,557,173,558,168,602,183,652,209,694,236"/>
+<area shape="rect" href="task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="442,96,559,123"/>
+<area shape="poly" title=" " alt="" coords="703,237,659,185,631,159,600,137,559,121,561,116,603,132,635,155,663,182,707,233"/>
+<area shape="rect" href="task___c_l_i_8c.html#a804c51bf9d9a919cbf34f9f9dd0c6c35" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="426,451,575,477"/>
+<area shape="poly" title=" " alt="" coords="712,290,671,362,640,401,603,434,567,452,565,448,600,430,636,397,666,359,708,287"/>
+<area shape="rect" href="task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="197,299,352,325"/>
+<area shape="poly" title=" " alt="" coords="709,289,666,344,637,370,602,390,548,409,502,413,456,406,399,390,367,378,337,361,290,328,293,324,339,357,369,373,401,385,457,400,502,407,547,404,600,385,634,366,662,340,705,286"/>
+<area shape="rect" href="task___c_l_i_8c.html#ab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="400,501,601,528"/>
+<area shape="poly" title=" " alt="" coords="718,290,704,335,681,389,648,444,627,469,603,491,583,503,581,498,600,487,623,466,643,441,676,387,699,333,713,289"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="438,349,563,376"/>
+<area shape="poly" title=" " alt="" coords="694,286,652,314,602,340,564,353,563,348,600,335,649,309,691,282"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="446,197,556,224"/>
+<area shape="poly" title=" " alt="" coords="646,246,556,226,557,220,648,241"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="450,248,552,275"/>
+<area shape="poly" title=" " alt="" coords="634,264,552,264,552,259,634,259"/>
+<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="450,299,552,325"/>
+<area shape="poly" title=" " alt="" coords="647,281,553,303,552,298,646,276"/>
+<area shape="poly" title=" " alt="" coords="412,61,312,61,312,56,412,56"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,45,149,72"/>
+<area shape="poly" title=" " alt="" coords="221,61,149,61,149,56,221,56"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="250,248,299,275"/>
+<area shape="poly" title=" " alt="" coords="430,177,401,188,342,219,296,250,293,245,339,214,399,183,428,172"/>
+<area shape="poly" title=" " alt="" coords="426,95,311,69,313,64,427,90"/>
+<area shape="poly" title=" " alt="" coords="423,351,399,339,383,327,374,314,365,301,351,289,325,276,299,268,300,263,327,271,353,284,369,298,378,311,387,323,401,335,425,346"/>
+<area shape="poly" title=" " alt="" coords="423,348,337,328,338,323,424,343"/>
+<area shape="poly" title=" " alt="" coords="431,229,300,258,299,253,430,224"/>
+<area shape="poly" title=" " alt="" coords="432,225,401,238,387,250,378,262,369,276,353,289,330,300,328,296,351,284,365,272,374,259,383,246,399,234,430,220"/>
+<area shape="poly" title=" " alt="" coords="434,264,300,264,300,259,434,259"/>
+<area shape="poly" title=" " alt="" coords="435,279,338,301,337,295,434,273"/>
+<area shape="poly" title=" " alt="" coords="434,300,299,269,300,264,435,295"/>
+<area shape="poly" title=" " alt="" coords="434,315,352,315,352,309,434,309"/>
 </map>
 </div>
 
@@ -372,9 +416,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph" loading="lazy" alt=""/></div>
 <map name="a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph" id="a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph">
-<area shape="rect" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="103,5,256,32"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="319,5,472,32"/>
+<area shape="rect" href="task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
+<area shape="poly" title=" " alt="" coords="303,21,272,21,272,16,303,16"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
 </map>
 </div>
 
@@ -734,6 +780,28 @@ Here is the caller graph for this function:</div>
           <td class="memname">volatile uint16_t huart1_dma_tx_ring_buffer_tail =0</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a141e3a915cbb88e50e41e065a68dc0a7" name="a141e3a915cbb88e50e41e065a68dc0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141e3a915cbb88e50e41e065a68dc0a7">&#9670;&#160;</a></span>sem_task_CLI_command_ready</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TX_SEMAPHORE sem_task_CLI_command_ready</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

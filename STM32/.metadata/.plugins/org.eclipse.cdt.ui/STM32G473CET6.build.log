@@ -1,4 +1,4 @@
-22:31:59 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
+17:46:12 **** Incremental Build of configuration Debug for project STM32G473CET6 ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G473xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
 ../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART1_Dma.h: No such file or directory
@@ -8,5 +8,5 @@ compilation terminated.
 make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
 "make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-22:32:01 Build Failed. 2 errors, 0 warnings. (took 1s.143ms)
+17:46:13 Build Failed. 2 errors, 0 warnings. (took 1s.39ms)
 
