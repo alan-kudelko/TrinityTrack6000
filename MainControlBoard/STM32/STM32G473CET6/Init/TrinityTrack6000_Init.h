@@ -82,11 +82,11 @@ void MX_SPI2_Init(void);
 void MX_TIM3_Init(void);
 
 /**
-  * @brief TIM8 Initialization Function
+  * @brief TIM2 Initialization Function
   * @param None
   * @retval None
   */
-void MX_TIM8_Init(void);
+void MX_TIM2_Init(void);
 
 /**
   * @brief USART1 Initialization Function

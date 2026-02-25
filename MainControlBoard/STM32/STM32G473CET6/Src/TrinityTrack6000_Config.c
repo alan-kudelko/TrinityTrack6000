@@ -14,6 +14,7 @@
 #include <TrinityTrack6000_Config.h>
 
 ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
 
 CORDIC_HandleTypeDef hcordic;
 
@@ -29,7 +30,7 @@ DMA_HandleTypeDef hdma_spi2_rx;
 DMA_HandleTypeDef hdma_spi2_tx;
 
 TIM_HandleTypeDef htim3;
-TIM_HandleTypeDef htim8;
+TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;

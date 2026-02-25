@@ -291,14 +291,58 @@ int main(void){
     ramInfoRAM2(delay_function,100);
     ramInfoCCSRAM(delay_function,100);
 
+        HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+    __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_2,500);
+
+    HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
+    __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,500);
+
         test_SPI_communication();
 
     HAL_Delay(100);
+
+    uint32_t adc_buffer[4]{0};
+    HAL_ADCEx_Calibration_Start(&hadc1,ADC_SINGLE_ENDED);
+
+    while(false){
+        HAL_ADC_Start_DMA(&hadc1,adc_buffer,4);
+
+        HAL_Delay(1000);
+    }
 
     tx_kernel_enter();
 
     return 0;
 }
+
+// Dobra punkt wejscia po ogarnieciu ADC i DMA
+// No to tak klasa do NRF24L01 i testy komunikacyjne
+// Na razie sprawdzic czy dla tego sterownika SPI1 bedzie to chodzic
+// Interfejs do udostepniania wskaznikow na bufory wewnetrzne
+// Bufory wewnetrzne statycznie alokowane w sekcji .dma
+// Nad samym szkieletem sie pomysli oraz nad api
+// Potem osobny task komunikacyjny do SPI
+// Nastepnie rozbudowa na przetestowanie komunikacji z przelaczaniem stron
+// Odbiorca po otrzymaniu paczki staje sie wysylajacym
+// Potrzebny jest drugi uklad do testow np. jakis AVR
+// ALe to juz raczej bez CMake i moze byc to zwykle arduino z obsluga SPI
+// Dwie funkcje startowe
+// Jedna bedzie sluzyc do wyznaczania procenta utraconych pakietow (do testow po zlutowaniu PCB)
+// Druga do tymczasowego przesylania danych i telemetrii od urzadzenia do urzadzenia
+
+// Kolejny prosty test do przeprowadzenia to obsluga ADC pod czujniki z serii MQ-X
+// Dzisiaj podpiac jakis potencjometr lub dla bezpieczenstwa zwykly rezystor i zrobic
+// dzielnik napiecia i sprawdzic czy sie zgadza z multimetrem/oscyloskopem
+// potem sobie zrobimy testy z czujnikami MQ-X
+
+// Dobra do rozwiazania jest na pewno problem z podwojnym przerwaniem konwersji (nie mam zielonego pojecia czemu)
+// Bo najlepsze, ze przerwanie DMA_IT_HT jest zablokowane oraz jest wyczyszczona jego flaga
+// Dodatkowo apropo ADC trzeba wprowadzic kompensacje napiecia zasilania podpietego do VREF+
+
+
+// Co do samego DMA nalezy przeprowadzic balans
+// Tzn. operacje najczesciej wykonywane i najciesze powinny trafic do dwoch roznych
+// Kontrolerow DMA
 
 #ifdef USE_FULL_ASSERT
 /**

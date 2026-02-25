@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 196,
+				"line" : 199,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 179,
+				"line" : 181,
 				"parent" : 0
 			}
 		]
@@ -86,6 +86,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/MCP23S17"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/NRF24L01"
 				},
 				{
 					"backtrace" : 2,
@@ -151,12 +155,11 @@
 				34,
 				35,
 				36,
-				40,
-				42,
+				41,
 				43,
 				44,
 				45,
-				47,
+				46,
 				48,
 				49,
 				50,
@@ -311,7 +314,8 @@
 				199,
 				200,
 				201,
-				202
+				202,
+				203
 			]
 		},
 		{
@@ -365,6 +369,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/NRF24L01"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/SPI_Dma"
 				},
 				{
@@ -384,8 +392,7 @@
 			"sourceIndexes" : 
 			[
 				32,
-				46,
-				203,
+				47,
 				204,
 				205,
 				206,
@@ -393,7 +400,8 @@
 				208,
 				209,
 				210,
-				211
+				211,
+				212
 			]
 		},
 		{
@@ -447,6 +455,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices/NRF24L01"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Comm/SPI_Dma"
 				},
 				{
@@ -475,7 +487,8 @@
 			[
 				37,
 				39,
-				41
+				40,
+				42
 			]
 		}
 	],
@@ -552,7 +565,7 @@
 				43,
 				44,
 				45,
-				47,
+				46,
 				48,
 				49,
 				50,
@@ -707,7 +720,8 @@
 				199,
 				200,
 				201,
-				202
+				202,
+				203
 			]
 		},
 		{
@@ -715,8 +729,7 @@
 			"sourceIndexes" : 
 			[
 				32,
-				46,
-				203,
+				47,
 				204,
 				205,
 				206,
@@ -724,7 +737,8 @@
 				208,
 				209,
 				210,
-				211
+				211,
+				212
 			]
 		},
 		{
@@ -969,6 +983,12 @@
 			"backtrace" : 1,
 			"path" : "Devices/MCP23S17/MCP23S17.h",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "Devices/NRF24L01/NRF24L01.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

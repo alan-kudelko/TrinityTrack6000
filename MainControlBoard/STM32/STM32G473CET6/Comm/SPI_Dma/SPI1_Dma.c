@@ -44,6 +44,8 @@ void spi1_dma_init(void){
     hspi1_transaction_buffer_length=0;
     hspi1_dma_active=false;
     hspi1_tx_processed=false;
+
+    __HAL_DMA_DISABLE_IT(&hdma_spi1_rx,DMA_IT_HT);
 }
 
 bool spi1_dma_enq_data(hspi_data*transactionData){
@@ -107,7 +109,6 @@ void spi1_dma_tx_complete(void){
     // If there is no rx buffer (NULL or nullptr) move on to the next package
     if((hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer!=NULL)&&(hspi1_tx_processed==false)){
         hspi1_tx_processed=true;
-        // Send rx frame
     }
     else{
         // Notify the owner of the data that the transmission was complete
@@ -129,7 +130,6 @@ void spi1_dma_tx_complete(void){
         hspi1_dma_active=false;
     }
 }
-
 
 // This driver should also remember slave select pins when there are multiple slaves and set them accordingly when transmitting data
 // For now we assume there is only one slave connected to SPI1 and it is always selected

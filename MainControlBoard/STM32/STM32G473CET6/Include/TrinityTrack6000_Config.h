@@ -70,6 +70,7 @@
 /** @} */
 
 extern ADC_HandleTypeDef hadc1;
+extern DMA_HandleTypeDef hdma_adc1;
 
 extern CORDIC_HandleTypeDef hcordic;
 
@@ -85,7 +86,7 @@ extern DMA_HandleTypeDef hdma_spi2_rx;
 extern DMA_HandleTypeDef hdma_spi2_tx;
 
 extern TIM_HandleTypeDef htim3;
-extern TIM_HandleTypeDef htim8;
+extern TIM_HandleTypeDef htim2;
 // Uart Handler used for debugging and logging
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
