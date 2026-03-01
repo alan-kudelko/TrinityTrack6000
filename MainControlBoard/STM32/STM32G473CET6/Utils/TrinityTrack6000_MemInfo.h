@@ -1,5 +1,5 @@
 /**
- * @file TrinityTrack6000_MemInfo.h
+ * @defgroup TrinityTrack6000_MemInfo Memory Information Utility
  * @brief RAM diagnostics interface for TrinityTrack6000 project.
  *
  * This module provides functions and variables for monitoring and 
@@ -27,15 +27,25 @@
  * For educational and research purposes only.  
  * Redistribution, modification, or commercial use prohibited without
  * explicit written permission.
+ * 
+ * @{
  */
 #ifndef TRINITYTRACK6000_MEMINFO_H_
     #define TRINITYTRACK6000_MEMINFO_H_
 
+#ifdef __DOXYGEN__
+    #define SECTION(x)
+    #define ALIGNED(x)
+#else
+    #define SECTION(x) __attribute((section(x)))
+    #define ALIGNED(x) __attribute((aligned(x)))
+#endif // __DOXYGEN__
+
 #include <stdint.h>
 #include <tx_port.h>
 
-#define MEMINFO_LINE_BUFFER_SIZE 95
-#define MEMINFO_BAR_BUFFER_SIZE 11
+#define MEMINFO_LINE_BUFFER_SIZE 95 //!< Size of the buffer for generating formatted lines of memory diagnostics reports, can be adjusted as needed
+#define MEMINFO_BAR_BUFFER_SIZE 11 //!< Size of the buffer for generating memory usage bars in diagnostics reports, can be adjusted as needed
 
 /** @name Headers and footers for RAM memory dumps
  *  @{
@@ -71,36 +81,6 @@ extern const char msg_ramDiagnosticsRAM2_formatStringSysDia[]; /**< RAM2 diagnos
 extern const char msg_ramDiagnosticsCCSRAM_header1[]; /**< CCSRAM diagnostics header line 1 */
 extern const char msg_ramDiagnosticsCCSRAM_formatStringCrit[]; /**< CCSRAM diagnostics format string for .crit section */
 extern const char msg_ramDiagnosticsCCSRAM_formatStringDmaBuff[]; /**< CCSRAM diagnostics format string for .dmaBuff section */
-/** @} */
-
-/**
- * @brief RAM diagnostics variables
- * @{
- */
-extern uint16_t ramDiagnosticsGeneral_total_size __attribute((section(".ramDiagnostics.uint16_t"))); /**<  Total size of all RAM in kB */
-extern uint8_t ramDiagnosticsRAM1_total_size     __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Total size of bank RAM1 in kB */
-extern uint8_t ramDiagnosticsRAM2_total_size     __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Total size of bank RAM2 in kB */
-extern uint8_t ramDiagnosticsCCSRAM_total_size   __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Total size of bank CCSRAM in kB */
-
-extern uint16_t ramDiagnosticsGeneral_used       __attribute((section(".ramDiagnostics.uint16_t"))); /**<  Total amount of used RAM memory kB */
-extern uint8_t ramDiagnosticsRAM1_used           __attribute((section(".ramDiagnostics.uint8_t")));   /**<  Amount of used memory in bank RAM1 kB */
-extern uint8_t ramDiagnosticsRAM2_used           __attribute((section(".ramDiagnostics.uint8_t")));   /**<  Amount of used memory in bank RAM2 kB */
-extern uint8_t ramDiagnosticsCCSRAM_used         __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Amount of used memory in bank CCSRAM kB */
-
-extern uint32_t ramDiagnosticsRAM1_lastMSP       __attribute((section(".ramDiagnostics.uint32_t")));  /**<  Last value of Main Stack Pointer in RAM1 */
-extern uint32_t ramDiagnosticsRAM1_lastHeapEnd   __attribute((section(".ramDiagnostics.uint32_t"))); /**<  Last value of heap end pointer in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_data_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .data section in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_bss_size       __attribute((section(".ramDiagnostics.uint8_t")));   /**<  Size of .bss section in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_taskHandles_size __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .taskHandles section in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_taskStacks_size __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .taskStacks section in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_heap_size      __attribute((section(".ramDiagnostics.uint8_t")));  /**<  Size of .heap section in RAM1 */
-extern uint8_t ramDiagnosticsRAM1_stack_size     __attribute((section(".ramDiagnostics.uint8_t"))); /**<  Size of .stack section in RAM1 */
-
-extern uint8_t ramDiagnosticsRAM2_ramDiagnostics_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .ramDiagnostics section in RAM2 */
-extern uint8_t ramDiagnosticsRAM2_sysDiagnostics_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .sysDiagnostics section in RAM2 */
-
-extern uint8_t ramDiagnosticsCCSRAM_crit_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .crit section in CCSRAM */
-extern uint8_t ramDiagnosticsCCSRAM_dmaBuff_size __attribute((section(".ramDiagnostics.uint8_t"))); /**< Size of .dmaBuff section in CCSRAM */
 /** @} */
 
 #ifdef __cplusplus
@@ -169,3 +149,5 @@ void ramInfoCCSRAM(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout);
 #endif // __cplusplus
 
 #endif // TRINITYTRACK6000_MEMINFO_H_
+
+/** @} */

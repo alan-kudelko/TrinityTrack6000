@@ -504,7 +504,7 @@ void initializeThreadXMemory(void){
 	
 	// Clear all stacks
 	task_CLI_init();
-	
+	task_SystemDispatcher_init();
 }
 
 void initializeMemory(void){
@@ -524,14 +524,14 @@ void initializeSystem(){
 	MX_GPIO_Init(); // Set default POR state
 	MX_DMA_Init();
 	MX_ADC1_Init();
-	MX_CORDIC_Init();
-	MX_TIM2_Init();
-	MX_TIM3_Init();
-	MX_USART1_UART_Init();
-	MX_USART2_UART_Init();
 	MX_I2C2_Init();
 	MX_SPI1_Init();
 	MX_SPI2_Init();
+	MX_USART1_UART_Init();
+	MX_USART2_UART_Init();
+	MX_CORDIC_Init();
+	MX_TIM2_Init();
+	MX_TIM3_Init();
 	__HAL_DMA_DISABLE_IT(&hdma_adc1,DMA_IT_HT);
 	__HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_HT3);
 

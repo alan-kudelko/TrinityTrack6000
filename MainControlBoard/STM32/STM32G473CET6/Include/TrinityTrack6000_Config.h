@@ -100,4 +100,8 @@ extern DMA_HandleTypeDef hdma_usart2_tx;
 // ========================
 extern SystemErrorStatus_t g_SystemErrors __attribute((section(".sysDiag")));
 
+typedef enum SYSTEM_MODE{DEBUG,TEST,FAILSAFE_FAULT}SYSTEM_MODE;
+
+extern SYSTEM_MODE system_mode __attribute((section(".sysDiag")));
+
 #endif // TRINITY_TRACK6000_CONFIG_H_

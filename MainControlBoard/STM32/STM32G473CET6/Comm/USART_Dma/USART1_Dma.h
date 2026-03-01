@@ -1,6 +1,6 @@
 /**
- * @file USART1_Dma.h
- * @brief Header for USART1 with DMA functionality and dedicated ring buffer.
+ * @defgroup USART1_DMA USART1 LL Driver
+ * @brief USART1 low level driver with DMA functionality with dedicated ring buffer
  * @note This module uses modified USART1_IRQHandler in stm32g4xx_it.c to handle USART1 rx interrupts.
  * 
  * @author Alan Kudełko
@@ -10,10 +10,20 @@
  * For educational and research purposes only.  
  * Redistribution, modification, or commercial use prohibited without
  * explicit written permission.
+ * 
+ * @{
  */
 
 #ifndef USART1_DMA_H_
     #define USART1_DMA_H_
+
+#ifdef __DOXYGEN__
+    #define SECTION(x)
+    #define ALIGNED(x)
+#else
+    #define SECTION(x) __attribute((section(x)))
+    #define ALIGNED(x) __attribute((aligned(x)))
+#endif // __DOXYGEN__
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -26,41 +36,20 @@
  * @{
  */
 
-#define UART1_DMA_RX_BUFFER_SIZE 128
-#define UART1_DMA_TX_BUFFER_SIZE 128
+#define UART1_DMA_RX_BUFFER_SIZE 128 //!< Size of the buffer for storing received data from USART1, can be adjusted as needed
+#define UART1_DMA_TX_BUFFER_SIZE 128 //!< Size of the buffer for storing data to be transmitted over USART1, can be adjusted as needed
 
-#define UART1_DMA_RX_RING_BUFFER_SIZE 512
-#define UART1_DMA_TX_RING_BUFFER_SIZE 512
+#define UART1_DMA_RX_RING_BUFFER_SIZE 512 //!< Size of the ring buffer for storing received data from USART1, can be adjusted as needed
+#define UART1_DMA_TX_RING_BUFFER_SIZE 512 //!< Size of the ring buffer for storing data to be transmitted over USART1, can be adjusted as needed
 
-#define UART1_DMA_RX_R_CHAR '\r'
-#define UART1_DMA_RX_N_CHAR '\n'
+#define UART1_DMA_RX_R_CHAR '\r' //!< Character indicating end of command in received data, can be adjusted as needed
+#define UART1_DMA_RX_N_CHAR '\n' //!< Character indicating end of command in received data, can be adjusted as needed
 
-#define UART1_DMA_RX_NO_COMMAND 0
-#define UART1_DMA_RX_R_FOUND 1
-#define UART1_DMA_RX_N_FOUND 2
+#define UART1_DMA_RX_NO_COMMAND 0 //!< Value indicating that no complete command was found in the received data, can be adjusted as needed
+#define UART1_DMA_RX_R_FOUND 1 //!< Value indicating that a \r character was found in the received data, can be adjusted as needed
+#define UART1_DMA_RX_N_FOUND 2 //!< Value indicating that a \n character was found in the received data, can be adjusted as needed
 
  /** @} */
-
-extern uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE] __attribute((section(".dmaBuff")));
-extern uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE] __attribute((section(".dmaBuff")));
-
-extern volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE] __attribute((section(".dmaBuff")));
-extern volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE] __attribute((section(".dmaBuff")));
-
-extern volatile uint16_t huart1_dma_tx_buffer_length;
-
-extern volatile uint16_t huart1_dma_rx_old_pos;
-extern volatile uint16_t huart1_dma_rx_ring_buffer_head;
-extern volatile uint16_t huart1_dma_rx_ring_buffer_tail;
-extern volatile uint16_t huart1_dma_rx_ring_buffer_length;
-
-extern volatile uint16_t huart1_dma_tx_ring_buffer_head;
-extern volatile uint16_t huart1_dma_tx_ring_buffer_tail;
-extern volatile uint16_t huart1_dma_tx_ring_buffer_length;
-
-extern volatile bool huart1_dma_tx_active;
-
-extern TX_SEMAPHORE sem_task_CLI_command_ready;
 
 #ifdef __cplusplus
     extern "C" {
@@ -131,3 +120,5 @@ extern void usart1_dma_rx_complete(void);
 #endif // __cplusplus
 
 #endif // USART1_DMA_H_
+
+/**@} */

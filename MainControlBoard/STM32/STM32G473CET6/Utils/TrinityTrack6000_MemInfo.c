@@ -1,14 +1,6 @@
 /**
- * @file TrinityTrack6000_MemInfo.c
- * @brief Implementation of TrinityTrack6000_Errors.h
- * 
- * @author Alan Kudełko
- * @copyright
- * Copyright (c) 2025 Alan Kudełko.  
- * All rights reserved.  
- * For educational and research purposes only.  
- * Redistribution, modification, or commercial use prohibited without
- * explicit written permission.
+ * @addtogroup TrinityTrack6000_MemInfo
+ * @{
  */
 
 #include <string.h>
@@ -55,11 +47,9 @@ extern uint32_t __CRIT_END__; // Defined in the linker script by me for end of c
 extern uint32_t __DMA_START__; // Defined in the linker script by me for start of dmaBuff section in CCSRAM
 extern uint32_t __DMA_END__; // Defined in the linker script by me for end of dmaBuff section in CCSRAM
 
-extern uint8_t* __sbrk_heap_end; // Defined in sysmem.c
+extern uint8_t* __sbrk_heap_end; //!< Defined in sysmem.c
 
 extern UART_HandleTypeDef huart1;
-
-extern void Error_Handler(void);
 
 const char msg_ramDiagnosticsGeneral_header1[]               ="+----------------------------[ RAM DIAGNOSTICS ]-----------------------------+\r\n";
 const char msg_ramDiagnosticsGeneral_header2[]               ="| Bank         | Start      | End        | Size    | Usage      | Used       |\r\n"; 
@@ -72,7 +62,7 @@ const char msg_ramDiagnosticsGeneral_formatStringRAM2[]      ="│ RAM2         
 const char msg_ramDiagnosticsGeneral_formatStringCCSRAM[]    ="│ CCSRAM       │ 0x%08lX │ 0x%08lX │ %3u  KB │%11s │ %3u%%       │\r\n";
                                                            //  +--------------+------------+------------+---------+-----------+-------------+
                                                            //  | FREE RAM TOTAL: 600 KB                                                     |
-const char msg_ramDiagnosticsGeneral_formatStringFreeRAM[]   ="│ FREE RAM TOTAL: %3u KB                                                     │\r\n";
+const char msg_ramDiagnosticsGeneral_formatStringFreeRAM[]   ="│ FREE RAM TOTAL: %3u KB / %3u KB                                            │\r\n";
 const char msg_ramDiagnosticsGeneral_footer1[]               ="| Commands: s(snapshot) b(bank) q(quit)                                      |\r\n"; 
 const char msg_ramDiagnosticsGeneral_footer2[]               ="+----------------------------------------------------------------------------+\r\n";       	
 
@@ -121,33 +111,69 @@ const char msg_ramDiagnosticsCCSRAM_formatStringDmaBuff[]    ="| .dmaBuf       |
                                                            //  | Commands: s(snapshot) b(bank) q(quit)                                      |
 														   //  +----------------------------------------------------------------------------+
 
-														
-uint16_t ramDiagnosticsGeneral_total_size=0;
-uint8_t ramDiagnosticsRAM1_total_size=0;
-uint8_t ramDiagnosticsRAM2_total_size=0;
-uint8_t ramDiagnosticsCCSRAM_total_size=0;
+/**
+ * @name Memeory diagnostics variables
+ * These variables hold the current state of RAM usage and configuration, and are updated by the ramInfoRefresh() function.
+ * They are placed in specific sections in RAM for easy access and organization.
+ * @{
+ */						
+														   
+static uint16_t ramDiagnosticsGeneral_total_size SECTION(".ramDiagnostics.uint16_t"); //!<  Total size of all RAM in kB
+static uint8_t ramDiagnosticsRAM1_total_size SECTION(".ramDiagnostics.uint8_t"); //!< Total size of bank RAM1 in kB
+static uint8_t ramDiagnosticsRAM2_total_size SECTION(".ramDiagnostics.uint8_t"); //!< Total size of bank RAM2 in kB
+static uint8_t ramDiagnosticsCCSRAM_total_size SECTION(".ramDiagnostics.uint8_t"); //!< Total size of bank CCSRAM in kB
+
+static uint8_t ramDiagnosticsRAM2_ramDiagnostics_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .ramDiagnostics section in RAM2
+static uint8_t ramDiagnosticsCCSRAM_total_size SECTION(".ramDiagnostics.uint8_t"); //!< Total size of bank CCSRAM in kB
 	
-uint16_t ramDiagnosticsGeneral_used=0;
-uint8_t ramDiagnosticsRAM1_used=0;
-uint8_t ramDiagnosticsRAM2_used=0;
-uint8_t ramDiagnosticsCCSRAM_used=0;
+static uint16_t ramDiagnosticsGeneral_used SECTION(".ramDiagnostics.uint16_t"); //!< Total amount of used RAM memory kB
+static uint8_t ramDiagnosticsRAM1_used SECTION(".ramDiagnostics.uint8_t"); //!< Amount of used memory in bank RAM1 kB
+static uint8_t ramDiagnosticsRAM2_used SECTION(".ramDiagnostics.uint8_t"); //!< Amount of used memory in bank RAM2 kB
+static uint8_t ramDiagnosticsCCSRAM_used SECTION(".ramDiagnostics.uint8_t"); //!< Amount of used memory in bank CCSRAM kB
 
-uint32_t ramDiagnosticsRAM1_lastMSP=0;
-uint32_t ramDiagnosticsRAM1_lastHeapEnd=0;
-uint8_t ramDiagnosticsRAM1_data_size=0;
-uint8_t ramDiagnosticsRAM1_bss_size=0;
-uint8_t ramDiagnosticsRAM1_taskHandles_size=0;
-uint8_t ramDiagnosticsRAM1_taskStacks_size=0;
-uint8_t ramDiagnosticsRAM1_heap_size=0;
-uint8_t ramDiagnosticsRAM1_stack_size=0;
+static uint32_t ramDiagnosticsRAM1_lastMSP SECTION(".ramDiagnostics.uint32_t");  //!< Last value of Main Stack Pointer in RAM1
+static uint32_t ramDiagnosticsRAM1_lastHeapEnd SECTION(".ramDiagnostics.uint32_t"); //!<  Last value of heap end pointer in RAM1
+static uint8_t ramDiagnosticsRAM1_data_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .data section in RAM1
+static uint8_t ramDiagnosticsRAM1_bss_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .bss section in RAM1
+static uint8_t ramDiagnosticsRAM1_taskHandles_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .taskHandles section in RAM1
+static uint8_t ramDiagnosticsRAM1_taskStacks_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .taskStacks section in RAM1
+static uint8_t ramDiagnosticsRAM1_heap_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .heap section in RAM1
+static uint8_t ramDiagnosticsRAM1_stack_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .stack section in RAM1
 
-uint8_t ramDiagnosticsRAM2_ramDiagnostics_size=0;
-uint8_t ramDiagnosticsRAM2_sysDiagnostics_size=0;
+static uint8_t ramDiagnosticsRAM2_ramDiagnostics_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .ramDiagnostics section in RAM2
+static uint8_t ramDiagnosticsRAM2_sysDiagnostics_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .sysDiagnostics section in RAM2
 
-uint8_t ramDiagnosticsCCSRAM_crit_size=0;
-uint8_t ramDiagnosticsCCSRAM_dmaBuff_size=0;
+static uint8_t ramDiagnosticsCCSRAM_crit_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .crit section in CCSRAM
+static uint8_t ramDiagnosticsCCSRAM_dmaBuff_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .dmaBuff section in CCSRAM
+
+/** @} */
 
 void ramInfoInit(void){
+	ramDiagnosticsGeneral_total_size=0;
+	ramDiagnosticsRAM1_total_size=0;
+	ramDiagnosticsRAM2_total_size=0;
+	ramDiagnosticsCCSRAM_total_size=0;
+
+	ramDiagnosticsGeneral_used=0;
+	ramDiagnosticsRAM1_used=0;
+	ramDiagnosticsRAM2_used=0;
+	ramDiagnosticsCCSRAM_used=0;
+
+	ramDiagnosticsRAM1_lastMSP=0;
+	ramDiagnosticsRAM1_lastHeapEnd=0;
+	ramDiagnosticsRAM1_data_size=0;
+	ramDiagnosticsRAM1_bss_size=0;
+	ramDiagnosticsRAM1_taskHandles_size=0;
+	ramDiagnosticsRAM1_taskStacks_size=0;
+	ramDiagnosticsRAM1_heap_size=0;
+	ramDiagnosticsRAM1_stack_size=0;
+
+	ramDiagnosticsRAM2_ramDiagnostics_size=0;
+	ramDiagnosticsRAM2_sysDiagnostics_size=0;
+
+	ramDiagnosticsCCSRAM_crit_size=0;
+	ramDiagnosticsCCSRAM_dmaBuff_size=0;
+
 	ramDiagnosticsRAM1_total_size=((uint32_t)&__RAM1_end__-(uint32_t)&__RAM1_start__)/1024;
 	ramDiagnosticsRAM2_total_size=((uint32_t)&__RAM2_end__-(uint32_t)&__RAM2_start__)/1024;
 	ramDiagnosticsCCSRAM_total_size=((uint32_t)&__CCSRAM_end__-(uint32_t)&__CCSRAM_start__)/1024;
@@ -208,9 +234,6 @@ void ramInfoGeneral(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	}
 	while(usart1_dma_enq_data((uint8_t*)msg_ramDiagnosticsGeneral_header3,strlen(msg_ramDiagnosticsGeneral_header3))!=true){
 		pSleepFn(sleepTimeout);
-	}
-	while(huart1_dma_tx_active==true){
-		pSleepFn(100);
 	}
 // Send RAM1 info
 	usage_percent=((uint16_t)ramDiagnosticsRAM1_used*100)/ramDiagnosticsRAM1_total_size;
@@ -281,7 +304,7 @@ void ramInfoGeneral(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 		pSleepFn(sleepTimeout);
 	}
 // Send Free RAM total
-	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsGeneral_formatStringFreeRAM,ramDiagnosticsGeneral_total_size-ramDiagnosticsGeneral_used);
+	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsGeneral_formatStringFreeRAM,ramDiagnosticsGeneral_total_size-ramDiagnosticsGeneral_used, ramDiagnosticsGeneral_total_size);
 	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
 		pSleepFn(sleepTimeout);
 	}
@@ -489,3 +512,4 @@ void ramInfoCCSRAM(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 	}
 }
 
+/** @} */

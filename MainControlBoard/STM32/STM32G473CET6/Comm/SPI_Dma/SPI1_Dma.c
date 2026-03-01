@@ -1,14 +1,6 @@
 /**
- * @file SPI1_Dma.c
- * @brief Implementation of SPI1 with DMA functionality and dedicated ring buffer.
- * 
- * @author Alan Kudełko
- * @copyright
- * Copyright (c) 2025 Alan Kudełko.  
- * All rights reserved.  
- * For educational and research purposes only.  
- * Redistribution, modification, or commercial use prohibited without
- * explicit written permission.
+ * @addtogroup SPI1_DMA
+ * @{
  */
 
 #include <SPI1_Dma.h>
@@ -20,16 +12,22 @@
 
 #include <TrinityTrack6000_Pinout.h>
 
-volatile hspi_data hspi1_transaction_buffer[SPI1_HSPI_DATA_BUFFER_SIZE];
+/**
+ * @name SPI1 Transaction Engine State
+ * @brief Internal runtime state used by the SPI1 DMA transaction scheduler
+ * @{
+ */
 
-volatile uint16_t hspi1_transaction_buffer_head=0;
-volatile uint16_t hspi1_transaction_buffer_tail=0;
-volatile uint16_t hspi1_transaction_buffer_length=0;
+static volatile hspi_data hspi1_transaction_buffer[SPI1_HSPI_DATA_BUFFER_SIZE] SECTION(".dmaBuff"); //!< Buffer for storing SPI1 transaction parameters, stored in .dmaBuff section in CCSRAM memory region for faster access
 
-volatile bool hspi1_dma_active=false;
-volatile bool hspi1_tx_processed=false;
-// Decide if use of volatile is necessary for these variables
-// This is a low level driver so it has to be as efficient as possible
+static volatile uint16_t hspi1_transaction_buffer_head; //!< Head index for the SPI1 transaction buffer
+static volatile uint16_t hspi1_transaction_buffer_tail; //!< Tail index for the SPI1 transaction buffer
+static volatile uint16_t hspi1_transaction_buffer_length; //!< Length of the SPI1 transaction buffer, used to keep track of the number of transactions currently queued in the buffer
+
+static volatile bool hspi1_dma_active; //!< Flag indicating whether SPI1 DMA transmission is currently active
+static volatile bool hspi1_tx_processed; //!< Flag indicating whether tx transmission is finished (needed when there may be read operation pending after tx)
+
+/**@} */
 
 extern SPI_HandleTypeDef hspi1;
 extern DMA_HandleTypeDef hdma_spi1_tx;
@@ -112,7 +110,9 @@ void spi1_dma_tx_complete(void){
     }
     else{
         // Notify the owner of the data that the transmission was complete
-        *(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].transmissionStatus)++;
+        if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn!=NULL){
+            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn();
+        }
         HAL_GPIO_WritePin(
             hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
             hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,
@@ -123,7 +123,6 @@ void spi1_dma_tx_complete(void){
     }
     // If there is more data to send
     if(hspi1_transaction_buffer_length>0){
-        //hspi1_dma_active=true; // Probably not needed
         spi1_send_data();
     }
     else{
@@ -131,9 +130,4 @@ void spi1_dma_tx_complete(void){
     }
 }
 
-// This driver should also remember slave select pins when there are multiple slaves and set them accordingly when transmitting data
-// For now we assume there is only one slave connected to SPI1 and it is always selected
-// There should be a dedicated array or structure to store information about currently selected slave
-// When transmission is over and there is more data to send, the driver should set slave select pins accordingly before starting next transmission
-// I think that good idea is to pass CS pin information together with data to be transmitted in the spi1_dma_enq_data function
-// so that driver can handle slave selection internally and user doesn't have to worry about it
+/**@} */

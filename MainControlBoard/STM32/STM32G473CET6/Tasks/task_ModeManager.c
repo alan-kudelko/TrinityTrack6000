@@ -1,6 +1,6 @@
 /**
- * @file tasks.h
- * @brief Header file for various RTOS tasks used in the system.
+ * @file task_ModeManager.c
+ * @brief 
  * 
  * @author Alan Kudełko
  * @copyright
@@ -11,5 +11,6 @@
  * explicit written permission.
  */
 
-#include <task_CLI.h>
-#include <task_SystemDispatcher.h>
+#include <task_ModeManager.h>
+
+SYSTEM_MODE system_mode=RUN; // Przeniesc do taska trybu systemu

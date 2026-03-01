@@ -57,6 +57,10 @@ void task_blink(ULONG arg){
     }
 }
 
+void test_spi_callbackFn(void){
+    usart1_dma_enq_data((uint8_t*)"Done!\r\n",strlen("Done!\r\n"));
+}
+
 void tx_application_define(void* first_unused_memory){
     // Create threads, queues, semaphores, mutexes here
     UNUSED(first_unused_memory);
@@ -81,8 +85,18 @@ void tx_application_define(void* first_unused_memory){
                     TASKS_CLI_PRIORITY,
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
-    tx_thread_create(&task_spi1_handle,(char*)"SPI1 Task",spi1_dma_test,0,&task_spi1_stack,sizeof(task_spi1_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
-    tx_thread_create(&task_second_device_handle,(char*)"SPI1 Second",spi1_dma_second_device,0,&task_second_device_stack,sizeof(task_second_device_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
+    //tx_thread_create(&task_spi1_handle,(char*)"SPI1 Task",spi1_dma_test,0,&task_spi1_stack,sizeof(task_spi1_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
+    //tx_thread_create(&task_second_device_handle,(char*)"SPI1 Second",spi1_dma_second_device,0,&task_second_device_stack,sizeof(task_second_device_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
+    tx_thread_create(&task_SystemDispatcher_handle,
+                    (char*)task_SystemDispatcher_name,
+                    task_SystemDispatcher,
+                    0,
+                    &task_SystemDispatcher_stack,
+                    sizeof(task_SystemDispatcher_stack),
+                    TASKS_SYSTEM_DISPATCHER_PRIORITY,
+                    TASKS_SYSTEM_DISPATCHER_PRIORITY,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
 }
 
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout){
@@ -223,7 +237,6 @@ extern "C" void spi1_dma_test(ULONG arg){
     uint16_t sampleTxBufferLength=3;
     uint8_t sampleRxBuffer[5]{0};
     uint16_t sampleRxBufferLength=1;
-    volatile uint8_t sampleStatus=0;
 
     UNUSED(sampleRxBuffer);
 
@@ -231,7 +244,7 @@ extern "C" void spi1_dma_test(ULONG arg){
     sampleData.txLength=sampleTxBufferLength;
     sampleData.rxBuffer=NULL;
     sampleData.rxLength=sampleRxBufferLength;
-    sampleData.transmissionStatus=&sampleStatus;
+    //sampleData.callbackFn=test_spi_callbackFn;
     sampleData.gpio_port=GPIOB;
     sampleData.gpio_pin=GPIO_PIN_1;
 
@@ -253,7 +266,6 @@ extern "C" void spi1_dma_second_device(ULONG arg){
     uint16_t sampleTxBufferLength=3;
     uint8_t sampleRxBuffer[5]{0};
     uint16_t sampleRxBufferLength=1;
-    volatile uint8_t sampleStatus=0;
 
     UNUSED(sampleRxBuffer);
 
@@ -261,7 +273,7 @@ extern "C" void spi1_dma_second_device(ULONG arg){
     sampleData.txLength=sampleTxBufferLength;
     sampleData.rxBuffer=NULL;
     sampleData.rxLength=sampleRxBufferLength;
-    sampleData.transmissionStatus=&sampleStatus;
+    //sampleData.transmissionStatus=&sampleStatus;
     sampleData.gpio_port=GPIOB;
     sampleData.gpio_pin=GPIO_PIN_0;
 
@@ -306,7 +318,7 @@ int main(void){
 
     while(false){
         HAL_ADC_Start_DMA(&hadc1,adc_buffer,4);
-
+        
         HAL_Delay(1000);
     }
 

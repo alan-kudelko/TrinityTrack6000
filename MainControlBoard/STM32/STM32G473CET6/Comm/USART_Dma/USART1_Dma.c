@@ -1,50 +1,51 @@
 /**
- * @file USART1_Dma.c
- * @brief Implementation of USART1 with DMA functionality and dedicated ring buffer.
- * 
- * @author Alan Kudełko
- * @copyright
- * Copyright (c) 2025 Alan Kudełko.  
- * All rights reserved.  
- * For educational and research purposes only.  
- * Redistribution, modification, or commercial use prohibited without
- * explicit written permission.
+ * @addtogroup USART1_DMA
+ * @{
  */
 
 #include <USART1_Dma.h>
 
-#include <stdbool.h>
 #include <string.h>
 
 #include <stm32g4xx_hal.h>
 
 #include <TrinityTrack6000_Pinout.h>
 
-uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE]={0};
-uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE]={0};
+/**
+ * @name USART1 Transaction Engine State
+ * @brief Internal runtime state used by the USART1 DMA transaction scheduler
+ * @{
+ */
 
-volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={0};
-volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE]={0};
+static uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE] SECTION(".dmaBuff");
+static uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE] SECTION(".dmaBuff");
 
-volatile uint16_t huart1_dma_tx_buffer_length=0;
+static volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE] SECTION(".dmaBuff");
+static volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE] SECTION(".dmaBuff");
 
-volatile uint16_t huart1_dma_rx_old_pos=0;
-volatile uint16_t huart1_dma_rx_ring_buffer_head=0;
-volatile uint16_t huart1_dma_rx_ring_buffer_tail=0;
-volatile uint16_t huart1_dma_rx_ring_buffer_length=0;
+static volatile uint16_t huart1_dma_tx_buffer_length;
 
-volatile uint16_t huart1_dma_tx_ring_buffer_head=0;
-volatile uint16_t huart1_dma_tx_ring_buffer_tail=0;
-volatile uint16_t huart1_dma_tx_ring_buffer_length=0;
+static volatile uint16_t huart1_dma_rx_old_pos;
+static volatile uint16_t huart1_dma_rx_ring_buffer_head;
+static volatile uint16_t huart1_dma_rx_ring_buffer_tail;
+static volatile uint16_t huart1_dma_rx_ring_buffer_length;
 
-volatile bool huart1_dma_tx_active=false;
+static volatile uint16_t huart1_dma_tx_ring_buffer_head;
+static volatile uint16_t huart1_dma_tx_ring_buffer_tail;
+static volatile uint16_t huart1_dma_tx_ring_buffer_length;
+
+static volatile bool huart1_dma_tx_active=false;
+
+/**@} */
+
 // Decide if use of volatile is necessary for these variables
 // This is a low level driver so it has to be as efficient as possible
 
 extern UART_HandleTypeDef huart1;
 extern DMA_HandleTypeDef hdma_usart1_tx;
 extern DMA_HandleTypeDef hdma_usart1_rx;
-extern TX_SEMAPHORE sem_task_CLI_command_ready;
+
+extern void callback_cli_data_received(void);
 
 void usart1_dma_init(void){
     // Initialize ring buffer variables
@@ -299,6 +300,8 @@ void usart1_dma_rx_complete(void){
     // Parsing if left to diagnostics task to allow for more flexible command handling and avoid blocking USART1 interrupt handler
     if((huart1_dma_rx_ring_buffer[(huart1_dma_rx_ring_buffer_head-1)%UART1_DMA_RX_RING_BUFFER_SIZE]=='\n')||(huart1_dma_rx_ring_buffer[(huart1_dma_rx_ring_buffer_head-1)%UART1_DMA_RX_RING_BUFFER_SIZE]=='\r')){
         //HAL_GPIO_TogglePin(ARM_GUN_GPIO_Port,ARM_GUN_Pin);
-        tx_semaphore_put(&sem_task_CLI_command_ready);
+        callback_cli_data_received();
     }
 }
+
+/**@} */

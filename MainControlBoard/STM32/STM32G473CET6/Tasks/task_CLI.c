@@ -1,14 +1,6 @@
 /**
- * @file task_diagnostics.c
- * @brief Implementation of a diagnostics task for system monitoring with CLI interface.
- * 
- * @author Alan Kudełko
- * @copyright
- * Copyright (c) 2025 Alan Kudełko.  
- * All rights reserved.  
- * For educational and research purposes only.  
- * Redistribution, modification, or commercial use prohibited without
- * explicit written permission.
+ * @addtogroup task_CLI
+ * @{
  */
 
 #include <stm32g4xx_hal.h>
@@ -21,12 +13,27 @@
 #include <USART1_Dma.h>
 #include <TrinityTrack6000_MemInfo.h>
 
+#include <task_ModeManager.h>
+
+#include <system_commands.h>
+
 CLI_Task_State cli_task_state=CLI_STATE_DIAG_MENU; // Default state is diagnostics menu, can be changed to test menu by command
 
 const char task_CLI_name[]="CLI Task";
-TX_THREAD task_CLI_handle;
-ULONG task_CLI_stack[TASK_CLI_STACK_SIZE];
-TX_SEMAPHORE sem_task_CLI_command_ready;
+TX_THREAD task_CLI_handle SECTION(".task_handles.task_CLI");
+ULONG task_CLI_stack[TASK_CLI_STACK_SIZE] SECTION(".task_stacks.task_CLI");
+
+static TX_QUEUE task_cli_wakeup_queue;
+static ULONG task_cli_wakeup_queue_storage[TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t)];
+
+extern enum SYSTEM_MODE system_mode;
+
+extern TX_QUEUE task_cli_command_queue;
+
+/**
+ * @addtogroup task_CLI
+ * @{
+ */
 
 const char command_help[]="help";
 
@@ -44,23 +51,52 @@ const char command_show_mem_ram2[]="ram2";
 const char command_show_mem_ccsram[]="ccsram";
 const char*command_show_mem_children[]={command_show_mem_ram1,command_show_mem_ram2,command_show_mem_ccsram};
 
-const char*command_array[COMMANDS_MAX_COUNT]={command_help,command_switch_mode,command_show};
+const char command_write[]="write";
 
-const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={parse_command_help,parse_command_switch_mode,parse_command_show};
+/**@} */
+
+const char*command_array[COMMANDS_MAX_COUNT]={command_help,command_switch_mode,command_show,command_write};
+
+const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={parse_command_help,parse_command_switch_mode,parse_command_show,parse_command_write};
 
 /*
     For now let's assume that commands are divided into 2 categories
     diagnostics commands and test commands
 */
+
+/**
+ * @ingroup task_CLI
+ * @{
+ */
 const char msg_task_CLI_help[]=
 "[CLI] Available commands:\r\n\
       help - Show this help message\r\n\
+      history - Show command history\r\n\
       mode <diag/test> - Switch CLI mode between diagnostics and test menu\r\n\
-      show - Show various system information. Use help show for more details\r\n";
+      show - Show various system information. Use help show for more details\r\n\
+      write <device_id> <op-code> <register> <value> - Write device's raw data. Use help write for more details\r\n\
+      write <hardware_id> <value> - Write value to a hardware component. Use help write for more details\r\n"
+      ;
 
 const char msg_task_CLI_help_show[]=
 "[CLI] Available show commands:\r\n\
       show memory - <ram1/ram2/ccsram> Show memory information\r\n";
+
+const char msg_task_CLI_help_write[]=
+"[CLI] Avaible write devices:\r\n\
+      write <device_id> <op-code> <register> <value>\r\n\
+      1  DEVICE_MCP1\r\n\
+      2  DEVICE_MCP2\r\n\
+      3  DEVICE_NRF24L01\r\n\
+      4  DEVICE_ADXL345\r\n\
+      5  DEVICE_GPS\r\n\
+      6  DEVICE_MCP23017\r\n\
+      7  DEVICE_FRAM\r\n\
+      8  DEVICE_INFINEON\r\n\
+      9  DEVICE_NXP\r\n\
+      10 DEVICE_RENESANS\r\n\
+      11 DEVICE_FPGA\r\n"
+;
 
 const char msg_task_CLI_diag_menu_header[]="[CLI] DIAG> ";
 const char msg_task_CLI_test_menu_header[]="[CLI] TEST> ";
@@ -70,14 +106,57 @@ const char msg_task_CLI_mode_switched_to_diag[]="[CLI] Switched to diagnostics m
 const char msg_task_CLI_mode_switched_to_test[]="[CLI] Switched to test mode\r\n";
 const char msg_task_CLI_mode_switch_failed[]="[CLI] Failed to switch mode\r\n[CLI] Correct usage: mode <diag/test>\r\n";
 
+/**@} */
+
+/**
+ * @ingroup task_CLI
+ * @{
+ * @name CLI Task variables
+ * @brief Internal variables used by the CLI task for write/read operations executed in the test menu
+ * These variables are used to store the parameters of the write/read operations
+ * received from the terminal and to track the status of those operations
+ * They are not used in the diagnostics menu, but they can be used in the test menu
+ * to perform write/read operations to devices and to provide feedback about the status of those operations back to the terminal
+ * For instance, when a write command is received in the test menu, the CLI task can
+ * store the parameters of that command (e.g., device ID, register address, value to write) in these variables, then it can execute the write operation and update the commandStatus variable based on the result of that operation
+ * After that, it can send a message back to the terminal indicating whether the write operation was successful or if it failed with an error, and it can also provide details about the error if it failed
+ * Similarly, when a read command is received in the test menu, the CLI task can execute the read operation and store the read data in the rxBuffer variable, then it can send that data back to the terminal along with a message indicating whether the read operation was successful or if it failed with an error
+ * These variables can also be used to implement more complex test scenarios in the test menu where multiple write/read operations are performed in sequence and the status of each operation is tracked and reported back to the terminal
+ * For instance, we can implement a test scenario where we write a value to a device, then read it back to verify that the write operation was successful, and we can report the status of each step back to the terminal
+ * Overall, these variables are essential for enabling interactive testing and diagnostics through the CLI interface in the
+ * test menu, allowing users to perform write/read operations and receive feedback about the status of those operations in real-time
+ * Note: Actual communication is delegated to `task_SystemDispatcher` and dedicated tasks handling communication with specific devices
+ */
+
+static uint8_t txBuffer[TASK_CLI_TX_BUFFER_SIZE];
+static uint8_t rxBuffer[TASK_CLI_RX_BUFFER_SIZE];
+static uint32_t commandStatus;
+
+static TASK_CLI_COMMAND task_cli_command;
+
+/**@} */
 
 void task_CLI_init(void){
-    // Initialize semaphore
-    tx_semaphore_create(&sem_task_CLI_command_ready,
-                        (char*)"CLI Ready",
-                        0); // Initial count 0
+    // Initialize queue for waking up the CLI task when a command is received from the terminal
+    tx_queue_create(&task_cli_wakeup_queue,
+        "CLI Wakeup",
+        sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t),
+        task_cli_wakeup_queue_storage,
+        TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t));
     // Initialize FSM state to default diagnostics menu
     cli_task_state=CLI_STATE_DIAG_MENU;
+    // Initialize command structure with default values for testing purposes
+    task_cli_command.commandType=CLI_CMD_SET_VALUE;
+    task_cli_command.payload.set.hardwareId=HARDWARE_MOTOR1;
+    task_cli_command.payload.set.value=0;
+    task_cli_command.commandStatus=&commandStatus;
+    task_cli_command.callbackFn=callback_cli_write_executed;
+
+    UNUSED(task_cli_command);
+    UNUSED(commandStatus);
+    UNUSED(rxBuffer);
+    UNUSED(txBuffer);
+
 }
 
 void parse_command(char*command,uint16_t length){
@@ -149,6 +228,7 @@ void parse_command(char*command,uint16_t length){
         }
     }
 }
+
 void parse_command_help(uint8_t argc,char*argv[]){
     // This function is called when the "help" command is received in the CLI interface
     // It provides information about available commands and their usage to the user
@@ -157,6 +237,13 @@ void parse_command_help(uint8_t argc,char*argv[]){
         if(strncmp(argv[1],command_show,strlen(command_show))==0){
             // User requested help for the "show" command, send help information for the "show" command
             while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_show,strlen(msg_task_CLI_help_show))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+            }
+            return;
+        }
+        else if(strncmp(argv[1],command_write,strlen(command_write))==0){
+            // User requested help for the "write" command, send help information for the "write" command
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
             return;
@@ -187,14 +274,14 @@ void parse_command_switch_mode(uint8_t argc,char*argv[]){
         return;
     }
     // Number of arguments is valid, now check the value of the child command
-    if(strncmp(argv[1],command_switch_mode_diag,strlen(command_switch_mode_diag)-1)==0){
+    if(strncmp(argv[1],command_switch_mode_diag,strlen(command_switch_mode_diag))==0){
         // Switch to diagnostics mode
         cli_task_state=CLI_STATE_DIAG_MENU;
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switched_to_diag,strlen(msg_task_CLI_mode_switched_to_diag))!=true){
             tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
         }
     }
-    else if(strncmp(argv[1],command_switch_mode_test,strlen(command_switch_mode_test)-1)==0){
+    else if(strncmp(argv[1],command_switch_mode_test,strlen(command_switch_mode_test))==0){
         // Switch to test mode
         cli_task_state=CLI_STATE_TEST_MENU;
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switched_to_test,strlen(msg_task_CLI_mode_switched_to_test))!=true){
@@ -257,15 +344,94 @@ void parse_command_show(uint8_t argc,char*argv[]){
     }
 }
 
+void parse_command_write(uint8_t argc,char*argv[]){
+    // This function is called when the "write" command is received in the CLI interface
+    // It parses the child command to determine which device to write to and what data to write
+    // Note: some devices are not using op-codes so it's possible to send just a register and value
+    if((argc<4)||(argc>5)){
+        // Invalid number of arguments, send help information for the "write" command
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+        }
+        return;
+    }
+    // Try to convert argv[1] to a valid device ID (integer value is required)
+    if(safe_atoi(argv[1],strlen(argv[1]),&task_cli_command.payload.rawData.deviceId)!=true){
+        // Invalid device ID, send help information for the "write" command
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+        }
+        return;
+    }
+    // Try to convert argv[2] to a valid op-code (integer value is required, value can be in decimal or hexadecimal format)
+    if(safe_atoi(argv[2],strlen(argv[2]),&txBuffer[0])!=true){
+        // Invalid op-code, send help information for the "write" command
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+        }
+        return;
+    }
+    // Try to convert argv[3] to a register address (integer value is required, value can be in decimal or hexadecimal format)
+    if(safe_atoi(argv[3],strlen(argv[3]),&txBuffer[1])!=true){
+        // Invalid register address, send help information for the "write" command
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+        }
+        return;
+    }
+    // Try to convert argv[4] to a value to write (integer value is required, value can be in decimal or hexadecimal format)
+    if(argc>4){
+        if(safe_atoi(argv[4],strlen(argv[4]),&txBuffer[2])!=true){
+            // Invalid value to write, send help information for the "write" command
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+            }
+            return;
+        }
+    }
+        // For now just send data to first device to the implementation
+        //txBuffer[0]=1<<6;
+        //txBuffer[1]=0x12;
+        //txBuffer[2]=0x00;
+
+
+    task_cli_command.commandType=CLI_CMD_BUS_RAW_DATA;
+    task_cli_command.payload.rawData.deviceId=DEVICE_MCP1;
+    task_cli_command.payload.rawData.txBuffer=txBuffer;
+    task_cli_command.payload.rawData.txLength=argc-2; // Exclude the command itself and id from the arguments
+    task_cli_command.payload.rawData.rxBuffer=NULL;
+    task_cli_command.payload.rawData.rxLength=0;
+    task_cli_command.commandStatus=&commandStatus;
+    task_cli_command.callbackFn=callback_cli_write_executed;
+
+    tx_queue_send(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+}
+
+void callback_cli_data_received(void){
+    TASK_CLI_WAKEUP_REASON wakeup;
+    wakeup.wakeupReason=TASK_CLI_WAKEUP_USART_DATA;
+    tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
+}
+
+void callback_cli_write_executed(void){
+    TASK_CLI_WAKEUP_REASON wakeup;
+    wakeup.wakeupReason=TASK_CLI_WAKEUP_COMMAND_EXECUTED;
+    tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
+}
+
+void show_command_status(void){
+    usart1_dma_enq_data((uint8_t*)"Werdon\r\n",strlen("Werdon\r\n"));
+}
+
 void display_menu_header(void){
     // Display menu header based on current FSM state
-    switch(cli_task_state){
-        case CLI_STATE_DIAG_MENU:
+    switch(system_mode){
+        case RUN:
             while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_diag_menu_header,strlen(msg_task_CLI_diag_menu_header))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
             break;
-        case CLI_STATE_TEST_MENU:
+        case TEST:
             while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_test_menu_header,strlen(msg_task_CLI_test_menu_header))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
@@ -281,39 +447,133 @@ void display_menu_header(void){
 
 void task_CLI(ULONG arg){
     UNUSED(arg);
-    char rx_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={0};
-    uint16_t rx_length=0;
+    char usart_rx_buffer[UART1_DMA_RX_RING_BUFFER_SIZE]={0};
+    uint16_t usart_rx_length=0;
+
+    TASK_CLI_WAKEUP_REASON wakeup={0};
+
+    uint8_t raw_tx_data;
+    uint16_t raw_tx_data_length;
+
+    uint8_t raw_rx_data;
+    uint16_t raw_rx_data_length;
+
+    UNUSED(raw_tx_data);
+    UNUSED(raw_tx_data_length);
+    UNUSED(raw_rx_data);
+    UNUSED(raw_rx_data_length);
+
     while(1){
         // Display menu header based on current FSM state
         display_menu_header();
-        // Wait for command ready semaphore
+        // Wait for command ready semaphore // Change to queue
         // This semaphore is given in the USART1 DMA reception complete callback when a full command is received (indicated by \r or \n character)
-        tx_semaphore_get(&sem_task_CLI_command_ready,TX_WAIT_FOREVER);
-        // Read data from CLI interface and process commands
-        // For now just write received command back to UART
-        memset(rx_buffer,0,sizeof(rx_buffer)); // Clear rx buffer before reading new command
-        if(usart1_dma_read_data((uint8_t*)rx_buffer,&rx_length,UART1_DMA_RX_RING_BUFFER_SIZE-1)){
-            // Data is valid
-            // Parse command and execute corresponding actions
-            parse_command(rx_buffer,rx_length);
-            // This call should be FSM state depended, for instance commands used in diagnostics menu
-            // may not be available in test menu and vice versa, so we can check the current FSM state and parse commands accordingly
-        }
-        else{
-            // Data corrupted or error
-            // Also possible that command is empty
-            // For instance pressing enter without typing anything will result in \r or \n character being received and treated as a command, but there is no actual command to parse
-            // In this case we can choose to ignore it or send an error message back to the terminal
-            // For now just send an error message back to the terminal
-            usart1_dma_enq_data((const uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command));
+        tx_queue_receive(&task_cli_wakeup_queue,&wakeup,TX_WAIT_FOREVER);
+
+        switch(wakeup.wakeupReason){
+            case TASK_CLI_WAKEUP_USART_DATA:
+                memset(usart_rx_buffer,0,sizeof(usart_rx_buffer)); // Clear rx buffer before reading new command
+                if(usart1_dma_read_data((uint8_t*)usart_rx_buffer,&usart_rx_length,UART1_DMA_RX_RING_BUFFER_SIZE-1)){
+                    // Data is valid
+                    // Parse command and execute corresponding actions
+                    parse_command(usart_rx_buffer,usart_rx_length);
+                    // This call should be FSM state depended, for instance commands used in diagnostics menu
+                    // may not be available in test menu and vice versa, so we can check the current FSM state and parse commands accordingly
+                }
+                else{
+                    // Data corrupted or error
+                    // Also possible that command is empty
+                    // For instance pressing enter without typing anything will result in \r or \n character being received and treated as a command, but there is no actual command to parse
+                    // In this case we can choose to ignore it or send an error message back to the terminal
+                    // For now just send an error message back to the terminal
+                    //usart1_dma_enq_data((const uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command));
+                }
+            break;
+            case TASK_CLI_WAKEUP_COMMAND_EXECUTED:
+                show_command_status();
+            break;
+
+            default:
+            // Should not happen
         }
     }
 }
 
-// For now let's just focus on diagnostic part of the task
-// Next step is test mode where we can send commands to run specific tests and show results in terminal
-// From architecture's point of view, there should be some kind of hardware ownership
-// In test mode, this task should disable control for other tasks via some kind of mutex or semaphore to ensure
-// that there are no conflicts between tasks when accessing hardware resources during tests
+bool safe_atoi(const char*str,uint8_t length,uint8_t*result){
+    // Temporary value to store the converted integer value, we can use uint32_t to handle larger values
+    // and then check if the converted value fits into uint8_t range before assigning it to the result variable
+    uint32_t value=0;
+    // Empty string or string with only whitespace characters or null pointers
+    if((length==0)||(str==NULL)||(result==NULL)){
+        return false;
+    }
+    // String with invalid characters (non-numeric characters, except for optional leading whitespace and signs)
+    uint8_t idx=0;
 
-// For now plan is to implement a simple command parser that can parse commands
+    while((idx<length)&&((str[idx]==' ')||(str[idx]=='\t'))){
+        idx++;
+    }
+    if(idx>=length){
+        return false;
+    }
+    // Base detection logic
+    uint32_t base=10;
+
+    if((idx+1)<length){
+        if((str[idx]=='0')&&((str[idx+1]=='x')||(str[idx+1]=='X'))){
+            base=16;
+            idx+=2;
+        }
+        else{
+            if((str[idx]=='0')&&((str[idx+1]=='b')||(str[idx+1]=='B'))){
+                base=2;
+                idx+=2;
+            }
+        }
+    }
+    if(idx>=length){
+        return false;
+    }
+    // Conversion loop
+    while(idx<length){
+        uint8_t c=str[idx];
+        uint32_t digit=0;
+
+        // Character digit mapping based on the detected base
+        if((c>='0')&&(c<='9')){
+            digit=c-'0';
+        }
+        else{
+            if((c>='a')&&(c<='f')){
+                digit=c-'a'+10;
+            }
+            else{
+                if((c>='A')&&(c<='F')){
+                    digit=c-'A'+10;
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+        // Digit validation based on the detected base
+        if(digit>=base){
+            return false;
+        }
+        // Overflow check before multiplying the current value by the base and adding the new digit
+        if(value>(UINT8_MAX-digit)/base){
+            return false;
+        }
+
+        value=value*base+digit;
+        idx++;
+    }
+    // Final range check to ensure the converted value fits into uint8_t
+    if(value>UINT8_MAX){
+        return false;
+    }
+    *result=(uint8_t)value;
+    return true;
+}
+
+/**@} */
