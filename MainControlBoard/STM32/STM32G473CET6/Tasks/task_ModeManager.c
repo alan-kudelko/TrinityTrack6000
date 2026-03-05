@@ -13,4 +13,4 @@
 
 #include <task_ModeManager.h>
 
-SYSTEM_MODE system_mode=RUN; // Przeniesc do taska trybu systemu
+SYSTEM_MODE system_mode SECTION(".sysDiag"); // Przeniesc do taska trybu systemu

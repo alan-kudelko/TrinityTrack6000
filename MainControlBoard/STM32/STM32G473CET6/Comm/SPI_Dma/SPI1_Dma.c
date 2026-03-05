@@ -18,14 +18,14 @@
  * @{
  */
 
-static volatile hspi_data hspi1_transaction_buffer[SPI1_HSPI_DATA_BUFFER_SIZE] SECTION(".dmaBuff"); //!< Buffer for storing SPI1 transaction parameters, stored in .dmaBuff section in CCSRAM memory region for faster access
+static volatile hspi_data hspi1_transaction_buffer[SPI1_HSPI_DATA_BUFFER_SIZE] SECTION(".DMA_RAM2.SPI1_Data"); //!< Buffer for storing SPI1 transaction parameters, stored in .SPI1_Data section in RAM2
 
-static volatile uint16_t hspi1_transaction_buffer_head; //!< Head index for the SPI1 transaction buffer
-static volatile uint16_t hspi1_transaction_buffer_tail; //!< Tail index for the SPI1 transaction buffer
-static volatile uint16_t hspi1_transaction_buffer_length; //!< Length of the SPI1 transaction buffer, used to keep track of the number of transactions currently queued in the buffer
+static volatile uint16_t hspi1_transaction_buffer_head SECTION(".crit.dmaVars"); //!< Head index for the SPI1 transaction buffer
+static volatile uint16_t hspi1_transaction_buffer_tail SECTION(".crit.dmaVars"); //!< Tail index for the SPI1 transaction buffer
+static volatile uint16_t hspi1_transaction_buffer_length SECTION(".crit.dmaVars"); //!< Length of the SPI1 transaction buffer, used to keep track of the number of transactions currently queued in the buffer
 
-static volatile bool hspi1_dma_active; //!< Flag indicating whether SPI1 DMA transmission is currently active
-static volatile bool hspi1_tx_processed; //!< Flag indicating whether tx transmission is finished (needed when there may be read operation pending after tx)
+static volatile bool hspi1_dma_active SECTION(".crit.dmaVars"); //!< Flag indicating whether SPI1 DMA transmission is currently active
+static volatile bool hspi1_tx_processed SECTION(".crit.dmaVars"); //!< Flag indicating whether tx transmission is finished (needed when there may be read operation pending after tx)
 
 /**@} */
 
@@ -35,7 +35,7 @@ extern DMA_HandleTypeDef hdma_spi1_rx;
 
 void spi1_dma_init(void){
     // Initialize ring buffer variables
-    // all variables are stored in .dmaBuff section in CCSRAM memory region for faster access
+    // all variables are stored in .dmaBuff section in RAM2 memory region for faster access
     memset((void*)hspi1_transaction_buffer,0,sizeof(hspi1_transaction_buffer));
     hspi1_transaction_buffer_head=0;
     hspi1_transaction_buffer_tail=0;
@@ -127,6 +127,24 @@ void spi1_dma_tx_complete(void){
     }
     else{
         hspi1_dma_active=false;
+    }
+}
+
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef*hspi){
+    if(hspi->Instance==SPI1){
+        spi1_dma_tx_complete();
+    }
+    else if(hspi->Instance==SPI2){
+        //spi2_dma_tx_complete();
+    }
+ }
+
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef*hspi){
+    if(hspi->Instance==SPI1){
+        spi1_dma_tx_complete();
+    }
+    else if(hspi->Instance==SPI2){
+        
     }
 }
 

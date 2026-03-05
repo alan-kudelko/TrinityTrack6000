@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 199,
+				"line" : 201,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 181,
+				"line" : 182,
 				"parent" : 0
 			}
 		]
@@ -106,6 +106,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra/Messaging"
 				}
 			],
 			"language" : "C",
@@ -154,15 +158,15 @@
 				33,
 				34,
 				35,
-				36,
+				39,
 				41,
 				43,
 				44,
 				45,
-				47,
+				46,
 				48,
 				49,
-				51,
+				50,
 				52,
 				53,
 				54,
@@ -317,7 +321,8 @@
 				203,
 				204,
 				205,
-				206
+				206,
+				207
 			]
 		},
 		{
@@ -388,14 +393,17 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra/Messaging"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
 				32,
-				50,
-				207,
+				51,
 				208,
 				209,
 				210,
@@ -403,7 +411,8 @@
 				212,
 				213,
 				214,
-				215
+				215,
+				216
 			]
 		},
 		{
@@ -474,6 +483,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra/Messaging"
 				}
 			],
 			"language" : "CXX",
@@ -487,11 +500,11 @@
 			},
 			"sourceIndexes" : 
 			[
-				37,
-				39,
+				36,
+				38,
 				40,
 				42,
-				46
+				47
 			]
 		}
 	],
@@ -505,7 +518,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-TD:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/STM32G473CET6_FLASH.ld -Wl,--gc-sections -Wl,-Map=D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/Debug/STM32G473CET6.map",
+				"fragment" : "-TD:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/STM32G473CET6_FLASH.ld -Wl,--gc-sections,--cref -Wl,-Map=D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/build/Debug/STM32G473CET6.map",
 				"role" : "flags"
 			}
 		],
@@ -560,7 +573,7 @@
 				34,
 				35,
 				36,
-				37,
+				38,
 				39,
 				40,
 				41,
@@ -572,7 +585,7 @@
 				47,
 				48,
 				49,
-				51,
+				50,
 				52,
 				53,
 				54,
@@ -727,7 +740,8 @@
 				203,
 				204,
 				205,
-				206
+				206,
+				207
 			]
 		},
 		{
@@ -735,8 +749,7 @@
 			"sourceIndexes" : 
 			[
 				32,
-				50,
-				207,
+				51,
 				208,
 				209,
 				210,
@@ -744,14 +757,15 @@
 				212,
 				213,
 				214,
-				215
+				215,
+				216
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				38
+				37
 			]
 		}
 	],
@@ -964,12 +978,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Comm/SPI_Dma/SPI_Callabacks.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "Comm/USART_Dma/USART1_Dma.c",
 			"sourceGroupIndex" : 0
 		},
@@ -998,6 +1006,12 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Infra/Utils/safe_atoi/safe_atoi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 2,
 			"path" : "Init/TrinityTrack6000_Init.cpp",
 			"sourceGroupIndex" : 0
@@ -1018,6 +1032,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Tasks/task_CLI.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Tasks/task_McuAnalog.c",
 			"sourceGroupIndex" : 0
 		},
 		{

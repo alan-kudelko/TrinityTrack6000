@@ -35,12 +35,14 @@
 #define TASK_CLI_RETRY_DELAY_MS 30 //!< Delay in milliseconds before retrying to enqueue data to UART1 DMA if it fails
 
 #define TOKENS_MAX_COUNT 10 //!< Maximum number of tokens in a command
-#define COMMANDS_MAX_COUNT 4 //!< Maximum number of supported commands, can be adjusted as needed
+#define COMMANDS_MAX_COUNT 5 //!< Maximum number of supported commands, can be adjusted as needed
 
 #define TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH 4 //!< Length of the CLI wakeup queue storage in words (uint32_t), can be adjusted as needed
 
 #define TASK_CLI_RX_BUFFER_SIZE 10 //!< Size of the rx buffer for receiving raw data from devices, can be adjusted as needed
 #define TASK_CLI_TX_BUFFER_SIZE 10 //!< Size of the tx buffer for transmitting raw data to devices, can be adjusted as needed
+
+#define TASK_CLI_TEMPORARY_BUFFER_SIZE 31 //!< Size of temporary buffers used in command parsing
 
 /**
  * @brief CLI Task FSM States
@@ -69,7 +71,8 @@ extern TX_THREAD task_CLI_handle; /**< Thread handlefor CLI task */
 extern ULONG task_CLI_stack[TASK_CLI_STACK_SIZE]; //!< Stack for CLI task
 
 #define TASK_CLI_WAKEUP_USART_DATA 1 //!< Wakeup reason indicating that CLI task was woken up by USART data reception
-#define TASK_CLI_WAKEUP_COMMAND_EXECUTED 2 //!< Wakeup reason indicating that CLI task was woken up after executing a command, can be used to trigger menu header update or other actions after command execution
+#define TASK_CLI_WAKEUP_WRITE_EXECUTED 2 //!< Wakeup reason indicating that CLI task was woken up after executing a command, can be used to trigger menu header update or other actions after command execution
+#define TASK_CLI_WAKEUP_READ_EXECUTED 3 //!< Wakeup reason indicating that CLI task was woken up after executing a read command, can be used to trigger sending read data back to terminal or other actions after read command execution
 
 typedef struct ALIGNED(4) TASK_CLI_WAKEUP_REASON{
     uint32_t wakeupReason;
@@ -98,6 +101,7 @@ extern const char command_show_mem_ccsram[]; //!< Child command string for showi
 extern const char*command_show_mem_children[]; //!< Array of child command strings for the "show memory" command
 
 extern const char command_write[]; //!< Command string for write operation
+extern const char command_read[]; //!< Command string for read operation
 /**@} */
 
 /**
@@ -130,6 +134,9 @@ extern const char msg_task_CLI_mode_switched_to_diag[]; //!< Message indicating 
 extern const char msg_task_CLI_mode_switched_to_test[]; //!< Message indicating that CLI mode has been switched to test mode
 extern const char msg_task_CLI_mode_switch_failed[]; //!< Message indicating that CLI mode switch failed with correct usage hint
 
+extern const char msg_task_CLI_write_executed[]; //!< Message indicating that a write command has been executed
+extern const char msg_task_CLI_read_executed[]; //!< Message indicating that a read command has been executed
+extern const char msg_task_CLI_read_executed_format_string[]; //!< Format string for message indicating read register and its value
 /**@} */
 
 #ifdef __cplusplus
@@ -201,6 +208,25 @@ void parse_command_show(uint8_t argc,char*argv[]);
  */
 void parse_command_write(uint8_t argc,char*argv[]);
 
+
+/**
+ * 
+ */
+void parse_command_read(uint8_t argc,char*argv[]);
+
+/**
+ * @brief Build a bus command based on the received CLI command arguments.
+ * This function takes the parsed command arguments and constructs a bus command that can be sent to `SystemDispatcher` 
+ * for execution. It validates the command arguments, constructs the appropriate command structure, and sends it to the
+ * `SystemDispatcher` via a queue for further processing.
+ * @param argc: Number of arguments in the command (including the main command and child command
+ * and any additional parameters needed for the bus command).
+ * @param argv: Array of strings representing the command and its arguments, where argv[0]
+ * @return true if the bus command was successfully built and false otherwise
+ * @note This function is meant to be called within `parse_command_write` or `parse_command_read`
+*/
+bool build_bus_command(uint8_t argc,char*argv[]);
+
 /**
  * @brief Callback function for when CLI task receives data from USART.
  * This function is called in the USART1 DMA reception complete callback when a full command is received (indicated by \r or \n character).
@@ -220,13 +246,22 @@ void callback_cli_data_received(void);
 void callback_cli_write_executed(void);
 
 /**
- * @brief Show command execution status.
- * This function is called after a command has been executed to show the status of the command execution to the user.
- * For now, it just sends a static message back to the terminal, but in the future, it can be enhanced to show more detailed information about the command execution status.
+ * @brief Callback function for when a CLI read command has been executed.
+ * This function is called after a read command has been executed to notify the CLI task that it can perform any necessary actions after read command execution, such as sending read data back to terminal or showing command status.
+ * It sends a wakeup reason to the CLI task's wakeup queue to indicate that a read command has been executed.
  * @param None.
  * @return None.
  */
-void show_command_status(void);
+void callback_cli_read_executed(void);
+
+/**
+ * @brief Show command execution status.
+ * This function is called after a command has been executed to show the status of the command execution to the user.
+ * For now, it just sends a static message back to the terminal, but in the future, it can be enhanced to show more detailed information about the command execution status.
+ * @param uint32_t wakeupReason: The reason for the wakeup event that triggered the status display..
+ * @return None.
+ */
+void show_command_status(uint32_t wakeupReason);
 
 /**
  * @brief Display CLI menu header based on current FSM state.
@@ -246,28 +281,6 @@ void display_menu_header(void);
  * @return None.
  */
 void task_CLI(ULONG arg);
-
-/**
- * @brief Safe string to integer conversion function.
- * This function attempts to convert a string to an integer value while performing error checking to ensure that
- * the conversion is successful and that the resulting value is within a valid range. It returns true if the conversion
- * is successful and the value is valid, and false otherwise.
- * @param str: Pointer to the input string to be converted.
- * @param length: Length of the input string in bytes.
- * @param result: Pointer to a uint8_t variable where the converted integer value will be stored if the conversion is successful.
- * @return true if the conversion is successful and the value is valid, false otherwise.
- * @note This function is designed to be safe and robust, preventing potential issues such as buffer overflows,
- * invalid input formats, and out-of-range values. It should be used whenever there is a need to convert user input from the CLI interface
- * to integer values for further processing, ensuring that the system can handle invalid input gracefully without crashing
- * or exhibiting undefined behavior. The implementation of this function should include checks for valid numeric characters, proper handling
- * of optional leading whitespace and signs, and validation of the resulting integer value against expected ranges for the specific use case.
- * @note It supports conversion of decimal, hexadecimal (with "0x" prefix) and binary (with "0b" prefix) string formats to integer values, providing
- * flexibility in how users can input numeric values in the CLI interface. The function should also handle edge cases such as empty strings,
- * strings with only whitespace, and strings with invalid characters, returning false in those cases to indicate that the conversion was
- * unsuccessful and the input was invalid.
- */
-
-bool safe_atoi(const char*str,uint8_t length, uint8_t*result);
 
 #ifdef __cplusplus
     }

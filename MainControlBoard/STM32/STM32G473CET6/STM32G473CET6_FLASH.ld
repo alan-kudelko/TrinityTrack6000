@@ -56,7 +56,7 @@ MEMORY
 {
   RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 80K
   RAM2    (xrw)    : ORIGIN = 0x20014000,   LENGTH = 16K
-  CCSRAM  (xrw)    : ORIGIN = 0x20018000,   LENGTH = 32K
+  CCSRAM  (xrw)    : ORIGIN = 0x10000000,   LENGTH = 32K
   FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 512k
 }
 
@@ -190,7 +190,6 @@ SECTIONS
     PROVIDE ( __TASK_STACKS_START__ = . );
     . = ALIGN(4);
     KEEP(*(.task_stacks));
-    KEEP(*(.task_stacks*));
     PROVIDE ( __TASK_STACKS_END__ = . );
   } >RAM
 
@@ -206,7 +205,21 @@ SECTIONS
     . = ALIGN(8);
   } >RAM
 
-  /* RAM Bank 2 custom sections*/
+/* RAM Bank 2 custom sections*/
+  .DMA_RAM2 :
+  {
+    PROVIDE ( __DMA_RAM2_START__ = . );
+    . = ALIGN(4);
+    KEEP(*(.DMA_RAM2));
+    KEEP(*(.DMA_RAM2*));
+
+    KEEP(*(.USART1_Data));
+    KEEP(*(.USART1_Data*));
+
+    KEEP(*(.SPI1_Data));
+    KEEP(*(.SPI1_Data*));
+    PROVIDE ( __DMA_RAM2_END__ = . );
+  } >RAM2
   .ramDiagnostics : 
   {
     PROVIDE ( __RAM_DIAGNOSTICS_START__ = . );
@@ -225,24 +238,28 @@ SECTIONS
     *(sysDiag);
     PROVIDE ( __SYS_DIAGNOSTICS_END__ = . );
   } >RAM2
-  /* CCSRAM Bank custom sections */
+
+/* CCSRAM Bank custom sections */
+  .task_stacks_ccsram :
+  {
+    PROVIDE ( __TASK_STACKS_CCSRAM_START__ = . );
+    . = ALIGN(4);
+    KEEP(*(.task_stacks_ccsram));
+    KEEP(*(.task_stacks_ccsram*));
+    PROVIDE ( __TASK_STACKS_CCSRAM_END__ = . );
+  } >CCSRAM
   .crit :
   {
     PROVIDE ( __CRIT_START__ = . );
     . = ALIGN(4);
     KEEP(*(.crit));
     KEEP(*(.crit*));
+
+    KEEP(*(.dmaVars));
+    KEEP(*(.dmaVars*));
     PROVIDE ( __CRIT_END__ = . );
   } >CCSRAM
-  /* DMA Buffers section */
-  .dmaBuff :
-  {
-    PROVIDE ( __DMA_START__ = . );
-    . = ALIGN(4);
-    KEEP(*(.dmaBuff));
-    KEEP(*(.dmaBuff*));
-    PROVIDE ( __DMA_END__ = . );
-  } >CCSRAM
+
   /* Remove information from the compiler libraries */
   /DISCARD/ :
   {

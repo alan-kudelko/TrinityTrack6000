@@ -23,8 +23,8 @@
 
 const char task_SystemDispatcher_name[]="System Dispatcher";
 
-TX_THREAD task_SystemDispatcher_handle;
-ULONG task_SystemDispatcher_stack[TASKS_SYSTEM_DISPATCHER_STACK_SIZE];
+TX_THREAD task_SystemDispatcher_handle SECTION(".task_handles");;
+ULONG task_SystemDispatcher_stack[TASKS_SYSTEM_DISPATCHER_STACK_SIZE] SECTION(".task_stacks_ccsram");;
 
 TX_QUEUE task_cli_command_queue;
 ULONG task_cli_command_queue_storage[TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_COMMAND)/sizeof(uint32_t)];

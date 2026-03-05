@@ -44,8 +44,9 @@ extern uint32_t __SYS_DIAGNOSTICS_END__; // Defined in the linker script by me f
 
 extern uint32_t __CRIT_START__; // Defined in the linker script by me for start of crit section in CCSRAM
 extern uint32_t __CRIT_END__; // Defined in the linker script by me for end of crit section in CCSRAM
-extern uint32_t __DMA_START__; // Defined in the linker script by me for start of dmaBuff section in CCSRAM
-extern uint32_t __DMA_END__; // Defined in the linker script by me for end of dmaBuff section in CCSRAM
+
+extern uint32_t __TASK_STACKS_CCSRAM_START__; // Defined in the linker script by me for start of task_stacks_ccsram section in CCSRAM
+extern uint32_t __TASK_STACKS_CCSRAM_END__; // Defined in the linker script by me for end of task_stacks_ccsram section in CCSRAM
 
 extern uint8_t* __sbrk_heap_end; //!< Defined in sysmem.c
 
@@ -144,7 +145,6 @@ static uint8_t ramDiagnosticsRAM2_ramDiagnostics_size SECTION(".ramDiagnostics.u
 static uint8_t ramDiagnosticsRAM2_sysDiagnostics_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .sysDiagnostics section in RAM2
 
 static uint8_t ramDiagnosticsCCSRAM_crit_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .crit section in CCSRAM
-static uint8_t ramDiagnosticsCCSRAM_dmaBuff_size SECTION(".ramDiagnostics.uint8_t"); //!< Size of .dmaBuff section in CCSRAM
 
 /** @} */
 
@@ -172,7 +172,6 @@ void ramInfoInit(void){
 	ramDiagnosticsRAM2_sysDiagnostics_size=0;
 
 	ramDiagnosticsCCSRAM_crit_size=0;
-	ramDiagnosticsCCSRAM_dmaBuff_size=0;
 
 	ramDiagnosticsRAM1_total_size=((uint32_t)&__RAM1_end__-(uint32_t)&__RAM1_start__)/1024;
 	ramDiagnosticsRAM2_total_size=((uint32_t)&__RAM2_end__-(uint32_t)&__RAM2_start__)/1024;
@@ -188,7 +187,6 @@ void ramInfoInit(void){
 	ramDiagnosticsRAM2_sysDiagnostics_size=((uint32_t)&__SYS_DIAGNOSTICS_END__-(uint32_t)&__SYS_DIAGNOSTICS_END__)/1024;
 
 	ramDiagnosticsCCSRAM_crit_size=((uint32_t)&__CRIT_END__-(uint32_t)&__CRIT_START__)/1024;
-	ramDiagnosticsCCSRAM_dmaBuff_size=((uint32_t)&__DMA_END__-(uint32_t)&__DMA_START__)/1024;
 
 	ramInfoRefresh();
 }
@@ -207,7 +205,7 @@ void ramInfoRefresh(){
 // RAM2 usage
 	ramDiagnosticsRAM2_used=((uint32_t)&__RAM_DIAGNOSTICS_END__-(uint32_t)&__RAM2_start__)/1024;
 // CCSRAM usage
-	ramDiagnosticsCCSRAM_used=((uint32_t)&__DMA_END__-(uint32_t)&__CCSRAM_start__)/1024;
+	ramDiagnosticsCCSRAM_used=((uint32_t)&__CRIT_END__-(uint32_t)&__TASK_STACKS_CCSRAM_START__)/1024;
 // General RAM usage
 	ramDiagnosticsGeneral_used=ramDiagnosticsRAM1_used+ramDiagnosticsRAM2_used+ramDiagnosticsCCSRAM_used;
 // RAM1 .heap section usage
@@ -216,8 +214,6 @@ void ramInfoRefresh(){
 	ramDiagnosticsRAM1_stack_size=((uint32_t)&__RAM1_end__-ramDiagnosticsRAM1_lastMSP)/1024;
 // CCSRAM .crit section usage
 	ramDiagnosticsCCSRAM_crit_size=((uint32_t)&__CRIT_END__-(uint32_t)&__CRIT_START__)/1024;
-// CCSRAM .dmaBuff section usage
-	ramDiagnosticsCCSRAM_crit_size=((uint32_t)&__DMA_END__-(uint32_t)&__DMA_END__)/1024;
 }
 														
 void ramInfoGeneral(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
@@ -480,16 +476,6 @@ void ramInfoCCSRAM(UINT(*pSleepFn)(ULONG timeout),ULONG sleepTimeout){
 		(uint32_t)&__CRIT_END__,          // .crit end
 		ramDiagnosticsCCSRAM_crit_size,   // .crit size in KB
 		ramDiagnosticsCCSRAM_crit_size    // .crit used size in KB
-	);
-	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
-		pSleepFn(sleepTimeout);
-	}
-// Send .dmaBuff section info
-	snprintf(buffer,MEMINFO_LINE_BUFFER_SIZE,msg_ramDiagnosticsCCSRAM_formatStringDmaBuff,
-		(uint32_t)&__DMA_START__,	      // .dmaBuff start
-		(uint32_t)&__DMA_END__,           // .dmaBuff end
-		ramDiagnosticsCCSRAM_dmaBuff_size,   // .dmaBuff size in KB
-		ramDiagnosticsCCSRAM_dmaBuff_size    // .dmaBuff used size in KB
 	);
 	while(usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))!=true){
 		pSleepFn(sleepTimeout);

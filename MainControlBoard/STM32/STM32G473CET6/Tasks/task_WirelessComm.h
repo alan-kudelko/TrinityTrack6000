@@ -16,6 +16,14 @@
 #ifndef TASK_WIRELESS_COMM_H_
     #define TASK_WIRELESS_COMM_H_
 
+#ifdef __DOXYGEN__
+    #define SECTION(x)
+    #define ALIGNED(x)
+#else
+    #define SECTION(x) __attribute((section(x)))
+    #define ALIGNED(x) __attribute((aligned(x)))
+#endif // __DOXYGEN__
+
 #include <tx_api.h>
 
 #include <stdint.h>
@@ -25,8 +33,8 @@
 
 extern const char task_wireless_comm_name[]; /**< Name of the wireless comm task */
 
-extern TX_THREAD task_wireless_comm_handle __attribute((section(".task_handles.taskWirelessComm")));
-extern ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE] __attribute((section(".task_stacks.taskWirelessComm")));
+extern TX_THREAD task_wireless_comm_handle;
+extern ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE];
 
 extern uint32_t test_data[10];
 extern uint16_t test_data_length;

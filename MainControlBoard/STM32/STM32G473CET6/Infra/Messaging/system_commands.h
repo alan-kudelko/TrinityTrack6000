@@ -55,6 +55,7 @@ typedef enum HARDWARE_ID{
 typedef enum{
     CLI_CMD_SET_VALUE,
     CLI_CMD_BUS_RAW_DATA,
+    CLI_CMD_SWITCH_MODE
 }CLI_CMD_TYPE;
 
 typedef struct ALIGNED(4) TASK_CLI_COMMAND{
@@ -71,6 +72,9 @@ typedef struct ALIGNED(4) TASK_CLI_COMMAND{
             uint16_t rxLength;
             DEVICE_ID deviceId;
         }rawData;
+        struct{
+            CLI_CMD_TYPE mode;
+        }mode;
     }payload;
     uint32_t*commandStatus; // Probably not needed
     void(*callbackFn)(void);

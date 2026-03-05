@@ -3,8 +3,18 @@
  * @{
  */
 
+// In the near future create internal helper function for enqueuing data to UART1 DMA with retry
+// This function should divide longer messages into smaller chunks if necessary and handle retries
+
+// Also I should add history of typed commands after implementing helper function
+// Fix: Differentiate between write and read operation when it comes to error messages and hints in `build_bus_command`
+
+// Add change mode command to the system commands and implement it in the system dispatcher
+// Note: struct TASL_CLI_COMMAND is modified to accomodate the mode switch command
+
 #include <stm32g4xx_hal.h>
 #include <string.h>
+#include <stdio.h>
 
 #include <task_CLI.h>
 
@@ -20,8 +30,8 @@
 CLI_Task_State cli_task_state=CLI_STATE_DIAG_MENU; // Default state is diagnostics menu, can be changed to test menu by command
 
 const char task_CLI_name[]="CLI Task";
-TX_THREAD task_CLI_handle SECTION(".task_handles.task_CLI");
-ULONG task_CLI_stack[TASK_CLI_STACK_SIZE] SECTION(".task_stacks.task_CLI");
+TX_THREAD task_CLI_handle SECTION(".task_handles");
+ULONG task_CLI_stack[TASK_CLI_STACK_SIZE] SECTION(".task_stacks_ccsram");
 
 static TX_QUEUE task_cli_wakeup_queue;
 static ULONG task_cli_wakeup_queue_storage[TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t)];
@@ -29,6 +39,8 @@ static ULONG task_cli_wakeup_queue_storage[TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*
 extern enum SYSTEM_MODE system_mode;
 
 extern TX_QUEUE task_cli_command_queue;
+
+extern bool safe_atoi(const char*str,uint8_t length,uint8_t*result);
 
 /**
  * @addtogroup task_CLI
@@ -52,12 +64,23 @@ const char command_show_mem_ccsram[]="ccsram";
 const char*command_show_mem_children[]={command_show_mem_ram1,command_show_mem_ram2,command_show_mem_ccsram};
 
 const char command_write[]="write";
+const char command_read[]="read";
 
 /**@} */
 
-const char*command_array[COMMANDS_MAX_COUNT]={command_help,command_switch_mode,command_show,command_write};
+const char*command_array[COMMANDS_MAX_COUNT]={
+    command_help,
+    command_switch_mode,
+    command_show,
+    command_write,
+    command_read};
 
-const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={parse_command_help,parse_command_switch_mode,parse_command_show,parse_command_write};
+const void (*parse_functions[COMMANDS_MAX_COUNT])(uint8_t,char*[])={
+    parse_command_help,
+    parse_command_switch_mode,
+    parse_command_show,
+    parse_command_write,
+    parse_command_read};
 
 /*
     For now let's assume that commands are divided into 2 categories
@@ -106,6 +129,9 @@ const char msg_task_CLI_mode_switched_to_diag[]="[CLI] Switched to diagnostics m
 const char msg_task_CLI_mode_switched_to_test[]="[CLI] Switched to test mode\r\n";
 const char msg_task_CLI_mode_switch_failed[]="[CLI] Failed to switch mode\r\n[CLI] Correct usage: mode <diag/test>\r\n";
 
+const char msg_task_CLI_write_executed[]="Write command executed\r\n";
+const char msg_task_CLI_read_executed[]="Read command executed\r\n";
+const char msg_task_CLI_read_executed_format_string[]="    Register 0x%02X: 0x%02X\r\n";
 /**@} */
 
 /**
@@ -133,6 +159,8 @@ static uint8_t rxBuffer[TASK_CLI_RX_BUFFER_SIZE];
 static uint32_t commandStatus;
 
 static TASK_CLI_COMMAND task_cli_command;
+
+static char tempBuffer[TASK_CLI_TEMPORARY_BUFFER_SIZE]; // Temporary buffer for snprintf operations
 
 /**@} */
 
@@ -348,12 +376,47 @@ void parse_command_write(uint8_t argc,char*argv[]){
     // This function is called when the "write" command is received in the CLI interface
     // It parses the child command to determine which device to write to and what data to write
     // Note: some devices are not using op-codes so it's possible to send just a register and value
+    if(build_bus_command(argc,argv)!=true){
+        // Failed to build command, no need to send error message since build_bus_command already
+        // sends hint messages back to the terminal in case of failure
+        return;
+    }
+        // For now just send data to first device to the implementation
+        //txBuffer[0]=1<<6;
+        //txBuffer[1]=0x12;
+        //txBuffer[2]=0x00;
+
+    // Write operation and its callback function
+
+    task_cli_command.payload.rawData.rxBuffer=NULL;
+    task_cli_command.payload.rawData.rxLength=0;
+    task_cli_command.callbackFn=callback_cli_write_executed;
+
+    tx_queue_send(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+}
+
+void parse_command_read(uint8_t argc,char*argv[]){
+    if(build_bus_command(argc,argv)!=true){
+        // Failed to build command, no need to send error message since build_bus_command already
+        // sends hint messages back to the terminal in case of failure
+        return;
+    }
+    // Read operation and its callback function
+
+    task_cli_command.payload.rawData.rxBuffer=rxBuffer;
+    task_cli_command.payload.rawData.rxLength=1; // At least for now we can assume that we are only reading 1 byte
+    task_cli_command.callbackFn=callback_cli_read_executed;
+
+    tx_queue_send(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+}
+
+bool build_bus_command(uint8_t argc,char*argv[]){
     if((argc<4)||(argc>5)){
         // Invalid number of arguments, send help information for the "write" command
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
             tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
         }
-        return;
+        return false;
     }
     // Try to convert argv[1] to a valid device ID (integer value is required)
     if(safe_atoi(argv[1],strlen(argv[1]),&task_cli_command.payload.rawData.deviceId)!=true){
@@ -361,7 +424,7 @@ void parse_command_write(uint8_t argc,char*argv[]){
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
             tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
         }
-        return;
+        return false;
     }
     // Try to convert argv[2] to a valid op-code (integer value is required, value can be in decimal or hexadecimal format)
     if(safe_atoi(argv[2],strlen(argv[2]),&txBuffer[0])!=true){
@@ -369,7 +432,7 @@ void parse_command_write(uint8_t argc,char*argv[]){
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
             tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
         }
-        return;
+        return false;
     }
     // Try to convert argv[3] to a register address (integer value is required, value can be in decimal or hexadecimal format)
     if(safe_atoi(argv[3],strlen(argv[3]),&txBuffer[1])!=true){
@@ -377,7 +440,7 @@ void parse_command_write(uint8_t argc,char*argv[]){
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
             tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
         }
-        return;
+        return false;
     }
     // Try to convert argv[4] to a value to write (integer value is required, value can be in decimal or hexadecimal format)
     if(argc>4){
@@ -386,25 +449,16 @@ void parse_command_write(uint8_t argc,char*argv[]){
             while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
-            return;
+            return false;
         }
     }
-        // For now just send data to first device to the implementation
-        //txBuffer[0]=1<<6;
-        //txBuffer[1]=0x12;
-        //txBuffer[2]=0x00;
-
-
+    
     task_cli_command.commandType=CLI_CMD_BUS_RAW_DATA;
-    task_cli_command.payload.rawData.deviceId=DEVICE_MCP1;
     task_cli_command.payload.rawData.txBuffer=txBuffer;
-    task_cli_command.payload.rawData.txLength=argc-2; // Exclude the command itself and id from the arguments
-    task_cli_command.payload.rawData.rxBuffer=NULL;
-    task_cli_command.payload.rawData.rxLength=0;
+    task_cli_command.payload.rawData.txLength=argc-2;
     task_cli_command.commandStatus=&commandStatus;
-    task_cli_command.callbackFn=callback_cli_write_executed;
 
-    tx_queue_send(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+    return true;
 }
 
 void callback_cli_data_received(void){
@@ -415,12 +469,61 @@ void callback_cli_data_received(void){
 
 void callback_cli_write_executed(void){
     TASK_CLI_WAKEUP_REASON wakeup;
-    wakeup.wakeupReason=TASK_CLI_WAKEUP_COMMAND_EXECUTED;
+    wakeup.wakeupReason=TASK_CLI_WAKEUP_WRITE_EXECUTED;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
 }
 
-void show_command_status(void){
-    usart1_dma_enq_data((uint8_t*)"Werdon\r\n",strlen("Werdon\r\n"));
+void callback_cli_read_executed(void){
+    TASK_CLI_WAKEUP_REASON wakeup;
+    wakeup.wakeupReason=TASK_CLI_WAKEUP_READ_EXECUTED;
+    tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
+}
+
+void show_command_status(uint32_t wakeupStatus){
+    // Change it to be wakeup reason depended
+    switch(wakeupStatus){
+        case TASK_CLI_WAKEUP_WRITE_EXECUTED:
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_write_executed,strlen(msg_task_CLI_write_executed))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+        break;
+        case TASK_CLI_WAKEUP_READ_EXECUTED:
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_read_executed,strlen(msg_task_CLI_read_executed))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+            // Display read data from rxBuffer variable
+            if(task_cli_command.payload.rawData.txLength==3){
+                memset(tempBuffer,0,sizeof(tempBuffer));
+                snprintf(tempBuffer,
+                    TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                    msg_task_CLI_read_executed_format_string,
+                    task_cli_command.payload.rawData.txBuffer[1], // Register address is at index 1 in the txBuffer)
+                    task_cli_command.payload.rawData.rxBuffer[0]);
+                while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+                }
+                while(usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+                }
+            }
+            else if(task_cli_command.payload.rawData.txLength==2){
+                memset(tempBuffer,0,sizeof(tempBuffer));
+                snprintf(tempBuffer,
+                    TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                    msg_task_CLI_read_executed_format_string,
+                    task_cli_command.payload.rawData.txBuffer[0], // Register address is at index 1 in the txBuffer)
+                    task_cli_command.payload.rawData.rxBuffer[0]);
+                while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+                }
+                while(usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+                }
+            }
+        break;
+        default:
+        // Should not happen
+    }
 }
 
 void display_menu_header(void){
@@ -489,8 +592,9 @@ void task_CLI(ULONG arg){
                     //usart1_dma_enq_data((const uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command));
                 }
             break;
-            case TASK_CLI_WAKEUP_COMMAND_EXECUTED:
-                show_command_status();
+            case TASK_CLI_WAKEUP_WRITE_EXECUTED:
+            case TASK_CLI_WAKEUP_READ_EXECUTED:
+                show_command_status(wakeup.wakeupReason);
             break;
 
             default:
@@ -499,81 +603,5 @@ void task_CLI(ULONG arg){
     }
 }
 
-bool safe_atoi(const char*str,uint8_t length,uint8_t*result){
-    // Temporary value to store the converted integer value, we can use uint32_t to handle larger values
-    // and then check if the converted value fits into uint8_t range before assigning it to the result variable
-    uint32_t value=0;
-    // Empty string or string with only whitespace characters or null pointers
-    if((length==0)||(str==NULL)||(result==NULL)){
-        return false;
-    }
-    // String with invalid characters (non-numeric characters, except for optional leading whitespace and signs)
-    uint8_t idx=0;
-
-    while((idx<length)&&((str[idx]==' ')||(str[idx]=='\t'))){
-        idx++;
-    }
-    if(idx>=length){
-        return false;
-    }
-    // Base detection logic
-    uint32_t base=10;
-
-    if((idx+1)<length){
-        if((str[idx]=='0')&&((str[idx+1]=='x')||(str[idx+1]=='X'))){
-            base=16;
-            idx+=2;
-        }
-        else{
-            if((str[idx]=='0')&&((str[idx+1]=='b')||(str[idx+1]=='B'))){
-                base=2;
-                idx+=2;
-            }
-        }
-    }
-    if(idx>=length){
-        return false;
-    }
-    // Conversion loop
-    while(idx<length){
-        uint8_t c=str[idx];
-        uint32_t digit=0;
-
-        // Character digit mapping based on the detected base
-        if((c>='0')&&(c<='9')){
-            digit=c-'0';
-        }
-        else{
-            if((c>='a')&&(c<='f')){
-                digit=c-'a'+10;
-            }
-            else{
-                if((c>='A')&&(c<='F')){
-                    digit=c-'A'+10;
-                }
-                else{
-                    return false;
-                }
-            }
-        }
-        // Digit validation based on the detected base
-        if(digit>=base){
-            return false;
-        }
-        // Overflow check before multiplying the current value by the base and adding the new digit
-        if(value>(UINT8_MAX-digit)/base){
-            return false;
-        }
-
-        value=value*base+digit;
-        idx++;
-    }
-    // Final range check to ensure the converted value fits into uint8_t
-    if(value>UINT8_MAX){
-        return false;
-    }
-    *result=(uint8_t)value;
-    return true;
-}
 
 /**@} */

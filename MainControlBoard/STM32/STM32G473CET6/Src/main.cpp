@@ -62,6 +62,7 @@ void test_spi_callbackFn(void){
 }
 
 void tx_application_define(void* first_unused_memory){
+    // Note: Pre-kernel calls
     // Create threads, queues, semaphores, mutexes here
     UNUSED(first_unused_memory);
     tx_thread_create(&task_blink_handle,
@@ -341,11 +342,6 @@ int main(void){
 // Dwie funkcje startowe
 // Jedna bedzie sluzyc do wyznaczania procenta utraconych pakietow (do testow po zlutowaniu PCB)
 // Druga do tymczasowego przesylania danych i telemetrii od urzadzenia do urzadzenia
-
-// Kolejny prosty test do przeprowadzenia to obsluga ADC pod czujniki z serii MQ-X
-// Dzisiaj podpiac jakis potencjometr lub dla bezpieczenstwa zwykly rezystor i zrobic
-// dzielnik napiecia i sprawdzic czy sie zgadza z multimetrem/oscyloskopem
-// potem sobie zrobimy testy z czujnikami MQ-X
 
 // Dobra do rozwiazania jest na pewno problem z podwojnym przerwaniem konwersji (nie mam zielonego pojecia czemu)
 // Bo najlepsze, ze przerwanie DMA_IT_HT jest zablokowane oraz jest wyczyszczona jego flaga

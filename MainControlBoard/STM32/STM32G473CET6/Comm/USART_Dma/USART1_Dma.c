@@ -17,24 +17,24 @@
  * @{
  */
 
-static uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE] SECTION(".dmaBuff");
-static uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE] SECTION(".dmaBuff");
+static uint8_t huart1_dma_rx_buffer[UART1_DMA_RX_BUFFER_SIZE] SECTION(".DMA_RAM2.USART1_Data");
+static uint8_t huart1_dma_tx_buffer[UART1_DMA_TX_BUFFER_SIZE] SECTION(".DMA_RAM2.USART1_Data");
 
-static volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE] SECTION(".dmaBuff");
-static volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE] SECTION(".dmaBuff");
+static volatile uint8_t huart1_dma_rx_ring_buffer[UART1_DMA_RX_RING_BUFFER_SIZE] SECTION(".DMA_RAM2.USART1_Data");
+static volatile uint8_t huart1_dma_tx_ring_buffer[UART1_DMA_TX_RING_BUFFER_SIZE] SECTION(".DMA_RAM2.USART1_Data");
 
-static volatile uint16_t huart1_dma_tx_buffer_length;
+static volatile uint16_t huart1_dma_tx_buffer_length SECTION(".crit.dmaVars");;
 
-static volatile uint16_t huart1_dma_rx_old_pos;
-static volatile uint16_t huart1_dma_rx_ring_buffer_head;
-static volatile uint16_t huart1_dma_rx_ring_buffer_tail;
-static volatile uint16_t huart1_dma_rx_ring_buffer_length;
+static volatile uint16_t huart1_dma_rx_old_pos SECTION(".crit.dmaVars");;
+static volatile uint16_t huart1_dma_rx_ring_buffer_head SECTION(".crit.dmaVars");;
+static volatile uint16_t huart1_dma_rx_ring_buffer_tail SECTION(".crit.dmaVars");;
+static volatile uint16_t huart1_dma_rx_ring_buffer_length SECTION(".crit.dmaVars");;
 
-static volatile uint16_t huart1_dma_tx_ring_buffer_head;
-static volatile uint16_t huart1_dma_tx_ring_buffer_tail;
-static volatile uint16_t huart1_dma_tx_ring_buffer_length;
+static volatile uint16_t huart1_dma_tx_ring_buffer_head SECTION(".crit.dmaVars");;
+static volatile uint16_t huart1_dma_tx_ring_buffer_tail SECTION(".crit.dmaVars");;
+static volatile uint16_t huart1_dma_tx_ring_buffer_length SECTION(".crit.dmaVars");;
 
-static volatile bool huart1_dma_tx_active=false;
+static volatile bool huart1_dma_tx_active SECTION(".crit.dmaVars");;
 
 /**@} */
 

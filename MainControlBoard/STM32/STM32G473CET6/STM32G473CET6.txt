@@ -1,6 +1,6 @@
 Configuration	STM32G473CET6
 STM32CubeMX 	6.15.0
-Date	02/25/2026
+Date	03/04/2026
 MCU	STM32G473CETx
 
 
@@ -8,6 +8,8 @@ MCU	STM32G473CETx
 PERIPHERALS	MODES	FUNCTIONS	PINS
 ADC1	IN1 Single-ended	ADC1_IN1	PA0
 ADC1	IN2 Single-ended	ADC1_IN2	PA1
+ADC1	Temperature Sensor Channel	ADC1_TempSens_Input	VP_ADC1_TempSens_Input
+ADC1	Vrefint Channel	ADC1_Vref_Input	VP_ADC1_Vref_Input
 CORDIC	Activated	CORDIC_VS_CORDIC	VP_CORDIC_VS_CORDIC
 I2C2	I2C	I2C2_SCL	PA9
 I2C2	I2C	I2C2_SDA	PA8
@@ -25,7 +27,6 @@ TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
 TIM2	PWM Generation CH2	TIM2_CH2	PB3
 TIM3	Internal Clock	TIM3_VS_ClockSourceINT	VP_TIM3_VS_ClockSourceINT
 TIM3	PWM Generation CH2	TIM3_CH2	PB5
-TIM8	Internal Clock	TIM8_VS_ClockSourceINT	VP_TIM8_VS_ClockSourceINT
 USART1	Asynchronous	USART1_RX	PB7
 USART1	Asynchronous	USART1_TX	PB6
 USART2	Asynchronous	USART2_RX	PA3
@@ -74,6 +75,8 @@ Pin Nb	PINs	FUNCTIONs	LABELs
 PERIPHERALS	MODES	FUNCTIONS	PINS
 ADC1	IN1 Single-ended	ADC1_IN1	PA0
 ADC1	IN2 Single-ended	ADC1_IN2	PA1
+ADC1	Temperature Sensor Channel	ADC1_TempSens_Input	VP_ADC1_TempSens_Input
+ADC1	Vrefint Channel	ADC1_Vref_Input	VP_ADC1_Vref_Input
 CORDIC	Activated	CORDIC_VS_CORDIC	VP_CORDIC_VS_CORDIC
 I2C2	I2C	I2C2_SCL	PA9
 I2C2	I2C	I2C2_SDA	PA8
@@ -91,7 +94,6 @@ TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
 TIM2	PWM Generation CH2	TIM2_CH2	PB3
 TIM3	Internal Clock	TIM3_VS_ClockSourceINT	VP_TIM3_VS_ClockSourceINT
 TIM3	PWM Generation CH2	TIM3_CH2	PB5
-TIM8	Internal Clock	TIM8_VS_ClockSourceINT	VP_TIM8_VS_ClockSourceINT
 USART1	Asynchronous	USART1_RX	PB7
 USART1	Asynchronous	USART1_TX	PB6
 USART2	Asynchronous	USART2_RX	PA3
