@@ -155,14 +155,16 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Src/*.c"
     "${CMAKE_SOURCE_DIR}/Utils/*.cpp"
     "${CMAKE_SOURCE_DIR}/Utils/*.c"
-    "${CMAKE_SOURCE_DIR}/Init/*.cpp"
-    "${CMAKE_SOURCE_DIR}/Init/*.c"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
     "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/*.c*"
-    "${CMAKE_SOURCE_DIR}/Comm/SPI_Dma/*.c"
-    "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/*.c"
     "${CMAKE_SOURCE_DIR}/Tasks/*.c"
     "${CMAKE_SOURCE_DIR}/Tasks/*.cpp"
+
+    "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma/*.c*"
+    "${CMAKE_SOURCE_DIR}/Platform/LL/USART1_Dma/*.c*"
+    "${CMAKE_SOURCE_DIR}/Platform/Board/*.c*"
+    "${CMAKE_SOURCE_DIR}/Platform/Startup/*.c*"
+    "${workspaceFolder}/Platform/Callbacks/*.c*"
 )
 list(REMOVE_ITEM PROJECT_SOURCES "${CMAKE_SOURCE_DIR}/Src/stm32g4xx_it.c")
 
@@ -171,12 +173,15 @@ file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Include/*.h"
     "${CMAKE_SOURCE_DIR}/Include/*.hpp"
     "${CMAKE_SOURCE_DIR}/Utils/*.h"
-    "${CMAKE_SOURCE_DIR}/Init/*.h"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*.h"
     "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/*.h"
-    "${CMAKE_SOURCE_DIR}/Comm/SPI_Dma/*.h"
-    "${CMAKE_SOURCE_DIR}/Comm/USART_Dma/*.h"
     "${CMAKE_SOURCE_DIR}/Tasks/*.h"
+
+    "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma/*.h"
+    "${CMAKE_SOURCE_DIR}/Platform/LL/USART1_Dma/*.h"
+    "${CMAKE_SOURCE_DIR}/Platform/Board/*.h"
+    "${CMAKE_SOURCE_DIR}/Platform/Startup/*.h"
+    "${CMAKE_SOURCE_DIR}/Platform/Callbacks/*.h"
 )
 #
 include_directories(
@@ -187,15 +192,18 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Core/Inc"
     "${CMAKE_SOURCE_DIR}/Include"
     "${CMAKE_SOURCE_DIR}/Utils"
-    "${CMAKE_SOURCE_DIR}/Init"
     "${CMAKE_SOURCE_DIR}/Tasks"
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17"
     "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/"
-    "${CMAKE_SOURCE_DIR}/Comm/SPI_Dma"
-    "${CMAKE_SOURCE_DIR}/Comm/USART_Dma"
     "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/common/inc"
     "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
     "${CMAKE_SOURCE_DIR}/Infra/Messaging"
+
+    "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma"
+    "${CMAKE_SOURCE_DIR}/Platform/LL/USART1_Dma"
+    "${CMAKE_SOURCE_DIR}/Platform/Board"
+    "${CMAKE_SOURCE_DIR}/Platform/Startup"
+    "${workspaceFolder}/Platform/Callbacks"
 )
 
 add_executable(${PROJECT_NAME}.elf

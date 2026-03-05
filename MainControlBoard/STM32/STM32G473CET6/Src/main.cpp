@@ -113,19 +113,6 @@ UINT delay_function(ULONG timeout){
 
 UINT (*ptr)(ULONG);
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  /* USER CODE BEGIN Callback 0 */
-
-  /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM6)
-  {
-    HAL_IncTick();
-  }
-  /* USER CODE BEGIN Callback 1 */
-
-  /* USER CODE END Callback 1 */
-}
 
 void test_SPI_communication(){
     // Test will be conducted with two MCP23S17 IO expanders

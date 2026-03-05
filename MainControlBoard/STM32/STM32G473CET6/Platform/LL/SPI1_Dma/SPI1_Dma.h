@@ -111,22 +111,6 @@ extern uint8_t spi1_send_data(void);
  */
 extern void spi1_dma_tx_complete(void);
 
-/**
- * @brief Redefinition of the HAL SPI transmit complete callback function.
- * Used to handle the completion of SPI1 DMA transmission and to manage the transaction buffer accordingly.
- * @param hspi Pointer to the SPI handle.
- * @return None
- */
-extern void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef*hspi);
-
-/**
- * @brief Redefinition of the HAL SPI receive complete callback function.
- * Used to handle the completion of SPI1 DMA reception and to manage the transaction buffer accordingly.
- * @param hspi Pointer to the SPI handle.
- * @return None
- */
-extern void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef*hspi);
-
 #ifdef __cplusplus
     }
 #endif // __cplusplus
