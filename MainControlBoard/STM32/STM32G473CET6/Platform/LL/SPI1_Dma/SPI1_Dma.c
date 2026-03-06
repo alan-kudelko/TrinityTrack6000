@@ -58,13 +58,12 @@ bool spi1_dma_enq_data(hspi_data*transactionData){
 
     if(free_space>0){
         // There is enough space, enqueue the data
-        __disable_irq();
+        __disable_irq(); // Fix it
         hspi1_transaction_buffer[hspi1_transaction_buffer_head]=*transactionData;
         hspi1_transaction_buffer_length++;
         hspi1_transaction_buffer_head=(hspi1_transaction_buffer_head+1)%SPI1_HSPI_DATA_BUFFER_SIZE;
         // If DMA is not active start transmission
         if(hspi1_dma_active==false){
-
             hspi1_dma_active=true;
             spi1_send_data();
         }

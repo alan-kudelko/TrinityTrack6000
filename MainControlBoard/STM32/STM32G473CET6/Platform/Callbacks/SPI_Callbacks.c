@@ -19,6 +19,15 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef*hspi){
         spi1_dma_tx_complete();
     }
     else if(hspi->Instance==SPI2){
-        
+        //spi2_dma_tx_complete();
+    }
+}
+
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef*hspi){
+    if(hspi->Instance==SPI1){
+        spi1_dma_tx_complete();
+    }
+    else if(hspi->Instance==SPI2){
+        //spi2_dma_tx_complete();
     }
 }

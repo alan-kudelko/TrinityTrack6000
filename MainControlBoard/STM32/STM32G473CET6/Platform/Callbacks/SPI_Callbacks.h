@@ -35,6 +35,14 @@ extern void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef*hspi);
  */
 extern void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef*hspi);
 
+/**
+ * @brief Redefinition of the HAL SPI transmit-receive complete callback function.
+ * Used to handle the completion of SPI1 DMA transmit-receive operations and to manage the transaction buffer accordingly.
+ * @param hspi Pointer to the SPI handle.
+ * @return None
+ */
+extern void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef*hspi);
+
 #ifdef __cplusplus
     }
 #endif // __cplusplus
