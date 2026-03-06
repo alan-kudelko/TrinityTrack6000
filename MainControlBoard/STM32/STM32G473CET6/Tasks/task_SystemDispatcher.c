@@ -81,10 +81,12 @@ void task_SystemDispatcher(ULONG arg){
                 spi_transaction_data.callbackFn=task_cli_command.callbackFn;
                 spi_transaction_data.gpio_port=GPIOB;
                 if(task_cli_command.payload.rawData.deviceId==DEVICE_MCP1){
+                    spi_transaction_data.gpio_port=GPIOB;
                     spi_transaction_data.gpio_pin=GPIO_PIN_1;
                 }
                 else if(task_cli_command.payload.rawData.deviceId==DEVICE_MCP2){
-                    spi_transaction_data.gpio_pin=GPIO_PIN_0;
+                    spi_transaction_data.gpio_port=GPIOA;
+                    spi_transaction_data.gpio_pin=GPIO_PIN_15;
                 }
                 spi1_dma_enq_data(&spi_transaction_data);
             break;

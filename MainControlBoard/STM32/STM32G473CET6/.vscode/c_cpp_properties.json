@@ -10,7 +10,7 @@
           "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32G4xx/Include",
           "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc",
 		      "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy",
-          "${workspaceFolder}/Infra/Utils/safe_atoi",
+          "${workspaceFolder}/Infra/Utils",
           "${workspaceFolder}/Infra/Messaging",
 
           "${workspaceFolder}/Platform/LL/SPI1_Dma",
@@ -23,8 +23,11 @@
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Tasks",
           "${workspaceFolder}/Src",
+
           "${workspaceFolder}/Devices/MCP23S17",
           "${workspaceFolder}/Devices/NRF24L01",
+          "${workspaceFolder}/Devices",
+          
           "${workspaceFolder}/Middlewares/ST/threadx/common/inc",
           "${workspaceFolder}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
         ],		  
@@ -38,7 +41,8 @@
           "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32G4xx/Source/Templates",
           "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc",
 		      "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy",
-          "${workspaceFolder}/Infra/Utils/safe_atoi",
+
+          "${workspaceFolder}/Infra/Utils",
           "${workspaceFolder}/Infra/Messaging",
 
           "${workspaceFolder}/Platform/LL/SPI1_Dma",
@@ -51,8 +55,11 @@
           "${workspaceFolder}/Src",
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Tasks",
+
           "${workspaceFolder}/Devices/MCP23S17",
           "${workspaceFolder}/Devices/NRF24L01",
+          "${workspaceFolder}/Devices",
+
           "${workspaceFolder}/Middlewares/ST/threadx/common/inc",
           "${workspaceFolder}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
         ],		  

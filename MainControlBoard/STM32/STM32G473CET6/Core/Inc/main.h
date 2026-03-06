@@ -73,14 +73,14 @@ void Error_Handler(void);
 #define MQ6_IN_GPIO_Port GPIOA
 #define MQ7_IN_Pin GPIO_PIN_1
 #define MQ7_IN_GPIO_Port GPIOA
-#define NC_Pin GPIO_PIN_4
-#define NC_GPIO_Port GPIOA
+#define NC_2_Pin GPIO_PIN_4
+#define NC_2_GPIO_Port GPIOA
 #define NRF24L01_CS_Pin GPIO_PIN_0
 #define NRF24L01_CS_GPIO_Port GPIOB
 #define FRAM_CS_Pin GPIO_PIN_1
 #define FRAM_CS_GPIO_Port GPIOB
-#define MCP_CS_Pin GPIO_PIN_2
-#define MCP_CS_GPIO_Port GPIOB
+#define NRF24L01_IRQ_Pin GPIO_PIN_2
+#define NRF24L01_IRQ_GPIO_Port GPIOB
 #define INFINEON_RST_Pin GPIO_PIN_10
 #define INFINEON_RST_GPIO_Port GPIOB
 #define RENESANS_CS_Pin GPIO_PIN_11
@@ -103,8 +103,8 @@ void Error_Handler(void);
 #define MQ_HEATERS_GPIO_Port GPIOB
 #define GPS_RST_Pin GPIO_PIN_8
 #define GPS_RST_GPIO_Port GPIOB
-#define MCP_RST_Pin GPIO_PIN_9
-#define MCP_RST_GPIO_Port GPIOB
+#define NC_1_Pin GPIO_PIN_9
+#define NC_1_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

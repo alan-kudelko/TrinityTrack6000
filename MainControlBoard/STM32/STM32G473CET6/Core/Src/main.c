@@ -733,13 +733,13 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOF, ARM_GUN_Pin|FIRE_GUN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, NC_Pin|NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin
+  HAL_GPIO_WritePin(GPIOA, NC_2_Pin|NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin
                           |RENESANS_RST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, NRF24L01_CS_Pin|FRAM_CS_Pin|MCP_CS_Pin|INFINEON_RST_Pin
+  HAL_GPIO_WritePin(GPIOB, NRF24L01_CS_Pin|FRAM_CS_Pin|NRF24L01_IRQ_Pin|INFINEON_RST_Pin
                           |RENESANS_CS_Pin|INFINEON_CS_Pin|WATCHDOG_FEED_Pin|GPS_RST_Pin
-                          |MCP_RST_Pin, GPIO_PIN_RESET);
+                          |NC_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : FPGA_RST_Pin KILL_SWITCH_Pin NRF24L01_CE_Pin */
   GPIO_InitStruct.Pin = FPGA_RST_Pin|KILL_SWITCH_Pin|NRF24L01_CE_Pin;
@@ -755,25 +755,30 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NC_Pin NXP_CS_Pin FPGA_CS_Pin NXP_RST_Pin
+  /*Configure GPIO pins : NC_2_Pin NXP_CS_Pin FPGA_CS_Pin NXP_RST_Pin
                            RENESANS_RST_Pin */
-  GPIO_InitStruct.Pin = NC_Pin|NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin
+  GPIO_InitStruct.Pin = NC_2_Pin|NXP_CS_Pin|FPGA_CS_Pin|NXP_RST_Pin
                           |RENESANS_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NRF24L01_CS_Pin FRAM_CS_Pin MCP_CS_Pin INFINEON_RST_Pin
-                           RENESANS_CS_Pin INFINEON_CS_Pin WATCHDOG_FEED_Pin GPS_RST_Pin
-                           MCP_RST_Pin */
-  GPIO_InitStruct.Pin = NRF24L01_CS_Pin|FRAM_CS_Pin|MCP_CS_Pin|INFINEON_RST_Pin
-                          |RENESANS_CS_Pin|INFINEON_CS_Pin|WATCHDOG_FEED_Pin|GPS_RST_Pin
-                          |MCP_RST_Pin;
+  /*Configure GPIO pins : NRF24L01_CS_Pin FRAM_CS_Pin INFINEON_RST_Pin RENESANS_CS_Pin
+                           INFINEON_CS_Pin WATCHDOG_FEED_Pin GPS_RST_Pin NC_1_Pin */
+  GPIO_InitStruct.Pin = NRF24L01_CS_Pin|FRAM_CS_Pin|INFINEON_RST_Pin|RENESANS_CS_Pin
+                          |INFINEON_CS_Pin|WATCHDOG_FEED_Pin|GPS_RST_Pin|NC_1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : NRF24L01_IRQ_Pin */
+  GPIO_InitStruct.Pin = NRF24L01_IRQ_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(NRF24L01_IRQ_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

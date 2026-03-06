@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 209,
+				"line" : 216,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 187,
+				"line" : 190,
 				"parent" : 0
 			}
 		]
@@ -89,6 +89,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Middlewares/ST/threadx/common/inc"
 				},
 				{
@@ -117,7 +121,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Platform/Callbacks"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Platform/Callbacks"
 				}
 			],
 			"language" : "C",
@@ -167,16 +171,16 @@
 				37,
 				38,
 				39,
+				40,
+				41,
 				42,
-				43,
-				44,
 				45,
+				46,
 				47,
 				48,
-				49,
+				50,
 				51,
 				52,
-				53,
 				54,
 				55,
 				56,
@@ -329,7 +333,10 @@
 				203,
 				204,
 				205,
-				206
+				206,
+				207,
+				208,
+				209
 			]
 		},
 		{
@@ -383,6 +390,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Middlewares/ST/threadx/common/inc"
 				},
 				{
@@ -411,23 +422,23 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Platform/Callbacks"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Platform/Callbacks"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
 				32,
-				50,
-				207,
-				208,
-				209,
+				53,
 				210,
 				211,
 				212,
 				213,
 				214,
-				215
+				215,
+				216,
+				217,
+				218
 			]
 		},
 		{
@@ -481,6 +492,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Devices"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Middlewares/ST/threadx/common/inc"
 				},
 				{
@@ -509,7 +524,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Platform/Callbacks"
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Platform/Callbacks"
 				}
 			],
 			"language" : "CXX",
@@ -525,9 +540,9 @@
 			[
 				33,
 				35,
-				40,
-				41,
-				46
+				43,
+				44,
+				49
 			]
 		}
 	],
@@ -608,9 +623,9 @@
 				47,
 				48,
 				49,
+				50,
 				51,
 				52,
-				53,
 				54,
 				55,
 				56,
@@ -763,7 +778,10 @@
 				203,
 				204,
 				205,
-				206
+				206,
+				207,
+				208,
+				209
 			]
 		},
 		{
@@ -771,16 +789,16 @@
 			"sourceIndexes" : 
 			[
 				32,
-				50,
-				207,
-				208,
-				209,
+				53,
 				210,
 				211,
 				212,
 				213,
 				214,
-				215
+				215,
+				216,
+				217,
+				218
 			]
 		},
 		{
@@ -1011,13 +1029,31 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Infra/Utils/safe_atoi/safe_atoi.c",
+			"path" : "Infra/Utils/safe_atoi.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Platform/Board/TrinityTrack6000_Config.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Platform/Callbacks/HAL_Timer_Callbacks.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Platform/Callbacks/SPI_Callbacks.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Platform/Callbacks/USART_Callbacks.c",
 			"sourceGroupIndex" : 0
 		},
 		{

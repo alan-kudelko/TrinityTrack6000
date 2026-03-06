@@ -25,6 +25,8 @@
 #include <USART1_Dma.h>
 #include <SPI1_Dma.h>
 
+#include <NRF24L01.h>
+
 #include <tx_api.h>
 
 #include <tasks.h>
@@ -36,17 +38,8 @@ extern "C"{
 TX_THREAD task_blink_handle;
 ULONG task_blink_stack[128];
 
-TX_THREAD task_spi1_handle;
-ULONG task_spi1_stack[128];
-
-TX_THREAD task_second_device_handle;
-ULONG task_second_device_stack[128];
-
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout);
 UINT delay_function(ULONG timeout);
-
-void spi1_dma_test(ULONG arg);
-void spi1_dma_second_device(ULONG arg);
 
 void task_blink(ULONG arg){
     UNUSED(arg);
@@ -132,15 +125,16 @@ void test_SPI_communication(){
     uint8_t txData[5]={0};
     uint8_t rxData[5]={0};
     UNUSED(rxData);
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2,GPIO_PIN_RESET); // Reset both devices
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_RESET); // Reset both devices
     HAL_Delay(1); // Wait for devices to reset
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2,GPIO_PIN_SET); // Release reset
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_SET); // Release reset
     HAL_Delay(1); // Wait for devices to be ready
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0|GPIO_PIN_1,GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_SET);
 
     while(true){
 // Disable auto-increment mode for device 1 (green LED)
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET); // Select device 1
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_RESET); // Select device 1
     // Write to IOCON register (0x0A) with value 0x00
     txData[0]|=(1<<6); // Device OP-Code
     txData[1]=0x0A; // Register address
@@ -148,11 +142,11 @@ void test_SPI_communication(){
     //HAL_Delay(10); // Short delay between transactions
     HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
     //HAL_Delay(10); // Wait for transmission to complete
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET); // Deselect device 1
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_SET); // Deselect device 1
     memset(txData,0,sizeof(txData)); // Clear txData for next transaction
 
     //HAL_Delay(10); // Short delay between transactions
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET); // Select device 1
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_RESET); // Select device 1
     //HAL_Delay(10); // Short delay between transactions
     // Set all GPIO to output for device 1 (green LED)
     txData[0]|=(1<<6); // Device OP-Code
@@ -161,12 +155,12 @@ void test_SPI_communication(){
     HAL_SPI_Transmit(&hspi1,txData,3,HAL_MAX_DELAY);
     //HAL_Delay(10); // Wait for transmission to complete
 
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET); // Deselect device 1
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_SET); // Deselect device 1
 
     memset(txData,0,sizeof(txData)); // Clear txData for next transaction
 
     //HAL_Delay(10); // Short delay between transactions
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET); // Select device 1
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_RESET); // Select device 1
     //HAL_Delay(10); // Short delay between transactions
     // Set all GPIO to output for device 1 (green LED)
     txData[0]|=(1<<6); // Device OP-Code
@@ -176,7 +170,7 @@ void test_SPI_communication(){
     //HAL_Delay(10); // Wait for transmission to complete
 
     memset(txData,0,sizeof(txData)); // Clear txData for next transaction
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET); // Deselect device 1
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_SET); // Deselect device 1
 // Disable auto-increment mode for device 2 (red LED)
     HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET); // Select device 2
     // Write to IOCON register (0x0A) with value 0x00
@@ -219,64 +213,6 @@ void test_SPI_communication(){
     // Check ioc, there is a pending code generation
 }
 
-extern "C" void spi1_dma_test(ULONG arg){
-    hspi_data sampleData{0};
-    uint8_t sampleTxBuffer[3]{((1<<6)|(0<<0)),0x12,0xff};
-    uint16_t sampleTxBufferLength=3;
-    uint8_t sampleRxBuffer[5]{0};
-    uint16_t sampleRxBufferLength=1;
-
-    UNUSED(sampleRxBuffer);
-
-    sampleData.txBuffer=sampleTxBuffer;
-    sampleData.txLength=sampleTxBufferLength;
-    sampleData.rxBuffer=NULL;
-    sampleData.rxLength=sampleRxBufferLength;
-    //sampleData.callbackFn=test_spi_callbackFn;
-    sampleData.gpio_port=GPIOB;
-    sampleData.gpio_pin=GPIO_PIN_1;
-
-    while(true){
-        spi1_dma_enq_data(&sampleData);
-        tx_thread_sleep(500);
-
-        //while(usart1_dma_enq_data(sampleData.rxBuffer,sampleData.rxLength)==false){
-        //    tx_thread_sleep(10);
-        //}
-        sampleTxBuffer[2]^=0xff;
-
-    }
-}
-
-extern "C" void spi1_dma_second_device(ULONG arg){
-    hspi_data sampleData{0};
-    uint8_t sampleTxBuffer[3]{((1<<6)|(0<<0)),0x12,0x00};
-    uint16_t sampleTxBufferLength=3;
-    uint8_t sampleRxBuffer[5]{0};
-    uint16_t sampleRxBufferLength=1;
-
-    UNUSED(sampleRxBuffer);
-
-    sampleData.txBuffer=sampleTxBuffer;
-    sampleData.txLength=sampleTxBufferLength;
-    sampleData.rxBuffer=NULL;
-    sampleData.rxLength=sampleRxBufferLength;
-    //sampleData.transmissionStatus=&sampleStatus;
-    sampleData.gpio_port=GPIOB;
-    sampleData.gpio_pin=GPIO_PIN_0;
-
-    while(true){
-        spi1_dma_enq_data(&sampleData);
-        tx_thread_sleep(1000);
-
-        //while(usart1_dma_enq_data(sampleData.rxBuffer,sampleData.rxLength)==false){
-        //    tx_thread_sleep(10);
-        //}
-        sampleTxBuffer[2]^=0xff;
-
-    }    
-}
-
 /**
  * @brief  The application entry point.
  * @retval int
@@ -302,13 +238,14 @@ int main(void){
     HAL_Delay(100);
 
     uint32_t adc_buffer[4]{0};
-    HAL_ADCEx_Calibration_Start(&hadc1,ADC_SINGLE_ENDED);
 
     while(false){
         HAL_ADC_Start_DMA(&hadc1,adc_buffer,4);
         
         HAL_Delay(1000);
     }
+
+    nrf24l01_test();
 
     tx_kernel_enter();
 

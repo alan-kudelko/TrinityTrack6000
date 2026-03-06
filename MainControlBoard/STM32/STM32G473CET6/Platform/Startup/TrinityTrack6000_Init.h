@@ -29,11 +29,7 @@
 extern const char msg_init_mcuInitialized_info[]; /**< Info1 */
 extern const char msg_init_GPIOInitialized_info[]; /**< Info2 */
 extern const char msg_init_memoryInitialized_info[]; /**< Info3 */
-extern const char msg_init_NRF_initialized_format_string[]; /**< Info4 */
-extern const char msg_init_MCP_initialized_format_string[]; /**< Info5 */
 /** @} */
-extern const char msg_init_status_ok[];
-extern const char msg_init_status_nok[];
 
 #ifdef __cplusplus
   extern "C"{
