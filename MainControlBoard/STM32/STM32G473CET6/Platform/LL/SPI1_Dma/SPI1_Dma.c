@@ -81,44 +81,77 @@ bool spi1_dma_enq_data(hspi_data*transactionData){
 }
 
 uint8_t spi1_send_data(void){
-    // Tx frame was not processed
-    if(hspi1_tx_processed==false){
-        // First transmission is always tx
-        // So that, we have to select slave by pulling CS pin LOW
-        HAL_GPIO_WritePin(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,
-            GPIO_PIN_RESET);
-        HAL_SPI_Transmit_DMA(&hspi1,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txBuffer,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txLength);
+    // Check if communication is full duplex or half duplex
+    switch(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].flags){
+        case HSPI_FLAG_HALF_DUPLEX:
+            if(hspi1_tx_processed==false){
+                // First transmission is always tx
+                // So that, we have to select slave by pulling CS pin LOW
+                HAL_GPIO_WritePin(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,GPIO_PIN_RESET);
+                HAL_SPI_Transmit_DMA(&hspi1,
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txBuffer,
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txLength);
+            }
+            else{
+                HAL_SPI_Receive_DMA(&hspi1,
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer,
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxLength);
+            }
+        break;
+        case HSPI_FLAG_FULL_DUPLEX:
+            HAL_GPIO_WritePin(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,GPIO_PIN_RESET);
+            HAL_SPI_TransmitReceive_DMA(&hspi1,
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txBuffer,
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer,
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].txLength);
+        break;
+        default:
+        // Should not happen, invalid flag value
     }
-    else{
-        HAL_SPI_Receive_DMA(&hspi1,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxLength);
-    }
+
     return 0;
 }
 
 void spi1_dma_tx_complete(void){
-    // Check if there was a read operation
-    // Read operation requires rx buffer to be provided
-    // If there is no rx buffer (NULL or nullptr) move on to the next package
-    if((hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer!=NULL)&&(hspi1_tx_processed==false)){
-        hspi1_tx_processed=true;
-    }
-    else{
-        // Notify the owner of the data that the transmission was complete
-        if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn!=NULL){
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn();
-        }
-        HAL_GPIO_WritePin(
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
-            hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,
-            GPIO_PIN_SET);
-        hspi1_transaction_buffer_tail=(hspi1_transaction_buffer_tail+1)%SPI1_HSPI_DATA_BUFFER_SIZE;
-        hspi1_transaction_buffer_length--;
-        hspi1_tx_processed=false;
+    switch(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].flags){
+        case HSPI_FLAG_HALF_DUPLEX:
+            // Check if there was a read operation
+            // Read operation requires rx buffer to be provided
+            // If there is no rx buffer (NULL or nullptr) move on to the next package
+            if((hspi1_transaction_buffer[hspi1_transaction_buffer_tail].rxBuffer!=NULL)&&(hspi1_tx_processed==false)){
+                hspi1_tx_processed=true;
+            }
+            else{
+                // Notify the owner of the data that the transmission was complete
+                if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn!=NULL){
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn();
+                }
+
+                HAL_GPIO_WritePin(
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,GPIO_PIN_SET);
+
+                hspi1_transaction_buffer_tail=(hspi1_transaction_buffer_tail+1)%SPI1_HSPI_DATA_BUFFER_SIZE;
+                hspi1_transaction_buffer_length--;
+                hspi1_tx_processed=false;
+            }
+        break;
+        case HSPI_FLAG_FULL_DUPLEX:
+            if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn!=NULL){
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn();
+            }
+            HAL_GPIO_WritePin(
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_pin,GPIO_PIN_SET);
+
+            hspi1_transaction_buffer_tail=(hspi1_transaction_buffer_tail+1)%SPI1_HSPI_DATA_BUFFER_SIZE;
+            hspi1_transaction_buffer_length--;
+            hspi1_tx_processed=false;
+        break;
+        default:
+        // Should not happen, invalid flag value
     }
     // If there is more data to send
     if(hspi1_transaction_buffer_length>0){
