@@ -26,10 +26,11 @@
 #include <tasks.h>
 
 extern "C" void ramInfoInit(void);
+extern "C" void ramInfoRefresh(void);
 
 const char msg_init_mcu_initialized_info[]         ="[SYS][0x00][  OK  ] System Init: Core + Peripherals Ready\r\n";
-const char msg_init_GPIO_initialized_info[]        ="[SYS][0x01][  OK  ] GPIO initialized with default configuration\r\n";
-const char msg_init_memory_initialized_info[]      ="[SYS][0x02][  OK  ] Memory ready\r\n";
+const char msg_init_memory_initialized_info[]      ="[SYS][0x01][  OK  ] Memory ready\r\n";
+const char msg_init_threadx_startup_info[]         ="[SYS][0xA0][  OK  ] ThreadX starting up...\r\n";
 
 extern "C" void usart1_dma_init(void);
 extern "C" void spi1_dma_init(void);
@@ -512,8 +513,8 @@ void initializeThreadXMemory(void){
 void initializeMemory(void){
 // Initialize RAM info variables
 	ramInfoInit();
+  ramInfoRefresh();
 // DMA memory zeroing and testing could be added here
-	usart1_dma_init();
 	//usart2_dma_init();
 // TheadX memory allocation etc.
 	initializeThreadXMemory();
@@ -521,9 +522,9 @@ void initializeMemory(void){
 
 void initializeSystem(){
 // STM32CubeIDE generated initialization sequence
-	HAL_Init();
+  HAL_Init();
 	SystemClock_Config();
-	MX_GPIO_Init(); // Set default POR state
+	MX_GPIO_Init();
 	MX_DMA_Init();
 	MX_ADC1_Init();
 	MX_I2C2_Init();
@@ -539,10 +540,13 @@ void initializeSystem(){
 	__HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_HT3);
   HAL_ADCEx_Calibration_Start(&hadc1,ADC_SINGLE_ENDED);
 
+// Timers initialization
+
+  usart1_dma_init(); // Fix two functions doing almost the same thing
+	usart1_dma_rx_init();
+  spi1_dma_init();
+
 	while(usart1_dma_enq_data((uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info))!=true){
-		HAL_Delay(10);
-	}
-	while(usart1_dma_enq_data((uint8_t*)msg_init_GPIO_initialized_info,strlen(msg_init_GPIO_initialized_info))!=true){
 		HAL_Delay(10);
 	}
 // Custom initialization sequence
@@ -551,12 +555,5 @@ void initializeSystem(){
 		HAL_Delay(10);
 	}
 	// Initialize USART1 DMA for diagnostics interface
-	usart1_dma_rx_init();
-  spi1_dma_init();
-	//char buffer[INIT_LINE_BUFFER_SIZE]={0};
-	//buffer[0]='1';
 
-	//initializeMCP();
-	//snprintf(buffer,);
-	//HAL_UART_Transmit(&huart1,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
 }

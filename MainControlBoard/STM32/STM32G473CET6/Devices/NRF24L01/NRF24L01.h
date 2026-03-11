@@ -193,7 +193,6 @@ public:
 
     void attach_callback_function(void(*callbackFn)(void));
 
-    bool send_data();
 // Registers operation
 // 0x00 CONFIG R/W
     bool write_reg_config(uint8_t flags);
@@ -223,8 +222,45 @@ public:
     bool read_reg_observe_tx();
 // 0x09 CD R
     bool read_reg_cd();
-
-
+// 0x0A RX_ADDR_PO R/W
+    bool write_reg_rx_addr_p0(const uint8_t*addr,uint8_t length);
+    bool read_reg_rx_addr_p0(uint8_t length);
+// 0x0B RX_ADDR_P1 R/W
+    bool write_reg_rx_addr_p1(const uint8_t*addr,uint8_t length);
+    bool read_reg_rx_addr_p1(uint8_t length);
+// 0x0C RX_ADDR_P2 R/W
+    bool write_reg_rx_addr_p2(const uint8_t*addr,uint8_t length);
+    bool read_reg_rx_addr_p2(uint8_t length);
+// 0x0D RX_ADDR_P3 R/W
+    bool write_reg_rx_addr_p3(const uint8_t*addr,uint8_t length);
+    bool read_reg_rx_addr_p3(uint8_t length);
+// 0x0E RX_ADDR_P4 R/W
+    bool write_reg_rx_addr_p4(const uint8_t*addr,uint8_t length);
+    bool read_reg_rx_addr_p4(uint8_t length);
+// 0x0F RX_ADDR_P5 R/W
+    bool write_reg_rx_addr_p5(const uint8_t*addr,uint8_t length);
+    bool read_reg_rx_addr_p5(uint8_t length);
+// 0x10 TX_ADDR R/W
+    bool write_reg_tx_addr(const uint8_t*addr,uint8_t length);
+    bool read_reg_tx_addr(uint8_t length);
+// 0x11 RX_PW_P0 R/W
+    bool write_reg_rx_pw_p0(uint8_t flags);
+    bool read_reg_rx_pw_p0();
+// 0x12 RX_PW_P1 R/W
+    bool write_reg_rx_pw_p1(uint8_t flags);
+    bool read_reg_rx_pw_p1();
+// 0x13 RX_PW_P2 R/W
+    bool write_reg_rx_pw_p2(uint8_t flags);
+    bool read_reg_rx_pw_p2();
+// 0x14 RX_PW_P3 R/W
+    bool write_reg_rx_pw_p3(uint8_t flags);
+    bool read_reg_rx_pw_p3();
+// 0x15 RX_PW_P4 R/W
+    bool write_reg_rx_pw_p4(uint8_t flags);
+    bool read_reg_rx_pw_p4();
+// 0x16 RX_PW_P5 R/W
+    bool write_reg_rx_pw_p5(uint8_t flags);
+    bool read_reg_rx_pw_p5();
 // 0x17 FIFO_STATUS R/W
     bool write_reg_fifo_status(uint8_t flags);
     bool read_reg_fifo_status();
@@ -234,8 +270,15 @@ public:
 // 0x1D FEATURE R/W
     bool write_reg_feature(uint8_t flags);
     bool read_reg_feature();
+// Function for getting information from NRF (parsing values from raw registers)
+    bool read_rx_payload(uint8_t length);
+    bool write_tx_payload(uint8_t length);
 
-    // Function for getting information from NRF (parsing values from raw registers)
+    bool flush_tx();
+    bool flush_rx();
+    bool reuse_tx_pl();
+    bool activate(uint8_t flags);
+
 };
 
 // Test functions

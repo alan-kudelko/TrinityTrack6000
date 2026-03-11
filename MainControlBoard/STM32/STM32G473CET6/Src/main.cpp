@@ -210,8 +210,9 @@ void test_SPI_communication(){
     HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET); // Deselect device 1
     break;
     }
-    // Check ioc, there is a pending code generation
 }
+
+extern "C" void nrf24l01_init(void);
 
 /**
  * @brief  The application entry point.
@@ -219,13 +220,9 @@ void test_SPI_communication(){
  */
 int main(void){
     initializeSystem();
+    //initializeHardware();
     // Handle non critical errors which in worst case result
     // in system's few functionalities unavailable
-    ramInfoRefresh();
-    ramInfoGeneral(delay_function,100);
-    ramInfoRAM1(delay_function,100);
-    ramInfoRAM2(delay_function,100);
-    ramInfoCCSRAM(delay_function,100);
 
         HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
     __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_2,500);
@@ -244,6 +241,8 @@ int main(void){
         
         HAL_Delay(1000);
     }
+
+    nrf24l01_init();
 
     nrf24l01_test();
 

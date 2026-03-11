@@ -27,8 +27,8 @@
  *  @{
  */
 extern const char msg_init_mcuInitialized_info[]; /**< Info1 */
-extern const char msg_init_GPIOInitialized_info[]; /**< Info2 */
-extern const char msg_init_memoryInitialized_info[]; /**< Info3 */
+extern const char msg_init_memoryInitialized_info[]; /**< Info2 */
+extern const char msg_init_threadx_startup_info[];
 /** @} */
 
 #ifdef __cplusplus
@@ -148,8 +148,6 @@ void initializeMemory(void);
 
 //void initializeNRF(void);
 //void initializeFRAM(void);
-
-void initializeMCP(void);
 
 //void initializeADXL(void);
 //void initializeGPS(void);
