@@ -88,9 +88,9 @@
  * @{
  */
 
-#define NRF_BIT_MASK_RX_DR         (1<<6)
-#define NRF_BIT_MASK_TX_DS         (1<<5)
-#define NRF_BIT_MASK_MAX_RT        (1<<4)
+#define NRF_BIT_RX_DR              (1<<6)
+#define NRF_BIT_TX_DS              (1<<5)
+#define NRF_BIT_MAX_RT             (1<<4)
 #define NRF_BIT_EN_CRC             (1<<3)
 #define NRF_BIT_CRCO               (1<<2)
 #define NRF_BIT_PWR_UP             (1<<1)
@@ -155,7 +155,6 @@
 #define NRF_BIT_ARC_CNT0           (1<<0)
 
 #define NRF_BIT_CD                 (1<<0)
-// RX_ADDR_P0-P5 39:0
 
 #define NRF_BIT_TX_REUSE           (1<<6)
 #define NRF_BIT_RX_FULL            (1<<1)
@@ -174,12 +173,40 @@
 
 /** @} */
 
+typedef struct NRF24L01_REGS{
+    uint8_t config;
+    uint8_t en_aa;
+    uint8_t en_rxaddr;
+    uint8_t setup_aw;
+    uint8_t setup_retr;
+    uint8_t rf_ch;
+    uint8_t rf_setup;
+    uint8_t status;
+    uint8_t observe_tx;
+    uint8_t cd;
+    uint8_t rx_addr_p0[5];
+    uint8_t rx_addr_p1[5];
+    uint8_t rx_addr_p2;
+    uint8_t rx_addr_p3;
+    uint8_t rx_addr_p4;
+    uint8_t rx_addr_p5;
+    uint8_t tx_addr[5];
+    uint8_t rx_pw_p0;
+    uint8_t rx_pw_p1;
+    uint8_t rx_pw_p2;
+    uint8_t rx_pw_p3;
+    uint8_t rx_pw_p4;
+    uint8_t rx_pw_p5;
+    uint8_t fifo_status;
+    uint8_t dynpd;
+    uint8_t feature;
+}NRF24L01_REGS;
 
 class NRF24L01{
     DEVICE_IO _cePin;  // Send/receive data pin (depending on mode)
     DEVICE_IO _csnPin; // Chip select pin for SPI interface
     DEVICE_IO _irqPin; // Interrupt pin
-
+    NRF24L01_REGS _regs; // Register values
     hspi_data _transaction_data;
     void initialize_hspi_data();
 public:
@@ -193,7 +220,7 @@ public:
 
     void attach_callback_function(void(*callbackFn)(void));
 
-// Registers operation
+// Register operations
 // 0x00 CONFIG R/W
     bool write_reg_config(uint8_t flags);
     bool read_reg_config();
@@ -273,13 +300,15 @@ public:
 // Function for getting information from NRF (parsing values from raw registers)
     bool read_rx_payload(uint8_t length);
     bool write_tx_payload(uint8_t length);
-
+// TX/RX Pipes operations
     bool flush_tx();
     bool flush_rx();
     bool reuse_tx_pl();
     bool activate(uint8_t flags);
-
+// Internal register expected values (after write operations)
+    NRF24L01_REGS get_register_values()const;
 };
+
 
 // Test functions
 

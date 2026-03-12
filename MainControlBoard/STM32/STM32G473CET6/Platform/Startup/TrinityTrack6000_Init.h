@@ -146,17 +146,6 @@ void initializeThreadXMemory(void);
   */
 void initializeMemory(void);
 
-//void initializeNRF(void);
-//void initializeFRAM(void);
-
-//void initializeADXL(void);
-//void initializeGPS(void);
-//void initializeInfineon(void)
-//void initializeNXP(void);
-//void initializeRENESANS(void);
-//void initializeFPGA(void);
-
-
 /**
  * @brief System Initialization Function
  * @param None

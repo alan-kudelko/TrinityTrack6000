@@ -34,6 +34,7 @@ const char msg_init_threadx_startup_info[]         ="[SYS][0xA0][  OK  ] ThreadX
 
 extern "C" void usart1_dma_init(void);
 extern "C" void spi1_dma_init(void);
+extern "C" void nrf24l01_init(void);
 
 void SystemClock_Config(void){
   	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -456,9 +457,8 @@ void MX_GPIO_Init(void){
                           |RENESANS_RST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, NRF24L01_CS_Pin|FRAM_CS_Pin|NRF24L01_IRQ_Pin|INFINEON_RST_Pin
-                          |RENESANS_CS_Pin|INFINEON_CS_Pin|WATCHDOG_FEED_Pin|GPS_RST_Pin
-                          |NC_1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, NRF24L01_CS_Pin|FRAM_CS_Pin|INFINEON_RST_Pin|RENESANS_CS_Pin
+                          |INFINEON_CS_Pin|WATCHDOG_FEED_Pin|GPS_RST_Pin|NC_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : FPGA_RST_Pin KILL_SWITCH_Pin NRF24L01_CE_Pin */
   GPIO_InitStruct.Pin = FPGA_RST_Pin|KILL_SWITCH_Pin|NRF24L01_CE_Pin;
@@ -494,10 +494,13 @@ void MX_GPIO_Init(void){
 
   /*Configure GPIO pin : NRF24L01_IRQ_Pin */
   GPIO_InitStruct.Pin = NRF24L01_IRQ_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(NRF24L01_IRQ_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI2_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI2_IRQn);
 }
 
 void initializeThreadXMemory(void){
@@ -554,6 +557,7 @@ void initializeSystem(){
 	while(usart1_dma_enq_data((uint8_t*)msg_init_memory_initialized_info,strlen(msg_init_memory_initialized_info))!=true){
 		HAL_Delay(10);
 	}
-	// Initialize USART1 DMA for diagnostics interface
+// Initialize hardware
+  //nrf24l01_init();
 
 }

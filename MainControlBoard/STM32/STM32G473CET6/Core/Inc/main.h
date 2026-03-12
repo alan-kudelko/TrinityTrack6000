@@ -81,6 +81,7 @@ void Error_Handler(void);
 #define FRAM_CS_GPIO_Port GPIOB
 #define NRF24L01_IRQ_Pin GPIO_PIN_2
 #define NRF24L01_IRQ_GPIO_Port GPIOB
+#define NRF24L01_IRQ_EXTI_IRQn EXTI2_IRQn
 #define INFINEON_RST_Pin GPIO_PIN_10
 #define INFINEON_RST_GPIO_Port GPIOB
 #define RENESANS_CS_Pin GPIO_PIN_11

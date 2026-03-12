@@ -212,7 +212,7 @@ void test_SPI_communication(){
     }
 }
 
-extern "C" void nrf24l01_init(void);
+extern "C" void nrf24l01_init1(void);
 
 /**
  * @brief  The application entry point.
@@ -241,9 +241,7 @@ int main(void){
         
         HAL_Delay(1000);
     }
-
-    nrf24l01_init();
-
+    nrf24l01_init1();
     nrf24l01_test();
 
     tx_kernel_enter();

@@ -28,10 +28,17 @@
 
 #include <stdint.h>
 
+#include <NRF24L01.h>
+#include <TrinityTrack6000_RadioConfig.h>
+
+#define OPERATION_BUFFER_SIZE 33
+
 #define TASK_WIRELESS_COMM_STACK_SIZE 512 /**< Stack size for wireless comm task */
 #define TASK_WIRELESS_COMM_PRIORITY 2     /**< Priority for wireless comm task */
 
 extern const char task_wireless_comm_name[]; /**< Name of the wireless comm task */
+
+extern const struct NRF24L01_REGS nrf24l01_default_regs;
 
 extern TX_THREAD task_wireless_comm_handle;
 extern ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE];
@@ -42,6 +49,10 @@ extern uint16_t test_data_length;
 #ifdef __cplusplus
     extern "C"{
 #endif // __cplusplus
+
+extern void radioDataReceived_callback(void);
+
+extern void nrf24l01_init(void);
 
 extern void task_wireless_comm_init(void);
 

@@ -18,6 +18,8 @@
 #include <SPI1_Dma.h>
 
 #include <stm32g4xx_hal.h> // Delete later
+#include <USART1_Dma.h> // Delete later after testing
+
 void NRF24L01::initialize_hspi_data(){
     _transaction_data.callbackFn=nullptr;
     _transaction_data.flags=HSPI_FLAG_FULL_DUPLEX; // Only option since it's full duplex communication
@@ -487,12 +489,34 @@ bool NRF24L01::write_tx_payload(uint8_t length){
     return true;
 }
 
+bool NRF24L01::flush_tx(){
+    return true;
+}
+
+bool NRF24L01::flush_rx(){
+    return true;
+}
+
+bool NRF24L01::reuse_tx_pl(){
+    return true;
+}
+
+bool NRF24L01::activate(uint8_t flags){
+    return true;
+}
+
+NRF24L01_REGS NRF24L01::get_register_values()const{
+    return _regs;
+}
+
 
 // Test functions
 
 extern SPI_HandleTypeDef hspi1;
 
-extern "C" void nrf24l01_init(void){
+void nrf24l01_display_all_registers();
+
+extern "C" void nrf24l01_init1(void){
     // Dobra na razie pierwsza proba bedzie taka, ze to stm32 bedzie nadawac
     // Na arduino tymczasem zrobie polling albo event driven wypisywanie danych na uart w postaci surowej paczki
     // Detale sa nieistotne, istotne jest potwierdzenie konfiguracji i poprawnosci odbieranych przez Arduino danych
@@ -593,6 +617,8 @@ extern "C" void nrf24l01_init(void){
         HAL_SPI_TransmitReceive(&hspi1,operationTx,operationRx,1,HAL_MAX_DELAY);
         HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);    
 
+nrf24l01_display_all_registers();
+
     operationTx[0]=NRF_CMD_W_TX_PAYLOAD;
     memset(operationTx+1,0xAA,32);
     for(int i=0;i<1000;i++){
@@ -688,10 +714,166 @@ extern "C" void nrf24l01_test(void){
 
     nrf24l01.read_reg_status();
     HAL_Delay(100);
-    nrf24l01.write_reg_status(NRF_BIT_MASK_RX_DR|NRF_BIT_MASK_TX_DS);
+    nrf24l01.write_reg_status(NRF_BIT_RX_DR|NRF_BIT_TX_DS);
     HAL_Delay(100);
     nrf24l01.read_reg_status();
 
     HAL_Delay(100);
+
+}
+
+extern UART_HandleTypeDef huart1;
+
+void nrf24l01_display_all_registers(){
+    // Function to display all register values to serial terminal
+    // Used only during testing of the wireless communication
+    typedef struct NRF24L01_REG{
+        uint8_t config;
+        uint8_t en_aa;
+        uint8_t en_rxaddr;
+        uint8_t setup_aw;
+        uint8_t setup_retr;
+        uint8_t rf_ch;
+        uint8_t rf_setup;
+        uint8_t status;
+        uint8_t observe_tx;
+        uint8_t cd;
+        uint8_t rx_addr_p0[5];
+        uint8_t rx_addr_p1[5];
+        uint8_t rx_addr_p2[5];
+        uint8_t rx_addr_p3[5];
+        uint8_t rx_addr_p4[5];
+        uint8_t rx_addr_p5[5];
+        uint8_t tx_addr[5];
+        uint8_t rx_pw_p0;
+        uint8_t rx_pw_p1;
+        uint8_t rx_pw_p2;
+        uint8_t rx_pw_p3;
+        uint8_t rx_pw_p4;
+        uint8_t rx_pw_p5;
+        uint8_t fifo_status;
+        uint8_t dynpd;
+        uint8_t feature;
+    }NRF24L01_REG;
+
+    NRF24L01_REG nrf24l01_reg;
+
+    UNUSED(nrf24l01_reg);
+
+    uint8_t operationTx[33]={0};
+    uint8_t operationRx[33]={0};
+
+    char buffer[33]{0};
+    UNUSED(buffer);
+
+    NRF24L01 nrf24l01(nullptr,0,GPIOB,GPIO_PIN_0,nullptr,0);
+    nrf24l01.attach_rx_buffer(operationRx,33);
+    nrf24l01.attach_tx_buffer(operationTx,33);
+// Reading data from NRF24L01 and assigning values to the struct
+// CONFIG
+    nrf24l01.read_reg_config();
+    HAL_Delay(50);
+    nrf24l01_reg.config=operationRx[1];
+// ENAA
+    nrf24l01.read_reg_en_aa();
+    HAL_Delay(50);
+    nrf24l01_reg.en_aa=operationRx[1];
+// EN_RXADDR
+    nrf24l01.read_reg_en_rxAddr();
+    HAL_Delay(50);
+    nrf24l01_reg.en_rxaddr=operationRx[1];
+// SETUP_AW
+    nrf24l01.read_reg_setup_aw();
+    HAL_Delay(50);
+    nrf24l01_reg.setup_aw=operationRx[1];
+// SETUP_RETR
+    nrf24l01.read_reg_setup_retr();
+    HAL_Delay(50);
+    nrf24l01_reg.setup_retr=operationRx[1];
+// RF_CH
+    nrf24l01.read_reg_rf_ch();
+    HAL_Delay(50);
+    nrf24l01_reg.rf_ch=operationRx[1];
+// RF_SETUP
+    nrf24l01.read_reg_rf_setup();
+    HAL_Delay(50);
+    nrf24l01_reg.rf_setup=operationRx[1];
+// STATUS
+    nrf24l01.read_reg_status();
+    HAL_Delay(50);
+    nrf24l01_reg.status=operationRx[1];
+// OBSERVE_TX
+    nrf24l01.read_reg_observe_tx();
+    HAL_Delay(50);
+    nrf24l01_reg.observe_tx=operationRx[1];
+// CD
+    nrf24l01.read_reg_cd();
+    HAL_Delay(50);
+    nrf24l01_reg.cd=operationRx[1];
+// RX_ADDR_P0
+    nrf24l01.read_reg_rx_addr_p0(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.rx_addr_p0,operationRx+1,5);
+// RX_ADDR_P1
+    nrf24l01.read_reg_rx_addr_p1(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.rx_addr_p1,operationRx+1,5);
+// RX_ADDR_P2
+    nrf24l01.read_reg_rx_addr_p2(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.rx_addr_p2,operationRx+1,5);
+// RX_ADDR_P3
+    nrf24l01.read_reg_rx_addr_p3(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.rx_addr_p3,operationRx+1,5);
+// RX_ADDR_P4
+    nrf24l01.read_reg_rx_addr_p4(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.rx_addr_p4,operationRx+1,5);
+// RX_ADDR_P5
+    nrf24l01.read_reg_rx_addr_p5(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.rx_addr_p5,operationRx+1,5);
+// TX_ADDR
+    nrf24l01.read_reg_tx_addr(5);
+    HAL_Delay(50);
+    memcpy(nrf24l01_reg.tx_addr,operationRx+1,5);
+// RX_PW_P0
+    nrf24l01.read_reg_rx_pw_p0();
+    HAL_Delay(50);
+    nrf24l01_reg.rx_pw_p0=operationRx[1];
+// RX_PW_P1
+    nrf24l01.read_reg_rx_pw_p1();
+    HAL_Delay(50);
+    nrf24l01_reg.rx_pw_p1=operationRx[1];
+// RX_PW_P2
+    nrf24l01.read_reg_rx_pw_p2();
+    HAL_Delay(50);
+    nrf24l01_reg.rx_pw_p2=operationRx[1];
+// RX_PW_P3
+    nrf24l01.read_reg_rx_pw_p3();
+    HAL_Delay(50);
+    nrf24l01_reg.rx_pw_p3=operationRx[1];
+// RX_PW_P4
+    nrf24l01.read_reg_rx_pw_p4();
+    HAL_Delay(50);
+    nrf24l01_reg.rx_pw_p4=operationRx[1];
+// RX_PW_P5
+    nrf24l01.read_reg_rx_pw_p5();
+    HAL_Delay(50);
+    nrf24l01_reg.rx_pw_p5=operationRx[1];
+// FIFO_STATUS
+    nrf24l01.read_reg_fifo_status();
+    HAL_Delay(50);
+    nrf24l01_reg.fifo_status=operationRx[1];
+// DYNPD
+    nrf24l01.read_reg_dynpd();
+    HAL_Delay(50);
+    nrf24l01_reg.dynpd=operationRx[1];
+// FEATURE
+    nrf24l01.read_reg_feature();
+    HAL_Delay(50);
+    nrf24l01_reg.feature=operationRx[1];
+    //HAL_UART_Transmit(&huart1,(uint8_t*)buffer,8,HAL_MAX_DELAY);
 
 }
