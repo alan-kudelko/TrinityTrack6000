@@ -511,6 +511,7 @@ void initializeThreadXMemory(void){
 	// Clear all stacks
 	task_CLI_init();
 	task_SystemDispatcher_init();
+  task_wireless_comm_init();
 }
 
 void initializeMemory(void){
@@ -558,6 +559,6 @@ void initializeSystem(){
 		HAL_Delay(10);
 	}
 // Initialize hardware
-  //nrf24l01_init();
+  nrf24l01_init();
 
 }

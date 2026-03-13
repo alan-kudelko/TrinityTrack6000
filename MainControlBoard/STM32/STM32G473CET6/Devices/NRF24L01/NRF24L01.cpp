@@ -1,14 +1,6 @@
 /**
- * @file NRF24L01.cpp
- * @brief Implementation of NRF24L01.h
- * 
- * @author Alan Kudełko
- * @copyright
- * Copyright (c) 2025 Alan Kudełko.  
- * All rights reserved.  
- * For educational and research purposes only.  
- * Redistribution, modification, or commercial use prohibited without
- * explicit written permission.
+ * @addtogroup NRF24L01
+ * @{
  */
 
 #include <NRF24L01.h>
@@ -54,14 +46,12 @@ NRF24L01::~NRF24L01(){
     // Nothing to do
 }
 
-void NRF24L01::attach_tx_buffer(uint8_t*txBuffer,uint8_t txBufferLength){
+void NRF24L01::attach_tx_buffer(uint8_t*txBuffer){
     _transaction_data.txBuffer=txBuffer;
-    _transaction_data.txLength=txBufferLength;
 }
 
-void NRF24L01::attach_rx_buffer(uint8_t*rxBuffer,uint8_t rxBufferLength){
+void NRF24L01::attach_rx_buffer(uint8_t*rxBuffer){
     _transaction_data.rxBuffer=rxBuffer;
-    _transaction_data.rxLength=rxBufferLength;
 }
 
 void NRF24L01::attach_callback_function(void(*callbackFn)(void)){
@@ -316,7 +306,7 @@ bool NRF24L01::write_reg_rx_addr_p5(const uint8_t*addr,uint8_t length){
 bool NRF24L01::read_reg_rx_addr_p5(uint8_t length){
     _transaction_data.txBuffer[0]=NRF_CMD_R_REGISTER|NRF_REG_RX_ADDR_P5;
     memset(_transaction_data.txBuffer+1,NRF_CMD_NOP,length);
-    _transaction_data.txLength=length+1;
+    _transaction_data.txLength=2;
 
     return spi1_dma_enq_data(&_transaction_data);
 }
@@ -482,6 +472,7 @@ bool NRF24L01::read_reg_feature(){
 }
 
 bool NRF24L01::read_rx_payload(uint8_t length){
+
     return true;
 }
 
@@ -490,19 +481,32 @@ bool NRF24L01::write_tx_payload(uint8_t length){
 }
 
 bool NRF24L01::flush_tx(){
-    return true;
+    _transaction_data.txBuffer[0]=NRF_CMD_FLUSH_TX;
+    _transaction_data.txLength=1;
+
+    return spi1_dma_enq_data(&_transaction_data);
 }
 
 bool NRF24L01::flush_rx(){
-    return true;
+    _transaction_data.txBuffer[0]=NRF_CMD_FLUSH_RX;
+    _transaction_data.txLength=1;
+
+    return spi1_dma_enq_data(&_transaction_data);
 }
 
 bool NRF24L01::reuse_tx_pl(){
-    return true;
+    _transaction_data.txBuffer[0]=NRF_CMD_REUSE_TX_PL;
+    _transaction_data.txLength=1;
+
+    return spi1_dma_enq_data(&_transaction_data);
 }
 
-bool NRF24L01::activate(uint8_t flags){
-    return true;
+bool NRF24L01::activate(){
+    _transaction_data.txBuffer[0]=NRF_CMD_ACTIVATE;
+    _transaction_data.txBuffer[1]=NRF_CMD_ACTIVATE_DATA;
+    _transaction_data.txLength=2;
+
+    return spi1_dma_enq_data(&_transaction_data);
 }
 
 NRF24L01_REGS NRF24L01::get_register_values()const{
@@ -514,7 +518,7 @@ NRF24L01_REGS NRF24L01::get_register_values()const{
 
 extern SPI_HandleTypeDef hspi1;
 
-void nrf24l01_display_all_registers();
+extern "C" void nrf24l01_display_all_registers();
 
 extern "C" void nrf24l01_init1(void){
     // Dobra na razie pierwsza proba bedzie taka, ze to stm32 bedzie nadawac
@@ -535,10 +539,6 @@ extern "C" void nrf24l01_init1(void){
     // STM/AVR TX_ADDR       0xFE FE FE FE FE
     //     AVR RX_PW_P0      1<<5 (32 bajty)
     //
-    // A tak teraz do zrobienia zostalo napisanie programu na Arduino Mega i sprobowac to skomunikowac
-    // Jakkolwiek skomunikowac, bez przerwan bez czegokolwiek, jedynie sprawdzić % utraconych pakietów
-    // w zależności od odległości, parametrem będzie prędkość transmisji 1 Mbps lub 2 Mbps
-    // A na Arduino dodać LCD'ka żeby wyświetlić ten procent na koniec
 
     uint8_t operationTx[33]={0};
     uint8_t operationRx[33]={0};
@@ -555,8 +555,8 @@ extern "C" void nrf24l01_init1(void){
 
     NRF24L01 nrf24l01(nullptr,0,GPIOB,GPIO_PIN_0,nullptr,0);
 
-    nrf24l01.attach_rx_buffer(operationRx,33);
-    nrf24l01.attach_tx_buffer(operationTx,33);
+    nrf24l01.attach_rx_buffer(operationRx);
+    nrf24l01.attach_tx_buffer(operationTx);
 
     NRF_SETTINGS nrf_wrote_settings{
         NRF_BIT_EN_CRC|NRF_BIT_CRCO|NRF_BIT_PWR_UP,
@@ -617,7 +617,7 @@ extern "C" void nrf24l01_init1(void){
         HAL_SPI_TransmitReceive(&hspi1,operationTx,operationRx,1,HAL_MAX_DELAY);
         HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);    
 
-nrf24l01_display_all_registers();
+    nrf24l01_display_all_registers();
 
     operationTx[0]=NRF_CMD_W_TX_PAYLOAD;
     memset(operationTx+1,0xAA,32);
@@ -648,7 +648,7 @@ nrf24l01_display_all_registers();
 }
 
 extern "C" void callback(void){
-    
+    // Delete after testing
 }
 
 extern "C" void nrf24l01_test(void){
@@ -707,8 +707,8 @@ extern "C" void nrf24l01_test(void){
 
     NRF24L01 nrf24l01(nullptr,0,GPIOB,GPIO_PIN_0,nullptr,0);
 
-    nrf24l01.attach_rx_buffer(operationRx,33);
-    nrf24l01.attach_tx_buffer(operationTx,33);
+    nrf24l01.attach_rx_buffer(operationRx);
+    nrf24l01.attach_tx_buffer(operationTx);
 
     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_15,GPIO_PIN_RESET);
 
@@ -724,7 +724,7 @@ extern "C" void nrf24l01_test(void){
 
 extern UART_HandleTypeDef huart1;
 
-void nrf24l01_display_all_registers(){
+extern "C" void nrf24l01_display_all_registers(){
     // Function to display all register values to serial terminal
     // Used only during testing of the wireless communication
     typedef struct NRF24L01_REG{
@@ -767,8 +767,8 @@ void nrf24l01_display_all_registers(){
     UNUSED(buffer);
 
     NRF24L01 nrf24l01(nullptr,0,GPIOB,GPIO_PIN_0,nullptr,0);
-    nrf24l01.attach_rx_buffer(operationRx,33);
-    nrf24l01.attach_tx_buffer(operationTx,33);
+    nrf24l01.attach_rx_buffer(operationRx);
+    nrf24l01.attach_tx_buffer(operationTx);
 // Reading data from NRF24L01 and assigning values to the struct
 // CONFIG
     nrf24l01.read_reg_config();
@@ -877,3 +877,5 @@ void nrf24l01_display_all_registers(){
     //HAL_UART_Transmit(&huart1,(uint8_t*)buffer,8,HAL_MAX_DELAY);
 
 }
+
+/**@} */

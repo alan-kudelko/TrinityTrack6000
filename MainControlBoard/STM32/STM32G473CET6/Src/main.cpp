@@ -241,7 +241,7 @@ int main(void){
         
         HAL_Delay(1000);
     }
-    nrf24l01_init1();
+    //nrf24l01_init1();
     nrf24l01_test();
 
     tx_kernel_enter();

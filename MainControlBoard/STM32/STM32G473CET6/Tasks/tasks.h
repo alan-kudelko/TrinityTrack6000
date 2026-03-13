@@ -13,3 +13,5 @@
 
 #include <task_CLI.h>
 #include <task_SystemDispatcher.h>
+#include <task_WirelessComm.h>
+#include <task_McuAnalog.h>

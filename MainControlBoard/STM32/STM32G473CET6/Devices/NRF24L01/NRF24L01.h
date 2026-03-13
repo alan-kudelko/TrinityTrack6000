@@ -1,6 +1,33 @@
 /**
- * @file NRF24L01.h
- * @brief Dedicated class for NRF24L01 module
+ * @defgroup NRF24L01 NRF24L01 Driver
+ * @brief Lightweight hardware driver for the NRF24L01 2.4 GHz transceiver.
+ *
+ * This module provides a minimal abstraction layer for the NRF24L01 device,
+ * exposing basic register access and payload transfer operations over SPI.
+ * The driver is intentionally designed as a thin hardware adapter and does
+ * not implement radio protocol logic, configuration validation, or link
+ * management.
+ *
+ * All higher-level responsibilities such as radio configuration, packet
+ * formatting, link supervision, and command validation are expected to be
+ * handled by the Radio Service / Radio Task layer of the system.
+ *
+ * The driver integrates with the asynchronous SPI1 DMA driver and supports
+ * non-blocking operation through externally supplied buffers and callbacks,
+ * making it suitable for RTOS-based systems where the radio is managed by
+ * a dedicated task.
+ *
+ * Responsibilities of this driver:
+ * - Forming SPI command frames for the NRF24L01
+ * - Performing register read/write operations
+ * - Handling payload TX/RX transfers
+ * - Forwarding completion callbacks from the SPI layer
+ *
+ * Non-responsibilities (handled by higher layers):
+ * - Radio configuration policy
+ * - Parameter validation
+ * - Link supervision and packet sequencing
+ * - Application-level radio protocol
  * 
  * @author Alan Kudełko
  * @copyright
@@ -9,6 +36,7 @@
  * For educational and research purposes only.  
  * Redistribution, modification, or commercial use prohibited without
  * explicit written permission.
+ * @{ 
  */
 
 #ifndef NRF24L01_H_
@@ -76,6 +104,7 @@
 #define NRF_CMD_FLUSH_RX           0xE2
 #define NRF_CMD_REUSE_TX_PL        0xE3
 #define NRF_CMD_ACTIVATE           0x50
+#define NRF_CMD_ACTIVATE_DATA      0x73
 #define NRF_CMD_R_RX_PL_WID        0x60
 #define NRF_CMD_W_ACK_PAYLOAD      0xA8
 #define NRF_CMD_W_TX_PAYLOAD_NOACK 0xB0
@@ -215,8 +244,8 @@ public:
 
     ~NRF24L01();
 
-    void attach_tx_buffer(uint8_t*txBuffer,uint8_t txBufferLength);
-    void attach_rx_buffer(uint8_t*rxBuffer,uint8_t rxBufferLength);
+    void attach_tx_buffer(uint8_t*txBuffer);
+    void attach_rx_buffer(uint8_t*rxBuffer);
 
     void attach_callback_function(void(*callbackFn)(void));
 
@@ -304,7 +333,7 @@ public:
     bool flush_tx();
     bool flush_rx();
     bool reuse_tx_pl();
-    bool activate(uint8_t flags);
+    bool activate();
 // Internal register expected values (after write operations)
     NRF24L01_REGS get_register_values()const;
 };
@@ -337,3 +366,5 @@ void nrf24l01_test(void);
 
 
 #endif // NRF24L01_H_
+
+/**@} */
