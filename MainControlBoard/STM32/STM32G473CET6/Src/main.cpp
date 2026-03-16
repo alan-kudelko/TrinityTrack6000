@@ -91,6 +91,16 @@ void tx_application_define(void* first_unused_memory){
                     TASKS_SYSTEM_DISPATCHER_PRIORITY,
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
+    tx_thread_create(&task_wireless_comm_handle,
+                    (char*)task_wireless_comm_name,
+                    task_wireless_comm,
+                    0,
+                    &task_wireless_comm_stack,
+                    sizeof(task_wireless_comm_stack),
+                    TASK_WIRELESS_COMM_PRIORITY,
+                    TASK_WIRELESS_COMM_PRIORITY,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
 }
 
 void test_function(UINT(*fptr)(ULONG),ULONG retryTimeout){
@@ -212,8 +222,6 @@ void test_SPI_communication(){
     }
 }
 
-extern "C" void nrf24l01_init1(void);
-
 /**
  * @brief  The application entry point.
  * @retval int
@@ -230,9 +238,9 @@ int main(void){
     HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
     __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,500);
 
-        test_SPI_communication();
+        //test_SPI_communication();
 
-    HAL_Delay(100);
+    //HAL_Delay(100);
 
     uint32_t adc_buffer[4]{0};
 
@@ -241,9 +249,6 @@ int main(void){
         
         HAL_Delay(1000);
     }
-    //nrf24l01_init1();
-    nrf24l01_test();
-
     tx_kernel_enter();
 
     return 0;

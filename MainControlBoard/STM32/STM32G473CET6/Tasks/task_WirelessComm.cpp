@@ -13,6 +13,9 @@
 
 #include <task_WirelessComm.h>
 #include <TrinityTrack6000_Pinout.h>
+#include <USART1_Dma.h>
+#include <string.h>
+#include <stdio.h>
 
 const static NRF_SETTINGS nrf_default_settings{
     NRF_BIT_TX_DS|NRF_BIT_MAX_RT|NRF_BIT_EN_CRC|NRF_BIT_CRCO|NRF_BIT_PWR_UP|NRF_BIT_PRIM_RX, // config
@@ -20,8 +23,8 @@ const static NRF_SETTINGS nrf_default_settings{
     NRF_BIT_ERX_P0,  // en_rxaddr
     NRF_BIT_AW1|NRF_BIT_AW0, // setup_aw
     0x00, // setup_retr
-    NRF_BIT_RF_CH6, // rf_ch
-    NRF_BIT_RF_DR|NRF_BIT_RF_PWR2|NRF_BIT_RF_PWR1|NRF_BIT_RF_LNA_HCURR, // rf_setup
+    NRF_BIT_RF_CH1, // rf_ch
+    (NRF_BIT_RF_DR&0)|NRF_BIT_RF_PWR2|NRF_BIT_RF_PWR1|NRF_BIT_RF_LNA_HCURR, // rf_setup
     RADIO_DEFAULT_ADDRESS, // rx_addr_p0
     {0x00}, // rx_addr_p1
     0x00, // rx_addr_p2
@@ -49,6 +52,7 @@ ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE] SECTION(".task_sta
 */
 
 static TX_SEMAPHORE task_wireless_comm_wakeup_sem;
+static TX_SEMAPHORE task_wireless_package_read_sem;
 
 static volatile uint8_t initializationStepDone=0;
 
@@ -58,6 +62,9 @@ static void initializationStepDone_callback(void){
     initializationStepDone++;
 }
 
+static uint8_t rxBuffer[33]{0};
+static uint8_t txBuffer[33]{0};
+
 /**@} */
 
 extern "C" void radioDataReceived_callback(void){
@@ -65,12 +72,13 @@ extern "C" void radioDataReceived_callback(void){
     tx_semaphore_put(&task_wireless_comm_wakeup_sem);
 }
 
+extern "C" void packagePayloadRead_callback(void){
+    tx_semaphore_put(&task_wireless_package_read_sem);
+}
+
 extern "C" void nrf24l01_display_all_registers();
 
 extern "C" void nrf24l01_init(void){
-    uint8_t txBuffer[OPERATION_BUFFER_SIZE];
-    uint8_t rxBuffer[OPERATION_BUFFER_SIZE];
-
     nrf24l01.attach_rx_buffer(rxBuffer);
     nrf24l01.attach_tx_buffer(txBuffer);
     nrf24l01.attach_callback_function(initializationStepDone_callback);
@@ -326,26 +334,128 @@ extern "C" void nrf24l01_init(void){
 
     HAL_Delay(1);
     HAL_GPIO_WritePin(NRF24L01_CE_GPIO_Port,NRF24L01_CE_Pin,GPIO_PIN_SET);
-    nrf24l01_display_all_registers();
+    //nrf24l01_display_all_registers();
+    // Clear peding EXTI IRQ interrupt
+    __HAL_GPIO_EXTI_CLEAR_IT(NRF24L01_IRQ_Pin);
 }
+
+char werdon[]="werdon";
+char werdon2[]="werdon2";
 
 extern "C" void task_wireless_comm_init(void){
     tx_semaphore_create(&task_wireless_comm_wakeup_sem,
-       nullptr,
+       werdon,
        0);
+    tx_semaphore_create(&task_wireless_package_read_sem,
+        werdon2,
+        0);
+}
+
+uint8_t packageIdCounter[1000]{0};
+uint16_t packageId=0;
+uint16_t unknown_package_count=0;
+
+void check_packages(){
+    while(!usart1_dma_enq_data((uint8_t*)"Lost or doubled packages:\r\n",strlen("Lost or doubled packages:\r\n"))){
+        tx_thread_sleep(1);
+    }
+
+
+    char buffer[10]{0};
+    for(uint16_t i=0;i<1000;i++){
+        if((packageIdCounter[i]<1)||(packageIdCounter[i]>1)){
+            snprintf(buffer,10,"%d",i);      
+            while(!usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))){
+                tx_thread_sleep(1);
+            }
+
+            while(!usart1_dma_enq_data((uint8_t*)" ",1)){
+                tx_thread_sleep(1);
+            }
+
+
+            snprintf(buffer,10,"%d",packageIdCounter[i]);       
+            while(!usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))){
+                tx_thread_sleep(1);
+            }
+            while(!usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))){
+                tx_thread_sleep(1);
+            }
+        }
+    }
+    while(!usart1_dma_enq_data((uint8_t*)"Unkown packages:\r\n",strlen("Unkown packages:\r\n"))){
+        tx_thread_sleep(1);
+    }
+
+    snprintf(buffer,10,"%d",unknown_package_count);       
+    while(!usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer))){
+        tx_thread_sleep(1);
+    }
 }
 
 extern "C" void task_wireless_comm(ULONG arg){
     UNUSED(arg);
 
+    nrf24l01.attach_callback_function(nullptr);
+    nrf24l01.write_ack_payload(32,NRF_RX_PIPE0);
+    volatile uint16_t packets_counter=0;
+    char buffer[10]{0};
 // For now just for architecture testing
 // In the future body of this task will be dedicated to handle wireless rx/tx communication
 
     while(true){
-        tx_semaphore_get(&task_wireless_comm_wakeup_sem,TX_WAIT_FOREVER); // For debug time
+        if(tx_semaphore_get(&task_wireless_comm_wakeup_sem,12000)==TX_SUCCESS){ // For debug time
+        //memset((void*)rxBuffer,0,sizeof(rxBuffer));
+        //memset((void*)txBuffer,0,sizeof(txBuffer));
+        // Read data
+        nrf24l01.attach_callback_function(packagePayloadRead_callback);
 
+        do{
+            //while(!nrf24l01.write_ack_payload(32)){
+            //    tx_thread_sleep(1);
+            //}
+            //tx_semaphore_get(&task_wireless_package_read_sem,TX_WAIT_FOREVER); // Wait for read of data
+            while(!nrf24l01.read_rx_payload(32)){
+                tx_thread_sleep(1);
+            }
+            tx_semaphore_get(&task_wireless_package_read_sem,TX_WAIT_FOREVER); // Wait for read of data
+            packets_counter++;
 
+            // Show read package on serial port
+            packageId=(rxBuffer[1]<<8)|rxBuffer[2];
+            if(packageId<1000){
+                packageIdCounter[packageId]++;
+            }
+            else{
+                unknown_package_count++;
+            }
+
+            while(!nrf24l01.read_reg_fifo_status()){
+                tx_thread_sleep(1);
+            }
+            tx_semaphore_get(&task_wireless_package_read_sem,TX_WAIT_FOREVER); // Wait for read of data
+
+        }while(!(rxBuffer[1]&NRF_BIT_FIFO_RX_EMPTY));
+
+        // write out data on serial port
+        // clear irq
+        nrf24l01.attach_callback_function(nullptr);
+        while(!nrf24l01.write_reg_status(NRF_BIT_RX_DR)){
+            tx_thread_sleep(1);
+        }
+        }
+        else{
+            break;
+        }
     }
+        usart1_dma_enq_data((uint8_t*)"Total\r\n",strlen("Total\r\n"));
+        snprintf(buffer,10,"%02d",packets_counter);
+        usart1_dma_enq_data((uint8_t*)buffer,strlen(buffer));
+        usart1_dma_enq_data((const uint8_t*)("\r\n"),2);
+
+        check_packages();
+    while(1)
+        tx_thread_sleep(1000000);
 }
 // No to tak, to jest specjalista od sprzetu i requesty pochodzace z taska CLI powinny po przejsciu
 // Przez dispatchera trafic tutaj do zakolejkowania i asynchronicznego wyslania

@@ -33,7 +33,7 @@
 
 #define OPERATION_BUFFER_SIZE 33
 
-#define TASK_WIRELESS_COMM_STACK_SIZE 512 /**< Stack size for wireless comm task */
+#define TASK_WIRELESS_COMM_STACK_SIZE 1024 /**< Stack size for wireless comm task */
 #define TASK_WIRELESS_COMM_PRIORITY 2     /**< Priority for wireless comm task */
 
 extern const char task_wireless_comm_name[]; /**< Name of the wireless comm task */

@@ -48,6 +48,7 @@ void spi1_dma_init(void){
 
 bool spi1_dma_enq_data(hspi_data*transactionData){
     // 1. Check if there is enough space in the buffer for the new transaction
+    __disable_irq(); // Fix it
     uint16_t free_space=0;
     if(hspi1_transaction_buffer_head>=hspi1_transaction_buffer_tail){
         free_space=SPI1_HSPI_DATA_BUFFER_SIZE-(hspi1_transaction_buffer_head-hspi1_transaction_buffer_tail);
@@ -58,7 +59,6 @@ bool spi1_dma_enq_data(hspi_data*transactionData){
 
     if(free_space>0){
         // There is enough space, enqueue the data
-        __disable_irq(); // Fix it
         hspi1_transaction_buffer[hspi1_transaction_buffer_head]=*transactionData;
         hspi1_transaction_buffer_length++;
         hspi1_transaction_buffer_head=(hspi1_transaction_buffer_head+1)%SPI1_HSPI_DATA_BUFFER_SIZE;
@@ -72,6 +72,7 @@ bool spi1_dma_enq_data(hspi_data*transactionData){
         return true;
     }
     else{
+        __enable_irq();
         // Not enough space
         // Intented to use with RTOS where caller can retry later - when space is available
         return false;
@@ -115,6 +116,7 @@ uint8_t spi1_send_data(void){
 }
 
 void spi1_dma_tx_complete(void){
+    __disable_irq();
     switch(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].flags){
         case HSPI_FLAG_HALF_DUPLEX:
             // Check if there was a read operation
@@ -160,6 +162,7 @@ void spi1_dma_tx_complete(void){
     else{
         hspi1_dma_active=false;
     }
+    __enable_irq();
 }
 
 /**@} */
