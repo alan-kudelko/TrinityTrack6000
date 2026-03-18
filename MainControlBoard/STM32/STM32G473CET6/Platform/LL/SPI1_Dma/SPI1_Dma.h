@@ -50,7 +50,7 @@
 #include <stdbool.h>
 #include <stm32g4xx_hal.h>
 
-#define SPI1_HSPI_DATA_BUFFER_SIZE 10 //!< Size of the buffer for storing SPI1 transaction parameters, can be adjusted as needed
+#define SPI1_HSPI_DATA_BUFFER_SIZE 30 //!< Size of the buffer for storing SPI1 transaction parameters, can be adjusted as needed
 
 /**
  * @brief Structure to hold SPI1 transaction parameters
@@ -63,13 +63,14 @@
  // Optimize field and therefore structure size in the memory
 typedef struct{
     uint8_t*txBuffer; /**< Pointer to the buffer containing data to be transmitted, should be allocated by the caller and have sufficient size to hold the data to be sent */
-    uint16_t txLength; /**< Length of the data to be transmitted in bytes */
     uint8_t*rxBuffer; /**< Pointer to the buffer where received data will be stored, should be allocated by the caller and have sufficient size to hold the expected received data */
     uint16_t rxLength; /**< Length of the data to be received in bytes */
-    GPIO_TypeDef*gpio_port; /**< GPIO port for slave selection */
+    uint16_t txLength; /**< Length of the data to be transmitted in bytes */
     uint16_t gpio_pin;  /**< GPIO pin number for slave selection */
+    GPIO_TypeDef*gpio_port; /**< GPIO port for slave selection */
     uint8_t flags; /**< Flags for additional options */
-    void(*callbackFn)(void); /**< Callback function called when transmission is finished */
+    uint8_t callbackEvent; /** Add doxy */
+    void(*callbackFn)(uint8_t event); /**< Callback function called when transmission is finished */
 }hspi_data;
 
 #define HSPI_FLAG_HALF_DUPLEX 0x00 //!< Flag indicating that the transaction is half-duplex, meaning that only transmission or reception will occur, but not both

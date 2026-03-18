@@ -460,20 +460,21 @@ bool build_bus_command(uint8_t argc,char*argv[]){
 
     return true;
 }
-
-void callback_cli_data_received(void){
+// Fix this according to event parameter
+// This time one callback is needed instead of 3 or more
+void callback_cli_data_received(uint8_t event){
     TASK_CLI_WAKEUP_REASON wakeup;
     wakeup.wakeupReason=TASK_CLI_WAKEUP_USART_DATA;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
 }
 
-void callback_cli_write_executed(void){
+void callback_cli_write_executed(uint8_t event){
     TASK_CLI_WAKEUP_REASON wakeup;
     wakeup.wakeupReason=TASK_CLI_WAKEUP_WRITE_EXECUTED;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
 }
 
-void callback_cli_read_executed(void){
+void callback_cli_read_executed(uint8_t event){
     TASK_CLI_WAKEUP_REASON wakeup;
     wakeup.wakeupReason=TASK_CLI_WAKEUP_READ_EXECUTED;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);

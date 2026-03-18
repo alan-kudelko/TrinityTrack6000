@@ -114,6 +114,7 @@
 
 /**
  * @defgroup NRF24L01_RX_PIPES RX Pipes
+ * @{
  */
 
 #define NRF_RX_PIPE0               0x00
@@ -217,6 +218,11 @@
 
 /** @} */
 
+#define NRF_PAYLOAD_MAX_LENGTH     32
+#define NRF_ADDRESS_MAX_LENGTH     5
+#define NRF_SPI_REQUEST_MAX_LENGTH 33
+#define NRF_REG_STATUS_CLEAR_MASK  0x70
+
 class NRF24L01{
     DEVICE_IO _cePin;  // Send/receive data pin (depending on mode)
     DEVICE_IO _csnPin; // Chip select pin for SPI interface
@@ -228,11 +234,12 @@ public:
     NRF24L01(GPIO_TypeDef*cePort,uint16_t cePin,GPIO_TypeDef*csnPort,uint16_t csnPin,GPIO_TypeDef*irqPort,uint16_t irqPin);
 
     ~NRF24L01();
-
+// Attach tx buffer for next operations
     void attach_tx_buffer(uint8_t*txBuffer);
+// Attach rx buffer for next operations
     void attach_rx_buffer(uint8_t*rxBuffer);
-
-    void attach_callback_function(void(*callbackFn)(void));
+// Attach callback function to be called upon SPI transaction end
+    void attach_callback_function(void(*callbackFn)(uint8_t event),uint8_t event);
 
 // Register operations
 // 0x00 CONFIG R/W
@@ -270,17 +277,17 @@ public:
     bool write_reg_rx_addr_p1(const uint8_t*addr,uint8_t length);
     bool read_reg_rx_addr_p1(uint8_t length);
 // 0x0C RX_ADDR_P2 R/W
-    bool write_reg_rx_addr_p2(const uint8_t*addr,uint8_t length);
-    bool read_reg_rx_addr_p2(uint8_t length);
+    bool write_reg_rx_addr_p2(uint8_t addr);
+    bool read_reg_rx_addr_p2();
 // 0x0D RX_ADDR_P3 R/W
-    bool write_reg_rx_addr_p3(const uint8_t*addr,uint8_t length);
-    bool read_reg_rx_addr_p3(uint8_t length);
+    bool write_reg_rx_addr_p3(uint8_t addr);
+    bool read_reg_rx_addr_p3();
 // 0x0E RX_ADDR_P4 R/W
-    bool write_reg_rx_addr_p4(const uint8_t*addr,uint8_t length);
-    bool read_reg_rx_addr_p4(uint8_t length);
+    bool write_reg_rx_addr_p4(uint8_t addr);
+    bool read_reg_rx_addr_p4();
 // 0x0F RX_ADDR_P5 R/W
-    bool write_reg_rx_addr_p5(const uint8_t*addr,uint8_t length);
-    bool read_reg_rx_addr_p5(uint8_t length);
+    bool write_reg_rx_addr_p5(uint8_t addr);
+    bool read_reg_rx_addr_p5();
 // 0x10 TX_ADDR R/W
     bool write_reg_tx_addr(const uint8_t*addr,uint8_t length);
     bool read_reg_tx_addr(uint8_t length);
@@ -323,16 +330,6 @@ public:
 //
     bool write_ack_payload(uint8_t length,uint8_t rxPipe);
 };
-
-#ifdef __cplusplus
-    extern "C"{
-#endif // __cplusplus
-
-void nrf24l01_test(void);
-
-#ifdef __cplusplus
-    }
-#endif // __cplusplus
 
 #endif // NRF24L01_H_
 

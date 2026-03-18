@@ -30,7 +30,7 @@
 #include <tx_api.h>
 
 #define TASK_CLI_STACK_SIZE 1024  //!< Stack size for CLI task
-#define TASKS_CLI_PRIORITY    2  //!< Priority for CLI task
+#define TASKS_CLI_PRIORITY    5  //!< Priority for CLI task
 
 #define TASK_CLI_RETRY_DELAY_MS 30 //!< Delay in milliseconds before retrying to enqueue data to UART1 DMA if it fails
 
@@ -234,7 +234,7 @@ bool build_bus_command(uint8_t argc,char*argv[]);
  * @param None.
  * @return None.
  */
-void callback_cli_data_received(void);
+void callback_cli_data_received(uint8_t event);
 
 /**
  * @brief Callback function for when a CLI command has been executed.
@@ -243,7 +243,7 @@ void callback_cli_data_received(void);
  * @param None.
  * @return None.
  */
-void callback_cli_write_executed(void);
+void callback_cli_write_executed(uint8_t event);
 
 /**
  * @brief Callback function for when a CLI read command has been executed.
@@ -252,7 +252,7 @@ void callback_cli_write_executed(void);
  * @param None.
  * @return None.
  */
-void callback_cli_read_executed(void);
+void callback_cli_read_executed(uint8_t event);
 
 /**
  * @brief Show command execution status.

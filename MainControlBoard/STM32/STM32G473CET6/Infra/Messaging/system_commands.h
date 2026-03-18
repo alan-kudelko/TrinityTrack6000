@@ -77,7 +77,8 @@ typedef struct ALIGNED(4) TASK_CLI_COMMAND{
         }mode;
     }payload;
     uint32_t*commandStatus; // Probably not needed
-    void(*callbackFn)(void);
+    uint8_t callbackEvent;
+    void(*callbackFn)(uint8_t event);
 }TASK_CLI_COMMAND;
 
 _Static_assert(sizeof(TASK_CLI_COMMAND)%4==0,"TASK_CLI_COMMAND size must be a multiple of 4 bytes for proper alignment in the queue");

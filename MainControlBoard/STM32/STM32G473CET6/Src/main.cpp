@@ -79,8 +79,6 @@ void tx_application_define(void* first_unused_memory){
                     TASKS_CLI_PRIORITY,
                     TX_NO_TIME_SLICE,
                     TX_AUTO_START);
-    //tx_thread_create(&task_spi1_handle,(char*)"SPI1 Task",spi1_dma_test,0,&task_spi1_stack,sizeof(task_spi1_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
-    //tx_thread_create(&task_second_device_handle,(char*)"SPI1 Second",spi1_dma_second_device,0,&task_second_device_stack,sizeof(task_second_device_stack),1,1,TX_NO_TIME_SLICE,TX_AUTO_START);
     tx_thread_create(&task_SystemDispatcher_handle,
                     (char*)task_SystemDispatcher_name,
                     task_SystemDispatcher,
@@ -249,6 +247,7 @@ int main(void){
         
         HAL_Delay(1000);
     }
+    HAL_Delay(10);
     tx_kernel_enter();
 
     return 0;

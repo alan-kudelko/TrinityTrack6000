@@ -150,14 +150,14 @@ file(GLOB THREADX_HEADERS
 
 message(STATUS "[12] Adding project sources")
 file(GLOB PROJECT_SOURCES
-    "${CMAKE_SOURCE_DIR}/Src/*.cpp"
-    "${CMAKE_SOURCE_DIR}/Src/*.c"
-    "${CMAKE_SOURCE_DIR}/Utils/*.cpp"
-    "${CMAKE_SOURCE_DIR}/Utils/*.c"
+    "${CMAKE_SOURCE_DIR}/Src/*.c*"
+
+    "${CMAKE_SOURCE_DIR}/Utils/*.c*"
+
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
     "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/*.c*"
-    "${CMAKE_SOURCE_DIR}/Tasks/*.c"
-    "${CMAKE_SOURCE_DIR}/Tasks/*.cpp"
+
+    "${CMAKE_SOURCE_DIR}/Tasks/*.c*"
 
     "${CMAKE_SOURCE_DIR}/Infra/Utils/*.c*"
 
@@ -172,8 +172,9 @@ list(REMOVE_ITEM PROJECT_SOURCES "${CMAKE_SOURCE_DIR}/Src/stm32g4xx_it.c")
 message(STATUS "[13] Adding project headers")
 file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Include/*.h"
-    "${CMAKE_SOURCE_DIR}/Include/*.hpp"
+
     "${CMAKE_SOURCE_DIR}/Utils/*.h"
+
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*.h"
     "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/*.h"
     "${CMAKE_SOURCE_DIR}/Devices/*.h"

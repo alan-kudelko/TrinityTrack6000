@@ -11,8 +11,6 @@
  * explicit written permission.
  */
 
-// For now task emulating communication with NRF24L01
-
 #ifndef TASK_WIRELESS_COMM_H_
     #define TASK_WIRELESS_COMM_H_
 
@@ -33,13 +31,23 @@
 
 #define OPERATION_BUFFER_SIZE 33
 
-#define TASK_WIRELESS_COMM_STACK_SIZE 1024 /**< Stack size for wireless comm task */
-#define TASK_WIRELESS_COMM_PRIORITY 2     /**< Priority for wireless comm task */
+#define TASK_WIRELESS_COMM_STACK_SIZE 2048 /**< Stack size for wireless comm task */
+#define TASK_WIRELESS_COMM_PRIORITY 3     /**< Priority for wireless comm task */
 
-extern const char task_wireless_comm_name[]; /**< Name of the wireless comm task */
+typedef struct{
+    NRF24L01*dev; // Pointer to NRF24L01 class object
+    uint8_t*txBuffer; // Pointer to tx buffer for read/write operations
+    uint8_t*rxBuffer; // Pointer to rx buffer for read/write operations
+    uint8_t*txAckPayload; // Pointer to ack payload
+    uint8_t*rxAckDummy;   // Pointer to dummy rx buffer used in write ack payload operation
+    void(*callbackFn)(uint8_t event);
+    uint8_t callbackEvent;
+    uint8_t payloadLength;
+    uint8_t addressLength;
+}radio_t;
 
-extern TX_THREAD task_wireless_comm_handle;
-extern ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE];
+// Note: there are two sets of buffers since txBuffer and rxBuffer operations have to be synchronized
+// Via semafor, but writing ack payload doesn't need synchronization.
 
 typedef struct NRF_SETTINGS{
     uint8_t config;
@@ -49,13 +57,13 @@ typedef struct NRF_SETTINGS{
     uint8_t setup_retr;
     uint8_t rf_ch;
     uint8_t rf_setup;
-    uint8_t rx_addr_p0[5];
-    uint8_t rx_addr_p1[5];
+    uint8_t rx_addr_p0[NRF_ADDRESS_MAX_LENGTH];
+    uint8_t rx_addr_p1[NRF_ADDRESS_MAX_LENGTH];
     uint8_t rx_addr_p2;
     uint8_t rx_addr_p3;
     uint8_t rx_addr_p4;
     uint8_t rx_addr_p5;
-    uint8_t tx_addr[5];
+    uint8_t tx_addr[NRF_ADDRESS_MAX_LENGTH];
     uint8_t rx_pw_p0;
     uint8_t rx_pw_p1;
     uint8_t rx_pw_p2;
@@ -81,17 +89,44 @@ typedef struct RADIO_STATS{
     uint32_t channel_busy_events;
 }RADIO_STATS;
 
+extern const char task_wireless_comm_name[]; /**< Name of the wireless comm task */
+
+extern TX_THREAD task_wireless_comm_handle;
+extern ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE];
+
 #ifdef __cplusplus
     extern "C"{
 #endif // __cplusplus
 
-extern void radioDataReceived_callback(void);
+extern void radioDataReceived_callback(uint8_t event);
+
+extern void radioOperationDone_callback(uint8_t event);
 
 extern void nrf24l01_init(void);
 
 extern void task_wireless_comm_init(void);
 
+extern void task_wireless_comm_write_settings(NRF_SETTINGS*settings);
+
+extern void task_wireless_comm_read_settings(void);
+
+extern bool task_wireless_comm_verify_settings(void);
+
 extern void task_wireless_comm(ULONG arg);
+
+// Klasa nrf24l01 nie musi byc już zmieniana
+// Teraz tylko funkcje pomocnicze taska radiowego znające threadx'a
+// Więc do zmiany jest widoczność semafora na pewno
+// I można zamknąć część operacji w funkcje i trochę tu przejrzy
+// funkcje takie jak kolejkowanie zapytań mogą być inline
+// Ważna uwaga, bo może być potrzebny atrybut always inline ale to zobaczymy
+// Te api nad którym wczoraj pracowałem jest do wyrzucenia xD
+// Struktury mogą zostać
+// Natomiast z racji dużego zapasu czasu CPU na obsługę pakietu nawet przy 500Hz
+// Możemy zostawić oczekiwanie na semafor - nie rozwala to timingu
+
+// Można się również pokusić o zmianę sterownika SPI z podtrzymaniem pinu CS między transferami
+// Ale to nie jest aktualnie priorytet
 
 #ifdef __cplusplus
     }

@@ -128,7 +128,7 @@ void spi1_dma_tx_complete(void){
             else{
                 // Notify the owner of the data that the transmission was complete
                 if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn!=NULL){
-                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn();
+                    hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackEvent);
                 }
 
                 HAL_GPIO_WritePin(
@@ -142,7 +142,7 @@ void spi1_dma_tx_complete(void){
         break;
         case HSPI_FLAG_FULL_DUPLEX:
             if(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn!=NULL){
-                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn();
+                hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackFn(hspi1_transaction_buffer[hspi1_transaction_buffer_tail].callbackEvent);
             }
             HAL_GPIO_WritePin(
                 hspi1_transaction_buffer[hspi1_transaction_buffer_tail].gpio_port,

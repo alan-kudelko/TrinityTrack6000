@@ -499,7 +499,7 @@ void MX_GPIO_Init(void){
   HAL_GPIO_Init(NRF24L01_IRQ_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI2_IRQn, 5, 0);
+  HAL_NVIC_SetPriority(EXTI2_IRQn, 2, 0);
   HAL_NVIC_EnableIRQ(EXTI2_IRQn);
 }
 
@@ -526,6 +526,13 @@ void initializeMemory(void){
 
 void initializeSystem(){
 // STM32CubeIDE generated initialization sequence
+  __disable_irq();
+  for(int i= 0;i<8;i++) {
+    NVIC->ICER[i]=0xFFFFFFFF; // disable IRQs
+    NVIC->ICPR[i]=0xFFFFFFFF; // clear pending IRQs
+  }
+
+
   HAL_Init();
 	SystemClock_Config();
 	MX_GPIO_Init();
@@ -539,6 +546,8 @@ void initializeSystem(){
 	MX_CORDIC_Init();
 	MX_TIM2_Init();
 	MX_TIM3_Init();
+
+  __enable_irq();
 
 	__HAL_DMA_DISABLE_IT(&hdma_adc1,DMA_IT_HT);
 	__HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_HT3);
@@ -559,6 +568,6 @@ void initializeSystem(){
 		HAL_Delay(10);
 	}
 // Initialize hardware
-  nrf24l01_init();
+  //nrf24l01_init();
 
 }

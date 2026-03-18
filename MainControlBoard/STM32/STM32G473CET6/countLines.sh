@@ -8,4 +8,5 @@ wc -l Utils/*.c* Utils/*.h*\
  Platform/LL/SPI1_Dma/*.c* Platform/LL/SPI1_Dma/*.h\
  Platform/LL/USART1_Dma/*.c* Platform/LL/USART1_Dma/*.h\
  Platform/Startup/*.c* Platform/Startup/*.h\
+ Modules/nrf_radio_api/*.c* Modules/nrf_radio_api/*.h\
 | sort -n | nl
