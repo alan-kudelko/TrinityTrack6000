@@ -7,9 +7,6 @@
 
 #include <string.h>
 
-#include <SPI1_Dma.h>
-
-#include <USART1_Dma.h> // Delete later after testing
 
 void NRF24L01::initialize_hspi_data(){
     _transaction_data.callbackFn=nullptr;

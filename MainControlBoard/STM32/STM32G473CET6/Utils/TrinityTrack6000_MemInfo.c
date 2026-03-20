@@ -7,8 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <tx_port.h>
-
 #include <TrinityTrack6000_MemInfo.h>
 #include <TrinityTrack6000_Config.h>
 #include <USART1_Dma.h>

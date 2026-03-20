@@ -50,7 +50,7 @@
 #include <stdbool.h>
 #include <stm32g4xx_hal.h>
 
-#define SPI1_HSPI_DATA_BUFFER_SIZE 30 //!< Size of the buffer for storing SPI1 transaction parameters, can be adjusted as needed
+#define SPI1_HSPI_DATA_BUFFER_SIZE 100 //!< Size of the buffer for storing SPI1 transaction parameters, can be adjusted as needed
 
 /**
  * @brief Structure to hold SPI1 transaction parameters

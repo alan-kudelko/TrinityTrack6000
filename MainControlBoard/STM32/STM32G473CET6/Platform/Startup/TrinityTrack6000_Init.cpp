@@ -19,7 +19,6 @@
 #include <string.h>
 
 #include <TrinityTrack6000_Init.h>
-#include <TrinityTrack6000_Errors.h>
 #include <TrinityTrack6000_Pinout.h>
 #include <USART1_Dma.h>
 
@@ -532,7 +531,6 @@ void initializeSystem(){
     NVIC->ICPR[i]=0xFFFFFFFF; // clear pending IRQs
   }
 
-
   HAL_Init();
 	SystemClock_Config();
 	MX_GPIO_Init();
@@ -555,8 +553,7 @@ void initializeSystem(){
 
 // Timers initialization
 
-  usart1_dma_init(); // Fix two functions doing almost the same thing
-	usart1_dma_rx_init();
+  usart1_dma_init();
   spi1_dma_init();
 
 	while(usart1_dma_enq_data((uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info))!=true){

@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 217,
+				"line" : 221,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 191,
+				"line" : 194,
 				"parent" : 0
 			}
 		]
@@ -102,6 +102,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra/Messaging"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra"
 				},
 				{
 					"backtrace" : 2,
@@ -407,6 +411,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Platform/LL/SPI1_Dma"
 				},
 				{
@@ -506,6 +514,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra/Messaging"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Projekty/TrinityTrack6000/MainControlBoard/STM32/STM32G473CET6/Infra"
 				},
 				{
 					"backtrace" : 2,

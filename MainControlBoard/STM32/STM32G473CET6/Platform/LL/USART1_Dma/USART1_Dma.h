@@ -39,8 +39,8 @@
 #define UART1_DMA_RX_BUFFER_SIZE 128 //!< Size of the buffer for storing received data from USART1, can be adjusted as needed
 #define UART1_DMA_TX_BUFFER_SIZE 128 //!< Size of the buffer for storing data to be transmitted over USART1, can be adjusted as needed
 
-#define UART1_DMA_RX_RING_BUFFER_SIZE 512 //!< Size of the ring buffer for storing received data from USART1, can be adjusted as needed
-#define UART1_DMA_TX_RING_BUFFER_SIZE 512 //!< Size of the ring buffer for storing data to be transmitted over USART1, can be adjusted as needed
+#define UART1_DMA_RX_RING_BUFFER_SIZE 512  //!< Size of the ring buffer for storing received data from USART1, can be adjusted as needed
+#define UART1_DMA_TX_RING_BUFFER_SIZE 3172 //!< Size of the ring buffer for storing data to be transmitted over USART1, can be adjusted as needed
 
 #define UART1_DMA_RX_R_CHAR '\r' //!< Character indicating end of command in received data, can be adjusted as needed
 #define UART1_DMA_RX_N_CHAR '\n' //!< Character indicating end of command in received data, can be adjusted as needed
@@ -89,12 +89,6 @@ extern void usart1_dma_copy_to_tx_buffer(uint8_t*dst);
  * @warning This function is intended for internal use only.
  */
 extern void usart1_dma_tx_complete(void);
-
-/**
- * @brief Initializes DMA for USART1 reception.
- * @note This function sets up the DMA to start receiving data into the RX DMA buffer.
- */
-extern void usart1_dma_rx_init(void);
 
 /**
  * @brief Reads data from the USART1 receive ring buffer into the provided destination buffer.

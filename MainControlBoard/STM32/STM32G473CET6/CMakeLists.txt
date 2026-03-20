@@ -160,6 +160,7 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Tasks/*.c*"
 
     "${CMAKE_SOURCE_DIR}/Infra/Utils/*.c*"
+    "${CMAKE_SOURCE_DIR}/Infra/*.c*"
 
     "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma/*.c*"
     "${CMAKE_SOURCE_DIR}/Platform/LL/USART1_Dma/*.c*"
@@ -180,6 +181,8 @@ file(GLOB PROJECT_HEADERS
     "${CMAKE_SOURCE_DIR}/Devices/*.h"
 
     "${CMAKE_SOURCE_DIR}/Tasks/*.h"
+
+    "${CMAKE_SOURCE_DIR}/Infra"
 
     "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma/*.h"
     "${CMAKE_SOURCE_DIR}/Platform/LL/USART1_Dma/*.h"
@@ -206,6 +209,7 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc"
 
     "${CMAKE_SOURCE_DIR}/Infra/Messaging"
+    "${CMAKE_SOURCE_DIR}/Infra"
 
     "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma"
     "${CMAKE_SOURCE_DIR}/Platform/LL/USART1_Dma"

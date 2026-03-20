@@ -33,8 +33,8 @@ extern const char task_SystemDispatcher_name[];  /**< Name of the System Dispatc
 extern TX_THREAD task_SystemDispatcher_handle;
 extern ULONG task_SystemDispatcher_stack[TASKS_SYSTEM_DISPATCHER_STACK_SIZE];
 
-extern TX_QUEUE task_cli_command_queue;
-extern ULONG task_cli_command_queue_storage[TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_COMMAND)/sizeof(uint32_t)];
+extern TX_QUEUE task_cli_request_queue;
+extern ULONG task_cli_request_queue_storage[TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest)/sizeof(uint32_t)];
 
 #ifdef __cplusplus
     extern "C"{
@@ -44,7 +44,7 @@ void failsafe_stop(void);
 
 void fault_stop(void);
 
-void parse_cli_queue(TASK_CLI_COMMAND command);
+void parse_cli_queue(SystemRequest command);
 
 void task_SystemDispatcher_init(void);
 

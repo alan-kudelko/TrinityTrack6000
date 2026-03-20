@@ -6,8 +6,11 @@
 #define RADIO_DEFAULT_ADDRESS          {0xFE,0xFE,0xFE,0xFE,0xFE}
 #define RADIO_DEFAULT_PAYLOAD_SIZE_32  (1<<5)
 #define RADIO_DEFAULT_PAYLOAD_SIZE_16  (1<<4)
+#define RADIO_DEFAULT_PAYLOAD_SIZE_8   (1<<3)
 #define RADIO_DEFAULT_ADDRESS_LENGTH   5
 
-
+#define FRAME_FIELD_STATUS             0
+#define FRAME_FIELD_ID                 1
+#define FRAME_FIELD_TYPE               2
 
 #endif // TRNITY_TRACK6000_RADIO_CONFIG_H_

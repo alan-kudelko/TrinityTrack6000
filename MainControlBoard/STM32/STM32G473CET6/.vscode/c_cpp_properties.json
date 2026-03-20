@@ -10,8 +10,10 @@
           "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32G4xx/Include",
           "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc",
 		      "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy",
+
           "${workspaceFolder}/Infra/Utils",
           "${workspaceFolder}/Infra/Messaging",
+          "${workspaceFolder}/Infra",
 
           "${workspaceFolder}/Platform/LL/SPI1_Dma",
           "${workspaceFolder}/Platform/LL/USART1_Dma",
@@ -44,6 +46,7 @@
 
           "${workspaceFolder}/Infra/Utils",
           "${workspaceFolder}/Infra/Messaging",
+          "${workspaceFolder}/Infra",
 
           "${workspaceFolder}/Platform/LL/SPI1_Dma",
           "${workspaceFolder}/Platform/LL/USART1_Dma",

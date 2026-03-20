@@ -24,7 +24,7 @@
     #define ALIGNED(x) __attribute((aligned(x)))
 #endif // __DOXYGEN__
 
-#include <stdint.h>
+#include <Radio_Types.h>
 
 typedef enum DEVICE_ID{
     DEVICE_MCP1,
@@ -55,11 +55,14 @@ typedef enum HARDWARE_ID{
 typedef enum{
     CLI_CMD_SET_VALUE,
     CLI_CMD_BUS_RAW_DATA,
-    CLI_CMD_SWITCH_MODE
-}CLI_CMD_TYPE;
+    CLI_CMD_SWITCH_MODE,
+    CLI_CMD_GET_RADIO_STATS,
+    CLI_CMD_GET_RADIO_RUNTIME_STATS,
+    CLI_CMD_GET_RADIO_SETTINGS
+}RequestType;
 
-typedef struct ALIGNED(4) TASK_CLI_COMMAND{
-    CLI_CMD_TYPE commandType;
+typedef struct ALIGNED(4) SystemRequest{
+    RequestType commandType;
     union{
         struct{
             uint32_t hardwareId;
@@ -73,14 +76,17 @@ typedef struct ALIGNED(4) TASK_CLI_COMMAND{
             DEVICE_ID deviceId;
         }rawData;
         struct{
-            CLI_CMD_TYPE mode;
+            RequestType mode;
         }mode;
+        RADIO_STATS radioStats;
+        RADIO_RUNTIME_STATS radioRuntimeStats;
+        NRF_SETTINGS radioSettings;
     }payload;
     uint32_t*commandStatus; // Probably not needed
     uint8_t callbackEvent;
     void(*callbackFn)(uint8_t event);
-}TASK_CLI_COMMAND;
+}SystemRequest;
 
-_Static_assert(sizeof(TASK_CLI_COMMAND)%4==0,"TASK_CLI_COMMAND size must be a multiple of 4 bytes for proper alignment in the queue");
+_Static_assert(sizeof(SystemRequest)%4==0,"SystemRequest size must be a multiple of 4 bytes for proper alignment in the queue");
 
 #endif // SYSTEM_COMMANDS_H_

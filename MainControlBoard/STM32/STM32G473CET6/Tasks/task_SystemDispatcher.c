@@ -26,10 +26,10 @@ const char task_SystemDispatcher_name[]="System Dispatcher";
 TX_THREAD task_SystemDispatcher_handle SECTION(".task_handles");;
 ULONG task_SystemDispatcher_stack[TASKS_SYSTEM_DISPATCHER_STACK_SIZE] SECTION(".task_stacks_ccsram");;
 
-TX_QUEUE task_cli_command_queue;
-ULONG task_cli_command_queue_storage[TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_COMMAND)/sizeof(uint32_t)];
+TX_QUEUE task_cli_request_queue;
+ULONG task_cli_request_queue_storage[TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest)/sizeof(uint32_t)];
 
-static TASK_CLI_COMMAND task_cli_command;
+static SystemRequest task_cli_command;
 
 static hspi_data spi_transaction_data;
 
@@ -46,17 +46,17 @@ void fault_stop(void){
 
 }
 
-void parse_cli_queue(TASK_CLI_COMMAND command){
+void parse_cli_queue(SystemRequest command){
     
 }
 
 void task_SystemDispatcher_init(void){
     // For now just a placeholder
-    tx_queue_create(&task_cli_command_queue,
+    tx_queue_create(&task_cli_request_queue,
         "CLI Commands",
-        sizeof(TASK_CLI_COMMAND)/sizeof(uint32_t),
-        task_cli_command_queue_storage,
-        TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_COMMAND)/sizeof(uint32_t));
+        sizeof(SystemRequest)/sizeof(uint32_t),
+        task_cli_request_queue_storage,
+        TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest)/sizeof(uint32_t));
 
         system_mode=RUN; // Temporary
 }
@@ -70,7 +70,7 @@ void task_SystemDispatcher(ULONG arg){
 
     while(1){
         //queue_wireless_comm_status=tx_queue_receive();
-        tx_queue_receive(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+        tx_queue_receive(&task_cli_request_queue,&task_cli_command,TX_WAIT_FOREVER);
 
         switch(system_mode){
             case RUN:

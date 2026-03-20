@@ -41,7 +41,6 @@
     #define ALIGNED(x) __attribute((aligned(x)))
 #endif // __DOXYGEN__
 
-#include <stdint.h>
 #include <tx_port.h>
 
 #define MEMINFO_LINE_BUFFER_SIZE 95 //!< Size of the buffer for generating formatted lines of memory diagnostics reports, can be adjusted as needed

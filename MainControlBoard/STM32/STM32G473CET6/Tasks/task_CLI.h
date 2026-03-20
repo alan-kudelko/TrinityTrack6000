@@ -73,6 +73,9 @@ extern ULONG task_CLI_stack[TASK_CLI_STACK_SIZE]; //!< Stack for CLI task
 #define TASK_CLI_WAKEUP_USART_DATA 1 //!< Wakeup reason indicating that CLI task was woken up by USART data reception
 #define TASK_CLI_WAKEUP_WRITE_EXECUTED 2 //!< Wakeup reason indicating that CLI task was woken up after executing a command, can be used to trigger menu header update or other actions after command execution
 #define TASK_CLI_WAKEUP_READ_EXECUTED 3 //!< Wakeup reason indicating that CLI task was woken up after executing a read command, can be used to trigger sending read data back to terminal or other actions after read command execution
+#define TASK_CLI_WAKEUP_RADIO_STATS_READ 4
+#define TASK_CLI_WAKEUP_RADIO_RUNTIME_READ 5
+#define TASK_CLI_WAKEUP_RADIO_SETTINGS_READ 6
 
 typedef struct ALIGNED(4) TASK_CLI_WAKEUP_REASON{
     uint32_t wakeupReason;
@@ -93,12 +96,18 @@ extern const char*command_switch_mode_children[]; //!< Array of child command st
 
 extern const char command_show[]; //!< Command string for "show" command, can be used for showing various system information
 extern const char command_show_mem[]; //!< Child command string for showing memory information
+extern const char command_show_radio[];
 extern const char*command_show_children[]; //!< Array of child command strings for the "show" command
 
 extern const char command_show_mem_ram1[]; //!< Child command string for showing RAM1 information
 extern const char command_show_mem_ram2[]; //!< Child command string for showing RAM2 information
 extern const char command_show_mem_ccsram[]; //!< Child command string for showing CCSRAM information
 extern const char*command_show_mem_children[]; //!< Array of child command strings for the "show memory" command
+
+extern const char command_show_radio_stats[];
+extern const char command_show_radio_runtime[];
+extern const char command_show_radio_settings[];
+extern const char*command_show_radio_children[];
 
 extern const char command_write[]; //!< Command string for write operation
 extern const char command_read[]; //!< Command string for read operation

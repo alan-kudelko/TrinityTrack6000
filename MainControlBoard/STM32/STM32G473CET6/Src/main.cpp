@@ -18,14 +18,9 @@
 #include <main.h>
 #include <string.h>
 
-#include <TrinityTrack6000_Config.h>
 #include <TrinityTrack6000_Init.h>
 #include <TrinityTrack6000_Diagnostics.h>
 #include <TrinityTrack6000_MemInfo.h>
-#include <USART1_Dma.h>
-#include <SPI1_Dma.h>
-
-#include <NRF24L01.h>
 
 #include <tx_api.h>
 
@@ -48,10 +43,6 @@ void task_blink(ULONG arg){
         test_function(tx_thread_sleep,1000);
         
     }
-}
-
-void test_spi_callbackFn(void){
-    usart1_dma_enq_data((uint8_t*)"Done!\r\n",strlen("Done!\r\n"));
 }
 
 void tx_application_define(void* first_unused_memory){
@@ -241,6 +232,7 @@ int main(void){
     //HAL_Delay(100);
 
     uint32_t adc_buffer[4]{0};
+    //nrf24l01_init();
 
     while(false){
         HAL_ADC_Start_DMA(&hadc1,adc_buffer,4);
@@ -254,16 +246,6 @@ int main(void){
 }
 
 // Dobra punkt wejscia po ogarnieciu ADC i DMA
-// No to tak klasa do NRF24L01 i testy komunikacyjne
-// Na razie sprawdzic czy dla tego sterownika SPI1 bedzie to chodzic
-// Interfejs do udostepniania wskaznikow na bufory wewnetrzne
-// Bufory wewnetrzne statycznie alokowane w sekcji .dma
-// Nad samym szkieletem sie pomysli oraz nad api
-// Potem osobny task komunikacyjny do SPI
-// Nastepnie rozbudowa na przetestowanie komunikacji z przelaczaniem stron
-// Odbiorca po otrzymaniu paczki staje sie wysylajacym
-// Potrzebny jest drugi uklad do testow np. jakis AVR
-// ALe to juz raczej bez CMake i moze byc to zwykle arduino z obsluga SPI
 // Dwie funkcje startowe
 // Jedna bedzie sluzyc do wyznaczania procenta utraconych pakietow (do testow po zlutowaniu PCB)
 // Druga do tymczasowego przesylania danych i telemetrii od urzadzenia do urzadzenia
@@ -272,10 +254,31 @@ int main(void){
 // Bo najlepsze, ze przerwanie DMA_IT_HT jest zablokowane oraz jest wyczyszczona jego flaga
 // Dodatkowo apropo ADC trzeba wprowadzic kompensacje napiecia zasilania podpietego do VREF+
 
-
 // Co do samego DMA nalezy przeprowadzic balans
 // Tzn. operacje najczesciej wykonywane i najciesze powinny trafic do dwoch roznych
 // Kontrolerow DMA
+
+// Ale pierwsza rzecz jaka jest do zmiany to na pewno zaleznosci plikowe
+// system_commands i statystyki radiowe
+// statystyki radiowe powinny byc osobno, wgl cale ustawienia i te duze struktury
+
+// Dobra teraz należy zmienić semafor w tasku radiowym na kolejkę
+// Następnie na podstawie danych w kolejce stwierdzić czy to rozkaz wysłany przez CLI przez dispatchera
+// Lub w przypadku wykrycia przerwania na pinie IRQ należy odczytać dane z FIFO RX
+// Na pewno tutaj warto rozbudować system_commands taska CLI
+// Oraz wyrzucić takie rzeczy jak ustawienia NRF oraz resztę struktur do osobnego pliku żeby
+// System commands wiedziało o tych strukturach a też żeby task CLI mógł je przetworzyć
+// Jak to będzie zmienione to należy dodać kolejne funkcje w tasku terminalowym
+// Oraz dodac odpowiednie komendy
+
+// Jak to będzie ogarnięte można się skupić na tasku zbierającym pomiary
+// Ten task może przekazywać dane do taska radiowego w celu przesyłu telemtrii do nadajnika
+// Tutaj uwaga architektoniczna, infineon oraz inne urzadzenia rowniez beda przesylac telemetrie
+// Mozliwe ze bedzie trzeba wykorzystac kilka kolejek do obslugi (dwie) - jedna na rozkazy druga na
+// kolejkowanie danych telemetrycznych
+
+// Kolejny krok to implementacja taska health monitor oraz skomunikowanie go z system dispatcher
+// W celu zmiany trybow oraz przechodzenia w failsafe lub fault
 
 #ifdef USE_FULL_ASSERT
 /**

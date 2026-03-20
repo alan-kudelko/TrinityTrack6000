@@ -5,10 +5,7 @@
 
 #include <SPI1_Dma.h>
 
-#include <stdbool.h>
 #include <string.h>
-
-#include <stm32g4xx_hal.h>
 
 #include <TrinityTrack6000_Pinout.h>
 

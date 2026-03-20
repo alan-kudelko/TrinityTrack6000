@@ -30,15 +30,17 @@
 CLI_Task_State cli_task_state=CLI_STATE_DIAG_MENU; // Default state is diagnostics menu, can be changed to test menu by command
 
 const char task_CLI_name[]="CLI Task";
+
 TX_THREAD task_CLI_handle SECTION(".task_handles");
-ULONG task_CLI_stack[TASK_CLI_STACK_SIZE] SECTION(".task_stacks_ccsram");
+
+ULONG task_CLI_stack[TASK_CLI_STACK_SIZE];
 
 static TX_QUEUE task_cli_wakeup_queue;
 static ULONG task_cli_wakeup_queue_storage[TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t)];
 
 extern enum SYSTEM_MODE system_mode;
 
-extern TX_QUEUE task_cli_command_queue;
+extern TX_QUEUE task_cli_request_queue;
 
 extern bool safe_atoi(const char*str,uint8_t length,uint8_t*result);
 
@@ -56,12 +58,18 @@ const char*command_switch_mode_children[]={command_switch_mode_diag,command_swit
 
 const char command_show[]="show";
 const char command_show_mem[]="memory";
-const char*command_show_children[]={command_show_mem};
+const char command_show_radio[]="radio";
+const char*command_show_children[]={command_show_mem,command_show_radio};
 
 const char command_show_mem_ram1[]="ram1";
 const char command_show_mem_ram2[]="ram2";
 const char command_show_mem_ccsram[]="ccsram";
 const char*command_show_mem_children[]={command_show_mem_ram1,command_show_mem_ram2,command_show_mem_ccsram};
+
+const char command_show_radio_stats[]="stats";
+const char command_show_radio_runtime[]="runtime";
+const char command_show_radio_settings[]="settings";
+const char*command_show_radio_children[]={command_show_radio_stats,command_show_radio_runtime,command_show_radio_settings};
 
 const char command_write[]="write";
 const char command_read[]="read";
@@ -103,7 +111,9 @@ const char msg_task_CLI_help[]=
 
 const char msg_task_CLI_help_show[]=
 "[CLI] Available show commands:\r\n\
-      show memory - <ram1/ram2/ccsram> Show memory information\r\n";
+      show memory - <ram1/ram2/ccsram> Show memory information\r\n\
+      show radio - <stats/runtime/settings> Show radio information\r\n"
+      ;
 
 const char msg_task_CLI_help_write[]=
 "[CLI] Avaible write devices:\r\n\
@@ -158,7 +168,7 @@ static uint8_t txBuffer[TASK_CLI_TX_BUFFER_SIZE];
 static uint8_t rxBuffer[TASK_CLI_RX_BUFFER_SIZE];
 static uint32_t commandStatus;
 
-static TASK_CLI_COMMAND task_cli_command;
+static SystemRequest task_cli_SystemRequest;
 
 static char tempBuffer[TASK_CLI_TEMPORARY_BUFFER_SIZE]; // Temporary buffer for snprintf operations
 
@@ -174,13 +184,13 @@ void task_CLI_init(void){
     // Initialize FSM state to default diagnostics menu
     cli_task_state=CLI_STATE_DIAG_MENU;
     // Initialize command structure with default values for testing purposes
-    task_cli_command.commandType=CLI_CMD_SET_VALUE;
-    task_cli_command.payload.set.hardwareId=HARDWARE_MOTOR1;
-    task_cli_command.payload.set.value=0;
-    task_cli_command.commandStatus=&commandStatus;
-    task_cli_command.callbackFn=callback_cli_write_executed;
+    task_cli_SystemRequest.commandType=CLI_CMD_SET_VALUE;
+    task_cli_SystemRequest.payload.set.hardwareId=HARDWARE_MOTOR1;
+    task_cli_SystemRequest.payload.set.value=0;
+    task_cli_SystemRequest.commandStatus=&commandStatus;
+    task_cli_SystemRequest.callbackFn=callback_cli_write_executed;
 
-    UNUSED(task_cli_command);
+    UNUSED(task_cli_SystemRequest);
     UNUSED(commandStatus);
     UNUSED(rxBuffer);
     UNUSED(txBuffer);
@@ -336,7 +346,6 @@ void parse_command_show(uint8_t argc,char*argv[]){
 
     if(strncmp(argv[1],command_show_mem,strlen(command_show_mem))==0){
         // Show memory information
-        // For now just a placeholder message, in the future we can implement a function that retrieves actual memory information and sends it back to the terminal
         if(argc>2){
             // Check which memory information to show based on the child command
             if(strncmp(argv[2],command_show_mem_ram1,strlen(command_show_mem_ram1))==0){
@@ -364,6 +373,28 @@ void parse_command_show(uint8_t argc,char*argv[]){
         }
 
     }
+    else if(strncmp(argv[1],command_show_radio,strlen(command_show_radio))==0){
+        // Show radio information
+        usart1_dma_enq_data((uint8_t*)"\r\n",2);
+        if(argc>2){
+            // Check which information to show based on the child command
+            if(strncmp(argv[2],command_show_radio_stats,strlen(command_show_radio_stats))==0){
+                // Radio stats
+            }
+            else if(strncmp(argv[2],command_show_radio_runtime,strlen(command_show_radio_runtime))==0){
+                // Radio runtime stats from device
+            }
+            else if(strncmp(argv[2],command_show_radio_settings,strlen(command_show_radio_settings))==0){
+                // Radio settings
+            }
+            else{
+                // Invalid child command, send hint back to terminal indicating correct usage of the command
+                while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+                }                
+            }
+        }
+    }
     else{
         // Too few arguments or invalid child command, send hint back to terminal indicating correct usage of the command
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_show,strlen(msg_task_CLI_help_show))!=true){
@@ -388,11 +419,11 @@ void parse_command_write(uint8_t argc,char*argv[]){
 
     // Write operation and its callback function
 
-    task_cli_command.payload.rawData.rxBuffer=NULL;
-    task_cli_command.payload.rawData.rxLength=0;
-    task_cli_command.callbackFn=callback_cli_write_executed;
+    task_cli_SystemRequest.payload.rawData.rxBuffer=NULL;
+    task_cli_SystemRequest.payload.rawData.rxLength=0;
+    task_cli_SystemRequest.callbackFn=callback_cli_write_executed;
 
-    tx_queue_send(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+    tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
 }
 
 void parse_command_read(uint8_t argc,char*argv[]){
@@ -403,11 +434,11 @@ void parse_command_read(uint8_t argc,char*argv[]){
     }
     // Read operation and its callback function
 
-    task_cli_command.payload.rawData.rxBuffer=rxBuffer;
-    task_cli_command.payload.rawData.rxLength=1; // At least for now we can assume that we are only reading 1 byte
-    task_cli_command.callbackFn=callback_cli_read_executed;
+    task_cli_SystemRequest.payload.rawData.rxBuffer=rxBuffer;
+    task_cli_SystemRequest.payload.rawData.rxLength=1; // At least for now we can assume that we are only reading 1 byte
+    task_cli_SystemRequest.callbackFn=callback_cli_read_executed;
 
-    tx_queue_send(&task_cli_command_queue,&task_cli_command,TX_WAIT_FOREVER);
+    tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
 }
 
 bool build_bus_command(uint8_t argc,char*argv[]){
@@ -419,7 +450,7 @@ bool build_bus_command(uint8_t argc,char*argv[]){
         return false;
     }
     // Try to convert argv[1] to a valid device ID (integer value is required)
-    if(safe_atoi(argv[1],strlen(argv[1]),&task_cli_command.payload.rawData.deviceId)!=true){
+    if(safe_atoi(argv[1],strlen(argv[1]),&task_cli_SystemRequest.payload.rawData.deviceId)!=true){
         // Invalid device ID, send help information for the "write" command
         while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_help_write,strlen(msg_task_CLI_help_write))!=true){
             tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
@@ -453,10 +484,10 @@ bool build_bus_command(uint8_t argc,char*argv[]){
         }
     }
     
-    task_cli_command.commandType=CLI_CMD_BUS_RAW_DATA;
-    task_cli_command.payload.rawData.txBuffer=txBuffer;
-    task_cli_command.payload.rawData.txLength=argc-2;
-    task_cli_command.commandStatus=&commandStatus;
+    task_cli_SystemRequest.commandType=CLI_CMD_BUS_RAW_DATA;
+    task_cli_SystemRequest.payload.rawData.txBuffer=txBuffer;
+    task_cli_SystemRequest.payload.rawData.txLength=argc-2;
+    task_cli_SystemRequest.commandStatus=&commandStatus;
 
     return true;
 }
@@ -493,13 +524,13 @@ void show_command_status(uint32_t wakeupStatus){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
             }
             // Display read data from rxBuffer variable
-            if(task_cli_command.payload.rawData.txLength==3){
+            if(task_cli_SystemRequest.payload.rawData.txLength==3){
                 memset(tempBuffer,0,sizeof(tempBuffer));
                 snprintf(tempBuffer,
                     TASK_CLI_TEMPORARY_BUFFER_SIZE,
                     msg_task_CLI_read_executed_format_string,
-                    task_cli_command.payload.rawData.txBuffer[1], // Register address is at index 1 in the txBuffer)
-                    task_cli_command.payload.rawData.rxBuffer[0]);
+                    task_cli_SystemRequest.payload.rawData.txBuffer[1], // Register address is at index 1 in the txBuffer)
+                    task_cli_SystemRequest.payload.rawData.rxBuffer[0]);
                 while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
                     tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
                 }
@@ -507,13 +538,13 @@ void show_command_status(uint32_t wakeupStatus){
                     tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
                 }
             }
-            else if(task_cli_command.payload.rawData.txLength==2){
+            else if(task_cli_SystemRequest.payload.rawData.txLength==2){
                 memset(tempBuffer,0,sizeof(tempBuffer));
                 snprintf(tempBuffer,
                     TASK_CLI_TEMPORARY_BUFFER_SIZE,
                     msg_task_CLI_read_executed_format_string,
-                    task_cli_command.payload.rawData.txBuffer[0], // Register address is at index 1 in the txBuffer)
-                    task_cli_command.payload.rawData.rxBuffer[0]);
+                    task_cli_SystemRequest.payload.rawData.txBuffer[0], // Register address is at index 1 in the txBuffer)
+                    task_cli_SystemRequest.payload.rawData.rxBuffer[0]);
                 while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
                     tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
                 }
@@ -596,6 +627,15 @@ void task_CLI(ULONG arg){
             case TASK_CLI_WAKEUP_WRITE_EXECUTED:
             case TASK_CLI_WAKEUP_READ_EXECUTED:
                 show_command_status(wakeup.wakeupReason);
+            break;
+            case TASK_CLI_WAKEUP_RADIO_STATS_READ:
+
+            break;
+            case TASK_CLI_WAKEUP_RADIO_RUNTIME_READ:
+
+            break;
+            case TASK_CLI_WAKEUP_RADIO_SETTINGS_READ:
+
             break;
 
             default:

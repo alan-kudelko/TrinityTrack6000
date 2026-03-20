@@ -66,6 +66,12 @@ void usart1_dma_init(void){
     memset((void*)huart1_dma_tx_buffer,0,UART1_DMA_TX_BUFFER_SIZE);
     memset((void*)huart1_dma_rx_ring_buffer,0,UART1_DMA_RX_RING_BUFFER_SIZE);
     memset((void*)huart1_dma_tx_ring_buffer,0,UART1_DMA_TX_RING_BUFFER_SIZE);
+
+    HAL_UART_Receive_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
+    // Enable IDLE line detection interrupt
+    __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
+    // Disable Half Transfer interrupt to avoid unnecessary interrupts
+    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx,DMA_IT_HT);    
 }
 
 bool usart1_dma_enq_data(const uint8_t*data,const uint16_t length){
@@ -141,30 +147,6 @@ void usart1_dma_tx_complete(void){
         // No more data to send
         huart1_dma_tx_active=false;
     }
-}
-
-void usart1_dma_rx_init(void){
-    HAL_StatusTypeDef hal_status;
-    // Initialize DMA for USART1 RX
-    // Start the first DMA reception
-    hal_status=HAL_UART_Receive_DMA(&huart1,huart1_dma_rx_buffer,UART1_DMA_RX_BUFFER_SIZE);
-
-    // Check for errorrs
-    if(hal_status!=HAL_OK){
-        // Error handling
-        // For now just a debug loop
-        while(1){
-            // Debug loop
-        }
-    }
-    // If there is an error withing HAL
-    // Try to reinitialize DMA reception
-    // Change signature of function to return HAL_StatusTypeDef
-    // To allow error handling by caller
-    // Enable IDLE line detection interrupt
-    __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
-    // Disable Half Transfer interrupt to avoid unnecessary interrupts
-    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx,DMA_IT_HT);
 }
 
 bool usart1_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength){
