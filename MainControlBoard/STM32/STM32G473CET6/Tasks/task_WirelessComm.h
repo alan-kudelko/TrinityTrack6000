@@ -34,7 +34,7 @@
 #define TASK_WIRELESS_COMM_STACK_SIZE 1512 /**< Stack size for wireless comm task */
 #define TASK_WIRELESS_COMM_PRIORITY 3     /**< Priority for wireless comm task */
 
-#define TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH 10
+#define TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH 3
 
 typedef struct{
     NRF24L01*dev; // Pointer to NRF24L01 class object
@@ -74,6 +74,10 @@ extern void task_wireless_comm_read_settings(void);
 extern bool task_wireless_comm_verify_settings(void);
 
 extern void task_wireless_comm_update_radio_stats(RADIO_STATS*radio_stats,uint8_t packet_id);
+
+extern void task_wireless_comm_process_request(void);
+
+extern void task_wireless_comm_process_request_radio_stats(void);
 
 extern void task_wireless_comm(ULONG arg);
 

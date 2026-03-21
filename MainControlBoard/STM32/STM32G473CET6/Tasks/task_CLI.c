@@ -133,13 +133,20 @@ const char msg_task_CLI_failsafe_menu_header[]="[CLI] FAILSAFE> ";
 const char msg_task_CLI_fault_menu_header[]="[CLI] FAULT> ";
 const char msg_task_CLI_unknown_command[]="[CLI] Unknown command. Type help for available commands\r\n";
 
-const char msg_task_CLI_mode_switched_to_diag[]="[CLI] Switched to diagnostics mode\r\n";
-const char msg_task_CLI_mode_switched_to_test[]="[CLI] Switched to test mode\r\n";
-const char msg_task_CLI_mode_switch_failed[]="[CLI] Failed to switch mode\r\n[CLI] Correct usage: mode <diag/test>\r\n";
+const char msg_task_CLI_mode_switched_to_diag[]="Switched to diagnostics mode\r\n";
+const char msg_task_CLI_mode_switched_to_test[]="Switched to test mode\r\n";
+const char msg_task_CLI_mode_switch_failed[]="Failed to switch mode\r\n";
 
 const char msg_task_CLI_write_executed[]="Write command executed\r\n";
 const char msg_task_CLI_read_executed[]="Read command executed\r\n";
 const char msg_task_CLI_read_executed_format_string[]="    Register 0x%02X: 0x%02X\r\n";
+
+const char msg_task_CLI_show_radio_stats_header[]="Radio stats\r\n";
+const char msg_task_CLI_show_radio_stats_total_packages_format_string[]="Total packages %zu\r\n";
+const char msg_task_CLI_show_radio_stats_received_packages_format_string[]="Received packages %zu\r\n";
+const char msg_task_CLI_show_radio_stats_dropped_packages_format_string[]="Dropped packages %zu\r\n";
+const char msg_task_CLI_show_radio_stats_duplicate_packages_format_string[]="Duplicated packages %zu\r\n";
+const char msg_task_CLI_show_radio_stats_out_of_order_packages_format_string[]="Out of order packages %zu\r\n";
 /**@} */
 
 /**
@@ -170,6 +177,12 @@ static SystemRequest task_cli_SystemRequest;
 
 static char tempBuffer[TASK_CLI_TEMPORARY_BUFFER_SIZE]; // Temporary buffer for snprintf operations
 
+static RADIO_STATS radio_stats;
+
+static RADIO_RUNTIME_STATS radio_runtime_stats;
+
+//static NRF_SETTINGS nrf_settings;
+
 /**@} */
 
 void task_CLI_init(void){
@@ -178,14 +191,14 @@ void task_CLI_init(void){
         "CLI Wakeup",
         sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t),
         task_cli_wakeup_queue_storage,
-        TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t));
+        TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON));
 
     // Initialize command structure with default values for testing purposes
     task_cli_SystemRequest.commandType=REQUEST_SET_VALUE;
     task_cli_SystemRequest.payload.set.hardwareId=HARDWARE_MOTOR1;
     task_cli_SystemRequest.payload.set.value=0;
     task_cli_SystemRequest.commandStatus=&commandStatus;
-    task_cli_SystemRequest.callbackFn=callback_cli_write_executed;
+    task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
 
     UNUSED(task_cli_SystemRequest);
     UNUSED(commandStatus);
@@ -313,14 +326,16 @@ void parse_command_switch_mode(uint8_t argc,char*argv[]){
         // Send request to change mode to run
         task_cli_SystemRequest.commandType=REQUEST_SWITCH_MODE;
         task_cli_SystemRequest.payload.mode.mode=SYSTEM_MODE_RUN;
-        //task_cli_SystemRequest.callbackEvent=callback_cli_wakeup;
+        task_cli_SystemRequest.callbackEvent=TASK_CLI_WAKEUP_MODE_CHANGED;
+        task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
         tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
     }
     else if(strncmp(argv[1],command_switch_mode_test,strlen(command_switch_mode_test))==0){
         // Send request to change mode to test
         task_cli_SystemRequest.commandType=REQUEST_SWITCH_MODE;
         task_cli_SystemRequest.payload.mode.mode=SYSTEM_MODE_TEST;
-        //task_cli_SystemRequest.callbackEvent=callback_cli_wakeup;
+        task_cli_SystemRequest.callbackEvent=TASK_CLI_WAKEUP_MODE_CHANGED;
+        task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
         tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
     }
     else{
@@ -372,14 +387,23 @@ void parse_command_show(uint8_t argc,char*argv[]){
     }
     else if(strncmp(argv[1],command_show_radio,strlen(command_show_radio))==0){
         // Show radio information
-        usart1_dma_enq_data((uint8_t*)"\r\n",2);
         if(argc>2){
             // Check which information to show based on the child command
             if(strncmp(argv[2],command_show_radio_stats,strlen(command_show_radio_stats))==0){
                 // Radio stats
+                task_cli_SystemRequest.commandType=REQUEST_GET_RADIO_STATS;
+                task_cli_SystemRequest.payload.radioStats=&radio_stats;
+                task_cli_SystemRequest.callbackEvent=TASK_CLI_WAKEUP_RADIO_STATS_READ;
+                task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
+                tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,0);
             }
             else if(strncmp(argv[2],command_show_radio_runtime,strlen(command_show_radio_runtime))==0){
                 // Radio runtime stats from device
+                task_cli_SystemRequest.commandType=REQUEST_GET_RADIO_RUNTIME_STATS;
+                task_cli_SystemRequest.payload.radioRuntimeStats=&radio_runtime_stats;
+                task_cli_SystemRequest.callbackEvent=TASK_CLI_WAKEUP_RADIO_RUNTIME_READ;
+                task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
+                tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,0);                
             }
             else if(strncmp(argv[2],command_show_radio_settings,strlen(command_show_radio_settings))==0){
                 // Radio settings
@@ -418,7 +442,7 @@ void parse_command_write(uint8_t argc,char*argv[]){
 
     task_cli_SystemRequest.payload.rawData.rxBuffer=NULL;
     task_cli_SystemRequest.payload.rawData.rxLength=0;
-    task_cli_SystemRequest.callbackFn=callback_cli_write_executed;
+    task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
 
     tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
 }
@@ -433,7 +457,7 @@ void parse_command_read(uint8_t argc,char*argv[]){
 
     task_cli_SystemRequest.payload.rawData.rxBuffer=rxBuffer;
     task_cli_SystemRequest.payload.rawData.rxLength=1; // At least for now we can assume that we are only reading 1 byte
-    task_cli_SystemRequest.callbackFn=callback_cli_read_executed;
+    task_cli_SystemRequest.callbackFn=task_cli_wakeup_callback;
 
     tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
 }
@@ -488,81 +512,75 @@ bool build_bus_command(uint8_t argc,char*argv[]){
 
     return true;
 }
-// Fix this according to event parameter
-// This time one callback is needed instead of 3 or more
-void callback_cli_data_received(uint8_t event){
+
+void callback_cli_data_received(){
     TASK_CLI_WAKEUP_REASON wakeup;
     wakeup.wakeupReason=TASK_CLI_WAKEUP_USART_DATA;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
 }
 
-void callback_cli_write_executed(uint8_t event){
+void task_cli_wakeup_callback(uint8_t event){
     TASK_CLI_WAKEUP_REASON wakeup;
-    wakeup.wakeupReason=TASK_CLI_WAKEUP_WRITE_EXECUTED;
+    wakeup.wakeupReason=event;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
 }
 
-void callback_cli_read_executed(uint8_t event){
-    TASK_CLI_WAKEUP_REASON wakeup;
-    wakeup.wakeupReason=TASK_CLI_WAKEUP_READ_EXECUTED;
-    tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
-}
-
-void callback_cli_wakeup(uint8_t event){
-    UNUSED(event);
-}
-
-void show_command_status(uint32_t wakeupStatus){
-    // Change it to be wakeup reason depended
-    switch(wakeupStatus){
-        case TASK_CLI_WAKEUP_WRITE_EXECUTED:
-            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_write_executed,strlen(msg_task_CLI_write_executed))!=true){
-                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
-            }
-        break;
-        case TASK_CLI_WAKEUP_READ_EXECUTED:
-            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_read_executed,strlen(msg_task_CLI_read_executed))!=true){
-                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
-            }
-            // Display read data from rxBuffer variable
-            if(task_cli_SystemRequest.payload.rawData.txLength==3){
-                memset(tempBuffer,0,sizeof(tempBuffer));
-                snprintf(tempBuffer,
-                    TASK_CLI_TEMPORARY_BUFFER_SIZE,
-                    msg_task_CLI_read_executed_format_string,
-                    task_cli_SystemRequest.payload.rawData.txBuffer[1], // Register address is at index 1 in the txBuffer)
-                    task_cli_SystemRequest.payload.rawData.rxBuffer[0]);
-                while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
-                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
-                }
-                while(usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))!=true){
-                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
-                }
-            }
-            else if(task_cli_SystemRequest.payload.rawData.txLength==2){
-                memset(tempBuffer,0,sizeof(tempBuffer));
-                snprintf(tempBuffer,
-                    TASK_CLI_TEMPORARY_BUFFER_SIZE,
-                    msg_task_CLI_read_executed_format_string,
-                    task_cli_SystemRequest.payload.rawData.txBuffer[0], // Register address is at index 1 in the txBuffer)
-                    task_cli_SystemRequest.payload.rawData.rxBuffer[0]);
-                while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
-                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
-                }
-                while(usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))!=true){
-                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
-                }
-            }
-        break;
-        case TASK_CLI_WAKEUP_MODE_CHANGED:
-
-        break;
-        default:
-        // Should not happen
+void show_command_status_write(void){
+    if(*task_cli_SystemRequest.commandStatus==SYSTEM_REQUEST_STATUS_OK){
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_write_executed,strlen(msg_task_CLI_write_executed))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+        }
+    }
+    else{
+        // Failed to execute write
     }
 }
 
-void show_command_status_switch_mode(){
+void show_command_status_read(void){
+    if(*task_cli_SystemRequest.commandStatus==SYSTEM_REQUEST_STATUS_OK){
+        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_read_executed,strlen(msg_task_CLI_read_executed))!=true){
+            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+        }
+        // Display read data from rxBuffer variable
+        if(task_cli_SystemRequest.payload.rawData.txLength==3){
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_read_executed_format_string,
+                task_cli_SystemRequest.payload.rawData.txBuffer[1], // Register address is at index 1 in the txBuffer)
+                task_cli_SystemRequest.payload.rawData.rxBuffer[0]);
+
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+
+            while(usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+        }
+        else if(task_cli_SystemRequest.payload.rawData.txLength==2){
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_read_executed_format_string,
+                task_cli_SystemRequest.payload.rawData.txBuffer[0], // Register address is at index 1 in the txBuffer)
+                task_cli_SystemRequest.payload.rawData.rxBuffer[0]);
+
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+
+            while(usart1_dma_enq_data((uint8_t*)"\r\n",strlen("\r\n"))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+        }
+    }
+    else{
+        // Failed to execute read
+    }
+}
+
+void show_command_status_switch_mode(void){
     switch(*task_cli_SystemRequest.commandStatus){
         case SYSTEM_REQUEST_STATUS_OK:
             // Mode switched
@@ -578,8 +596,70 @@ void show_command_status_switch_mode(){
             }
         break;
         case SYSTEM_REQUEST_STATUS_ERROR:
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switch_failed,strlen(msg_task_CLI_mode_switch_failed))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+            }
+        break;
         default:
             // Failed to switch mode
+    }
+}
+
+void show_command_status_radio_stats(void){
+    switch(*task_cli_SystemRequest.commandStatus){
+        case SYSTEM_REQUEST_STATUS_OK:
+            while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_show_radio_stats_header,strlen(msg_task_CLI_show_radio_stats_header))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA                
+            }
+            // Display total packages
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_show_radio_stats_total_packages_format_string,
+                (size_t)radio_stats.total_packages);
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+            // Display received packages
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_show_radio_stats_received_packages_format_string,
+                (size_t)radio_stats.packages_received);
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+            // Display dropped packages
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_show_radio_stats_dropped_packages_format_string,
+                (size_t)radio_stats.packages_dropped);
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+            // Display duplicate packages
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_show_radio_stats_duplicate_packages_format_string,
+                (size_t)radio_stats.packages_duplicate);
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+            // Display out of order packages
+            memset(tempBuffer,0,sizeof(tempBuffer));
+            snprintf(tempBuffer,
+                TASK_CLI_TEMPORARY_BUFFER_SIZE,
+                msg_task_CLI_show_radio_stats_out_of_order_packages_format_string,
+                (size_t)radio_stats.packages_out_of_order);
+            while(usart1_dma_enq_data((uint8_t*)tempBuffer,strlen(tempBuffer))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS);
+            }
+        break;
+        case SYSTEM_REQUEST_STATUS_ERROR:
+
+        break;
     }
 }
 
@@ -635,6 +715,7 @@ void task_CLI(ULONG arg){
         tx_queue_receive(&task_cli_wakeup_queue,&wakeup,TX_WAIT_FOREVER);
 
         switch(wakeup.wakeupReason){
+            // Called only by callback_cli_data_received (status checking can be ommited)
             case TASK_CLI_WAKEUP_USART_DATA:
                 memset(usart_rx_buffer,0,sizeof(usart_rx_buffer)); // Clear rx buffer before reading new command
                 if(usart1_dma_read_data((uint8_t*)usart_rx_buffer,&usart_rx_length,UART1_DMA_RX_RING_BUFFER_SIZE-1)){
@@ -653,15 +734,19 @@ void task_CLI(ULONG arg){
                     //usart1_dma_enq_data((const uint8_t*)msg_task_CLI_unknown_command,strlen(msg_task_CLI_unknown_command));
                 }
             break;
+                // On the other hand these command can be finished with or without success
             case TASK_CLI_WAKEUP_WRITE_EXECUTED:
+                show_command_status_write();
+            break;
             case TASK_CLI_WAKEUP_READ_EXECUTED:
-                show_command_status(wakeup.wakeupReason);
+                show_command_status_read();
+                //show_command_status(wakeup.wakeupReason);
             break;
             case TASK_CLI_WAKEUP_MODE_CHANGED:
                 show_command_status_switch_mode();
             break;
             case TASK_CLI_WAKEUP_RADIO_STATS_READ:
-
+                show_command_status_radio_stats();
             break;
             case TASK_CLI_WAKEUP_RADIO_RUNTIME_READ:
 

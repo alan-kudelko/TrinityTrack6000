@@ -82,9 +82,9 @@ typedef struct ALIGNED(4) SystemRequest{
         struct{
             SYSTEM_MODE mode;
         }mode;
-        RADIO_STATS radioStats;
-        RADIO_RUNTIME_STATS radioRuntimeStats;
-        NRF_SETTINGS radioSettings;
+        RADIO_STATS*radioStats;
+        RADIO_RUNTIME_STATS*radioRuntimeStats;
+        NRF_SETTINGS*radioSettings;
     }payload;
     uint8_t*commandStatus; // Status of the command (ok or not ok) set by dispatcher
     uint8_t callbackEvent; // Set by request type in the CLI task

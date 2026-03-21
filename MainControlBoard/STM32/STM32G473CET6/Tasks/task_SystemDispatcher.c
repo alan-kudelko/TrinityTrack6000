@@ -33,6 +33,7 @@ static hspi_data spi_transaction_data;
 
 SYSTEM_MODE system_mode SECTION(".sysDiag"); // Przeniesc do taska trybu systemu
 
+extern TX_QUEUE task_wireless_comm_request_queue; // Request queue to task wireless_comm
 
 void failsafe_stop(void){
 
@@ -57,7 +58,7 @@ void parse_cli_queue(SystemRequest*command){
             parse_cli_queue_request_switch_mode(command);
         break;
         case REQUEST_GET_RADIO_STATS:
-
+            parse_cli_queue_request_radio_stats(command);
         break;
         case REQUEST_GET_RADIO_RUNTIME_STATS:
 
@@ -75,13 +76,30 @@ void parse_cli_queue_request_set_value(SystemRequest*command){
 }
 
 void parse_cli_queue_request_bus_raw_data(SystemRequest*command){
+    switch(command->payload.rawData.deviceId){
+        // case for all the devices
+        // send request to given device specialist
+        // For instance task_WirelessComm
+        default:
 
+    }
 }
 
 void parse_cli_queue_request_switch_mode(SystemRequest*command){
-    system_mode=command->payload.mode.mode; // Switch mode (for now without validation)
-    *command->commandStatus=SYSTEM_REQUEST_STATUS_OK; // Set status of the request (debug purposes OK)
-    command->callbackFn(command->callbackEvent); // Notify caller
+    if((system_mode==SYSTEM_MODE_FAULT)||(system_mode==SYSTEM_MODE_FAILSAFE)){
+        *command->commandStatus=SYSTEM_REQUEST_STATUS_ERROR;
+        command->callbackFn(command->callbackEvent);
+        return;   
+    }
+
+    system_mode=command->payload.mode.mode;
+    *command->commandStatus=SYSTEM_REQUEST_STATUS_OK;
+    command->callbackFn(command->callbackEvent);
+}
+
+void parse_cli_queue_request_radio_stats(SystemRequest*command){
+    // Enqueue data in the radio command queue
+    tx_queue_send(&task_wireless_comm_request_queue,command,0);
 }
 
 void task_SystemDispatcher_init(void){
@@ -90,9 +108,9 @@ void task_SystemDispatcher_init(void){
         "CLI Commands",
         sizeof(SystemRequest)/sizeof(uint32_t),
         task_cli_request_queue_storage,
-        TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest)/sizeof(uint32_t));
+        TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest));
 
-        system_mode=SYSTEM_MODE_RUN; // Temporary
+        system_mode=SYSTEM_MODE_FAILSAFE; // Temporary
 }
 
 void task_SystemDispatcher(ULONG arg){

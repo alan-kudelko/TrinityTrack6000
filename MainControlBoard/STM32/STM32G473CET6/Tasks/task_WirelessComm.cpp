@@ -16,13 +16,14 @@
 #include <USART1_Dma.h>
 #include <string.h>
 #include <stdio.h>
+#include <system_commands.h>
 
 const char task_wireless_comm_name[]="Wireless Task";
 TX_THREAD task_wireless_comm_handle SECTION(".task_handles");
 ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE] SECTION(".task_stacks_ccsram");
 
-//static TX_QUEUE task_wireless_comm_command_queue;
-//static ULONG task_wireless_comm_command_queue_storage[TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH];
+TX_QUEUE task_wireless_comm_request_queue;
+ULONG task_wireless_comm_request_queue_storage[TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest)/sizeof(uint32_t)];
 
 /** 
  * @name task_WirelessComm Initialization Internal state
@@ -30,11 +31,12 @@ ULONG task_wireless_comm_stack[TASK_WIRELESS_COMM_STACK_SIZE] SECTION(".task_sta
  * @{
 */
 
+static SystemRequest request;
+
 static TX_SEMAPHORE task_wireless_comm_wakeup_sem;
-static TX_SEMAPHORE task_wireless_comm_operation_done_sem;
+static TX_SEMAPHORE task_wireless_comm_operation_done_sem; // Semaphore indicating that SPI request has been processed
 
 static NRF24L01 nrf24l01(NRF24L01_CE_GPIO_Port,NRF24L01_CE_Pin,NRF24L01_CS_GPIO_Port,NRF24L01_CS_Pin,NRF24L01_IRQ_GPIO_Port,NRF24L01_IRQ_Pin);
-
 
 static NRF_SETTINGS nrf_default_settings{
     NRF_BIT_TX_DS|NRF_BIT_MAX_RT|NRF_BIT_EN_CRC|NRF_BIT_CRCO|NRF_BIT_PWR_UP|NRF_BIT_PRIM_RX, // config
@@ -106,16 +108,19 @@ extern "C" void radioOperationDone_callback(uint8_t event){
     tx_semaphore_put(&task_wireless_comm_operation_done_sem);
 }
 
-char werdon[]="werdon";
-char werdon2[]="werdon2";
-
 extern "C" void task_wireless_comm_init(void){
     tx_semaphore_create(&task_wireless_comm_wakeup_sem,
-       werdon,
+       (char*)"Wireless Wakeup",
        0);
     tx_semaphore_create(&task_wireless_comm_operation_done_sem,
-        werdon2,
+        (char*)"Wireless op done",
         0);
+    uint32_t status=tx_queue_create(&task_wireless_comm_request_queue,
+        (char*)"Wireless request queue",
+        sizeof(SystemRequest)/sizeof(uint32_t),
+        task_wireless_comm_request_queue_storage,
+        TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest));
+    UNUSED(status);
 }
 
 extern "C" void task_wireless_comm_write_settings(NRF_SETTINGS*settings){
@@ -316,6 +321,27 @@ extern "C" void task_wireless_comm_update_radio_stats(RADIO_STATS*radio_stats,ui
     }
 }
 
+extern "C" void task_wireless_comm_process_request(void){
+    switch(request.commandType){
+        case REQUEST_BUS_RAW_DATA:
+
+        break;
+        case REQUEST_GET_RADIO_STATS:
+            task_wireless_comm_process_request_radio_stats();
+        break;
+
+        default:
+        
+        break;
+    }
+}
+
+extern "C" void task_wireless_comm_process_request_radio_stats(void){
+    *request.payload.radioStats=radio_stats;
+    *request.commandStatus=SYSTEM_REQUEST_STATUS_OK;
+    request.callbackFn(request.callbackEvent);
+}
+
 extern "C" void task_wireless_comm(ULONG arg){
     UNUSED(arg);
 
@@ -328,6 +354,10 @@ extern "C" void task_wireless_comm(ULONG arg){
 
 
     while(true){
+        if(tx_queue_receive(&task_wireless_comm_request_queue,&request,0)==TX_SUCCESS){
+            task_wireless_comm_process_request();
+        }
+
         if(tx_semaphore_get(&task_wireless_comm_wakeup_sem,12000)==TX_SUCCESS){ // For debug time
         // Read data
         radio.dev->attach_callback_function(radioOperationDone_callback,0);

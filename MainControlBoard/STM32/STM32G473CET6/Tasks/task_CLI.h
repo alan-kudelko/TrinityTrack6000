@@ -42,7 +42,7 @@
 #define TASK_CLI_RX_BUFFER_SIZE 10 //!< Size of the rx buffer for receiving raw data from devices, can be adjusted as needed
 #define TASK_CLI_TX_BUFFER_SIZE 10 //!< Size of the tx buffer for transmitting raw data to devices, can be adjusted as needed
 
-#define TASK_CLI_TEMPORARY_BUFFER_SIZE 31 //!< Size of temporary buffers used in command parsing
+#define TASK_CLI_TEMPORARY_BUFFER_SIZE 41 //!< Size of temporary buffers used in command parsing
 
 /**
  * @brief CLI Task FSM States
@@ -80,7 +80,6 @@ extern ULONG task_CLI_stack[TASK_CLI_STACK_SIZE]; //!< Stack for CLI task
 
 typedef struct ALIGNED(4) TASK_CLI_WAKEUP_REASON{
     uint8_t wakeupReason;
-    uint8_t requestStatus;
 }TASK_CLI_WAKEUP_REASON;
 
 /**
@@ -150,6 +149,14 @@ extern const char msg_task_CLI_mode_switch_failed[]; //!< Message indicating tha
 extern const char msg_task_CLI_write_executed[]; //!< Message indicating that a write command has been executed
 extern const char msg_task_CLI_read_executed[]; //!< Message indicating that a read command has been executed
 extern const char msg_task_CLI_read_executed_format_string[]; //!< Format string for message indicating read register and its value
+
+
+extern const char msg_task_CLI_show_radio_stats_header[];
+extern const char msg_task_CLI_show_radio_stats_total_packages_format_string[];
+extern const char msg_task_CLI_show_radio_stats_received_packages_format_string[];
+extern const char msg_task_CLI_show_radio_stats_dropped_packages_format_string[];
+extern const char msg_task_CLI_show_radio_stats_duplicate_packages_format_string[];
+extern const char msg_task_CLI_show_radio_stats_out_of_order_packages_format_string[];
 /**@} */
 
 #ifdef __cplusplus
@@ -247,38 +254,25 @@ bool build_bus_command(uint8_t argc,char*argv[]);
  * @param None.
  * @return None.
  */
-void callback_cli_data_received(uint8_t event);
+void callback_cli_data_received();
+
 
 /**
- * @brief Callback function for when a CLI command has been executed.
- * This function is called after a command has been executed to notify the CLI task that it can perform any necessary actions after command execution, such as updating the menu header or showing command status.
- * It sends a wakeup reason to the CLI task's wakeup queue to indicate that a command has been executed.
- * @param None.
- * @return None.
+ * @brief Callback function for processing CLI requests
  */
-void callback_cli_write_executed(uint8_t event);
+void task_cli_wakeup_callback(uint8_t event);
 
-/**
- * @brief Callback function for when a CLI read command has been executed.
- * This function is called after a read command has been executed to notify the CLI task that it can perform any necessary actions after read command execution, such as sending read data back to terminal or showing command status.
- * It sends a wakeup reason to the CLI task's wakeup queue to indicate that a read command has been executed.
- * @param None.
- * @return None.
- */
-void callback_cli_read_executed(uint8_t event);
 
-/**
- * @brief Show command execution status.
- * This function is called after a command has been executed to show the status of the command execution to the user.
- * For now, it just sends a static message back to the terminal, but in the future, it can be enhanced to show more detailed information about the command execution status.
- * @param uint32_t wakeupReason: The reason for the wakeup event that triggered the status display..
- * @return None.
- */
-void show_command_status(uint32_t wakeupReason);
+void show_command_status_write(void);
 
+
+void show_command_status_read(void);
 
 
 void show_command_status_switch_mode(void);
+
+
+void show_command_status_radio_stats(void);
 
 /**
  * @brief Display CLI menu header based on current FSM state.
