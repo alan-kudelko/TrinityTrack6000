@@ -17,8 +17,6 @@
 
 #include <task_SystemDispatcher.h>
 
-#include <task_ModeManager.h>
-
 #include <SPI1_Dma.h> // Temporary include for testing
 
 const char task_SystemDispatcher_name[]="System Dispatcher";
@@ -33,9 +31,7 @@ static SystemRequest task_cli_command;
 
 static hspi_data spi_transaction_data;
 
-extern TX_QUEUE task_cli_feedback_queue;
-
-extern SYSTEM_MODE system_mode;
+SYSTEM_MODE system_mode SECTION(".sysDiag"); // Przeniesc do taska trybu systemu
 
 
 void failsafe_stop(void){
@@ -46,8 +42,46 @@ void fault_stop(void){
 
 }
 
-void parse_cli_queue(SystemRequest command){
-    
+void parse_cli_queue(SystemRequest*command){
+    // For sure we have to check which device to process
+    // We have to check first if operation can be done safely
+    switch(command->commandType){
+        case REQUEST_SET_VALUE:
+            parse_cli_queue_request_set_value(command);
+            // Placeholder for now
+        break;
+        case REQUEST_BUS_RAW_DATA:
+            parse_cli_queue_request_bus_raw_data(command);
+        break;
+        case REQUEST_SWITCH_MODE:
+            parse_cli_queue_request_switch_mode(command);
+        break;
+        case REQUEST_GET_RADIO_STATS:
+
+        break;
+        case REQUEST_GET_RADIO_RUNTIME_STATS:
+
+        break;
+        case REQUEST_GET_RADIO_SETTINGS:
+
+        break;
+        default:
+        // Should not happen
+    }
+}
+
+void parse_cli_queue_request_set_value(SystemRequest*command){
+    // Placeholder
+}
+
+void parse_cli_queue_request_bus_raw_data(SystemRequest*command){
+
+}
+
+void parse_cli_queue_request_switch_mode(SystemRequest*command){
+    system_mode=command->payload.mode.mode; // Switch mode (for now without validation)
+    *command->commandStatus=SYSTEM_REQUEST_STATUS_OK; // Set status of the request (debug purposes OK)
+    command->callbackFn(command->callbackEvent); // Notify caller
 }
 
 void task_SystemDispatcher_init(void){
@@ -58,22 +92,23 @@ void task_SystemDispatcher_init(void){
         task_cli_request_queue_storage,
         TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest)/sizeof(uint32_t));
 
-        system_mode=RUN; // Temporary
+        system_mode=SYSTEM_MODE_RUN; // Temporary
 }
 
 void task_SystemDispatcher(ULONG arg){
     UNUSED(arg);
-    uint32_t queue_cli_status;
-    UNUSED(queue_cli_status);
-
-    //uint32_t queue_wireless_comm_status;
 
     while(1){
         //queue_wireless_comm_status=tx_queue_receive();
-        tx_queue_receive(&task_cli_request_queue,&task_cli_command,TX_WAIT_FOREVER);
+        tx_queue_receive(&task_cli_request_queue,&task_cli_command,TX_WAIT_FOREVER); // For now
+        // Later there will be second queue for reading data from task_wireless_comm
+        // This data will be send to other mcu's to perform their duties
+        parse_cli_queue(&task_cli_command);
+
+        continue;
 
         switch(system_mode){
-            case RUN:
+            case SYSTEM_MODE_RUN:
                 spi_transaction_data.txBuffer=task_cli_command.payload.rawData.txBuffer;
                 spi_transaction_data.txLength=task_cli_command.payload.rawData.txLength;
                 spi_transaction_data.rxBuffer=task_cli_command.payload.rawData.rxBuffer;
@@ -89,13 +124,14 @@ void task_SystemDispatcher(ULONG arg){
                     spi_transaction_data.gpio_pin=GPIO_PIN_15;
                 }
                 spi1_dma_enq_data(&spi_transaction_data);
+                // Send data to other mcus
             break;
-            case TEST:
-                
-            case FAILSAFE:
-
-            case FAULT:
-
+            case SYSTEM_MODE_TEST:
+                // Ignore data from radio task - debug mode
+            case SYSTEM_MODE_FAILSAFE:
+                // System halt when there is significant package loss
+            case SYSTEM_MODE_FAULT:
+                // System halt when one of the mcus or hardware is not responding
             default:
             // Should not happen
 

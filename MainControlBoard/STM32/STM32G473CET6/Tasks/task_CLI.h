@@ -73,12 +73,14 @@ extern ULONG task_CLI_stack[TASK_CLI_STACK_SIZE]; //!< Stack for CLI task
 #define TASK_CLI_WAKEUP_USART_DATA 1 //!< Wakeup reason indicating that CLI task was woken up by USART data reception
 #define TASK_CLI_WAKEUP_WRITE_EXECUTED 2 //!< Wakeup reason indicating that CLI task was woken up after executing a command, can be used to trigger menu header update or other actions after command execution
 #define TASK_CLI_WAKEUP_READ_EXECUTED 3 //!< Wakeup reason indicating that CLI task was woken up after executing a read command, can be used to trigger sending read data back to terminal or other actions after read command execution
-#define TASK_CLI_WAKEUP_RADIO_STATS_READ 4
-#define TASK_CLI_WAKEUP_RADIO_RUNTIME_READ 5
-#define TASK_CLI_WAKEUP_RADIO_SETTINGS_READ 6
+#define TASK_CLI_WAKEUP_MODE_CHANGED 4
+#define TASK_CLI_WAKEUP_RADIO_STATS_READ 5
+#define TASK_CLI_WAKEUP_RADIO_RUNTIME_READ 6
+#define TASK_CLI_WAKEUP_RADIO_SETTINGS_READ 7
 
 typedef struct ALIGNED(4) TASK_CLI_WAKEUP_REASON{
-    uint32_t wakeupReason;
+    uint8_t wakeupReason;
+    uint8_t requestStatus;
 }TASK_CLI_WAKEUP_REASON;
 
 /**
@@ -136,8 +138,10 @@ extern const char msg_task_CLI_help[]; //!< Help message for all the CLI task co
 extern const char msg_task_CLI_help_show[]; //!< Help message for "show" command and its child commands
 extern const char msg_task_CLI_help_write[]; //!< Help message for "write" command and its child commands
 
-extern const char msg_task_CLI_diag_menu_header[]; //!< Default menu header for CLI task
+extern const char msg_task_CLI_run_menu_header[]; //!< Default menu header for CLI task
 extern const char msg_task_CLI_test_menu_header[]; //!< Test menu header for CLI task
+extern const char msg_task_CLI_failsafe_menu_header[];
+extern const char msg_task_CLI_fault_menu_header[];
 extern const char msg_task_CLI_unknown_command[]; //!< Message indicating unknown command received in CLI task
 extern const char msg_task_CLI_mode_switched_to_diag[]; //!< Message indicating that CLI mode has been switched to diagnostics mode
 extern const char msg_task_CLI_mode_switched_to_test[]; //!< Message indicating that CLI mode has been switched to test mode
@@ -271,6 +275,10 @@ void callback_cli_read_executed(uint8_t event);
  * @return None.
  */
 void show_command_status(uint32_t wakeupReason);
+
+
+
+void show_command_status_switch_mode(void);
 
 /**
  * @brief Display CLI menu header based on current FSM state.

@@ -258,11 +258,9 @@ int main(void){
 // Tzn. operacje najczesciej wykonywane i najciesze powinny trafic do dwoch roznych
 // Kontrolerow DMA
 
-// Ale pierwsza rzecz jaka jest do zmiany to na pewno zaleznosci plikowe
-// system_commands i statystyki radiowe
-// statystyki radiowe powinny byc osobno, wgl cale ustawienia i te duze struktury
-
-// Dobra teraz należy zmienić semafor w tasku radiowym na kolejkę
+// Dobra teraz należy zmienić semafor w tasku radiowym na kolejkę (tutaj już adnotacja - dwie kolejki
+// jedna tylko związana z taskiem radiowym czyli wybudzanie przy normalnej pracy, a druga z rozkazem operacji z CLI
+// Oczywiscie po weryfikacji przez dispatchera)
 // Następnie na podstawie danych w kolejce stwierdzić czy to rozkaz wysłany przez CLI przez dispatchera
 // Lub w przypadku wykrycia przerwania na pinie IRQ należy odczytać dane z FIFO RX
 // Na pewno tutaj warto rozbudować system_commands taska CLI

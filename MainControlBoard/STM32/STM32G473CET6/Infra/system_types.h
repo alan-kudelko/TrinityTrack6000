@@ -1,0 +1,13 @@
+// Doxy
+
+#ifndef SYSTEM_TYPES_H_
+    #define SYSTEM_TYPES_H_
+
+typedef enum SYSTEM_MODE{
+    SYSTEM_MODE_RUN,
+    SYSTEM_MODE_TEST,
+    SYSTEM_MODE_FAILSAFE,
+    SYSTEM_MODE_FAULT
+}SYSTEM_MODE;
+
+#endif // SYSTEM_TYPES_H_

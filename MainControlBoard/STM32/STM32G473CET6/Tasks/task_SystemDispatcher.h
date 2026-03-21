@@ -1,5 +1,5 @@
 /**
- * @file task_CommandExecutor.h
+ * @file task_SystemDispatcher.h
  * @brief 
  * 
  * @author Alan Kudełko
@@ -19,6 +19,7 @@
 #include <tx_api.h>
 
 #include <system_commands.h>
+#include <system_types.h>
 
 #define TASKS_SYSTEM_DISPATCHER_STACK_SIZE 1024  //!< Stack size for System Dispatcher task
 #define TASKS_SYSTEM_DISPATCHER_PRIORITY 1      //!< Priority for System Dispatcher task
@@ -44,7 +45,13 @@ void failsafe_stop(void);
 
 void fault_stop(void);
 
-void parse_cli_queue(SystemRequest command);
+void parse_cli_queue(SystemRequest*command);
+
+void parse_cli_queue_request_set_value(SystemRequest*command);
+
+void parse_cli_queue_request_bus_raw_data(SystemRequest*command);
+
+void parse_cli_queue_request_switch_mode(SystemRequest*command);
 
 void task_SystemDispatcher_init(void);
 

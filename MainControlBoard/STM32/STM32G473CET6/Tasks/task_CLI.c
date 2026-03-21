@@ -23,11 +23,7 @@
 #include <USART1_Dma.h>
 #include <TrinityTrack6000_MemInfo.h>
 
-#include <task_ModeManager.h>
-
 #include <system_commands.h>
-
-CLI_Task_State cli_task_state=CLI_STATE_DIAG_MENU; // Default state is diagnostics menu, can be changed to test menu by command
 
 const char task_CLI_name[]="CLI Task";
 
@@ -131,8 +127,10 @@ const char msg_task_CLI_help_write[]=
       11 DEVICE_FPGA\r\n"
 ;
 
-const char msg_task_CLI_diag_menu_header[]="[CLI] DIAG> ";
+const char msg_task_CLI_run_menu_header[]="[CLI] DIAG> ";
 const char msg_task_CLI_test_menu_header[]="[CLI] TEST> ";
+const char msg_task_CLI_failsafe_menu_header[]="[CLI] FAILSAFE> ";
+const char msg_task_CLI_fault_menu_header[]="[CLI] FAULT> ";
 const char msg_task_CLI_unknown_command[]="[CLI] Unknown command. Type help for available commands\r\n";
 
 const char msg_task_CLI_mode_switched_to_diag[]="[CLI] Switched to diagnostics mode\r\n";
@@ -166,7 +164,7 @@ const char msg_task_CLI_read_executed_format_string[]="    Register 0x%02X: 0x%0
 
 static uint8_t txBuffer[TASK_CLI_TX_BUFFER_SIZE];
 static uint8_t rxBuffer[TASK_CLI_RX_BUFFER_SIZE];
-static uint32_t commandStatus;
+static uint8_t commandStatus;
 
 static SystemRequest task_cli_SystemRequest;
 
@@ -181,10 +179,9 @@ void task_CLI_init(void){
         sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t),
         task_cli_wakeup_queue_storage,
         TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH*sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t));
-    // Initialize FSM state to default diagnostics menu
-    cli_task_state=CLI_STATE_DIAG_MENU;
+
     // Initialize command structure with default values for testing purposes
-    task_cli_SystemRequest.commandType=CLI_CMD_SET_VALUE;
+    task_cli_SystemRequest.commandType=REQUEST_SET_VALUE;
     task_cli_SystemRequest.payload.set.hardwareId=HARDWARE_MOTOR1;
     task_cli_SystemRequest.payload.set.value=0;
     task_cli_SystemRequest.commandStatus=&commandStatus;
@@ -313,18 +310,18 @@ void parse_command_switch_mode(uint8_t argc,char*argv[]){
     }
     // Number of arguments is valid, now check the value of the child command
     if(strncmp(argv[1],command_switch_mode_diag,strlen(command_switch_mode_diag))==0){
-        // Switch to diagnostics mode
-        cli_task_state=CLI_STATE_DIAG_MENU;
-        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switched_to_diag,strlen(msg_task_CLI_mode_switched_to_diag))!=true){
-            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
-        }
+        // Send request to change mode to run
+        task_cli_SystemRequest.commandType=REQUEST_SWITCH_MODE;
+        task_cli_SystemRequest.payload.mode.mode=SYSTEM_MODE_RUN;
+        //task_cli_SystemRequest.callbackEvent=callback_cli_wakeup;
+        tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
     }
     else if(strncmp(argv[1],command_switch_mode_test,strlen(command_switch_mode_test))==0){
-        // Switch to test mode
-        cli_task_state=CLI_STATE_TEST_MENU;
-        while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switched_to_test,strlen(msg_task_CLI_mode_switched_to_test))!=true){
-            tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
-        }
+        // Send request to change mode to test
+        task_cli_SystemRequest.commandType=REQUEST_SWITCH_MODE;
+        task_cli_SystemRequest.payload.mode.mode=SYSTEM_MODE_TEST;
+        //task_cli_SystemRequest.callbackEvent=callback_cli_wakeup;
+        tx_queue_send(&task_cli_request_queue,&task_cli_SystemRequest,TX_WAIT_FOREVER);
     }
     else{
         // Invalid child command, send hint back to terminal indicating correct usage of the command
@@ -484,7 +481,7 @@ bool build_bus_command(uint8_t argc,char*argv[]){
         }
     }
     
-    task_cli_SystemRequest.commandType=CLI_CMD_BUS_RAW_DATA;
+    task_cli_SystemRequest.commandType=REQUEST_BUS_RAW_DATA;
     task_cli_SystemRequest.payload.rawData.txBuffer=txBuffer;
     task_cli_SystemRequest.payload.rawData.txLength=argc-2;
     task_cli_SystemRequest.commandStatus=&commandStatus;
@@ -509,6 +506,10 @@ void callback_cli_read_executed(uint8_t event){
     TASK_CLI_WAKEUP_REASON wakeup;
     wakeup.wakeupReason=TASK_CLI_WAKEUP_READ_EXECUTED;
     tx_queue_send(&task_cli_wakeup_queue,&wakeup,0);
+}
+
+void callback_cli_wakeup(uint8_t event){
+    UNUSED(event);
 }
 
 void show_command_status(uint32_t wakeupStatus){
@@ -553,30 +554,58 @@ void show_command_status(uint32_t wakeupStatus){
                 }
             }
         break;
+        case TASK_CLI_WAKEUP_MODE_CHANGED:
+
+        break;
         default:
         // Should not happen
+    }
+}
+
+void show_command_status_switch_mode(){
+    switch(*task_cli_SystemRequest.commandStatus){
+        case SYSTEM_REQUEST_STATUS_OK:
+            // Mode switched
+            if(task_cli_SystemRequest.payload.mode.mode==SYSTEM_MODE_RUN){
+                while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switched_to_diag,strlen(msg_task_CLI_mode_switched_to_diag))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+                }
+            }
+            else if(task_cli_SystemRequest.payload.mode.mode==SYSTEM_MODE_TEST){
+                while(usart1_dma_enq_data((uint8_t*)msg_task_CLI_mode_switched_to_test,strlen(msg_task_CLI_mode_switched_to_test))!=true){
+                    tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+                }
+            }
+        break;
+        case SYSTEM_REQUEST_STATUS_ERROR:
+        default:
+            // Failed to switch mode
     }
 }
 
 void display_menu_header(void){
     // Display menu header based on current FSM state
     switch(system_mode){
-        case RUN:
-            while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_diag_menu_header,strlen(msg_task_CLI_diag_menu_header))!=true){
+        case SYSTEM_MODE_RUN:
+            while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_run_menu_header,strlen(msg_task_CLI_run_menu_header))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
             break;
-        case TEST:
+        case SYSTEM_MODE_TEST:
             while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_test_menu_header,strlen(msg_task_CLI_test_menu_header))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
             break;
-        default:
-            // Should never reach here, but just in case, display default menu header
-            while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_diag_menu_header,strlen(msg_task_CLI_diag_menu_header))!=true){
+        case SYSTEM_MODE_FAILSAFE:
+            while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_failsafe_menu_header,strlen(msg_task_CLI_failsafe_menu_header))!=true){
                 tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
             }
-            break;
+        break;
+        case SYSTEM_MODE_FAULT:
+            while(usart1_dma_enq_data((const uint8_t*)msg_task_CLI_fault_menu_header,strlen(msg_task_CLI_fault_menu_header))!=true){
+                tx_thread_sleep(TASK_CLI_RETRY_DELAY_MS); // Sleep for a while before retrying to enqueue data to UART1 DMA
+            }
+        break;
     }
 }
 
@@ -627,6 +656,9 @@ void task_CLI(ULONG arg){
             case TASK_CLI_WAKEUP_WRITE_EXECUTED:
             case TASK_CLI_WAKEUP_READ_EXECUTED:
                 show_command_status(wakeup.wakeupReason);
+            break;
+            case TASK_CLI_WAKEUP_MODE_CHANGED:
+                show_command_status_switch_mode();
             break;
             case TASK_CLI_WAKEUP_RADIO_STATS_READ:
 

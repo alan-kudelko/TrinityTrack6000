@@ -25,10 +25,11 @@
 #endif // __DOXYGEN__
 
 #include <Radio_Types.h>
+#include <system_types.h>
 
 typedef enum DEVICE_ID{
-    DEVICE_MCP1,
-    DEVICE_MCP2,
+    DEVICE_MCP1, // For testing purposes
+    DEVICE_MCP2, // For testing purposes
     DEVICE_NRF24L01,
     DEVICE_ADXL345,
     DEVICE_GPS,
@@ -53,13 +54,16 @@ typedef enum HARDWARE_ID{
 #define HARDWARE_COUNT 4 //!< Total number of supported hardware components, can be adjusted as needed
 
 typedef enum{
-    CLI_CMD_SET_VALUE,
-    CLI_CMD_BUS_RAW_DATA,
-    CLI_CMD_SWITCH_MODE,
-    CLI_CMD_GET_RADIO_STATS,
-    CLI_CMD_GET_RADIO_RUNTIME_STATS,
-    CLI_CMD_GET_RADIO_SETTINGS
+    REQUEST_SET_VALUE,
+    REQUEST_BUS_RAW_DATA,
+    REQUEST_SWITCH_MODE,
+    REQUEST_GET_RADIO_STATS,
+    REQUEST_GET_RADIO_RUNTIME_STATS,
+    REQUEST_GET_RADIO_SETTINGS
 }RequestType;
+
+#define SYSTEM_REQUEST_STATUS_ERROR 0
+#define SYSTEM_REQUEST_STATUS_OK 1
 
 typedef struct ALIGNED(4) SystemRequest{
     RequestType commandType;
@@ -76,14 +80,14 @@ typedef struct ALIGNED(4) SystemRequest{
             DEVICE_ID deviceId;
         }rawData;
         struct{
-            RequestType mode;
+            SYSTEM_MODE mode;
         }mode;
         RADIO_STATS radioStats;
         RADIO_RUNTIME_STATS radioRuntimeStats;
         NRF_SETTINGS radioSettings;
     }payload;
-    uint32_t*commandStatus; // Probably not needed
-    uint8_t callbackEvent;
+    uint8_t*commandStatus; // Status of the command (ok or not ok) set by dispatcher
+    uint8_t callbackEvent; // Set by request type in the CLI task
     void(*callbackFn)(uint8_t event);
 }SystemRequest;
 

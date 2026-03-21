@@ -8,10 +8,10 @@
             "group": "build",
             "problemMatcher": [],
             "presentation": {
-                "reveal": "always",        
-                "panel": "shared",         
-                "showReuseMessage": false, 
-                "clear": false            
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
             }
         }
     ]
