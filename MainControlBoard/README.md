@@ -762,6 +762,46 @@ The STM32G473RET6 serves as the main system controller.
 
 ![STM32G473RET6](/MainControlBoard/Media/STM32G473RET6_Schematic.png)
 
+##### 7.X XMC4200
+
+The XMC4200 is used as a dedicated real-time hardware control MCU.
+
+**Responsibilities:**
+- Control of DC motors and servo mechanisms
+- Generation of PWM signals using CCU4 and CCU8 timers
+- Offloading time-critical control tasks from the main STM32 MCU
+
+**Peripherals and interfaces:**
+- SPI interface (slave) connected to STM32 (master)
+- I2C interface for communication with external devices
+- UART interface used for diagnostics and debugging
+
+**Timers and I/O:**
+- CCU4 / CCU8 used for PWM generation and timing-critical control
+- Multiple GPIOs reserved for future expansion and control signals
+
+**Power design:**
+- Supply network implemented according to XMC4200 reference design
+- Local decoupling capacitors for stable operation
+
+**Reset:**
+- Reset can be triggered by:
+  - STM32 (external control)
+  - Programmer/debugger
+  - Manual reset (button, if present)
+- Proper isolation used to prevent contention between reset sources
+
+**Analog section:**
+- Analog peripherals are not used in this design
+- Analog supply pins are properly connected and decoupled as required
+
+**Design notes:**
+- Designed as a co-processor for deterministic, real-time control
+- Separates high-frequency control tasks from main system logic
+- Improves system stability and timing predictability
+
+![XMC4200](/MainControlBoard/Media/XMC4200_Schematic.png)
+
 ---
 
 ### 8. 🧩 PCB
