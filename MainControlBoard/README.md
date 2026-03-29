@@ -387,7 +387,7 @@ Colors and hardware related to them are described below:
 
 ### 4. Control board logic diagram
 
-![Control board logic diagram](/Media/PCB_Architecture.png)
+![Control board logic diagram](/MainControlBoard/Media/PCB_Architecture.png)
 
 ---
 
