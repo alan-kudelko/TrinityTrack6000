@@ -689,26 +689,11 @@ To safely control the heating element, it is recommended to use a **switching de
 
 According to the datasheets, the **maximum heater power** should not exceed **950 mW for MQ-6** and **900 mW for MQ-7**.
 
-
-##### 7.2.1 MQ-6 LPG/Flammable gas sensor
-
-| Parameter                              | Value  |
-|----------------------------------------|--------|
-| Minimum Heater Resistance (R<sub>h</sub>)      | 23 Ω   |
-| Maximum Heater Power (P<sub>max</sub>) | 950 mW |
-| Maximum Loop Voltage (V<sub>c</sub>)   | 5 V    |
-
-
-##### 7.2.2 MQ-7 Carbon monoxide gas sensor
-
-| Parameter                              | Value  |
-|----------------------------------------|--------|
-| Minimum Heater Resistance (R<sub>h</sub>)      | 26 Ω   |
-| Maximum Heater Power (P<sub>max</sub>) | 900 mW |
-| Maximum Loop Voltage (V<sub>c</sub>)   | 5 V    |
-
-
-##### 7.2.3 Gas sensor circuit and calculation
+| Parameter                              | MQ-6  | MQ-7  |
+|----------------------------------------|-------|-------|
+| Minimum Heater Resistance (R<sub>h</sub>) | 23 Ω  | 26 Ω  |
+| Maximum Heater Power (P<sub>max</sub>)   | 950 mW | 900 mW |
+| Maximum Loop Voltage (V<sub>c</sub>)     | 5 V   | 5 V   |
 
 ![MQ-X Sensors](/MainControlBoard/Media/MQ_X_Sensors_Schematic.png)
 
@@ -803,7 +788,25 @@ The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
 
 ![Watchdog](/MainControlBoard/Media/ADXL345_Schematic.png)
 
-#### 7.X STM32G473RET6
+#### 7.7 Buzzer
+
+The buzzer is used for basic acoustic feedback and system indication.
+
+**Purpose:**
+- System diagnostics and status indication
+- Signaling events such as system state changes or errors
+- Indication of radio link status and other runtime conditions
+
+**Control:**
+- Driven by STM32 using PWM signal
+- Controlled via transistor (low-side switch)
+
+**Notes:**
+- Allows generation of different tones and patterns for various system events
+
+![Buzzer](/MainControlBoard/Media/Buzzer_Schematic.png)
+
+#### 7.8 STM32G473RET6
 
 The STM32G473RET6 serves as the main system controller.
 
@@ -830,7 +833,7 @@ The STM32G473RET6 serves as the main system controller.
 
 ![STM32G473RET6](/MainControlBoard/Media/STM32G473RET6_Schematic.png)
 
-#### 7.X XMC4200
+#### 7.9 XMC4200F64K256BAXQSA1
 
 The XMC4200 is used as a dedicated real-time hardware control MCU.
 
