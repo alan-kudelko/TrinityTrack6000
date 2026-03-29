@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['g_5fsystemerrors_0',['g_SystemErrors',['../_trinity_track6000___config_8c.html#a028fe4c4e145fdf2ad4223fd7273e654',1,'TrinityTrack6000_Config.c']]],
-  ['gpio_5fpin_1',['gpio_pin',['../structhspi__data.html#a0fc6911a69ba003355a7638e2d07a3cf',1,'hspi_data']]],
-  ['gpio_5fport_2',['gpio_port',['../structhspi__data.html#ae96cc3c356b72fa8fca9a7cd90c1a6ad',1,'hspi_data']]],
-  ['gps_5ferror_3',['gps_error',['../struct_system_error_status__t.html#ae6aaea2929238f1bd130b660e9c56628',1,'SystemErrorStatus_t']]]
+  ['en_5faa_0',['en_aa',['../struct_n_r_f___s_e_t_t_i_n_g_s.html#a61a97e08accf40e700e213eabd011377',1,'NRF_SETTINGS']]],
+  ['en_5frxaddr_1',['en_rxaddr',['../struct_n_r_f___s_e_t_t_i_n_g_s.html#a4660ee195a38e8e4b8c0e07652f9bf46',1,'NRF_SETTINGS']]],
+  ['expected_5fid_2',['expected_id',['../struct_r_a_d_i_o___s_t_a_t_s.html#acbb94103345aa9c186cbeb96ecb392f6',1,'RADIO_STATS']]]
 ];

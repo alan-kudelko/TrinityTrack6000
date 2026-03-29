@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['configuration_0',['Configuration',['../group___d_m_a___buffers___config.html',1,'DMA Buffers Configuration'],['../group___i2_c___config.html',1,'I2C Configuration'],['../group___s_p_i___config.html',1,'SPI Configuration'],['../group___u_a_r_t___config.html',1,'UART Configuration']]]
+  ['bit_20masks_0',['Bit Masks',['../group___n_r_f24_l01___bit_masks.html',1,'']]],
+  ['buffers_20configuration_1',['DMA Buffers Configuration',['../group___d_m_a___buffers___config.html',1,'']]]
 ];

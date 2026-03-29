@@ -57,7 +57,7 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.32"/>
   </hwResources>
   <hwResources name="MISO pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_port_pad_spi_miso_mosi_1" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port1/Port1_1.dd#//@provided.18"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.48"/>
   </hwResources>
   <hwResources name="MOSI\MISO_2 pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_port_pad_spi_mosi_2" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="MOSI\MISO_3 pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_port_pad_spi_mosi_3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
@@ -68,10 +68,10 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.15"/>
   </hwResources>
   <hwResources name="NVIC Node Tx" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_nvic_node_tx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.13"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.11"/>
   </hwResources>
   <hwResources name="NVIC Node Rx" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_nvic_node_rx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.4"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.1"/>
   </hwResources>
   <hwResources name="NVIC Node Error" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_nvic_node_error" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
   <hwResources name="DMA channel Tx" URI="http://resources/4.0.10/app/SPI_SLAVE/0/hwres_dma_ch_tx" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/sv0/0/ch/*">
@@ -95,8 +95,8 @@
   <hwResources name="MOSI pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/__pin_hwres_port_pad_spi_mosi_0" resourceGroupUri="devicepackage/0/2" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.19"/>
   </hwResources>
-  <hwResources name="MISO pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/__pin_hwres_port_pad_spi_miso_mosi_1" resourceGroupUri="devicepackage/0/53" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.18"/>
+  <hwResources name="MISO pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/__pin_hwres_port_pad_spi_miso_mosi_1" resourceGroupUri="devicepackage/0/1" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.36"/>
   </hwResources>
   <hwResources name="MOSI\MISO_2 pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/__pin_hwres_port_pad_spi_mosi_2" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="MOSI\MISO_3 pin" URI="http://resources/4.0.10/app/SPI_SLAVE/0/__pin_hwres_port_pad_spi_mosi_3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>

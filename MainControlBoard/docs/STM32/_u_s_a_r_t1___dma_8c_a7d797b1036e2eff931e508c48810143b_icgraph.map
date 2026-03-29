@@ -1,45 +1,51 @@
 <map id="usart1_dma_copy_to_tx_buffer" name="usart1_dma_copy_to_tx_buffer">
-<area shape="rect" id="Node000001" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="865,395,1007,438"/>
-<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="658,276,808,303"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="886,389,755,305,757,301,889,384"/>
-<area shape="rect" id="Node000016" href="$_u_s_a_r_t1___dma_8c.html#a0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="649,428,817,455"/>
-<area shape="poly" id="edge25_Node000001_Node000016" title=" " alt="" coords="850,430,817,434,817,428,849,424"/>
-<area shape="rect" id="Node000003" href="$task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="427,150,574,176"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="706,268,659,228,600,191,571,179,573,174,603,186,662,224,709,263"/>
-<area shape="rect" id="Node000004" href="$task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="237,150,312,176"/>
-<area shape="poly" id="edge24_Node000002_Node000004" title=" " alt="" coords="724,262,712,210,688,148,672,116,652,86,628,60,600,38,548,14,525,9,503,8,456,18,401,39,362,62,329,93,304,125,286,151,282,148,299,121,326,89,359,58,399,34,455,12,503,3,526,4,550,9,603,34,632,56,656,83,676,113,693,146,717,209,729,260"/>
-<area shape="rect" id="Node000006" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="444,504,557,531"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="717,317,652,417,632,459,622,477,603,494,582,506,559,514,557,508,579,501,600,490,617,473,627,457,647,415,712,314"/>
-<area shape="rect" id="Node000008" href="$task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="442,200,559,227"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="676,273,600,248,545,230,546,225,602,243,678,268"/>
-<area shape="rect" id="Node000009" href="$task___c_l_i_8c.html#a804c51bf9d9a919cbf34f9f9dd0c6c35" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="426,48,575,75"/>
-<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="719,262,702,223,676,176,642,129,600,89,574,76,577,71,603,85,646,125,681,173,706,221,724,260"/>
-<area shape="rect" id="Node000010" href="$task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="197,352,352,379"/>
-<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="643,279,588,275,526,275,463,280,401,292,369,304,339,321,293,354,290,350,337,316,367,299,399,287,462,274,526,269,588,270,644,274"/>
-<area shape="rect" id="Node000011" href="$task___c_l_i_8c.html#ab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="400,99,601,126"/>
-<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="714,264,668,201,636,168,600,140,576,128,578,124,603,135,640,164,672,197,718,261"/>
-<area shape="rect" id="Node000012" href="$_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="438,403,563,430"/>
-<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="709,316,662,355,603,393,564,407,562,402,600,388,659,351,706,311"/>
-<area shape="rect" id="Node000013" href="$_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="446,454,556,480"/>
-<area shape="poly" id="edge15_Node000002_Node000013" title=" " alt="" coords="718,318,672,382,640,415,603,444,581,455,557,462,556,457,579,450,600,439,636,411,668,378,714,315"/>
-<area shape="rect" id="Node000014" href="$_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="450,302,552,328"/>
-<area shape="poly" id="edge18_Node000002_Node000014" title=" " alt="" coords="643,302,552,312,552,307,643,297"/>
-<area shape="rect" id="Node000015" href="$_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="450,352,552,379"/>
-<area shape="poly" id="edge21_Node000002_Node000015" title=" " alt="" coords="686,312,602,343,553,356,552,351,601,338,684,307"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="412,166,312,166,312,160,412,160"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,150,149,176"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="221,166,149,166,149,160,221,160"/>
-<area shape="rect" id="Node000007" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="250,403,299,430"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="428,505,399,495,339,463,293,432,296,428,342,459,401,490,430,500"/>
-<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="426,200,311,174,313,168,427,194"/>
-<area shape="poly" id="edge13_Node000012_Node000007" title=" " alt="" coords="423,419,299,419,299,414,423,414"/>
-<area shape="poly" id="edge14_Node000012_Node000010" title=" " alt="" coords="423,402,337,382,338,377,424,396"/>
-<area shape="poly" id="edge16_Node000013_Node000007" title=" " alt="" coords="430,454,299,424,300,419,431,449"/>
-<area shape="poly" id="edge17_Node000013_Node000010" title=" " alt="" coords="430,457,399,444,383,431,374,418,365,405,351,393,328,382,330,377,353,389,369,402,378,415,387,427,401,439,432,452"/>
-<area shape="poly" id="edge19_Node000014_Node000007" title=" " alt="" coords="436,328,401,342,387,354,378,367,369,380,353,393,327,406,300,414,299,409,325,401,351,389,365,376,374,364,383,351,399,338,434,323"/>
-<area shape="poly" id="edge20_Node000014_Node000010" title=" " alt="" coords="435,332,338,354,337,349,434,327"/>
-<area shape="poly" id="edge22_Node000015_Node000007" title=" " alt="" coords="435,383,300,413,299,408,434,378"/>
-<area shape="poly" id="edge23_Node000015_Node000010" title=" " alt="" coords="434,368,352,368,352,363,434,363"/>
-<area shape="rect" id="Node000017" href="$_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="407,555,594,582"/>
-<area shape="poly" id="edge26_Node000016_Node000017" title=" " alt="" coords="709,468,662,507,603,545,573,557,571,552,600,540,659,503,706,463"/>
+<area shape="rect" id="Node000001" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="865,479,1007,521"/>
+<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="658,335,808,361"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="892,471,751,364,754,359,895,467"/>
+<area shape="rect" id="Node000019" href="$_u_s_a_r_t1___dma_8c.html#a0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="649,512,817,539"/>
+<area shape="poly" id="edge28_Node000001_Node000019" title=" " alt="" coords="850,513,817,518,817,512,849,508"/>
+<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#ga569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="427,157,574,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="714,323,668,259,636,226,600,198,574,186,576,181,603,194,640,222,672,256,718,320"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="444,309,557,336"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="642,341,558,331,558,326,643,336"/>
+<area shape="rect" id="Node000008" href="$group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="442,208,559,235"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="706,326,659,286,600,249,559,234,561,229,603,244,662,282,709,322"/>
+<area shape="rect" id="Node000009" href="$group__task___c_l_i.html#ga804c51bf9d9a919cbf34f9f9dd0c6c35" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="426,613,575,640"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="719,376,652,501,640,529,633,552,623,574,603,597,571,615,569,610,600,593,619,571,628,551,635,527,647,499,714,374"/>
+<area shape="rect" id="Node000010" href="$group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="197,461,352,488"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="721,376,666,476,633,524,603,553,549,575,503,578,456,570,399,553,367,541,337,524,290,491,293,486,339,520,369,536,401,548,457,564,504,573,548,570,600,548,629,520,662,473,716,373"/>
+<area shape="rect" id="Node000011" href="$group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="400,5,601,32"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="725,320,714,262,691,188,674,149,654,111,629,76,600,46,582,35,585,30,603,42,633,73,658,108,679,147,696,186,719,261,731,319"/>
+<area shape="rect" id="Node000012" href="$group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title=" " alt="" coords="424,56,577,83"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="723,320,708,271,684,211,648,149,626,121,600,97,576,83,579,79,603,93,629,117,652,146,689,208,713,270,728,319"/>
+<area shape="rect" id="Node000013" href="$_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="438,360,563,387"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="643,360,564,369,563,364,643,355"/>
+<area shape="rect" id="Node000014" href="$_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="446,411,556,437"/>
+<area shape="poly" id="edge16_Node000002_Node000014" title=" " alt="" coords="686,370,602,401,557,414,556,409,601,396,684,365"/>
+<area shape="rect" id="Node000015" href="$_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="450,461,552,488"/>
+<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="709,374,662,414,602,452,553,469,552,464,600,447,659,410,706,370"/>
+<area shape="rect" id="Node000016" href="$_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="450,512,552,539"/>
+<area shape="poly" id="edge22_Node000002_Node000016" title=" " alt="" coords="718,376,672,440,640,474,603,502,578,514,553,521,552,516,577,509,600,498,636,470,668,437,714,373"/>
+<area shape="rect" id="Node000017" href="$group__task___c_l_i.html#gaf579bef79dd6e171d95531ed79609270" title=" " alt="" coords="421,259,580,285"/>
+<area shape="poly" id="edge25_Node000002_Node000017" title=" " alt="" coords="684,331,601,300,561,289,562,283,602,295,686,326"/>
+<area shape="rect" id="Node000018" href="$main_8cpp.html#a816cd9079f7502ba4371fadb3ddca238" title=" " alt="" coords="432,107,569,133"/>
+<area shape="poly" id="edge27_Node000002_Node000018" title=" " alt="" coords="719,321,702,281,676,234,642,187,600,148,569,132,571,128,603,143,646,184,681,232,706,279,724,319"/>
+<area shape="rect" id="Node000004" href="$group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="237,208,312,235"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,191,313,216,311,210,422,185"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,208,149,235"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="221,224,149,224,149,219,221,219"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="250,411,299,437"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="430,340,401,350,342,381,296,413,293,408,339,377,399,346,428,335"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="427,224,312,224,312,219,427,219"/>
+<area shape="poly" id="edge14_Node000013_Node000007" title=" " alt="" coords="424,393,300,421,299,416,423,388"/>
+<area shape="poly" id="edge15_Node000013_Node000010" title=" " alt="" coords="425,390,401,401,387,413,378,425,369,438,353,452,330,463,328,458,351,447,365,435,374,422,383,409,399,396,423,385"/>
+<area shape="poly" id="edge17_Node000014_Node000007" title=" " alt="" coords="430,427,299,427,299,421,430,421"/>
+<area shape="poly" id="edge18_Node000014_Node000010" title=" " alt="" coords="431,442,338,463,337,458,430,437"/>
+<area shape="poly" id="edge20_Node000015_Node000007" title=" " alt="" coords="434,463,299,432,300,427,435,457"/>
+<area shape="poly" id="edge21_Node000015_Node000010" title=" " alt="" coords="434,477,352,477,352,472,434,472"/>
+<area shape="poly" id="edge23_Node000016_Node000007" title=" " alt="" coords="434,517,399,502,383,490,374,477,365,464,351,452,325,439,299,431,300,426,327,434,353,447,369,460,378,473,387,486,401,498,436,512"/>
+<area shape="poly" id="edge24_Node000016_Node000010" title=" " alt="" coords="434,513,337,491,338,486,435,508"/>
+<area shape="poly" id="edge26_Node000017_Node000004" title=" " alt="" coords="422,257,311,232,313,227,424,252"/>
+<area shape="rect" id="Node000020" href="$_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="407,664,594,691"/>
+<area shape="poly" id="edge29_Node000019_Node000020" title=" " alt="" coords="714,553,667,605,636,632,603,654,576,666,574,661,600,650,633,627,663,601,710,549"/>
 </map>

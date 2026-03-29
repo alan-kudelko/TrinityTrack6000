@@ -1,5 +1,5 @@
-<map id="Comm/SPI_Dma/SPI_Callbacks.h" name="Comm/SPI_Dma/SPI_Callbacks.h">
-<area shape="rect" id="Node000001" title="Header for SPI DMA Callbacks." alt="" coords="5,5,229,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="57,80,177,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,33,120,64,114,64,114,33"/>
+<map id="Platform/Callbacks/SPI_Callbacks.h" name="Platform/Callbacks/SPI_Callbacks.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,138,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="11,96,132,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,49,74,80,69,80,69,49"/>
 </map>

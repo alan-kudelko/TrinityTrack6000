@@ -1,0 +1,864 @@
+2026-02-26 19:48:49,088 [INFO] I2cTimingTraitement:330 - 0x40621236
+2026-02-26 19:48:49,304 [WARN] IP:2250 - TX_NO_TIMER not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,305 [WARN] IP:2250 - ALIGN_TYPE_VAL not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,305 [WARN] IP:2250 - TX_BASEPRI_VALUE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,306 [WARN] IP:2250 - TX_APP_THREAD_ENTRY not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,306 [WARN] IP:2250 - TX_APP_THREAD_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,306 [WARN] IP:2250 - TX_APP_THREAD_PRIO not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,306 [WARN] IP:2250 - TX_APP_STACK_SIZE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,306 [WARN] IP:2250 - TX_SEMAPHORE_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,306 [WARN] IP:2250 - TX_SEMAPHORE_COUNT not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,307 [WARN] IP:2250 - TX_MUTEX_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,307 [WARN] IP:2250 - TX_Mutex_INHERITANCE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,307 [WARN] IP:2250 - TX_MSG_QUEUE_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,307 [WARN] IP:2250 - TX_MSG_SIZE_WORDS not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,307 [WARN] IP:2250 - TX_NB_MSG not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,612 [WARN] IP:2250 - TX_NO_TIMER not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,612 [WARN] IP:2250 - ALIGN_TYPE_VAL not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,612 [WARN] IP:2250 - TX_BASEPRI_VALUE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,612 [WARN] IP:2250 - TX_APP_THREAD_ENTRY not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_APP_THREAD_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_APP_THREAD_PRIO not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_APP_STACK_SIZE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_SEMAPHORE_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_SEMAPHORE_COUNT not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_MUTEX_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_Mutex_INHERITANCE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_MSG_QUEUE_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_MSG_SIZE_WORDS not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:49,613 [WARN] IP:2250 - TX_NB_MSG not found: check if there is a RefParameter without a condition.
+2026-02-26 19:48:56,120 [INFO] CADModel:198 - CPN selected (Project mode): STM32G473CET6
+2026-02-26 19:48:56,123 [INFO] CADModel:200 - Internet connection configuration mode: 1
+2026-02-26 19:48:56,123 [INFO] CADModel:203 - rpn retrievedSTM32G473CE
+2026-02-26 19:48:56,153 [INFO] WebAppUi:336 - Instantiating new browser for Project
+2026-02-26 19:48:57,850 [INFO] WebAppUi:1235 - Register for checkConnection events
+2026-02-26 19:48:57,850 [INFO] WebAppUi:1270 - Apply proxy settings
+2026-02-26 19:48:57,851 [INFO] WebAppUi:1308 - Chromium requires no authentication
+2026-02-26 19:48:57,853 [INFO] WebAppUi:1294 - Direct internet connection detected
+2026-02-26 19:48:57,863 [INFO] WebAppUi:1166 - Web application path used D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\db\plugins\mcufinder\reactClient\index.html
+2026-02-26 19:48:57,922 [INFO] WebAppUi:938 - Path where api_config.json is located C:\Users\kujon\.stmcufinder\plugins\mcufinder//mcu/api_config.json
+2026-02-26 19:48:57,923 [INFO] WebAppUi:939 - Setting api config in window object
+2026-02-26 19:48:57,981 [INFO] WebAppUi:947 - Path where cad_preferences.json is located C:\Users\kujon/.stm32cubeide/
+2026-02-26 19:48:57,981 [INFO] WebAppUi:948 - Setting consent info in window object
+2026-02-26 19:48:58,516 [INFO] WebAppUi:843 - Allow Downloads
+2026-02-26 19:48:58,518 [INFO] WebAppUi:336 - Instantiating new browser for Finder
+2026-02-26 19:48:58,657 [INFO] WebAppUi:1100 - Web application message: [UlApiManager component] Connecting to SSO
+2026-02-26 19:48:58,744 [INFO] WebAppUi:1235 - Register for checkConnection events
+2026-02-26 19:48:58,744 [INFO] WebAppUi:1270 - Apply proxy settings
+2026-02-26 19:48:58,744 [INFO] WebAppUi:1308 - Chromium requires no authentication
+2026-02-26 19:48:58,746 [INFO] WebAppUi:1294 - Direct internet connection detected
+2026-02-26 19:48:58,751 [INFO] WebAppUi:1166 - Web application path used D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\db\plugins\mcufinder\reactClient\index.html
+2026-02-26 19:48:58,767 [INFO] WebAppUi:938 - Path where api_config.json is located C:\Users\kujon\.stmcufinder\plugins\mcufinder//mcu/api_config.json
+2026-02-26 19:48:58,768 [INFO] WebAppUi:939 - Setting api config in window object
+2026-02-26 19:48:58,808 [INFO] WebAppUi:947 - Path where cad_preferences.json is located C:\Users\kujon/.stm32cubeide/
+2026-02-26 19:48:58,809 [INFO] WebAppUi:948 - Setting consent info in window object
+2026-02-26 19:48:59,265 [INFO] WebAppUi:843 - Allow Downloads
+2026-02-26 19:48:59,267 [INFO] WebAppUi:664 - RPN selected STM32G473CE
+2026-02-26 19:48:59,268 [INFO] WebAppUi:665 - RefName selected STM32G473CETx
+2026-02-26 19:48:59,268 [INFO] WebAppUi:666 - CPN selected STM32G473CET6
+2026-02-26 19:48:59,278 [INFO] WebAppUi:829 - Which Bigleton in use 2 and which CPN is about STM32G473CET6
+2026-02-26 19:48:59,281 [INFO] WebAppUi:703 - Have injected Javascript into web application
+2026-02-26 19:48:59,282 [INFO] WebAppUiContainer:153 - Web application run mode: Project CPN: STM32G473CET6
+2026-02-26 19:48:59,391 [INFO] WebAppUi:1100 - Web application message: [UlApiManager component] Connecting to SSO
+2026-02-26 19:48:59,411 [INFO] WebAppUi:1100 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2026-02-26 19:48:59,413 [INFO] WebAppUi:1100 - Web application message: [UlApiManager component] Connected to Ultra Librarian API
+2026-02-26 19:49:00,170 [INFO] WebAppUi:1100 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2026-02-26 19:49:00,171 [INFO] WebAppUi:1100 - Web application message: [UlApiManager component] Connected to Ultra Librarian API
+2026-02-26 19:49:01,760 [INFO] WebAppUi:1100 - Web application message: CAD resources feature launch attempt
+2026-02-26 19:49:01,904 [INFO] WebAppUi:938 - Path where api_config.json is located C:\Users\kujon\.stmcufinder\plugins\mcufinder//mcu/api_config.json
+2026-02-26 19:49:01,904 [INFO] WebAppUi:939 - Setting api config in window object
+2026-02-26 19:49:01,944 [INFO] WebAppUi:947 - Path where cad_preferences.json is located C:\Users\kujon/.stm32cubeide/
+2026-02-26 19:49:01,944 [INFO] WebAppUi:948 - Setting consent info in window object
+2026-02-26 19:49:03,222 [INFO] WebAppUi:1100 - Web application message: THREE.WebGLRenderer 101
+2026-02-26 19:49:18,885 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 937929400 Bytes (1073741824)
+2026-02-26 19:49:20,343 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 974019248 Bytes (1073741824)
+2026-02-26 19:49:21,938 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 890198816 Bytes (1073741824)
+2026-02-26 19:49:22,327 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CORDIC
+2026-02-26 19:49:22,328 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-02-26 19:49:22,332 [WARN] IP:2250 - TX_NO_TIMER not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,332 [WARN] IP:2250 - ALIGN_TYPE_VAL not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,332 [WARN] IP:2250 - TX_BASEPRI_VALUE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_APP_THREAD_ENTRY not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_APP_THREAD_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_APP_THREAD_PRIO not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_APP_STACK_SIZE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_SEMAPHORE_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_SEMAPHORE_COUNT not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_MUTEX_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_Mutex_INHERITANCE not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_MSG_QUEUE_NAME not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_MSG_SIZE_WORDS not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,333 [WARN] IP:2250 - TX_NB_MSG not found: check if there is a RefParameter without a condition.
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,336 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,337 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,338 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:22,341 [INFO] CodeGenerator:892 - code generatio: config db path: D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,353 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Channel3
+2026-02-26 19:49:22,353 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Channel3
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,353 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2026-02-26 19:49:22,353 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,353 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,353 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,353 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2026-02-26 19:49:22,353 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2026-02-26 19:49:22,353 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,354 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,355 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,355 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,355 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,355 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,355 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,360 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,360 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,360 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2026-02-26 19:49:22,360 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2026-02-26 19:49:22,360 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,360 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,360 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_I2C2_TX
+2026-02-26 19:49:22,360 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_I2C2_TX
+2026-02-26 19:49:22,360 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,361 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel2
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel2
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_I2C2_RX
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_I2C2_RX
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,363 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,374 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,374 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,374 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
+2026-02-26 19:49:22,374 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
+2026-02-26 19:49:22,374 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,374 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,374 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_SPI1_RX
+2026-02-26 19:49:22,374 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_SPI1_RX
+2026-02-26 19:49:22,374 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,374 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,375 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel4
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel4
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_SPI1_TX
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_SPI1_TX
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,376 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,377 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel5
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel5
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_SPI2_RX
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_SPI2_RX
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,380 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,381 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,382 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel6
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel6
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_SPI2_TX
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_SPI2_TX
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,383 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,384 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,430 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,430 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,430 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel7
+2026-02-26 19:49:22,430 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel7
+2026-02-26 19:49:22,430 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,430 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_USART1_RX
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_USART1_RX
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,431 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,432 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel8
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel8
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_USART1_TX
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_USART1_TX
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,433 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,434 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,438 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Channel1
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Channel1
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,438 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_USART2_RX
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_USART2_RX
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,438 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,438 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,439 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : hdmavalue: null
+2026-02-26 19:49:22,440 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Channel2
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Channel2
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Initvalue: null
+2026-02-26 19:49:22,440 [INFO] Argument:327 - 	 sub Args: 
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_USART2_TX
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_USART2_TX
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2026-02-26 19:49:22,440 [INFO] Argument:325 - Argument : Lockvalue: null
+2026-02-26 19:49:22,440 [INFO] Argument:335 - Argument : Lockvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : Statevalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : Statevalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : Parentvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : Parentvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,441 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2026-02-26 19:49:22,567 [INFO] IP:3329 - RTE Config file name : RTE_Component
+2026-02-26 19:49:22,567 [INFO] IP:3347 - RTE template : RTE_Components.ftl
+2026-02-26 19:49:22,587 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\license.tmp_save
+2026-02-26 19:49:23,225 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\license.tmp
+2026-02-26 19:49:23,493 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\gpio.tmp_save
+2026-02-26 19:49:23,788 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\gpio.tmp
+2026-02-26 19:49:37,466 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2026-02-26 19:49:37,506 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2026-02-26 19:49:37,524 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\tx_user.h_save
+2026-02-26 19:49:37,981 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\tx_user.h
+2026-02-26 19:49:37,996 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\tx_initialize_low_level.S_save
+2026-02-26 19:49:38,309 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\tx_initialize_low_level.S
+2026-02-26 19:49:38,326 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\AZURE_RTOS\App\app_azure_rtos_config.h_save
+2026-02-26 19:49:38,606 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\AZURE_RTOS\App\app_azure_rtos_config.h
+2026-02-26 19:49:38,627 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\app_threadx.c_save
+2026-02-26 19:49:38,900 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\app_threadx.c
+2026-02-26 19:49:38,924 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\app_threadx.h_save
+2026-02-26 19:49:39,106 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\app_threadx.h
+2026-02-26 19:49:39,132 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\AZURE_RTOS\App\app_azure_rtos.c_save
+2026-02-26 19:49:39,350 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\AZURE_RTOS\App\app_azure_rtos.c
+2026-02-26 19:49:39,452 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\AZURE_RTOS\App\app_azure_rtos.h_save
+2026-02-26 19:49:39,641 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\AZURE_RTOS\App\app_azure_rtos.h
+2026-02-26 19:49:41,089 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\dma.tmp_save
+2026-02-26 19:49:41,310 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\dma.tmp
+2026-02-26 19:49:41,332 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\dma_GV.tmp_save
+2026-02-26 19:49:41,407 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\dma_GV.tmp
+2026-02-26 19:49:41,444 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\stm32g4xx_it.c_save
+2026-02-26 19:49:41,906 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\stm32g4xx_it.c
+2026-02-26 19:49:41,928 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\stm32g4xx_it.h_save
+2026-02-26 19:49:42,079 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\stm32g4xx_it.h
+2026-02-26 19:49:42,102 [INFO] IP:3329 - RTE Config file name : RTE_Component
+2026-02-26 19:49:42,102 [INFO] IP:3347 - RTE template : RTE_Components.ftl
+2026-02-26 19:49:42,102 [INFO] CodeGenerator:2312 - Add RTE Code Input 
+2026-02-26 19:49:42,118 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\RTE_Components.h_save
+2026-02-26 19:49:42,346 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\RTE_Components.h
+2026-02-26 19:49:42,395 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\stm32g4xx_hal_msp.c_save
+2026-02-26 19:49:42,877 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\stm32g4xx_hal_msp.c
+2026-02-26 19:49:42,892 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\system.tmp_save
+2026-02-26 19:49:43,012 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\MXTmpFiles\system.tmp
+2026-02-26 19:49:43,037 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\stm32g4xx_hal_timebase_tim.c_save
+2026-02-26 19:49:43,202 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\stm32g4xx_hal_timebase_tim.c
+2026-02-26 19:49:43,233 [INFO] CodeEngine:321 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-02-26 19:49:43,470 [INFO] CodeEngine:345 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\stm32g4xx_hal_conf.h
+2026-02-26 19:49:43,516 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-02-26 19:49:43,537 [WARN] IPConfigManager:3811 - IP not found : TIM
+2026-02-26 19:49:43,538 [WARN] CodeGenerator:4259 - IP not found : null
+2026-02-26 19:49:43,553 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\main.h_save
+2026-02-26 19:49:43,798 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Inc\main.h
+2026-02-26 19:49:43,842 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\main.c_save
+2026-02-26 19:49:44,166 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G473CET6\Core\Src\main.c
+2026-02-26 19:49:45,609 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 844mS.
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,610 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,611 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,612 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,613 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,613 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,615 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,616 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,617 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-02-26 19:49:45,620 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,620 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,621 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,621 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,623 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,624 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,624 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,625 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,625 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,625 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,625 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,626 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,627 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,627 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,627 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,627 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,627 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,627 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,628 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,628 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,628 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-02-26 19:49:45,869 [INFO] ProjectBuilder:9437 - Time for Copy ThirdParty[1] : 239mS.
+2026-02-26 19:49:45,880 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-02-26 19:49:46,013 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-02-26 19:49:57,770 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 11890mS.
+2026-02-26 19:49:57,771 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-02-26 19:49:57,798 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.

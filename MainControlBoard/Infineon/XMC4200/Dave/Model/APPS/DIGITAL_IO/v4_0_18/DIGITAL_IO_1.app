@@ -6,16 +6,16 @@
   <virtualSignals name="hardware pin control" URI="http://resources/4.0.18/app/DIGITAL_IO/1/vs_digital_io_hwsel" hwSignal="hw_o" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="pin_signal" URI="http://resources/4.0.18/app/DIGITAL_IO/1/__pin_vs_digital_io_pad_pin" hwSignal="pin" hwResource="//@hwResources.1"/>
   <hwResources name="pin" URI="http://resources/4.0.18/app/DIGITAL_IO/1/hwres_port_pin" resourceGroupUri="port/p/sv0/pad/*" solverVariable="true" mResGrpUri="port/p/sv0/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.40"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.49"/>
     <solverVarMap index="2">
-      <value variableName="sv0" solverValue="0"/>
+      <value variableName="sv0" solverValue="2"/>
     </solverVarMap>
     <solverVarMap index="2">
-      <value variableName="sv0" solverValue="0"/>
+      <value variableName="sv0" solverValue="2"/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="pin" URI="http://resources/4.0.18/app/DIGITAL_IO/1/__pin_hwres_port_pin" resourceGroupUri="devicepackage/0/58" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.34"/>
+  <hwResources name="pin" URI="http://resources/4.0.18/app/DIGITAL_IO/1/__pin_hwres_port_pin" resourceGroupUri="devicepackage/0/35" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.38"/>
   </hwResources>
   <connections URI="http://resources/4.0.18/app/DIGITAL_IO/1/http://resources/4.0.18/app/DIGITAL_IO/1/vs_digital_io_pad_pin/http://resources/4.0.18/app/DIGITAL_IO/1/__pin_vs_digital_io_pad_pin" systemDefined="true" sourceSignal="pin" targetSignal="pin_signal" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.3"/>
   <connections URI="http://resources/4.0.18/app/DIGITAL_IO/1/http://resources/4.0.18/app/DIGITAL_IO/1/__pin_vs_digital_io_pad_pin/http://resources/4.0.18/app/DIGITAL_IO/1/vs_digital_io_pad_pin" systemDefined="true" sourceSignal="pin_signal" targetSignal="pin" srcVirtualSignal="//@virtualSignals.3" targetVirtualSignal="//@virtualSignals.1"/>

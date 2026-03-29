@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TrinityTrack6000: Comm/USART_Dma/USART1_Dma.c File Reference</title>
+<title>TrinityTrack6000: Platform/LL/USART1_Dma/USART1_Dma.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,714 +98,71 @@ $(function(){initNavTree('_u_s_a_r_t1___dma_8c.html','',''); });
   <div class="headertitle"><div class="title">USART1_Dma.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Implementation of USART1 with DMA functionality and dedicated ring buffer.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="_u_s_a_r_t1___dma_8h_source.html">USART1_Dma.h</a>&gt;</code><br />
-<code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stm32g4xx_hal.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="_trinity_track6000___pinout_8h_source.html">TrinityTrack6000_Pinout.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for USART1_Dma.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c__incl.png" border="0" usemap="#a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t1___dma_8c" loading="lazy" alt=""/></div>
-<map name="a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t1___dma_8c" id="a_comm_2_u_s_a_r_t___dma_2_u_s_a_r_t1___dma_8c">
-<area shape="rect" title="Implementation of USART1 with DMA functionality and dedicated ring buffer." alt="" coords="192,5,392,48"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="66,96,185,123"/>
-<area shape="poly" title=" " alt="" coords="250,51,166,91,164,87,248,46"/>
-<area shape="rect" title=" " alt="" coords="186,171,260,197"/>
-<area shape="poly" title=" " alt="" coords="279,50,251,97,231,157,226,155,246,95,274,47"/>
-<area shape="rect" title=" " alt="" coords="260,96,324,123"/>
-<area shape="poly" title=" " alt="" coords="295,49,295,80,290,80,290,49"/>
-<area shape="rect" title=" " alt="" coords="348,96,468,123"/>
-<area shape="poly" title=" " alt="" coords="324,46,379,85,376,89,321,51"/>
-<area shape="rect" href="_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="492,96,666,123"/>
-<area shape="poly" title=" " alt="" coords="367,46,520,89,518,94,365,51"/>
+<div class="center"><img src="_u_s_a_r_t1___dma_8c__incl.png" border="0" usemap="#a_platform_2_l_l_2_u_s_a_r_t1___dma_2_u_s_a_r_t1___dma_8c" loading="lazy" alt=""/></div>
+<map name="a_platform_2_l_l_2_u_s_a_r_t1___dma_2_u_s_a_r_t1___dma_8c" id="a_platform_2_l_l_2_u_s_a_r_t1___dma_2_u_s_a_r_t1___dma_8c">
+<area shape="rect" title=" " alt="" coords="225,5,383,48"/>
+<area shape="rect" href="_u_s_a_r_t1___dma_8h.html" title=" " alt="" coords="71,96,190,123"/>
+<area shape="poly" title=" " alt="" coords="261,51,173,92,171,87,258,46"/>
+<area shape="rect" title=" " alt="" coords="215,96,279,123"/>
+<area shape="poly" title=" " alt="" coords="292,50,267,85,262,82,287,47"/>
+<area shape="rect" title=" " alt="" coords="303,96,423,123"/>
+<area shape="poly" title=" " alt="" coords="321,47,347,82,342,85,317,50"/>
+<area shape="rect" href="_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="447,96,620,123"/>
+<area shape="poly" title=" " alt="" coords="364,46,484,88,482,93,362,51"/>
 <area shape="rect" title=" " alt="" coords="5,171,70,197"/>
-<area shape="poly" title=" " alt="" coords="112,125,66,163,63,159,108,121"/>
-<area shape="poly" title=" " alt="" coords="144,121,196,159,193,164,141,125"/>
-<area shape="rect" title=" " alt="" coords="93,171,160,197"/>
-<area shape="poly" title=" " alt="" coords="128,123,129,155,124,155,123,123"/>
+<area shape="poly" title=" " alt="" coords="116,125,67,163,64,159,113,121"/>
+<area shape="rect" title=" " alt="" coords="94,171,168,197"/>
+<area shape="poly" title=" " alt="" coords="134,123,134,155,128,155,128,123"/>
+<area shape="rect" title=" " alt="" coords="192,171,259,197"/>
+<area shape="poly" title=" " alt="" coords="149,121,199,159,195,163,146,125"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a79e119baa565a33480ab200c72fd6d3e" id="r_a79e119baa565a33480ab200c72fd6d3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e119baa565a33480ab200c72fd6d3e">usart1_dma_init</a> (void)</td></tr>
-<tr class="memdesc:a79e119baa565a33480ab200c72fd6d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes USART1 DMA functionality, ring buffers and variables.  <br /></td></tr>
-<tr class="memitem:a245596dce616b996ead2d73a4663329e" id="r_a245596dce616b996ead2d73a4663329e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a245596dce616b996ead2d73a4663329e">usart1_dma_enq_data</a> (const uint8_t *data, const uint16_t length)</td></tr>
-<tr class="memdesc:a245596dce616b996ead2d73a4663329e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space.  <br /></td></tr>
-<tr class="memitem:a7d797b1036e2eff931e508c48810143b" id="r_a7d797b1036e2eff931e508c48810143b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d797b1036e2eff931e508c48810143b">usart1_dma_copy_to_tx_buffer</a> (uint8_t *dst)</td></tr>
-<tr class="memdesc:a7d797b1036e2eff931e508c48810143b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from the transmit ring buffer to the provided DMA buffer.  <br /></td></tr>
-<tr class="memitem:a0803a38b4f987d37a2a165e9cb48e085" id="r_a0803a38b4f987d37a2a165e9cb48e085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0803a38b4f987d37a2a165e9cb48e085">usart1_dma_tx_complete</a> (void)</td></tr>
-<tr class="memdesc:a0803a38b4f987d37a2a165e9cb48e085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA transmission is complete.  <br /></td></tr>
-<tr class="memitem:ac8ef9e25183411bf853e2a9ad431fadf" id="r_ac8ef9e25183411bf853e2a9ad431fadf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8ef9e25183411bf853e2a9ad431fadf">usart1_dma_rx_init</a> (void)</td></tr>
-<tr class="memdesc:ac8ef9e25183411bf853e2a9ad431fadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes DMA for USART1 reception.  <br /></td></tr>
-<tr class="memitem:a5c81b8f300eba80193fcb84729ba8529" id="r_a5c81b8f300eba80193fcb84729ba8529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c81b8f300eba80193fcb84729ba8529">usart1_dma_read_data</a> (uint8_t *dst, uint16_t *length, const uint16_t maxLength)</td></tr>
-<tr class="memdesc:a5c81b8f300eba80193fcb84729ba8529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the USART1 receive ring buffer into the provided destination buffer.  <br /></td></tr>
-<tr class="memitem:a16b60167fe2f66b9d8e41fc1043c4559" id="r_a16b60167fe2f66b9d8e41fc1043c4559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16b60167fe2f66b9d8e41fc1043c4559">usart1_dma_rx_complete</a> (void)</td></tr>
-<tr class="memdesc:a16b60167fe2f66b9d8e41fc1043c4559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA reception is complete.  <br /></td></tr>
+<tr class="memitem:gabf87e61793806b14a5aa63a7b3fc7c62" id="r_gabf87e61793806b14a5aa63a7b3fc7c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#gabf87e61793806b14a5aa63a7b3fc7c62">callback_cli_data_received</a> (void)</td></tr>
+<tr class="memitem:ga79e119baa565a33480ab200c72fd6d3e" id="r_ga79e119baa565a33480ab200c72fd6d3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga79e119baa565a33480ab200c72fd6d3e">usart1_dma_init</a> (void)</td></tr>
+<tr class="memdesc:ga79e119baa565a33480ab200c72fd6d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes USART1 DMA functionality, ring buffers and variables.  <br /></td></tr>
+<tr class="memitem:ga245596dce616b996ead2d73a4663329e" id="r_ga245596dce616b996ead2d73a4663329e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e">usart1_dma_enq_data</a> (const uint8_t *data, const uint16_t length)</td></tr>
+<tr class="memdesc:ga245596dce616b996ead2d73a4663329e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space.  <br /></td></tr>
+<tr class="memitem:ga7d797b1036e2eff931e508c48810143b" id="r_ga7d797b1036e2eff931e508c48810143b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b">usart1_dma_copy_to_tx_buffer</a> (uint8_t *dst)</td></tr>
+<tr class="memdesc:ga7d797b1036e2eff931e508c48810143b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from the transmit ring buffer to the provided DMA buffer.  <br /></td></tr>
+<tr class="memitem:ga0803a38b4f987d37a2a165e9cb48e085" id="r_ga0803a38b4f987d37a2a165e9cb48e085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga0803a38b4f987d37a2a165e9cb48e085">usart1_dma_tx_complete</a> (void)</td></tr>
+<tr class="memdesc:ga0803a38b4f987d37a2a165e9cb48e085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA transmission is complete.  <br /></td></tr>
+<tr class="memitem:ga5c81b8f300eba80193fcb84729ba8529" id="r_ga5c81b8f300eba80193fcb84729ba8529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga5c81b8f300eba80193fcb84729ba8529">usart1_dma_read_data</a> (uint8_t *dst, uint16_t *length, const uint16_t maxLength)</td></tr>
+<tr class="memdesc:ga5c81b8f300eba80193fcb84729ba8529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the USART1 receive ring buffer into the provided destination buffer.  <br /></td></tr>
+<tr class="memitem:ga16b60167fe2f66b9d8e41fc1043c4559" id="r_ga16b60167fe2f66b9d8e41fc1043c4559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga16b60167fe2f66b9d8e41fc1043c4559">usart1_dma_rx_complete</a> (void)</td></tr>
+<tr class="memdesc:ga16b60167fe2f66b9d8e41fc1043c4559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function called when USART1 DMA reception is complete.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:afd73b79ebb85acf21442209088919ee4" id="r_afd73b79ebb85acf21442209088919ee4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd73b79ebb85acf21442209088919ee4">huart1_dma_rx_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga4e32fa92147fa17efa7394e45ec6dcf7">UART1_DMA_RX_BUFFER_SIZE</a>] ={0}</td></tr>
-<tr class="memitem:a2a867208e2677a090b24f0c4562823ab" id="r_a2a867208e2677a090b24f0c4562823ab"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a867208e2677a090b24f0c4562823ab">huart1_dma_tx_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga283a165aa2d852238e0740cd8c39d7ea">UART1_DMA_TX_BUFFER_SIZE</a>] ={0}</td></tr>
-<tr class="memitem:a95936d2d00320b1f234d4c859d3d0655" id="r_a95936d2d00320b1f234d4c859d3d0655"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95936d2d00320b1f234d4c859d3d0655">huart1_dma_rx_ring_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga0ac63b57bf57f94703540d51295cd010">UART1_DMA_RX_RING_BUFFER_SIZE</a>] ={0}</td></tr>
-<tr class="memitem:a846c8ea2f77a2dffb7a70f92555a8860" id="r_a846c8ea2f77a2dffb7a70f92555a8860"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a846c8ea2f77a2dffb7a70f92555a8860">huart1_dma_tx_ring_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga4f267f63c6a473d5de70339e59e3c409">UART1_DMA_TX_RING_BUFFER_SIZE</a>] ={0}</td></tr>
-<tr class="memitem:a6ba003f2de7959295e5aac78a3885a6d" id="r_a6ba003f2de7959295e5aac78a3885a6d"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ba003f2de7959295e5aac78a3885a6d">huart1_dma_tx_buffer_length</a> =0</td></tr>
-<tr class="memitem:a7d29052b7ddd134f81644b0ea7d89ffe" id="r_a7d29052b7ddd134f81644b0ea7d89ffe"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d29052b7ddd134f81644b0ea7d89ffe">huart1_dma_rx_old_pos</a> =0</td></tr>
-<tr class="memitem:af393c13b9d2bc5ca5c6b38ecb5dc739c" id="r_af393c13b9d2bc5ca5c6b38ecb5dc739c"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af393c13b9d2bc5ca5c6b38ecb5dc739c">huart1_dma_rx_ring_buffer_head</a> =0</td></tr>
-<tr class="memitem:a51382e810b58e349682f1ae7fd9c28b1" id="r_a51382e810b58e349682f1ae7fd9c28b1"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51382e810b58e349682f1ae7fd9c28b1">huart1_dma_rx_ring_buffer_tail</a> =0</td></tr>
-<tr class="memitem:a75cc42bf15cdda1de2359432f314b369" id="r_a75cc42bf15cdda1de2359432f314b369"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75cc42bf15cdda1de2359432f314b369">huart1_dma_rx_ring_buffer_length</a> =0</td></tr>
-<tr class="memitem:a629e98ab0942debe4010e3e3b6451d0d" id="r_a629e98ab0942debe4010e3e3b6451d0d"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a629e98ab0942debe4010e3e3b6451d0d">huart1_dma_tx_ring_buffer_head</a> =0</td></tr>
-<tr class="memitem:a1a9989f07c2cf3e78d8a2647fbffb6e3" id="r_a1a9989f07c2cf3e78d8a2647fbffb6e3"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a9989f07c2cf3e78d8a2647fbffb6e3">huart1_dma_tx_ring_buffer_tail</a> =0</td></tr>
-<tr class="memitem:a07c247294961289672bac2581bd83e05" id="r_a07c247294961289672bac2581bd83e05"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c247294961289672bac2581bd83e05">huart1_dma_tx_ring_buffer_length</a> =0</td></tr>
-<tr class="memitem:a80a84faab45ce8ec0b13c4a8d19f5b22" id="r_a80a84faab45ce8ec0b13c4a8d19f5b22"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80a84faab45ce8ec0b13c4a8d19f5b22">huart1_dma_tx_active</a> =false</td></tr>
-<tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
-<tr class="memitem:a5af94ab36bfe698db3e6beea96d10a90" id="r_a5af94ab36bfe698db3e6beea96d10a90"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5af94ab36bfe698db3e6beea96d10a90">hdma_usart1_tx</a></td></tr>
-<tr class="memitem:a34251392f0d5e2461e3aef615918c235" id="r_a34251392f0d5e2461e3aef615918c235"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34251392f0d5e2461e3aef615918c235">hdma_usart1_rx</a></td></tr>
-<tr class="memitem:a141e3a915cbb88e50e41e065a68dc0a7" id="r_a141e3a915cbb88e50e41e065a68dc0a7"><td class="memItemLeft" align="right" valign="top">TX_SEMAPHORE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a141e3a915cbb88e50e41e065a68dc0a7">sem_task_CLI_command_ready</a></td></tr>
+<tr class="memitem:ga2cf715bef37f7e8ef385a30974a5f0d5" id="r_ga2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
+<tr class="memitem:ga5af94ab36bfe698db3e6beea96d10a90" id="r_ga5af94ab36bfe698db3e6beea96d10a90"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga5af94ab36bfe698db3e6beea96d10a90">hdma_usart1_tx</a></td></tr>
+<tr class="memitem:ga34251392f0d5e2461e3aef615918c235" id="r_ga34251392f0d5e2461e3aef615918c235"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga34251392f0d5e2461e3aef615918c235">hdma_usart1_rx</a></td></tr>
+<tr id="var-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">USART1 Transaction Engine State</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>Internal runtime state used by the USART1 DMA transaction scheduler </p>
+</div></td></tr>
+<tr class="memitem:gafd73b79ebb85acf21442209088919ee4" id="r_gafd73b79ebb85acf21442209088919ee4"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#gafd73b79ebb85acf21442209088919ee4">huart1_dma_rx_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga4e32fa92147fa17efa7394e45ec6dcf7">UART1_DMA_RX_BUFFER_SIZE</a>]</td></tr>
+<tr class="memitem:ga421a7bc304c54c1bf772ddad757ae13b" id="r_ga421a7bc304c54c1bf772ddad757ae13b"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga421a7bc304c54c1bf772ddad757ae13b">huart1_dma_tx_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga283a165aa2d852238e0740cd8c39d7ea">UART1_DMA_TX_BUFFER_SIZE</a>]</td></tr>
+<tr class="memitem:gab5feb19c0efe3ef3b270217f50cbf2b2" id="r_gab5feb19c0efe3ef3b270217f50cbf2b2"><td class="memItemLeft" align="right" valign="top">static volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#gab5feb19c0efe3ef3b270217f50cbf2b2">huart1_dma_rx_ring_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga0ac63b57bf57f94703540d51295cd010">UART1_DMA_RX_RING_BUFFER_SIZE</a>]</td></tr>
+<tr class="memitem:gaf10cd466666a6bbd7b759ea2f06ed3f5" id="r_gaf10cd466666a6bbd7b759ea2f06ed3f5"><td class="memItemLeft" align="right" valign="top">static volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#gaf10cd466666a6bbd7b759ea2f06ed3f5">huart1_dma_tx_ring_buffer</a> [<a class="el" href="group___d_m_a___buffers___config.html#ga4f267f63c6a473d5de70339e59e3c409">UART1_DMA_TX_RING_BUFFER_SIZE</a>]</td></tr>
+<tr class="memitem:ga6ba003f2de7959295e5aac78a3885a6d" id="r_ga6ba003f2de7959295e5aac78a3885a6d"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga6ba003f2de7959295e5aac78a3885a6d">huart1_dma_tx_buffer_length</a></td></tr>
+<tr class="memitem:ga7d29052b7ddd134f81644b0ea7d89ffe" id="r_ga7d29052b7ddd134f81644b0ea7d89ffe"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga7d29052b7ddd134f81644b0ea7d89ffe">huart1_dma_rx_old_pos</a></td></tr>
+<tr class="memitem:gaf393c13b9d2bc5ca5c6b38ecb5dc739c" id="r_gaf393c13b9d2bc5ca5c6b38ecb5dc739c"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#gaf393c13b9d2bc5ca5c6b38ecb5dc739c">huart1_dma_rx_ring_buffer_head</a></td></tr>
+<tr class="memitem:ga51382e810b58e349682f1ae7fd9c28b1" id="r_ga51382e810b58e349682f1ae7fd9c28b1"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga51382e810b58e349682f1ae7fd9c28b1">huart1_dma_rx_ring_buffer_tail</a></td></tr>
+<tr class="memitem:ga75cc42bf15cdda1de2359432f314b369" id="r_ga75cc42bf15cdda1de2359432f314b369"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga75cc42bf15cdda1de2359432f314b369">huart1_dma_rx_ring_buffer_length</a></td></tr>
+<tr class="memitem:ga629e98ab0942debe4010e3e3b6451d0d" id="r_ga629e98ab0942debe4010e3e3b6451d0d"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga629e98ab0942debe4010e3e3b6451d0d">huart1_dma_tx_ring_buffer_head</a></td></tr>
+<tr class="memitem:ga1a9989f07c2cf3e78d8a2647fbffb6e3" id="r_ga1a9989f07c2cf3e78d8a2647fbffb6e3"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga1a9989f07c2cf3e78d8a2647fbffb6e3">huart1_dma_tx_ring_buffer_tail</a></td></tr>
+<tr class="memitem:ga07c247294961289672bac2581bd83e05" id="r_ga07c247294961289672bac2581bd83e05"><td class="memItemLeft" align="right" valign="top">static volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga07c247294961289672bac2581bd83e05">huart1_dma_tx_ring_buffer_length</a></td></tr>
+<tr class="memitem:ga80a84faab45ce8ec0b13c4a8d19f5b22" id="r_ga80a84faab45ce8ec0b13c4a8d19f5b22"><td class="memItemLeft" align="right" valign="top">static volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_a_r_t1___d_m_a.html#ga80a84faab45ce8ec0b13c4a8d19f5b22">huart1_dma_tx_active</a></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementation of USART1 with DMA functionality and dedicated ring buffer. </p>
-<dl class="section author"><dt>Author</dt><dd>Alan Kudełko </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Alan Kudełko. <br  />
- All rights reserved. <br  />
- For educational and research purposes only. <br  />
- Redistribution, modification, or commercial use prohibited without explicit written permission. </dd></dl>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a7d797b1036e2eff931e508c48810143b" name="a7d797b1036e2eff931e508c48810143b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d797b1036e2eff931e508c48810143b">&#9670;&#160;</a></span>usart1_dma_copy_to_tx_buffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void usart1_dma_copy_to_tx_buffer </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copies data from the transmit ring buffer to the provided DMA buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dst</td><td>Pointer to the destination DMA buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function updates the ring buffer tail and length accordingly. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function is intended for internal use only. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph" id="a_u_s_a_r_t1___dma_8c_a7d797b1036e2eff931e508c48810143b_icgraph">
-<area shape="rect" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="865,395,1007,438"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="658,276,808,303"/>
-<area shape="poly" title=" " alt="" coords="886,389,755,305,757,301,889,384"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="649,428,817,455"/>
-<area shape="poly" title=" " alt="" coords="850,430,817,434,817,428,849,424"/>
-<area shape="rect" href="task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="427,150,574,176"/>
-<area shape="poly" title=" " alt="" coords="706,268,659,228,600,191,571,179,573,174,603,186,662,224,709,263"/>
-<area shape="rect" href="task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="237,150,312,176"/>
-<area shape="poly" title=" " alt="" coords="724,262,712,210,688,148,672,116,652,86,628,60,600,38,548,14,525,9,503,8,456,18,401,39,362,62,329,93,304,125,286,151,282,148,299,121,326,89,359,58,399,34,455,12,503,3,526,4,550,9,603,34,632,56,656,83,676,113,693,146,717,209,729,260"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="444,504,557,531"/>
-<area shape="poly" title=" " alt="" coords="717,317,652,417,632,459,622,477,603,494,582,506,559,514,557,508,579,501,600,490,617,473,627,457,647,415,712,314"/>
-<area shape="rect" href="task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="442,200,559,227"/>
-<area shape="poly" title=" " alt="" coords="676,273,600,248,545,230,546,225,602,243,678,268"/>
-<area shape="rect" href="task___c_l_i_8c.html#a804c51bf9d9a919cbf34f9f9dd0c6c35" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="426,48,575,75"/>
-<area shape="poly" title=" " alt="" coords="719,262,702,223,676,176,642,129,600,89,574,76,577,71,603,85,646,125,681,173,706,221,724,260"/>
-<area shape="rect" href="task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="197,352,352,379"/>
-<area shape="poly" title=" " alt="" coords="643,279,588,275,526,275,463,280,401,292,369,304,339,321,293,354,290,350,337,316,367,299,399,287,462,274,526,269,588,270,644,274"/>
-<area shape="rect" href="task___c_l_i_8c.html#ab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="400,99,601,126"/>
-<area shape="poly" title=" " alt="" coords="714,264,668,201,636,168,600,140,576,128,578,124,603,135,640,164,672,197,718,261"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="438,403,563,430"/>
-<area shape="poly" title=" " alt="" coords="709,316,662,355,603,393,564,407,562,402,600,388,659,351,706,311"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="446,454,556,480"/>
-<area shape="poly" title=" " alt="" coords="718,318,672,382,640,415,603,444,581,455,557,462,556,457,579,450,600,439,636,411,668,378,714,315"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="450,302,552,328"/>
-<area shape="poly" title=" " alt="" coords="643,302,552,312,552,307,643,297"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="450,352,552,379"/>
-<area shape="poly" title=" " alt="" coords="686,312,602,343,553,356,552,351,601,338,684,307"/>
-<area shape="poly" title=" " alt="" coords="412,166,312,166,312,160,412,160"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,150,149,176"/>
-<area shape="poly" title=" " alt="" coords="221,166,149,166,149,160,221,160"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="250,403,299,430"/>
-<area shape="poly" title=" " alt="" coords="428,505,399,495,339,463,293,432,296,428,342,459,401,490,430,500"/>
-<area shape="poly" title=" " alt="" coords="426,200,311,174,313,168,427,194"/>
-<area shape="poly" title=" " alt="" coords="423,419,299,419,299,414,423,414"/>
-<area shape="poly" title=" " alt="" coords="423,402,337,382,338,377,424,396"/>
-<area shape="poly" title=" " alt="" coords="430,454,299,424,300,419,431,449"/>
-<area shape="poly" title=" " alt="" coords="430,457,399,444,383,431,374,418,365,405,351,393,328,382,330,377,353,389,369,402,378,415,387,427,401,439,432,452"/>
-<area shape="poly" title=" " alt="" coords="436,328,401,342,387,354,378,367,369,380,353,393,327,406,300,414,299,409,325,401,351,389,365,376,374,364,383,351,399,338,434,323"/>
-<area shape="poly" title=" " alt="" coords="435,332,338,354,337,349,434,327"/>
-<area shape="poly" title=" " alt="" coords="435,383,300,413,299,408,434,378"/>
-<area shape="poly" title=" " alt="" coords="434,368,352,368,352,363,434,363"/>
-<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="407,555,594,582"/>
-<area shape="poly" title=" " alt="" coords="709,468,662,507,603,545,573,557,571,552,600,540,659,503,706,463"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a245596dce616b996ead2d73a4663329e" name="a245596dce616b996ead2d73a4663329e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a245596dce616b996ead2d73a4663329e">&#9670;&#160;</a></span>usart1_dma_enq_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool usart1_dma_enq_data </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>Pointer to the data buffer to be sent. </td></tr>
-    <tr><td class="paramname">length</td><td>Length of the data to be sent in bytes. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the data was successfully queued for transmission, false otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function does not block; it queues the data for DMA transmission. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_cgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_cgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_cgraph" id="a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_cgraph">
-<area shape="rect" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="5,13,155,40"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="203,5,345,48"/>
-<area shape="poly" title=" " alt="" coords="155,24,188,24,188,29,155,29"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph" id="a_u_s_a_r_t1___dma_8c_a245596dce616b996ead2d73a4663329e_icgraph">
-<area shape="rect" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="649,248,799,275"/>
-<area shape="rect" href="task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="427,45,574,72"/>
-<area shape="poly" title=" " alt="" coords="709,235,692,200,668,160,637,120,600,86,574,73,576,68,603,82,641,116,673,157,697,198,714,233"/>
-<area shape="rect" href="task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="237,45,312,72"/>
-<area shape="poly" title=" " alt="" coords="715,233,702,187,680,132,647,77,625,54,600,36,563,19,524,10,483,8,443,11,367,27,308,47,307,42,366,22,442,6,483,3,525,5,565,14,603,31,629,50,651,74,685,129,707,185,720,232"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="444,147,557,173"/>
-<area shape="poly" title=" " alt="" coords="691,241,649,213,600,188,557,173,558,168,602,183,652,209,694,236"/>
-<area shape="rect" href="task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="442,96,559,123"/>
-<area shape="poly" title=" " alt="" coords="703,237,659,185,631,159,600,137,559,121,561,116,603,132,635,155,663,182,707,233"/>
-<area shape="rect" href="task___c_l_i_8c.html#a804c51bf9d9a919cbf34f9f9dd0c6c35" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="426,451,575,477"/>
-<area shape="poly" title=" " alt="" coords="712,290,671,362,640,401,603,434,567,452,565,448,600,430,636,397,666,359,708,287"/>
-<area shape="rect" href="task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="197,299,352,325"/>
-<area shape="poly" title=" " alt="" coords="709,289,666,344,637,370,602,390,548,409,502,413,456,406,399,390,367,378,337,361,290,328,293,324,339,357,369,373,401,385,457,400,502,407,547,404,600,385,634,366,662,340,705,286"/>
-<area shape="rect" href="task___c_l_i_8c.html#ab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="400,501,601,528"/>
-<area shape="poly" title=" " alt="" coords="718,290,704,335,681,389,648,444,627,469,603,491,583,503,581,498,600,487,623,466,643,441,676,387,699,333,713,289"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="438,349,563,376"/>
-<area shape="poly" title=" " alt="" coords="694,286,652,314,602,340,564,353,563,348,600,335,649,309,691,282"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#aa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="446,197,556,224"/>
-<area shape="poly" title=" " alt="" coords="646,246,556,226,557,220,648,241"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="450,248,552,275"/>
-<area shape="poly" title=" " alt="" coords="634,264,552,264,552,259,634,259"/>
-<area shape="rect" href="_trinity_track6000___mem_info_8c.html#a9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="450,299,552,325"/>
-<area shape="poly" title=" " alt="" coords="647,281,553,303,552,298,646,276"/>
-<area shape="poly" title=" " alt="" coords="412,61,312,61,312,56,412,56"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,45,149,72"/>
-<area shape="poly" title=" " alt="" coords="221,61,149,61,149,56,221,56"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="250,248,299,275"/>
-<area shape="poly" title=" " alt="" coords="430,177,401,188,342,219,296,250,293,245,339,214,399,183,428,172"/>
-<area shape="poly" title=" " alt="" coords="426,95,311,69,313,64,427,90"/>
-<area shape="poly" title=" " alt="" coords="423,351,399,339,383,327,374,314,365,301,351,289,325,276,299,268,300,263,327,271,353,284,369,298,378,311,387,323,401,335,425,346"/>
-<area shape="poly" title=" " alt="" coords="423,348,337,328,338,323,424,343"/>
-<area shape="poly" title=" " alt="" coords="431,229,300,258,299,253,430,224"/>
-<area shape="poly" title=" " alt="" coords="432,225,401,238,387,250,378,262,369,276,353,289,330,300,328,296,351,284,365,272,374,259,383,246,399,234,430,220"/>
-<area shape="poly" title=" " alt="" coords="434,264,300,264,300,259,434,259"/>
-<area shape="poly" title=" " alt="" coords="435,279,338,301,337,295,434,273"/>
-<area shape="poly" title=" " alt="" coords="434,300,299,269,300,264,435,295"/>
-<area shape="poly" title=" " alt="" coords="434,315,352,315,352,309,434,309"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a79e119baa565a33480ab200c72fd6d3e" name="a79e119baa565a33480ab200c72fd6d3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79e119baa565a33480ab200c72fd6d3e">&#9670;&#160;</a></span>usart1_dma_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void usart1_dma_init </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes USART1 DMA functionality, ring buffers and variables. </p>
-<dl class="section note"><dt>Note</dt><dd>This function must be called before using any other USART1 DMA functions. It sets up the necessary buffers and prepares USART1 for DMA operations. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function should be called only once during system initialization. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a79e119baa565a33480ab200c72fd6d3e_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a79e119baa565a33480ab200c72fd6d3e_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a79e119baa565a33480ab200c72fd6d3e_icgraph" id="a_u_s_a_r_t1___dma_8c_a79e119baa565a33480ab200c72fd6d3e_icgraph">
-<area shape="rect" title="Initializes USART1 DMA functionality, ring buffers and variables." alt="" coords="427,5,541,32"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,5,379,32"/>
-<area shape="poly" title=" " alt="" coords="412,21,380,21,380,16,412,16"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5c81b8f300eba80193fcb84729ba8529" name="a5c81b8f300eba80193fcb84729ba8529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c81b8f300eba80193fcb84729ba8529">&#9670;&#160;</a></span>usart1_dma_read_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool usart1_dma_read_data </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t</td>          <td class="paramname"><span class="paramname"><em>maxLength</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads data from the USART1 receive ring buffer into the provided destination buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dst</td><td>Pointer to the destination buffer where received data will be copied. </td></tr>
-    <tr><td class="paramname">length</td><td>Pointer to a variable where the length of the copied data will be stored. </td></tr>
-    <tr><td class="paramname">maxLength</td><td>Maximum length of data to be read in bytes. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if data was successfully read, false if no complete command was available. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function copies data until reaching a \r, <br  />
- or \r<br  />
- sequence or until maxLength is reached. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function is dedicated to process debug terminal incoming data. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph" id="a_u_s_a_r_t1___dma_8c_a5c81b8f300eba80193fcb84729ba8529_icgraph">
-<area shape="rect" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="319,5,472,32"/>
-<area shape="rect" href="task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="303,21,272,21,272,16,303,16"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
-<area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a16b60167fe2f66b9d8e41fc1043c4559" name="a16b60167fe2f66b9d8e41fc1043c4559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16b60167fe2f66b9d8e41fc1043c4559">&#9670;&#160;</a></span>usart1_dma_rx_complete()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void usart1_dma_rx_complete </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback function called when USART1 DMA reception is complete. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">None</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function is called from the USART1_IRQHandler when USART1 reception is complete. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function is intended for internal use only. </dd></dl>
-
-</div>
-</div>
-<a id="ac8ef9e25183411bf853e2a9ad431fadf" name="ac8ef9e25183411bf853e2a9ad431fadf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8ef9e25183411bf853e2a9ad431fadf">&#9670;&#160;</a></span>usart1_dma_rx_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void usart1_dma_rx_init </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes DMA for USART1 reception. </p>
-<dl class="section note"><dt>Note</dt><dd>This function sets up the DMA to start receiving data into the RX DMA buffer. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph" id="a_u_s_a_r_t1___dma_8c_ac8ef9e25183411bf853e2a9ad431fadf_icgraph">
-<area shape="rect" title="Initializes DMA for USART1 reception." alt="" coords="264,5,395,32"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" title=" " alt="" coords="248,21,217,21,217,16,248,16"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a0803a38b4f987d37a2a165e9cb48e085" name="a0803a38b4f987d37a2a165e9cb48e085"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0803a38b4f987d37a2a165e9cb48e085">&#9670;&#160;</a></span>usart1_dma_tx_complete()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void usart1_dma_tx_complete </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback function called when USART1 DMA transmission is complete. </p>
-<dl class="section note"><dt>Note</dt><dd>This function is called from the HAL_UART_TxCpltCallback when USART1 transmission is complete. It checks if there is more data in the transmit ring buffer and initiates another DMA transmission if needed along with updating the ring buffer pointers and dma_tx_buffer_length variable. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function is intended for internal use only. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_cgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_cgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_cgraph" id="a_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_cgraph">
-<area shape="rect" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="5,13,173,40"/>
-<area shape="rect" href="_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="221,5,363,48"/>
-<area shape="poly" title=" " alt="" coords="173,24,205,24,205,29,173,29"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_icgraph.png" border="0" usemap="#a_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_icgraph" loading="lazy" alt=""/></div>
-<map name="a_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_icgraph" id="a_u_s_a_r_t1___dma_8c_a0803a38b4f987d37a2a165e9cb48e085_icgraph">
-<area shape="rect" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="241,5,408,32"/>
-<area shape="rect" href="_u_s_a_r_t___callbacks_8c.html#abcdf9b59049eccbc87d54042f9235b1a" title=" " alt="" coords="5,5,193,32"/>
-<area shape="poly" title=" " alt="" coords="225,21,193,21,193,16,225,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="a34251392f0d5e2461e3aef615918c235" name="a34251392f0d5e2461e3aef615918c235"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34251392f0d5e2461e3aef615918c235">&#9670;&#160;</a></span>hdma_usart1_rx</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DMA_HandleTypeDef hdma_usart1_rx</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5af94ab36bfe698db3e6beea96d10a90" name="a5af94ab36bfe698db3e6beea96d10a90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5af94ab36bfe698db3e6beea96d10a90">&#9670;&#160;</a></span>hdma_usart1_tx</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DMA_HandleTypeDef hdma_usart1_tx</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2cf715bef37f7e8ef385a30974a5f0d5" name="a2cf715bef37f7e8ef385a30974a5f0d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf715bef37f7e8ef385a30974a5f0d5">&#9670;&#160;</a></span>huart1</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UART_HandleTypeDef huart1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afd73b79ebb85acf21442209088919ee4" name="afd73b79ebb85acf21442209088919ee4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd73b79ebb85acf21442209088919ee4">&#9670;&#160;</a></span>huart1_dma_rx_buffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t huart1_dma_rx_buffer[<a class="el" href="group___d_m_a___buffers___config.html#ga4e32fa92147fa17efa7394e45ec6dcf7">UART1_DMA_RX_BUFFER_SIZE</a>] ={0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7d29052b7ddd134f81644b0ea7d89ffe" name="a7d29052b7ddd134f81644b0ea7d89ffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d29052b7ddd134f81644b0ea7d89ffe">&#9670;&#160;</a></span>huart1_dma_rx_old_pos</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_rx_old_pos =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a95936d2d00320b1f234d4c859d3d0655" name="a95936d2d00320b1f234d4c859d3d0655"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95936d2d00320b1f234d4c859d3d0655">&#9670;&#160;</a></span>huart1_dma_rx_ring_buffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint8_t huart1_dma_rx_ring_buffer </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> ={0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af393c13b9d2bc5ca5c6b38ecb5dc739c" name="af393c13b9d2bc5ca5c6b38ecb5dc739c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af393c13b9d2bc5ca5c6b38ecb5dc739c">&#9670;&#160;</a></span>huart1_dma_rx_ring_buffer_head</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_rx_ring_buffer_head =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a75cc42bf15cdda1de2359432f314b369" name="a75cc42bf15cdda1de2359432f314b369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75cc42bf15cdda1de2359432f314b369">&#9670;&#160;</a></span>huart1_dma_rx_ring_buffer_length</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_rx_ring_buffer_length =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a51382e810b58e349682f1ae7fd9c28b1" name="a51382e810b58e349682f1ae7fd9c28b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51382e810b58e349682f1ae7fd9c28b1">&#9670;&#160;</a></span>huart1_dma_rx_ring_buffer_tail</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_rx_ring_buffer_tail =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a80a84faab45ce8ec0b13c4a8d19f5b22" name="a80a84faab45ce8ec0b13c4a8d19f5b22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80a84faab45ce8ec0b13c4a8d19f5b22">&#9670;&#160;</a></span>huart1_dma_tx_active</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile bool huart1_dma_tx_active =false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2a867208e2677a090b24f0c4562823ab" name="a2a867208e2677a090b24f0c4562823ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a867208e2677a090b24f0c4562823ab">&#9670;&#160;</a></span>huart1_dma_tx_buffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t huart1_dma_tx_buffer </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> ={0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6ba003f2de7959295e5aac78a3885a6d" name="a6ba003f2de7959295e5aac78a3885a6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ba003f2de7959295e5aac78a3885a6d">&#9670;&#160;</a></span>huart1_dma_tx_buffer_length</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_tx_buffer_length =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a846c8ea2f77a2dffb7a70f92555a8860" name="a846c8ea2f77a2dffb7a70f92555a8860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a846c8ea2f77a2dffb7a70f92555a8860">&#9670;&#160;</a></span>huart1_dma_tx_ring_buffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint8_t huart1_dma_tx_ring_buffer </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> ={0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a629e98ab0942debe4010e3e3b6451d0d" name="a629e98ab0942debe4010e3e3b6451d0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a629e98ab0942debe4010e3e3b6451d0d">&#9670;&#160;</a></span>huart1_dma_tx_ring_buffer_head</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_tx_ring_buffer_head =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a07c247294961289672bac2581bd83e05" name="a07c247294961289672bac2581bd83e05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07c247294961289672bac2581bd83e05">&#9670;&#160;</a></span>huart1_dma_tx_ring_buffer_length</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_tx_ring_buffer_length =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1a9989f07c2cf3e78d8a2647fbffb6e3" name="a1a9989f07c2cf3e78d8a2647fbffb6e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a9989f07c2cf3e78d8a2647fbffb6e3">&#9670;&#160;</a></span>huart1_dma_tx_ring_buffer_tail</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile uint16_t huart1_dma_tx_ring_buffer_tail =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a141e3a915cbb88e50e41e065a68dc0a7" name="a141e3a915cbb88e50e41e065a68dc0a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a141e3a915cbb88e50e41e065a68dc0a7">&#9670;&#160;</a></span>sem_task_CLI_command_ready</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TX_SEMAPHORE sem_task_CLI_command_ready</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -819,7 +176,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_3fd242b123a5c0dc8a99f5f0c1394ff4.html">Comm</a></li><li class="navelem"><a href="dir_b26668fd8fa2a51bee75959329317cb5.html">USART_Dma</a></li><li class="navelem"><a href="_u_s_a_r_t1___dma_8c.html">USART1_Dma.c</a></li>
+    <li class="navelem"><a href="dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a href="dir_33184ce1f0051b26f1974283934ffbbc.html">LL</a></li><li class="navelem"><a href="dir_8aac5f753052ab381c7ee41044258119.html">USART1_Dma</a></li><li class="navelem"><a href="_u_s_a_r_t1___dma_8c.html">USART1_Dma.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

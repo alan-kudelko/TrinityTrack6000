@@ -351,7 +351,7 @@
   <provided xsi:type="ResourceModel:BitField" name="PC6_2_0" URI="http://resources/0.6.1/port/p/0/iocr4/pc6_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC6_4" URI="http://resources/0.6.1/port/p/0/iocr4/pc6_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="23" stopPos="23" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P0.11 / #59" URI="http://resources/0.6.1/port/p/0/pad/11">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_3.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@hwResources.5"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.6.1/port/p/0/out/p11"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/ps11"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/pr11"/>
@@ -421,7 +421,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC0_2_0" URI="http://resources/0.6.1/port/p/0/iocr0/pc0_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="3" stopPos="5" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P0.8 / #57" URI="http://resources/0.6.1/port/p/0/pad/8">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@hwResources.5"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.6.1/port/p/0/out/p8"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/ps8"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/pr8"/>
@@ -457,7 +456,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P0.7 / #58" URI="http://resources/0.6.1/port/p/0/pad/7">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_1.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_6.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.6.1/port/p/0/out/p7"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/ps7"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/pr7"/>
@@ -493,7 +492,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P0.2 / #64" URI="http://resources/0.6.1/port/p/0/pad/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_4.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_7.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.6.1/port/p/0/out/p2"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/ps2"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/pr2"/>
@@ -528,7 +527,7 @@
   <provided xsi:type="ResourceModel:BitField" name="PC2_2_0" URI="http://resources/0.6.1/port/p/0/iocr0/pc2_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC2_4" URI="http://resources/0.6.1/port/p/0/iocr0/pc2_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="23" stopPos="23" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P0.1 / #1" URI="http://resources/0.6.1/port/p/0/pad/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_5.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@hwResources.2"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.6.1/port/p/0/out/p1"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/ps1"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.6.1/port/p/0/omr/pr1"/>

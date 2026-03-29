@@ -29,7 +29,7 @@
   <virtualSignals name="mcss_input" URI="http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_mcss" hwSignal="mcss" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="Out - CCU8 CH1 Direct PAD" URI="http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch1_out0" hwSignal="pad" hwResource="//@hwResources.1"/>
   <virtualSignals name="Out - CCU8 CH1 Invert PAD" URI="http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch1_out1" hwSignal="pad" hwResource="//@hwResources.2" required="false"/>
-  <virtualSignals name="Out - CCU8 CH2 Direct PAD" URI="http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch2_out2" hwSignal="pad" hwResource="//@hwResources.3" required="false"/>
+  <virtualSignals name="Out - CCU8 CH2 Direct PAD" URI="http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch2_out2" hwSignal="pad" hwResource="//@hwResources.3"/>
   <virtualSignals name="Out - CCU8 CH2 Invert PAD" URI="http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch2_out3" hwSignal="pad" hwResource="//@hwResources.4" required="false"/>
   <virtualSignals name="PWM_CCU8 CH1 Direct Out_signal" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_vs_port_ch1_out0" hwSignal="pin" hwResource="//@hwResources.5"/>
   <virtualSignals name="PWM_CCU8 CH1 Invert Out_signal" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_vs_port_ch1_out1" hwSignal="pin" hwResource="//@hwResources.6"/>
@@ -45,13 +45,17 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.19"/>
   </hwResources>
   <hwResources name="PWM_CCU8 CH1 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/hwres_port_ch1_out1" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
-  <hwResources name="PWM_CCU8 CH2 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/hwres_port_ch2_out2" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
+  <hwResources name="PWM_CCU8 CH2 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/hwres_port_ch2_out2" resourceGroupUri="resources/0.6.1/port/p/2/pad/9" mResGrpUri="port/p/*/pad/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.0"/>
+  </hwResources>
   <hwResources name="PWM_CCU8 CH2 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/hwres_port_ch2_out3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="PWM_CCU8 CH1 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_hwres_port_ch1_out0" resourceGroupUri="devicepackage/0/63" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.5"/>
   </hwResources>
   <hwResources name="PWM_CCU8 CH1 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_hwres_port_ch1_out1" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
-  <hwResources name="PWM_CCU8 CH2 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_hwres_port_ch2_out2" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
+  <hwResources name="PWM_CCU8 CH2 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_hwres_port_ch2_out2" resourceGroupUri="devicepackage/0/27" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.6"/>
+  </hwResources>
   <hwResources name="PWM_CCU8 CH2 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/2/__pin_hwres_port_ch2_out3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_global/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_config_global" systemDefined="true" sourceSignal="ccu8_global" targetSignal="ccu8_global_signal" targetVirtualSignal="//@virtualSignals.0" proxySrcVirtualSignalUri="http://resources/4.1.14/app/GLOBAL_CCU8/0/vs_global_ccu8_globalsignal" containingProxySignal="true">
     <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../GLOBAL_CCU8/v4_1_14/GLOBAL_CCU8_0.app#//@virtualSignals.0"/>
@@ -68,7 +72,7 @@
   </connections>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_ch1_out_a/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch1_out0" systemDefined="true" sourceSignal="pwm_ch1_direct" targetSignal="Out - CCU8 CH1 Direct PAD" srcVirtualSignal="//@virtualSignals.10" targetVirtualSignal="//@virtualSignals.26"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_ch1_out_b/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch1_out1" systemDefined="true" sourceSignal="pwm_ch1_inverted" targetSignal="Out - CCU8 CH1 Invert PAD" required="false" srcVirtualSignal="//@virtualSignals.11" targetVirtualSignal="//@virtualSignals.27"/>
-  <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_ch2_out_a/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch2_out2" systemDefined="true" sourceSignal="pwm_ch2_direct" targetSignal="Out - CCU8 CH2 Direct PAD" required="false" srcVirtualSignal="//@virtualSignals.12" targetVirtualSignal="//@virtualSignals.28"/>
+  <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_ch2_out_a/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch2_out2" systemDefined="true" sourceSignal="pwm_ch2_direct" targetSignal="Out - CCU8 CH2 Direct PAD" srcVirtualSignal="//@virtualSignals.12" targetVirtualSignal="//@virtualSignals.28"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_ccu8_cc8_ch2_out_b/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch2_out3" systemDefined="true" sourceSignal="pwm_ch2_inverted" targetSignal="Out - CCU8 CH2 Invert PAD" required="false" srcVirtualSignal="//@virtualSignals.13" targetVirtualSignal="//@virtualSignals.29"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch1_out0/http://resources/4.1.32/app/PWM_CCU8/2/__pin_vs_port_ch1_out0" systemDefined="true" sourceSignal="Out - CCU8 CH1 Direct PAD" targetSignal="PWM_CCU8 CH1 Direct Out_signal" srcVirtualSignal="//@virtualSignals.26" targetVirtualSignal="//@virtualSignals.30"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/2/http://resources/4.1.32/app/PWM_CCU8/2/__pin_vs_port_ch1_out0/http://resources/4.1.32/app/PWM_CCU8/2/vs_port_ch1_out0" systemDefined="true" sourceSignal="PWM_CCU8 CH1 Direct Out_signal" targetSignal="Out - CCU8 CH1 Direct PAD" srcVirtualSignal="//@virtualSignals.30" targetVirtualSignal="//@virtualSignals.26"/>

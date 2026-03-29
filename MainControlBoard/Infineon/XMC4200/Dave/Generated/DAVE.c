@@ -68,7 +68,125 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
 {
   DAVE_STATUS_t init_status;
   
-  init_status = DAVE_STATUS_SUCCESS; 
+  init_status = DAVE_STATUS_SUCCESS;
+     /** @Initialization of APPs Init Functions */
+     init_status = (DAVE_STATUS_t)CLOCK_XMC4_Init(&CLOCK_XMC4_0);
+
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_0 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_1 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_1); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_2 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_2); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU8 APP instance PWM_CCU8_3 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_CCU8_3); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_0 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_1 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_1); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_2 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_2); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_3 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_3); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_4 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_4); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_5 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_5); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_6 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_6); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of PWM_CCU4 APP instance PWM_CCU4_7 */
+	 init_status = (DAVE_STATUS_t)PWM_CCU4_Init(&PWM_CCU4_7); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of I2C_MASTER APP instance I2C_BUS */
+	 init_status = (DAVE_STATUS_t)I2C_MASTER_Init(&I2C_BUS); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of SPI_SLAVE APP instance SPI_BUS */
+	 init_status = (DAVE_STATUS_t)SPI_SLAVE_Init(&SPI_BUS); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of UART APP instance UART_DEBUG */
+	 init_status = (DAVE_STATUS_t)UART_Init(&UART_DEBUG); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_0 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_0); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_1 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_1); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_2 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_2); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_3 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_3); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_4 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_4); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_5 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_5); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_6 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_6); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance DIGITAL_IO_7 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&DIGITAL_IO_7); 
+   }  
   return init_status;
 } /**  End of function DAVE_Init */
 

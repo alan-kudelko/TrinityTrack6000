@@ -1,18 +1,17 @@
-<map id="Comm/USART_Dma/USART1_Dma.c" name="Comm/USART_Dma/USART1_Dma.c">
-<area shape="rect" id="Node000001" title="Implementation of USART1 with DMA functionality and dedicated ring buffer." alt="" coords="192,5,392,48"/>
-<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="66,96,185,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,51,166,91,164,87,248,46"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="186,171,260,197"/>
-<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="279,50,251,97,231,157,226,155,246,95,274,47"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="260,96,324,123"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="295,49,295,80,290,80,290,49"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="348,96,468,123"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="324,46,379,85,376,89,321,51"/>
-<area shape="rect" id="Node000008" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="492,96,666,123"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="367,46,520,89,518,94,365,51"/>
+<map id="Platform/LL/USART1_Dma/USART1_Dma.c" name="Platform/LL/USART1_Dma/USART1_Dma.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="225,5,383,48"/>
+<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8h.html" title=" " alt="" coords="71,96,190,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,51,173,92,171,87,258,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="215,96,279,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="292,50,267,85,262,82,287,47"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="303,96,423,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="321,47,347,82,342,85,317,50"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="447,96,620,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="364,46,484,88,482,93,362,51"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,171,70,197"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,125,66,163,63,159,108,121"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="144,121,196,159,193,164,141,125"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="93,171,160,197"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="128,123,129,155,124,155,123,123"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,125,67,163,64,159,113,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="94,171,168,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="134,123,134,155,128,155,128,123"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="192,171,259,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="149,121,199,159,195,163,146,125"/>
 </map>

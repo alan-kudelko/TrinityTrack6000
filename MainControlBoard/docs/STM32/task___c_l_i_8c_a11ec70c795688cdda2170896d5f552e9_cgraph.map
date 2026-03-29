@@ -1,15 +1,17 @@
 <map id="task_CLI" name="task_CLI">
 <area shape="rect" id="Node000001" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="5,81,80,108"/>
-<area shape="rect" id="Node000002" href="$task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="131,5,278,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,78,127,48,154,36,156,41,129,53,70,83"/>
-<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="329,56,478,83"/>
-<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="80,89,313,73,314,78,80,95"/>
-<area shape="rect" id="Node000005" href="$task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="146,107,263,133"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="80,98,130,106,130,111,80,103"/>
-<area shape="rect" id="Node000006" href="$_u_s_a_r_t1___dma_8c.html#a5c81b8f300eba80193fcb84729ba8529" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="128,157,281,184"/>
-<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="65,106,129,143,143,149,141,154,126,148,62,111"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="261,30,334,49,333,54,259,35"/>
-<area shape="rect" id="Node000004" href="$_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="526,48,669,91"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="479,67,511,67,511,72,479,72"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="259,103,333,84,334,90,261,109"/>
+<area shape="rect" id="Node000002" href="$task___c_l_i_8c.html#a569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="134,5,281,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,78,126,42,141,35,144,40,129,46,65,83"/>
+<area shape="rect" id="Node000005" href="$task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="149,56,266,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="80,86,133,78,133,83,81,92"/>
+<area shape="rect" id="Node000006" href="$task___c_l_i_8c.html#af579bef79dd6e171d95531ed79609270" title=" " alt="" coords="128,107,287,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="81,98,113,103,112,108,80,103"/>
+<area shape="rect" id="Node000007" href="$_u_s_a_r_t1___dma_8c.html#a5c81b8f300eba80193fcb84729ba8529" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="131,157,284,184"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="65,106,129,143,144,149,141,154,126,148,62,111"/>
+<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="335,56,484,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,30,339,49,338,54,263,35"/>
+<area shape="rect" id="Node000004" href="$_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="532,48,675,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="485,67,517,67,517,72,485,72"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="266,67,320,67,320,72,266,72"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="263,103,338,84,339,90,264,109"/>
 </map>

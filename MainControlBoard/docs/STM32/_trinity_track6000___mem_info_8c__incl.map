@@ -1,32 +1,31 @@
 <map id="Utils/TrinityTrack6000_MemInfo.c" name="Utils/TrinityTrack6000_MemInfo.c">
-<area shape="rect" id="Node000001" title="Implementation of TrinityTrack6000_Errors.h." alt="" coords="270,5,419,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="284,5,434,48"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,96,70,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,50,86,98,84,93,269,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,48,85,98,84,93,283,43"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="94,96,154,123"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="288,51,170,94,168,89,287,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="299,51,170,95,168,90,298,46"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="178,96,241,123"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,51,245,90,242,85,308,46"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="264,171,336,197"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="331,50,317,72,307,97,301,126,301,155,295,155,296,126,302,95,313,69,326,47"/>
-<area shape="rect" id="Node000006" href="$_trinity_track6000___mem_info_8h.html" title="RAM diagnostics interface for TrinityTrack6000 project." alt="" coords="316,96,503,123"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="363,47,392,82,388,86,359,50"/>
-<area shape="rect" id="Node000008" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="528,96,702,123"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="415,46,558,88,557,94,413,51"/>
-<area shape="rect" id="Node000011" href="$_u_s_a_r_t1___dma_8h.html" title="Header for USART1 with DMA functionality and dedicated ring buffer." alt="" coords="726,96,845,123"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="420,39,711,92,710,97,419,44"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="869,96,958,123"/>
-<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="420,33,612,57,854,93,853,98,612,62,419,39"/>
-<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="392,125,333,164,330,160,389,121"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="619,245,683,272"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="408,123,402,159,404,178,412,196,423,206,442,215,492,231,604,250,603,255,491,236,440,220,421,210,407,199,398,180,396,159,403,122"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="421,171,542,197"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="593,126,519,165,517,161,590,121"/>
-<area shape="rect" id="Node000010" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="565,171,736,197"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="623,122,640,155,635,158,619,124"/>
-<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="654,198,654,230,648,230,648,198"/>
-<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="785,124,773,160,750,199,724,222,696,240,693,236,721,218,746,196,768,158,780,122"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="811,171,885,197"/>
-<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="798,121,829,157,825,161,794,125"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="909,171,976,197"/>
-<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="814,121,903,161,900,166,812,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="322,51,247,91,245,86,319,46"/>
+<area shape="rect" id="Node000005" href="$_trinity_track6000___mem_info_8h.html" title=" " alt="" coords="265,96,452,123"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="362,49,362,80,356,80,356,49"/>
+<area shape="rect" id="Node000008" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="477,96,651,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="413,46,519,87,517,92,411,51"/>
+<area shape="rect" id="Node000011" href="$_u_s_a_r_t1___dma_8h.html" title=" " alt="" coords="692,96,812,123"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="434,41,678,90,677,95,433,46"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="836,96,925,123"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="434,35,607,59,821,93,820,98,606,64,434,40"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="597,245,662,272"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="339,125,317,140,299,159,289,178,289,187,294,196,313,210,342,222,420,239,507,249,582,253,582,259,506,254,419,244,340,227,310,215,290,199,284,188,284,177,294,156,314,136,336,121"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="304,171,376,197"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="358,124,350,156,345,155,353,123"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="400,171,520,197"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="548,125,492,164,489,159,545,121"/>
+<area shape="rect" id="Node000010" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="544,171,715,197"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="578,121,610,157,606,161,574,125"/>
+<area shape="poly" id="edge10_Node000010_Node000006" title=" " alt="" coords="632,198,632,230,627,230,627,198"/>
+<area shape="poly" id="edge12_Node000011_Node000006" title=" " alt="" coords="754,124,747,159,740,180,729,199,705,223,677,240,674,236,701,218,725,196,735,178,742,158,749,123"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="790,171,864,197"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="767,121,805,158,801,162,763,125"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="888,171,955,197"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="783,121,879,162,877,167,781,126"/>
 </map>

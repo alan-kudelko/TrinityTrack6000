@@ -77,16 +77,10 @@ var searchData=
   ['mcp23s17_5fipolb_74',['MCP23S17_IPOLB',['../_m_c_p23_s17_8h.html#abf40c7be6a1bf892d4b6bea955b64e57',1,'MCP23S17.h']]],
   ['mcp23s17_5folata_75',['MCP23S17_OLATA',['../_m_c_p23_s17_8h.html#a2af9ac39265433702936685b55495355',1,'MCP23S17.h']]],
   ['mcp23s17_5folatb_76',['MCP23S17_OLATB',['../_m_c_p23_s17_8h.html#a9bccb41d9e5b4765de2355f6adc5efef',1,'MCP23S17.h']]],
-  ['mcp_5fcs_5fgpio_5fport_77',['MCP_CS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ad8df5f917b677a0158d860e487bdfa1e',1,'TrinityTrack6000_Pinout.h']]],
-  ['mcp_5fcs_5fpin_78',['MCP_CS_Pin',['../_trinity_track6000___pinout_8h.html#a750a33d8552df2a3422ef1ef94dc5131',1,'TrinityTrack6000_Pinout.h']]],
-  ['mcp_5frst_5fgpio_5fport_79',['MCP_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a0138b93aa9413bd1ee3165b69d0c5742',1,'TrinityTrack6000_Pinout.h']]],
-  ['mcp_5frst_5fpin_80',['MCP_RST_Pin',['../_trinity_track6000___pinout_8h.html#a2d20dbeec791623c78522cc16e967003',1,'TrinityTrack6000_Pinout.h']]],
-  ['meminfo_5fbar_5fbuffer_5fsize_81',['MEMINFO_BAR_BUFFER_SIZE',['../_trinity_track6000___mem_info_8h.html#a719f554899aae9a479121eebd01288fc',1,'TrinityTrack6000_MemInfo.h']]],
-  ['meminfo_5fline_5fbuffer_5fsize_82',['MEMINFO_LINE_BUFFER_SIZE',['../_trinity_track6000___mem_info_8h.html#abf854acc92fc314246208c4e970bbe9b',1,'TrinityTrack6000_MemInfo.h']]],
-  ['mq6_5fin_5fgpio_5fport_83',['MQ6_IN_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ae372fa234ddd20b1df5e0fe164d1911f',1,'TrinityTrack6000_Pinout.h']]],
-  ['mq6_5fin_5fpin_84',['MQ6_IN_Pin',['../_trinity_track6000___pinout_8h.html#a3a30d04ac6c719f553c27a52be2832ba',1,'TrinityTrack6000_Pinout.h']]],
-  ['mq7_5fin_5fgpio_5fport_85',['MQ7_IN_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a0aab4d660dd018b1edf00e89e8f49630',1,'TrinityTrack6000_Pinout.h']]],
-  ['mq7_5fin_5fpin_86',['MQ7_IN_Pin',['../_trinity_track6000___pinout_8h.html#af52eb68a0224849f5fd9a7cf044caf05',1,'TrinityTrack6000_Pinout.h']]],
-  ['mq_5fheaters_5fgpio_5fport_87',['MQ_HEATERS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a5d15966e2cf15f8892e29f4b041afdf9',1,'TrinityTrack6000_Pinout.h']]],
-  ['mq_5fheaters_5fpin_88',['MQ_HEATERS_Pin',['../_trinity_track6000___pinout_8h.html#a0d352a7cb4a54e0b915f51b8fff0bb75',1,'TrinityTrack6000_Pinout.h']]]
+  ['mq6_5fin_5fgpio_5fport_77',['MQ6_IN_GPIO_Port',['../_trinity_track6000___pinout_8h.html#ae372fa234ddd20b1df5e0fe164d1911f',1,'TrinityTrack6000_Pinout.h']]],
+  ['mq6_5fin_5fpin_78',['MQ6_IN_Pin',['../_trinity_track6000___pinout_8h.html#a3a30d04ac6c719f553c27a52be2832ba',1,'TrinityTrack6000_Pinout.h']]],
+  ['mq7_5fin_5fgpio_5fport_79',['MQ7_IN_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a0aab4d660dd018b1edf00e89e8f49630',1,'TrinityTrack6000_Pinout.h']]],
+  ['mq7_5fin_5fpin_80',['MQ7_IN_Pin',['../_trinity_track6000___pinout_8h.html#af52eb68a0224849f5fd9a7cf044caf05',1,'TrinityTrack6000_Pinout.h']]],
+  ['mq_5fheaters_5fgpio_5fport_81',['MQ_HEATERS_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a5d15966e2cf15f8892e29f4b041afdf9',1,'TrinityTrack6000_Pinout.h']]],
+  ['mq_5fheaters_5fpin_82',['MQ_HEATERS_Pin',['../_trinity_track6000___pinout_8h.html#a0d352a7cb4a54e0b915f51b8fff0bb75',1,'TrinityTrack6000_Pinout.h']]]
 ];

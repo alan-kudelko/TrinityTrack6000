@@ -1,7 +1,7 @@
-<map id="Init/TrinityTrack6000_Init.h" name="Init/TrinityTrack6000_Init.h">
-<area shape="rect" id="Node000001" title="System initialization functions for TrinityTrack6000 project." alt="" coords="77,5,218,48"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="5,96,146,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,62,94,97,90,94,119,58"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main program body." alt="" coords="170,104,269,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,58,211,102,207,105,172,62"/>
+<map id="Platform/Startup/TrinityTrack6000_Init.h" name="Platform/Startup/TrinityTrack6000_Init.h">
+<area shape="rect" id="Node000001" title="System initialization functions for TrinityTrack6000 project." alt="" coords="81,5,238,48"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="5,96,162,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,62,103,97,99,94,130,58"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Main program body." alt="" coords="186,104,285,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,58,227,102,223,105,185,62"/>
 </map>

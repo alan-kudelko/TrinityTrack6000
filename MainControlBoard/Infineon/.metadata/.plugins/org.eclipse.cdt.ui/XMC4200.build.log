@@ -1,0 +1,11 @@
+18:01:47 **** Incremental Build of configuration Debug for project XMC4200 ****
+"\"D:\\Programy\\4.5.0.202105191637\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j12 all 
+'Invoking: ARM-GCC Print Size'
+"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "XMC4200.elf"
+   text	   data	    bss	    dec	    hex	filename
+  23188	    684	   2112	  25984	   6580	XMC4200.elf
+'Finished building: XMC4200.siz'
+
+
+18:01:48 Build Finished (took 605ms)
+

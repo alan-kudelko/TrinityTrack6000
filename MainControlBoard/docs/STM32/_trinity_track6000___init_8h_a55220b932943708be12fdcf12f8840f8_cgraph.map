@@ -1,13 +1,18 @@
 <map id="initializeMemory" name="initializeMemory">
-<area shape="rect" id="Node000001" title="Memory Initialization Function." alt="" coords="5,56,121,83"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="169,5,333,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,53,183,34,185,39,116,58"/>
-<area shape="rect" id="Node000004" href="$_trinity_track6000___mem_info_8c.html#a3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="209,56,292,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="121,67,193,67,193,72,121,72"/>
-<area shape="rect" id="Node000006" href="$_u_s_a_r_t1___dma_8c.html#a79e119baa565a33480ab200c72fd6d3e" title=" " alt="" coords="194,107,308,133"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,81,185,100,183,105,115,86"/>
-<area shape="rect" id="Node000003" href="$task___c_l_i_8c.html#aff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="388,5,486,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,16,372,16,372,21,334,21"/>
-<area shape="rect" id="Node000005" href="$_trinity_track6000___mem_info_8c.html#a28cd6ca417d0332298ba1dc946e34444" title="Refresh RAM diagnostics data." alt="" coords="381,56,492,83"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="293,67,365,67,365,72,293,72"/>
+<area shape="rect" id="Node000001" title="Memory Initialization Function." alt="" coords="5,115,121,141"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="169,64,333,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,111,183,93,185,98,116,117"/>
+<area shape="rect" id="Node000007" href="$group___trinity_track6000___mem_info.html#ga3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="209,115,292,141"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="121,125,193,125,193,131,121,131"/>
+<area shape="rect" id="Node000008" href="$group___trinity_track6000___mem_info.html#ga3f8a2d6d7be7bf049aaa5429a534366c" title="Refresh RAM diagnostics data." alt="" coords="418,165,529,192"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="116,139,169,151,293,166,403,173,403,179,292,171,168,156,114,145"/>
+<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#gaff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="424,13,523,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,61,409,39,410,44,314,66"/>
+<area shape="rect" id="Node000005" href="$task___system_dispatcher_8c.html#a181eb8bd781ccfc16f41ec30b3b961f6" title=" " alt="" coords="381,64,566,91"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="334,75,365,75,365,80,334,80"/>
+<area shape="rect" id="Node000006" href="$task___wireless_comm_8cpp.html#a296d2aa7b04273e3ed7a2467fc6c2afe" title=" " alt="" coords="390,115,558,141"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="314,89,398,108,396,113,312,94"/>
+<area shape="rect" id="Node000004" href="$group__task___c_l_i.html#gac444bd0d61a9b85e773c9ac14e1d12d2" title="Callback function for when a CLI command has been executed. This function is called after a command h..." alt="" coords="614,5,739,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="523,24,599,24,599,29,523,29"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="294,135,404,160,402,165,292,140"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="ramInfoRAM2" name="ramInfoRAM2">
+<area shape="rect" id="Node000001" title="Print detailed RAM2 diagnostics." alt="" coords="209,5,311,32"/>
+<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="5,5,161,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,21,161,21,161,16,193,16"/>
+</map>

@@ -102,16 +102,51 @@ $(function(){initNavTree('tasks_8h.html','',''); });
 <p>Header file for various RTOS tasks used in the system.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="task___c_l_i_8h_source.html">task_CLI.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="task___system_dispatcher_8h_source.html">task_SystemDispatcher.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="task___wireless_comm_8h_source.html">task_WirelessComm.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="task___mcu_analog_8h_source.html">task_McuAnalog.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for tasks.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="tasks_8h__incl.png" border="0" usemap="#a_tasks_2tasks_8h" loading="lazy" alt=""/></div>
 <map name="a_tasks_2tasks_8h" id="a_tasks_2tasks_8h">
-<area shape="rect" title="Header file for various RTOS tasks used in the system." alt="" coords="5,5,109,32"/>
-<area shape="rect" href="task___c_l_i_8h.html" title=" " alt="" coords="14,80,100,107"/>
-<area shape="poly" title=" " alt="" coords="60,33,60,64,54,64,54,33"/>
-<area shape="rect" title=" " alt="" coords="23,155,91,181"/>
-<area shape="poly" title=" " alt="" coords="60,107,60,139,54,139,54,107"/>
+<area shape="rect" title="Header file for various RTOS tasks used in the system." alt="" coords="297,5,400,32"/>
+<area shape="rect" href="task___c_l_i_8h.html" title=" " alt="" coords="533,80,618,107"/>
+<area shape="poly" title=" " alt="" coords="389,30,522,72,521,77,388,35"/>
+<area shape="rect" href="task___system_dispatcher_8h.html" title=" " alt="" coords="5,80,178,107"/>
+<area shape="poly" title=" " alt="" coords="305,35,152,78,150,73,303,30"/>
+<area shape="rect" href="task___wireless_comm_8h.html" title=" " alt="" coords="354,80,509,107"/>
+<area shape="poly" title=" " alt="" coords="365,31,408,68,404,72,361,35"/>
+<area shape="rect" href="task___mcu_analog_8h.html" title=" " alt="" coords="202,80,331,107"/>
+<area shape="poly" title=" " alt="" coords="336,35,294,72,290,68,333,31"/>
+<area shape="rect" title=" " alt="" coords="632,304,706,331"/>
+<area shape="poly" title=" " alt="" coords="588,106,624,157,645,191,661,228,668,259,671,288,666,289,663,260,656,230,640,194,620,160,584,109"/>
+<area shape="rect" title=" " alt="" coords="232,155,300,181"/>
+<area shape="poly" title=" " alt="" coords="533,107,316,158,314,153,532,102"/>
+<area shape="poly" title=" " alt="" coords="123,105,223,146,220,151,121,110"/>
+<area shape="rect" href="system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="41,155,187,181"/>
+<area shape="poly" title=" " alt="" coords="98,106,108,139,103,141,93,108"/>
+<area shape="rect" href="_radio___types_8h.html" title=" " alt="" coords="213,229,322,256"/>
+<area shape="poly" title=" " alt="" coords="142,179,228,220,226,225,140,184"/>
+<area shape="rect" title=" " alt="" coords="362,304,426,331"/>
+<area shape="poly" title=" " alt="" coords="291,254,360,294,358,298,288,259"/>
+<area shape="rect" href="_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="130,304,338,331"/>
+<area shape="poly" title=" " alt="" coords="264,258,249,291,244,289,259,255"/>
+<area shape="poly" title=" " alt="" coords="404,110,310,150,308,145,402,105"/>
+<area shape="poly" title=" " alt="" coords="419,109,294,221,291,217,416,105"/>
+<area shape="poly" title=" " alt="" coords="430,108,415,155,404,227,398,289,393,288,399,227,410,154,424,106"/>
+<area shape="rect" href="_n_r_f24_l01_8h.html" title=" " alt="" coords="425,155,520,181"/>
+<area shape="poly" title=" " alt="" coords="441,106,461,140,456,143,436,109"/>
+<area shape="rect" href="_device___def_8h.html" title=" " alt="" coords="545,229,646,256"/>
+<area shape="poly" title=" " alt="" coords="496,180,562,219,559,223,493,184"/>
+<area shape="rect" href="_s_p_i1___dma_8h.html" title=" " alt="" coords="425,229,521,256"/>
+<area shape="poly" title=" " alt="" coords="476,182,476,214,470,214,470,182"/>
+<area shape="rect" title=" " alt="" coords="458,304,578,331"/>
+<area shape="poly" title=" " alt="" coords="584,258,544,295,541,291,580,255"/>
+<area shape="poly" title=" " alt="" coords="508,254,621,296,619,301,506,259"/>
+<area shape="poly" title=" " alt="" coords="461,259,421,295,417,291,457,255"/>
+<area shape="poly" title=" " alt="" coords="483,255,504,289,500,292,478,258"/>
+<area shape="poly" title=" " alt="" coords="269,107,269,139,264,139,264,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -119,11 +154,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="tasks_8h__dep__incl.png" border="0" usemap="#a_tasks_2tasks_8hdep" loading="lazy" alt=""/></div>
 <map name="a_tasks_2tasks_8hdep" id="a_tasks_2tasks_8hdep">
-<area shape="rect" title="Header file for various RTOS tasks used in the system." alt="" coords="96,5,199,32"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html" title=" " alt="" coords="5,80,146,123"/>
-<area shape="poly" title=" " alt="" coords="128,46,96,82,92,78,124,42"/>
-<area shape="rect" href="main_8cpp.html" title="Main program body." alt="" coords="170,88,269,115"/>
-<area shape="poly" title=" " alt="" coords="171,42,211,86,207,90,167,45"/>
+<area shape="rect" title="Header file for various RTOS tasks used in the system." alt="" coords="108,5,211,32"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html" title=" " alt="" coords="5,80,162,123"/>
+<area shape="poly" title=" " alt="" coords="139,45,105,82,101,78,135,42"/>
+<area shape="rect" href="main_8cpp.html" title="Main program body." alt="" coords="186,88,285,115"/>
+<area shape="poly" title=" " alt="" coords="184,41,226,86,222,90,180,45"/>
 </map>
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TrinityTrack6000: Comm/SPI_Dma/SPI_Callbacks.h File Reference</title>
+<title>TrinityTrack6000: Platform/Callbacks/SPI_Callbacks.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,46 +98,80 @@ $(function(){initNavTree('_s_p_i___callbacks_8h.html','',''); });
   <div class="headertitle"><div class="title">SPI_Callbacks.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Header for SPI DMA Callbacks.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stm32g4xx_hal.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SPI_Callbacks.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_s_p_i___callbacks_8h__incl.png" border="0" usemap="#a_comm_2_s_p_i___dma_2_s_p_i___callbacks_8h" loading="lazy" alt=""/></div>
-<map name="a_comm_2_s_p_i___dma_2_s_p_i___callbacks_8h" id="a_comm_2_s_p_i___dma_2_s_p_i___callbacks_8h">
-<area shape="rect" title="Header for SPI DMA Callbacks." alt="" coords="5,5,229,32"/>
-<area shape="rect" title=" " alt="" coords="57,80,177,107"/>
-<area shape="poly" title=" " alt="" coords="120,33,120,64,114,64,114,33"/>
+<div class="center"><img src="_s_p_i___callbacks_8h__incl.png" border="0" usemap="#a_platform_2_callbacks_2_s_p_i___callbacks_8h" loading="lazy" alt=""/></div>
+<map name="a_platform_2_callbacks_2_s_p_i___callbacks_8h" id="a_platform_2_callbacks_2_s_p_i___callbacks_8h">
+<area shape="rect" title=" " alt="" coords="5,5,138,48"/>
+<area shape="rect" title=" " alt="" coords="11,96,132,123"/>
+<area shape="poly" title=" " alt="" coords="74,49,74,80,69,80,69,49"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_s_p_i___callbacks_8h__dep__incl.png" border="0" usemap="#a_comm_2_s_p_i___dma_2_s_p_i___callbacks_8hdep" loading="lazy" alt=""/></div>
-<map name="a_comm_2_s_p_i___dma_2_s_p_i___callbacks_8hdep" id="a_comm_2_s_p_i___dma_2_s_p_i___callbacks_8hdep">
-<area shape="rect" title="Header for SPI DMA Callbacks." alt="" coords="9,5,232,32"/>
-<area shape="rect" href="_s_p_i___callabacks_8c.html" title=" " alt="" coords="5,80,236,107"/>
-<area shape="poly" title=" " alt="" coords="123,48,123,80,118,80,118,48"/>
+<div class="center"><img src="_s_p_i___callbacks_8h__dep__incl.png" border="0" usemap="#a_platform_2_callbacks_2_s_p_i___callbacks_8hdep" loading="lazy" alt=""/></div>
+<map name="a_platform_2_callbacks_2_s_p_i___callbacks_8hdep" id="a_platform_2_callbacks_2_s_p_i___callbacks_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,138,48"/>
+<area shape="rect" href="_s_p_i___callbacks_8c.html" title=" " alt="" coords="5,96,138,139"/>
+<area shape="poly" title=" " alt="" coords="74,64,74,96,69,96,69,64"/>
 </map>
 </div>
 </div>
 <p><a href="_s_p_i___callbacks_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9982c2dc93e94348913cd6b7b0618973" id="r_a9982c2dc93e94348913cd6b7b0618973"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9982c2dc93e94348913cd6b7b0618973">SECTION</a>(x)</td></tr>
+<tr class="memitem:a8e7a3bf6003d72a62606f343c2db6245" id="r_a8e7a3bf6003d72a62606f343c2db6245"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e7a3bf6003d72a62606f343c2db6245">ALIGNED</a>(x)</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0a99ab4f6aa6ee7dc2abca5483910dde" id="r_a0a99ab4f6aa6ee7dc2abca5483910dde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a99ab4f6aa6ee7dc2abca5483910dde">HAL_SPI_TxCpltCallback</a> (SPI_HandleTypeDef *hspi)</td></tr>
+<tr class="memdesc:a0a99ab4f6aa6ee7dc2abca5483910dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefinition of the HAL SPI transmit complete callback function. Used to handle the completion of SPI1 DMA transmission and to manage the transaction buffer accordingly.  <br /></td></tr>
 <tr class="memitem:a3df7021fe24cf874f8b1eec5bd5f4cb3" id="r_a3df7021fe24cf874f8b1eec5bd5f4cb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df7021fe24cf874f8b1eec5bd5f4cb3">HAL_SPI_RxCpltCallback</a> (SPI_HandleTypeDef *hspi)</td></tr>
+<tr class="memdesc:a3df7021fe24cf874f8b1eec5bd5f4cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefinition of the HAL SPI receive complete callback function. Used to handle the completion of SPI1 DMA reception and to manage the transaction buffer accordingly.  <br /></td></tr>
+<tr class="memitem:a04e63f382f172164c8e7cae4ff5d883c" id="r_a04e63f382f172164c8e7cae4ff5d883c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04e63f382f172164c8e7cae4ff5d883c">HAL_SPI_TxRxCpltCallback</a> (SPI_HandleTypeDef *hspi)</td></tr>
+<tr class="memdesc:a04e63f382f172164c8e7cae4ff5d883c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redefinition of the HAL SPI transmit-receive complete callback function. Used to handle the completion of SPI1 DMA transmit-receive operations and to manage the transaction buffer accordingly.  <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header for SPI DMA Callbacks. </p>
-<dl class="section author"><dt>Author</dt><dd>Alan Kudełko </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Alan Kudełko. <br  />
- All rights reserved. <br  />
- For educational and research purposes only. <br  />
- Redistribution, modification, or commercial use prohibited without explicit written permission. </dd></dl>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a8e7a3bf6003d72a62606f343c2db6245" name="a8e7a3bf6003d72a62606f343c2db6245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7a3bf6003d72a62606f343c2db6245">&#9670;&#160;</a></span>ALIGNED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ALIGNED</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9982c2dc93e94348913cd6b7b0618973" name="a9982c2dc93e94348913cd6b7b0618973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9982c2dc93e94348913cd6b7b0618973">&#9670;&#160;</a></span>SECTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SECTION</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a3df7021fe24cf874f8b1eec5bd5f4cb3" name="a3df7021fe24cf874f8b1eec5bd5f4cb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3df7021fe24cf874f8b1eec5bd5f4cb3">&#9670;&#160;</a></span>HAL_SPI_RxCpltCallback()</h2>
 
@@ -160,15 +194,24 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Redefinition of the HAL SPI receive complete callback function. Used to handle the completion of SPI1 DMA reception and to manage the transaction buffer accordingly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hspi</td><td>Pointer to the SPI handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_p_i___callbacks_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3_cgraph.png" border="0" usemap="#a_s_p_i___callbacks_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3_cgraph" loading="lazy" alt=""/></div>
 <map name="a_s_p_i___callbacks_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3_cgraph" id="a_s_p_i___callbacks_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect" href="_s_p_i1___dma_8c.html#aaf195c00da311f0133f4f43085e64653" title=" " alt="" coords="229,5,384,32"/>
+<area shape="rect" title="Redefinition of the HAL SPI receive complete callback function. Used to handle the completion of SPI1..." alt="" coords="5,5,181,32"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gaaf195c00da311f0133f4f43085e64653" title="Callback function called when SPI1 DMA transmission is complete." alt="" coords="229,5,384,32"/>
 <area shape="poly" title=" " alt="" coords="181,16,213,16,213,21,181,21"/>
-<area shape="rect" href="_s_p_i1___dma_8c.html#ae46768023170039e679338a1d5fea831" title=" " alt="" coords="432,5,544,32"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="432,5,544,32"/>
 <area shape="poly" title=" " alt="" coords="384,16,417,16,417,21,384,21"/>
 </map>
 </div>
@@ -197,16 +240,71 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Redefinition of the HAL SPI transmit complete callback function. Used to handle the completion of SPI1 DMA transmission and to manage the transaction buffer accordingly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hspi</td><td>Pointer to the SPI handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_p_i___callbacks_8h_a0a99ab4f6aa6ee7dc2abca5483910dde_cgraph.png" border="0" usemap="#a_s_p_i___callbacks_8h_a0a99ab4f6aa6ee7dc2abca5483910dde_cgraph" loading="lazy" alt=""/></div>
 <map name="a_s_p_i___callbacks_8h_a0a99ab4f6aa6ee7dc2abca5483910dde_cgraph" id="a_s_p_i___callbacks_8h_a0a99ab4f6aa6ee7dc2abca5483910dde_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,179,32"/>
-<area shape="rect" href="_s_p_i1___dma_8c.html#aaf195c00da311f0133f4f43085e64653" title=" " alt="" coords="227,5,382,32"/>
+<area shape="rect" title="Redefinition of the HAL SPI transmit complete callback function. Used to handle the completion of SPI..." alt="" coords="5,5,179,32"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gaaf195c00da311f0133f4f43085e64653" title="Callback function called when SPI1 DMA transmission is complete." alt="" coords="227,5,382,32"/>
 <area shape="poly" title=" " alt="" coords="179,16,211,16,211,21,179,21"/>
-<area shape="rect" href="_s_p_i1___dma_8c.html#ae46768023170039e679338a1d5fea831" title=" " alt="" coords="430,5,542,32"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="430,5,542,32"/>
 <area shape="poly" title=" " alt="" coords="382,16,415,16,415,21,382,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a04e63f382f172164c8e7cae4ff5d883c" name="a04e63f382f172164c8e7cae4ff5d883c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e63f382f172164c8e7cae4ff5d883c">&#9670;&#160;</a></span>HAL_SPI_TxRxCpltCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_SPI_TxRxCpltCallback </td>
+          <td>(</td>
+          <td class="paramtype">SPI_HandleTypeDef *</td>          <td class="paramname"><span class="paramname"><em>hspi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redefinition of the HAL SPI transmit-receive complete callback function. Used to handle the completion of SPI1 DMA transmit-receive operations and to manage the transaction buffer accordingly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hspi</td><td>Pointer to the SPI handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_s_p_i___callbacks_8h_a04e63f382f172164c8e7cae4ff5d883c_cgraph.png" border="0" usemap="#a_s_p_i___callbacks_8h_a04e63f382f172164c8e7cae4ff5d883c_cgraph" loading="lazy" alt=""/></div>
+<map name="a_s_p_i___callbacks_8h_a04e63f382f172164c8e7cae4ff5d883c_cgraph" id="a_s_p_i___callbacks_8h_a04e63f382f172164c8e7cae4ff5d883c_cgraph">
+<area shape="rect" title="Redefinition of the HAL SPI transmit&#45;receive complete callback function. Used to handle the completio..." alt="" coords="5,5,196,32"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gaaf195c00da311f0133f4f43085e64653" title="Callback function called when SPI1 DMA transmission is complete." alt="" coords="244,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="196,16,228,16,228,21,196,21"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="447,5,559,32"/>
+<area shape="poly" title=" " alt="" coords="399,16,432,16,432,21,399,21"/>
 </map>
 </div>
 
@@ -225,7 +323,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_3fd242b123a5c0dc8a99f5f0c1394ff4.html">Comm</a></li><li class="navelem"><a href="dir_d124ecae5e16988b66e6de6e0907a13f.html">SPI_Dma</a></li><li class="navelem"><a href="_s_p_i___callbacks_8h.html">SPI_Callbacks.h</a></li>
+    <li class="navelem"><a href="dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a href="dir_87fa792c19a143bd5e50a69dd5a9ac40.html">Callbacks</a></li><li class="navelem"><a href="_s_p_i___callbacks_8h.html">SPI_Callbacks.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

@@ -1,0 +1,36 @@
+# === Main settings ===
+PROJECT_NAME           = "TrinityTrack6000"
+OUTPUT_DIRECTORY       = ../../docs
+INPUT                  = Include Src Infra Platform Tasks Devices Utils
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.c *.cpp
+
+# === Analysis files ===
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_ANON_NSPACES   = YES
+
+# === Generating graphs ===
+HAVE_DOT               = YES
+DOT_MULTI_TARGETS      = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+DOT_GRAPH_MAX_NODES    = 100
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+PREDEFINED            += __DOXYGEN__ \
+ SECTION(x)= \
+ ALIGNED(x)=
+SEARCH_INCLUDES = YES
+ENABLE_PREPROCESSING = YES
+# === Output format ===
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+HTML_OUTPUT            = STM32
+USE_MATHJAX = YES
+MATHJAX_RELPATH = https://cdn.jsdelivr.net/npm/mathjax@2

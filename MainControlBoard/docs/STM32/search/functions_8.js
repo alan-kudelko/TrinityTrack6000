@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['parse_5fcommand_0',['parse_command',['../task___c_l_i_8c.html#adaa6a403f36f5d75d37e91df042bac34',1,'parse_command(char *command, uint16_t length):&#160;task_CLI.c'],['../task___c_l_i_8h.html#adaa6a403f36f5d75d37e91df042bac34',1,'parse_command(char *command, uint16_t length):&#160;task_CLI.c']]],
-  ['parse_5fcommand_5fhelp_1',['parse_command_help',['../task___c_l_i_8c.html#a804c51bf9d9a919cbf34f9f9dd0c6c35',1,'parse_command_help(uint8_t argc, char *argv[]):&#160;task_CLI.c'],['../task___c_l_i_8h.html#a804c51bf9d9a919cbf34f9f9dd0c6c35',1,'parse_command_help(uint8_t argc, char *argv[]):&#160;task_CLI.c']]],
-  ['parse_5fcommand_5fshow_2',['parse_command_show',['../task___c_l_i_8c.html#aff9c7d9576e5b718a18ee9136e2b8011',1,'parse_command_show(uint8_t argc, char *argv[]):&#160;task_CLI.c'],['../task___c_l_i_8h.html#aff9c7d9576e5b718a18ee9136e2b8011',1,'parse_command_show(uint8_t argc, char *argv[]):&#160;task_CLI.c']]],
-  ['parse_5fcommand_5fswitch_5fmode_3',['parse_command_switch_mode',['../task___c_l_i_8c.html#ab95ac13f16242b28e0389734b21d1dc6',1,'parse_command_switch_mode(uint8_t argc, char *argv[]):&#160;task_CLI.c'],['../task___c_l_i_8h.html#ab95ac13f16242b28e0389734b21d1dc6',1,'parse_command_switch_mode(uint8_t argc, char *argv[]):&#160;task_CLI.c']]]
+  ['init_0',['init',['../class_m_c_p23_s17.html#a268dd286302d2c3f1d42807c2e238a13',1,'MCP23S17']]],
+  ['initialize_5fhspi_5fdata_1',['initialize_hspi_data',['../group___n_r_f24_l01.html#ga589a0ad9c0829775d531dfbb4e1a2384',1,'NRF24L01']]],
+  ['initializememory_2',['initializeMemory',['../_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp']]],
+  ['initializesystem_3',['initializeSystem',['../_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp']]],
+  ['initializethreadxmemory_4',['initializeThreadXMemory',['../_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647',1,'initializeThreadXMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#ac5a71095e7ff4714d2248ed6dde28647',1,'initializeThreadXMemory(void):&#160;TrinityTrack6000_Init.cpp']]]
 ];

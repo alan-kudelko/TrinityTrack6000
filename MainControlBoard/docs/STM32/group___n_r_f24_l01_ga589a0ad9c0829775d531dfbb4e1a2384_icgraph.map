@@ -1,0 +1,7 @@
+<map id="NRF24L01::initialize_hspi_data" name="NRF24L01::initialize_hspi_data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="209,23,348,65"/>
+<area shape="rect" id="Node000002" href="$group___n_r_f24_l01.html#ga2da82f8a3d0730772ebadace1724d78b" title=" " alt="" coords="5,5,161,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,36,161,31,161,26,194,30"/>
+<area shape="rect" id="Node000003" href="$group___n_r_f24_l01.html#gae2a809ef16c5cd8ea3b64c0b6f2f25eb" title=" " alt="" coords="5,56,161,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,58,161,62,161,57,193,52"/>
+</map>

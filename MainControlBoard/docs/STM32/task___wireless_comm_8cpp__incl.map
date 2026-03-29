@@ -1,0 +1,37 @@
+<map id="Tasks/task_WirelessComm.cpp" name="Tasks/task_WirelessComm.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="651,5,858,32"/>
+<area shape="rect" id="Node000002" href="$task___wireless_comm_8h.html" title=" " alt="" coords="331,80,485,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="694,35,484,79,483,74,693,30"/>
+<area shape="rect" id="Node000012" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="668,80,841,107"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="757,33,757,64,752,64,752,33"/>
+<area shape="rect" id="Node000013" href="$_u_s_a_r_t1___dma_8h.html" title=" " alt="" coords="524,80,644,107"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="726,35,629,76,627,71,724,30"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="865,80,930,107"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="781,30,860,70,858,75,778,35"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="954,80,1014,107"/>
+<area shape="poly" id="edge20_Node000001_Node000015" title=" " alt="" coords="795,30,940,75,938,80,794,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="489,155,556,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,105,491,144,488,148,427,109"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="269,304,334,331"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="391,109,366,130,337,157,311,191,292,230,289,260,294,289,289,290,284,260,287,229,306,189,333,154,363,126,388,105"/>
+<area shape="rect" id="Node000005" href="$_n_r_f24_l01_8h.html" title=" " alt="" coords="131,155,226,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="369,110,234,152,233,147,367,105"/>
+<area shape="rect" id="Node000010" href="$_radio___types_8h.html" title=" " alt="" coords="354,155,462,181"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="411,107,411,139,405,139,405,107"/>
+<area shape="rect" id="Node000006" href="$_device___def_8h.html" title=" " alt="" coords="5,229,107,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="159,184,92,223,89,219,156,180"/>
+<area shape="rect" id="Node000008" href="$_s_p_i1___dma_8h.html" title=" " alt="" coords="130,229,227,256"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="181,182,181,214,176,214,176,182"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="80,304,200,331"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="72,255,116,292,112,296,69,259"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="201,254,268,293,265,298,199,259"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="174,258,156,292,151,289,170,255"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="503,304,577,331"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="228,251,488,303,487,308,227,256"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="451,179,483,193,512,210,523,221,529,232,530,245,523,258,512,268,495,277,450,292,350,312,349,307,449,287,493,272,509,264,519,254,525,244,524,234,519,224,509,214,481,198,449,184"/>
+<area shape="rect" id="Node000011" href="$_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="301,229,510,256"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="410,182,409,214,404,214,405,182"/>
+<area shape="poly" id="edge18_Node000013_Node000003" title=" " alt="" coords="575,109,545,145,541,141,571,105"/>
+<area shape="poly" id="edge16_Node000013_Node000004" title=" " alt="" coords="588,107,588,138,583,178,570,221,559,241,545,258,523,275,499,288,447,307,395,316,349,320,349,314,394,311,445,302,496,283,520,270,541,254,555,238,565,219,578,177,582,137,582,107"/>
+<area shape="poly" id="edge17_Node000013_Node000009" title=" " alt="" coords="595,106,608,128,619,154,630,206,628,230,618,257,602,280,581,297,577,293,598,276,614,255,623,229,625,207,613,155,603,130,591,109"/>
+</map>

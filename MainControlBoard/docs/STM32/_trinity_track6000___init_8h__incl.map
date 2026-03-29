@@ -1,5 +1,5 @@
-<map id="Init/TrinityTrack6000_Init.h" name="Init/TrinityTrack6000_Init.h">
-<area shape="rect" id="Node000001" title="System initialization functions for TrinityTrack6000 project." alt="" coords="79,5,220,48"/>
+<map id="Platform/Startup/TrinityTrack6000_Init.h" name="Platform/Startup/TrinityTrack6000_Init.h">
+<area shape="rect" id="Node000001" title="System initialization functions for TrinityTrack6000 project." alt="" coords="71,5,228,48"/>
 <area shape="rect" id="Node000002" href="$_trinity_track6000___config_8h.html" title="Configuration header for TrinityTrack6000 project." alt="" coords="62,96,237,123"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,49,152,80,147,80,147,49"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,171,126,197"/>

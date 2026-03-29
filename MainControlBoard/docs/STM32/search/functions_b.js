@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['task_5fblink_0',['task_blink',['../main_8cpp.html#a0443eb7a80a5df8845d2d0e788013b45',1,'main.cpp']]],
-  ['task_5fcli_1',['task_CLI',['../task___c_l_i_8c.html#a11ec70c795688cdda2170896d5f552e9',1,'task_CLI(ULONG arg):&#160;task_CLI.c'],['../task___c_l_i_8h.html#a11ec70c795688cdda2170896d5f552e9',1,'task_CLI(ULONG arg):&#160;task_CLI.c']]],
-  ['task_5fcli_5finit_2',['task_CLI_init',['../task___c_l_i_8c.html#aff608362c445b45101c84364713ccb5a',1,'task_CLI_init(void):&#160;task_CLI.c'],['../task___c_l_i_8h.html#aff608362c445b45101c84364713ccb5a',1,'task_CLI_init(void):&#160;task_CLI.c']]],
-  ['test_5ffunction_3',['test_function',['../main_8cpp.html#abe89f19890616ba94b27398c050b38a4',1,'main.cpp']]],
-  ['test_5fspi_5fcommunication_4',['test_SPI_communication',['../main_8cpp.html#ae763262a7343b56ffdbe555bb03359a7',1,'main.cpp']]],
-  ['tim6_5fdac_5firqhandler_5',['TIM6_DAC_IRQHandler',['../stm32g4xx__it_8c.html#a0839a45f331c4c067939b9c4533bbf4d',1,'stm32g4xx_it.c']]],
-  ['tx_5fapplication_5fdefine_6',['tx_application_define',['../main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9',1,'main.cpp']]]
+  ['parse_5fcli_5fqueue_0',['parse_cli_queue',['../task___system_dispatcher_8c.html#a3f81d98c265fdc5cff878fcbd2962999',1,'parse_cli_queue(TASK_CLI_COMMAND command):&#160;task_SystemDispatcher.c'],['../task___system_dispatcher_8h.html#a3f81d98c265fdc5cff878fcbd2962999',1,'parse_cli_queue(TASK_CLI_COMMAND command):&#160;task_SystemDispatcher.c']]],
+  ['parse_5fcommand_1',['parse_command',['../group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34',1,'task_CLI.c']]],
+  ['parse_5fcommand_5fhelp_2',['parse_command_help',['../group__task___c_l_i.html#ga804c51bf9d9a919cbf34f9f9dd0c6c35',1,'task_CLI.c']]],
+  ['parse_5fcommand_5fread_3',['parse_command_read',['../group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5',1,'task_CLI.c']]],
+  ['parse_5fcommand_5fshow_4',['parse_command_show',['../group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011',1,'task_CLI.c']]],
+  ['parse_5fcommand_5fswitch_5fmode_5',['parse_command_switch_mode',['../group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6',1,'task_CLI.c']]],
+  ['parse_5fcommand_5fwrite_6',['parse_command_write',['../group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4',1,'task_CLI.c']]]
 ];

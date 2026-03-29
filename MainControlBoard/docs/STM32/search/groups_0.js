@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffers_20configuration_0',['DMA Buffers Configuration',['../group___d_m_a___buffers___config.html',1,'']]]
+  ['analog_20task_0',['MCU Analog Task',['../group__task___mcu_analog.html',1,'']]]
 ];

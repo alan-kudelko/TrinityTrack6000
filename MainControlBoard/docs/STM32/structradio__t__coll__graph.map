@@ -1,0 +1,9 @@
+<map id="radio_t" name="radio_t">
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,245,137,272"/>
+<area shape="rect" id="Node000002" href="$class_n_r_f24_l01.html" title=" " alt="" coords="64,147,149,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,189,109,245,104,245,104,189"/>
+<area shape="rect" id="Node000003" href="$struct_d_e_v_i_c_e___i_o.html" title=" " alt="" coords="5,5,99,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,47,65,84,79,121,96,145,92,148,75,124,60,85,53,48"/>
+<area shape="rect" id="Node000004" href="$structhspi__data.html" title="Structure to hold SPI1 transaction parameters This structure is used to store the parameters for an S..." alt="" coords="123,5,200,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,48,149,85,134,124,119,148,114,145,130,121,144,83,154,47"/>
+</map>

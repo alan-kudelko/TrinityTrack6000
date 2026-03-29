@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parse_5ffunctions_0',['parse_functions',['../task___c_l_i_8c.html#ac139e23e80fcc8769512f7a203fc2706',1,'parse_functions:&#160;task_CLI.c'],['../task___c_l_i_8h.html#ac139e23e80fcc8769512f7a203fc2706',1,'parse_functions:&#160;task_CLI.c']]],
-  ['ptr_1',['ptr',['../main_8cpp.html#a2b3501294b0eee0578affe01ffd7d783',1,'main.cpp']]]
+  ['last_5fid_0',['last_id',['../struct_r_a_d_i_o___s_t_a_t_s.html#a55355a4c8549af550ae9e6b68014cfc1',1,'RADIO_STATS']]]
 ];

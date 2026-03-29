@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TrinityTrack6000: Comm/SPI_Dma/SPI_Callbacks.h Source File</title>
+<title>TrinityTrack6000: Platform/Callbacks/SPI_Callbacks.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,34 +99,45 @@ $(function(){initNavTree('_s_p_i___callbacks_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="_s_p_i___callbacks_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef SPI_CALLBACKS_H_</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">    #define SPI_CALLBACKS_H_</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stm32g4xx_hal.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">// __cplusplus</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_s_p_i___callbacks_8h.html#a0a99ab4f6aa6ee7dc2abca5483910dde">HAL_SPI_TxCpltCallback</a>(SPI_HandleTypeDef*hspi);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_s_p_i___callbacks_8h.html#a3df7021fe24cf874f8b1eec5bd5f4cb3">HAL_SPI_RxCpltCallback</a>(SPI_HandleTypeDef*hspi);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">// __cplusplus</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif </span><span class="comment">// SPI_CALLBACKS_H_</span></div>
-<div class="ttc" id="a_s_p_i___callbacks_8h_html_a0a99ab4f6aa6ee7dc2abca5483910dde"><div class="ttname"><a href="_s_p_i___callbacks_8h.html#a0a99ab4f6aa6ee7dc2abca5483910dde">HAL_SPI_TxCpltCallback</a></div><div class="ttdeci">void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)</div><div class="ttdef"><b>Definition</b> SPI_Callabacks.c:18</div></div>
-<div class="ttc" id="a_s_p_i___callbacks_8h_html_a3df7021fe24cf874f8b1eec5bd5f4cb3"><div class="ttname"><a href="_s_p_i___callbacks_8h.html#a3df7021fe24cf874f8b1eec5bd5f4cb3">HAL_SPI_RxCpltCallback</a></div><div class="ttdeci">void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)</div><div class="ttdef"><b>Definition</b> SPI_Callabacks.c:27</div></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SPI_CALLBACKS_H_</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">    #define SPI_CALLBACKS_H_</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifdef __DOXYGEN__</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="_s_p_i___callbacks_8h.html#a9982c2dc93e94348913cd6b7b0618973">    9</a></span><span class="preprocessor">    #define SECTION(x)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="_s_p_i___callbacks_8h.html#a8e7a3bf6003d72a62606f343c2db6245">   10</a></span><span class="preprocessor">    #define ALIGNED(x)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">    #define SECTION(x) __attribute((section(x)))</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">    #define ALIGNED(x) __attribute((aligned(x)))</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif </span><span class="comment">// __DOXYGEN__</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stm32g4xx_hal.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif </span><span class="comment">// __cplusplus</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_s_p_i___callbacks_8h.html#a0a99ab4f6aa6ee7dc2abca5483910dde">HAL_SPI_TxCpltCallback</a>(SPI_HandleTypeDef*hspi);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_s_p_i___callbacks_8h.html#a3df7021fe24cf874f8b1eec5bd5f4cb3">HAL_SPI_RxCpltCallback</a>(SPI_HandleTypeDef*hspi);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_s_p_i___callbacks_8h.html#a04e63f382f172164c8e7cae4ff5d883c">HAL_SPI_TxRxCpltCallback</a>(SPI_HandleTypeDef*hspi);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// __cplusplus</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// SPI_CALLBACKS_H_</span></div>
+<div class="ttc" id="a_s_p_i___callbacks_8h_html_a04e63f382f172164c8e7cae4ff5d883c"><div class="ttname"><a href="_s_p_i___callbacks_8h.html#a04e63f382f172164c8e7cae4ff5d883c">HAL_SPI_TxRxCpltCallback</a></div><div class="ttdeci">void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)</div><div class="ttdoc">Redefinition of the HAL SPI transmit-receive complete callback function. Used to handle the completio...</div><div class="ttdef"><b>Definition</b> SPI_Callbacks.c:26</div></div>
+<div class="ttc" id="a_s_p_i___callbacks_8h_html_a0a99ab4f6aa6ee7dc2abca5483910dde"><div class="ttname"><a href="_s_p_i___callbacks_8h.html#a0a99ab4f6aa6ee7dc2abca5483910dde">HAL_SPI_TxCpltCallback</a></div><div class="ttdeci">void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)</div><div class="ttdoc">Redefinition of the HAL SPI transmit complete callback function. Used to handle the completion of SPI...</div><div class="ttdef"><b>Definition</b> SPI_Callbacks.c:8</div></div>
+<div class="ttc" id="a_s_p_i___callbacks_8h_html_a3df7021fe24cf874f8b1eec5bd5f4cb3"><div class="ttname"><a href="_s_p_i___callbacks_8h.html#a3df7021fe24cf874f8b1eec5bd5f4cb3">HAL_SPI_RxCpltCallback</a></div><div class="ttdeci">void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)</div><div class="ttdoc">Redefinition of the HAL SPI receive complete callback function. Used to handle the completion of SPI1...</div><div class="ttdef"><b>Definition</b> SPI_Callbacks.c:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_3fd242b123a5c0dc8a99f5f0c1394ff4.html">Comm</a></li><li class="navelem"><a href="dir_d124ecae5e16988b66e6de6e0907a13f.html">SPI_Dma</a></li><li class="navelem"><a href="_s_p_i___callbacks_8h.html">SPI_Callbacks.h</a></li>
+    <li class="navelem"><a href="dir_46f0a310448968fe371c870cd868aa1f.html">Platform</a></li><li class="navelem"><a href="dir_87fa792c19a143bd5e50a69dd5a9ac40.html">Callbacks</a></li><li class="navelem"><a href="_s_p_i___callbacks_8h.html">SPI_Callbacks.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

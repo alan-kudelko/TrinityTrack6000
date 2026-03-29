@@ -1,0 +1,11 @@
+<map id="Tasks/task_SystemDispatcher.h" name="Tasks/task_SystemDispatcher.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="96,5,307,32"/>
+<area shape="rect" id="Node000002" href="$task___system_dispatcher_8c.html" title=" " alt="" coords="5,80,217,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,44,128,82,125,78,173,40"/>
+<area shape="rect" id="Node000003" href="$tasks_8h.html" title="Header file for various RTOS tasks used in the system." alt="" coords="241,80,344,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,40,278,78,275,82,227,44"/>
+<area shape="rect" id="Node000004" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="138,155,294,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="272,120,237,156,234,153,268,116"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Main program body." alt="" coords="319,163,418,189"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="316,116,359,161,355,164,312,120"/>
+</map>

@@ -34,21 +34,21 @@
     <downwardMapList xsi:type="ResourceModel:App" href="../../CPU_CTRL_XMC4/v4_0_18/CPU_CTRL_XMC4_0.app#/"/>
   </requiredApps>
   <requiredApps URI="http://resources/4.1.34/app/I2C_MASTER/0/appres_global_dma" requiredAppName="GLOBAL_DMA" required="false" requiringMode="SHARABLE"/>
-  <hwResources name="Channel" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_usic_channel" resourceGroupUri="peripheral/usic/0/channel/0" constraintType="GLOBAL_RESOURCE" mResGrpUri="peripheral/usic/*/channel/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/USIC0/USIC0_0.dd#//@provided.0"/>
+  <hwResources name="Channel" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_usic_channel" resourceGroupUri="peripheral/usic/1/channel/0" constraintType="GLOBAL_RESOURCE" mResGrpUri="peripheral/usic/*/channel/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/USIC1/USIC1_1.dd#//@provided.0"/>
   </hwResources>
   <hwResources name="NVIC Node Tx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_tx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.15"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.13"/>
   </hwResources>
   <hwResources name="NVIC Node Rx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_rx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.17"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.4"/>
   </hwResources>
   <hwResources name="NVIC Node Error" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_error" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
   <hwResources name="SDA" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_i2c_sda" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port1/Port1_1.dd#//@provided.23"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.28"/>
   </hwResources>
   <hwResources name="SCL" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_i2c_scl" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.36"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.28"/>
   </hwResources>
   <hwResources name="DMA channel Tx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_tx_dma_channel" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/sv0/0/ch/*">
     <solverVarMap index="1">
@@ -68,11 +68,11 @@
   </hwResources>
   <hwResources name="DLR channel Tx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_tx_dma_dlr" resourceGroupUri="" required="false" mResGrpUri="peripheral/dlr/0/ch/*"/>
   <hwResources name="DLR channel Rx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_rx_dma_dlr" resourceGroupUri="" required="false" mResGrpUri="peripheral/dlr/0/ch/*"/>
-  <hwResources name="SDA" URI="http://resources/4.1.34/app/I2C_MASTER/0/__pin_hwres_i2c_sda" resourceGroupUri="devicepackage/0/47" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.22"/>
+  <hwResources name="SDA" URI="http://resources/4.1.34/app/I2C_MASTER/0/__pin_hwres_i2c_sda" resourceGroupUri="devicepackage/0/26" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.17"/>
   </hwResources>
-  <hwResources name="SCL" URI="http://resources/4.1.34/app/I2C_MASTER/0/__pin_hwres_i2c_scl" resourceGroupUri="devicepackage/0/57" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.20"/>
+  <hwResources name="SCL" URI="http://resources/4.1.34/app/I2C_MASTER/0/__pin_hwres_i2c_scl" resourceGroupUri="devicepackage/0/59" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.16"/>
   </hwResources>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_dout0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_sdapad" systemDefined="true" sourceSignal="tx pin" targetSignal="sda_pin" srcVirtualSignal="//@virtualSignals.10" targetVirtualSignal="//@virtualSignals.8"/>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_sdapad/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_dx0ins" systemDefined="true" sourceSignal="sda_pin" targetSignal="rx pin" srcVirtualSignal="//@virtualSignals.8" targetVirtualSignal="//@virtualSignals.11"/>

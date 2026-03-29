@@ -1,5 +1,5 @@
-<map id="Comm/USART_Dma/USART_Callbacks.h" name="Comm/USART_Dma/USART_Callbacks.h">
-<area shape="rect" id="Node000001" title="Header for USART DMA Callbacks." alt="" coords="5,5,199,48"/>
-<area shape="rect" id="Node000002" href="$_u_s_a_r_t___callbacks_8c.html" title="Implementation of USART DMA Callbacks." alt="" coords="5,96,199,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,64,105,96,99,96,99,64"/>
+<map id="Platform/Callbacks/USART_Callbacks.h" name="Platform/Callbacks/USART_Callbacks.h">
+<area shape="rect" id="Node000001" title="Header for USART DMA Callbacks." alt="" coords="5,5,152,48"/>
+<area shape="rect" id="Node000002" href="$_u_s_a_r_t___callbacks_8c.html" title="Implementation of USART DMA Callbacks." alt="" coords="5,96,152,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,64,81,96,76,96,76,64"/>
 </map>

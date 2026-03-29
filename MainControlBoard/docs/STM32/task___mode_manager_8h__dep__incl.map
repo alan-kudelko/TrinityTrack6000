@@ -1,0 +1,9 @@
+<map id="Tasks/task_ModeManager.h" name="Tasks/task_ModeManager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="154,5,339,32"/>
+<area shape="rect" id="Node000002" href="$task___c_l_i_8c.html" title=" " alt="" coords="5,80,130,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,41,100,82,98,77,200,36"/>
+<area shape="rect" id="Node000003" href="$task___mode_manager_8c.html" title=" " alt="" coords="154,80,339,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,48,249,80,244,80,244,48"/>
+<area shape="rect" id="Node000004" href="$task___system_dispatcher_8c.html" title=" " alt="" coords="363,80,574,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="300,35,431,77,429,82,298,40"/>
+</map>

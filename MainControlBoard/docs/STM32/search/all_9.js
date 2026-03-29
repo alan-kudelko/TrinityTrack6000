@@ -8,10 +8,11 @@ var searchData=
   ['infineon_5ferror_5',['infineon_error',['../struct_system_error_status__t.html#aa2766fc5860c43b7d8f1825be456cf69',1,'SystemErrorStatus_t']]],
   ['infineon_5frst_5fgpio_5fport_6',['INFINEON_RST_GPIO_Port',['../_trinity_track6000___pinout_8h.html#af7c1c9156a4f426196a0fdf9ef79e9ef',1,'TrinityTrack6000_Pinout.h']]],
   ['infineon_5frst_5fpin_7',['INFINEON_RST_Pin',['../_trinity_track6000___pinout_8h.html#a6234f4f56297dacb17c73ca6e7ac8005',1,'TrinityTrack6000_Pinout.h']]],
-  ['init_8',['init',['../class_m_c_p23_s17.html#a268dd286302d2c3f1d42807c2e238a13',1,'MCP23S17']]],
-  ['init_5fline_5fbuffer_5fsize_9',['INIT_LINE_BUFFER_SIZE',['../_trinity_track6000___init_8h.html#a5df001d02f4666a60867341a7b4bbb77',1,'TrinityTrack6000_Init.h']]],
-  ['initializemcp_10',['initializeMCP',['../_trinity_track6000___init_8h.html#a77dc374f08bff5b7968adfa3aff0fc7e',1,'TrinityTrack6000_Init.h']]],
-  ['initializememory_11',['initializeMemory',['../_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['initializesystem_12',['initializeSystem',['../_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp']]],
-  ['initializethreadxmemory_13',['initializeThreadXMemory',['../_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647',1,'initializeThreadXMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#ac5a71095e7ff4714d2248ed6dde28647',1,'initializeThreadXMemory(void):&#160;TrinityTrack6000_Init.cpp']]]
+  ['information_20utility_8',['Memory Information Utility',['../group___trinity_track6000___mem_info.html',1,'']]],
+  ['init_9',['init',['../class_m_c_p23_s17.html#a268dd286302d2c3f1d42807c2e238a13',1,'MCP23S17']]],
+  ['init_5fline_5fbuffer_5fsize_10',['INIT_LINE_BUFFER_SIZE',['../_trinity_track6000___init_8h.html#a5df001d02f4666a60867341a7b4bbb77',1,'TrinityTrack6000_Init.h']]],
+  ['initialize_5fhspi_5fdata_11',['initialize_hspi_data',['../group___n_r_f24_l01.html#ga589a0ad9c0829775d531dfbb4e1a2384',1,'NRF24L01']]],
+  ['initializememory_12',['initializeMemory',['../_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a55220b932943708be12fdcf12f8840f8',1,'initializeMemory(void):&#160;TrinityTrack6000_Init.cpp']]],
+  ['initializesystem_13',['initializeSystem',['../_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a37b1839968615757fb202e133573b7d3',1,'initializeSystem():&#160;TrinityTrack6000_Init.cpp']]],
+  ['initializethreadxmemory_14',['initializeThreadXMemory',['../_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647',1,'initializeThreadXMemory(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#ac5a71095e7ff4714d2248ed6dde28647',1,'initializeThreadXMemory(void):&#160;TrinityTrack6000_Init.cpp']]]
 ];

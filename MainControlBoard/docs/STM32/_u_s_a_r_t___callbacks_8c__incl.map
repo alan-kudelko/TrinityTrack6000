@@ -1,5 +1,5 @@
-<map id="Comm/USART_Dma/USART_Callbacks.c" name="Comm/USART_Dma/USART_Callbacks.c">
-<area shape="rect" id="Node000001" title="Implementation of USART DMA Callbacks." alt="" coords="70,5,264,48"/>
+<map id="Platform/Callbacks/USART_Callbacks.c" name="Platform/Callbacks/USART_Callbacks.c">
+<area shape="rect" id="Node000001" title="Implementation of USART DMA Callbacks." alt="" coords="94,5,240,48"/>
 <area shape="rect" id="Node000002" href="$_u_s_a_r_t___callbacks_8h.html" title="Header for USART DMA Callbacks." alt="" coords="5,96,148,123"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,51,104,88,100,84,142,47"/>
 <area shape="rect" id="Node000004" href="$_trinity_track6000___pinout_8h.html" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="171,96,344,123"/>

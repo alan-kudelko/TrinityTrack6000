@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['task_5fblink_5fhandle_0',['task_blink_handle',['../main_8cpp.html#a122d41f15400e36427a2195b304ba4bc',1,'main.cpp']]],
-  ['task_5fblink_5fstack_1',['task_blink_stack',['../main_8cpp.html#abe23b7eef9fb7c568ab2459b3553ac56',1,'main.cpp']]],
-  ['task_5fcli_5fhandle_2',['task_CLI_handle',['../task___c_l_i_8c.html#a42585ff45c45d4024bb3826da127be54',1,'task_CLI.c']]],
-  ['task_5fcli_5fname_3',['task_CLI_name',['../task___c_l_i_8c.html#a9711c5eb98c75a54632eafd84414667e',1,'task_CLI_name:&#160;task_CLI.c'],['../task___c_l_i_8h.html#a9711c5eb98c75a54632eafd84414667e',1,'task_CLI_name:&#160;task_CLI.c']]],
-  ['task_5fcli_5fstack_4',['task_CLI_stack',['../task___c_l_i_8c.html#a9dfa0850f464840126ee4999fca7c8de',1,'task_CLI.c']]],
-  ['transmissionstatus_5',['transmissionStatus',['../structhspi__data.html#aa317c59a6c3986739b41d9e92435e96d',1,'hspi_data']]],
-  ['txbuffer_6',['txBuffer',['../structhspi__data.html#a8de8e5732ce4b561e72fb34886e5848e',1,'hspi_data']]],
-  ['txlength_7',['txLength',['../structhspi__data.html#aba0b8a4185b9c7efdfc16a5b01c1a9a6',1,'hspi_data']]]
+  ['packages_5fdropped_0',['packages_dropped',['../struct_r_a_d_i_o___s_t_a_t_s.html#a10ee340baa4a286fc7f9a8817bf849fa',1,'RADIO_STATS']]],
+  ['packages_5fduplicate_1',['packages_duplicate',['../struct_r_a_d_i_o___s_t_a_t_s.html#a76163d845567504728d13e80deedcaee',1,'RADIO_STATS']]],
+  ['packages_5fout_5fof_5forder_2',['packages_out_of_order',['../struct_r_a_d_i_o___s_t_a_t_s.html#abd17b517796a67f9e6b4a2af412df36f',1,'RADIO_STATS']]],
+  ['packages_5freceived_3',['packages_received',['../struct_r_a_d_i_o___s_t_a_t_s.html#a1e13439835c64ddc12d4650da2b1bafa',1,'RADIO_STATS']]],
+  ['parse_5ffunctions_4',['parse_functions',['../group__task___c_l_i.html#gac139e23e80fcc8769512f7a203fc2706',1,'parse_functions:&#160;task_CLI.c'],['../group__task___c_l_i.html#gac139e23e80fcc8769512f7a203fc2706',1,'parse_functions:&#160;task_CLI.c']]],
+  ['payload_5',['payload',['../struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html#a8abf99bc82dcee6b727b90503e05a989',1,'TASK_CLI_COMMAND']]],
+  ['payloadlength_6',['payloadLength',['../structradio__t.html#ad194edcb840a646bc1d0dfd887f623f9',1,'radio_t']]],
+  ['ptr_7',['ptr',['../main_8cpp.html#a2b3501294b0eee0578affe01ffd7d783',1,'main.cpp']]]
 ];

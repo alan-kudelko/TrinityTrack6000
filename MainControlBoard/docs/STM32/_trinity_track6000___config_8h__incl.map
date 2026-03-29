@@ -1,5 +1,5 @@
-<map id="Include/TrinityTrack6000_Config.h" name="Include/TrinityTrack6000_Config.h">
-<area shape="rect" id="Node000001" title="Configuration header for TrinityTrack6000 project." alt="" coords="67,5,232,48"/>
+<map id="Platform/Board/TrinityTrack6000_Config.h" name="Platform/Board/TrinityTrack6000_Config.h">
+<area shape="rect" id="Node000001" title="Configuration header for TrinityTrack6000 project." alt="" coords="45,5,254,48"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,96,126,123"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,51,92,87,88,83,126,47"/>
 <area shape="rect" id="Node000003" href="$_trinity_track6000___errors_8h.html" title="Error codes definitions for TrinityTrack6000 project. This module defines error codes used throughout..." alt="" coords="149,96,320,123"/>

@@ -96,6 +96,12 @@
   <nodes xsi:type="ApplicationModel:PeripheralNode">
     <resource xsi:type="ResourceModel:Peripheral" href="HW_RESOURCES/USIC0/USIC0_0.dd#/"/>
   </nodes>
+  <nodes xsi:type="ApplicationModel:PortNode">
+    <resource xsi:type="ResourceModel:Port" href="HW_RESOURCES/Port14/Port14_14.dd#/"/>
+  </nodes>
+  <nodes xsi:type="ApplicationModel:PortNode">
+    <resource xsi:type="ResourceModel:Port" href="HW_RESOURCES/Port3/Port3_3.dd#/"/>
+  </nodes>
   <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_0.app#/"/>
   </nodes>
@@ -111,9 +117,6 @@
   <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_4.app#/"/>
   </nodes>
-  <nodes xsi:type="ApplicationModel:PortNode">
-    <resource xsi:type="ResourceModel:Port" href="HW_RESOURCES/Port14/Port14_14.dd#/"/>
-  </nodes>
   <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_5.app#/"/>
   </nodes>
@@ -123,8 +126,8 @@
   <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_7.app#/"/>
   </nodes>
-  <nodes xsi:type="ApplicationModel:PortNode">
-    <resource xsi:type="ResourceModel:Port" href="HW_RESOURCES/Port3/Port3_3.dd#/"/>
+  <nodes xsi:type="ApplicationModel:AppNode">
+    <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#/"/>
   </nodes>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.0" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.0"/>
@@ -278,6 +281,8 @@
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.19"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.20"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.21"/>
+  <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_3.app#//@connections.6"/>
+  <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@connections.6"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_0.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_0.app#//@connections.1"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_1.app#//@connections.0"/>
@@ -294,4 +299,6 @@
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_6.app#//@connections.1"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_7.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_7.app#//@connections.1"/>
+  <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#//@connections.0"/>
+  <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#//@connections.1"/>
 </ApplicationModel:ApplicationData>

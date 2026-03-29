@@ -9,6 +9,8 @@
 
 
 #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
+#include "xmc_gpio.h"
+#include "xmc_device.h"
 
 /**
 
@@ -38,8 +40,20 @@ int main(void)
   }
 
   /* Placeholder for user application code. The while loop below can be replaced with user application code. */
+  XMC_GPIO_SetMode(XMC_GPIO_PORT1,9,XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+  XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT1, 9);
+
   while(1U)
   {
+      for (volatile uint32_t i = 0; i < 1000000; ++i){
 
+      }
+      XMC_GPIO_SetOutputLow(XMC_GPIO_PORT1,9);
+       for (volatile uint32_t i = 0; i < 1000000; ++i){
+
+       }
+
+       	   XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT1,9);
   }
+
 }

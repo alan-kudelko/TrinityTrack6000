@@ -1,0 +1,13 @@
+<map id="Tasks/task_SystemDispatcher.h" name="Tasks/task_SystemDispatcher.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,217,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="12,80,79,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,34,69,70,65,67,98,31"/>
+<area shape="rect" id="Node000003" href="$system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="103,80,250,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,31,157,67,153,70,120,34"/>
+<area shape="rect" id="Node000004" href="$_radio___types_8h.html" title=" " alt="" coords="122,155,230,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,107,179,139,174,139,174,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="64,229,128,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="164,184,123,221,119,217,161,180"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="152,229,360,256"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="192,180,233,217,230,221,188,184"/>
+</map>
