@@ -760,7 +760,50 @@ An external watchdog is used to increase system reliability and ensure recovery 
 
 ![Watchdog](/MainControlBoard/Media/STWD100NYWY3F_Schematic.png)
 
-##### 7.X STM32G473RET6
+#### 7.5 FM25L16B-GTR FRAM
+
+The FM25L16B FRAM is used for non-volatile data storage.
+
+**Purpose:**
+- Storage of failure logs and diagnostic data
+- Telemetry data logging
+- Optional storage of GPS position and system state
+
+**Communication:**
+- SPI interface (connected to STM32)
+- Series resistor on MISO line for signal integrity
+
+**Configuration:**
+- HOLD and Write Protection (WP) signals are not used
+- Device operates in standard SPI mode
+
+**Power:**
+- Powered from +3.3V
+- Local decoupling capacitor for stable operation
+
+**Notes:**
+- FRAM allows fast, low-latency writes without wear limitations typical for Flash memory
+
+![Watchdog](/MainControlBoard/Media/FM25L16B_Schematic.png)
+
+#### 7.6 ADXL-345 Accelerometer
+
+The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
+
+**Purpose:**
+- Measurement of acceleration in three axes
+- Determination of vehicle orientation in space
+
+**Communication:**
+- I2C interface (connected to STM32)
+
+**Notes:**
+- Used for motion analysis, tilt detection and dynamic behavior monitoring
+- Interrupt pins (INT1, INT2) are not used in this design
+
+![Watchdog](/MainControlBoard/Media/ADXL345_Schematic.png)
+
+#### 7.X STM32G473RET6
 
 The STM32G473RET6 serves as the main system controller.
 
@@ -787,7 +830,7 @@ The STM32G473RET6 serves as the main system controller.
 
 ![STM32G473RET6](/MainControlBoard/Media/STM32G473RET6_Schematic.png)
 
-##### 7.X XMC4200
+#### 7.X XMC4200
 
 The XMC4200 is used as a dedicated real-time hardware control MCU.
 
