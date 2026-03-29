@@ -948,7 +948,7 @@ This connector acts as the primary hardware abstraction boundary between:
 
 ![HardwareControlConnector](/MainControlBoard/Media/HardwareControlConnector.png)
 
-![Samtec ETMM Series](/MainControlBoard/Media/samtec_etmm_series.png.png)
+![Samtec ETMM Series](/MainControlBoard/Media/samtec_etmm_series.png)
 
 #### 7.12 PCB Stack SPI Interface
 
