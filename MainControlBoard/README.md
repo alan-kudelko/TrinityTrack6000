@@ -1002,4 +1002,60 @@ This interface enables a **modular stacked architecture**, allowing the system t
 
 ### 8. 🧩 PCB
 
+The PCB is designed as a **multi-layer mixed-signal board**, integrating digital control, RF communication, and power distribution in a compact form factor.
+
+**General characteristics:**
+- 4-layer stackup (signal / GND / power (3.3V) / signal)
+- Continuous ground plane for signal integrity and RF performance
+- Separation of functional blocks (RF, MCU, power, sensors)
+
+**Design approach:**
+- Modular architecture:
+  - Main Control Board
+  - Hardware Control Board (external)
+  - Stackable expansion boards (SPI stack interface)
+
+- Signal routing optimized for:
+  - Short critical paths (SPI, RF, clock)
+  - Minimal via usage where possible
+  - Clean return paths via GND plane
+
+**RF considerations:**
+- Controlled impedance traces (50Ω where required)
+- Matching networks implemented with tuning capability (PI topology)
+- Provision for external antenna via coaxial connector
+
+**Power integrity:**
+- Local decoupling for all ICs (100nF + bulk capacitors)
+- Separate analog/digital domains where applicable
+- Power switching for RF module (NRF24L01+)
+
+**Debug & testability:**
+- Dedicated debug connectors (modified Cortex-M 10-pin)
+- Test points for critical signals (SPI, UART)
+- Solder jumpers (SJx) for configuration and isolation
+
+**Assembly & prototyping:**
+- Standard SMD packages (0402/0603 where applicable)
+- Design allows partial population (RF tuning, optional features)
+- Silkscreen optimized for readability and debugging
+
+The PCB is designed with a focus on **reliability, modularity, and ease of debugging**, making it suitable for both prototyping and further system expansion.
+
+#### 8.1 PCB Preview
+
+Top layer view:
+![PCB Top](/MainControlBoard/Media/PCB_Top.png)
+
+Bottom layer view:
+![PCB Bottom](/MainControlBoard/Media/PCB_Bottom.png)
+
+> *Images will be updated after final routing and manufacturing.*
+
+#### 8.2 Assembly notes
+
+
+
+#### 8.3 BOM (Bill of Materials)
+
 
