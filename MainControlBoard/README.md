@@ -712,6 +712,10 @@ According to the datasheets, the **maximum heater power** should not exceed **95
 
 ![MQ-X Sensors](/MainControlBoard/Media/MQ_X_Sensors_Schematic.png)
 
+#### 7.3 NRF24L01P 2.4GHz Transceiver
+
+![NRF24L01P](/MainControlBoard/Media/NRF24L01P_Schematic.png)
+
 
 ---
 
