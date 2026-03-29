@@ -387,7 +387,7 @@ Colors and hardware related to them are described below:
 
 ### 4. Control board logic diagram
 
-![Control board logic diagram](/Media/Systems_Architecture.drawio.png)
+![Control board logic diagram](/Media/PCB_Architecture.png)
 
 ---
 
@@ -1052,9 +1052,36 @@ Bottom layer view:
 
 > *Images will be updated after final routing and manufacturing.*
 
-#### 8.2 Assembly notes
+#### 8.2 Assembly Notes
 
+**Solder jumpers (SJ1–SJ28):**
+- Located on the bottom side of the PCB
+- Allow insertion of series resistors or direct short (0Ω)
+- Provide flexibility for signal tuning, isolation and debugging
 
+**Pull-up resistors (I2C and related):**
+- R4, R5, R21, R22 default value: **2.2kΩ**
+- If signal lines are short, values up to **4.7kΩ or higher** can be used
+
+**SPI series resistors:**
+- R15, R16, R17, R18, R19, R28, R29, R30, R31
+- Default value: **22Ω**
+- May be adjusted depending on signal integrity requirements
+
+**GPS section (RF tuning and optional components):**
+- C32, C34: not populated (DNP)
+  - Footprints provided for RF matching/tuning if required
+- R49, R50: not populated (DNP)
+  - Added as optional protection / stabilization (e.g. floating pins)
+
+**SWD / debug series resistors:**
+- R10, R32, R39, R40
+- Default value: **10Ω**
+- May be adjusted depending on signal integrity and cable length
+
+**General notes:**
+- Several components are intentionally left as DNP to allow flexibility during bring-up
+- Final values may be adjusted after testing and signal validation
 
 #### 8.3 BOM (Bill of Materials)
 
