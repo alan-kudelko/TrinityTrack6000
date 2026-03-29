@@ -734,6 +734,31 @@ The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM
 
 ![NRF24L01P](/MainControlBoard/Media/NRF24L01P_Schematic.png)
 
+#### 7.3 L76L-M33 GPS
+
+#### 7.4 STWD100NYWY3F external watchdog timer
+
+An external watchdog is used to increase system reliability and ensure recovery from unexpected failures.
+
+**Purpose:**
+- Automatic reset of the STM32 in case of:
+  - Software faults (e.g. deadlock, missed tasks)
+  - Hardware-related issues causing system freeze
+
+**Control and flexibility:**
+- Watchdog is periodically fed by the MCU (WATCHDOG_FEED signal)
+- Dedicated enable line (WATCHDOG_EN) allows firmware control over watchdog activation
+- Hardware jumper allows manual disconnection of the watchdog
+
+**Design approach:**
+- Dual control mechanism (MCU enable + jumper) provides redundancy and flexibility during development and debugging
+- Ensures safe bring-up and easy fault isolation
+
+**Notes:**
+- Watchdog output is connected to the system reset line
+- Series resistor used to isolate reset sources and prevent contention
+
+![Watchdog](/MainControlBoard/Media/STWD100NYWY3F_Schematic.png)
 
 ##### 7.X STM32G473RET6
 
