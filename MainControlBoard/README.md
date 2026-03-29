@@ -735,6 +735,33 @@ The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM
 ![NRF24L01P](/MainControlBoard/Media/NRF24L01P_Schematic.png)
 
 
+##### 7.X STM32G473RET6
+
+The STM32G473RET6 serves as the main system controller.
+
+**Responsibilities:**
+- System supervision and overall control
+- Communication with external devices (SPI, UART, I2C)
+- Telemetry handling and data exchange
+- Radio communication via NRF24L01+
+- Delegating real-time motor and servo control to XMC4200
+
+**Peripherals and interfaces:**
+- I2C2: communication with ADXL345 accelerometer and external I2C devices
+- Multiple SPI interfaces for RF and external modules
+- UART interfaces for GPS and debugging
+
+**Additional functions:**
+- Data acquisition from MQ-6 and MQ-7 gas sensors and other devices
+- Control of a diagnostic buzzer
+
+**Design notes:**
+- NRST line supports multiple reset sources (button, watchdog, programmer)
+- BOOT0 is configured as GPIO (USART3) and pulled low to ensure boot from Flash
+- Pins marked as NC_x are reserved for future use and design flexibility
+
+![STM32G473RET6](/MainControlBoard/Media/STM32G473RET6_Schematic.png)
+
 ---
 
 ### 8. 🧩 PCB
