@@ -714,6 +714,24 @@ According to the datasheets, the **maximum heater power** should not exceed **95
 
 #### 7.3 NRF24L01P 2.4GHz Transceiver
 
+The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM32G473RET6 via the SPI1 bus.
+
+**Key features:**
+- SPI communication (SPI1) with STM32G473RET6
+- Dedicated IRQ line (active LOW) for event signaling
+- Hardware-controlled power cycling via P-MOSFET (high-side switch)
+- External antenna connection via SMA connector
+
+**RF design:**
+- Differential RF outputs (ANT1/ANT2) matched to single-ended 50Ω
+- Matching network based on reference design (L/C topology)
+- Matching components may require tuning depending on PCB stackup and antenna
+
+**Power design:**
+- NRF_VC is a switched 3.3V rail used to fully power-cycle the transceiver
+- Local decoupling capacitors (100nF + 4.7µF) placed close to the device
+- Dedicated filtering for VDD_PA to improve RF stability
+
 ![NRF24L01P](/MainControlBoard/Media/NRF24L01P_Schematic.png)
 
 
