@@ -903,6 +903,101 @@ For reference, the official Cortex-M 10-pin debug connector pinout is shown belo
 
 ![CORTEX-M-DEBUG_CONN](/MainControlBoard/Media/cortex_debug10pin.png)
 
+#### 7.11 Hardware Control Connector
+
+This connector provides the interface between the Main Control Board and the external **HardwareControlBoard**.
+
+The connection is implemented using a high-density board-to-board / cable interface:
+- Connector: **ETMM-122-02-F-D-TH (Samtec)**
+- Mating connection: multi-wire ribbon cable (Samtec compatible)
+
+> *(Exact mating cable/connector depends on final harness selection – placeholder used for now.)*
+
+**Signal groups:**
+- **Control signals:**
+  - `FIRE_GUN`, `ARM_GUN`, `KILL_SWITCH`
+- **Timer outputs (motor/servo control):**
+  - `CCU80_OUT_x`
+  - `CCU40_IO_x`
+  - `CCU41_IO_x`
+- **Digital I/O:**
+  - `DIGITAL_IO_x`
+- **Communication buses:**
+  - `I2C (SCL, SDA)`
+  - `USIC I2C (U1C0)`
+- **Reserved / future use:**
+  - `NC_x` lines (design expansion)
+
+**Configuration flexibility:**
+Most signals are routed through **solder jumpers (SJx)**:
+- Allow signal rerouting / isolation
+- Enable quick reconfiguration during bring-up and testing
+- Provide hardware-level debugging options
+
+**Grounding:**
+Multiple **GND pins** are distributed across the connector to:
+- Provide solid reference for all signals
+- Reduce noise and improve signal integrity
+- Support higher current return paths (especially for motor control signals)
+
+---
+
+This connector acts as the primary hardware abstraction boundary between:
+- High-level control logic (Main Control Board)
+- Low-level actuation and power electronics (HardwareControlBoard)
+
+![HardwareControlConnector](/MainControlBoard/Media/HardwareControlConnector.png)
+
+![Samtec ETMM Series](/MainControlBoard/Media/samtec_etmm_series.png.png)
+
+#### 7.12 PCB Stack SPI Interface
+
+This connector provides the **inter-board communication interface** within the PCB stack.
+
+It is used to connect the Main Control Board with additional stacked modules (e.g. FPGA, RENESANS, or NXP self made PCB's).
+
+**Connector implementation:**
+- Connector type: **2x15, 2.54mm pitch**
+- Stack connection: **Samtec ESQ series (stacking headers)**
+- Designed for vertical PCB stacking
+
+
+**Signal groups:**
+
+- **SPI bus (shared):**
+  - `SPI3_MOSI`
+  - `SPI3_MISO`
+  - `SPI3_SCK`
+
+- **Chip Select lines:**
+  - `FPGA_CS`
+  - `NXP_CS`
+  - `RENESANS_CS`
+
+- **Control / status signals:**
+  - `FPGA_RDY`, `FPGA_RST`
+  - `NXP_RDY`, `NXP_RST`
+  - `RENESANS_RDY`, `RENESANS_RST`
+
+- **Reserved lines:**
+  - `NC_x` for future expansion
+
+**Power distribution:**
+- `+5V` routed through the connector for stacked modules
+- Multiple **GND pins** distributed across the connector to:
+  - Ensure signal integrity
+  - Provide low-impedance return paths
+  - Reduce crosstalk between SPI lines
+
+**Design notes:**
+- Ground pins are interleaved with signals to improve EMI performance
+- SPI bus is shared, with dedicated CS lines per device
+- Topology allows adding/removing stack modules without redesign
+
+This interface enables a **modular stacked architecture**, allowing the system to scale with additional processing or peripheral boards.
+
+![PCBStackSPI](/MainControlBoard/Media/PCB_Stack_SPI.png)
+
 ---
 
 ### 8. 🧩 PCB
