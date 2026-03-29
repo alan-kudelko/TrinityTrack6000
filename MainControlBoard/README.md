@@ -769,7 +769,7 @@ The FM25L16B FRAM is used for non-volatile data storage.
 **Notes:**
 - FRAM allows fast, low-latency writes without wear limitations typical for Flash memory
 
-![Watchdog](/MainControlBoard/Media/FM25L16B_Schematic.png)
+![FM25L16B](/MainControlBoard/Media/FM25L16B_Schematic.png)
 
 #### 7.6 ADXL-345 Accelerometer
 
@@ -786,7 +786,7 @@ The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
 - Used for motion analysis, tilt detection and dynamic behavior monitoring
 - Interrupt pins (INT1, INT2) are not used in this design
 
-![Watchdog](/MainControlBoard/Media/ADXL345_Schematic.png)
+![ADXL345](/MainControlBoard/Media/ADXL345_Schematic.png)
 
 #### 7.7 Buzzer
 
@@ -872,6 +872,36 @@ The XMC4200 is used as a dedicated real-time hardware control MCU.
 - Improves system stability and timing predictability
 
 ![XMC4200](/MainControlBoard/Media/XMC4200_Schematic.png)
+
+#### 7.10 Programming and Debug Interfaces
+
+The board provides programming and debugging interfaces for both MCUs using modified 10-pin Cortex-M debug connectors (2x5, 2.54 mm).
+
+**STM32 (J2):**
+- SWD interface (SWDIO, SWCLK)
+- USART3 available for debugging and communication
+- Dedicated reset line (STM32_RST)
+
+**XMC4200 (J1):**
+- JTAG interface (TMS, TCK)
+- UART (USIC0_CH0) for diagnostics
+- External reset line (INFINEON_RST)
+
+**Connector pinout:**
+- Based on standard Cortex-M 10-pin debug connector
+- Pins KEY, GNDDetect, NC/TDI and SWO/TDO are not used in standard form
+- SWO/TDO replaced with UART TX
+- NC/TDI replaced with UART RX
+
+**Design notes:**
+- Combined debug and UART access in a single connector
+- +3.3V and GND provided for debugger reference
+
+![Debug](/MainControlBoard/Media/Debug_Schematic.png)
+
+For reference, the official Cortex-M 10-pin debug connector pinout is shown below:
+
+![CORTEX-M-DEBUG_CONN](/MainControlBoard/Media/cortex_debug10pin.png)
 
 ---
 
