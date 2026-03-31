@@ -1,4 +1,4 @@
-# **ControlBoard** – **STM32 + Infineon**  
+<img width="2540" height="106" alt="image" src="https://github.com/user-attachments/assets/937ddd33-978d-4f03-a2aa-57c9735144ac" /><img width="2540" height="106" alt="image" src="https://github.com/user-attachments/assets/dde08bce-e078-4780-8b01-cbd9d3d38cf6" /># **ControlBoard** – **STM32 + Infineon**  
 
 **STM32**: Main logic and system coordination, communication via radio and Bluetooth
 **Infineon**: Motor and servo control, current and temperature monitoring
@@ -1085,4 +1085,14 @@ Bottom layer view:
 
 #### 8.3 BOM (Bill of Materials)
 
+| Designator | Value | Tolerance | Footprint | Quantity | Mouser No | Notes |
+|------------|-------|-----------|------------|----------|------------|--------|
+| SJ1–SJ28 | 0Ω (configurable) | 5% | R0603 | 28 | - | Jumpers on bottom layer for external signals; allows optional series resistors for tuning or direct short (0Ω) |
+| C5, C6, C7, C23, C29 | 100nF | 5% | C0603 | 5 | - | Decoupling capacitors placed close to STM32G473RET6 VDD pins |
+| C8 | 4.7µF | 5% | C0603 | 1 | - | Bulk capacitor for STM32G473RET6 VDD supply |
+| C11, C22 | 1µF | 5% | C0603 | 2 | - | Bulk capacitors for STM32G473RET6 analog supply (VREF+, VDDA) |
+| C21 | 10nF | 5% | C0603 | 1 | - | Filtering capacitor for STM32G473RET6 VDDA |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
 
