@@ -1098,9 +1098,7 @@ Bottom layer view:
 | | | | | | | |
 | **U3** | XMC4200F64K256BAXQSA1 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-TL-EP5.7 | 1 | 726-XMC4200F64K256BA | Motor control MCU (PWM/CCU, encoder interfaces, SPI slave) |
 | | | | | | | |
-
 | | | | | | | |
-
 | | | | | | | |
 | **U6** | TLV76133DCYR | - | SOT-223-4_L6.5-W3.5-P2.30-LS7.0-TR | 1 | 595-TLV76133DCYR | 3.3V LDO regulator (main PCB power supply) |
 | | | | | | | |
@@ -1111,5 +1109,4 @@ Bottom layer view:
 | R2 | 10k | 5% | R0603 | 1 | - | FRAM CS pull-up resistor |
 | R15 | 22Ω | 5% | R0603 | 1 | - | FRAM SPI1 MOSI series resistor |
 | | | | | | | |
-
 | | | | | | | |
