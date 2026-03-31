@@ -1,4 +1,4 @@
-<img width="2540" height="106" alt="image" src="https://github.com/user-attachments/assets/937ddd33-978d-4f03-a2aa-57c9735144ac" /><img width="2540" height="106" alt="image" src="https://github.com/user-attachments/assets/dde08bce-e078-4780-8b01-cbd9d3d38cf6" /># **ControlBoard** – **STM32 + Infineon**  
+# **ControlBoard** – **STM32 + Infineon**  
 
 **STM32**: Main logic and system coordination, communication via radio and Bluetooth
 **Infineon**: Motor and servo control, current and temperature monitoring
