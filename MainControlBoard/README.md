@@ -1087,7 +1087,6 @@ Bottom layer view:
 
 | Designator | Value | Tolerance | Footprint | Quantity | Mouser No | Notes |
 |------------|-------|-----------|------------|----------|------------|--------|
-| SJ1–SJ28 | 0Ω (configurable) | 5% | R0603 | 28 | - | Jumpers on bottom layer for external signals; allows optional series resistors for tuning or direct short (0Ω) |
 | **U1** | STM32G473RET6 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-BL | 1 | 511-STM32G473RET6 | Main MCU |
 | C5, C6, C7, C23, C29 | 100nF | 5% | C0603 | 5 | - | Decoupling capacitors placed close to STM32G473RET6 VDD pins |
 | C8 | 4.7µF | 5% | C0603 | 1 | - | Bulk capacitor for STM32G473RET6 VDD supply |
@@ -1095,6 +1094,17 @@ Bottom layer view:
 | C21 | 10nF | 5% | C0603 | 1 | - | Filtering capacitor for STM32G473RET6 VDDA |
 | | | | | | | |
 | **U2** | L76L-M33 | - | COMM-SMD_18P-L10.1-W9.7-P1.1-TL_L76-LB | 1 | 277-L76L-M33 | Onboard GNSS (GPS) module |
+| C32, C34 | 1.5pF | 1% | C0402 | 2 | - | RF matching network (PI network) |
+| C35 | 4.7µF | 5% | C0603 | 1 | - | VCC bulk capacitor |
+| C36 | 100nF | 5% | C0603 | 1 | - | VCC decoupling capacitor |
+| R46 | 0Ω    | 1% | R0603 | 1 | - | RF matching network (PI network) |
+| R34 | 2.2kΩ | 5% | R0603 | 1 | - | UART RX series resistor |
+| R33 | 1kΩ | 5% | R0603 | 1 | - | UART TX series resistor |
+| R48 | 100Ω | 5% | R0603 | 1 | - | PPS signal series resistor |
+| R49, R50 | 47kΩ | 5% | R0603 | 2 | - | I2C pull-up resistors (not populated by default) |
+| R51 | 10k | 5% | R0603 | 1 | - | UART RX pull-up resistor |
+| D1 | SP0402B-ULC-01ETG | - | DFN-2L_L1.0-W0.6-P0.65-BI | 1 | 576-SP0402BULC-01ETG | RF ESD protection diode |
+| RF2 | SMA-J-P-H-RA-TH1 | - | ANT-TH_SMA-J-P-H-RA-TH1 | 1 | - | External antenna connector (SMA) |
 | | | | | | | |
 | **U3** | XMC4200F64K256BAXQSA1 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-TL-EP5.7 | 1 | 726-XMC4200F64K256BA | Motor control MCU (PWM/CCU, encoder interfaces, SPI slave) |
 | | | | | | | |
@@ -1103,14 +1113,31 @@ Bottom layer view:
 | | | | | | | |
 | **U6** | TLV76133DCYR | - | SOT-223-4_L6.5-W3.5-P2.30-LS7.0-TR | 1 | 595-TLV76133DCYR | 3.3V LDO regulator (main PCB power supply) |
 | | | | | | | |
-| **U7** | nRF24L01P-R | - | QFN-20_L4.0-W4.0-P0.50-BL-EP | 1 | 949-NRF24L01P-T | 2.4 GHz RF transceiver module |
-| L1 | 8.2nH | 1% | L0402 | 1 | - | RF matching network (nRF24L01+) |
-| L2 | 2.7nH | 1% | L0402 | 1 | - | RF matching network (nRF24L01+) |
-| L3 | 3.9nH | 1% | L0402 | 1 | - | RF matching network (nRF24L01+) |
+| **U7** | nRF24L01P-R | - | QFN-20_L4.0-W4.0-P0.50-BL-EP | 1 | 949-NRF24L01P-T | 2.4 GHz RF transceiver |
+| L1 | 8.2nH | 1% | L0402 | 1 | - | RF matching network |
+| L2 | 2.7nH | 1% | L0402 | 1 | - | RF matching network |
+| L3 | 3.9nH | 1% | L0402 | 1 | - | RF matching network |
+| C10 | 100nF | 5% | C0603 | 1 | - | VDD decoupling |
+| C19, C20 | 22pF | 5% | C0603 | 2 | - | Crystal load capacitors |
+| C24 | 1.5pF | 1% | C0402 | 1 | - | RF matching network |
+| C25 | 1.0pF | 1% | C0402 | 1 | - | RF matching network |
+| C26 | 2.2nF | 1% | C0402 | 1 | - | RF matching network |
+| C27 | 4.7pF | 1% | C0402 | 1 | - | RF matching network |
+| C28 | 33nF | 5% | C0603 | 1 | - | DVDD filtering |
+| C30 | 4.7µF | 5% | C0603 | 1 | - | VDD bulk capacitor |
+| R27 | 1MΩ | 5% | R1206 | 1 | - | Crystal bias resistor |
+| R25, R26, R37 | 10kΩ | 5% | R0603 | 3 | - | Pull-up resistors |
+| R24 | 22kΩ | 5% | R0603 | 1 | - | IREF resistor |
+| R16 | 22Ω | 5% | R0603 | 1 | - | SPI MISO series resistor |
+| R38 | 100Ω | 5% | R0603 | 1 | - | P-MOSFET gate resistor |
+| X1 | 16MHz | - | CRYSTAL-TH_L10.8-W4.5-P4.88 | 1 | - | RF reference crystal |
+| Q3 | SI2365EDS-T1-GE3 | - | SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR | 1 | SI2365EDS-T1-GE3 | P-channel MOSFET for RF power control |
+| RF1 | SMA-J-P-H-RA-TH1 | - | ANT-TH_SMA-J-P-H-RA-TH1 | 1 | - | External antenna connector (SMA) |
 | | | | | | | |
 | **U8** | FM25L16B-GTR | - | SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | 877-FM25L16B-GTR | SPI FRAM memory for data logging (telemetry, events, GPS position) |
 | C4 | 100nF | 5% | C0603 | 1 | - | FRAM decoupling capacitor |
-| R2 | 10k | 5% | R0603 | 1 | - | FRAM CS pull-up resistor |
+| R2 | 10kΩ | 5% | R0603 | 1 | - | FRAM CS pull-up resistor |
 | R15 | 22Ω | 5% | R0603 | 1 | - | FRAM SPI1 MOSI series resistor |
 | | | | | | | |
 | | | | | | | |
+| SJ1–SJ28 | 0Ω (configurable) | 5% | R0603 | 28 | - | Jumpers on bottom layer for external signals; allows optional series resistors for tuning or direct short (0Ω) |
