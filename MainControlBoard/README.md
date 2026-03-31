@@ -1099,10 +1099,14 @@ Bottom layer view:
 | **U3** | XMC4200F64K256BAXQSA1 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-TL-EP5.7 | 1 | 726-XMC4200F64K256BA | Motor control MCU (PWM/CCU, encoder interfaces, SPI slave) |
 | | | | | | | |
 | | | | | | | |
+| Q1 | IRF7380TRPBF-VB | - | SOP-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | 726-IRF7380TRPBFXTMA | N-channel MOSFET for MQ sensor heater control |
 | | | | | | | |
 | **U6** | TLV76133DCYR | - | SOT-223-4_L6.5-W3.5-P2.30-LS7.0-TR | 1 | 595-TLV76133DCYR | 3.3V LDO regulator (main PCB power supply) |
 | | | | | | | |
 | **U7** | nRF24L01P-R | - | QFN-20_L4.0-W4.0-P0.50-BL-EP | 1 | 949-NRF24L01P-T | 2.4 GHz RF transceiver module |
+| L1 | 8.2nH | 1% | L0402 | 1 | - | RF matching network (nRF24L01+) |
+| L2 | 2.7nH | 1% | L0402 | 1 | - | RF matching network (nRF24L01+) |
+| L3 | 3.9nH | 1% | L0402 | 1 | - | RF matching network (nRF24L01+) |
 | | | | | | | |
 | **U8** | FM25L16B-GTR | - | SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | 877-FM25L16B-GTR | SPI FRAM memory for data logging (telemetry, events, GPS position) |
 | C4 | 100nF | 5% | C0603 | 1 | - | FRAM decoupling capacitor |
