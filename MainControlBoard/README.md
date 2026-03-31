@@ -147,6 +147,8 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
      - [5.8.1 ThreadX Tasks Diagnostics](#581-threadx-tasks-diagnostics)
      - [5.8.2 RAM Usage Diagnostics](#582-ram-usage-diagnostics)
 6. [Infineon](#6-infineon)
+7. [Electrical Schematic](#7--electrical-schematic)
+8. [PCB](#8--pcb)
 ---
 
 ## ⚙️ Technical Overview 
