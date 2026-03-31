@@ -22,6 +22,7 @@ SUBDIRS := \
 Dave/Generated/CLOCK_XMC4 \
 Dave/Generated/CPU_CTRL_XMC4 \
 Dave/Generated \
+Dave/Generated/DIGITAL_IO \
 Dave/Generated/GLOBAL_CCU4 \
 Dave/Generated/GLOBAL_CCU8 \
 Dave/Generated/I2C_MASTER \

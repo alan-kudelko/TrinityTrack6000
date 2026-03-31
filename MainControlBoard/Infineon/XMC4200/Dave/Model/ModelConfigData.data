@@ -88,9 +88,6 @@
     <resource xsi:type="ResourceModel:Peripheral" href="HW_RESOURCES/CPU/CPU_0.dd#/"/>
   </nodes>
   <nodes xsi:type="ApplicationModel:AppNode">
-    <resource xsi:type="ResourceModel:App" href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#/"/>
-  </nodes>
-  <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/UART/v4_1_14/UART_0.app#/"/>
   </nodes>
   <nodes xsi:type="ApplicationModel:PeripheralNode">
@@ -129,6 +126,9 @@
   <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#/"/>
   </nodes>
+  <nodes xsi:type="ApplicationModel:AppNode">
+    <resource xsi:type="ResourceModel:App" href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#/"/>
+  </nodes>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.0" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.0"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.5" target="//@nodes.0"/>
@@ -146,9 +146,8 @@
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.23" target="//@nodes.19"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.25" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.25" target="//@nodes.24"/>
+  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.29" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.29" target="//@nodes.24"/>
-  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.30" target="//@nodes.1"/>
-  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.30" target="//@nodes.24"/>
   <hwConnections href="APPS/GLOBAL_CCU8/v4_1_14/GLOBAL_CCU8_0.app#//@connections.0"/>
   <hwConnections href="APPS/CLOCK_XMC4/v4_0_24/CLOCK_XMC4_0.app#//@connections.0"/>
   <hwConnections href="APPS/CLOCK_XMC4/v4_0_24/CLOCK_XMC4_0.app#//@connections.5"/>
@@ -253,25 +252,6 @@
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.19"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.20"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.21"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.1"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.2"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.7"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.8"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.12"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.13"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.14"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.23"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.24"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.25"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.26"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.27"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.28"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.29"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.30"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.31"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.32"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.33"/>
-  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.34"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.0"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.1"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.7"/>
@@ -301,4 +281,20 @@
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_7.app#//@connections.1"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#//@connections.1"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.1"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.2"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.7"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.8"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.23"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.24"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.25"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.26"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.27"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.28"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.29"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.30"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.31"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.32"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.33"/>
+  <hwConnections href="APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@connections.34"/>
 </ApplicationModel:ApplicationData>

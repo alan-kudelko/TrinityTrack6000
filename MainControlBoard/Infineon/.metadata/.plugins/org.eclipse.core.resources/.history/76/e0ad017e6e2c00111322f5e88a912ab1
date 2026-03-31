@@ -1,0 +1,44 @@
+/*
+ * main.c
+ *
+ *  Created on: 2025 Oct 25 13:00:04
+ *  Author: kujon
+ */
+
+
+
+
+#include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
+#include "xmc_gpio.h"
+#include "xmc_device.h"
+#include "xmc_spi.h"
+
+/**
+
+ * @brief main() - Application entry point
+ *
+ * <b>Details of function</b><br>
+ * This routine is the application entry point. It is invoked by the device startup code. It is responsible for
+ * invoking the APP initialization dispatcher routine - DAVE_Init() and hosting the place-holder for user application
+ * code.
+ */
+
+uint8_t tx_data = 0x55;
+uint8_t rx_data = 0x00;
+
+int main(void){
+    DAVE_Init();
+
+
+    XMC_GPIO_SetMode(XMC_GPIO_PORT0,3,XMC_GPIO_MODE_INPUT_TRISTATE);
+
+    while (1){
+    	SPI_SLAVE_Transmit(&SPI_SLAVE_0,&tx_data,1);
+
+    	while(!XMC_GPIO_GetInput(XMC_GPIO_PORT0,3)){
+
+    	}
+
+    	SPI_SLAVE_Receive(&SPI_SLAVE_0,&rx_data, 1);
+    }
+}

@@ -69,7 +69,7 @@ const DIGITAL_IO_t DIGITAL_IO_0 =
 const DIGITAL_IO_t DIGITAL_IO_1 =
 {
   .gpio_port = XMC_GPIO_PORT2,
-  .gpio_pin = 1U,
+  .gpio_pin = 7U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
     .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
@@ -80,8 +80,8 @@ const DIGITAL_IO_t DIGITAL_IO_1 =
 		
 const DIGITAL_IO_t DIGITAL_IO_2 =
 {
-  .gpio_port = XMC_GPIO_PORT1,
-  .gpio_pin = 7U,
+  .gpio_port = XMC_GPIO_PORT2,
+  .gpio_pin = 0U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
     .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
@@ -92,8 +92,8 @@ const DIGITAL_IO_t DIGITAL_IO_2 =
 		
 const DIGITAL_IO_t DIGITAL_IO_3 =
 {
-  .gpio_port = XMC_GPIO_PORT1,
-  .gpio_pin = 15U,
+  .gpio_port = XMC_GPIO_PORT2,
+  .gpio_pin = 1U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
     .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
@@ -128,8 +128,8 @@ const DIGITAL_IO_t DIGITAL_IO_5 =
 		
 const DIGITAL_IO_t DIGITAL_IO_6 =
 {
-  .gpio_port = XMC_GPIO_PORT2,
-  .gpio_pin = 0U,
+  .gpio_port = XMC_GPIO_PORT0,
+  .gpio_pin = 7U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
     .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
@@ -140,10 +140,22 @@ const DIGITAL_IO_t DIGITAL_IO_6 =
 		
 const DIGITAL_IO_t DIGITAL_IO_7 =
 {
+  .gpio_port = XMC_GPIO_PORT0,
+  .gpio_pin = 2U,
+  .gpio_config = {
+    .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
+    .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
+
+  },
+  .hwctrl = XMC_GPIO_HWCTRL_DISABLED
+};
+		
+const DIGITAL_IO_t DIGITAL_IO_8 =
+{
   .gpio_port = XMC_GPIO_PORT3,
   .gpio_pin = 0U,
   .gpio_config = {
-    .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
+    .mode = XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN,
     .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
 
   },

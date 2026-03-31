@@ -47,13 +47,16 @@ Dave/Generated/DAVE.o Dave/Generated/DAVE.d Dave/Generated/DAVE.o: \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc4_usic_map.h \
  ../Dave/Generated/I2C_MASTER/i2c_master_conf.h \
  ../Dave/Generated/I2C_MASTER/i2c_master_extern.h \
+ ../Dave/Generated/UART/uart.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_uart.h \
+ ../Dave/Generated/UART/uart_conf.h ../Dave/Generated/UART/uart_extern.h \
+ ../Dave/Generated/DIGITAL_IO/digital_io.h \
+ ../Dave/Generated/DIGITAL_IO/digital_io_conf.h \
+ ../Dave/Generated/DIGITAL_IO/digital_io_extern.h \
  ../Dave/Generated/SPI_SLAVE/spi_slave.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h \
  ../Dave/Generated/SPI_SLAVE/spi_slave_conf.h \
- ../Dave/Generated/SPI_SLAVE/spi_slave_extern.h \
- ../Dave/Generated/UART/uart.h \
- D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_uart.h \
- ../Dave/Generated/UART/uart_conf.h ../Dave/Generated/UART/uart_extern.h
+ ../Dave/Generated/SPI_SLAVE/spi_slave_extern.h
 
 ../Dave/Generated/DAVE.h:
 
@@ -151,14 +154,6 @@ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/
 
 ../Dave/Generated/I2C_MASTER/i2c_master_extern.h:
 
-../Dave/Generated/SPI_SLAVE/spi_slave.h:
-
-D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h:
-
-../Dave/Generated/SPI_SLAVE/spi_slave_conf.h:
-
-../Dave/Generated/SPI_SLAVE/spi_slave_extern.h:
-
 ../Dave/Generated/UART/uart.h:
 
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_uart.h:
@@ -166,3 +161,17 @@ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/
 ../Dave/Generated/UART/uart_conf.h:
 
 ../Dave/Generated/UART/uart_extern.h:
+
+../Dave/Generated/DIGITAL_IO/digital_io.h:
+
+../Dave/Generated/DIGITAL_IO/digital_io_conf.h:
+
+../Dave/Generated/DIGITAL_IO/digital_io_extern.h:
+
+../Dave/Generated/SPI_SLAVE/spi_slave.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h:
+
+../Dave/Generated/SPI_SLAVE/spi_slave_conf.h:
+
+../Dave/Generated/SPI_SLAVE/spi_slave_extern.h:

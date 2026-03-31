@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="CLOCK" key="selection"/>
+		<item value="SPI_SLAVE_Transmit" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SPI_SLAVE_Transmit"/>
+			<item value="SPI_SLAVE_TransmitReceive"/>
+			<item value="transmit"/>
+			<item value="u1c1"/>
+			<item value="usic"/>
 			<item value="clock"/>
 		</list>
 		<list key="replacehistory">

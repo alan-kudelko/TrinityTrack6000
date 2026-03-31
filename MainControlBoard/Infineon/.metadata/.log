@@ -10722,3 +10722,2262 @@ org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection err
 
 !ENTRY SOLVER 1 0 2026-03-28 23:28:25.863
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2026-03-30 18:39:03.825 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_222
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2026-03-30 18:39:23.350
+!MESSAGE USER_ACTION : Default solver exe path is: D:\Programy\4.5.0.202105191637\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2026-03-30 18:39:23.462
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2026-03-30 18:39:23.463
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2026-03-30 18:39:23.802
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:39:26.878
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 1187 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:26.912
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 3 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:27.881
+!MESSAGE USER_ACTION : Active project:XMC4200[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2026-03-30 18:39:30.871
+!MESSAGE Time Taken By De-Serialization  : 1655 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 18:39:30.916
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:31.407
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 3526 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:31.441
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 31 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:31.473
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 32 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:31.475
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:33.946
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2470 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:34.920
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 8010 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 18:39:35.583
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-03-30 18:39:35.713
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-03-30 18:39:36.743
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-03-30 18:39:36.763
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-30 18:39:37.128
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/CE/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-03-30 18:39:37.129
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-30 18:39:37.445
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/ARM-GCC-Update/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-03-30 18:39:37.446
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-30 18:39:37.808
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/Solver_emWin_update/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-03-30 18:39:37.808
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-30 18:39:38.158
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/Debugger/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-03-30 18:39:38.158
+!MESSAGE General connection error with response code=202
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:20.875
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\XMC4.2.00.F64.ALL\device\xmc4200\0\MANIFEST\xmc4200.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:20.907
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\LQFP64.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:20.931
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\0\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:20.955
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:20.979
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\2\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:20.995
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\3\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.015
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\14\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.026
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\usb_port\0\MANIFEST\usb_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.045
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.0\port\hcu_port\0\MANIFEST\hcu_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.058
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\debug_port\0\MANIFEST\debug_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.075
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\reset_port\0\MANIFEST\reset_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.089
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\crystal_port\0\MANIFEST\crystal_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.105
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.0\port\rtc_port\0\MANIFEST\rtc_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.115
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\power_port\0\MANIFEST\power_port.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 18:40:21.135
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\analogpower_port\0\MANIFEST\analogpower_port.dd
+
+!ENTRY SOLVER 1 0 2026-03-30 18:40:24.031
+!MESSAGE USER_ACTION : Library store ECO file :D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\XMC4.2.00.F64.ALL\device\xmc4200\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2026-03-30 18:40:24.108
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2026-03-30 18:40:25.866
+!MESSAGE USER_ACTION : Loaded ECO file :D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+
+!ENTRY org.eclipse.core.expressions 4 201 2026-03-30 18:50:29.910
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:306)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:248)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:216)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:235)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:106)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:148)
+	at org.eclipse.cdt.ui.actions.OpenViewActionGroup.fillContextMenu(OpenViewActionGroup.java:229)
+	at org.eclipse.cdt.internal.ui.cview.MainActionGroup.fillContextMenu(MainActionGroup.java:235)
+	at org.eclipse.cdt.internal.ui.cview.CView.fillContextMenu(CView.java:712)
+	at org.eclipse.cdt.internal.ui.cview.CView$5.menuAboutToShow(CView.java:459)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5160)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4828)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5110)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:262)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4277)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3818)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.ifx.davex.product.DaveApplication.start(DaveApplication.java:140)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2026-03-30 18:50:29.910
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 18:50:45.465
+!MESSAGE USER_ACTION : Opening Manual Resource Assignment Dialog..!
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 18:50:51.929
+!MESSAGE USER_ACTION : Manual Resource Assignment Dialog is closed..!
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-03-30 19:04:25.918
+!MESSAGE USER_ACTION : Time taken for opening editor is: 1804 msec 
+
+!ENTRY org.eclipse.equinox.ds 1 0 2026-03-30 19:14:04.214
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-03-30 19:14:18.717
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-03-30 19:14:18.717
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:14:20.463
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:14:22.887
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.ui 4 4 2026-03-30 19:14:31.400
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction in com.dave.activeproject)} vs {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction in org.eclipse.debug.ui)}
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:21:12.153
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:21:16.491
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:23:17.797
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:23:19.633
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:25:46.795
+!MESSAGE USER_ACTION : Opening Manual Resource Assignment Dialog..!
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:25:53.882
+!MESSAGE USER_ACTION : Res Load : 316
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:25:56.085
+!MESSAGE USER_ACTION : Manual Resource Assignment Dialog is closed..!
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 19:26:10.150
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 19:26:10.396
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.10/app/SPI_SLAVE/0
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.200
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\42.0.1\peripheral\scu\0\MANIFEST\scu.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.294
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.4.2\peripheral\cpu\0\MANIFEST\cpu.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.330
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.29\peripheral\ccu4\1\MANIFEST\ccu4.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.381
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.31\peripheral\ccu8\0\MANIFEST\ccu8.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.416
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.29\peripheral\ccu4\0\MANIFEST\ccu4.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.464
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.30\peripheral\usic\1\MANIFEST\usic.dd
+
+!ENTRY APPSTORE 1 0 2026-03-30 19:26:11.550
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.30\peripheral\usic\0\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:11.568
+!MESSAGE Time taken for processing complete solver result is: 458 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:11.569
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:11.569
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:11.667
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:26:11.959
+!MESSAGE Time Taken By Serialization  : 292 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:11.993
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:12.129
+!MESSAGE Time taken for serialization in msec: 559
+
+!ENTRY SOLVER 1 0 2026-03-30 19:26:12.194
+!MESSAGE Time Taken By Solver for UI Action: 1781 ms
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 19:26:22.374
+!MESSAGE USER_ACTION : App Getting Added: SPI_MASTER [4.3.30]
+
+!ENTRY SOLVER 1 0 2026-03-30 19:26:22.436
+!MESSAGE USER_ACTION : Creating an APP: SPI_MASTER [4.3.30]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 19:26:22.931
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC4 [4.0.2] lStoreAppVersion: 4.0.24:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 19:26:22.983
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.18:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 19:26:23.153
+!MESSAGE USER_ACTION : Created APP: SPI_MASTER [4.3.30]-->http://resources/4.3.30/app/SPI_MASTER/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:23.975
+!MESSAGE Time taken for processing complete solver result is: 82 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:23.976
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:23.976
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:24.073
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:26:24.215
+!MESSAGE Time Taken By Serialization  : 142 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:24.246
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:24.351
+!MESSAGE Time taken for serialization in msec: 374
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-03-30 19:26:31.553
+!MESSAGE USER_ACTION : Time taken for opening editor is: 927 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:42.061
+!MESSAGE USER_ACTION : Setting value = "2000.0" of "gfloat_desired_bus_speed" in APP: SPI_MASTER/4.3.30/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:43.006
+!MESSAGE Time taken for processing complete solver result is: 78 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:43.006
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:43.006
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:43.085
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:26:43.217
+!MESSAGE Time Taken By Serialization  : 132 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:43.249
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:43.324
+!MESSAGE Time taken for serialization in msec: 318
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:43.382
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 22
+
+!ENTRY SOLVER 1 0 2026-03-30 19:26:43.383
+!MESSAGE Time Taken By Solver for UI Action: 1224 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:47.391
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_transmit_mode" in APP: SPI_MASTER/4.3.30/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:48.274
+!MESSAGE Time taken for processing complete solver result is: 65 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:48.274
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:48.274
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:48.341
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:26:48.466
+!MESSAGE Time Taken By Serialization  : 125 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:48.493
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:48.578
+!MESSAGE Time taken for serialization in msec: 303
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:48.669
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 18
+
+!ENTRY SOLVER 1 0 2026-03-30 19:26:48.670
+!MESSAGE Time Taken By Solver for UI Action: 1190 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:50.336
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_receive_mode" in APP: SPI_MASTER/4.3.30/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:51.621
+!MESSAGE Time taken for processing complete solver result is: 64 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:51.621
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:51.621
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:51.694
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:26:51.820
+!MESSAGE Time Taken By Serialization  : 124 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:51.848
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:51.918
+!MESSAGE Time taken for serialization in msec: 297
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:51.966
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 12
+
+!ENTRY SOLVER 1 0 2026-03-30 19:26:51.966
+!MESSAGE Time Taken By Solver for UI Action: 1129 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:57.907
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_enablepinconfig" in APP: SPI_MASTER/4.3.30/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:58.773
+!MESSAGE Time taken for processing complete solver result is: 58 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:58.773
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:58.774
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:58.842
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:26:58.946
+!MESSAGE Time Taken By Serialization  : 104 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:58.973
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:26:59.051
+!MESSAGE Time taken for serialization in msec: 278
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:26:59.159
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 63
+
+!ENTRY SOLVER 1 0 2026-03-30 19:26:59.159
+!MESSAGE Time Taken By Solver for UI Action: 1171 ms
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:26.534
+!MESSAGE Time taken for processing complete solver result is: 51 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:26.534
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:26.534
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:26.600
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:27:26.724
+!MESSAGE Time Taken By Serialization  : 123 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:26.751
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:26.831
+!MESSAGE Time taken for serialization in msec: 297
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:27:26.887
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 2
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:34.684
+!MESSAGE Time taken for processing complete solver result is: 44 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:34.685
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:34.685
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:34.748
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:27:34.874
+!MESSAGE Time Taken By Serialization  : 126 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:34.902
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:34.978
+!MESSAGE Time taken for serialization in msec: 293
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:27:35.020
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 2
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:41.719
+!MESSAGE Time taken for processing complete solver result is: 40 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:41.720
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:41.720
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:41.790
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:27:41.922
+!MESSAGE Time Taken By Serialization  : 132 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:41.948
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:27:42.028
+!MESSAGE Time taken for serialization in msec: 309
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 19:27:42.080
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_MASTER/4.3.30/0 editor is : 4
+
+!ENTRY CODEGEN 1 0 2026-03-30 19:28:04.175
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 19:28:05.410
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:28:26.138
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-03-30 19:28:41.150
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@b2ae64a): Status ERROR: ilg.gnuarmeclipse.debug.gdbjtag code=5010 Starting J-Link GDB Server timed out. null' resulted in an error.
+!SUBENTRY 1 ilg.gnuarmeclipse.debug.gdbjtag 4 5010 2026-03-30 19:28:41.150
+!MESSAGE Starting J-Link GDB Server timed out.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2026-03-30 19:28:41.156
+!MESSAGE Error in services launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Starting J-Link GDB Server timed out.
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:582)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$4(Sequence.java:574)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:431)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:424)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:387)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+!SUBENTRY 1 ilg.gnuarmeclipse.debug.gdbjtag 4 5010 2026-03-30 19:28:41.157
+!MESSAGE Starting J-Link GDB Server timed out.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:28:45.497
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:28:48.640
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.ui 4 0 2026-03-30 19:34:58.945
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:573)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2026-03-30 19:34:58.945
+!MESSAGE Element main.c does not exist.
+
+!ENTRY CODEGEN 1 0 2026-03-30 19:35:14.972
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 19:35:15.678
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:38:11.546
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 19:38:13.409
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:46:34.998
+!MESSAGE USER_ACTION : Opening Manual Resource Assignment Dialog..!
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:46:40.552
+!MESSAGE USER_ACTION : Res Load : 320
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:46:41.392
+!MESSAGE USER_ACTION : User selection (Resource Mapping) : SPI_MASTER_0 --> Channel --> /usic/1/channel/1
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:46:42.124
+!MESSAGE USER_ACTION : Res Selection : 802
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:46:45.002
+!MESSAGE Time taken for processing complete solver result is: 80 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:46:45.002
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:46:45.002
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:46:45.070
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 19:46:45.192
+!MESSAGE Time Taken By Serialization  : 120 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:46:45.223
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 19:46:45.332
+!MESSAGE Time taken for serialization in msec: 330
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:46:45.362
+!MESSAGE USER_ACTION : Saved User configured Resource Mapping Data..!
+
+!ENTRY SOLVER 1 0 2026-03-30 19:46:45.362
+!MESSAGE Time Taken By Solve and Save Manual Resource Assignment  : 444 ms
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 19:46:49.432
+!MESSAGE USER_ACTION : Manual Resource Assignment Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:06:29.910
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:06:31.035
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:09:48.221
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:09:50.615
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 21:15:27.632
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 21:15:27.789
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.3.30/app/SPI_MASTER/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:28.582
+!MESSAGE Time taken for processing complete solver result is: 100 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:28.582
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:28.582
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:28.649
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:15:29.002
+!MESSAGE Time Taken By Serialization  : 353 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:29.039
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:29.148
+!MESSAGE Time taken for serialization in msec: 566
+
+!ENTRY SOLVER 1 0 2026-03-30 21:15:29.183
+!MESSAGE Time Taken By Solver for UI Action: 1385 ms
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 21:15:43.092
+!MESSAGE USER_ACTION : App Getting Added: SPI_SLAVE [4.0.10]
+
+!ENTRY SOLVER 1 0 2026-03-30 21:15:43.149
+!MESSAGE USER_ACTION : Creating an APP: SPI_SLAVE [4.0.10]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 21:15:43.308
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.18:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 21:15:43.479
+!MESSAGE USER_ACTION : Created APP: SPI_SLAVE [4.0.10]-->http://resources/4.0.10/app/SPI_SLAVE/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:44.322
+!MESSAGE Time taken for processing complete solver result is: 88 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:44.322
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:44.322
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:44.402
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:15:44.566
+!MESSAGE Time Taken By Serialization  : 163 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:44.597
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:15:44.699
+!MESSAGE Time taken for serialization in msec: 377
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-03-30 21:15:58.687
+!MESSAGE USER_ACTION : Time taken for opening editor is: 786 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:16:04.509
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_enablepinconfig" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:05.423
+!MESSAGE Time taken for processing complete solver result is: 74 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:05.423
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:05.423
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:05.486
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:16:05.639
+!MESSAGE Time Taken By Serialization  : 152 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:05.674
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:05.784
+!MESSAGE Time taken for serialization in msec: 361
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:16:05.836
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 13
+
+!ENTRY SOLVER 1 0 2026-03-30 21:16:05.837
+!MESSAGE Time Taken By Solver for UI Action: 1248 ms
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:32.251
+!MESSAGE Time taken for processing complete solver result is: 65 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:32.252
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:32.252
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:32.314
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:16:32.450
+!MESSAGE Time Taken By Serialization  : 136 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:32.484
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:32.575
+!MESSAGE Time taken for serialization in msec: 324
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:16:32.612
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 3
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:37.768
+!MESSAGE Time taken for processing complete solver result is: 52 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:37.768
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:37.768
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:37.834
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:16:37.979
+!MESSAGE Time Taken By Serialization  : 145 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:38.009
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:38.104
+!MESSAGE Time taken for serialization in msec: 336
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:16:38.146
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 3
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:43.095
+!MESSAGE Time taken for processing complete solver result is: 74 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:43.096
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:43.096
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:43.158
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:16:43.285
+!MESSAGE Time Taken By Serialization  : 126 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:43.322
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:43.418
+!MESSAGE Time taken for serialization in msec: 322
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:16:43.457
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 3
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:48.854
+!MESSAGE Time taken for processing complete solver result is: 74 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:48.855
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:48.855
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:48.916
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:16:49.042
+!MESSAGE Time Taken By Serialization  : 125 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:49.072
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:16:49.166
+!MESSAGE Time taken for serialization in msec: 312
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:16:49.209
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 2
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 21:16:54.866
+!MESSAGE USER_ACTION : Opening Manual Resource Assignment Dialog..!
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 21:17:02.034
+!MESSAGE USER_ACTION : Res Load : 334
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 21:17:02.824
+!MESSAGE USER_ACTION : User selection (Resource Mapping) : SPI_SLAVE_0 --> Channel --> /usic/1/channel/1
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 21:17:03.581
+!MESSAGE USER_ACTION : Res Selection : 854
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:17:04.546
+!MESSAGE Time taken for processing complete solver result is: 69 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:17:04.547
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:17:04.547
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:17:04.620
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:17:04.777
+!MESSAGE Time Taken By Serialization  : 157 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:17:04.809
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:17:04.918
+!MESSAGE Time taken for serialization in msec: 372
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:17:04.961
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 7
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 21:17:04.961
+!MESSAGE USER_ACTION : Saved User configured Resource Mapping Data..!
+
+!ENTRY SOLVER 1 0 2026-03-30 21:17:04.962
+!MESSAGE Time Taken By Solve and Save Manual Resource Assignment  : 493 ms
+
+!ENTRY RESOURCE_CONSTRAINER 1 0 2026-03-30 21:17:07.436
+!MESSAGE USER_ACTION : Manual Resource Assignment Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:17:16.851
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:17:17.504
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:24:26.515
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:24:28.179
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:27:55.673
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:28:06.551
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:38:28.842
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:38:32.733
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:40:28.767
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:40:31.711
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:42:18.688
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:42:27.564
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:43:34.795
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:43:37.826
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:50:06.817
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:50:08.652
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-03-30 21:50:57.179
+!MESSAGE USER_ACTION : Time taken for opening editor is: 98 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:51:29.550
+!MESSAGE USER_ACTION : Setting value = "8" of "ginteger_frame_length" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:51:29.580
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:51:29.580
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:51:29.735
+!MESSAGE Time taken for serialization in msec: 155
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:51:29.735
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:51:51.495
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:51:52.140
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:52:05.443
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:52:06.769
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:52:50.426
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_transmit_mode" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:51.350
+!MESSAGE Time taken for processing complete solver result is: 98 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:51.351
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:51.351
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:51.421
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:52:51.551
+!MESSAGE Time Taken By Serialization  : 129 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:51.583
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:51.701
+!MESSAGE Time taken for serialization in msec: 349
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:52:51.746
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 11
+
+!ENTRY SOLVER 1 0 2026-03-30 21:52:51.747
+!MESSAGE Time Taken By Solver for UI Action: 1239 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:52:53.090
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_receive_mode" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:56.256
+!MESSAGE Time taken for processing complete solver result is: 59 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:56.257
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:56.257
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:56.330
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:52:56.457
+!MESSAGE Time Taken By Serialization  : 127 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:56.489
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:52:56.581
+!MESSAGE Time taken for serialization in msec: 325
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:52:56.624
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 8
+
+!ENTRY SOLVER 1 0 2026-03-30 21:52:56.624
+!MESSAGE Time Taken By Solver for UI Action: 1145 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:53:04.245
+!MESSAGE USER_ACTION : Setting value = "false" of "gcheck_chipselect_used" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:05.123
+!MESSAGE Time taken for processing complete solver result is: 50 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:05.123
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:05.123
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:05.190
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 21:53:05.353
+!MESSAGE Time Taken By Serialization  : 162 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:05.383
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:05.480
+!MESSAGE Time taken for serialization in msec: 357
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:53:05.513
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 3
+
+!ENTRY SOLVER 1 0 2026-03-30 21:53:05.514
+!MESSAGE Time Taken By Solver for UI Action: 1181 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:53:09.262
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_firstbit" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:09.267
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:09.267
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:09.365
+!MESSAGE Time taken for serialization in msec: 98
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:53:09.366
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:53:13.853
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:53:14.433
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:53:28.133
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:53:33.087
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 21:54:33.807
+!MESSAGE USER_ACTION : Setting value = "false" of "gcheck_firstbit" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:54:33.812
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:54:33.812
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:54:33.923
+!MESSAGE Time taken for serialization in msec: 111
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 21:54:33.923
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:54:44.363
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 21:54:44.945
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:55:00.668
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:55:01.818
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:57:12.426
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-03-30 21:57:13.770
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:26:21.328
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:26:21.502
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.10/app/SPI_SLAVE/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:26:22.274
+!MESSAGE Time taken for processing complete solver result is: 69 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:26:22.274
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:26:22.275
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:26:22.336
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:26:22.547
+!MESSAGE Time Taken By Serialization  : 211 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:26:22.578
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:26:22.761
+!MESSAGE Time taken for serialization in msec: 487
+
+!ENTRY SOLVER 1 0 2026-03-30 22:26:22.807
+!MESSAGE Time Taken By Solver for UI Action: 1298 ms
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:08.428
+!MESSAGE USER_ACTION : App Getting Added: SPI_MASTER [4.3.30]
+
+!ENTRY SOLVER 1 0 2026-03-30 22:27:08.516
+!MESSAGE USER_ACTION : Creating an APP: SPI_MASTER [4.3.30]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:08.762
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC4 [4.0.2] lStoreAppVersion: 4.0.24:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:08.805
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.18:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:08.906
+!MESSAGE USER_ACTION : Created APP: SPI_MASTER [4.3.30]-->http://resources/4.3.30/app/SPI_MASTER/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:09.815
+!MESSAGE Time taken for processing complete solver result is: 89 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:09.815
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:09.815
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:09.890
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:27:10.081
+!MESSAGE Time Taken By Serialization  : 189 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:10.123
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:10.265
+!MESSAGE Time taken for serialization in msec: 450
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:22.546
+!MESSAGE Time taken for processing complete solver result is: 50 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:22.547
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:22.547
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:22.613
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:27:22.790
+!MESSAGE Time Taken By Serialization  : 177 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:22.829
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:22.955
+!MESSAGE Time taken for serialization in msec: 408
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:50.258
+!MESSAGE USER_ACTION : App Getting Added: SPI_SLAVE [4.0.10]
+
+!ENTRY SOLVER 1 0 2026-03-30 22:27:50.328
+!MESSAGE USER_ACTION : Creating an APP: SPI_SLAVE [4.0.10]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:50.406
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.18:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:50.481
+!MESSAGE USER_ACTION : Created APP: SPI_SLAVE [4.0.10]-->http://resources/4.0.10/app/SPI_SLAVE/0
+
+!ENTRY DAVE CE 4 0 2026-03-30 22:27:50.793
+!MESSAGE 
+
+***START of Exception Info***
+Execution of solver query timed out
+com.ifx.davex.ce.core.solver.ProxySolver.handleTimeout(ProxySolver.java:486)
+com.ifx.davex.ce.core.solver.ProxySolver.processCmpdTermResult(ProxySolver.java:460)
+com.ifx.davex.ce.core.solver.ProxySolver.executeQuery(ProxySolver.java:425)
+com.ifx.davex.ce.core.solver.ProxySolver.sendQuery(ProxySolver.java:260)
+com.ifx.davex.ce.core.solver.SolverManager.getSolution(SolverManager.java:155)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.getSolution(ResourceManager.java:923)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.getSolverInfoAndProcess(ResourceManager.java:996)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.getSolutionFromSolver(ResourceManager.java:1175)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.possibleCheck(ResourceManager.java:352)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.callSolver(ResourceManager.java:879)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.createApp(ResourceManager.java:720)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager.access$2(ResourceManager.java:651)
+com.ifx.davex.ce.core.resource.mngts.ResourceManager$2$1.run(ResourceManager.java:612)
+org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+***END of Exception Info***
+
+
+
+!ENTRY SOLVER 1 0 2026-03-30 22:27:50.794
+!MESSAGE 
+====================================== SOLVER ENVIRONMENT ========================================
+Solver Exe Path: null
+Solver Status: CONNECTED
+Solver Eclipse Instance: com.parctechnologies.eclipse.OutOfProcessEclipse@1a2d5ee8
+DD Temp Dir: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL
+ECO file location: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+Temp DD File Exists: true
+Query Sent to Solver: true
+Query: timeout(solve_mapping_problem([ 
+reserved([ccu8,GLOBAL_CCU80sv0,global],'global_ccu8$1465655520$0'),
+uri([ccu8,0,global],'global_ccu8$1465655520$0'),
+reserved([scu,_,gcu,ccu8_global_enable,GLOBAL_CCU80sv0],'global_ccu8$1118816002$0'),
+reserved([scu,0,clkctrl,0,pll],'clock_xmc4$01551378862$0'),
+reserved([scu,0,clkctrl,0,sys],'clock_xmc4$01551375569$0'),
+reserved([scu,0,clkctrl,0,cpu],'clock_xmc4$01551391222$0'),
+reserved([scu,0,clkctrl,0,perbridge],'clock_xmc4$494804424$0'),
+reserved([scu,0,clkctrl,0,ccu],'clock_xmc4$01551391625$0'),
+reserved([scu,0,clkctrl,0,wdt],'clock_xmc4$01551372375$0'),
+reserved([scu,0,clkctrl,0,usb],'clock_xmc4$01551373850$0'),
+reserved([scu,0,pwrctrl,0,hibernate],'clock_xmc4$0778278092$0'),
+reserved([scu,0,rtcclksel],'clock_xmc4$1142722683$0'),
+reserved([scu,0,trap,0,sysoscwd],'clock_xmc4$1091210735$0'),
+reserved([scu,0,trap,0,sysvcolock],'clock_xmc4$1586947406$0'),
+reserved([scu,0,trap,0,usbvcolock],'clock_xmc4$0261647995$0'),
+reserved([scu,0,trap,0,ulpwdg],'clock_xmc4$01047137491$0'),
+reserved([ccu8,_,cc8,_],'pwm_ccu8$01113979708$0'),
+uri([ccu8,0,cc8,0],'pwm_ccu8$01113979708$0'),
+reserved([p,_,pad,_],'pwm_ccu8$1493401886$0'),
+reserved([devicepackage,0,_],'pwm_ccu8$0353352492$0'),
+uri([devicepackage,0,61],'pwm_ccu8$0353352492$0'),
+reserved([ccu8,_,cc8,_],'pwm_ccu8$1142931299$1'),
+uri([ccu8,0,cc8,1],'pwm_ccu8$1142931299$1'),
+reserved([p,_,pad,_],'pwm_ccu8$1704752799$1'),
+reserved([devicepackage,0,_],'pwm_ccu8$608261525$1'),
+uri([devicepackage,0,62],'pwm_ccu8$608261525$1'),
+reserved([ccu8,_,cc8,_],'pwm_ccu8$0895124990$2'),
+uri([ccu8,0,cc8,2],'pwm_ccu8$0895124990$2'),
+reserved([p,_,pad,_],'pwm_ccu8$1916103712$2'),
+reserved([p,_,pad,_],'pwm_ccu8$1944732865$2'),
+reserved([devicepackage,0,_],'pwm_ccu8$1569875542$2'),
+uri([devicepackage,0,63],'pwm_ccu8$1569875542$2'),
+reserved([devicepackage,0,_],'pwm_ccu8$1598504695$2'),
+uri([devicepackage,0,27],'pwm_ccu8$1598504695$2'),
+reserved([ccu8,_,cc8,_],'pwm_ccu8$1361786017$3'),
+uri([ccu8,0,cc8,3],'pwm_ccu8$1361786017$3'),
+reserved([p,_,pad,_],'pwm_ccu8$2127454625$3'),
+reserved([p,_,pad,_],'pwm_ccu8$02138883518$3'),
+reserved([devicepackage,0,_],'pwm_ccu8$01763477737$3'),
+uri([devicepackage,0,60],'pwm_ccu8$01763477737$3'),
+reserved([devicepackage,0,_],'pwm_ccu8$01734848584$3'),
+uri([devicepackage,0,28],'pwm_ccu8$01734848584$3'),
+reserved([ccu4,GLOBAL_CCU40sv0,global],'global_ccu4$01760137752$0'),
+uri([ccu4,0,global],'global_ccu4$01760137752$0'),
+reserved([scu,_,gcu,ccu4_global_enable,GLOBAL_CCU40sv0],'global_ccu4$89752826$0'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$01157338713$0'),
+uri([ccu4,0,cc4,0],'pwm_ccu4$01157338713$0'),
+reserved([p,_,pad,_],'pwm_ccu4$02000024300$0'),
+reserved([devicepackage,0,_],'pwm_ccu4$1717475678$0'),
+uri([devicepackage,0,49],'pwm_ccu4$1717475678$0'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$1099572294$1'),
+uri([ccu4,0,cc4,1],'pwm_ccu4$1099572294$1'),
+reserved([p,_,pad,_],'pwm_ccu4$02067031053$1'),
+reserved([devicepackage,0,_],'pwm_ccu4$1728791805$1'),
+uri([devicepackage,0,50],'pwm_ccu4$1728791805$1'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$0938483995$2'),
+uri([ccu4,0,cc4,2],'pwm_ccu4$0938483995$2'),
+reserved([p,_,pad,_],'pwm_ccu4$02134037806$2'),
+reserved([devicepackage,0,_],'pwm_ccu4$1740107932$2'),
+uri([devicepackage,0,51],'pwm_ccu4$1740107932$2'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$1318427012$3'),
+uri([ccu4,0,cc4,3],'pwm_ccu4$1318427012$3'),
+reserved([p,_,pad,_],'pwm_ccu4$2093922737$3'),
+reserved([devicepackage,0,_],'pwm_ccu4$1751424059$3'),
+uri([devicepackage,0,52],'pwm_ccu4$1751424059$3'),
+reserved([ccu4,GLOBAL_CCU41sv0,global],'global_ccu4$01748821625$1'),
+uri([ccu4,1,global],'global_ccu4$01748821625$1'),
+reserved([scu,_,gcu,ccu4_global_enable,GLOBAL_CCU41sv0],'global_ccu4$01610987653$1'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$0719629277$4'),
+uri([ccu4,1,cc4,0],'pwm_ccu4$0719629277$4'),
+reserved([p,_,pad,_],'pwm_ccu4$2026915984$4'),
+reserved([devicepackage,0,_],'pwm_ccu4$1762740186$4'),
+uri([devicepackage,0,29],'pwm_ccu4$1762740186$4'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$1537281730$5'),
+uri([ccu4,1,cc4,1],'pwm_ccu4$1537281730$5'),
+reserved([p,_,pad,_],'pwm_ccu4$1959909231$5'),
+reserved([devicepackage,0,_],'pwm_ccu4$1774056313$5'),
+uri([devicepackage,0,30],'pwm_ccu4$1774056313$5'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$0500774559$6'),
+uri([ccu4,1,cc4,2],'pwm_ccu4$0500774559$6'),
+reserved([p,_,pad,_],'pwm_ccu4$1892902478$6'),
+reserved([devicepackage,0,_],'pwm_ccu4$1785372440$6'),
+uri([devicepackage,0,31],'pwm_ccu4$1785372440$6'),
+reserved([ccu4,_,cc4,_],'pwm_ccu4$1756136448$7'),
+uri([ccu4,1,cc4,3],'pwm_ccu4$1756136448$7'),
+reserved([p,_,pad,_],'pwm_ccu4$1825895725$7'),
+reserved([devicepackage,0,_],'pwm_ccu4$1796688567$7'),
+uri([devicepackage,0,32],'pwm_ccu4$1796688567$7'),
+reserved([cpu,0,exception,nmi],'cpu_ctrl_xmc4$01637679009$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc4$0571328980$0'),
+reserved([cpu,0,exception,memmanage],'cpu_ctrl_xmc4$1768468879$0'),
+reserved([cpu,0,exception,busfault],'cpu_ctrl_xmc4$1763234541$0'),
+reserved([cpu,0,exception,usagefault],'cpu_ctrl_xmc4$1814460844$0'),
+reserved([cpu,0,debug],'cpu_ctrl_xmc4$1964564605$0'),
+reserved([debug_port,_,pad,_],'cpu_ctrl_xmc4$01540614004$0'),
+reserved([debug_port,_,pad,_],'cpu_ctrl_xmc4$01540614322$0'),
+reserved([usic,_,channel,_],'i2c_master$0517290200$0'),
+uri([usic,1,channel,0],'i2c_master$0517290200$0'),
+reserved([cpu,0,nvic,interrupt,_],'i2c_master$692300405$0'),
+reserved([cpu,0,nvic,interrupt,_],'i2c_master$692300343$0'),
+reserved([p,_,pad,_],'i2c_master$0125934497$0'),
+reserved([p,_,pad,_],'i2c_master$0125934517$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929067$0'),
+uri([devicepackage,0,26],'i2c_master$01076929067$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929087$0'),
+uri([devicepackage,0,59],'i2c_master$01076929087$0'),
+reserved([usic,_,channel,_],'uart$02118624699$0'),
+uri([usic,0,channel,0],'uart$02118624699$0'),
+reserved([p,_,pad,_],'uart$01053640812$0'),
+reserved([p,_,pad,_],'uart$01053640750$0'),
+reserved([cpu,0,nvic,interrupt,_],'uart$01148723541$0'),
+reserved([cpu,0,nvic,interrupt,_],'uart$01148723603$0'),
+reserved([devicepackage,0,_],'uart$0164365666$0'),
+uri([devicepackage,0,48],'uart$0164365666$0'),
+reserved([devicepackage,0,_],'uart$0164365604$0'),
+uri([devicepackage,0,47],'uart$0164365604$0'),
+reserved([p,DIGITAL_IO0sv0,pad,_],'digital_io$01383135420$0'),
+reserved([devicepackage,0,_],'digital_io$36800462$0'),
+uri([devicepackage,0,36],'digital_io$36800462$0'),
+reserved([p,DIGITAL_IO1sv0,pad,_],'digital_io$01893669597$1'),
+reserved([devicepackage,0,_],'digital_io$02001255827$1'),
+uri([devicepackage,0,35],'digital_io$02001255827$1'),
+reserved([p,DIGITAL_IO2sv0,pad,_],'digital_io$1890763522$2'),
+reserved([devicepackage,0,_],'digital_io$255655180$2'),
+uri([devicepackage,0,34],'digital_io$255655180$2'),
+reserved([p,DIGITAL_IO3sv0,pad,_],'digital_io$1380229345$3'),
+reserved([devicepackage,0,_],'digital_io$01782401109$3'),
+uri([devicepackage,0,33],'digital_io$01782401109$3'),
+reserved([p,DIGITAL_IO4sv0,pad,_],'digital_io$869695168$4'),
+reserved([devicepackage,0,_],'digital_io$474509898$4'),
+uri([devicepackage,0,53],'digital_io$474509898$4'),
+reserved([p,DIGITAL_IO5sv0,pad,_],'digital_io$359160991$5'),
+reserved([devicepackage,0,_],'digital_io$01563546391$5'),
+uri([devicepackage,0,54],'digital_io$01563546391$5'),
+reserved([p,DIGITAL_IO6sv0,pad,_],'digital_io$0151373186$6'),
+reserved([devicepackage,0,_],'digital_io$693364616$6'),
+uri([devicepackage,0,58],'digital_io$693364616$6'),
+reserved([p,DIGITAL_IO7sv0,pad,_],'digital_io$0661907363$7'),
+reserved([devicepackage,0,_],'digital_io$01344691673$7'),
+uri([devicepackage,0,64],'digital_io$01344691673$7'),
+reserved([p,DIGITAL_IO8sv0,pad,_],'digital_io$01172441540$8'),
+reserved([devicepackage,0,_],'digital_io$912219334$8'),
+uri([devicepackage,0,5],'digital_io$912219334$8'),
+reserved([usic,_,channel,_],'spi_master$502965524$0'),
+reserved([p,SPI_MASTER0sv0,pad,_],'spi_master$01389259346$0'),
+reserved([p,_,pad,_],'spi_master$01389259345$0'),
+reserved([p,_,pad,_],'spi_master$562750778$0'),
+reserved([p,_,pad,_],'spi_master$454601686$0'),
+reserved([cpu,0,nvic,interrupt,_],'spi_master$0799251154$0'),
+reserved([cpu,0,nvic,interrupt,_],'spi_master$0799251216$0'),
+reserved([devicepackage,0,_],'spi_master$01515434204$0'),
+uri([devicepackage,0,1],'spi_master$01515434204$0'),
+reserved([devicepackage,0,_],'spi_master$01515434203$0'),
+reserved([devicepackage,0,_],'spi_master$946297476$0'),
+reserved([devicepackage,0,_],'spi_master$1656703692$0'),
+reserved([usic,_,channel,_],'spi_slave$01366864342$0'),
+reserved([p,_,pad,_],'spi_slave$01333033692$0'),
+reserved([p,_,pad,_],'spi_slave$1145447222$0'),
+reserved([p,_,pad,_],'spi_slave$0403454326$0'),
+reserved([p,_,pad,_],'spi_slave$125532735$0'),
+reserved([cpu,0,nvic,interrupt,_],'spi_slave$01881239066$0'),
+reserved([cpu,0,nvic,interrupt,_],'spi_slave$01881239128$0'),
+reserved([devicepackage,0,_],'spi_slave$1438010906$0'),
+reserved([devicepackage,0,_],'spi_slave$912294912$0'),
+reserved([devicepackage,0,_],'spi_slave$1074287872$0'),
+reserved([devicepackage,0,_],'spi_slave$01073724151$0'),
+signal('global_ccu8$1465655520$0',global_signal,'global_ccu8$1465655520$0$global_signal'),
+signal('global_ccu8$1465655520$0',clk,'global_ccu8$1465655520$0$clk'),
+signal('global_ccu8$1118816002$0',gsc_enable,'global_ccu8$1118816002$0$gsc_enable'),
+signal('clock_xmc4$494804424$0',fpb,'clock_xmc4$494804424$0$fpb'),
+signal('clock_xmc4$01551391625$0',fccu,'clock_xmc4$01551391625$0$fccu'),
+signal('pwm_ccu8$01113979708$0',global_signal,'pwm_ccu8$01113979708$0$global_signal'),
+signal('pwm_ccu8$01113979708$0',st,'pwm_ccu8$01113979708$0$st'),
+signal('pwm_ccu8$01113979708$0',sta,'pwm_ccu8$01113979708$0$sta'),
+signal('pwm_ccu8$01113979708$0',stb,'pwm_ccu8$01113979708$0$stb'),
+signal('pwm_ccu8$01113979708$0',out0,'pwm_ccu8$01113979708$0$out0'),
+signal('pwm_ccu8$01113979708$0',out1,'pwm_ccu8$01113979708$0$out1'),
+signal('pwm_ccu8$01113979708$0',out2,'pwm_ccu8$01113979708$0$out2'),
+signal('pwm_ccu8$01113979708$0',out3,'pwm_ccu8$01113979708$0$out3'),
+signal('pwm_ccu8$01113979708$0',gp0_unsync,'pwm_ccu8$01113979708$0$gp0_unsync'),
+signal('pwm_ccu8$01113979708$0',gp1_unsync,'pwm_ccu8$01113979708$0$gp1_unsync'),
+signal('pwm_ccu8$01113979708$0',gp2_unsync,'pwm_ccu8$01113979708$0$gp2_unsync'),
+signal('pwm_ccu8$01113979708$0',gp0,'pwm_ccu8$01113979708$0$gp0'),
+signal('pwm_ccu8$01113979708$0',gp1,'pwm_ccu8$01113979708$0$gp1'),
+signal('pwm_ccu8$01113979708$0',gp2,'pwm_ccu8$01113979708$0$gp2'),
+signal('pwm_ccu8$01113979708$0',ps,'pwm_ccu8$01113979708$0$ps'),
+signal('pwm_ccu8$01113979708$0',mci0,'pwm_ccu8$01113979708$0$mci0'),
+signal('pwm_ccu8$01113979708$0',mci1,'pwm_ccu8$01113979708$0$mci1'),
+signal('pwm_ccu8$01113979708$0',mci2,'pwm_ccu8$01113979708$0$mci2'),
+signal('pwm_ccu8$01113979708$0',mci3,'pwm_ccu8$01113979708$0$mci3'),
+signal('pwm_ccu8$01113979708$0',mcss,'pwm_ccu8$01113979708$0$mcss'),
+signal('pwm_ccu8$1493401886$0',pad,'pwm_ccu8$1493401886$0$pad'),
+signal('pwm_ccu8$0353352492$0',pin,'pwm_ccu8$0353352492$0$pin'),
+signal('pwm_ccu8$1142931299$1',global_signal,'pwm_ccu8$1142931299$1$global_signal'),
+signal('pwm_ccu8$1142931299$1',st,'pwm_ccu8$1142931299$1$st'),
+signal('pwm_ccu8$1142931299$1',sta,'pwm_ccu8$1142931299$1$sta'),
+signal('pwm_ccu8$1142931299$1',stb,'pwm_ccu8$1142931299$1$stb'),
+signal('pwm_ccu8$1142931299$1',out0,'pwm_ccu8$1142931299$1$out0'),
+signal('pwm_ccu8$1142931299$1',out1,'pwm_ccu8$1142931299$1$out1'),
+signal('pwm_ccu8$1142931299$1',out2,'pwm_ccu8$1142931299$1$out2'),
+signal('pwm_ccu8$1142931299$1',out3,'pwm_ccu8$1142931299$1$out3'),
+signal('pwm_ccu8$1142931299$1',gp0_unsync,'pwm_ccu8$1142931299$1$gp0_unsync'),
+signal('pwm_ccu8$1142931299$1',gp1_unsync,'pwm_ccu8$1142931299$1$gp1_unsync'),
+signal('pwm_ccu8$1142931299$1',gp2_unsync,'pwm_ccu8$1142931299$1$gp2_unsync'),
+signal('pwm_ccu8$1142931299$1',gp0,'pwm_ccu8$1142931299$1$gp0'),
+signal('pwm_ccu8$1142931299$1',gp1,'pwm_ccu8$1142931299$1$gp1'),
+signal('pwm_ccu8$1142931299$1',gp2,'pwm_ccu8$1142931299$1$gp2'),
+signal('pwm_ccu8$1142931299$1',ps,'pwm_ccu8$1142931299$1$ps'),
+signal('pwm_ccu8$1142931299$1',mci0,'pwm_ccu8$1142931299$1$mci0'),
+signal('pwm_ccu8$1142931299$1',mci1,'pwm_ccu8$1142931299$1$mci1'),
+signal('pwm_ccu8$1142931299$1',mci2,'pwm_ccu8$1142931299$1$mci2'),
+signal('pwm_ccu8$1142931299$1',mci3,'pwm_ccu8$1142931299$1$mci3'),
+signal('pwm_ccu8$1142931299$1',mcss,'pwm_ccu8$1142931299$1$mcss'),
+signal('pwm_ccu8$1704752799$1',pad,'pwm_ccu8$1704752799$1$pad'),
+signal('pwm_ccu8$608261525$1',pin,'pwm_ccu8$608261525$1$pin'),
+signal('pwm_ccu8$0895124990$2',global_signal,'pwm_ccu8$0895124990$2$global_signal'),
+signal('pwm_ccu8$0895124990$2',st,'pwm_ccu8$0895124990$2$st'),
+signal('pwm_ccu8$0895124990$2',sta,'pwm_ccu8$0895124990$2$sta'),
+signal('pwm_ccu8$0895124990$2',stb,'pwm_ccu8$0895124990$2$stb'),
+signal('pwm_ccu8$0895124990$2',out0,'pwm_ccu8$0895124990$2$out0'),
+signal('pwm_ccu8$0895124990$2',out1,'pwm_ccu8$0895124990$2$out1'),
+signal('pwm_ccu8$0895124990$2',out2,'pwm_ccu8$0895124990$2$out2'),
+signal('pwm_ccu8$0895124990$2',out3,'pwm_ccu8$0895124990$2$out3'),
+signal('pwm_ccu8$0895124990$2',gp0_unsync,'pwm_ccu8$0895124990$2$gp0_unsync'),
+signal('pwm_ccu8$0895124990$2',gp1_unsync,'pwm_ccu8$0895124990$2$gp1_unsync'),
+signal('pwm_ccu8$0895124990$2',gp2_unsync,'pwm_ccu8$0895124990$2$gp2_unsync'),
+signal('pwm_ccu8$0895124990$2',gp0,'pwm_ccu8$0895124990$2$gp0'),
+signal('pwm_ccu8$0895124990$2',gp1,'pwm_ccu8$0895124990$2$gp1'),
+signal('pwm_ccu8$0895124990$2',gp2,'pwm_ccu8$0895124990$2$gp2'),
+signal('pwm_ccu8$0895124990$2',ps,'pwm_ccu8$0895124990$2$ps'),
+signal('pwm_ccu8$0895124990$2',mci0,'pwm_ccu8$0895124990$2$mci0'),
+signal('pwm_ccu8$0895124990$2',mci1,'pwm_ccu8$0895124990$2$mci1'),
+signal('pwm_ccu8$0895124990$2',mci2,'pwm_ccu8$0895124990$2$mci2'),
+signal('pwm_ccu8$0895124990$2',mci3,'pwm_ccu8$0895124990$2$mci3'),
+signal('pwm_ccu8$0895124990$2',mcss,'pwm_ccu8$0895124990$2$mcss'),
+signal('pwm_ccu8$1916103712$2',pad,'pwm_ccu8$1916103712$2$pad'),
+signal('pwm_ccu8$1944732865$2',pad,'pwm_ccu8$1944732865$2$pad'),
+signal('pwm_ccu8$1569875542$2',pin,'pwm_ccu8$1569875542$2$pin'),
+signal('pwm_ccu8$1598504695$2',pin,'pwm_ccu8$1598504695$2$pin'),
+signal('pwm_ccu8$1361786017$3',global_signal,'pwm_ccu8$1361786017$3$global_signal'),
+signal('pwm_ccu8$1361786017$3',st,'pwm_ccu8$1361786017$3$st'),
+signal('pwm_ccu8$1361786017$3',sta,'pwm_ccu8$1361786017$3$sta'),
+signal('pwm_ccu8$1361786017$3',stb,'pwm_ccu8$1361786017$3$stb'),
+signal('pwm_ccu8$1361786017$3',out0,'pwm_ccu8$1361786017$3$out0'),
+signal('pwm_ccu8$1361786017$3',out1,'pwm_ccu8$1361786017$3$out1'),
+signal('pwm_ccu8$1361786017$3',out2,'pwm_ccu8$1361786017$3$out2'),
+signal('pwm_ccu8$1361786017$3',out3,'pwm_ccu8$1361786017$3$out3'),
+signal('pwm_ccu8$1361786017$3',gp0_unsync,'pwm_ccu8$1361786017$3$gp0_unsync'),
+signal('pwm_ccu8$1361786017$3',gp1_unsync,'pwm_ccu8$1361786017$3$gp1_unsync'),
+signal('pwm_ccu8$1361786017$3',gp2_unsync,'pwm_ccu8$1361786017$3$gp2_unsync'),
+signal('pwm_ccu8$1361786017$3',gp0,'pwm_ccu8$1361786017$3$gp0'),
+signal('pwm_ccu8$1361786017$3',gp1,'pwm_ccu8$1361786017$3$gp1'),
+signal('pwm_ccu8$1361786017$3',gp2,'pwm_ccu8$1361786017$3$gp2'),
+signal('pwm_ccu8$1361786017$3',ps,'pwm_ccu8$1361786017$3$ps'),
+signal('pwm_ccu8$1361786017$3',mci0,'pwm_ccu8$1361786017$3$mci0'),
+signal('pwm_ccu8$1361786017$3',mci1,'pwm_ccu8$1361786017$3$mci1'),
+signal('pwm_ccu8$1361786017$3',mci2,'pwm_ccu8$1361786017$3$mci2'),
+signal('pwm_ccu8$1361786017$3',mci3,'pwm_ccu8$1361786017$3$mci3'),
+signal('pwm_ccu8$1361786017$3',mcss,'pwm_ccu8$1361786017$3$mcss'),
+signal('pwm_ccu8$2127454625$3',pad,'pwm_ccu8$2127454625$3$pad'),
+signal('pwm_ccu8$02138883518$3',pad,'pwm_ccu8$02138883518$3$pad'),
+signal('pwm_ccu8$01763477737$3',pin,'pwm_ccu8$01763477737$3$pin'),
+signal('pwm_ccu8$01734848584$3',pin,'pwm_ccu8$01734848584$3$pin'),
+signal('global_ccu4$01760137752$0',global_signal,'global_ccu4$01760137752$0$global_signal'),
+signal('global_ccu4$01760137752$0',clk,'global_ccu4$01760137752$0$clk'),
+signal('global_ccu4$89752826$0',gsc_enable,'global_ccu4$89752826$0$gsc_enable'),
+signal('pwm_ccu4$01157338713$0',global_signal,'pwm_ccu4$01157338713$0$global_signal'),
+signal('pwm_ccu4$01157338713$0',st,'pwm_ccu4$01157338713$0$st'),
+signal('pwm_ccu4$01157338713$0',out,'pwm_ccu4$01157338713$0$out'),
+signal('pwm_ccu4$01157338713$0',gp0_unsync,'pwm_ccu4$01157338713$0$gp0_unsync'),
+signal('pwm_ccu4$01157338713$0',gp1_unsync,'pwm_ccu4$01157338713$0$gp1_unsync'),
+signal('pwm_ccu4$01157338713$0',gp2_unsync,'pwm_ccu4$01157338713$0$gp2_unsync'),
+signal('pwm_ccu4$01157338713$0',gp0,'pwm_ccu4$01157338713$0$gp0'),
+signal('pwm_ccu4$01157338713$0',gp1,'pwm_ccu4$01157338713$0$gp1'),
+signal('pwm_ccu4$01157338713$0',gp2,'pwm_ccu4$01157338713$0$gp2'),
+signal('pwm_ccu4$01157338713$0',ps,'pwm_ccu4$01157338713$0$ps'),
+signal('pwm_ccu4$01157338713$0',mci,'pwm_ccu4$01157338713$0$mci'),
+signal('pwm_ccu4$01157338713$0',mcss,'pwm_ccu4$01157338713$0$mcss'),
+signal('pwm_ccu4$02000024300$0',pad,'pwm_ccu4$02000024300$0$pad'),
+signal('pwm_ccu4$1717475678$0',pin,'pwm_ccu4$1717475678$0$pin'),
+signal('pwm_ccu4$1099572294$1',global_signal,'pwm_ccu4$1099572294$1$global_signal'),
+signal('pwm_ccu4$1099572294$1',st,'pwm_ccu4$1099572294$1$st'),
+signal('pwm_ccu4$1099572294$1',out,'pwm_ccu4$1099572294$1$out'),
+signal('pwm_ccu4$1099572294$1',gp0_unsync,'pwm_ccu4$1099572294$1$gp0_unsync'),
+signal('pwm_ccu4$1099572294$1',gp1_unsync,'pwm_ccu4$1099572294$1$gp1_unsync'),
+signal('pwm_ccu4$1099572294$1',gp2_unsync,'pwm_ccu4$1099572294$1$gp2_unsync'),
+signal('pwm_ccu4$1099572294$1',gp0,'pwm_ccu4$1099572294$1$gp0'),
+signal('pwm_ccu4$1099572294$1',gp1,'pwm_ccu4$1099572294$1$gp1'),
+signal('pwm_ccu4$1099572294$1',gp2,'pwm_ccu4$1099572294$1$gp2'),
+signal('pwm_ccu4$1099572294$1',ps,'pwm_ccu4$1099572294$1$ps'),
+signal('pwm_ccu4$1099572294$1',mci,'pwm_ccu4$1099572294$1$mci'),
+signal('pwm_ccu4$1099572294$1',mcss,'pwm_ccu4$1099572294$1$mcss'),
+signal('pwm_ccu4$02067031053$1',pad,'pwm_ccu4$02067031053$1$pad'),
+signal('pwm_ccu4$1728791805$1',pin,'pwm_ccu4$1728791805$1$pin'),
+signal('pwm_ccu4$0938483995$2',global_signal,'pwm_ccu4$0938483995$2$global_signal'),
+signal('pwm_ccu4$0938483995$2',st,'pwm_ccu4$0938483995$2$st'),
+signal('pwm_ccu4$0938483995$2',out,'pwm_ccu4$0938483995$2$out'),
+signal('pwm_ccu4$0938483995$2',gp0_unsync,'pwm_ccu4$0938483995$2$gp0_unsync'),
+signal('pwm_ccu4$0938483995$2',gp1_unsync,'pwm_ccu4$0938483995$2$gp1_unsync'),
+signal('pwm_ccu4$0938483995$2',gp2_unsync,'pwm_ccu4$0938483995$2$gp2_unsync'),
+signal('pwm_ccu4$0938483995$2',gp0,'pwm_ccu4$0938483995$2$gp0'),
+signal('pwm_ccu4$0938483995$2',gp1,'pwm_ccu4$0938483995$2$gp1'),
+signal('pwm_ccu4$0938483995$2',gp2,'pwm_ccu4$0938483995$2$gp2'),
+signal('pwm_ccu4$0938483995$2',ps,'pwm_ccu4$0938483995$2$ps'),
+signal('pwm_ccu4$0938483995$2',mci,'pwm_ccu4$0938483995$2$mci'),
+signal('pwm_ccu4$0938483995$2',mcss,'pwm_ccu4$0938483995$2$mcss'),
+signal('pwm_ccu4$02134037806$2',pad,'pwm_ccu4$02134037806$2$pad'),
+signal('pwm_ccu4$1740107932$2',pin,'pwm_ccu4$1740107932$2$pin'),
+signal('pwm_ccu4$1318427012$3',global_signal,'pwm_ccu4$1318427012$3$global_signal'),
+signal('pwm_ccu4$1318427012$3',st,'pwm_ccu4$1318427012$3$st'),
+signal('pwm_ccu4$1318427012$3',out,'pwm_ccu4$1318427012$3$out'),
+signal('pwm_ccu4$1318427012$3',gp0_unsync,'pwm_ccu4$1318427012$3$gp0_unsync'),
+signal('pwm_ccu4$1318427012$3',gp1_unsync,'pwm_ccu4$1318427012$3$gp1_unsync'),
+signal('pwm_ccu4$1318427012$3',gp2_unsync,'pwm_ccu4$1318427012$3$gp2_unsync'),
+signal('pwm_ccu4$1318427012$3',gp0,'pwm_ccu4$1318427012$3$gp0'),
+signal('pwm_ccu4$1318427012$3',gp1,'pwm_ccu4$1318427012$3$gp1'),
+signal('pwm_ccu4$1318427012$3',gp2,'pwm_ccu4$1318427012$3$gp2'),
+signal('pwm_ccu4$1318427012$3',ps,'pwm_ccu4$1318427012$3$ps'),
+signal('pwm_ccu4$1318427012$3',mci,'pwm_ccu4$1318427012$3$mci'),
+signal('pwm_ccu4$1318427012$3',mcss,'pwm_ccu4$1318427012$3$mcss'),
+signal('pwm_ccu4$2093922737$3',pad,'pwm_ccu4$2093922737$3$pad'),
+signal('pwm_ccu4$1751424059$3',pin,'pwm_ccu4$1751424059$3$pin'),
+signal('global_ccu4$01748821625$1',global_signal,'global_ccu4$01748821625$1$global_signal'),
+signal('global_ccu4$01748821625$1',clk,'global_ccu4$01748821625$1$clk'),
+signal('global_ccu4$01610987653$1',gsc_enable,'global_ccu4$01610987653$1$gsc_enable'),
+signal('pwm_ccu4$0719629277$4',global_signal,'pwm_ccu4$0719629277$4$global_signal'),
+signal('pwm_ccu4$0719629277$4',st,'pwm_ccu4$0719629277$4$st'),
+signal('pwm_ccu4$0719629277$4',out,'pwm_ccu4$0719629277$4$out'),
+signal('pwm_ccu4$0719629277$4',gp0_unsync,'pwm_ccu4$0719629277$4$gp0_unsync'),
+signal('pwm_ccu4$0719629277$4',gp1_unsync,'pwm_ccu4$0719629277$4$gp1_unsync'),
+signal('pwm_ccu4$0719629277$4',gp2_unsync,'pwm_ccu4$0719629277$4$gp2_unsync'),
+signal('pwm_ccu4$0719629277$4',gp0,'pwm_ccu4$0719629277$4$gp0'),
+signal('pwm_ccu4$0719629277$4',gp1,'pwm_ccu4$0719629277$4$gp1'),
+signal('pwm_ccu4$0719629277$4',gp2,'pwm_ccu4$0719629277$4$gp2'),
+signal('pwm_ccu4$0719629277$4',ps,'pwm_ccu4$0719629277$4$ps'),
+signal('pwm_ccu4$0719629277$4',mci,'pwm_ccu4$0719629277$4$mci'),
+signal('pwm_ccu4$0719629277$4',mcss,'pwm_ccu4$0719629277$4$mcss'),
+signal('pwm_ccu4$2026915984$4',pad,'pwm_ccu4$2026915984$4$pad'),
+signal('pwm_ccu4$1762740186$4',pin,'pwm_ccu4$1762740186$4$pin'),
+signal('pwm_ccu4$1537281730$5',global_signal,'pwm_ccu4$1537281730$5$global_signal'),
+signal('pwm_ccu4$1537281730$5',st,'pwm_ccu4$1537281730$5$st'),
+signal('pwm_ccu4$1537281730$5',out,'pwm_ccu4$1537281730$5$out'),
+signal('pwm_ccu4$1537281730$5',gp0_unsync,'pwm_ccu4$1537281730$5$gp0_unsync'),
+signal('pwm_ccu4$1537281730$5',gp1_unsync,'pwm_ccu4$1537281730$5$gp1_unsync'),
+signal('pwm_ccu4$1537281730$5',gp2_unsync,'pwm_ccu4$1537281730$5$gp2_unsync'),
+signal('pwm_ccu4$1537281730$5',gp0,'pwm_ccu4$1537281730$5$gp0'),
+signal('pwm_ccu4$1537281730$5',gp1,'pwm_ccu4$1537281730$5$gp1'),
+signal('pwm_ccu4$1537281730$5',gp2,'pwm_ccu4$1537281730$5$gp2'),
+signal('pwm_ccu4$1537281730$5',ps,'pwm_ccu4$1537281730$5$ps'),
+signal('pwm_ccu4$1537281730$5',mci,'pwm_ccu4$1537281730$5$mci'),
+signal('pwm_ccu4$1537281730$5',mcss,'pwm_ccu4$1537281730$5$mcss'),
+signal('pwm_ccu4$1959909231$5',pad,'pwm_ccu4$1959909231$5$pad'),
+signal('pwm_ccu4$1774056313$5',pin,'pwm_ccu4$1774056313$5$pin'),
+signal('pwm_ccu4$0500774559$6',global_signal,'pwm_ccu4$0500774559$6$global_signal'),
+signal('pwm_ccu4$0500774559$6',st,'pwm_ccu4$0500774559$6$st'),
+signal('pwm_ccu4$0500774559$6',out,'pwm_ccu4$0500774559$6$out'),
+signal('pwm_ccu4$0500774559$6',gp0_unsync,'pwm_ccu4$0500774559$6$gp0_unsync'),
+signal('pwm_ccu4$0500774559$6',gp1_unsync,'pwm_ccu4$0500774559$6$gp1_unsync'),
+signal('pwm_ccu4$0500774559$6',gp2_unsync,'pwm_ccu4$0500774559$6$gp2_unsync'),
+signal('pwm_ccu4$0500774559$6',gp0,'pwm_ccu4$0500774559$6$gp0'),
+signal('pwm_ccu4$0500774559$6',gp1,'pwm_ccu4$0500774559$6$gp1'),
+signal('pwm_ccu4$0500774559$6',gp2,'pwm_ccu4$0500774559$6$gp2'),
+signal('pwm_ccu4$0500774559$6',ps,'pwm_ccu4$0500774559$6$ps'),
+signal('pwm_ccu4$0500774559$6',mci,'pwm_ccu4$0500774559$6$mci'),
+signal('pwm_ccu4$0500774559$6',mcss,'pwm_ccu4$0500774559$6$mcss'),
+signal('pwm_ccu4$1892902478$6',pad,'pwm_ccu4$1892902478$6$pad'),
+signal('pwm_ccu4$1785372440$6',pin,'pwm_ccu4$1785372440$6$pin'),
+signal('pwm_ccu4$1756136448$7',global_signal,'pwm_ccu4$1756136448$7$global_signal'),
+signal('pwm_ccu4$1756136448$7',st,'pwm_ccu4$1756136448$7$st'),
+signal('pwm_ccu4$1756136448$7',out,'pwm_ccu4$1756136448$7$out'),
+signal('pwm_ccu4$1756136448$7',gp0_unsync,'pwm_ccu4$1756136448$7$gp0_unsync'),
+signal('pwm_ccu4$1756136448$7',gp1_unsync,'pwm_ccu4$1756136448$7$gp1_unsync'),
+signal('pwm_ccu4$1756136448$7',gp2_unsync,'pwm_ccu4$1756136448$7$gp2_unsync'),
+signal('pwm_ccu4$1756136448$7',gp0,'pwm_ccu4$1756136448$7$gp0'),
+signal('pwm_ccu4$1756136448$7',gp1,'pwm_ccu4$1756136448$7$gp1'),
+signal('pwm_ccu4$1756136448$7',gp2,'pwm_ccu4$1756136448$7$gp2'),
+signal('pwm_ccu4$1756136448$7',ps,'pwm_ccu4$1756136448$7$ps'),
+signal('pwm_ccu4$1756136448$7',mci,'pwm_ccu4$1756136448$7$mci'),
+signal('pwm_ccu4$1756136448$7',mcss,'pwm_ccu4$1756136448$7$mcss'),
+signal('pwm_ccu4$1825895725$7',pad,'pwm_ccu4$1825895725$7$pad'),
+signal('pwm_ccu4$1796688567$7',pin,'pwm_ccu4$1796688567$7$pin'),
+signal('cpu_ctrl_xmc4$01637679009$0',nmi_in,'cpu_ctrl_xmc4$01637679009$0$nmi_in'),
+signal('cpu_ctrl_xmc4$1964564605$0',db_tck,'cpu_ctrl_xmc4$1964564605$0$db_tck'),
+signal('cpu_ctrl_xmc4$1964564605$0',db_tms,'cpu_ctrl_xmc4$1964564605$0$db_tms'),
+signal('i2c_master$0125934497$0',pad,'i2c_master$0125934497$0$pad'),
+signal('i2c_master$0125934517$0',pad,'i2c_master$0125934517$0$pad'),
+signal('i2c_master$0517290200$0',dout0,'i2c_master$0517290200$0$dout0'),
+signal('i2c_master$0517290200$0',dx0ins,'i2c_master$0517290200$0$dx0ins'),
+signal('i2c_master$0517290200$0',dx1ins,'i2c_master$0517290200$0$dx1ins'),
+signal('i2c_master$0517290200$0',sclkout,'i2c_master$0517290200$0$sclkout'),
+signal('i2c_master$0517290200$0',standard_transmit_buffer_int,'i2c_master$0517290200$0$standard_transmit_buffer_int'),
+signal('i2c_master$0517290200$0',standard_receive_buffer_int,'i2c_master$0517290200$0$standard_receive_buffer_int'),
+signal('i2c_master$0517290200$0',alternate_receive_buffer_int,'i2c_master$0517290200$0$alternate_receive_buffer_int'),
+signal('i2c_master$0517290200$0',protocol_specific_int,'i2c_master$0517290200$0$protocol_specific_int'),
+signal('i2c_master$692300405$0',signal_in,'i2c_master$692300405$0$signal_in'),
+signal('i2c_master$692300343$0',signal_in,'i2c_master$692300343$0$signal_in'),
+signal('i2c_master$01076929067$0',pin,'i2c_master$01076929067$0$pin'),
+signal('i2c_master$01076929087$0',pin,'i2c_master$01076929087$0$pin'),
+signal('uart$02118624699$0',dx0ins,'uart$02118624699$0$dx0ins'),
+signal('uart$02118624699$0',dx3ins,'uart$02118624699$0$dx3ins'),
+signal('uart$02118624699$0',dout0,'uart$02118624699$0$dout0'),
+signal('uart$01053640812$0',pad,'uart$01053640812$0$pad'),
+signal('uart$01053640750$0',pad,'uart$01053640750$0$pad'),
+signal('uart$02118624699$0',protocol_specific_int,'uart$02118624699$0$protocol_specific_int'),
+signal('uart$02118624699$0',standard_transmit_buffer_int,'uart$02118624699$0$standard_transmit_buffer_int'),
+signal('uart$02118624699$0',standard_receive_buffer_int,'uart$02118624699$0$standard_receive_buffer_int'),
+signal('uart$02118624699$0',alternate_receive_buffer_int,'uart$02118624699$0$alternate_receive_buffer_int'),
+signal('uart$01148723541$0',signal_in,'uart$01148723541$0$signal_in'),
+signal('uart$01148723603$0',signal_in,'uart$01148723603$0$signal_in'),
+signal('uart$0164365666$0',pin,'uart$0164365666$0$pin'),
+signal('uart$0164365604$0',pin,'uart$0164365604$0$pin'),
+signal('digital_io$01383135420$0',swreg_out,'digital_io$01383135420$0$swreg_out'),
+signal('digital_io$01383135420$0',pad,'digital_io$01383135420$0$pad'),
+signal('digital_io$36800462$0',pin,'digital_io$36800462$0$pin'),
+signal('digital_io$01893669597$1',swreg_out,'digital_io$01893669597$1$swreg_out'),
+signal('digital_io$01893669597$1',pad,'digital_io$01893669597$1$pad'),
+signal('digital_io$02001255827$1',pin,'digital_io$02001255827$1$pin'),
+signal('digital_io$1890763522$2',swreg_out,'digital_io$1890763522$2$swreg_out'),
+signal('digital_io$1890763522$2',pad,'digital_io$1890763522$2$pad'),
+signal('digital_io$255655180$2',pin,'digital_io$255655180$2$pin'),
+signal('digital_io$1380229345$3',swreg_out,'digital_io$1380229345$3$swreg_out'),
+signal('digital_io$1380229345$3',pad,'digital_io$1380229345$3$pad'),
+signal('digital_io$01782401109$3',pin,'digital_io$01782401109$3$pin'),
+signal('digital_io$869695168$4',swreg_out,'digital_io$869695168$4$swreg_out'),
+signal('digital_io$869695168$4',pad,'digital_io$869695168$4$pad'),
+signal('digital_io$474509898$4',pin,'digital_io$474509898$4$pin'),
+signal('digital_io$359160991$5',swreg_out,'digital_io$359160991$5$swreg_out'),
+signal('digital_io$359160991$5',pad,'digital_io$359160991$5$pad'),
+signal('digital_io$01563546391$5',pin,'digital_io$01563546391$5$pin'),
+signal('digital_io$0151373186$6',swreg_out,'digital_io$0151373186$6$swreg_out'),
+signal('digital_io$0151373186$6',pad,'digital_io$0151373186$6$pad'),
+signal('digital_io$693364616$6',pin,'digital_io$693364616$6$pin'),
+signal('digital_io$0661907363$7',swreg_out,'digital_io$0661907363$7$swreg_out'),
+signal('digital_io$0661907363$7',pad,'digital_io$0661907363$7$pad'),
+signal('digital_io$01344691673$7',pin,'digital_io$01344691673$7$pin'),
+signal('digital_io$01172441540$8',swreg_out,'digital_io$01172441540$8$swreg_out'),
+signal('digital_io$01172441540$8',pad,'digital_io$01172441540$8$pad'),
+signal('digital_io$912219334$8',pin,'digital_io$912219334$8$pin'),
+signal('spi_master$502965524$0',dx0ins,'spi_master$502965524$0$dx0ins'),
+signal('spi_master$502965524$0',dout0,'spi_master$502965524$0$dout0'),
+signal('spi_master$502965524$0',dout1,'spi_master$502965524$0$dout1'),
+signal('spi_master$502965524$0',dout2,'spi_master$502965524$0$dout2'),
+signal('spi_master$502965524$0',dout3,'spi_master$502965524$0$dout3'),
+signal('spi_master$01389259346$0',pad,'spi_master$01389259346$0$pad'),
+signal('spi_master$01389259345$0',pad,'spi_master$01389259345$0$pad'),
+signal('spi_master$562750778$0',pad,'spi_master$562750778$0$pad'),
+signal('spi_master$502965524$0',sclkout,'spi_master$502965524$0$sclkout'),
+signal('spi_master$502965524$0',SPI_MASTER0sv2,'spi_master$502965524$0$SPI_MASTER0sv2'),
+signal('spi_master$454601686$0',pad,'spi_master$454601686$0$pad'),
+signal('spi_master$502965524$0',protocol_specific_int,'spi_master$502965524$0$protocol_specific_int'),
+signal('spi_master$502965524$0',standard_transmit_buffer_int,'spi_master$502965524$0$standard_transmit_buffer_int'),
+signal('spi_master$502965524$0',standard_receive_buffer_int,'spi_master$502965524$0$standard_receive_buffer_int'),
+signal('spi_master$502965524$0',alternate_receive_buffer_int,'spi_master$502965524$0$alternate_receive_buffer_int'),
+signal('spi_master$0799251154$0',signal_in,'spi_master$0799251154$0$signal_in'),
+signal('spi_master$0799251216$0',signal_in,'spi_master$0799251216$0$signal_in'),
+signal('spi_master$01389259346$0',hw_o,'spi_master$01389259346$0$hw_o'),
+signal('spi_master$01389259345$0',hw_o,'spi_master$01389259345$0$hw_o'),
+signal('spi_master$01515434204$0',pin,'spi_master$01515434204$0$pin'),
+signal('spi_master$01515434203$0',pin,'spi_master$01515434203$0$pin'),
+signal('spi_master$946297476$0',pin,'spi_master$946297476$0$pin'),
+signal('spi_master$1656703692$0',pin,'spi_master$1656703692$0$pin'),
+signal('spi_slave$01366864342$0',dx0ins,'spi_slave$01366864342$0$dx0ins'),
+signal('spi_slave$01366864342$0',dx1ins,'spi_slave$01366864342$0$dx1ins'),
+signal('spi_slave$01366864342$0',dx2ins,'spi_slave$01366864342$0$dx2ins'),
+signal('spi_slave$01366864342$0',dx3ins,'spi_slave$01366864342$0$dx3ins'),
+signal('spi_slave$01366864342$0',dx4ins,'spi_slave$01366864342$0$dx4ins'),
+signal('spi_slave$01366864342$0',dx5ins,'spi_slave$01366864342$0$dx5ins'),
+signal('spi_slave$01366864342$0',dout0,'spi_slave$01366864342$0$dout0'),
+signal('spi_slave$01366864342$0',dout1,'spi_slave$01366864342$0$dout1'),
+signal('spi_slave$1145447222$0',pad,'spi_slave$1145447222$0$pad'),
+signal('spi_slave$01333033692$0',pad,'spi_slave$01333033692$0$pad'),
+signal('spi_slave$0403454326$0',pad,'spi_slave$0403454326$0$pad'),
+signal('spi_slave$125532735$0',pad,'spi_slave$125532735$0$pad'),
+signal('spi_slave$01366864342$0',protocol_specific_int,'spi_slave$01366864342$0$protocol_specific_int'),
+signal('spi_slave$01366864342$0',standard_transmit_buffer_int,'spi_slave$01366864342$0$standard_transmit_buffer_int'),
+signal('spi_slave$01366864342$0',standard_receive_buffer_int,'spi_slave$01366864342$0$standard_receive_buffer_int'),
+signal('spi_slave$01366864342$0',alternate_receive_buffer_int,'spi_slave$01366864342$0$alternate_receive_buffer_int'),
+signal('spi_slave$01881239066$0',signal_in,'spi_slave$01881239066$0$signal_in'),
+signal('spi_slave$01881239128$0',signal_in,'spi_slave$01881239128$0$signal_in'),
+signal('spi_slave$1438010906$0',pin,'spi_slave$1438010906$0$pin'),
+signal('spi_slave$912294912$0',pin,'spi_slave$912294912$0$pin'),
+signal('spi_slave$1074287872$0',pin,'spi_slave$1074287872$0$pin'),
+signal('spi_slave$01073724151$0',pin,'spi_slave$01073724151$0$pin'),
+connected('clock_xmc4$01551391625$0$fccu','global_ccu8$1465655520$0$clk',1),
+connected('global_ccu8$1465655520$0$global_signal','pwm_ccu8$01113979708$0$global_signal',1),
+connected('pwm_ccu8$0353352492$0$pin','pwm_ccu8$1493401886$0$pad',1),
+connected('pwm_ccu8$01113979708$0$out0','pwm_ccu8$1493401886$0$pad',1),
+connected('pwm_ccu8$1493401886$0$pad','pwm_ccu8$0353352492$0$pin',1),
+connected('global_ccu8$1465655520$0$global_signal','pwm_ccu8$1142931299$1$global_signal',1),
+connected('pwm_ccu8$608261525$1$pin','pwm_ccu8$1704752799$1$pad',1),
+connected('pwm_ccu8$1142931299$1$out0','pwm_ccu8$1704752799$1$pad',1),
+connected('pwm_ccu8$1704752799$1$pad','pwm_ccu8$608261525$1$pin',1),
+connected('global_ccu8$1465655520$0$global_signal','pwm_ccu8$0895124990$2$global_signal',1),
+connected('pwm_ccu8$1569875542$2$pin','pwm_ccu8$1916103712$2$pad',1),
+connected('pwm_ccu8$1598504695$2$pin','pwm_ccu8$1944732865$2$pad',1),
+connected('pwm_ccu8$0895124990$2$out0','pwm_ccu8$1916103712$2$pad',1),
+connected('pwm_ccu8$0895124990$2$out2','pwm_ccu8$1944732865$2$pad',1),
+connected('pwm_ccu8$1916103712$2$pad','pwm_ccu8$1569875542$2$pin',1),
+connected('pwm_ccu8$1944732865$2$pad','pwm_ccu8$1598504695$2$pin',1),
+connected('global_ccu8$1465655520$0$global_signal','pwm_ccu8$1361786017$3$global_signal',1),
+connected('pwm_ccu8$01763477737$3$pin','pwm_ccu8$2127454625$3$pad',1),
+connected('pwm_ccu8$01734848584$3$pin','pwm_ccu8$02138883518$3$pad',1),
+connected('pwm_ccu8$1361786017$3$out0','pwm_ccu8$2127454625$3$pad',1),
+connected('pwm_ccu8$1361786017$3$out2','pwm_ccu8$02138883518$3$pad',1),
+connected('pwm_ccu8$2127454625$3$pad','pwm_ccu8$01763477737$3$pin',1),
+connected('pwm_ccu8$02138883518$3$pad','pwm_ccu8$01734848584$3$pin',1),
+connected('clock_xmc4$01551391625$0$fccu','global_ccu4$01760137752$0$clk',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm_ccu4$01157338713$0$global_signal',1),
+connected('pwm_ccu4$1717475678$0$pin','pwm_ccu4$02000024300$0$pad',1),
+connected('pwm_ccu4$01157338713$0$out','pwm_ccu4$02000024300$0$pad',1),
+connected('pwm_ccu4$02000024300$0$pad','pwm_ccu4$1717475678$0$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm_ccu4$1099572294$1$global_signal',1),
+connected('pwm_ccu4$1728791805$1$pin','pwm_ccu4$02067031053$1$pad',1),
+connected('pwm_ccu4$1099572294$1$out','pwm_ccu4$02067031053$1$pad',1),
+connected('pwm_ccu4$02067031053$1$pad','pwm_ccu4$1728791805$1$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm_ccu4$0938483995$2$global_signal',1),
+connected('pwm_ccu4$1740107932$2$pin','pwm_ccu4$02134037806$2$pad',1),
+connected('pwm_ccu4$0938483995$2$out','pwm_ccu4$02134037806$2$pad',1),
+connected('pwm_ccu4$02134037806$2$pad','pwm_ccu4$1740107932$2$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm_ccu4$1318427012$3$global_signal',1),
+connected('pwm_ccu4$1751424059$3$pin','pwm_ccu4$2093922737$3$pad',1),
+connected('pwm_ccu4$1318427012$3$out','pwm_ccu4$2093922737$3$pad',1),
+connected('pwm_ccu4$2093922737$3$pad','pwm_ccu4$1751424059$3$pin',1),
+connected('clock_xmc4$01551391625$0$fccu','global_ccu4$01748821625$1$clk',1),
+connected('global_ccu4$01748821625$1$global_signal','pwm_ccu4$0719629277$4$global_signal',1),
+connected('pwm_ccu4$1762740186$4$pin','pwm_ccu4$2026915984$4$pad',1),
+connected('pwm_ccu4$0719629277$4$out','pwm_ccu4$2026915984$4$pad',1),
+connected('pwm_ccu4$2026915984$4$pad','pwm_ccu4$1762740186$4$pin',1),
+connected('global_ccu4$01748821625$1$global_signal','pwm_ccu4$1537281730$5$global_signal',1),
+connected('pwm_ccu4$1774056313$5$pin','pwm_ccu4$1959909231$5$pad',1),
+connected('pwm_ccu4$1537281730$5$out','pwm_ccu4$1959909231$5$pad',1),
+connected('pwm_ccu4$1959909231$5$pad','pwm_ccu4$1774056313$5$pin',1),
+connected('global_ccu4$01748821625$1$global_signal','pwm_ccu4$0500774559$6$global_signal',1),
+connected('pwm_ccu4$1785372440$6$pin','pwm_ccu4$1892902478$6$pad',1),
+connected('pwm_ccu4$0500774559$6$out','pwm_ccu4$1892902478$6$pad',1),
+connected('pwm_ccu4$1892902478$6$pad','pwm_ccu4$1785372440$6$pin',1),
+connected('global_ccu4$01748821625$1$global_signal','pwm_ccu4$1756136448$7$global_signal',1),
+connected('pwm_ccu4$1796688567$7$pin','pwm_ccu4$1825895725$7$pad',1),
+connected('pwm_ccu4$1756136448$7$out','pwm_ccu4$1825895725$7$pad',1),
+connected('pwm_ccu4$1825895725$7$pad','pwm_ccu4$1796688567$7$pin',1),
+connected('i2c_master$01076929087$0$pin','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$01076929067$0$pin','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$sclkout','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$0517290200$0$dout0','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$alternate_receive_buffer_int','i2c_master$692300343$0$signal_in',1),
+connected('i2c_master$0517290200$0$standard_receive_buffer_int','i2c_master$692300343$0$signal_in',1),
+connected('i2c_master$0517290200$0$standard_transmit_buffer_int','i2c_master$692300405$0$signal_in',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$01076929087$0$pin',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$0517290200$0$dx1ins',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$01076929067$0$pin',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$0517290200$0$dx0ins',1),
+connected('uart$0164365666$0$pin','uart$01053640812$0$pad',1),
+connected('uart$0164365604$0$pin','uart$01053640750$0$pad',1),
+connected('uart$02118624699$0$dout0','uart$01053640750$0$pad',1),
+connected('uart$02118624699$0$alternate_receive_buffer_int','uart$01148723603$0$signal_in',1),
+connected('uart$02118624699$0$standard_receive_buffer_int','uart$01148723603$0$signal_in',1),
+connected('uart$02118624699$0$standard_transmit_buffer_int','uart$01148723541$0$signal_in',1),
+connected('uart$01053640812$0$pad','uart$0164365666$0$pin',1),
+connected('uart$01053640812$0$pad','uart$02118624699$0$dx0ins',1),
+connected('uart$01053640750$0$pad','uart$0164365604$0$pin',1),
+connected('digital_io$36800462$0$pin','digital_io$01383135420$0$pad',1),
+connected('digital_io$01383135420$0$pad','digital_io$36800462$0$pin',1),
+connected('digital_io$02001255827$1$pin','digital_io$01893669597$1$pad',1),
+connected('digital_io$01893669597$1$pad','digital_io$02001255827$1$pin',1),
+connected('digital_io$255655180$2$pin','digital_io$1890763522$2$pad',1),
+connected('digital_io$1890763522$2$pad','digital_io$255655180$2$pin',1),
+connected('digital_io$01782401109$3$pin','digital_io$1380229345$3$pad',1),
+connected('digital_io$1380229345$3$pad','digital_io$01782401109$3$pin',1),
+connected('digital_io$474509898$4$pin','digital_io$869695168$4$pad',1),
+connected('digital_io$869695168$4$pad','digital_io$474509898$4$pin',1),
+connected('digital_io$01563546391$5$pin','digital_io$359160991$5$pad',1),
+connected('digital_io$359160991$5$pad','digital_io$01563546391$5$pin',1),
+connected('digital_io$693364616$6$pin','digital_io$0151373186$6$pad',1),
+connected('digital_io$0151373186$6$pad','digital_io$693364616$6$pin',1),
+connected('digital_io$01344691673$7$pin','digital_io$0661907363$7$pad',1),
+connected('digital_io$0661907363$7$pad','digital_io$01344691673$7$pin',1),
+connected('digital_io$912219334$8$pin','digital_io$01172441540$8$pad',1),
+connected('digital_io$01172441540$8$pad','digital_io$912219334$8$pin',1),
+connected('spi_master$01515434204$0$pin','spi_master$01389259346$0$pad',1),
+connected('spi_master$01515434203$0$pin','spi_master$01389259345$0$pad',1),
+connected('spi_master$946297476$0$pin','spi_master$562750778$0$pad',1),
+connected('spi_master$1656703692$0$pin','spi_master$454601686$0$pad',1),
+connected('spi_master$502965524$0$dout0','spi_master$01389259346$0$pad',1),
+connected('spi_master$502965524$0$alternate_receive_buffer_int','spi_master$0799251216$0$signal_in',1),
+connected('spi_master$502965524$0$standard_receive_buffer_int','spi_master$0799251216$0$signal_in',1),
+connected('spi_master$502965524$0$standard_transmit_buffer_int','spi_master$0799251154$0$signal_in',1),
+connected('spi_master$01389259346$0$pad','spi_master$01515434204$0$pin',1),
+connected('spi_master$01389259345$0$pad','spi_master$01515434203$0$pin',1),
+connected('spi_master$01389259345$0$pad','spi_master$502965524$0$dx0ins',1),
+connected('spi_master$562750778$0$pad','spi_master$946297476$0$pin',1),
+connected('spi_master$502965524$0$sclkout','spi_master$562750778$0$pad',1),
+connected('spi_master$454601686$0$pad','spi_master$1656703692$0$pin',1),
+connected('spi_master$502965524$0$SPI_MASTER0sv2','spi_master$454601686$0$pad',1),
+connected('spi_slave$912294912$0$pin','spi_slave$1145447222$0$pad',1),
+connected('spi_slave$1438010906$0$pin','spi_slave$01333033692$0$pad',1),
+connected('spi_slave$1074287872$0$pin','spi_slave$0403454326$0$pad',1),
+connected('spi_slave$01073724151$0$pin','spi_slave$125532735$0$pad',1),
+connected('spi_slave$01366864342$0$dout0','spi_slave$1145447222$0$pad',1),
+connected('spi_slave$01366864342$0$alternate_receive_buffer_int','spi_slave$01881239128$0$signal_in',1),
+connected('spi_slave$01366864342$0$standard_receive_buffer_int','spi_slave$01881239128$0$signal_in',1),
+connected('spi_slave$01366864342$0$standard_transmit_buffer_int','spi_slave$01881239066$0$signal_in',1),
+connected('spi_slave$1145447222$0$pad','spi_slave$912294912$0$pin',1),
+connected('spi_slave$01333033692$0$pad','spi_slave$1438010906$0$pin',1),
+connected('spi_slave$01333033692$0$pad','spi_slave$01366864342$0$dx0ins',1),
+connected('spi_slave$0403454326$0$pad','spi_slave$1074287872$0$pin',1),
+connected('spi_slave$0403454326$0$pad','spi_slave$01366864342$0$dx1ins',1),
+connected('spi_slave$125532735$0$pad','spi_slave$01073724151$0$pin',1),
+connected('spi_slave$125532735$0$pad','spi_slave$01366864342$0$dx2ins',1),
+rg_constraint_property_value('spi_master$01389259345$0', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(SPI_MASTER0sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15]),
+rg_constraint_property_value('spi_master$01389259346$0', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('pwm_ccu4$02134037806$2', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO1sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$01893669597$1',iocr_oe,1),
+rg_constraint_property_value('digital_io$01893669597$1', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO6sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$0151373186$6',iocr_oe,1),
+rg_constraint_property_value('digital_io$0151373186$6', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO5sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$359160991$5',iocr_oe,1),
+rg_constraint_property_value('digital_io$359160991$5', speed_class of rg_property, ['A1','A1+','A2']),
+register_value('spi_master$502965524$0',ccr_hpcen,0),
+register_value('spi_master$502965524$0',tbctr_size,4),
+register_value('spi_master$502965524$0',rbctr_size,4),
+rg_constraint_property_value('pwm_ccu4$1959909231$5', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO3sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$1380229345$3',iocr_oe,1),
+rg_constraint_property_value('digital_io$1380229345$3', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('i2c_master$0125934517$0', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('spi_master$562750778$0', speed_class of rg_property, ['A1','A1+','A2']),
+register_value('i2c_master$0517290200$0',tbctr_size,4),
+register_value('i2c_master$0517290200$0',rbctr_size,4),
+uri_element_range(DIGITAL_IO8sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$01172441540$8',iocr_oe,1),
+rg_constraint_property_value('digital_io$01172441540$8', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('i2c_master$0125934497$0', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO2sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$1890763522$2',iocr_oe,1),
+rg_constraint_property_value('digital_io$1890763522$2', speed_class of rg_property, ['A1','A1+','A2']),
+register_value('uart$02118624699$0',ccr_hpcen,0),
+register_value('uart$02118624699$0',tbctr_size,4),
+register_value('uart$02118624699$0',rbctr_size,4),
+rg_constraint_property_value('pwm_ccu4$1892902478$6', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO4sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$869695168$4',iocr_oe,1),
+rg_constraint_property_value('digital_io$869695168$4', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('pwm_ccu4$1825895725$7', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO0sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$01383135420$0',iocr_oe,1),
+rg_constraint_property_value('digital_io$01383135420$0', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(DIGITAL_IO7sv0,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+register_value('digital_io$0661907363$7',iocr_oe,1),
+rg_constraint_property_value('digital_io$0661907363$7', speed_class of rg_property, ['A1','A1+','A2']),
+register_value('spi_slave$01366864342$0',ccr_hpcen,0),
+register_value('spi_slave$01366864342$0',tbctr_size,4),
+register_value('spi_slave$01366864342$0',rbctr_size,4),
+rg_constraint_property_value('uart$01053640750$0', speed_class of rg_property, ['A1','A1+','A2']),
+uri_element_range(SPI_MASTER0sv2,[selo0, selo1, selo2, selo3, selo4, selo5, selo6, selo7]),
+rg_constraint_property_value('pwm_ccu4$02000024300$0', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('pwm_ccu4$2026915984$4', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('pwm_ccu4$02067031053$1', speed_class of rg_property, ['A1','A1+','A2']),
+rg_constraint_property_value('pwm_ccu4$2093922737$3', speed_class of rg_property, ['A1','A1+','A2'])
+ ],Vars,Regs,Appslocalvars),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+====================================== SOLVER ENVIRONMENT ========================================
+
+
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:52.046
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.10/app/SPI_SLAVE/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:52.175
+!MESSAGE **************De-serialization is called for failure solver action*************************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:54.288
+!MESSAGE Time taken for de-serialization in msec: 2111
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:27:54.289
+!MESSAGE *****************************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:59.178
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:27:59.305
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.3.30/app/SPI_MASTER/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:00.261
+!MESSAGE Time taken for processing complete solver result is: 151 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:00.262
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:00.262
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:00.324
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:00.633
+!MESSAGE Time Taken By Serialization  : 308 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:00.664
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:00.730
+!MESSAGE Time taken for serialization in msec: 467
+
+!ENTRY SOLVER 1 0 2026-03-30 22:28:00.773
+!MESSAGE Time Taken By Solver for UI Action: 1458 ms
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:28:11.443
+!MESSAGE USER_ACTION : App Getting Added: SPI_SLAVE [4.0.10]
+
+!ENTRY SOLVER 1 0 2026-03-30 22:28:11.504
+!MESSAGE USER_ACTION : Creating an APP: SPI_SLAVE [4.0.10]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:28:11.565
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CPU_CTRL_XMC4 [4.0.2] lStoreAppVersion: 4.0.18:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:28:11.651
+!MESSAGE USER_ACTION : Created APP: SPI_SLAVE [4.0.10]-->http://resources/4.0.10/app/SPI_SLAVE/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:12.600
+!MESSAGE Time taken for processing complete solver result is: 102 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:12.601
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:12.601
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:12.676
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:12.872
+!MESSAGE Time Taken By Serialization  : 195 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:12.908
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:13.077
+!MESSAGE Time taken for serialization in msec: 477
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-03-30 22:28:18.303
+!MESSAGE USER_ACTION : Time taken for opening editor is: 890 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:20.828
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_enablepinconfig" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:21.817
+!MESSAGE Time taken for processing complete solver result is: 112 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:21.818
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:21.818
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:21.916
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:22.104
+!MESSAGE Time Taken By Serialization  : 187 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:22.150
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:22.288
+!MESSAGE Time taken for serialization in msec: 470
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:22.342
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 17
+
+!ENTRY SOLVER 1 0 2026-03-30 22:28:22.342
+!MESSAGE Time Taken By Solver for UI Action: 1431 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:27.930
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_transmit_mode" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:28.872
+!MESSAGE Time taken for processing complete solver result is: 49 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:28.872
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:28.872
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:28.953
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:29.176
+!MESSAGE Time Taken By Serialization  : 222 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:29.216
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:29.347
+!MESSAGE Time taken for serialization in msec: 475
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:29.393
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 11
+
+!ENTRY SOLVER 1 0 2026-03-30 22:28:29.394
+!MESSAGE Time Taken By Solver for UI Action: 1374 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:30.813
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_receive_mode" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:32.340
+!MESSAGE Time taken for processing complete solver result is: 135 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:32.342
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:32.342
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:32.414
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:32.605
+!MESSAGE Time Taken By Serialization  : 190 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:32.655
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:32.808
+!MESSAGE Time taken for serialization in msec: 466
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:32.868
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 13
+
+!ENTRY SOLVER 1 0 2026-03-30 22:28:32.869
+!MESSAGE Time Taken By Solver for UI Action: 1484 ms
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:39.428
+!MESSAGE USER_ACTION : Setting value = "8" of "ginteger_frame_length" in APP: SPI_SLAVE/4.0.10/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:39.435
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:39.435
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:39.576
+!MESSAGE Time taken for serialization in msec: 141
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:39.576
+!MESSAGE *****************************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:46.460
+!MESSAGE Time taken for processing complete solver result is: 84 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:46.460
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:46.460
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:46.527
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:46.695
+!MESSAGE Time Taken By Serialization  : 168 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:46.729
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:46.856
+!MESSAGE Time taken for serialization in msec: 396
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:46.926
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 10
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:52.492
+!MESSAGE Time taken for processing complete solver result is: 58 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:52.492
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:52.493
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:52.563
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:52.708
+!MESSAGE Time Taken By Serialization  : 144 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:52.740
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:52.857
+!MESSAGE Time taken for serialization in msec: 365
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:52.899
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 9
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:57.746
+!MESSAGE Time taken for processing complete solver result is: 67 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:57.747
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:57.749
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:57.816
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:28:57.942
+!MESSAGE Time Taken By Serialization  : 125 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:57.972
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:28:58.079
+!MESSAGE Time taken for serialization in msec: 330
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:28:58.132
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 10
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:03.462
+!MESSAGE Time taken for processing complete solver result is: 90 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:03.462
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:03.463
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:03.534
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:29:03.710
+!MESSAGE Time Taken By Serialization  : 173 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:03.749
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:03.877
+!MESSAGE Time taken for serialization in msec: 414
+
+!ENTRY UI_EDITOR 1 0 2026-03-30 22:29:03.930
+!MESSAGE USER_ACTION : Time taken for refreshing SPI_SLAVE/4.0.10/0 editor is : 9
+
+!ENTRY CODEGEN 1 0 2026-03-30 22:29:14.843
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-03-30 22:29:15.584
+!MESSAGE Code generation completed...
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:24.138
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:24.210
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-03-30 22:29:24.402
+!MESSAGE Time Taken By Serialization  : 192 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-03-30 22:29:24.644
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-03-30 22:29:24.654
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 124 msec 
+
+!ENTRY SOLVER 1 0 2026-03-30 22:29:24.655
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-03-30 22:29:24.922
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-03-30 22:29:27.315
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob

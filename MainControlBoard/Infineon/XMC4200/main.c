@@ -11,6 +11,7 @@
 #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
 #include "xmc_gpio.h"
 #include "xmc_device.h"
+#include "xmc_spi.h"
 
 /**
 
@@ -22,38 +23,21 @@
  * code.
  */
 
-int main(void)
-{
-  DAVE_STATUS_t status;
+uint8_t tx_data[10];
+uint8_t rx_data[10];
 
-  status = DAVE_Init();           /* Initialization of DAVE APPs  */
+int main(void){
+    DAVE_Init();
+    memset(tx_data,0x55,10);
+    memset(rx_data,0,10);
 
-  if (status != DAVE_STATUS_SUCCESS)
-  {
-    /* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
-    XMC_DEBUG("DAVE APPs initialization failed\n");
+    XMC_GPIO_SetMode(XMC_GPIO_PORT0,9,XMC_GPIO_MODE_INPUT_TRISTATE);
 
-    while(1U)
-    {
+    while (1){
+    	SPI_SLAVE_Transmit(&SPI_SLAVE_0,tx_data,10);
+    	SPI_SLAVE_Receive(&SPI_SLAVE_0,rx_data, 10);
+    	while(XMC_GPIO_GetInput(XMC_GPIO_PORT0,9)==1){
 
+    	}
     }
-  }
-
-  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
-  XMC_GPIO_SetMode(XMC_GPIO_PORT1,9,XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
-  XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT1, 9);
-
-  while(1U)
-  {
-      for (volatile uint32_t i = 0; i < 1000000; ++i){
-
-      }
-      XMC_GPIO_SetOutputLow(XMC_GPIO_PORT1,9);
-       for (volatile uint32_t i = 0; i < 1000000; ++i){
-
-       }
-
-       	   XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT1,9);
-  }
-
 }

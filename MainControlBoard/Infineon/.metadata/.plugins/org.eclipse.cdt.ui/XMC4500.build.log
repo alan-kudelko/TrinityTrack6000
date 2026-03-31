@@ -1,27 +1,82 @@
-16:22:59 **** Incremental Build of configuration Debug for project XMC4500 ****
+21:24:12 **** Build of configuration Debug for project XMC4500 ****
 "\"D:\\Programy\\4.5.0.202105191637\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j12 all 
-'Building target: XMC4500.elf'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_compiler+0x0): multiple definition of `info_compiler'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_compiler+0x0): first defined here
-./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_platform+0x0): multiple definition of `info_platform'
-'Invoking: ARM-GCC C++ Linker'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_platform+0x0): first defined here
-./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_arch+0x0): multiple definition of `info_arch'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_arch+0x0): first defined here
-./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_language_standard_default+0x0): multiple definition of `info_language_standard_default'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_language_standard_default+0x0): first defined here
-./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_language_extensions_default+0x0): multiple definition of `info_language_extensions_default'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_language_extensions_default+0x0): first defined here
-./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o: In function `main':
-D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4500\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.c:909: multiple definition of `main'
-"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-g++" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"XMC4500.map" -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mthumb -g -gdwarf-2 -o "XMC4500.elf" "@objects.rsp"  -lm
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4500\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.cpp:925: first defined here
-makefile:73: recipe for target 'XMC4500.elf' failed
-./main.o: In function `main':
-D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4500\Debug/../main.c:24: multiple definition of `main'
-./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4500\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.cpp:925: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [XMC4500.elf] Error 1
+'Building file: ../main.c'
+../main.c: In function 'SPI_Slave_Init':
+../main.c:36:5: error: unknown type name 'XMC_SPI_CH_CONFIG_t'
+     XMC_SPI_CH_CONFIG_t config = {
+     ^
+'Invoking: ARM-GCC C Compiler'
+../main.c:37:9: error: field name not in record or union initializer
+         .baudrate = 1000000, // nieistotne w slave
+"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "main.o" -DXMC4500_F100x1024 -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4500/Libraries/XMCLib/inc" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4500/Libraries/CMSIS/Include" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4500/Libraries/CMSIS/Infineon/XMC4500_series/Include" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4500" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4500/Dave/Generated" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4500/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -mfloat-abi=softfp -Wa,-adhlns="main.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d main.o" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mthumb -g -gdwarf-2 -o "main.o" "../main.c" 
+subdir.mk:18: recipe for target 'main.o' failed
+         ^
+../main.c:37:9: error: (near initialization for 'config')
+../main.c:38:9: error: field name not in record or union initializer
+         .bus_mode = XMC_SPI_CH_BUS_MODE_SLAVE,
+         ^
+../main.c:38:9: error: (near initialization for 'config')
+../main.c:38:21: error: 'XMC_SPI_CH_BUS_MODE_SLAVE' undeclared (first use in this function)
+         .bus_mode = XMC_SPI_CH_BUS_MODE_SLAVE,
+                     ^
+../main.c:38:21: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:38:9: warning: excess elements in scalar initializer
+         .bus_mode = XMC_SPI_CH_BUS_MODE_SLAVE,
+         ^
+../main.c:38:9: warning: (near initialization for 'config')
+../main.c:39:9: error: field name not in record or union initializer
+         .selo_inversion = XMC_SPI_CH_SLAVE_SEL_INV_TO_MSLS,
+         ^
+../main.c:39:9: error: (near initialization for 'config')
+../main.c:39:27: error: 'XMC_SPI_CH_SLAVE_SEL_INV_TO_MSLS' undeclared (first use in this function)
+         .selo_inversion = XMC_SPI_CH_SLAVE_SEL_INV_TO_MSLS,
+                           ^
+../main.c:39:9: warning: excess elements in scalar initializer
+         .selo_inversion = XMC_SPI_CH_SLAVE_SEL_INV_TO_MSLS,
+         ^
+../main.c:39:9: warning: (near initialization for 'config')
+../main.c:40:9: error: field name not in record or union initializer
+         .parity_mode = XMC_USIC_CH_PARITY_MODE_NONE
+         ^
+../main.c:40:9: error: (near initialization for 'config')
+../main.c:40:24: error: 'XMC_USIC_CH_PARITY_MODE_NONE' undeclared (first use in this function)
+         .parity_mode = XMC_USIC_CH_PARITY_MODE_NONE
+                        ^
+../main.c:41:5: warning: excess elements in scalar initializer
+     };
+     ^
+../main.c:41:5: warning: (near initialization for 'config')
+../main.c:43:5: warning: implicit declaration of function 'XMC_SPI_CH_Init' [-Wimplicit-function-declaration]
+     XMC_SPI_CH_Init(SPI_CH, &config);
+     ^
+../main.c:22:22: error: 'XMC_SPI0_CH0' undeclared (first use in this function)
+ #define SPI_CH       XMC_SPI0_CH0
+                      ^
+../main.c:43:21: note: in expansion of macro 'SPI_CH'
+     XMC_SPI_CH_Init(SPI_CH, &config);
+                     ^
+../main.c:46:5: warning: implicit declaration of function 'XMC_SPI_CH_SetInputSource' [-Wimplicit-function-declaration]
+     XMC_SPI_CH_SetInputSource(SPI_CH, XMC_SPI_CH_INPUT_DIN0, USIC0_C0_DX0_P2_2);
+     ^
+../main.c:46:39: error: 'XMC_SPI_CH_INPUT_DIN0' undeclared (first use in this function)
+     XMC_SPI_CH_SetInputSource(SPI_CH, XMC_SPI_CH_INPUT_DIN0, USIC0_C0_DX0_P2_2);
+                                       ^
+../main.c:46:62: error: 'USIC0_C0_DX0_P2_2' undeclared (first use in this function)
+     XMC_SPI_CH_SetInputSource(SPI_CH, XMC_SPI_CH_INPUT_DIN0, USIC0_C0_DX0_P2_2);
+                                                              ^
+../main.c:49:5: warning: implicit declaration of function 'XMC_USIC_CH_RXFIFO_Configure' [-Wimplicit-function-declaration]
+     XMC_USIC_CH_RXFIFO_Configure(SPI_CH,
+     ^
+../main.c:51:9: error: 'XMC_USIC_CH_FIFO_SIZE_16WORDS' undeclared (first use in this function)
+         XMC_USIC_CH_FIFO_SIZE_16WORDS,
+         ^
+../main.c:56:5: warning: implicit declaration of function 'XMC_USIC_CH_TXFIFO_Configure' [-Wimplicit-function-declaration]
+     XMC_USIC_CH_TXFIFO_Configure(SPI_CH,
+     ^
+../main.c:63:5: warning: implicit declaration of function 'XMC_SPI_CH_Start' [-Wimplicit-function-declaration]
+     XMC_SPI_CH_Start(SPI_CH);
+     ^
+make: *** [main.o] Error 1
 
-16:22:59 Build Finished (took 569ms)
+21:24:12 Build Finished (took 802ms)
 

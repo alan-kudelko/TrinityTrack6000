@@ -47,14 +47,17 @@ main.o main.d main.o: ../main.c \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc4_usic_map.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/I2C_MASTER/i2c_master_conf.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/I2C_MASTER/i2c_master_extern.h \
- D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave.h \
- D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h \
- D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_conf.h \
- D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_extern.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/UART/uart.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_uart.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/UART/uart_conf.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/UART/uart_extern.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DIGITAL_IO/digital_io.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DIGITAL_IO/digital_io_conf.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DIGITAL_IO/digital_io_extern.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_conf.h \
+ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_extern.h \
  D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_device.h
 
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DAVE.h:
@@ -153,14 +156,6 @@ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/I2
 
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/I2C_MASTER/i2c_master_extern.h:
 
-D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave.h:
-
-D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h:
-
-D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_conf.h:
-
-D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_extern.h:
-
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/UART/uart.h:
 
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_uart.h:
@@ -168,5 +163,19 @@ D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/UART/uart_conf.h:
 
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/UART/uart_extern.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DIGITAL_IO/digital_io.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DIGITAL_IO/digital_io_conf.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/DIGITAL_IO/digital_io_extern.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_spi.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_conf.h:
+
+D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated/SPI_SLAVE/spi_slave_extern.h:
 
 D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc/xmc_device.h:

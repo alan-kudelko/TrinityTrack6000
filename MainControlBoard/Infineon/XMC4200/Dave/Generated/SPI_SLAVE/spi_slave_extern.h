@@ -60,7 +60,7 @@ extern "C" {
   
 /*Extern declaration for callback functions and SPI_SLAVE APP instance handles*/
 
-  extern SPI_SLAVE_t SPI_BUS; 
+  extern SPI_SLAVE_t SPI_SLAVE_0; 
                     
 #ifdef __cplusplus
 }

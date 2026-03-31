@@ -5383,8 +5383,8 @@
  691 0025 00       	 .byte 0
  692 0026 04       	 .byte 4
  693 0027 04       	 .byte 4
- 694 0028 5D       	 .byte 93
- 695 0029 5B       	 .byte 91
+ 694 0028 5B       	 .byte 91
+ 695 0029 5A       	 .byte 90
  696 002a 0000     	 .space 2
  697              	 .global I2C_BUS_runtime
  698              	 .section .data.I2C_BUS_runtime,"aw",%progbits
@@ -5395,8 +5395,8 @@
  703      00000000 
  703      00000000 
  703      00000000 
- 704 0024 03       	 .byte 3
- 705 0025 01       	 .byte 1
+ 704 0024 01       	 .byte 1
+ 705 0025 00       	 .byte 0
  706 0026 00       	 .byte 0
  707 0027 00       	 .byte 0
  708 0028 00       	 .byte 0
@@ -5448,9 +5448,9 @@
  155:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** };
  156:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** I2C_MASTER_RUNTIME_t I2C_BUS_runtime =
  157:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 158:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_ack_sr = 0x3U,
+ 158:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_ack_sr = 0x1U,
  159:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_busy = false,
- 160:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rx_sr = 0x1U,
+ 160:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rx_sr = 0x0U,
  161:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rx_busy = false,
  162:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .bus_acquired = false
  163:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** };
@@ -5522,10 +5522,10 @@
  768              	 .loc 4 187 0
  769 0038 2848     	 ldr r0,.L31
  770 003a 1021     	 movs r1,#16
- 771 003c 0322     	 movs r2,#3
+ 771 003c 0122     	 movs r2,#1
  772 003e FFF7FEFF 	 bl XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
  188:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                                XMC_USIC_CH_TXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
- 189:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                              ((uint32_t)3));
+ 189:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                              ((uint32_t)1));
  190:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_TXFIFO_EnableEvent(XMC_I2C1_CH0, tx_fifo_events);
  773              	 .loc 4 190 0
  774 0042 2648     	 ldr r0,.L31
@@ -5546,18 +5546,18 @@
  783              	 .loc 4 196 0
  784 0056 2148     	 ldr r0,.L31
  785 0058 1021     	 movs r1,#16
- 786 005a 0122     	 movs r2,#1
+ 786 005a 0022     	 movs r2,#0
  787 005c FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
  197:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                                XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
- 198:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                               ((uint32_t)0x1));
+ 198:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                               ((uint32_t)0x0));
  199:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_I2C1_CH0,
  788              	 .loc 4 199 0
  789 0060 1E48     	 ldr r0,.L31
  790 0062 1321     	 movs r1,#19
- 791 0064 0122     	 movs r2,#1
+ 791 0064 0022     	 movs r2,#0
  792 0066 FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
  200:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                                XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_ALTERNATE,
- 201:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                               ((uint32_t)0x1));
+ 201:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                               ((uint32_t)0x0));
  202:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_EnableEvent(XMC_I2C1_CH0, rx_fifo_events);
  793              	 .loc 4 202 0
  794 006a 1C48     	 ldr r0,.L31
@@ -5589,7 +5589,7 @@
  813 0090 174A     	 ldr r2,.L31+20
  814 0092 FFF7FEFF 	 bl XMC_GPIO_Init
  210:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** /* Tx interrupt priority settings */
- 211:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)93, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),63,0));
+ 211:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)91, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),63,0));
  815              	 .loc 4 211 0
  816 0096 FFF7FEFF 	 bl __NVIC_GetPriorityGrouping
  817 009a 0346     	 mov r3,r0
@@ -5598,14 +5598,14 @@
  820 00a0 0022     	 movs r2,#0
  821 00a2 FFF7FEFF 	 bl NVIC_EncodePriority
  822 00a6 0346     	 mov r3,r0
- 823 00a8 5D20     	 movs r0,#93
+ 823 00a8 5B20     	 movs r0,#91
  824 00aa 1946     	 mov r1,r3
  825 00ac FFF7FEFF 	 bl __NVIC_SetPriority
- 212:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)93);/* Rx interrupt priority settings */
+ 212:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)91);/* Rx interrupt priority settings */
  826              	 .loc 4 212 0
- 827 00b0 5D20     	 movs r0,#93
+ 827 00b0 5B20     	 movs r0,#91
  828 00b2 FFF7FEFF 	 bl __NVIC_EnableIRQ
- 213:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)91, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),63,0));
+ 213:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)90, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),63,0));
  829              	 .loc 4 213 0
  830 00b6 FFF7FEFF 	 bl __NVIC_GetPriorityGrouping
  831 00ba 0346     	 mov r3,r0
@@ -5614,12 +5614,12 @@
  834 00c0 0022     	 movs r2,#0
  835 00c2 FFF7FEFF 	 bl NVIC_EncodePriority
  836 00c6 0346     	 mov r3,r0
- 837 00c8 5B20     	 movs r0,#91
+ 837 00c8 5A20     	 movs r0,#90
  838 00ca 1946     	 mov r1,r3
  839 00cc FFF7FEFF 	 bl __NVIC_SetPriority
- 214:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)91);}
+ 214:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)90);}
  840              	 .loc 4 214 0
- 841 00d0 5B20     	 movs r0,#91
+ 841 00d0 5A20     	 movs r0,#90
  842 00d2 FFF7FEFF 	 bl __NVIC_EnableIRQ
  843 00d6 0837     	 adds r7,r7,#8
  844              	.LCFI63:
@@ -5640,12 +5640,12 @@
  859 00f0 00000000 	 .word I2C_BUS_scl_pin_config
  860              	 .cfi_endproc
  861              	.LFE252:
- 863              	 .section .text.USIC1_3_IRQHandler,"ax",%progbits
+ 863              	 .section .text.USIC1_1_IRQHandler,"ax",%progbits
  864              	 .align 2
- 865              	 .global USIC1_3_IRQHandler
+ 865              	 .global USIC1_1_IRQHandler
  866              	 .thumb
  867              	 .thumb_func
- 869              	USIC1_3_IRQHandler:
+ 869              	USIC1_1_IRQHandler:
  870              	.LFB253:
  215:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** /*Transmit ISR*/
  216:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** void I2C_BUS_TX_HANDLER()
@@ -5675,12 +5675,12 @@
  891 000c 00000000 	 .word I2C_BUS
  892              	 .cfi_endproc
  893              	.LFE253:
- 895              	 .section .text.USIC1_1_IRQHandler,"ax",%progbits
+ 895              	 .section .text.USIC1_0_IRQHandler,"ax",%progbits
  896              	 .align 2
- 897              	 .global USIC1_1_IRQHandler
+ 897              	 .global USIC1_0_IRQHandler
  898              	 .thumb
  899              	 .thumb_func
- 901              	USIC1_1_IRQHandler:
+ 901              	USIC1_0_IRQHandler:
  902              	.LFB254:
  220:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** /*Receive ISR*/
  221:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** void I2C_BUS_RX_HANDLER()
@@ -5765,12 +5765,12 @@ DEFINED SYMBOLS
     {standard input}:712    .data.I2C_BUS:00000000 $d
     {standard input}:720    .text.I2C_BUS_init:00000000 $t
     {standard input}:854    .text.I2C_BUS_init:000000dc $d
-    {standard input}:864    .text.USIC1_3_IRQHandler:00000000 $t
-    {standard input}:869    .text.USIC1_3_IRQHandler:00000000 USIC1_3_IRQHandler
-    {standard input}:891    .text.USIC1_3_IRQHandler:0000000c $d
-    {standard input}:896    .text.USIC1_1_IRQHandler:00000000 $t
-    {standard input}:901    .text.USIC1_1_IRQHandler:00000000 USIC1_1_IRQHandler
-    {standard input}:923    .text.USIC1_1_IRQHandler:0000000c $d
+    {standard input}:864    .text.USIC1_1_IRQHandler:00000000 $t
+    {standard input}:869    .text.USIC1_1_IRQHandler:00000000 USIC1_1_IRQHandler
+    {standard input}:891    .text.USIC1_1_IRQHandler:0000000c $d
+    {standard input}:896    .text.USIC1_0_IRQHandler:00000000 $t
+    {standard input}:901    .text.USIC1_0_IRQHandler:00000000 USIC1_0_IRQHandler
+    {standard input}:923    .text.USIC1_0_IRQHandler:0000000c $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

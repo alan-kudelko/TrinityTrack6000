@@ -38,10 +38,10 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/USIC1/USIC1_1.dd#//@provided.0"/>
   </hwResources>
   <hwResources name="NVIC Node Tx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_tx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.13"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.4"/>
   </hwResources>
   <hwResources name="NVIC Node Rx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_rx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.4"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.1"/>
   </hwResources>
   <hwResources name="NVIC Node Error" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_error" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
   <hwResources name="SDA" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_i2c_sda" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">

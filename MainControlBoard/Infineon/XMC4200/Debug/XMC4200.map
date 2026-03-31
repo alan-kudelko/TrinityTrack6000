@@ -14,7 +14,9 @@ d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4
 Allocating common symbols
 Common symbol       size              file
 
+rx_data             0xa               ./main.o
 xmc_device          0x208             ./Libraries/XMCLib/src/xmc_usbd.o
+tx_data             0xa               ./main.o
 
 Discarded input sections
 
@@ -1110,6 +1112,8 @@ Discarded input sections
                 0x00000000       0x30 ./Libraries/XMCLib/src/xmc_spi.o
  .text.XMC_SPI_CH_EnableEvent
                 0x00000000       0x34 ./Libraries/XMCLib/src/xmc_spi.o
+ .text.XMC_SPI_CH_DisableEvent
+                0x00000000       0x38 ./Libraries/XMCLib/src/xmc_spi.o
  .comment       0x00000000       0x71 ./Libraries/XMCLib/src/xmc_spi.o
  .text          0x00000000        0x0 ./Libraries/XMCLib/src/xmc_uart.o
  .data          0x00000000        0x0 ./Libraries/XMCLib/src/xmc_uart.o
@@ -1522,44 +1526,18 @@ Discarded input sections
  .bss           0x00000000        0x0 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.XMC_USIC_CH_SetInputSource
                 0x00000000       0x3c ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_EnableEvent
-                0x00000000       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_TriggerServiceRequest
-                0x00000000       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_SetTransmitBufferStatus
-                0x00000000       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_TXFIFO_EnableEvent
-                0x00000000       0x24 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_TXFIFO_Flush
-                0x00000000       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_RXFIFO_EnableEvent
-                0x00000000       0x24 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_RXFIFO_Flush
-                0x00000000       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_SPI_CH_Receive
-                0x00000000       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.XMC_SPI_CH_SetInputSource
                 0x00000000       0x44 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.SPI_SLAVE_GetAppVersion
                 0x00000000       0x44 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.SPI_SLAVE_Transmit
-                0x00000000       0x38 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.SPI_SLAVE_Receive
-                0x00000000       0x38 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.SPI_SLAVE_AbortTransmit
-                0x00000000       0x7c ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.SPI_SLAVE_AbortReceive
-                0x00000000       0x64 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.SPI_SLAVE_SetMode
-                0x00000000      0x170 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x00000000      0x16c ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.SPI_SLAVE_lValidateModeChange
-                0x00000000       0x9c ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.SPI_SLAVE_StartTransmitIRQ
-                0x00000000       0xc4 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.SPI_SLAVE_StartReceiveIRQ
-                0x00000000       0xd0 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x00000000       0x94 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.SPI_SLAVE_Transfer
-                0x00000000       0x8c ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x00000000       0x98 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.SPI_SLAVE_lTransferPolling
+                0x00000000      0x220 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .comment       0x00000000       0x71 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text          0x00000000        0x0 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .data          0x00000000        0x0 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
@@ -1731,6 +1709,16 @@ Discarded input sections
  .data          0x00000000        0x0 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
  .bss           0x00000000        0x0 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
  .comment       0x00000000       0x71 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+ .text          0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .data          0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .bss           0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .text.DIGITAL_IO_GetAppVersion
+                0x00000000       0x44 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .comment       0x00000000       0x71 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .text          0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .data          0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .bss           0x00000000        0x0 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .comment       0x00000000       0x71 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
  .text          0x00000000        0x0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o
  .data          0x00000000        0x0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o
  .bss           0x00000000        0x0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o
@@ -1806,13 +1794,13 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
  .data          0x00000000        0x0 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
  .bss           0x00000000        0x0 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+ .text.memcpy   0x00000000       0x16 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00000000       0x28 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000       0x32 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
  .text          0x00000000        0x0 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
  .data          0x00000000        0x0 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
  .bss           0x00000000        0x0 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
- .text.memset   0x00000000       0x10 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x00000000       0x20 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
- .ARM.attributes
-                0x00000000       0x32 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
 
 Memory Configuration
 
@@ -1878,6 +1866,8 @@ LOAD ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
 LOAD ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
 LOAD ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
 LOAD ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+LOAD ./Dave/Generated/DIGITAL_IO/digital_io.o
+LOAD ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
 LOAD ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o
 LOAD ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
 LOAD ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
@@ -1903,7 +1893,7 @@ END GROUP
                 0x00000800                stack_size = DEFINED (stack_size)?stack_size:0x800
                 0x00000040                no_init_size = 0x40
 
-.text           0x08000000     0x5a94 load address 0x0c000000
+.text           0x08000000     0x5a88 load address 0x0c000000
                 0x08000000                sText = .
  *(.reset)
  .reset         0x08000000      0x294 ./Startup/startup_XMC4200.o
@@ -1918,6 +1908,7 @@ END GROUP
                 0x08000290                SysTick_Handler
                 0x08000290                PendSV_Handler
                 0x08000290                NMI_Handler
+                0x08000290                USIC1_3_IRQHandler
                 0x08000290                CCU40_2_IRQHandler
                 0x08000290                SCU_0_IRQHandler
                 0x08000290                ERU0_0_IRQHandler
@@ -1976,6 +1967,7 @@ END GROUP
                 0x08000290                LEDTS0_0_IRQHandler
                 0x08000290                USIC0_4_IRQHandler
                 0x08000290                ERU0_1_IRQHandler
+                0x08000290                USIC1_2_IRQHandler
                 0x08000290                CAN0_1_IRQHandler
                 0x08000290                USIC0_2_IRQHandler
                 0x08000290                DAC0_1_IRQHandler
@@ -2257,348 +2249,340 @@ END GROUP
  .text.XMC_SPI_CH_GetReceivedData
                 0x08002068       0x34 ./Libraries/XMCLib/src/xmc_spi.o
                 0x08002068                XMC_SPI_CH_GetReceivedData
- .text.XMC_SPI_CH_DisableEvent
-                0x0800209c       0x38 ./Libraries/XMCLib/src/xmc_spi.o
-                0x0800209c                XMC_SPI_CH_DisableEvent
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x080020d4       0x20 ./Libraries/XMCLib/src/xmc_uart.o
+                0x0800209c       0x20 ./Libraries/XMCLib/src/xmc_uart.o
  .text.XMC_UART_CH_ClearStatusFlag
-                0x080020f4       0x1c ./Libraries/XMCLib/src/xmc_uart.o
+                0x080020bc       0x1c ./Libraries/XMCLib/src/xmc_uart.o
  .text.XMC_UART_CH_InitEx
-                0x08002110       0xd4 ./Libraries/XMCLib/src/xmc_uart.o
-                0x08002110                XMC_UART_CH_InitEx
+                0x080020d8       0xd4 ./Libraries/XMCLib/src/xmc_uart.o
+                0x080020d8                XMC_UART_CH_InitEx
  .text.XMC_UART_CH_Transmit
-                0x080021e4       0x4c ./Libraries/XMCLib/src/xmc_uart.o
-                0x080021e4                XMC_UART_CH_Transmit
+                0x080021ac       0x4c ./Libraries/XMCLib/src/xmc_uart.o
+                0x080021ac                XMC_UART_CH_Transmit
  .text.XMC_UART_CH_GetReceivedData
-                0x08002230       0x34 ./Libraries/XMCLib/src/xmc_uart.o
-                0x08002230                XMC_UART_CH_GetReceivedData
+                0x080021f8       0x34 ./Libraries/XMCLib/src/xmc_uart.o
+                0x080021f8                XMC_UART_CH_GetReceivedData
  .text.XMC_USIC_CH_Enable
-                0x08002264       0x74 ./Libraries/XMCLib/src/xmc_usic.o
-                0x08002264                XMC_USIC_CH_Enable
+                0x0800222c       0x74 ./Libraries/XMCLib/src/xmc_usic.o
+                0x0800222c                XMC_USIC_CH_Enable
  .text.XMC_USIC_CH_SetBaudrate
-                0x080022d8       0xe4 ./Libraries/XMCLib/src/xmc_usic.o
-                0x080022d8                XMC_USIC_CH_SetBaudrate
+                0x080022a0       0xe4 ./Libraries/XMCLib/src/xmc_usic.o
+                0x080022a0                XMC_USIC_CH_SetBaudrate
  .text.XMC_USIC_CH_SetBaudrateEx
-                0x080023bc      0x100 ./Libraries/XMCLib/src/xmc_usic.o
-                0x080023bc                XMC_USIC_CH_SetBaudrateEx
+                0x08002384      0x100 ./Libraries/XMCLib/src/xmc_usic.o
+                0x08002384                XMC_USIC_CH_SetBaudrateEx
  .text.XMC_USIC_CH_TXFIFO_Configure
-                0x080024bc       0x50 ./Libraries/XMCLib/src/xmc_usic.o
-                0x080024bc                XMC_USIC_CH_TXFIFO_Configure
+                0x08002484       0x50 ./Libraries/XMCLib/src/xmc_usic.o
+                0x08002484                XMC_USIC_CH_TXFIFO_Configure
  .text.XMC_USIC_CH_RXFIFO_Configure
-                0x0800250c       0x54 ./Libraries/XMCLib/src/xmc_usic.o
-                0x0800250c                XMC_USIC_CH_RXFIFO_Configure
+                0x080024d4       0x54 ./Libraries/XMCLib/src/xmc_usic.o
+                0x080024d4                XMC_USIC_CH_RXFIFO_Configure
  .text.XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit
-                0x08002560       0x30 ./Libraries/XMCLib/src/xmc_usic.o
-                0x08002560                XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit
+                0x08002528       0x30 ./Libraries/XMCLib/src/xmc_usic.o
+                0x08002528                XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit
  .text.XMC_USIC_CH_SetInterruptNodePointer
-                0x08002590       0x38 ./Libraries/XMCLib/src/xmc_usic.o
-                0x08002590                XMC_USIC_CH_SetInterruptNodePointer
+                0x08002558       0x38 ./Libraries/XMCLib/src/xmc_usic.o
+                0x08002558                XMC_USIC_CH_SetInterruptNodePointer
  .text.XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
-                0x080025c8       0x3c ./Libraries/XMCLib/src/xmc_usic.o
-                0x080025c8                XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
+                0x08002590       0x3c ./Libraries/XMCLib/src/xmc_usic.o
+                0x08002590                XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
  .text.XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
-                0x08002604       0x3c ./Libraries/XMCLib/src/xmc_usic.o
-                0x08002604                XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
+                0x080025cc       0x3c ./Libraries/XMCLib/src/xmc_usic.o
+                0x080025cc                XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
  .text.XMC_USIC_Enable
-                0x08002640       0x84 ./Libraries/XMCLib/src/xmc_usic.o
-                0x08002640                XMC_USIC_Enable
- .text._init    0x080026c4        0xc ./Libraries/Newlib/syscalls.o
-                0x080026c4                _init
+                0x08002608       0x84 ./Libraries/XMCLib/src/xmc_usic.o
+                0x08002608                XMC_USIC_Enable
+ .text._init    0x0800268c        0xc ./Libraries/Newlib/syscalls.o
+                0x0800268c                _init
  .text.XMC_USIC_CH_DisableEvent
-                0x080026d0       0x24 ./Dave/Generated/UART/uart.o
+                0x08002698       0x24 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x080026f4       0x20 ./Dave/Generated/UART/uart.o
+                0x080026bc       0x20 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_DisableEvent
-                0x08002714       0x28 ./Dave/Generated/UART/uart.o
+                0x080026dc       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_IsFull
-                0x0800273c       0x28 ./Dave/Generated/UART/uart.o
+                0x08002704       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_TXFIFO_IsEmpty
-                0x08002764       0x28 ./Dave/Generated/UART/uart.o
+                0x0800272c       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_RXFIFO_DisableEvent
-                0x0800278c       0x28 ./Dave/Generated/UART/uart.o
+                0x08002754       0x28 ./Dave/Generated/UART/uart.o
  .text.XMC_USIC_CH_RXFIFO_IsEmpty
-                0x080027b4       0x28 ./Dave/Generated/UART/uart.o
+                0x0800277c       0x28 ./Dave/Generated/UART/uart.o
  .text.UART_Init
-                0x080027dc       0x24 ./Dave/Generated/UART/uart.o
-                0x080027dc                UART_Init
+                0x080027a4       0x24 ./Dave/Generated/UART/uart.o
+                0x080027a4                UART_Init
  .text.UART_lTransmitHandler
-                0x08002800      0x10c ./Dave/Generated/UART/uart.o
-                0x08002800                UART_lTransmitHandler
+                0x080027c8      0x10c ./Dave/Generated/UART/uart.o
+                0x080027c8                UART_lTransmitHandler
  .text.UART_lReceiveHandler
-                0x0800290c      0x120 ./Dave/Generated/UART/uart.o
-                0x0800290c                UART_lReceiveHandler
+                0x080028d4      0x120 ./Dave/Generated/UART/uart.o
+                0x080028d4                UART_lReceiveHandler
  .text.UART_lReconfigureRxFIFO
-                0x08002a2c       0x50 ./Dave/Generated/UART/uart.o
+                0x080029f4       0x50 ./Dave/Generated/UART/uart.o
  .text.__NVIC_GetPriorityGrouping
-                0x08002a7c       0x1c ./Dave/Generated/UART/uart_conf.o
+                0x08002a44       0x1c ./Dave/Generated/UART/uart_conf.o
  .text.__NVIC_EnableIRQ
-                0x08002a98       0x38 ./Dave/Generated/UART/uart_conf.o
+                0x08002a60       0x38 ./Dave/Generated/UART/uart_conf.o
  .text.__NVIC_SetPriority
-                0x08002ad0       0x54 ./Dave/Generated/UART/uart_conf.o
+                0x08002a98       0x54 ./Dave/Generated/UART/uart_conf.o
  .text.NVIC_EncodePriority
-                0x08002b24       0x64 ./Dave/Generated/UART/uart_conf.o
+                0x08002aec       0x64 ./Dave/Generated/UART/uart_conf.o
  .text.XMC_USIC_CH_SetInputSource
-                0x08002b88       0x3c ./Dave/Generated/UART/uart_conf.o
+                0x08002b50       0x3c ./Dave/Generated/UART/uart_conf.o
  .text.XMC_UART_CH_Init
-                0x08002bc4       0x1c ./Dave/Generated/UART/uart_conf.o
+                0x08002b8c       0x1c ./Dave/Generated/UART/uart_conf.o
  .text.XMC_UART_CH_Start
-                0x08002be0       0x24 ./Dave/Generated/UART/uart_conf.o
+                0x08002ba8       0x24 ./Dave/Generated/UART/uart_conf.o
  .text.UART_DEBUG_init
-                0x08002c04       0xd4 ./Dave/Generated/UART/uart_conf.o
-                0x08002c04                UART_DEBUG_init
+                0x08002bcc       0xd4 ./Dave/Generated/UART/uart_conf.o
+                0x08002bcc                UART_DEBUG_init
  .text.USIC0_3_IRQHandler
-                0x08002cd8       0x10 ./Dave/Generated/UART/uart_conf.o
-                0x08002cd8                USIC0_3_IRQHandler
+                0x08002ca0       0x10 ./Dave/Generated/UART/uart_conf.o
+                0x08002ca0                USIC0_3_IRQHandler
  .text.USIC0_5_IRQHandler
-                0x08002ce8       0x10 ./Dave/Generated/UART/uart_conf.o
-                0x08002ce8                USIC0_5_IRQHandler
- .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x08002cf8       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_TXFIFO_DisableEvent
-                0x08002d18       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002cb0       0x10 ./Dave/Generated/UART/uart_conf.o
+                0x08002cb0                USIC0_5_IRQHandler
+ .text.XMC_USIC_CH_SetTransmitBufferStatus
+                0x08002cc0       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.XMC_USIC_CH_TXFIFO_Flush
+                0x08002cdc       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.XMC_USIC_CH_TXFIFO_IsFull
-                0x08002d40       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002cf8       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.XMC_USIC_CH_TXFIFO_IsEmpty
-                0x08002d68       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.XMC_USIC_CH_RXFIFO_DisableEvent
-                0x08002d90       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002d20       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.XMC_USIC_CH_RXFIFO_Flush
+                0x08002d48       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.XMC_USIC_CH_RXFIFO_IsEmpty
-                0x08002db8       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002d64       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.XMC_SPI_CH_Receive
+                0x08002d8c       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.XMC_SPI_CH_GetStatusFlag
+                0x08002db4       0x18 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.XMC_SPI_CH_ClearStatusFlag
+                0x08002dcc       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.SPI_SLAVE_Init
-                0x08002de0       0x24 ./Dave/Generated/SPI_SLAVE/spi_slave.o
-                0x08002de0                SPI_SLAVE_Init
- .text.SPI_SLAVE_lTransmitHandler
-                0x08002e04      0x144 ./Dave/Generated/SPI_SLAVE/spi_slave.o
-                0x08002e04                SPI_SLAVE_lTransmitHandler
- .text.SPI_SLAVE_lReceiveHandler
-                0x08002f48      0x14c ./Dave/Generated/SPI_SLAVE/spi_slave.o
-                0x08002f48                SPI_SLAVE_lReceiveHandler
- .text.SPI_SLAVE_lReconfigureRxFIFO
-                0x08003094       0x50 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .text.__NVIC_GetPriorityGrouping
-                0x080030e4       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .text.__NVIC_EnableIRQ
-                0x08003100       0x38 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .text.__NVIC_SetPriority
-                0x08003138       0x54 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .text.NVIC_EncodePriority
-                0x0800318c       0x64 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08002dec       0x24 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002dec                SPI_SLAVE_Init
+ .text.SPI_SLAVE_Transmit
+                0x08002e10       0x60 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002e10                SPI_SLAVE_Transmit
+ .text.SPI_SLAVE_Receive
+                0x08002e70       0x60 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x08002e70                SPI_SLAVE_Receive
+ .text.SPI_SLAVE_lTransmitPolling
+                0x08002ed0      0x110 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .text.SPI_SLAVE_lReceivePolling
+                0x08002fe0      0x114 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .text.XMC_USIC_CH_SetInputSource
-                0x080031f0       0x3c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x080030f4       0x3c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_USIC_CH_EnableInputInversion
-                0x0800322c       0x34 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003130       0x34 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_USIC_CH_SetWordLength
-                0x08003260       0x2c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003164       0x2c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_USIC_CH_SetFrameLength
-                0x0800328c       0x2c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003190       0x2c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_USIC_CH_SetMode
-                0x080032b8       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x080031bc       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_Init
-                0x080032e0       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x080031e4       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_Start
-                0x080032fc       0x18 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003200       0x18 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_SetBitOrderMsbFirst
-                0x08003314       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003218       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_SetWordLength
-                0x08003334       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003238       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_SetFrameLength
-                0x08003350       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003254       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_SetInputSource
-                0x0800336c       0x44 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08003270       0x44 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .text.XMC_SPI_CH_EnableInputInversion
-                0x080033b0       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .text.SPI_BUS_init
-                0x080033cc      0x140 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x080033cc                SPI_BUS_init
- .text.USIC1_2_IRQHandler
-                0x0800350c       0x10 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x0800350c                USIC1_2_IRQHandler
- .text.USIC1_0_IRQHandler
-                0x0800351c       0x10 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x0800351c                USIC1_0_IRQHandler
+                0x080032b4       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .text.SPI_SLAVE_0_init
+                0x080032d0       0xe4 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x080032d0                SPI_SLAVE_0_init
  .text.XMC_CCU8_EnableClock
-                0x0800352c       0x20 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x080033b4       0x20 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.XMC_CCU8_SLICE_EnableTrap
-                0x0800354c       0x24 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x080033d4       0x24 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.XMC_CCU8_SLICE_StartTimer
-                0x08003570       0x18 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x080033f8       0x18 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.XMC_CCU8_EnableShadowTransfer
-                0x08003588       0x1c ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x08003410       0x1c ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.XMC_CCU8_SLICE_EnableEvent
-                0x080035a4       0x2c ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x0800342c       0x2c ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.XMC_CCU8_SLICE_SetShadowTransferMode
-                0x080035d0       0x30 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x08003458       0x30 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.PWM_CCU8_Init
-                0x08003600      0x170 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
-                0x08003600                PWM_CCU8_Init
+                0x08003488      0x170 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x08003488                PWM_CCU8_Init
  .text.PWM_CCU8_lInit_Interrupt
-                0x08003770      0x188 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x080035f8      0x188 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.PWM_CCU8_lInit_GPIO
-                0x080038f8       0xbc ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x08003780       0xbc ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.PWM_CCU8_lConfigure_Events
-                0x080039b4      0x1e0 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x0800383c      0x1e0 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .text.PWM_CCU8_Start
-                0x08003b94       0x58 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
-                0x08003b94                PWM_CCU8_Start
+                0x08003a1c       0x58 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x08003a1c                PWM_CCU8_Start
  .text.XMC_CCU4_EnableClock
-                0x08003bec       0x20 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003a74       0x20 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.XMC_CCU4_SLICE_EnableTrap
-                0x08003c0c       0x20 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003a94       0x20 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.XMC_CCU4_SLICE_StartTimer
-                0x08003c2c       0x18 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003ab4       0x18 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.XMC_CCU4_SLICE_SetTimerPeriodMatch
-                0x08003c44       0x1c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003acc       0x1c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.XMC_CCU4_SLICE_SetTimerCompareMatch
-                0x08003c60       0x1c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003ae8       0x1c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.XMC_CCU4_EnableShadowTransfer
-                0x08003c7c       0x1c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003b04       0x1c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.XMC_CCU4_SLICE_EnableEvent
-                0x08003c98       0x2c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003b20       0x2c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.PWM_CCU4_Init
-                0x08003cc4      0x140 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
-                0x08003cc4                PWM_CCU4_Init
+                0x08003b4c      0x140 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003b4c                PWM_CCU4_Init
  .text.PWM_CCU4_lInit_Interrupt
-                0x08003e04      0x134 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003c8c      0x134 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.PWM_CCU4_lConfigure_Events
-                0x08003f38      0x1c8 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003dc0      0x1c8 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .text.PWM_CCU4_Start
-                0x08004100       0x58 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
-                0x08004100                PWM_CCU4_Start
+                0x08003f88       0x58 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x08003f88                PWM_CCU4_Start
  .text.__NVIC_ClearPendingIRQ
-                0x08004158       0x3c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08003fe0       0x3c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_DisableEvent
-                0x08004194       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x0800401c       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x080041b8       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004040       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_TXFIFO_EnableEvent
-                0x080041d8       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004060       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_TXFIFO_DisableEvent
-                0x080041fc       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004084       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_TXFIFO_IsFull
-                0x08004224       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080040ac       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_TXFIFO_IsEmpty
-                0x0800424c       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080040d4       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_RXFIFO_DisableEvent
-                0x08004274       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080040fc       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_RXFIFO_IsEmpty
-                0x0800429c       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004124       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_I2C_CH_GetStatusFlag
-                0x080042c4       0x18 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x0800414c       0x18 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_I2C_CH_ClearStatusFlag
-                0x080042dc       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004164       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_SetRXFIFOTriggerLimit
-                0x080042fc       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004184       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_IsTXFIFOFull
-                0x08004320       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080041a8       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_IsRXFIFOEmpty
-                0x0800433c       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080041c4       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_GetReceivedByte
-                0x08004358       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080041e0       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_TransmitByte
-                0x08004374       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080041fc       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_DisableEvent
-                0x08004394       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x0800421c       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_ReceiveACK
-                0x080043b0       0x18 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004238       0x18 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_ReceiveNACK
-                0x080043c8       0x18 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004250       0x18 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_SendStop
-                0x080043e0       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004268       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.calculate_minfifosize
-                0x08004404       0x2c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x0800428c       0x2c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_Init
-                0x08004430       0x2c ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x08004430                I2C_MASTER_Init
+                0x080042b8       0x2c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080042b8                I2C_MASTER_Init
  .text.I2C_MASTER_GetFlagStatus
-                0x0800445c       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x0800445c                I2C_MASTER_GetFlagStatus
+                0x080042e4       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080042e4                I2C_MASTER_GetFlagStatus
  .text.I2C_MASTER_ClearFlag
-                0x08004480       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x08004480                I2C_MASTER_ClearFlag
+                0x08004308       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004308                I2C_MASTER_ClearFlag
  .text.I2C_MASTER_TransmitHandler
-                0x0800449c      0x258 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x0800449c                I2C_MASTER_TransmitHandler
+                0x08004324      0x258 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004324                I2C_MASTER_TransmitHandler
  .text.I2C_MASTER_lSendStop_JumpTo_TxCallback
-                0x080046f4       0x60 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x0800457c       0x60 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_ReceiveHandler
-                0x08004754      0x248 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x08004754                I2C_MASTER_ReceiveHandler
+                0x080045dc      0x248 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x080045dc                I2C_MASTER_ReceiveHandler
  .text.I2C_MASTER_lSendStop_JumpTo_RxCallback
-                0x0800499c       0x70 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004824       0x70 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_ProtocolHandler
-                0x08004a0c       0x88 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x08004a0c                I2C_MASTER_ProtocolHandler
+                0x08004894       0x88 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x08004894                I2C_MASTER_ProtocolHandler
  .text.I2C_MASTER_lReconfigureRxFIFO
-                0x08004a94       0x74 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x0800491c       0x74 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.__NVIC_GetPriorityGrouping
-                0x08004b08       0x1c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004990       0x1c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.__NVIC_EnableIRQ
-                0x08004b24       0x38 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x080049ac       0x38 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.__NVIC_SetPriority
-                0x08004b5c       0x54 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x080049e4       0x54 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.NVIC_EncodePriority
-                0x08004bb0       0x64 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004a38       0x64 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_SetInputSource
-                0x08004c14       0x3c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004a9c       0x3c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_TXFIFO_EnableEvent
-                0x08004c50       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004ad8       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_RXFIFO_EnableEvent
-                0x08004c74       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004afc       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_SetMode
-                0x08004c98       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004b20       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_I2C_CH_Init
-                0x08004cc0       0x1c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004b48       0x1c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_I2C_CH_Start
-                0x08004cdc       0x18 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004b64       0x18 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.I2C_BUS_disable_io
-                0x08004cf4       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004b7c       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.I2C_BUS_enable_io
-                0x08004d18       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004ba0       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.I2C_BUS_init
-                0x08004d40       0xf4 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x08004d40                I2C_BUS_init
- .text.USIC1_3_IRQHandler
-                0x08004e34       0x10 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x08004e34                USIC1_3_IRQHandler
+                0x08004bc8       0xf4 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004bc8                I2C_BUS_init
  .text.USIC1_1_IRQHandler
-                0x08004e44       0x10 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x08004e44                USIC1_1_IRQHandler
+                0x08004cbc       0x10 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004cbc                USIC1_1_IRQHandler
+ .text.USIC1_0_IRQHandler
+                0x08004ccc       0x10 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08004ccc                USIC1_0_IRQHandler
  .text.XMC_CCU8_StartPrescaler
-                0x08004e54       0x1c ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+                0x08004cdc       0x1c ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
  .text.GLOBAL_CCU8_Init
-                0x08004e70       0x40 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
-                0x08004e70                GLOBAL_CCU8_Init
+                0x08004cf8       0x40 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+                0x08004cf8                GLOBAL_CCU8_Init
  .text.XMC_CCU4_StartPrescaler
-                0x08004eb0       0x1c ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+                0x08004d38       0x1c ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
  .text.GLOBAL_CCU4_Init
-                0x08004ecc       0x40 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
-                0x08004ecc                GLOBAL_CCU4_Init
+                0x08004d54       0x40 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+                0x08004d54                GLOBAL_CCU4_Init
+ .text.DIGITAL_IO_Init
+                0x08004d94       0x40 ./Dave/Generated/DIGITAL_IO/digital_io.o
+                0x08004d94                DIGITAL_IO_Init
  .text.__NVIC_SetPriorityGrouping
-                0x08004f0c       0x48 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x08004dd4       0x48 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
  .text.SystemCoreSetup
-                0x08004f54       0xa0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
-                0x08004f54                SystemCoreSetup
+                0x08004e1c       0xa0 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x08004e1c                SystemCoreSetup
  .text.CLOCK_XMC4_Init
-                0x08004ff4       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
-                0x08004ff4                CLOCK_XMC4_Init
+                0x08004ebc       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x08004ebc                CLOCK_XMC4_Init
  .text.SystemCoreClockSetup
-                0x08005014       0x38 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
-                0x08005014                SystemCoreClockSetup
+                0x08004edc       0x38 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x08004edc                SystemCoreClockSetup
  .text.DAVE_Init
-                0x0800504c      0x150 ./Dave/Generated/DAVE.o
-                0x0800504c                DAVE_Init
- .text.XMC_GPIO_SetOutputHigh
-                0x0800519c       0x20 ./main.o
- .text.XMC_GPIO_SetOutputLow
-                0x080051bc       0x24 ./main.o
- .text.main     0x080051e0       0x6c ./main.o
-                0x080051e0                main
+                0x08004f14      0x204 ./Dave/Generated/DAVE.o
+                0x08004f14                DAVE_Init
+ .text.XMC_GPIO_GetInput
+                0x08005118       0x28 ./main.o
+ .text.main     0x08005140       0x5c ./main.o
+                0x08005140                main
  .text.__libc_init_array
-                0x0800524c       0x4c d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
-                0x0800524c                __libc_init_array
- .text.memcpy   0x08005298       0x16 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
-                0x08005298                memcpy
+                0x0800519c       0x4c d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x0800519c                __libc_init_array
+ .text.memset   0x080051e8       0x10 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
+                0x080051e8                memset
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -2612,311 +2596,337 @@ END GROUP
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata .rodata.*)
- *fill*         0x080052ae        0x2 
  .rodata.UART_DEBUG_channel_config
-                0x080052b0        0xc ./Dave/Generated/UART/uart_conf.o
-                0x080052b0                UART_DEBUG_channel_config
+                0x080051f8        0xc ./Dave/Generated/UART/uart_conf.o
+                0x080051f8                UART_DEBUG_channel_config
  .rodata.UART_DEBUG_tx_pin_config
-                0x080052bc        0xc ./Dave/Generated/UART/uart_conf.o
-                0x080052bc                UART_DEBUG_tx_pin_config
+                0x08005204        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08005204                UART_DEBUG_tx_pin_config
  .rodata.UART_DEBUG_tx_pin
-                0x080052c8        0xc ./Dave/Generated/UART/uart_conf.o
-                0x080052c8                UART_DEBUG_tx_pin
+                0x08005210        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08005210                UART_DEBUG_tx_pin
  .rodata.UART_DEBUG_config
-                0x080052d4       0x30 ./Dave/Generated/UART/uart_conf.o
-                0x080052d4                UART_DEBUG_config
+                0x0800521c       0x30 ./Dave/Generated/UART/uart_conf.o
+                0x0800521c                UART_DEBUG_config
  .rodata.UART_DEBUG_rx_pin_config
-                0x08005304        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08005304                UART_DEBUG_rx_pin_config
- .rodata.SPI_BUS_channel_config
-                0x08005310        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x08005310                SPI_BUS_channel_config
- .rodata.SPI_BUS_mosi1_pin_config
-                0x0800531c        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x0800531c                SPI_BUS_mosi1_pin_config
- .rodata.SPI_BUS_miso_pin
-                0x08005328        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x08005328                SPI_BUS_miso_pin
- .rodata.SPI_BUS_mosi_pin_config
-                0x08005334        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x08005334                SPI_BUS_mosi_pin_config
- .rodata.SPI_BUS_mosi_pin
-                0x08005340        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x08005340                SPI_BUS_mosi_pin
- .rodata.SPI_BUS_sclk_pin_config
-                0x0800534c        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x0800534c                SPI_BUS_sclk_pin_config
- .rodata.SPI_BUS_slavesel_pin_config
-                0x08005358        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x08005358                SPI_BUS_slavesel_pin_config
- .rodata.SPI_BUS_conf
-                0x08005364       0x28 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x08005364                SPI_BUS_conf
+                0x0800524c        0xc ./Dave/Generated/UART/uart_conf.o
+                0x0800524c                UART_DEBUG_rx_pin_config
+ .rodata.SPI_SLAVE_0_channel_config
+                0x08005258        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08005258                SPI_SLAVE_0_channel_config
+ .rodata.SPI_SLAVE_0_mosi1_pin_config
+                0x08005264        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08005264                SPI_SLAVE_0_mosi1_pin_config
+ .rodata.SPI_SLAVE_0_miso_pin
+                0x08005270        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08005270                SPI_SLAVE_0_miso_pin
+ .rodata.SPI_SLAVE_0_mosi_pin_config
+                0x0800527c        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x0800527c                SPI_SLAVE_0_mosi_pin_config
+ .rodata.SPI_SLAVE_0_mosi_pin
+                0x08005288        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08005288                SPI_SLAVE_0_mosi_pin
+ .rodata.SPI_SLAVE_0_sclk_pin_config
+                0x08005294        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x08005294                SPI_SLAVE_0_sclk_pin_config
+ .rodata.SPI_SLAVE_0_slavesel_pin_config
+                0x080052a0        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x080052a0                SPI_SLAVE_0_slavesel_pin_config
+ .rodata.SPI_SLAVE_0_conf
+                0x080052ac       0x20 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x080052ac                SPI_SLAVE_0_conf
  .rodata.PWM_CCU8_0_timer_handle
-                0x0800538c       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x0800538c                PWM_CCU8_0_timer_handle
+                0x080052cc       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080052cc                PWM_CCU8_0_timer_handle
  .rodata.PWM_CCU8_0_event0_config
-                0x0800539c        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x0800539c                PWM_CCU8_0_event0_config
+                0x080052dc        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080052dc                PWM_CCU8_0_event0_config
  .rodata.PWM_CCU8_0_event1_config
-                0x080053a0        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080053a0                PWM_CCU8_0_event1_config
+                0x080052e0        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080052e0                PWM_CCU8_0_event1_config
  .rodata.PWM_CCU8_0_event2_config
-                0x080053a4        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080053a4                PWM_CCU8_0_event2_config
+                0x080052e4        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080052e4                PWM_CCU8_0_event2_config
  .rodata.PWM_CCU8_0_dt_config
-                0x080053a8        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080053a8                PWM_CCU8_0_dt_config
+                0x080052e8        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080052e8                PWM_CCU8_0_dt_config
  .rodata.PWM_CCU8_0_ch1_out0_config
-                0x080053b4        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080053b4                PWM_CCU8_0_ch1_out0_config
+                0x080052f4        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080052f4                PWM_CCU8_0_ch1_out0_config
  .rodata.PWM_CCU8_0_config_handle
-                0x080053c0       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080053c0                PWM_CCU8_0_config_handle
+                0x08005300       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005300                PWM_CCU8_0_config_handle
  .rodata.PWM_CCU8_1_timer_handle
-                0x08005450       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005450                PWM_CCU8_1_timer_handle
+                0x08005390       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005390                PWM_CCU8_1_timer_handle
  .rodata.PWM_CCU8_1_event0_config
-                0x08005460        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005460                PWM_CCU8_1_event0_config
+                0x080053a0        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080053a0                PWM_CCU8_1_event0_config
  .rodata.PWM_CCU8_1_event1_config
-                0x08005464        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005464                PWM_CCU8_1_event1_config
+                0x080053a4        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080053a4                PWM_CCU8_1_event1_config
  .rodata.PWM_CCU8_1_event2_config
-                0x08005468        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005468                PWM_CCU8_1_event2_config
+                0x080053a8        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080053a8                PWM_CCU8_1_event2_config
  .rodata.PWM_CCU8_1_dt_config
-                0x0800546c        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x0800546c                PWM_CCU8_1_dt_config
+                0x080053ac        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080053ac                PWM_CCU8_1_dt_config
  .rodata.PWM_CCU8_1_ch1_out0_config
-                0x08005478        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005478                PWM_CCU8_1_ch1_out0_config
+                0x080053b8        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080053b8                PWM_CCU8_1_ch1_out0_config
  .rodata.PWM_CCU8_1_config_handle
-                0x08005484       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005484                PWM_CCU8_1_config_handle
+                0x080053c4       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x080053c4                PWM_CCU8_1_config_handle
  .rodata.PWM_CCU8_2_timer_handle
-                0x08005514       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005514                PWM_CCU8_2_timer_handle
+                0x08005454       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005454                PWM_CCU8_2_timer_handle
  .rodata.PWM_CCU8_2_event0_config
-                0x08005524        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005524                PWM_CCU8_2_event0_config
+                0x08005464        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005464                PWM_CCU8_2_event0_config
  .rodata.PWM_CCU8_2_event1_config
-                0x08005528        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005528                PWM_CCU8_2_event1_config
+                0x08005468        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005468                PWM_CCU8_2_event1_config
  .rodata.PWM_CCU8_2_event2_config
-                0x0800552c        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x0800552c                PWM_CCU8_2_event2_config
+                0x0800546c        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x0800546c                PWM_CCU8_2_event2_config
  .rodata.PWM_CCU8_2_dt_config
-                0x08005530        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005530                PWM_CCU8_2_dt_config
+                0x08005470        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005470                PWM_CCU8_2_dt_config
  .rodata.PWM_CCU8_2_ch1_out0_config
-                0x0800553c        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x0800553c                PWM_CCU8_2_ch1_out0_config
+                0x0800547c        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x0800547c                PWM_CCU8_2_ch1_out0_config
  .rodata.PWM_CCU8_2_ch2_out2_config
-                0x08005548        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005548                PWM_CCU8_2_ch2_out2_config
+                0x08005488        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005488                PWM_CCU8_2_ch2_out2_config
  .rodata.PWM_CCU8_2_config_handle
-                0x08005554       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005554                PWM_CCU8_2_config_handle
+                0x08005494       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005494                PWM_CCU8_2_config_handle
  .rodata.PWM_CCU8_3_timer_handle
-                0x080055e4       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080055e4                PWM_CCU8_3_timer_handle
+                0x08005524       0x10 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005524                PWM_CCU8_3_timer_handle
  .rodata.PWM_CCU8_3_event0_config
-                0x080055f4        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080055f4                PWM_CCU8_3_event0_config
+                0x08005534        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005534                PWM_CCU8_3_event0_config
  .rodata.PWM_CCU8_3_event1_config
-                0x080055f8        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080055f8                PWM_CCU8_3_event1_config
+                0x08005538        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005538                PWM_CCU8_3_event1_config
  .rodata.PWM_CCU8_3_event2_config
-                0x080055fc        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x080055fc                PWM_CCU8_3_event2_config
+                0x0800553c        0x4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x0800553c                PWM_CCU8_3_event2_config
  .rodata.PWM_CCU8_3_dt_config
-                0x08005600        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005600                PWM_CCU8_3_dt_config
+                0x08005540        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005540                PWM_CCU8_3_dt_config
  .rodata.PWM_CCU8_3_ch1_out0_config
-                0x0800560c        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x0800560c                PWM_CCU8_3_ch1_out0_config
+                0x0800554c        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x0800554c                PWM_CCU8_3_ch1_out0_config
  .rodata.PWM_CCU8_3_ch2_out2_config
-                0x08005618        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005618                PWM_CCU8_3_ch2_out2_config
+                0x08005558        0xc ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005558                PWM_CCU8_3_ch2_out2_config
  .rodata.PWM_CCU8_3_config_handle
-                0x08005624       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
-                0x08005624                PWM_CCU8_3_config_handle
+                0x08005564       0x90 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x08005564                PWM_CCU8_3_config_handle
  .rodata.PWM_CCU4_0_timer_handle
-                0x080056b4        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080056b4                PWM_CCU4_0_timer_handle
+                0x080055f4        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080055f4                PWM_CCU4_0_timer_handle
  .rodata.PWM_CCU4_0_event0_config
-                0x080056bc        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080056bc                PWM_CCU4_0_event0_config
+                0x080055fc        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080055fc                PWM_CCU4_0_event0_config
  .rodata.PWM_CCU4_0_event1_config
-                0x080056c0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080056c0                PWM_CCU4_0_event1_config
+                0x08005600        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005600                PWM_CCU4_0_event1_config
  .rodata.PWM_CCU4_0_event2_config
-                0x080056c4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080056c4                PWM_CCU4_0_event2_config
+                0x08005604        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005604                PWM_CCU4_0_event2_config
  .rodata.PWM_CCU4_0_ch1_out0_config
-                0x080056c8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080056c8                PWM_CCU4_0_ch1_out0_config
+                0x08005608        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005608                PWM_CCU4_0_ch1_out0_config
  .rodata.PWM_CCU4_0_config_handle
-                0x080056d4       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080056d4                PWM_CCU4_0_config_handle
+                0x08005614       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005614                PWM_CCU4_0_config_handle
  .rodata.PWM_CCU4_1_timer_handle
-                0x08005724        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005724                PWM_CCU4_1_timer_handle
+                0x08005664        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005664                PWM_CCU4_1_timer_handle
  .rodata.PWM_CCU4_1_event0_config
-                0x0800572c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x0800572c                PWM_CCU4_1_event0_config
+                0x0800566c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x0800566c                PWM_CCU4_1_event0_config
  .rodata.PWM_CCU4_1_event1_config
-                0x08005730        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005730                PWM_CCU4_1_event1_config
+                0x08005670        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005670                PWM_CCU4_1_event1_config
  .rodata.PWM_CCU4_1_event2_config
-                0x08005734        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005734                PWM_CCU4_1_event2_config
+                0x08005674        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005674                PWM_CCU4_1_event2_config
  .rodata.PWM_CCU4_1_ch1_out0_config
-                0x08005738        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005738                PWM_CCU4_1_ch1_out0_config
+                0x08005678        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005678                PWM_CCU4_1_ch1_out0_config
  .rodata.PWM_CCU4_1_config_handle
-                0x08005744       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005744                PWM_CCU4_1_config_handle
+                0x08005684       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005684                PWM_CCU4_1_config_handle
  .rodata.PWM_CCU4_2_timer_handle
-                0x08005794        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005794                PWM_CCU4_2_timer_handle
+                0x080056d4        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080056d4                PWM_CCU4_2_timer_handle
  .rodata.PWM_CCU4_2_event0_config
-                0x0800579c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x0800579c                PWM_CCU4_2_event0_config
+                0x080056dc        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080056dc                PWM_CCU4_2_event0_config
  .rodata.PWM_CCU4_2_event1_config
-                0x080057a0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080057a0                PWM_CCU4_2_event1_config
+                0x080056e0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080056e0                PWM_CCU4_2_event1_config
  .rodata.PWM_CCU4_2_event2_config
-                0x080057a4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080057a4                PWM_CCU4_2_event2_config
+                0x080056e4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080056e4                PWM_CCU4_2_event2_config
  .rodata.PWM_CCU4_2_ch1_out0_config
-                0x080057a8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080057a8                PWM_CCU4_2_ch1_out0_config
+                0x080056e8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080056e8                PWM_CCU4_2_ch1_out0_config
  .rodata.PWM_CCU4_2_config_handle
-                0x080057b4       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080057b4                PWM_CCU4_2_config_handle
+                0x080056f4       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080056f4                PWM_CCU4_2_config_handle
  .rodata.PWM_CCU4_3_timer_handle
-                0x08005804        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005804                PWM_CCU4_3_timer_handle
+                0x08005744        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005744                PWM_CCU4_3_timer_handle
  .rodata.PWM_CCU4_3_event0_config
-                0x0800580c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x0800580c                PWM_CCU4_3_event0_config
+                0x0800574c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x0800574c                PWM_CCU4_3_event0_config
  .rodata.PWM_CCU4_3_event1_config
-                0x08005810        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005810                PWM_CCU4_3_event1_config
+                0x08005750        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005750                PWM_CCU4_3_event1_config
  .rodata.PWM_CCU4_3_event2_config
-                0x08005814        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005814                PWM_CCU4_3_event2_config
+                0x08005754        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005754                PWM_CCU4_3_event2_config
  .rodata.PWM_CCU4_3_ch1_out0_config
-                0x08005818        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005818                PWM_CCU4_3_ch1_out0_config
+                0x08005758        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005758                PWM_CCU4_3_ch1_out0_config
  .rodata.PWM_CCU4_3_config_handle
-                0x08005824       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005824                PWM_CCU4_3_config_handle
+                0x08005764       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005764                PWM_CCU4_3_config_handle
  .rodata.PWM_CCU4_4_timer_handle
-                0x08005874        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005874                PWM_CCU4_4_timer_handle
+                0x080057b4        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080057b4                PWM_CCU4_4_timer_handle
  .rodata.PWM_CCU4_4_event0_config
-                0x0800587c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x0800587c                PWM_CCU4_4_event0_config
+                0x080057bc        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080057bc                PWM_CCU4_4_event0_config
  .rodata.PWM_CCU4_4_event1_config
-                0x08005880        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005880                PWM_CCU4_4_event1_config
+                0x080057c0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080057c0                PWM_CCU4_4_event1_config
  .rodata.PWM_CCU4_4_event2_config
-                0x08005884        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005884                PWM_CCU4_4_event2_config
+                0x080057c4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080057c4                PWM_CCU4_4_event2_config
  .rodata.PWM_CCU4_4_ch1_out0_config
-                0x08005888        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005888                PWM_CCU4_4_ch1_out0_config
+                0x080057c8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080057c8                PWM_CCU4_4_ch1_out0_config
  .rodata.PWM_CCU4_4_config_handle
-                0x08005894       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005894                PWM_CCU4_4_config_handle
+                0x080057d4       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080057d4                PWM_CCU4_4_config_handle
  .rodata.PWM_CCU4_5_timer_handle
-                0x080058e4        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080058e4                PWM_CCU4_5_timer_handle
+                0x08005824        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005824                PWM_CCU4_5_timer_handle
  .rodata.PWM_CCU4_5_event0_config
-                0x080058ec        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080058ec                PWM_CCU4_5_event0_config
+                0x0800582c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x0800582c                PWM_CCU4_5_event0_config
  .rodata.PWM_CCU4_5_event1_config
-                0x080058f0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080058f0                PWM_CCU4_5_event1_config
+                0x08005830        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005830                PWM_CCU4_5_event1_config
  .rodata.PWM_CCU4_5_event2_config
-                0x080058f4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080058f4                PWM_CCU4_5_event2_config
+                0x08005834        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005834                PWM_CCU4_5_event2_config
  .rodata.PWM_CCU4_5_ch1_out0_config
-                0x080058f8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080058f8                PWM_CCU4_5_ch1_out0_config
+                0x08005838        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005838                PWM_CCU4_5_ch1_out0_config
  .rodata.PWM_CCU4_5_config_handle
-                0x08005904       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005904                PWM_CCU4_5_config_handle
+                0x08005844       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005844                PWM_CCU4_5_config_handle
  .rodata.PWM_CCU4_6_timer_handle
-                0x08005954        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005954                PWM_CCU4_6_timer_handle
+                0x08005894        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005894                PWM_CCU4_6_timer_handle
  .rodata.PWM_CCU4_6_event0_config
-                0x0800595c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x0800595c                PWM_CCU4_6_event0_config
+                0x0800589c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x0800589c                PWM_CCU4_6_event0_config
  .rodata.PWM_CCU4_6_event1_config
-                0x08005960        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005960                PWM_CCU4_6_event1_config
+                0x080058a0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080058a0                PWM_CCU4_6_event1_config
  .rodata.PWM_CCU4_6_event2_config
-                0x08005964        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005964                PWM_CCU4_6_event2_config
+                0x080058a4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080058a4                PWM_CCU4_6_event2_config
  .rodata.PWM_CCU4_6_ch1_out0_config
-                0x08005968        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005968                PWM_CCU4_6_ch1_out0_config
+                0x080058a8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080058a8                PWM_CCU4_6_ch1_out0_config
  .rodata.PWM_CCU4_6_config_handle
-                0x08005974       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x08005974                PWM_CCU4_6_config_handle
+                0x080058b4       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x080058b4                PWM_CCU4_6_config_handle
  .rodata.PWM_CCU4_7_timer_handle
-                0x080059c4        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080059c4                PWM_CCU4_7_timer_handle
+                0x08005904        0x8 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005904                PWM_CCU4_7_timer_handle
  .rodata.PWM_CCU4_7_event0_config
-                0x080059cc        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080059cc                PWM_CCU4_7_event0_config
+                0x0800590c        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x0800590c                PWM_CCU4_7_event0_config
  .rodata.PWM_CCU4_7_event1_config
-                0x080059d0        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080059d0                PWM_CCU4_7_event1_config
+                0x08005910        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005910                PWM_CCU4_7_event1_config
  .rodata.PWM_CCU4_7_event2_config
-                0x080059d4        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080059d4                PWM_CCU4_7_event2_config
+                0x08005914        0x4 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005914                PWM_CCU4_7_event2_config
  .rodata.PWM_CCU4_7_ch1_out0_config
-                0x080059d8        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080059d8                PWM_CCU4_7_ch1_out0_config
+                0x08005918        0xc ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005918                PWM_CCU4_7_ch1_out0_config
  .rodata.PWM_CCU4_7_config_handle
-                0x080059e4       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
-                0x080059e4                PWM_CCU4_7_config_handle
+                0x08005924       0x50 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x08005924                PWM_CCU4_7_config_handle
  .rodata.I2C_BUS_sda_pin_config
-                0x08005a34        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08005974        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .rodata.I2C_BUS_scl_pin_config
-                0x08005a40        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08005980        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .rodata.I2C_BUS_channel_config
-                0x08005a4c        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x08005a4c                I2C_BUS_channel_config
+                0x0800598c        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x0800598c                I2C_BUS_channel_config
  .rodata.I2C_BUS_config
-                0x08005a54       0x2c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x08005a54                I2C_BUS_config
- .rodata        0x08005a80       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x08005994       0x2c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x08005994                I2C_BUS_config
+ .rodata.DIGITAL_IO_0
+                0x080059c0       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x080059c0                DIGITAL_IO_0
+ .rodata.DIGITAL_IO_1
+                0x080059d4       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x080059d4                DIGITAL_IO_1
+ .rodata.DIGITAL_IO_2
+                0x080059e8       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x080059e8                DIGITAL_IO_2
+ .rodata.DIGITAL_IO_3
+                0x080059fc       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x080059fc                DIGITAL_IO_3
+ .rodata.DIGITAL_IO_4
+                0x08005a10       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08005a10                DIGITAL_IO_4
+ .rodata.DIGITAL_IO_5
+                0x08005a24       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08005a24                DIGITAL_IO_5
+ .rodata.DIGITAL_IO_6
+                0x08005a38       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08005a38                DIGITAL_IO_6
+ .rodata.DIGITAL_IO_7
+                0x08005a4c       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08005a4c                DIGITAL_IO_7
+ .rodata.DIGITAL_IO_8
+                0x08005a60       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08005a60                DIGITAL_IO_8
+ .rodata        0x08005a74       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  *(.gnu.linkonce.r*)
  *(vtable)
-                0x08005a94                . = ALIGN (0x4)
+                0x08005a88                . = ALIGN (0x4)
 
-.glue_7         0x08005a94        0x0 load address 0x0c005a94
+.glue_7         0x08005a88        0x0 load address 0x0c005a88
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x08005a94        0x0 load address 0x0c005a94
+.glue_7t        0x08005a88        0x0 load address 0x0c005a88
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x08005a94        0x0 load address 0x0c005a94
+.vfp11_veneer   0x08005a88        0x0 load address 0x0c005a88
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08005a94        0x0 load address 0x0c005a94
+.v4_bx          0x08005a88        0x0 load address 0x0c005a88
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08005a94        0x0 load address 0x0c005a94
+.iplt           0x08005a88        0x0 load address 0x0c005a88
  .iplt          0x00000000        0x0 ./Startup/startup_XMC4200.o
 
-.rel.dyn        0x08005a94        0x0 load address 0x0c005a94
+.rel.dyn        0x08005a88        0x0 load address 0x0c005a88
  .rel.iplt      0x00000000        0x0 ./Startup/startup_XMC4200.o
 
 .eh_frame_hdr
@@ -2927,13 +2937,13 @@ END GROUP
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005a94                . = ALIGN (0x4)
-                0x08005a94                __exidx_start = .
+                0x08005a88                . = ALIGN (0x4)
+                0x08005a88                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08005a94                __exidx_end = .
-                0x08005a94                . = ALIGN (0x4)
+                0x08005a88                __exidx_end = .
+                0x08005a88                . = ALIGN (0x4)
 
 Stack           0x1fffc000      0x800
                 0x1fffc000                __stack_start = .
@@ -2942,16 +2952,16 @@ Stack           0x1fffc000      0x800
                 0x1fffc800                __stack_end = .
                 0x1fffc800                __initial_sp = .
 
-.ram_code       0x1fffc800        0x0 load address 0x0c005a94
+.ram_code       0x1fffc800        0x0 load address 0x0c005a88
                 0x1fffc800                . = ALIGN (0x4)
                 0x1fffc800                __ram_code_start = .
  *(.ram_code)
                 0x1fffc800                . = ALIGN (0x4)
                 0x1fffc800                __ram_code_end = .
-                0x0c005a94                __ram_code_load = LOADADDR (.ram_code)
+                0x0c005a88                __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                __ram_code_size = (__ram_code_end - __ram_code_start)
 
-.data           0x1fffc800      0x2ac load address 0x0c005a94
+.data           0x1fffc800      0x2ac load address 0x0c005a88
                 0x1fffc800                . = ALIGN (0x4)
                 0x1fffc800                __data_start = .
  *(.data)
@@ -2959,11 +2969,12 @@ Stack           0x1fffc000      0x800
  .data.UART_DEBUG
                 0x1fffc800        0xc ./Dave/Generated/UART/uart_conf.o
                 0x1fffc800                UART_DEBUG
- .data.SPI_BUS_runtime
+ .data.SPI_SLAVE_0_runtime
                 0x1fffc80c       0x1c ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x1fffc80c                SPI_BUS_runtime
- .data.SPI_BUS  0x1fffc828        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                0x1fffc828                SPI_BUS
+                0x1fffc80c                SPI_SLAVE_0_runtime
+ .data.SPI_SLAVE_0
+                0x1fffc828        0xc ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x1fffc828                SPI_SLAVE_0
  .data.PWM_CCU8_0
                 0x1fffc834       0x34 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
                 0x1fffc834                PWM_CCU8_0
@@ -3032,15 +3043,15 @@ Stack           0x1fffc000      0x800
                 0x1fffcaac                PROVIDE (__fini_array_end, .)
                 0x1fffcaac                . = ALIGN (0x4)
                 0x1fffcaac                __data_end = .
-                0x0c005a94                __data_load = LOADADDR (.data)
+                0x0c005a88                __data_load = LOADADDR (.data)
                 0x000002ac                __data_size = (__data_end - __data_start)
-                0x00005d40                __text_size = (((__exidx_end - sText) + __data_size) + __ram_code_size)
-                0x08005d40                eText = (sText + __text_size)
+                0x00005d34                __text_size = (((__exidx_end - sText) + __data_size) + __ram_code_size)
+                0x08005d34                eText = (sText + __text_size)
 
-.igot.plt       0x1fffcaac        0x0 load address 0x0c005d40
+.igot.plt       0x1fffcaac        0x0 load address 0x0c005d34
  .igot.plt      0x00000000        0x0 ./Startup/startup_XMC4200.o
 
-.bss            0x1fffcaac       0x20 load address 0x0c005d40
+.bss            0x1fffcaac       0x38 load address 0x0c005d34
                 0x1fffcaac                . = ALIGN (0x4)
                 0x1fffcaac                __bss_start = .
  *(.bss)
@@ -3052,11 +3063,15 @@ Stack           0x1fffc000      0x800
                 0x1fffcac8        0x4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
                 0x1fffcac8                CLOCK_XMC4_0
  *(COMMON)
+ COMMON         0x1fffcacc       0x16 ./main.o
+                0x1fffcacc                rx_data
+                0x1fffcad8                tx_data
  *(.gnu.linkonce.b*)
-                0x1fffcacc                . = ALIGN (0x4)
-                0x1fffcacc                __bss_end = .
-                0x00000020                __bss_size = (__bss_end - __bss_start)
-                0x00003534                __shift_loc = (__bss_end >= ORIGIN (DSRAM_1_system))?0x0:(ORIGIN (DSRAM_1_system) - __bss_end)
+                0x1fffcae4                . = ALIGN (0x4)
+ *fill*         0x1fffcae2        0x2 
+                0x1fffcae4                __bss_end = .
+                0x00000038                __bss_size = (__bss_end - __bss_start)
+                0x0000351c                __shift_loc = (__bss_end >= ORIGIN (DSRAM_1_system))?0x0:(ORIGIN (DSRAM_1_system) - __bss_end)
 
 USB_RAM         0x20000000        0x0
                 0x20000000                . = ALIGN (0x4)
@@ -3099,7 +3114,7 @@ USB_RAM         0x20000000        0x0
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1338
+.debug_aranges  0x00000000     0x12f8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 ./Startup/startup_XMC4200.o
@@ -3130,39 +3145,43 @@ USB_RAM         0x20000000        0x0
  .debug_aranges
                 0x00000b30       0x68 ./Dave/Generated/UART/uart_conf.o
  .debug_aranges
-                0x00000b98      0x108 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                0x00000b98       0xc0 ./Dave/Generated/SPI_SLAVE/spi_slave.o
  .debug_aranges
-                0x00000ca0       0xb0 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                0x00000c58       0x80 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
  .debug_aranges
-                0x00000d50      0x120 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+                0x00000cd8      0x120 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
  .debug_aranges
-                0x00000e70       0x18 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+                0x00000df8       0x18 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
  .debug_aranges
-                0x00000e88      0x100 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+                0x00000e10      0x100 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
  .debug_aranges
-                0x00000f88       0x18 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+                0x00000f10       0x18 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
  .debug_aranges
-                0x00000fa0      0x1b0 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x00000f28      0x1b0 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .debug_aranges
-                0x00001150       0x90 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x000010d8       0x90 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .debug_aranges
-                0x000011e0       0x30 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+                0x00001168       0x30 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
  .debug_aranges
-                0x00001210       0x18 ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
+                0x00001198       0x18 ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
  .debug_aranges
-                0x00001228       0x30 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+                0x000011b0       0x30 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
  .debug_aranges
-                0x00001258       0x18 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+                0x000011e0       0x18 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
  .debug_aranges
-                0x00001270       0x28 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x000011f8       0x28 ./Dave/Generated/DIGITAL_IO/digital_io.o
  .debug_aranges
-                0x00001298       0x30 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x00001220       0x18 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
  .debug_aranges
-                0x000012c8       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x00001238       0x28 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
  .debug_aranges
-                0x000012e8       0x20 ./Dave/Generated/DAVE.o
+                0x00001260       0x30 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
  .debug_aranges
-                0x00001308       0x30 ./main.o
+                0x00001290       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_aranges
+                0x000012b0       0x20 ./Dave/Generated/DAVE.o
+ .debug_aranges
+                0x000012d0       0x28 ./main.o
 
 .debug_pubnames
  *(.debug_pubnames)
@@ -3170,7 +3189,7 @@ USB_RAM         0x20000000        0x0
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_info     0x00000000    0x1d9ba
+.debug_info     0x00000000    0x1e5d6
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0x8a ./Startup/startup_XMC4200.o
  .debug_info    0x0000008a      0xa06 ./Startup/system_XMC4200.o
@@ -3186,25 +3205,27 @@ USB_RAM         0x20000000        0x0
  .debug_info    0x00009f82      0x11f ./Libraries/Newlib/syscalls.o
  .debug_info    0x0000a0a1     0x1590 ./Dave/Generated/UART/uart.o
  .debug_info    0x0000b631     0x1398 ./Dave/Generated/UART/uart_conf.o
- .debug_info    0x0000c9c9     0x168a ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .debug_info    0x0000e053     0x1780 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .debug_info    0x0000f7d3     0x1f2b ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
- .debug_info    0x000116fe     0x17af ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
- .debug_info    0x00012ead     0x17af ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
- .debug_info    0x0001465c     0x146b ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
- .debug_info    0x00015ac7     0x1b0d ./Dave/Generated/I2C_MASTER/i2c_master.o
- .debug_info    0x000175d4     0x138a ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
- .debug_info    0x0001895e      0x46e ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
- .debug_info    0x00018dcc      0x36e ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
- .debug_info    0x0001913a      0x45f ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
- .debug_info    0x00019599      0x371 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
- .debug_info    0x0001990a      0x52e ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_info    0x00019e38      0x2c3 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_info    0x0001a0fb      0x422 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_info    0x0001a51d     0x3007 ./Dave/Generated/DAVE.o
- .debug_info    0x0001d524      0x496 ./main.o
+ .debug_info    0x0000c9c9     0x1433 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .debug_info    0x0000ddfc     0x113e ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .debug_info    0x0000ef3a     0x1f2b ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_info    0x00010e65     0x17af ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+ .debug_info    0x00012614     0x17af ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_info    0x00013dc3     0x146b ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+ .debug_info    0x0001522e     0x1b0d ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_info    0x00016d3b     0x138a ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_info    0x000180c5      0x46e ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_info    0x00018533      0x36e ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
+ .debug_info    0x000188a1      0x45f ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_info    0x00018d00      0x371 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+ .debug_info    0x00019071      0x597 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_info    0x00019608      0x562 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_info    0x00019b6a      0x52e ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_info    0x0001a098      0x2c3 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_info    0x0001a35b      0x422 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_info    0x0001a77d     0x30b5 ./Dave/Generated/DAVE.o
+ .debug_info    0x0001d832      0xda4 ./main.o
 
-.debug_abbrev   0x00000000     0x3ad9
+.debug_abbrev   0x00000000     0x3d35
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x14 ./Startup/startup_XMC4200.o
  .debug_abbrev  0x00000014      0x1f1 ./Startup/system_XMC4200.o
@@ -3221,24 +3242,26 @@ USB_RAM         0x20000000        0x0
  .debug_abbrev  0x0000160c      0x27e ./Dave/Generated/UART/uart.o
  .debug_abbrev  0x0000188a      0x27b ./Dave/Generated/UART/uart_conf.o
  .debug_abbrev  0x00001b05      0x26d ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .debug_abbrev  0x00001d72      0x27b ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .debug_abbrev  0x00001fed      0x2a4 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
- .debug_abbrev  0x00002291      0x1b4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
- .debug_abbrev  0x00002445      0x282 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
- .debug_abbrev  0x000026c7      0x192 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
- .debug_abbrev  0x00002859      0x2fc ./Dave/Generated/I2C_MASTER/i2c_master.o
- .debug_abbrev  0x00002b55      0x286 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
- .debug_abbrev  0x00002ddb      0x196 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
- .debug_abbrev  0x00002f71      0x124 ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
- .debug_abbrev  0x00003095      0x196 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
- .debug_abbrev  0x0000322b      0x124 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
- .debug_abbrev  0x0000334f      0x1b4 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_abbrev  0x00003503      0x123 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_abbrev  0x00003626      0x134 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_abbrev  0x0000375a      0x1ef ./Dave/Generated/DAVE.o
- .debug_abbrev  0x00003949      0x190 ./main.o
+ .debug_abbrev  0x00001d72      0x1f4 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .debug_abbrev  0x00001f66      0x2a4 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_abbrev  0x0000220a      0x1b4 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+ .debug_abbrev  0x000023be      0x282 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_abbrev  0x00002640      0x192 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+ .debug_abbrev  0x000027d2      0x2fc ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_abbrev  0x00002ace      0x286 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_abbrev  0x00002d54      0x196 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_abbrev  0x00002eea      0x124 ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
+ .debug_abbrev  0x0000300e      0x196 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_abbrev  0x000031a4      0x124 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+ .debug_abbrev  0x000032c8      0x171 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_abbrev  0x00003439      0x126 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_abbrev  0x0000355f      0x1b4 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_abbrev  0x00003713      0x123 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_abbrev  0x00003836      0x134 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_abbrev  0x0000396a      0x1ef ./Dave/Generated/DAVE.o
+ .debug_abbrev  0x00003b59      0x1dc ./main.o
 
-.debug_line     0x00000000     0x851e
+.debug_line     0x00000000     0x88dc
  *(.debug_line)
  .debug_line    0x00000000       0x87 ./Startup/startup_XMC4200.o
  .debug_line    0x00000087      0x2f6 ./Startup/system_XMC4200.o
@@ -3254,25 +3277,27 @@ USB_RAM         0x20000000        0x0
  .debug_line    0x00003482       0xc1 ./Libraries/Newlib/syscalls.o
  .debug_line    0x00003543      0x5ba ./Dave/Generated/UART/uart.o
  .debug_line    0x00003afd      0x393 ./Dave/Generated/UART/uart_conf.o
- .debug_line    0x00003e90      0x652 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .debug_line    0x000044e2      0x465 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .debug_line    0x00004947      0x760 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
- .debug_line    0x000050a7      0x325 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
- .debug_line    0x000053cc      0x65c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
- .debug_line    0x00005a28      0x325 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
- .debug_line    0x00005d4d      0x8f2 ./Dave/Generated/I2C_MASTER/i2c_master.o
- .debug_line    0x0000663f      0x3f8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
- .debug_line    0x00006a37      0x32a ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
- .debug_line    0x00006d61      0x28e ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
- .debug_line    0x00006fef      0x32a ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
- .debug_line    0x00007319      0x28e ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
- .debug_line    0x000075a7      0x275 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_line    0x0000781c      0x2a4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_line    0x00007ac0      0x28a ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_line    0x00007d4a      0x4d7 ./Dave/Generated/DAVE.o
- .debug_line    0x00008221      0x2fd ./main.o
+ .debug_line    0x00003e90      0x5e0 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .debug_line    0x00004470      0x3ac ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .debug_line    0x0000481c      0x760 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_line    0x00004f7c      0x325 ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+ .debug_line    0x000052a1      0x65c ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_line    0x000058fd      0x325 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+ .debug_line    0x00005c22      0x8f2 ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_line    0x00006514      0x3f8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_line    0x0000690c      0x32a ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_line    0x00006c36      0x28e ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
+ .debug_line    0x00006ec4      0x32a ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_line    0x000071ee      0x28e ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+ .debug_line    0x0000747c      0x280 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_line    0x000076fc      0x1fc ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+ .debug_line    0x000078f8      0x275 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_line    0x00007b6d      0x2a4 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_line    0x00007e11      0x28a ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_line    0x0000809b      0x52d ./Dave/Generated/DAVE.o
+ .debug_line    0x000085c8      0x314 ./main.o
 
-.debug_frame    0x00000000     0x5218
+.debug_frame    0x00000000     0x500c
  *(.debug_frame)
  .debug_frame   0x00000000       0xec ./Startup/system_XMC4200.o
  .debug_frame   0x000000ec       0x60 ./Libraries/XMCLib/src/xmc4_gpio.o
@@ -3287,86 +3312,91 @@ USB_RAM         0x20000000        0x0
  .debug_frame   0x00002cc8       0x5c ./Libraries/Newlib/syscalls.o
  .debug_frame   0x00002d24      0x474 ./Dave/Generated/UART/uart.o
  .debug_frame   0x00003198      0x184 ./Dave/Generated/UART/uart_conf.o
- .debug_frame   0x0000331c      0x4c0 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .debug_frame   0x000037dc      0x2ec ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .debug_frame   0x00003ac8      0x538 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
- .debug_frame   0x00004000      0x498 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
- .debug_frame   0x00004498      0x80c ./Dave/Generated/I2C_MASTER/i2c_master.o
- .debug_frame   0x00004ca4      0x234 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
- .debug_frame   0x00004ed8       0x88 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
- .debug_frame   0x00004f60       0x88 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
- .debug_frame   0x00004fe8       0x60 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_frame   0x00005048       0x88 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_frame   0x000050d0       0x3c ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_frame   0x0000510c       0x38 ./Dave/Generated/DAVE.o
- .debug_frame   0x00005144       0x80 ./main.o
- .debug_frame   0x000051c4       0x2c d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
- .debug_frame   0x000051f0       0x28 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x0000331c      0x35c ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .debug_frame   0x00003678      0x218 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .debug_frame   0x00003890      0x538 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_frame   0x00003dc8      0x498 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_frame   0x00004260      0x80c ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_frame   0x00004a6c      0x234 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_frame   0x00004ca0       0x88 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_frame   0x00004d28       0x88 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_frame   0x00004db0       0x60 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_frame   0x00004e10       0x60 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_frame   0x00004e70       0x88 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_frame   0x00004ef8       0x3c ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_frame   0x00004f34       0x38 ./Dave/Generated/DAVE.o
+ .debug_frame   0x00004f6c       0x54 ./main.o
+ .debug_frame   0x00004fc0       0x2c d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00004fec       0x20 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0xd2f2
+.debug_str      0x00000000     0xd2fa
  *(.debug_str)
  .debug_str     0x00000000      0x5cf ./Startup/system_XMC4200.o
                                 0x646 (size before relaxing)
- .debug_str     0x000005cf      0x549 ./Libraries/XMCLib/src/xmc4_gpio.o
+ .debug_str     0x000005cf      0x544 ./Libraries/XMCLib/src/xmc4_gpio.o
                                 0x7e9 (size before relaxing)
- .debug_str     0x00000b18     0x2609 ./Libraries/XMCLib/src/xmc4_scu.o
+ .debug_str     0x00000b13     0x2609 ./Libraries/XMCLib/src/xmc4_scu.o
                                0x2b86 (size before relaxing)
- .debug_str     0x00003121     0x150b ./Libraries/XMCLib/src/xmc_ccu4.o
+ .debug_str     0x0000311c     0x150b ./Libraries/XMCLib/src/xmc_ccu4.o
                                0x1c80 (size before relaxing)
- .debug_str     0x0000462c     0x1a1b ./Libraries/XMCLib/src/xmc_ccu8.o
+ .debug_str     0x00004627     0x1a1b ./Libraries/XMCLib/src/xmc_ccu8.o
                                0x23ce (size before relaxing)
- .debug_str     0x00006047       0xca ./Libraries/XMCLib/src/xmc_gpio.o
+ .debug_str     0x00006042       0xca ./Libraries/XMCLib/src/xmc_gpio.o
                                 0x697 (size before relaxing)
- .debug_str     0x00006111      0xa5d ./Libraries/XMCLib/src/xmc_i2c.o
+ .debug_str     0x0000610c      0xa5d ./Libraries/XMCLib/src/xmc_i2c.o
                                 0xd50 (size before relaxing)
- .debug_str     0x00006b6e      0x7da ./Libraries/XMCLib/src/xmc_spi.o
+ .debug_str     0x00006b69      0x7da ./Libraries/XMCLib/src/xmc_spi.o
                                 0xdd6 (size before relaxing)
- .debug_str     0x00007348      0x523 ./Libraries/XMCLib/src/xmc_uart.o
+ .debug_str     0x00007343      0x523 ./Libraries/XMCLib/src/xmc_uart.o
                                 0xbbb (size before relaxing)
- .debug_str     0x0000786b      0xaf5 ./Libraries/XMCLib/src/xmc_usic.o
+ .debug_str     0x00007866      0xaf5 ./Libraries/XMCLib/src/xmc_usic.o
                                0x13b4 (size before relaxing)
- .debug_str     0x00008360       0x6f ./Libraries/Newlib/syscalls.o
+ .debug_str     0x0000835b       0x6f ./Libraries/Newlib/syscalls.o
                                 0x225 (size before relaxing)
- .debug_str     0x000083cf      0xbcd ./Dave/Generated/UART/uart.o
+ .debug_str     0x000083ca      0xbcd ./Dave/Generated/UART/uart.o
                                0x1cf6 (size before relaxing)
- .debug_str     0x00008f9c      0x604 ./Dave/Generated/UART/uart_conf.o
+ .debug_str     0x00008f97      0x604 ./Dave/Generated/UART/uart_conf.o
                                0x1888 (size before relaxing)
- .debug_str     0x000095a0      0x79b ./Dave/Generated/SPI_SLAVE/spi_slave.o
-                               0x1af3 (size before relaxing)
- .debug_str     0x00009d3b      0x4ad ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
-                               0x1fcf (size before relaxing)
- .debug_str     0x0000a1e8      0xe62 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_str     0x0000959b      0x63a ./Dave/Generated/SPI_SLAVE/spi_slave.o
+                               0x1851 (size before relaxing)
+ .debug_str     0x00009bd5      0x4b3 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+                               0x1945 (size before relaxing)
+ .debug_str     0x0000a088      0xe62 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
                                0x25da (size before relaxing)
- .debug_str     0x0000b04a      0x59b ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
+ .debug_str     0x0000aeea      0x59b ./Dave/Generated/PWM_CCU8/pwm_ccu8_conf.o
                                0x24d1 (size before relaxing)
- .debug_str     0x0000b5e5      0x784 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_str     0x0000b485      0x784 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
                                0x1e53 (size before relaxing)
- .debug_str     0x0000bd69      0x7a7 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
+ .debug_str     0x0000bc09      0x7a7 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o
                                0x20b3 (size before relaxing)
- .debug_str     0x0000c510      0x939 ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_str     0x0000c3b0      0x939 ./Dave/Generated/I2C_MASTER/i2c_master.o
                                0x1c55 (size before relaxing)
- .debug_str     0x0000ce49      0x132 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_str     0x0000cce9      0x132 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
                                0x17c3 (size before relaxing)
- .debug_str     0x0000cf7b       0x57 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_str     0x0000ce1b       0x57 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
                                 0x5ae (size before relaxing)
- .debug_str     0x0000cfd2       0x31 ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
+ .debug_str     0x0000ce72       0x31 ./Dave/Generated/GLOBAL_CCU8/global_ccu8_conf.o
                                 0x4c2 (size before relaxing)
- .debug_str     0x0000d003       0x57 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_str     0x0000cea3       0x57 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
                                 0x5a8 (size before relaxing)
- .debug_str     0x0000d05a       0x31 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+ .debug_str     0x0000cefa       0x31 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
                                 0x4ca (size before relaxing)
- .debug_str     0x0000d08b       0x88 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_str     0x0000cf2b       0xdf ./Dave/Generated/DIGITAL_IO/digital_io.o
+                                0x926 (size before relaxing)
+ .debug_str     0x0000d00a       0xa4 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                                0x8dc (size before relaxing)
+ .debug_str     0x0000d0ae       0x88 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
                                 0x429 (size before relaxing)
- .debug_str     0x0000d113       0xf3 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_str     0x0000d136       0xf3 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
                                 0x3c7 (size before relaxing)
- .debug_str     0x0000d206       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_str     0x0000d229       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
                                 0x764 (size before relaxing)
- .debug_str     0x0000d256       0x65 ./Dave/Generated/DAVE.o
-                               0x3c46 (size before relaxing)
- .debug_str     0x0000d2bb       0x37 ./main.o
-                                0x653 (size before relaxing)
+ .debug_str     0x0000d279       0x65 ./Dave/Generated/DAVE.o
+                               0x3cfd (size before relaxing)
+ .debug_str     0x0000d2de       0x1c ./main.o
+                               0x152f (size before relaxing)
 
-.debug_loc      0x00000000     0xabc8
+.debug_loc      0x00000000     0xa750
  *(.debug_loc)
  .debug_loc     0x00000000      0x1a4 ./Startup/system_XMC4200.o
  .debug_loc     0x000001a4       0xb8 ./Libraries/XMCLib/src/xmc4_gpio.o
@@ -3381,24 +3411,25 @@ USB_RAM         0x20000000        0x0
  .debug_loc     0x00005f38       0x94 ./Libraries/Newlib/syscalls.o
  .debug_loc     0x00005fcc      0x98c ./Dave/Generated/UART/uart.o
  .debug_loc     0x00006958      0x308 ./Dave/Generated/UART/uart_conf.o
- .debug_loc     0x00006c60      0xa20 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .debug_loc     0x00007680      0x608 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .debug_loc     0x00007c88      0xaf8 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
- .debug_loc     0x00008780      0x9c4 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
- .debug_loc     0x00009144     0x10c8 ./Dave/Generated/I2C_MASTER/i2c_master.o
- .debug_loc     0x0000a20c      0x468 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
- .debug_loc     0x0000a674      0x108 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
- .debug_loc     0x0000a77c      0x108 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
- .debug_loc     0x0000a884       0xac ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_loc     0x0000a930      0x108 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_loc     0x0000aa38       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_loc     0x0000aa88       0x50 ./Dave/Generated/DAVE.o
- .debug_loc     0x0000aad8       0xf0 ./main.o
+ .debug_loc     0x00006c60      0x714 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .debug_loc     0x00007374      0x458 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .debug_loc     0x000077cc      0xaf8 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_loc     0x000082c4      0x9c4 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_loc     0x00008c88     0x10c8 ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_loc     0x00009d50      0x468 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_loc     0x0000a1b8      0x108 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_loc     0x0000a2c0      0x108 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_loc     0x0000a3c8       0xac ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_loc     0x0000a474       0xac ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_loc     0x0000a520      0x108 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_loc     0x0000a628       0x50 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_loc     0x0000a678       0x50 ./Dave/Generated/DAVE.o
+ .debug_loc     0x0000a6c8       0x88 ./main.o
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000     0x1118
+.debug_ranges   0x00000000     0x10b0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x38 ./Startup/system_XMC4200.o
  .debug_ranges  0x00000038       0x18 ./Libraries/XMCLib/src/xmc4_gpio.o
@@ -3413,19 +3444,20 @@ USB_RAM         0x20000000        0x0
  .debug_ranges  0x00000950       0x18 ./Libraries/Newlib/syscalls.o
  .debug_ranges  0x00000968       0xe8 ./Dave/Generated/UART/uart.o
  .debug_ranges  0x00000a50       0x58 ./Dave/Generated/UART/uart_conf.o
- .debug_ranges  0x00000aa8       0xf8 ./Dave/Generated/SPI_SLAVE/spi_slave.o
- .debug_ranges  0x00000ba0       0xa0 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
- .debug_ranges  0x00000c40      0x110 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
- .debug_ranges  0x00000d50       0xf0 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
- .debug_ranges  0x00000e40      0x1a0 ./Dave/Generated/I2C_MASTER/i2c_master.o
- .debug_ranges  0x00000fe0       0x80 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
- .debug_ranges  0x00001060       0x20 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
- .debug_ranges  0x00001080       0x20 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
- .debug_ranges  0x000010a0       0x18 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
- .debug_ranges  0x000010b8       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
- .debug_ranges  0x000010d8       0x10 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
- .debug_ranges  0x000010e8       0x10 ./Dave/Generated/DAVE.o
- .debug_ranges  0x000010f8       0x20 ./main.o
+ .debug_ranges  0x00000aa8       0xb0 ./Dave/Generated/SPI_SLAVE/spi_slave.o
+ .debug_ranges  0x00000b58       0x70 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.o
+ .debug_ranges  0x00000bc8      0x110 ./Dave/Generated/PWM_CCU8/pwm_ccu8.o
+ .debug_ranges  0x00000cd8       0xf0 ./Dave/Generated/PWM_CCU4/pwm_ccu4.o
+ .debug_ranges  0x00000dc8      0x1a0 ./Dave/Generated/I2C_MASTER/i2c_master.o
+ .debug_ranges  0x00000f68       0x80 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+ .debug_ranges  0x00000fe8       0x20 ./Dave/Generated/GLOBAL_CCU8/global_ccu8.o
+ .debug_ranges  0x00001008       0x20 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_ranges  0x00001028       0x18 ./Dave/Generated/DIGITAL_IO/digital_io.o
+ .debug_ranges  0x00001040       0x18 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+ .debug_ranges  0x00001058       0x20 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+ .debug_ranges  0x00001078       0x10 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+ .debug_ranges  0x00001088       0x10 ./Dave/Generated/DAVE.o
+ .debug_ranges  0x00001098       0x18 ./main.o
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -3440,7 +3472,7 @@ USB_RAM         0x20000000        0x0
  *(.debug_varnames)
 
 .build_attributes
-                0x00000000      0x6fb
+                0x00000000      0x769
  *(.ARM.attributes)
  .ARM.attributes
                 0x00000000       0x25 ./Startup/startup_XMC4200.o
@@ -3495,17 +3527,21 @@ USB_RAM         0x20000000        0x0
  .ARM.attributes
                 0x0000054d       0x37 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
  .ARM.attributes
-                0x00000584       0x37 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
+                0x00000584       0x37 ./Dave/Generated/DIGITAL_IO/digital_io.o
  .ARM.attributes
-                0x000005bb       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
+                0x000005bb       0x37 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
  .ARM.attributes
-                0x000005f2       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x000005f2       0x37 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o
  .ARM.attributes
-                0x00000629       0x37 ./Dave/Generated/DAVE.o
+                0x00000629       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4.o
  .ARM.attributes
-                0x00000660       0x37 ./main.o
+                0x00000660       0x37 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  .ARM.attributes
-                0x00000697       0x32 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x00000697       0x37 ./Dave/Generated/DAVE.o
  .ARM.attributes
-                0x000006c9       0x32 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+                0x000006ce       0x37 ./main.o
+ .ARM.attributes
+                0x00000705       0x32 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000737       0x32 d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
 OUTPUT(XMC4200.elf elf32-littlearm)

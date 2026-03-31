@@ -70,13 +70,13 @@
 #include "I2C_MASTER/i2c_master.h"
   
 
-#include "SPI_SLAVE/spi_slave.h"
-  
-
 #include "UART/uart.h"
   
 
 #include "DIGITAL_IO/digital_io.h"
+  
+
+#include "SPI_SLAVE/spi_slave.h"
   
 	
 

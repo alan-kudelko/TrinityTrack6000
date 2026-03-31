@@ -60,9 +60,9 @@ extern "C" {
  * MACROS
  **********************************************************************************************************************/
 
-#define I2C_BUS_TX_HANDLER	IRQ_Hdlr_93
+#define I2C_BUS_TX_HANDLER	IRQ_Hdlr_91
 
-#define I2C_BUS_RX_HANDLER	IRQ_Hdlr_91
+#define I2C_BUS_RX_HANDLER	IRQ_Hdlr_90
 
 extern I2C_MASTER_t I2C_BUS;
 void I2C_MASTER_ProtocolHandler(I2C_MASTER_t * const handle);
