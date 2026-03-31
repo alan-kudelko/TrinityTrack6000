@@ -721,7 +721,27 @@ The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM
 
 #### 7.3 L76L-M33 GPS
 
+The L76L-M33 is used as an onboard GNSS (GPS) receiver module, interfaced with the STM32G473RET6 via UART.
 
+**Key features:**
+- UART communication with STM32G473RET6 (TX/RX)
+- PPS (Pulse Per Second) output for precise timing
+- Optional reset and standby control via GPIO
+- External antenna connection via SMA connector
+
+**RF design:**
+- Single-ended RF input matched to 50Ω antenna
+- Matching network (PI topology) based on reference design
+- Matching components (0402) allow fine tuning depending on PCB stackup and antenna characteristics
+
+**Power design:**
+- Powered from 3.3V rail with local filtering
+- Decoupling capacitors (100nF + 4.7µF) placed close to the module
+- Optional ESD protection on RF line (not populated by default)
+
+**Additional notes:**
+- I2C interface is not used (optional pull-ups not populated)
+- UART lines include series resistors for signal integrity and voltage adaptation
 
 ![L76L-M33](/MainControlBoard/Media/GPS_Schematic.png)
 
