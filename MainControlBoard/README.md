@@ -721,6 +721,10 @@ The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM
 
 #### 7.3 L76L-M33 GPS
 
+
+
+![L76L-M33](/MainControlBoard/Media/GPS_Schematic.png)
+
 #### 7.4 STWD100NYWY3F external watchdog timer
 
 An external watchdog is used to increase system reliability and ensure recovery from unexpected failures.
@@ -1085,59 +1089,62 @@ Bottom layer view:
 
 #### 8.3 BOM (Bill of Materials)
 
+## 📦 Bill of Materials (BOM)
+
 | Designator | Value | Tolerance | Footprint | Quantity | Mouser No | Notes |
 |------------|-------|-----------|------------|----------|------------|--------|
-| **U1** | STM32G473RET6 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-BL | 1 | 511-STM32G473RET6 | Main MCU |
-| C5, C6, C7, C23, C29 | 100nF | 5% | C0603 | 5 | - | Decoupling capacitors placed close to STM32G473RET6 VDD pins |
-| C8 | 4.7µF | 5% | C0603 | 1 | - | Bulk capacitor for STM32G473RET6 VDD supply |
-| C11, C22 | 1µF | 5% | C0603 | 2 | - | Bulk capacitors for STM32G473RET6 analog supply (VREF+, VDDA) |
-| C21 | 10nF | 5% | C0603 | 1 | - | Filtering capacitor for STM32G473RET6 VDDA |
-| | | | | | | |
-| **U2** | L76L-M33 | - | COMM-SMD_18P-L10.1-W9.7-P1.1-TL_L76-LB | 1 | 277-L76L-M33 | Onboard GNSS (GPS) module |
-| C32, C34 | 1.5pF | 1% | C0402 | 2 | - | RF matching network (PI network) |
-| C35 | 4.7µF | 5% | C0603 | 1 | - | VCC bulk capacitor |
-| C36 | 100nF | 5% | C0603 | 1 | - | VCC decoupling capacitor |
-| R46 | 0Ω    | 1% | R0603 | 1 | - | RF matching network (PI network) |
-| R34 | 2.2kΩ | 5% | R0603 | 1 | - | UART RX series resistor |
-| R33 | 1kΩ | 5% | R0603 | 1 | - | UART TX series resistor |
-| R48 | 100Ω | 5% | R0603 | 1 | - | PPS signal series resistor |
-| R49, R50 | 47kΩ | 5% | R0603 | 2 | - | I2C pull-up resistors (not populated by default) |
-| R51 | 10k | 5% | R0603 | 1 | - | UART RX pull-up resistor |
-| D1 | SP0402B-ULC-01ETG | - | DFN-2L_L1.0-W0.6-P0.65-BI | 1 | 576-SP0402BULC-01ETG | RF ESD protection diode |
-| RF2 | SMA-J-P-H-RA-TH1 | - | ANT-TH_SMA-J-P-H-RA-TH1 | 1 | - | External antenna connector (SMA) |
-| | | | | | | |
-| **U3** | XMC4200F64K256BAXQSA1 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-TL-EP5.7 | 1 | 726-XMC4200F64K256BA | Motor control MCU (PWM/CCU, encoder interfaces, SPI slave) |
-| | | | | | | |
-| | | | | | | |
-| Q1 | IRF7380TRPBF-VB | - | SOP-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | 726-IRF7380TRPBFXTMA | N-channel MOSFET for MQ sensor heater control |
-| | | | | | | |
-| **U6** | TLV76133DCYR | - | SOT-223-4_L6.5-W3.5-P2.30-LS7.0-TR | 1 | 595-TLV76133DCYR | 3.3V LDO regulator (main PCB power supply) |
-| | | | | | | |
-| **U7** | nRF24L01P-R | - | QFN-20_L4.0-W4.0-P0.50-BL-EP | 1 | 949-NRF24L01P-T | 2.4 GHz RF transceiver |
-| L1 | 8.2nH | 1% | L0402 | 1 | - | RF matching network |
-| L2 | 2.7nH | 1% | L0402 | 1 | - | RF matching network |
-| L3 | 3.9nH | 1% | L0402 | 1 | - | RF matching network |
-| C10 | 100nF | 5% | C0603 | 1 | - | VDD decoupling |
+| C1 | 1µF | 5% | C1206 | 1 | - | Power supply filtering |
+| C2 | 100µF | 5% | CAP-D5.0-F2.0 | 1 | - | Bulk input capacitor |
+| C3, C4 | 100nF | 5% | C1206 | 2 | - | General decoupling |
+| C5, C6, C7, C9, C10, C12, C13, C15, C16, C17, C18, C23, C29, C31, C36 | 100nF | 5% | C0603 | 15 | - | Decoupling capacitors |
+| C8, C14, C30, C35 | 4.7µF | 5% | C0603 | 4 | - | Bulk capacitors |
+| C11, C22 | 1µF | 5% | C0603 | 2 | - | Analog supply filtering |
 | C19, C20 | 22pF | 5% | C0603 | 2 | - | Crystal load capacitors |
-| C24 | 1.5pF | 1% | C0402 | 1 | - | RF matching network |
-| C25 | 1.0pF | 1% | C0402 | 1 | - | RF matching network |
-| C26 | 2.2nF | 1% | C0402 | 1 | - | RF matching network |
-| C27 | 4.7pF | 1% | C0402 | 1 | - | RF matching network |
+| C21 | 10nF | 5% | C0603 | 1 | - | Analog filtering |
+| C24, C32, C34 | 1.5pF | 1% | C0402 | 3 | - | RF matching network (tunable) |
+| C25 | 1.0pF | 1% | C0402 | 1 | - | RF matching network (tunable) |
+| C26 | 2.2nF | 1% | C0402 | 1 | - | RF matching network (tunable) |
+| C27 | 4.7pF | 1% | C0402 | 1 | - | RF matching network (tunable) |
 | C28 | 33nF | 5% | C0603 | 1 | - | DVDD filtering |
-| C30 | 4.7µF | 5% | C0603 | 1 | - | VDD bulk capacitor |
-| R27 | 1MΩ | 5% | R1206 | 1 | - | Crystal bias resistor |
-| R25, R26, R37 | 10kΩ | 5% | R0603 | 3 | - | Pull-up resistors |
+| C33 | 10µF | 5% | C0603 | 1 | - | Bulk capacitor |
+| CN1 | ETMM_122_02_F_D_TH | - | ETMM-122-02-F-D-TH | 1 | 200-ETMM12202FDTH | External board connector (ribbon cable) |
+| CON2 | MSTB2.5/2-G-5.08 | - | CONN-TH_2P-P5.08_MSTB2.5 | 1 | - | Power input connector |
+| D1 | SP0402B-ULC-01ETG | - | DFN-2L_L1.0-W0.6-P0.65-BI | 1 | 576-SP0402BULC-01ETG | ESD protection (not populated by default) |
+| J1, J2 | HDR-M-2.54_2x5 | - | HDR-M-2.54_2X5 | 2 | - | Programming connectors (modified Cortex-M 10-pin) |
+| J3 | HDR-M-2.54_2x15 | - | HDR-M-2.54_2X15 | 1 | - | SPI stack connector between boards |
+| J4 | HDR-M-2.54_1x3 | - | HDR-M-2.54_1X3 | 1 | - | Auxiliary connector |
+| L1 | 8.2nH | 1% | L0402 | 1 | - | RF matching network (tunable) |
+| L2 | 2.7nH | 1% | L0402 | 1 | - | RF matching network (tunable) |
+| L3 | 3.9nH | 1% | L0402 | 1 | - | RF matching network (tunable) |
+| LED1 | LED-0603_R | - | LED0603_RED | 1 | - | Power/status indicator |
+| Q1 | IRF7380TRPBF-VB | - | SOP-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | 726-IRF7380TRPBFXTMA | MOSFET for MQ heater control |
+| Q2 | BC547B | - | TO92-INLINE | 1 | - | General purpose transistor |
+| Q3 | SI2365EDS-T1-GE3 | - | SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR | 1 | 78-SI2365EDS-T1-BE3 | P-channel MOSFET (RF power control) |
+| R1 | 1kΩ | 5% | R1206 | 1 | - | Crystal bias resistor |
+| R2, R8, R9, R11, R12, R23, R25, R26, R35, R36, R37, R51 | 10kΩ | 5% | R0603 | 12 | - | Pull-up / pull-down resistors |
+| R3, R6, R7, R42 | 4.7kΩ | 5% | R0603 | 4 | - | I2C pull-ups / biasing |
+| R4, R5, R21, R22, R34 | 2.2kΩ | 5% | R0603 | 5 | - | Signal conditioning |
+| R10, R32, R39, R40 | 10Ω | 5% | R0603 | 4 | - | SWD signal damping |
+| R13, R20, R41, R43, R49, R50 | 47kΩ | 5% | R0603 | 6 | - | Pull resistors (R49, R50 not populated by default) |
+| R14 | 10kΩ | 5% | R1206 | 1 | - | Bias resistor |
+| R15, R16, R17, R18, R19, R28, R29, R30, R31 | 22Ω | 5% | R0603 | 9 | - | SPI series resistors |
 | R24 | 22kΩ | 5% | R0603 | 1 | - | IREF resistor |
-| R16 | 22Ω | 5% | R0603 | 1 | - | SPI MISO series resistor |
-| R38 | 100Ω | 5% | R0603 | 1 | - | P-MOSFET gate resistor |
-| X1 | 16MHz | - | CRYSTAL-TH_L10.8-W4.5-P4.88 | 1 | - | RF reference crystal |
-| Q3 | SI2365EDS-T1-GE3 | - | SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR | 1 | SI2365EDS-T1-GE3 | P-channel MOSFET for RF power control |
-| RF1 | SMA-J-P-H-RA-TH1 | - | ANT-TH_SMA-J-P-H-RA-TH1 | 1 | - | External antenna connector (SMA) |
-| | | | | | | |
-| **U8** | FM25L16B-GTR | - | SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | 877-FM25L16B-GTR | SPI FRAM memory for data logging (telemetry, events, GPS position) |
-| C4 | 100nF | 5% | C0603 | 1 | - | FRAM decoupling capacitor |
-| R2 | 10kΩ | 5% | R0603 | 1 | - | FRAM CS pull-up resistor |
-| R15 | 22Ω | 5% | R0603 | 1 | - | FRAM SPI1 MOSI series resistor |
-| | | | | | | |
-| | | | | | | |
-| SJ1–SJ28 | 0Ω (configurable) | 5% | R0603 | 28 | - | Jumpers on bottom layer for external signals; allows optional series resistors for tuning or direct short (0Ω) |
+| R27 | 1MΩ | 5% | R1206 | 1 | - | Bias resistor |
+| R33, R47 | 1kΩ | 5% | R0603 | 2 | - | UART series resistors |
+| R38, R44, R45, R48 | 100Ω | 5% | R0603 | 4 | - | Signal damping |
+| R46 | 0Ω | 1% | R0402 | 1 | - | RF path jumper (tunable) |
+| RF1, RF2 | SMA-J-P-H-RA-TH1 | - | ANT-TH_SMA-J-P-H-RA-TH1 | 2 | 200-SMAJPHRATH1 | External antenna connectors |
+| SJ1–SJ28 | 0Ω (configurable) | 5% | R0603 | 28 | - | Jumpers for external signals (optional tuning / configuration) |
+| SPEAKER | BUZZER | - | BUZZER-12MM-NS-KIT | 1 | - | Buzzer for diagnostics |
+| SW1, SW2 | Button-6x6x8-Right-Angle | - | SW-TH_BBJ-C71833 | 2 | - | MCU reset buttons |
+| U1 | STM32G473RET6 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-BL | 1 | 511-STM32G473RET6 | Main MCU |
+| U2 | L76L-M33 | - | COMM-SMD_18P-L10.1-W9.7-P1.1-TL_L76-LB | 1 | 277-L76L-M33 | GNSS (GPS) module |
+| U3 | XMC4200F64K256BAXQSA1 | - | LQFP-64_L10.0-W10.0-P0.50-LS12.0-TL-EP5.7 | 1 | - | Motor control MCU |
+| U4 | MQ-7 | - | SENSOR-TH_MQ-9B | 1 | - | CO gas sensor |
+| U5 | MQ-6 | - | SENSOR-TH_MQ-4 | 1 | - | LPG gas sensor |
+| U6 | TLV76133DCYR | - | SOT-223-4_L6.5-W3.5-P2.30-LS7.0-TR | 1 | 595-TLV76133DCYR | 3.3V LDO regulator |
+| U7 | nRF24L01P-R | - | QFN-20_L4.0-W4.0-P0.50-BL-EP | 1 | 949-NRF24L01P-T | 2.4 GHz RF transceiver |
+| U8 | FM25L16B-GTR | - | SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL | 1 | - | SPI FRAM memory |
+| U9 | STWD100NYWY3F | - | SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR | 1 | 511-STWD100NYWY3F | Watchdog supervisor |
+| U10 | ADXL345BCCZ-RL7 | - | LGA-14_L5.0-W3.0-P0.80-BL | 1 | 584-ADXL345BCCZ-R7 | 3-axis accelerometer |
+| X1 | XTAL-16M | - | CRYSTAL-TH_L10.8-W4.5-P4.88 | 1 | - | RF reference crystal |
