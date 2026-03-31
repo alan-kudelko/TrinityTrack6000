@@ -148,7 +148,23 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
      - [5.8.2 RAM Usage Diagnostics](#582-ram-usage-diagnostics)
 6. [Infineon](#6-infineon)
 7. [Electrical Schematic](#7--electrical-schematic)
+   - [7.1 Voltage regulation for logic part](#71-voltage-regulation-for-logic-part)
+   - [7.2 Gas Sensors](#72-gas-sensors)
+   - [7.3 NRF24L01P 2.4GHz Transceiver](#73-nrf24l01p-24ghz-transceiver)
+   - [7.4 L76L-M33 GPS](#74-l76l-m33-gps)
+   - [7.5 STWD100NYWY3F external watchdog timer](#75-stwd100nywy3f-external-watchdog-timer)
+   - [7.6 FM25L16B-GTR FRAM](#76-stwd100nywy3f-external-watchdog-timer)
+   - [7.7 ADXL-345 Accelerometer](#77-adxl-345-accelerometer)
+   - [7.8 Buzzer](#78-buzzer)
+   - [7.9 STM32G473RET6](#79-stm32g473ret6)
+   - [7.10 XMC4200F64K256BAXQSA1](#710-xmc4200f64k256baxqsa1)
+   - [7.11 Programming and Debug Interfaces](#711-programming-and-debug-interfaces)
+   - [7.12 Hardware Control Connector](#712-hardware-control-connector)
+   - [7.13 PCB Stack SPI Interface](#713-pcb-stack-spi-interface)
 8. [PCB](#8--pcb)
+   - [8.1 PCB Preview](#81-pcb-preview)
+   - [8.2 Assembly Notes](#82-assembly-notes)
+   - [8.3 BOM (Bill of Materials)](#83-bom-bill-of-materials)
 ---
 
 ## ⚙️ Technical Overview 
@@ -723,7 +739,7 @@ The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM
 
 ![NRF24L01P](/MainControlBoard/Media/NRF24L01P_Schematic.png)
 
-#### 7.3 L76L-M33 GPS
+#### 7.4 L76L-M33 GPS
 
 The L76L-M33 is used as an onboard GNSS (GPS) receiver module, interfaced with the STM32G473RET6 via UART.
 
@@ -749,7 +765,7 @@ The L76L-M33 is used as an onboard GNSS (GPS) receiver module, interfaced with t
 
 ![L76L-M33](/MainControlBoard/Media/GPS_Schematic.png)
 
-#### 7.4 STWD100NYWY3F external watchdog timer
+#### 7.5 STWD100NYWY3F external watchdog timer
 
 An external watchdog is used to increase system reliability and ensure recovery from unexpected failures.
 
@@ -773,7 +789,7 @@ An external watchdog is used to increase system reliability and ensure recovery 
 
 ![Watchdog](/MainControlBoard/Media/STWD100NYWY3F_Schematic.png)
 
-#### 7.5 FM25L16B-GTR FRAM
+#### 7.6 FM25L16B-GTR FRAM
 
 The FM25L16B FRAM is used for non-volatile data storage.
 
@@ -799,7 +815,7 @@ The FM25L16B FRAM is used for non-volatile data storage.
 
 ![FM25L16B](/MainControlBoard/Media/FM25L16B_Schematic.png)
 
-#### 7.6 ADXL-345 Accelerometer
+#### 7.7 ADXL-345 Accelerometer
 
 The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
 
@@ -816,7 +832,7 @@ The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
 
 ![ADXL345](/MainControlBoard/Media/ADXL345_Schematic.png)
 
-#### 7.7 Buzzer
+#### 7.8 Buzzer
 
 The buzzer is used for basic acoustic feedback and system indication.
 
@@ -834,7 +850,7 @@ The buzzer is used for basic acoustic feedback and system indication.
 
 ![Buzzer](/MainControlBoard/Media/Buzzer_Schematic.png)
 
-#### 7.8 STM32G473RET6
+#### 7.9 STM32G473RET6
 
 The STM32G473RET6 serves as the main system controller.
 
@@ -861,7 +877,7 @@ The STM32G473RET6 serves as the main system controller.
 
 ![STM32G473RET6](/MainControlBoard/Media/STM32G473RET6_Schematic.png)
 
-#### 7.9 XMC4200F64K256BAXQSA1
+#### 7.10 XMC4200F64K256BAXQSA1
 
 The XMC4200 is used as a dedicated real-time hardware control MCU.
 
@@ -901,7 +917,7 @@ The XMC4200 is used as a dedicated real-time hardware control MCU.
 
 ![XMC4200](/MainControlBoard/Media/XMC4200_Schematic.png)
 
-#### 7.10 Programming and Debug Interfaces
+#### 7.11 Programming and Debug Interfaces
 
 The board provides programming and debugging interfaces for both MCUs using modified 10-pin Cortex-M debug connectors (2x5, 2.54 mm).
 
@@ -931,7 +947,7 @@ For reference, the official Cortex-M 10-pin debug connector pinout is shown belo
 
 ![CORTEX-M-DEBUG_CONN](/MainControlBoard/Media/cortex_debug10pin.png)
 
-#### 7.11 Hardware Control Connector
+#### 7.12 Hardware Control Connector
 
 This connector provides the interface between the Main Control Board and the external **HardwareControlBoard**.
 
@@ -978,7 +994,7 @@ This connector acts as the primary hardware abstraction boundary between:
 
 ![Samtec ETMM Series](/MainControlBoard/Media/samtec_etmm_series.png)
 
-#### 7.12 PCB Stack SPI Interface
+#### 7.13 PCB Stack SPI Interface
 
 This connector provides the **inter-board communication interface** within the PCB stack.
 
