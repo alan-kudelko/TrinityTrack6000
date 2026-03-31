@@ -14,6 +14,8 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 
 ![PCB Top](/MainControlBoard/Media/PCB_Top.png)
 
+**4-layer PCB with RF (SMA), GNSS and dual-MCU architecture**
+
 > ✅ Status: Currently in active development and prototyping  
 > 🔧 Goal: Serve as an educational platform for learning **STM32**, **Infineon MCUs**, and real-time systems **ThreadX** and **Micrium µC/OS**, while exploring multi-MCU coordination and embedded system design  
 
