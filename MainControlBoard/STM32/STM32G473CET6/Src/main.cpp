@@ -211,6 +211,22 @@ void test_SPI_communication(){
     }
 }
 
+void xmc4200_spi_test(void){
+    uint8_t tx_data[10];
+
+    memset(tx_data,0xAA,10);
+
+    uint8_t rx_data[10]{0};
+
+    while(1){
+        HAL_GPIO_WritePin(INFINEON_CS_GPIO_Port,INFINEON_CS_Pin,GPIO_PIN_RESET);
+
+        HAL_SPI_TransmitReceive(&hspi2,tx_data,rx_data,10,1);
+        HAL_GPIO_WritePin(INFINEON_CS_GPIO_Port,INFINEON_CS_Pin,GPIO_PIN_SET);
+        HAL_Delay(1000);
+    }
+}
+
 /**
  * @brief  The application entry point.
  * @retval int
@@ -233,7 +249,7 @@ int main(void){
 
     uint32_t adc_buffer[4]{0};
     //nrf24l01_init();
-
+    xmc4200_spi_test();
     while(false){
         HAL_ADC_Start_DMA(&hadc1,adc_buffer,4);
         
