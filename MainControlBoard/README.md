@@ -1,16 +1,21 @@
-# **ControlBoard** – **STM32 + Infineon**  
+# **ControlBoard** – **STM32G4 + XMC4200**  
 
-**STM32**: Main logic and system coordination, communication via radio and Bluetooth
-**Infineon**: Motor and servo control, current and temperature monitoring
+**STM32G4**: Main system controller responsible for coordination, telemetry handling and communication (radio via nRF24L01+)
+**XMC4200**: Dedicated real-time controller for motor and servo control, including encoder feedback and monitoring (current, temperature)
 
-The system runs on a custom PCB integrating **STM32** and **Infineon** microcontrollers, designed with **fully deterministic memory allocation** and task management.
+The system is built on a custom dual-MCU PCB, where responsibilities are clearly separated between high-level logic (STM32) and time-critical control tasks (Infineon).
 
-- **STM32** leverages **ThreadX RTOS** for high-level coordination
-- **Infineon** uses **Micrium µC/OS RTOS** for precise motor and servo control
+- **STM32** leverages **ThreadX RTOS** for system supervision, communication, telemetry processing and coordination of all subsystems  
+- **Infineon** uses **Micrium µC/OS RTOS** for deterministic motor and servo control with precise timing requirements
 
-All tasks on STM32 and Infineon MCUs are allocated with **guard zones** in RAM, using custom **linker scripts** to arrange task stacks and guard areas contiguously. This enables continuous memory monitoring and deterministic stack overflow detection, fully compatible with static memory allocation principles.  
+All tasks on both MCUs are allocated using **fully static memory allocation**, with **guard zones** implemented via custom **linker scripts**. Task stacks and guard regions are arranged contiguously in memory, enabling runtime monitoring and deterministic stack overflow detection.
 
-The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, and portable code. The ControlBoard includes **robust diagnostics and fault-handling mechanisms**, such as monitoring RAM and CPU usage, task stack overflows, and EEPROM-based error logging.
+The system includes **robust diagnostics and fault-handling mechanisms**, such as:
+- RAM and CPU usage monitoring  
+- Task stack overflow detection  
+- Persistent error logging in FRAM  
+
+The project follows **MISRA C:2025** guidelines to ensure code safety, maintainability and portability.
 
 ![PCB Top](/MainControlBoard/Media/PCB_Top.png)
 
@@ -23,11 +28,11 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 
 ## ✳️ Planned Technologies & Tools
 
-- **MCUs**: STM32 (high-level coordination, RTOS), Infineon XMC (motor & servo control, real-time monitoring)
+- **MCUs**: STM32G4 (high-level coordination, RTOS), Infineon XMC (motor & servo control, real-time monitoring)
 - **RTOS**: ThreadX on STM32, Micrium µC/OS on Infineon
 - **Memory Management**: Guard zones, static memory allocation, custom linker scripts
 - **Interfaces**: UART, SPI, and I²C for peripheral communication
-- **Communication Modules**: nRF24L01 for radio control, HC-05 for bluetooth control
+- **Communication Modules**: nRF24L01 for radio control
 - **Development Tools**: VS Code, CMake, Ninja, arm-gcc toolchain, STM32CubeIDE, DAVE IDE
 - **Software Libraries**: STM32 HAL/LL drivers, Infineon low-level drivers
 - **Diagnostics & Monitoring**: RAM and CPU usage tracking, EEPROM fault logging
@@ -37,7 +42,7 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 - **Prototyping Phase:** Initial development and testing are conducted on a **Nucleo board with STM32L476RGT6**, using **STM32 HAL**, and on the **KIT_XMC45_RELAX_LITE_V1** Evaluation board for Infineon XMC series prototyping. This allows fast iteration and hardware abstraction during early stages.
 
 - **Production Phase:** The final implementation will be migrated to a **custom PCB** featuring:
-  - **STM32G473CET6** as the main coordinator / master MCU,
+  - **STM32G473RET6** as the main coordinator / master MCU,
   - **Infineon XMC4200F64K256BAXQSA1** for peripheral / slave functionality.  
   Development will use **bare-metal / low-level drivers**, focusing on performance optimization, resource efficiency, and full control over hardware-level operations.
 
@@ -53,7 +58,7 @@ The project adheres to **MISRA C:2025** standards, ensuring safe, maintainable, 
 - **Nucleo STM-64 STM32L4RGT6 board** for rapid prototyping and learning STM32
 - **Infineon KIT_XMC45_RELAX_LITE_V1 evaluation board** for raping prototyping and learning Inineon XMC MCU series
 - Custom PCB hosting:
-  - **STM32G473CET6 MCU** – Handles high-level coordination tasks and system management
+  - **STM32G473RET6 MCU** – Handles high-level coordination tasks and system management
   - **Infineon XMC4200F64K256BAXQSA1 MCU** – Controls precise motor and servo operations with real-time current monitoring
   - **nRF24l01** wireless module
   - **FM25L16B-GTR** FRAM IC for storing data and settings for MCUs between bootups
@@ -97,8 +102,6 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - 🧩 Implement low-level memory management techniques for optimized and reliable resource control
 - 🧱 Integrate tightly with custom hardware (PCB, sensors, actuators)
 - 🌐 Explore principles of distributed embedded systems and multi-MCU communication commonly used in commercial applications
-- 🚀 Benchmark RAM bank variable placement and assembly-level optimizations to maximize performance
-- ⚡ Benchmark FPU/ALU instruction interleaving using manual ASM scheduling to explore cycle-level parallelism
   
 ---
 
@@ -136,10 +139,10 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 1. [ControlBoard Module Structure & File Overview](#1--controlboard-module-structure--file-overview)
 2. [Design considerations](#2-design-considerations)
 3. [MCU's pinouts](#3-mcus-pinouts)
-   - [3.1 STM32G473CET6 Pinout (LQFP-48)](#31-stm32g473cet6-pinout-lqfp-48)
+   - [3.1 STM32G473RET6 Pinout (LQFP-64)](#31-stm32g473ret6-pinout-lqfp-64)
    - [3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)](#32-XMC4200F64K256BAXQSA1-pinout-tqfp-64)
 4. [System's architecture](#4-systems-architecture)
-5. [STM32G473CET6](#5-stm32g473cet6)
+5. [STM32G473RET6](#5-stm32g473ret6)
    - [5.7 💾 Memory Layout](#57--memory-layout)
      - [5.7.1 RAM Map](#571-ram-map)
      - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
@@ -271,7 +274,7 @@ Colors and hardware related to them are described below:
 - 🔷 RTC / Backup / LPTIM  
 
 
-#### 3.1 STM32G473CET6 Pinout (LQFP-48)
+#### 3.1 STM32G473RET6 Pinout (LQFP-64)
 
 | #  | Pin / Function                                                                                    | Usage/Label                            | Description                              |
 |----|---------------------------------------------------------------------------------------------------|----------------------------------------|------------------------------------------|
@@ -413,11 +416,11 @@ Colors and hardware related to them are described below:
 
 ---
 
-### 5. STM32G473CET6
+### 5. STM32G473RET6
 
 #### 5.1 Clock configuration
 
-![STM32G473 Clock Configuration](/MainControlBoard/Media/STM32G473CET6_ClockConfiguration.png)
+![STM32G473 Clock Configuration](/MainControlBoard/Media/STM32G473RET6_ClockConfiguration.png)
 
 #### 5.2 System initialization
 
