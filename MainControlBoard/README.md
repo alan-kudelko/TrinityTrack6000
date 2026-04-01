@@ -1,6 +1,7 @@
 # **ControlBoard** – **STM32G4 + XMC4200**  
 
 **STM32G4**: Main system controller responsible for coordination, telemetry handling and communication (radio via nRF24L01+)
+
 **XMC4200**: Dedicated real-time controller for motor and servo control, including encoder feedback and monitoring (current, temperature)
 
 The system is built on a custom dual-MCU PCB, where responsibilities are clearly separated between high-level logic (STM32) and time-critical control tasks (Infineon).
