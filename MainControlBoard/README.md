@@ -1001,6 +1001,18 @@ Bottom layer view:
 - Default value: **10Ω**
 - May be adjusted depending on signal integrity and cable length
 
+**NRF24L01+ section (RF components):**
+The inductors used in this section are from the Murata LQG15WH series (0402 RF inductors).
+Due to their frequency-dependent behavior, the nominal inductance value specified in the BOM does not directly correspond to the effective impedance at GHz frequencies.
+
+At high frequencies (2.4–2.525 GHz), parasitic effects such as series resistance and capacitance significantly influence the component behavior. As a result, the effective inductance at the operating frequency may differ from the nominal value measured at low frequency.
+
+Because of this, component selection must be based on manufacturer RF characteristics (Q factor, impedance vs frequency, and SRF), rather than nominal inductance alone.
+
+In practice, slightly lower nominal inductance values are selected to compensate for frequency-dependent behavior of the components, ensuring that the effective impedance at 2.4 GHz matches the intended design.
+- L1: nominal value 8.2 nH → selected value 6.8 nH  
+- L3: nominal value 3.9 nH → selected value 3.7 nH
+
 **General notes:**
 - Several components are intentionally left as DNP to allow flexibility during bring-up
 - Final values may be adjusted after testing and signal validation
