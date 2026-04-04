@@ -182,6 +182,8 @@ This architecture ensures:
 - Clear control flow
 - Safe failure handling
 
+---
+
 ## 🟢 STM32G4
 
 ### [001] CubeIDE project setup (initial HAL)
