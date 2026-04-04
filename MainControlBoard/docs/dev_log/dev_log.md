@@ -7,7 +7,6 @@ This file contains raw development notes, observations, and decisions made durin
 Content may be informal, incomplete, or experimental by nature.
 
 
-
 ## 🟢 STM32G4
 
 ### [001] CubeIDE project setup (initial HAL)

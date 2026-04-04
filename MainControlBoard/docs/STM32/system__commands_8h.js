@@ -1,21 +1,15 @@
 var system__commands_8h =
 [
-    [ "TASK_CLI_COMMAND", "struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html", "struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d" ],
+    [ "SystemRequest", "struct_system_request.html", "struct_system_request" ],
     [ "ALIGNED", "system__commands_8h.html#a8e7a3bf6003d72a62606f343c2db6245", null ],
     [ "DEVICE_COUNT", "system__commands_8h.html#a268c0726d6884c56c5c4d0b96ac162cd", null ],
     [ "HARDWARE_COUNT", "system__commands_8h.html#aaaa4dfb9cb9d46973907c56dea57c87b", null ],
     [ "SECTION", "system__commands_8h.html#a9982c2dc93e94348913cd6b7b0618973", null ],
+    [ "SYSTEM_REQUEST_STATUS_ERROR", "system__commands_8h.html#aed39a3b17440f0a29efb53da508129b4", null ],
+    [ "SYSTEM_REQUEST_STATUS_OK", "system__commands_8h.html#aaad4903f633a5cd36cb1ab4069eeaacf", null ],
     [ "DEVICE_ID", "system__commands_8h.html#a0b81804be49ed000d8b7d5e4d2d70468", null ],
     [ "HARDWARE_ID", "system__commands_8h.html#af84c34a650eebad3f2e2669f0f98f6ce", null ],
-    [ "TASK_CLI_COMMAND", "system__commands_8h.html#a7829f307ebefd96640159bfd1027688d", null ],
-    [ "CLI_CMD_TYPE", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9ee", [
-      [ "CLI_CMD_SET_VALUE", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9eeab73f3160c6607ca621c34155e3274b35", null ],
-      [ "CLI_CMD_BUS_RAW_DATA", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9eea43367f2aa2f6e615965b5d3ca05d68cb", null ],
-      [ "CLI_CMD_SWITCH_MODE", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9eeaf56646ca0febef3b35f3ad6b8e06f98b", null ],
-      [ "CLI_CMD_GET_RADIO_STATS", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9eea14782df5baab447b7a57b4e78b104be9", null ],
-      [ "CLI_CMD_GET_RADIO_RUNTIME_STATS", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9eea2b59fce14e57dac9d360efd5bbd13bd1", null ],
-      [ "CLI_CMD_GET_RADIO_SETTINGS", "system__commands_8h.html#a2ece8ae4774fdc6e8c33a1912c2cc9eea0fa5be74ef8b03a565c5d63b542877f4", null ]
-    ] ],
+    [ "SystemRequest", "system__commands_8h.html#aef03e4885f853cebd995a496adae14c5", null ],
     [ "DEVICE_ID", "system__commands_8h.html#a128b7c651aed38b19ba4a7a538d3f81e", [
       [ "DEVICE_MCP1", "system__commands_8h.html#a128b7c651aed38b19ba4a7a538d3f81eade63d7348733ecc993e1b35fc364ce29", null ],
       [ "DEVICE_MCP2", "system__commands_8h.html#a128b7c651aed38b19ba4a7a538d3f81ea6d13e8551b0b8f61686993c6d2789280", null ],
@@ -34,5 +28,13 @@ var system__commands_8h =
       [ "HARDWARE_MOTOR2", "system__commands_8h.html#aad9b1369e3abee740c8b134a6d62ffbdaea711efb0fc4b94dbf82f5eb18137293", null ],
       [ "HARDWARE_SENSOR1", "system__commands_8h.html#aad9b1369e3abee740c8b134a6d62ffbda9a27b60e78482f08f2fb9ead30e4a46d", null ],
       [ "HARDWARE_SENSOR2", "system__commands_8h.html#aad9b1369e3abee740c8b134a6d62ffbdad8703113ad4b956b14d11af118e5151e", null ]
+    ] ],
+    [ "RequestType", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5af", [
+      [ "REQUEST_SET_VALUE", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5afaacd2735515552a3231f9e99398e022bc", null ],
+      [ "REQUEST_BUS_RAW_DATA", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5afa8fa1807a0d3eea051e0b3f7176b7fa04", null ],
+      [ "REQUEST_SWITCH_MODE", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5afa18ca14f445813db9da0af3c0dacb89b7", null ],
+      [ "REQUEST_GET_RADIO_STATS", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5afacc508c82410bf4e9de87e5b363fcdab2", null ],
+      [ "REQUEST_GET_RADIO_RUNTIME_STATS", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5afa0629a2c2a5223c3cffc954085f7aebf5", null ],
+      [ "REQUEST_GET_RADIO_SETTINGS", "system__commands_8h.html#ae10b07f2d0feb103db7fe4cfd192e5afaed2f292d1dfd2d16037aa7c3e0bd5773", null ]
     ] ]
 ];

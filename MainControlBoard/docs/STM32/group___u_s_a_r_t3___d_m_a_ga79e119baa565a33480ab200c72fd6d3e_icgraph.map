@@ -1,0 +1,7 @@
+<map id="usart1_dma_init" name="usart1_dma_init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,5,377,32"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,21,217,21,217,16,248,16"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

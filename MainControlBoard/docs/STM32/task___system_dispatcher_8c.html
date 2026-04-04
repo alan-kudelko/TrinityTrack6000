@@ -100,36 +100,36 @@ $(function(){initNavTree('task___system_dispatcher_8c.html','',''); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;stm32g4xx_hal.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="task___system_dispatcher_8h_source.html">task_SystemDispatcher.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="task___mode_manager_8h_source.html">task_ModeManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_s_p_i1___dma_8h_source.html">SPI1_Dma.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for task_SystemDispatcher.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="task___system_dispatcher_8c__incl.png" border="0" usemap="#a_tasks_2task___system_dispatcher_8c" loading="lazy" alt=""/></div>
 <map name="a_tasks_2task___system_dispatcher_8c" id="a_tasks_2task___system_dispatcher_8c">
-<area shape="rect" title=" " alt="" coords="179,5,390,32"/>
-<area shape="rect" title=" " alt="" coords="267,155,387,181"/>
-<area shape="poly" title=" " alt="" coords="277,33,258,67,254,87,257,106,272,127,292,144,288,148,268,130,253,108,249,87,253,65,272,31"/>
-<area shape="rect" href="task___system_dispatcher_8h.html" title=" " alt="" coords="20,80,192,107"/>
-<area shape="poly" title=" " alt="" coords="254,35,152,76,150,71,252,30"/>
-<area shape="rect" href="task___mode_manager_8h.html" title=" " alt="" coords="267,80,414,107"/>
-<area shape="poly" title=" " alt="" coords="296,31,324,66,319,69,292,34"/>
-<area shape="rect" href="_s_p_i1___dma_8h.html" title=" " alt="" coords="438,80,534,107"/>
-<area shape="poly" title=" " alt="" coords="320,30,437,72,435,77,319,35"/>
-<area shape="rect" title=" " alt="" coords="5,155,73,181"/>
-<area shape="poly" title=" " alt="" coords="96,109,63,145,59,141,92,105"/>
-<area shape="rect" href="system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="96,155,243,181"/>
-<area shape="poly" title=" " alt="" coords="119,105,150,141,147,145,115,109"/>
-<area shape="rect" href="_radio___types_8h.html" title=" " alt="" coords="165,229,273,256"/>
-<area shape="poly" title=" " alt="" coords="180,180,204,215,200,218,176,183"/>
-<area shape="rect" title=" " alt="" coords="443,304,507,331"/>
-<area shape="poly" title=" " alt="" coords="264,254,429,300,427,305,263,259"/>
-<area shape="rect" href="_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="115,304,323,331"/>
-<area shape="poly" title=" " alt="" coords="222,257,222,288,216,288,216,257"/>
-<area shape="poly" title=" " alt="" coords="459,110,370,150,368,145,457,105"/>
-<area shape="poly" title=" " alt="" coords="491,106,500,154,501,191,498,228,485,290,480,289,492,227,496,191,495,155,486,107"/>
-<area shape="rect" title=" " alt="" coords="411,155,486,181"/>
-<area shape="poly" title=" " alt="" coords="482,108,464,142,459,140,477,106"/>
+<area shape="rect" title=" " alt="" coords="314,5,526,32"/>
+<area shape="rect" title=" " alt="" coords="360,155,480,181"/>
+<area shape="poly" title=" " alt="" coords="423,33,423,139,418,139,418,33"/>
+<area shape="rect" href="task___system_dispatcher_8h.html" title=" " alt="" coords="178,80,350,107"/>
+<area shape="poly" title=" " alt="" coords="394,35,306,75,304,71,392,30"/>
+<area shape="rect" href="_s_p_i1___dma_8h.html" title=" " alt="" coords="463,80,559,107"/>
+<area shape="poly" title=" " alt="" coords="438,30,485,68,482,72,434,35"/>
+<area shape="rect" title=" " alt="" coords="269,155,336,181"/>
+<area shape="poly" title=" " alt="" coords="273,106,291,140,287,142,269,108"/>
+<area shape="rect" href="system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="48,155,195,181"/>
+<area shape="poly" title=" " alt="" coords="241,110,161,150,159,145,238,105"/>
+<area shape="rect" href="system__types_8h.html" title=" " alt="" coords="188,229,303,256"/>
+<area shape="poly" title=" " alt="" coords="265,108,252,214,246,213,260,107"/>
+<area shape="rect" href="_radio___types_8h.html" title=" " alt="" coords="55,229,164,256"/>
+<area shape="poly" title=" " alt="" coords="122,182,117,215,111,214,117,181"/>
+<area shape="poly" title=" " alt="" coords="144,180,212,219,210,224,142,184"/>
+<area shape="rect" title=" " alt="" coords="361,304,426,331"/>
+<area shape="poly" title=" " alt="" coords="160,254,347,302,346,307,158,259"/>
+<area shape="rect" href="_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="5,304,214,331"/>
+<area shape="poly" title=" " alt="" coords="112,257,112,288,107,288,107,257"/>
+<area shape="poly" title=" " alt="" coords="497,109,449,147,446,143,493,105"/>
+<area shape="poly" title=" " alt="" coords="512,107,507,142,495,182,478,215,457,245,418,294,414,291,453,242,473,212,490,180,502,141,507,107"/>
+<area shape="rect" title=" " alt="" coords="555,155,629,181"/>
+<area shape="poly" title=" " alt="" coords="527,105,569,142,565,146,523,109"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -137,7 +137,11 @@ Include dependency graph for task_SystemDispatcher.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a96349b56a3738445f6a39c53551438db" id="r_a96349b56a3738445f6a39c53551438db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96349b56a3738445f6a39c53551438db">failsafe_stop</a> (void)</td></tr>
 <tr class="memitem:a3020320f9de1d30d4c36fbdfe1674bec" id="r_a3020320f9de1d30d4c36fbdfe1674bec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3020320f9de1d30d4c36fbdfe1674bec">fault_stop</a> (void)</td></tr>
-<tr class="memitem:a3f81d98c265fdc5cff878fcbd2962999" id="r_a3f81d98c265fdc5cff878fcbd2962999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f81d98c265fdc5cff878fcbd2962999">parse_cli_queue</a> (<a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a> command)</td></tr>
+<tr class="memitem:a9444e1b286fcfdb411dc7e9d5c421012" id="r_a9444e1b286fcfdb411dc7e9d5c421012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9444e1b286fcfdb411dc7e9d5c421012">parse_cli_queue</a> (<a class="el" href="struct_system_request.html">SystemRequest</a> *command)</td></tr>
+<tr class="memitem:af775866ac407dad44dc40f042b62d5c9" id="r_af775866ac407dad44dc40f042b62d5c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af775866ac407dad44dc40f042b62d5c9">parse_cli_queue_request_set_value</a> (<a class="el" href="struct_system_request.html">SystemRequest</a> *command)</td></tr>
+<tr class="memitem:aabe8650da2a8b033a7ea044d1b2f5337" id="r_aabe8650da2a8b033a7ea044d1b2f5337"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabe8650da2a8b033a7ea044d1b2f5337">parse_cli_queue_request_bus_raw_data</a> (<a class="el" href="struct_system_request.html">SystemRequest</a> *command)</td></tr>
+<tr class="memitem:ade4149984081f52a93fdd8f436ead285" id="r_ade4149984081f52a93fdd8f436ead285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade4149984081f52a93fdd8f436ead285">parse_cli_queue_request_switch_mode</a> (<a class="el" href="struct_system_request.html">SystemRequest</a> *command)</td></tr>
+<tr class="memitem:ab19fe4531b8d7c8e4b245b0ccb25cf80" id="r_ab19fe4531b8d7c8e4b245b0ccb25cf80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab19fe4531b8d7c8e4b245b0ccb25cf80">parse_cli_queue_request_radio_stats</a> (<a class="el" href="struct_system_request.html">SystemRequest</a> *command)</td></tr>
 <tr class="memitem:a181eb8bd781ccfc16f41ec30b3b961f6" id="r_a181eb8bd781ccfc16f41ec30b3b961f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a181eb8bd781ccfc16f41ec30b3b961f6">task_SystemDispatcher_init</a> (void)</td></tr>
 <tr class="memitem:acf42b7456aae7764a7c7dd4562589edd" id="r_acf42b7456aae7764a7c7dd4562589edd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf42b7456aae7764a7c7dd4562589edd">task_SystemDispatcher</a> (ULONG arg)</td></tr>
 </table><table class="memberdecls">
@@ -146,12 +150,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a186ba351bfba6d97e0d37a7e457d7ed0" id="r_a186ba351bfba6d97e0d37a7e457d7ed0"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a186ba351bfba6d97e0d37a7e457d7ed0">task_SystemDispatcher_name</a> [] =&quot;System Dispatcher&quot;</td></tr>
 <tr class="memitem:a28e668dcf76057debc56258043d7070f" id="r_a28e668dcf76057debc56258043d7070f"><td class="memItemLeft" align="right" valign="top">TX_THREAD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e668dcf76057debc56258043d7070f">task_SystemDispatcher_handle</a></td></tr>
 <tr class="memitem:acd493db3148bd8509142de9041287e99" id="r_acd493db3148bd8509142de9041287e99"><td class="memItemLeft" align="right" valign="top">ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd493db3148bd8509142de9041287e99">task_SystemDispatcher_stack</a> [<a class="el" href="task___system_dispatcher_8h.html#a475a71add3e7dc49813c9fa67e9ffd2e">TASKS_SYSTEM_DISPATCHER_STACK_SIZE</a>]</td></tr>
-<tr class="memitem:gafa28618ca6b7e32296e66cde00da19b2" id="r_gafa28618ca6b7e32296e66cde00da19b2"><td class="memItemLeft" align="right" valign="top">TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__task___c_l_i.html#gafa28618ca6b7e32296e66cde00da19b2">task_cli_command_queue</a></td></tr>
-<tr class="memitem:ac19ed80e5da3b1e2a968fc71a59ed021" id="r_ac19ed80e5da3b1e2a968fc71a59ed021"><td class="memItemLeft" align="right" valign="top">ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac19ed80e5da3b1e2a968fc71a59ed021">task_cli_command_queue_storage</a> [<a class="el" href="task___system_dispatcher_8h.html#a85df099d31ca6f3bda180ef64040df85">TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH</a> *sizeof(<a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a>)/sizeof(uint32_t)]</td></tr>
-<tr class="memitem:af4329edb22f26c401510b62bc5876f64" id="r_af4329edb22f26c401510b62bc5876f64"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4329edb22f26c401510b62bc5876f64">task_cli_command</a></td></tr>
+<tr class="memitem:gaf673dbe66e4762a9974e800ea2638a90" id="r_gaf673dbe66e4762a9974e800ea2638a90"><td class="memItemLeft" align="right" valign="top">TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__task___c_l_i.html#gaf673dbe66e4762a9974e800ea2638a90">task_cli_request_queue</a></td></tr>
+<tr class="memitem:aab08d0c9cb5171f885a2c664fecc05ea" id="r_aab08d0c9cb5171f885a2c664fecc05ea"><td class="memItemLeft" align="right" valign="top">ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab08d0c9cb5171f885a2c664fecc05ea">task_cli_request_queue_storage</a> [<a class="el" href="task___system_dispatcher_8h.html#a85df099d31ca6f3bda180ef64040df85">TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH</a> *sizeof(<a class="el" href="struct_system_request.html">SystemRequest</a>)/sizeof(uint32_t)]</td></tr>
+<tr class="memitem:aeda17e195cee6951d76178a0ed1c1edc" id="r_aeda17e195cee6951d76178a0ed1c1edc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_system_request.html">SystemRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeda17e195cee6951d76178a0ed1c1edc">task_cli_command</a></td></tr>
 <tr class="memitem:abd54a9d31e5db659f58ee0f4b2a399e9" id="r_abd54a9d31e5db659f58ee0f4b2a399e9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structhspi__data.html">hspi_data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd54a9d31e5db659f58ee0f4b2a399e9">spi_transaction_data</a></td></tr>
-<tr class="memitem:aa8a659d8ebd25faa8155ba281765599c" id="r_aa8a659d8ebd25faa8155ba281765599c"><td class="memItemLeft" align="right" valign="top">TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8a659d8ebd25faa8155ba281765599c">task_cli_feedback_queue</a></td></tr>
-<tr class="memitem:ga594832e2c234774451356e79688e98f0" id="r_ga594832e2c234774451356e79688e98f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091c">SYSTEM_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__task___c_l_i.html#ga594832e2c234774451356e79688e98f0">system_mode</a></td></tr>
+<tr class="memitem:ga594832e2c234774451356e79688e98f0" id="r_ga594832e2c234774451356e79688e98f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="system__types_8h.html#a420737db942ef3b915cd91bbd940091c">SYSTEM_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__task___c_l_i.html#ga594832e2c234774451356e79688e98f0">system_mode</a></td></tr>
+<tr class="memitem:a13bcc77f1196f609bde736cf0852c5cd" id="r_a13bcc77f1196f609bde736cf0852c5cd"><td class="memItemLeft" align="right" valign="top">TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13bcc77f1196f609bde736cf0852c5cd">task_wireless_comm_request_queue</a></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a96349b56a3738445f6a39c53551438db" name="a96349b56a3738445f6a39c53551438db"></a>
@@ -188,8 +192,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f81d98c265fdc5cff878fcbd2962999" name="a3f81d98c265fdc5cff878fcbd2962999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f81d98c265fdc5cff878fcbd2962999">&#9670;&#160;</a></span>parse_cli_queue()</h2>
+<a id="a9444e1b286fcfdb411dc7e9d5c421012" name="a9444e1b286fcfdb411dc7e9d5c421012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9444e1b286fcfdb411dc7e9d5c421012">&#9670;&#160;</a></span>parse_cli_queue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,11 +201,163 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void parse_cli_queue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_system_request.html">SystemRequest</a> *</td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_cgraph.png" border="0" usemap="#atask___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_cgraph" loading="lazy" alt=""/></div>
+<map name="atask___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_cgraph" id="atask___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_cgraph">
+<area shape="rect" title=" " alt="" coords="5,113,121,140"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#aabe8650da2a8b033a7ea044d1b2f5337" title=" " alt="" coords="169,5,334,48"/>
+<area shape="poly" title=" " alt="" coords="82,111,121,85,167,58,178,52,180,57,170,62,124,89,85,115"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#ab19fe4531b8d7c8e4b245b0ccb25cf80" title=" " alt="" coords="169,72,334,115"/>
+<area shape="poly" title=" " alt="" coords="121,114,153,108,154,113,122,119"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#af775866ac407dad44dc40f042b62d5c9" title=" " alt="" coords="169,139,334,181"/>
+<area shape="poly" title=" " alt="" coords="122,134,154,140,153,145,121,139"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#ade4149984081f52a93fdd8f436ead285" title=" " alt="" coords="169,205,334,248"/>
+<area shape="poly" title=" " alt="" coords="85,138,124,164,170,191,180,196,178,201,167,196,121,169,82,143"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_icgraph.png" border="0" usemap="#atask___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_icgraph" id="atask___system_dispatcher_8c_a9444e1b286fcfdb411dc7e9d5c421012_icgraph">
+<area shape="rect" title=" " alt="" coords="406,5,521,32"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="391,21,358,21,358,16,391,16"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aabe8650da2a8b033a7ea044d1b2f5337" name="aabe8650da2a8b033a7ea044d1b2f5337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe8650da2a8b033a7ea044d1b2f5337">&#9670;&#160;</a></span>parse_cli_queue_request_bus_raw_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse_cli_queue_request_bus_raw_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_system_request.html">SystemRequest</a> *</td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___system_dispatcher_8c_aabe8650da2a8b033a7ea044d1b2f5337_icgraph.png" border="0" usemap="#atask___system_dispatcher_8c_aabe8650da2a8b033a7ea044d1b2f5337_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___system_dispatcher_8c_aabe8650da2a8b033a7ea044d1b2f5337_icgraph" id="atask___system_dispatcher_8c_aabe8650da2a8b033a7ea044d1b2f5337_icgraph">
+<area shape="rect" title=" " alt="" coords="569,5,735,48"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="406,13,521,40"/>
+<area shape="poly" title=" " alt="" coords="554,29,522,29,522,24,554,24"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,13,358,40"/>
+<area shape="poly" title=" " alt="" coords="391,29,358,29,358,24,391,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab19fe4531b8d7c8e4b245b0ccb25cf80" name="ab19fe4531b8d7c8e4b245b0ccb25cf80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19fe4531b8d7c8e4b245b0ccb25cf80">&#9670;&#160;</a></span>parse_cli_queue_request_radio_stats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse_cli_queue_request_radio_stats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_system_request.html">SystemRequest</a> *</td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___system_dispatcher_8c_ab19fe4531b8d7c8e4b245b0ccb25cf80_icgraph.png" border="0" usemap="#atask___system_dispatcher_8c_ab19fe4531b8d7c8e4b245b0ccb25cf80_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___system_dispatcher_8c_ab19fe4531b8d7c8e4b245b0ccb25cf80_icgraph" id="atask___system_dispatcher_8c_ab19fe4531b8d7c8e4b245b0ccb25cf80_icgraph">
+<area shape="rect" title=" " alt="" coords="569,5,735,48"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="406,13,521,40"/>
+<area shape="poly" title=" " alt="" coords="554,29,522,29,522,24,554,24"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,13,358,40"/>
+<area shape="poly" title=" " alt="" coords="391,29,358,29,358,24,391,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af775866ac407dad44dc40f042b62d5c9" name="af775866ac407dad44dc40f042b62d5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af775866ac407dad44dc40f042b62d5c9">&#9670;&#160;</a></span>parse_cli_queue_request_set_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse_cli_queue_request_set_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_system_request.html">SystemRequest</a> *</td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___system_dispatcher_8c_af775866ac407dad44dc40f042b62d5c9_icgraph.png" border="0" usemap="#atask___system_dispatcher_8c_af775866ac407dad44dc40f042b62d5c9_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___system_dispatcher_8c_af775866ac407dad44dc40f042b62d5c9_icgraph" id="atask___system_dispatcher_8c_af775866ac407dad44dc40f042b62d5c9_icgraph">
+<area shape="rect" title=" " alt="" coords="569,5,735,48"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="406,13,521,40"/>
+<area shape="poly" title=" " alt="" coords="554,29,522,29,522,24,554,24"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,13,358,40"/>
+<area shape="poly" title=" " alt="" coords="391,29,358,29,358,24,391,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ade4149984081f52a93fdd8f436ead285" name="ade4149984081f52a93fdd8f436ead285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4149984081f52a93fdd8f436ead285">&#9670;&#160;</a></span>parse_cli_queue_request_switch_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse_cli_queue_request_switch_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_system_request.html">SystemRequest</a> *</td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___system_dispatcher_8c_ade4149984081f52a93fdd8f436ead285_icgraph.png" border="0" usemap="#atask___system_dispatcher_8c_ade4149984081f52a93fdd8f436ead285_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___system_dispatcher_8c_ade4149984081f52a93fdd8f436ead285_icgraph" id="atask___system_dispatcher_8c_ade4149984081f52a93fdd8f436ead285_icgraph">
+<area shape="rect" title=" " alt="" coords="569,5,735,48"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="406,13,521,40"/>
+<area shape="poly" title=" " alt="" coords="554,29,522,29,522,24,554,24"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,13,358,40"/>
+<area shape="poly" title=" " alt="" coords="391,29,358,29,358,24,391,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -224,11 +380,21 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="task___system_dispatcher_8c_acf42b7456aae7764a7c7dd4562589edd_cgraph.png" border="0" usemap="#atask___system_dispatcher_8c_acf42b7456aae7764a7c7dd4562589edd_cgraph" loading="lazy" alt=""/></div>
 <map name="atask___system_dispatcher_8c_acf42b7456aae7764a7c7dd4562589edd_cgraph" id="atask___system_dispatcher_8c_acf42b7456aae7764a7c7dd4562589edd_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,167,32"/>
-<area shape="rect" href="group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="215,5,352,32"/>
-<area shape="poly" title=" " alt="" coords="167,16,199,16,199,21,167,21"/>
-<area shape="rect" href="group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="400,5,512,32"/>
-<area shape="poly" title=" " alt="" coords="352,16,384,16,384,21,352,21"/>
+<area shape="rect" title=" " alt="" coords="5,209,167,236"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="226,147,341,173"/>
+<area shape="poly" title=" " alt="" coords="130,206,223,176,225,181,131,211"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="215,235,352,261"/>
+<area shape="poly" title=" " alt="" coords="167,230,200,235,199,240,167,236"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#aabe8650da2a8b033a7ea044d1b2f5337" title=" " alt="" coords="400,5,565,48"/>
+<area shape="poly" title=" " alt="" coords="296,144,339,103,399,58,407,53,410,58,401,62,343,107,300,148"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#ab19fe4531b8d7c8e4b245b0ccb25cf80" title=" " alt="" coords="400,72,565,115"/>
+<area shape="poly" title=" " alt="" coords="325,143,401,118,403,123,327,149"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#af775866ac407dad44dc40f042b62d5c9" title=" " alt="" coords="400,139,565,181"/>
+<area shape="poly" title=" " alt="" coords="342,157,384,157,384,163,342,163"/>
+<area shape="rect" href="task___system_dispatcher_8c.html#ade4149984081f52a93fdd8f436ead285" title=" " alt="" coords="400,205,565,248"/>
+<area shape="poly" title=" " alt="" coords="327,171,403,197,401,202,325,177"/>
+<area shape="rect" href="group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="426,272,539,299"/>
+<area shape="poly" title=" " alt="" coords="353,258,411,269,410,275,352,263"/>
 </map>
 </div>
 <div class="dynheader">
@@ -300,8 +466,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af4329edb22f26c401510b62bc5876f64" name="af4329edb22f26c401510b62bc5876f64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4329edb22f26c401510b62bc5876f64">&#9670;&#160;</a></span>task_cli_command</h2>
+<a id="aeda17e195cee6951d76178a0ed1c1edc" name="aeda17e195cee6951d76178a0ed1c1edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda17e195cee6951d76178a0ed1c1edc">&#9670;&#160;</a></span>task_cli_command</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +476,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a> task_cli_command</td>
+          <td class="memname"><a class="el" href="struct_system_request.html">SystemRequest</a> task_cli_command</td>
         </tr>
       </table>
   </td>
@@ -322,38 +488,16 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac19ed80e5da3b1e2a968fc71a59ed021" name="ac19ed80e5da3b1e2a968fc71a59ed021"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac19ed80e5da3b1e2a968fc71a59ed021">&#9670;&#160;</a></span>task_cli_command_queue_storage</h2>
+<a id="aab08d0c9cb5171f885a2c664fecc05ea" name="aab08d0c9cb5171f885a2c664fecc05ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab08d0c9cb5171f885a2c664fecc05ea">&#9670;&#160;</a></span>task_cli_request_queue_storage</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ULONG task_cli_command_queue_storage[<a class="el" href="task___system_dispatcher_8h.html#a85df099d31ca6f3bda180ef64040df85">TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH</a> *sizeof(<a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a>)/sizeof(uint32_t)]</td>
+          <td class="memname">ULONG task_cli_request_queue_storage[<a class="el" href="task___system_dispatcher_8h.html#a85df099d31ca6f3bda180ef64040df85">TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH</a> *sizeof(<a class="el" href="struct_system_request.html">SystemRequest</a>)/sizeof(uint32_t)]</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa8a659d8ebd25faa8155ba281765599c" name="aa8a659d8ebd25faa8155ba281765599c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8a659d8ebd25faa8155ba281765599c">&#9670;&#160;</a></span>task_cli_feedback_queue</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TX_QUEUE task_cli_feedback_queue</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -397,6 +541,28 @@ Here is the caller graph for this function:</div>
           <td class="memname">ULONG task_SystemDispatcher_stack[<a class="el" href="task___system_dispatcher_8h.html#a475a71add3e7dc49813c9fa67e9ffd2e">TASKS_SYSTEM_DISPATCHER_STACK_SIZE</a>]</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13bcc77f1196f609bde736cf0852c5cd" name="a13bcc77f1196f609bde736cf0852c5cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bcc77f1196f609bde736cf0852c5cd">&#9670;&#160;</a></span>task_wireless_comm_request_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TX_QUEUE task_wireless_comm_request_queue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

@@ -1,0 +1,7 @@
+<map id="show_command_status_switch_mode" name="show_command_status_switch_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,165,48"/>
+<area shape="rect" id="Node000002" href="$group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="213,13,362,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,24,197,24,197,29,165,29"/>
+<area shape="rect" id="Node000003" href="$group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="410,5,552,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,24,395,24,395,29,363,29"/>
+</map>

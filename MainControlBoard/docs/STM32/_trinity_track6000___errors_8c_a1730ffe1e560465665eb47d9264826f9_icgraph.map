@@ -1,36 +1,39 @@
 <map id="Error_Handler" name="Error_Handler">
-<area shape="rect" id="Node000001" title="This function is executed in case of critical error occurrence from which system can no safely recove..." alt="" coords="480,233,582,260"/>
+<area shape="rect" id="Node000001" title="This function is executed in case of critical error occurrence from which system can no safely recove..." alt="" coords="480,259,582,285"/>
 <area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#acccd58aa70215a6b184ad242312ffd0c" title="ADC1 Initialization Function." alt="" coords="294,5,403,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,219,510,180,492,133,466,86,431,46,402,30,404,26,434,42,470,83,497,131,515,178,526,218"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="523,244,513,200,496,147,469,93,451,68,431,46,402,30,405,25,434,42,455,64,473,90,501,145,518,199,528,243"/>
 <area shape="rect" id="Node000005" href="$_trinity_track6000___init_8cpp.html#abaa7174b8ca9458dc28ada25ee797b78" title="CORDIC Initialization Function." alt="" coords="284,56,412,83"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="517,220,484,158,460,125,431,97,411,86,414,81,434,93,464,121,489,155,521,218"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="519,245,507,211,488,171,463,131,431,97,411,85,414,80,434,93,467,128,493,168,512,209,524,243"/>
 <area shape="rect" id="Node000006" href="$_trinity_track6000___init_8cpp.html#a021114cd02d4beb0b256095cfbd088b2" title="I2C2 Initialization Function." alt="" coords="298,107,399,133"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="509,222,475,184,431,148,398,133,401,128,434,143,479,180,513,219"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="513,246,480,196,457,170,431,148,398,132,400,127,434,143,461,166,484,192,518,243"/>
 <area shape="rect" id="Node000007" href="$_trinity_track6000___init_8cpp.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="297,157,399,184"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="491,228,431,198,399,187,401,182,433,194,494,223"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="503,250,470,223,431,198,399,185,401,180,434,194,473,219,506,246"/>
 <area shape="rect" id="Node000008" href="$_trinity_track6000___init_8cpp.html#aea85daa666c03d85fd59edef711ebb08" title="SPI2 Initialization Function." alt="" coords="297,208,399,235"/>
-<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="464,240,399,231,400,226,465,235"/>
-<area shape="rect" id="Node000009" href="$_trinity_track6000___init_8cpp.html#a4b8ff887fd3fdf26605e35927e4ff202" title="TIM2 Initialization Function." alt="" coords="296,259,400,285"/>
-<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="465,258,401,267,400,262,465,253"/>
-<area shape="rect" id="Node000010" href="$_trinity_track6000___init_8cpp.html#a7912f2916786a2c33cb6fb8259ade58c" title="TIM3 Initialization Function." alt="" coords="296,309,400,336"/>
-<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="494,270,433,300,401,311,399,306,431,295,491,266"/>
-<area shape="rect" id="Node000011" href="$_trinity_track6000___init_8cpp.html#a57d1167735baafab8e3288526c424929" title="USART1 Initialization Function." alt="" coords="264,360,432,387"/>
-<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="513,275,479,314,434,350,410,362,407,357,431,346,475,310,509,271"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="465,256,398,238,400,233,466,251"/>
+<area shape="rect" id="Node000009" href="$_trinity_track6000___init_8cpp.html#a03aff927b2793cac09e443299c6d6e7e" title="SPI3 Initialization Function." alt="" coords="297,259,399,285"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="465,275,400,275,400,269,465,269"/>
+<area shape="rect" id="Node000010" href="$_trinity_track6000___init_8cpp.html#ad1f9d42690163f73f73e5b820c81ca14" title="TIM1 Initialization Function." alt="" coords="296,309,400,336"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="466,293,400,311,398,306,465,288"/>
+<area shape="rect" id="Node000011" href="$_trinity_track6000___init_8cpp.html#aac52c566e88a6d97f0a78fd9882e31b6" title="TIM20 Initialization Function." alt="" coords="293,360,403,387"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="506,298,473,325,434,350,405,362,403,357,431,346,470,321,503,294"/>
 <area shape="rect" id="Node000012" href="$_trinity_track6000___init_8cpp.html#a052088fe5bb3f807a4b2502e664fd4fd" title="USART2 Initialization Function." alt="" coords="264,411,432,437"/>
-<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="521,275,489,338,464,372,434,401,414,412,411,408,431,397,460,368,484,336,517,273"/>
-<area shape="rect" id="Node000013" href="$_trinity_track6000___init_8cpp.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="276,461,421,488"/>
-<area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="526,276,515,315,497,362,470,410,434,451,416,463,413,459,431,447,466,407,492,360,510,313,521,274"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,233,216,260"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="281,36,266,46,244,67,225,92,196,146,177,196,166,234,161,232,172,195,191,143,221,89,240,64,262,42,278,32"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,233,55,260"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,249,55,249,55,244,87,244"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="273,92,266,97,231,130,203,168,169,234,164,232,198,165,227,126,262,93,270,88"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="284,139,265,148,237,168,211,192,173,234,169,231,207,188,233,164,263,143,282,134"/>
-<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="283,192,265,198,187,235,185,230,263,194,281,187"/>
-<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="282,233,217,242,216,236,281,228"/>
-<area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="281,266,216,257,216,252,281,260"/>
-<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="281,307,263,300,185,263,187,258,265,295,283,302"/>
-<area shape="poly" id="edge17_Node000011_Node000003" title=" " alt="" coords="274,356,263,350,233,330,207,305,169,262,173,259,211,302,237,325,265,346,276,351"/>
-<area shape="poly" id="edge19_Node000012_Node000003" title=" " alt="" coords="270,406,262,401,227,367,198,328,164,262,169,259,203,325,231,364,266,397,273,401"/>
-<area shape="poly" id="edge21_Node000013_Node000003" title=" " alt="" coords="268,456,262,451,240,429,221,404,191,350,172,299,161,261,166,260,177,297,196,348,225,401,244,426,266,447,271,451"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="518,301,484,352,461,378,434,401,412,412,410,408,431,396,457,374,480,348,513,298"/>
+<area shape="rect" id="Node000013" href="$_trinity_track6000___init_8cpp.html#a3d04b903a77089f6ce08dd0bf1c81a81" title="USART3 Initialization Function." alt="" coords="264,461,432,488"/>
+<area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="524,301,512,335,493,376,467,416,434,451,415,463,412,458,431,447,463,413,488,373,507,333,519,299"/>
+<area shape="rect" id="Node000014" href="$_trinity_track6000___init_8cpp.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="276,512,421,539"/>
+<area shape="poly" id="edge22_Node000001_Node000014" title=" " alt="" coords="528,301,518,345,501,399,473,454,455,480,434,502,416,514,413,509,431,498,451,476,469,451,496,397,513,344,523,300"/>
+<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,259,216,285"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="281,36,266,46,242,71,223,99,193,160,175,217,165,259,160,258,169,216,188,158,218,96,238,67,262,42,278,32"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,259,55,285"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,275,55,275,55,269,87,269"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="273,92,266,97,228,136,200,182,179,226,167,259,162,257,174,224,195,179,224,133,262,93,270,87"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="284,138,265,148,234,174,207,205,170,260,166,257,202,202,230,170,263,143,282,133"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="284,190,265,198,216,229,178,260,174,256,213,225,263,194,282,185"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="282,242,212,261,211,256,281,236"/>
+<area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="281,275,216,275,216,269,281,269"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="281,307,211,288,212,283,282,302"/>
+<area shape="poly" id="edge17_Node000011_Node000003" title=" " alt="" coords="277,357,263,350,213,319,174,288,178,284,216,315,265,346,279,352"/>
+<area shape="poly" id="edge19_Node000012_Node000003" title=" " alt="" coords="271,406,262,401,230,374,202,342,166,287,170,284,207,339,234,370,266,396,274,401"/>
+<area shape="poly" id="edge21_Node000013_Node000003" title=" " alt="" coords="269,456,262,451,224,411,195,365,174,320,162,287,167,285,179,318,200,362,228,408,266,447,272,452"/>
+<area shape="poly" id="edge23_Node000014_Node000003" title=" " alt="" coords="267,506,262,502,238,477,218,448,188,386,169,328,160,286,165,285,175,327,193,384,223,445,242,473,266,498,270,502"/>
 </map>

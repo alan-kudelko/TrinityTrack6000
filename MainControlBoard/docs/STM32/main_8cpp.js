@@ -6,6 +6,7 @@ var main_8cpp =
     [ "test_function", "main_8cpp.html#abe89f19890616ba94b27398c050b38a4", null ],
     [ "test_SPI_communication", "main_8cpp.html#ae763262a7343b56ffdbe555bb03359a7", null ],
     [ "tx_application_define", "main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9", null ],
+    [ "xmc4200_spi_test", "main_8cpp.html#a60a6c7ed7bb560d23500cbfd8dbf34c8", null ],
     [ "ptr", "main_8cpp.html#a2b3501294b0eee0578affe01ffd7d783", null ],
     [ "task_blink_handle", "main_8cpp.html#a122d41f15400e36427a2195b304ba4bc", null ],
     [ "task_blink_stack", "main_8cpp.html#abe23b7eef9fb7c568ab2459b3553ac56", null ]

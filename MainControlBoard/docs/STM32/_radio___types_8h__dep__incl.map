@@ -1,22 +1,23 @@
 <map id="Infra/Radio_Types.h" name="Infra/Radio_Types.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="270,5,409,32"/>
-<area shape="rect" id="Node000002" href="$system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="159,80,320,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,44,267,82,263,77,310,40"/>
-<area shape="rect" id="Node000009" href="$task___wireless_comm_8h.html" title=" " alt="" coords="344,88,538,115"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="369,40,427,86,424,90,366,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="306,5,445,32"/>
+<area shape="rect" id="Node000002" href="$system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="195,80,356,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="350,44,303,82,299,77,346,40"/>
+<area shape="rect" id="Node000010" href="$task___wireless_comm_8h.html" title=" " alt="" coords="396,88,590,115"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="408,39,476,85,473,90,405,43"/>
 <area shape="rect" id="Node000003" href="$task___c_l_i_8c.html" title=" " alt="" coords="5,171,130,197"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,132,96,173,93,168,181,127"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="209,131,101,173,99,168,207,126"/>
 <area shape="rect" id="Node000004" href="$task___system_dispatcher_8h.html" title=" " alt="" coords="154,171,365,197"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="251,137,259,169,254,171,246,138"/>
-<area shape="rect" id="Node000005" href="$task___system_dispatcher_8c.html" title=" " alt="" coords="134,245,345,272"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,213,246,246,240,244,249,212"/>
-<area shape="rect" id="Node000006" href="$tasks_8h.html" title="Header file for various RTOS tasks used in the system." alt="" coords="369,245,472,272"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="302,202,394,242,391,247,300,206"/>
-<area shape="rect" id="Node000007" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="267,320,423,363"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="400,285,366,322,362,318,397,282"/>
-<area shape="rect" id="Node000008" href="$main_8cpp.html" title="Main program body." alt="" coords="448,328,546,355"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="445,281,487,326,483,330,441,285"/>
-<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="440,131,425,245,420,245,435,130"/>
-<area shape="rect" id="Node000010" href="$task___wireless_comm_8cpp.html" title=" " alt="" coords="458,171,666,197"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="474,121,545,168,542,172,471,126"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="271,139,265,171,259,170,266,138"/>
+<area shape="rect" id="Node000009" href="$task___wireless_comm_8cpp.html" title=" " alt="" coords="389,171,596,197"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="347,126,460,168,458,173,345,131"/>
+<area shape="rect" id="Node000005" href="$task___system_dispatcher_8c.html" title=" " alt="" coords="154,245,365,272"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="262,213,262,245,257,245,257,213"/>
+<area shape="rect" id="Node000006" href="$tasks_8h.html" title="Header file for various RTOS tasks used in the system." alt="" coords="485,245,588,272"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="323,199,489,242,487,247,321,204"/>
+<area shape="rect" id="Node000007" href="$_trinity_track6000___init_8cpp.html" title=" " alt="" coords="383,320,539,363"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="516,285,482,322,478,318,513,282"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html" title="Main program body." alt="" coords="564,328,662,355"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="561,281,603,326,599,330,557,285"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="550,119,584,139,599,153,611,169,615,181,615,193,603,214,583,233,562,247,559,243,580,229,599,211,610,192,610,182,606,172,595,157,581,144,548,124"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="496,130,496,171,490,171,490,130"/>
 </map>

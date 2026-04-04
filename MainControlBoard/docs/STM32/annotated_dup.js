@@ -9,6 +9,6 @@ var annotated_dup =
     [ "RADIO_STATS", "struct_r_a_d_i_o___s_t_a_t_s.html", "struct_r_a_d_i_o___s_t_a_t_s" ],
     [ "radio_t", "structradio__t.html", "structradio__t" ],
     [ "SystemErrorStatus_t", "struct_system_error_status__t.html", "struct_system_error_status__t" ],
-    [ "TASK_CLI_COMMAND", "struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html", "struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d" ],
+    [ "SystemRequest", "struct_system_request.html", "struct_system_request" ],
     [ "TASK_CLI_WAKEUP_REASON", "struct_t_a_s_k___c_l_i___w_a_k_e_u_p___r_e_a_s_o_n.html", "struct_t_a_s_k___c_l_i___w_a_k_e_u_p___r_e_a_s_o_n" ]
 ];

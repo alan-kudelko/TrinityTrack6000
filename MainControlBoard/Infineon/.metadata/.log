@@ -13085,3 +13085,24 @@ org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection err
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-04-04 16:58:48.014
 !MESSAGE General connection error with response code=202
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-04 17:41:01.039
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-04 17:41:01.204
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-04-04 17:41:01.524
+!MESSAGE Time Taken By Serialization  : 318 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-04 17:41:02.120
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 17:41:02.414
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 845 msec 
+
+!ENTRY SOLVER 1 0 2026-04-04 17:41:02.414
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-04-04 17:41:02.680
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED

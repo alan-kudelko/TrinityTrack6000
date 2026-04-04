@@ -1,7 +1,17 @@
 <map id="task_SystemDispatcher" name="task_SystemDispatcher">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,167,32"/>
-<area shape="rect" id="Node000002" href="$group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="215,5,352,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,16,199,16,199,21,167,21"/>
-<area shape="rect" id="Node000003" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="400,5,512,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="352,16,384,16,384,21,352,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,209,167,236"/>
+<area shape="rect" id="Node000002" href="$task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="226,147,341,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,206,223,176,225,181,131,211"/>
+<area shape="rect" id="Node000007" href="$group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="215,235,352,261"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="167,230,200,235,199,240,167,236"/>
+<area shape="rect" id="Node000003" href="$task___system_dispatcher_8c.html#aabe8650da2a8b033a7ea044d1b2f5337" title=" " alt="" coords="400,5,565,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,144,339,103,399,58,407,53,410,58,401,62,343,107,300,148"/>
+<area shape="rect" id="Node000004" href="$task___system_dispatcher_8c.html#ab19fe4531b8d7c8e4b245b0ccb25cf80" title=" " alt="" coords="400,72,565,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="325,143,401,118,403,123,327,149"/>
+<area shape="rect" id="Node000005" href="$task___system_dispatcher_8c.html#af775866ac407dad44dc40f042b62d5c9" title=" " alt="" coords="400,139,565,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="342,157,384,157,384,163,342,163"/>
+<area shape="rect" id="Node000006" href="$task___system_dispatcher_8c.html#ade4149984081f52a93fdd8f436ead285" title=" " alt="" coords="400,205,565,248"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="327,171,403,197,401,202,325,177"/>
+<area shape="rect" id="Node000008" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="426,272,539,299"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="353,258,411,269,410,275,352,263"/>
 </map>

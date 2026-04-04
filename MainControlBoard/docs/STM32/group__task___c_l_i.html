@@ -126,7 +126,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga4e8240e8c264eb6eee10bb3b81be7de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the rx buffer for receiving raw data from devices, can be adjusted as needed.  <br /></td></tr>
 <tr class="memitem:ga1663dae3272bb5f3bdbaf32ec33e0da6" id="r_ga1663dae3272bb5f3bdbaf32ec33e0da6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1663dae3272bb5f3bdbaf32ec33e0da6">TASK_CLI_TX_BUFFER_SIZE</a>&#160;&#160;&#160;10</td></tr>
 <tr class="memdesc:ga1663dae3272bb5f3bdbaf32ec33e0da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the tx buffer for transmitting raw data to devices, can be adjusted as needed.  <br /></td></tr>
-<tr class="memitem:gabb72a65f76a49acde256eede64f94b4f" id="r_gabb72a65f76a49acde256eede64f94b4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabb72a65f76a49acde256eede64f94b4f">TASK_CLI_TEMPORARY_BUFFER_SIZE</a>&#160;&#160;&#160;31</td></tr>
+<tr class="memitem:gabb72a65f76a49acde256eede64f94b4f" id="r_gabb72a65f76a49acde256eede64f94b4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabb72a65f76a49acde256eede64f94b4f">TASK_CLI_TEMPORARY_BUFFER_SIZE</a>&#160;&#160;&#160;41</td></tr>
 <tr class="memdesc:gabb72a65f76a49acde256eede64f94b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of temporary buffers used in command parsing.  <br /></td></tr>
 <tr class="memitem:gaa1be2f5144a9d25337f108ca82e084a7" id="r_gaa1be2f5144a9d25337f108ca82e084a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa1be2f5144a9d25337f108ca82e084a7">TASK_CLI_WAKEUP_USART_DATA</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:gaa1be2f5144a9d25337f108ca82e084a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakeup reason indicating that CLI task was woken up by USART data reception.  <br /></td></tr>
@@ -134,6 +134,10 @@ Macros</h2></td></tr>
 <tr class="memdesc:gaf6c7192f264125b7bdd3f199ca98d6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakeup reason indicating that CLI task was woken up after executing a command, can be used to trigger menu header update or other actions after command execution.  <br /></td></tr>
 <tr class="memitem:ga9a5c1a03bc5818fcfd5f848e27594dbc" id="r_ga9a5c1a03bc5818fcfd5f848e27594dbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9a5c1a03bc5818fcfd5f848e27594dbc">TASK_CLI_WAKEUP_READ_EXECUTED</a>&#160;&#160;&#160;3</td></tr>
 <tr class="memdesc:ga9a5c1a03bc5818fcfd5f848e27594dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakeup reason indicating that CLI task was woken up after executing a read command, can be used to trigger sending read data back to terminal or other actions after read command execution.  <br /></td></tr>
+<tr class="memitem:ga0e106093d33c7f858591afc07fff584b" id="r_ga0e106093d33c7f858591afc07fff584b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0e106093d33c7f858591afc07fff584b">TASK_CLI_WAKEUP_MODE_CHANGED</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:ga5f15e5199109297d02df5ddc537d2b35" id="r_ga5f15e5199109297d02df5ddc537d2b35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5f15e5199109297d02df5ddc537d2b35">TASK_CLI_WAKEUP_RADIO_STATS_READ</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:gaade3335886452c8086860b92b159eb17" id="r_gaade3335886452c8086860b92b159eb17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaade3335886452c8086860b92b159eb17">TASK_CLI_WAKEUP_RADIO_RUNTIME_READ</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:gaea30dd7ed7c1faa5a7c71a9ab3807a65" id="r_gaea30dd7ed7c1faa5a7c71a9ab3807a65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaea30dd7ed7c1faa5a7c71a9ab3807a65">TASK_CLI_WAKEUP_RADIO_SETTINGS_READ</a>&#160;&#160;&#160;7</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -164,15 +168,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9f3d13bd4e44a42e7bd15897476d19e5" id="r_ga9f3d13bd4e44a42e7bd15897476d19e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a> (uint8_t argc, char *argv[])</td></tr>
 <tr class="memitem:ga9da5ff1e1909f7926657592feb573e9f" id="r_ga9da5ff1e1909f7926657592feb573e9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9da5ff1e1909f7926657592feb573e9f">build_bus_command</a> (uint8_t argc, char *argv[])</td></tr>
 <tr class="memdesc:ga9da5ff1e1909f7926657592feb573e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a bus command based on the received CLI command arguments. This function takes the parsed command arguments and constructs a bus command that can be sent to <span class="tt">SystemDispatcher</span> for execution. It validates the command arguments, constructs the appropriate command structure, and sends it to the <span class="tt">SystemDispatcher</span> via a queue for further processing.  <br /></td></tr>
-<tr class="memitem:ga07bc02a597c512923232a5b47b898838" id="r_ga07bc02a597c512923232a5b47b898838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga07bc02a597c512923232a5b47b898838">callback_cli_data_received</a> (uint8_t event)</td></tr>
-<tr class="memdesc:ga07bc02a597c512923232a5b47b898838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for when CLI task receives data from USART. This function is called in the USART1 DMA reception complete callback when a full command is received (indicated by \r or <br  />
+<tr class="memitem:gaab3bc09d6a4efd0ef73314b65579eace" id="r_gaab3bc09d6a4efd0ef73314b65579eace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab3bc09d6a4efd0ef73314b65579eace">callback_cli_data_received</a> ()</td></tr>
+<tr class="memdesc:gaab3bc09d6a4efd0ef73314b65579eace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for when CLI task receives data from USART. This function is called in the USART1 DMA reception complete callback when a full command is received (indicated by \r or <br  />
  character). It sends a wakeup reason to the CLI task's wakeup queue to indicate that new data has been received and is ready to be processed.  <br /></td></tr>
-<tr class="memitem:gac444bd0d61a9b85e773c9ac14e1d12d2" id="r_gac444bd0d61a9b85e773c9ac14e1d12d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac444bd0d61a9b85e773c9ac14e1d12d2">callback_cli_write_executed</a> (uint8_t event)</td></tr>
-<tr class="memdesc:gac444bd0d61a9b85e773c9ac14e1d12d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for when a CLI command has been executed. This function is called after a command has been executed to notify the CLI task that it can perform any necessary actions after command execution, such as updating the menu header or showing command status. It sends a wakeup reason to the CLI task's wakeup queue to indicate that a command has been executed.  <br /></td></tr>
-<tr class="memitem:ga3f7d496c3c1bba98e6ffc229aac0a3c9" id="r_ga3f7d496c3c1bba98e6ffc229aac0a3c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f7d496c3c1bba98e6ffc229aac0a3c9">callback_cli_read_executed</a> (uint8_t event)</td></tr>
-<tr class="memdesc:ga3f7d496c3c1bba98e6ffc229aac0a3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for when a CLI read command has been executed. This function is called after a read command has been executed to notify the CLI task that it can perform any necessary actions after read command execution, such as sending read data back to terminal or showing command status. It sends a wakeup reason to the CLI task's wakeup queue to indicate that a read command has been executed.  <br /></td></tr>
-<tr class="memitem:ga2a3b6d569d061b4e9895524cc69734f9" id="r_ga2a3b6d569d061b4e9895524cc69734f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2a3b6d569d061b4e9895524cc69734f9">show_command_status</a> (uint32_t wakeupReason)</td></tr>
-<tr class="memdesc:ga2a3b6d569d061b4e9895524cc69734f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show command execution status. This function is called after a command has been executed to show the status of the command execution to the user. For now, it just sends a static message back to the terminal, but in the future, it can be enhanced to show more detailed information about the command execution status.  <br /></td></tr>
+<tr class="memitem:ga0669a273fe9b06345bcd52fc2d20e0e7" id="r_ga0669a273fe9b06345bcd52fc2d20e0e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0669a273fe9b06345bcd52fc2d20e0e7">task_cli_wakeup_callback</a> (uint8_t event)</td></tr>
+<tr class="memdesc:ga0669a273fe9b06345bcd52fc2d20e0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for processing CLI requests.  <br /></td></tr>
+<tr class="memitem:ga9dd3488482fe604e3704eff60e3d0ea4" id="r_ga9dd3488482fe604e3704eff60e3d0ea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9dd3488482fe604e3704eff60e3d0ea4">show_command_status_write</a> (void)</td></tr>
+<tr class="memitem:ga33287dbfb56a6a36e0e0c4a8c1806c5c" id="r_ga33287dbfb56a6a36e0e0c4a8c1806c5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga33287dbfb56a6a36e0e0c4a8c1806c5c">show_command_status_read</a> (void)</td></tr>
+<tr class="memitem:ga8034fe0b3faa51679bef29030c4a7e85" id="r_ga8034fe0b3faa51679bef29030c4a7e85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8034fe0b3faa51679bef29030c4a7e85">show_command_status_switch_mode</a> (void)</td></tr>
+<tr class="memitem:ga863b01ac894d528c340fd7b86429d021" id="r_ga863b01ac894d528c340fd7b86429d021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga863b01ac894d528c340fd7b86429d021">show_command_status_radio_stats</a> (void)</td></tr>
 <tr class="memitem:ga569030fbbf6cfa84f55be3438653d219" id="r_ga569030fbbf6cfa84f55be3438653d219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga569030fbbf6cfa84f55be3438653d219">display_menu_header</a> (void)</td></tr>
 <tr class="memdesc:ga569030fbbf6cfa84f55be3438653d219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display CLI menu header based on current FSM state. This function checks the current state of the CLI task's FSM and sends the appropriate menu header to the terminal via USART1 DMA. It ensures that the correct menu header is displayed before the command prompt.  <br /></td></tr>
 <tr class="memitem:ga11ec70c795688cdda2170896d5f552e9" id="r_ga11ec70c795688cdda2170896d5f552e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga11ec70c795688cdda2170896d5f552e9">task_CLI</a> (ULONG arg)</td></tr>
@@ -180,15 +184,14 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ga74e543d2ef299953e408dda48c0aa6ad" id="r_ga74e543d2ef299953e408dda48c0aa6ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ga16d46536a8bbcde3a927de14ac1f68cc">CLI_Task_State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga74e543d2ef299953e408dda48c0aa6ad">cli_task_state</a> =<a class="el" href="#gga16d46536a8bbcde3a927de14ac1f68cca2f347d4d6701a0ab054cb3b9463082a1">CLI_STATE_DIAG_MENU</a></td></tr>
 <tr class="memitem:ga9711c5eb98c75a54632eafd84414667e" id="r_ga9711c5eb98c75a54632eafd84414667e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9711c5eb98c75a54632eafd84414667e">task_CLI_name</a> [] =&quot;CLI Task&quot;</td></tr>
 <tr class="memitem:ga42585ff45c45d4024bb3826da127be54" id="r_ga42585ff45c45d4024bb3826da127be54"><td class="memItemLeft" align="right" valign="top">TX_THREAD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga42585ff45c45d4024bb3826da127be54">task_CLI_handle</a></td></tr>
 <tr class="memitem:ga9dfa0850f464840126ee4999fca7c8de" id="r_ga9dfa0850f464840126ee4999fca7c8de"><td class="memItemLeft" align="right" valign="top">ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9dfa0850f464840126ee4999fca7c8de">task_CLI_stack</a> [<a class="el" href="#ga4a62d8e106193c0201a96996945c324f">TASK_CLI_STACK_SIZE</a>]</td></tr>
 <tr class="memdesc:ga9dfa0850f464840126ee4999fca7c8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack for CLI task.  <br /></td></tr>
 <tr class="memitem:ga05b93f6cb7e26f4cf94bd8956a762489" id="r_ga05b93f6cb7e26f4cf94bd8956a762489"><td class="memItemLeft" align="right" valign="top">static TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga05b93f6cb7e26f4cf94bd8956a762489">task_cli_wakeup_queue</a></td></tr>
 <tr class="memitem:gac010e8da776dab200a3065ccf5e908b7" id="r_gac010e8da776dab200a3065ccf5e908b7"><td class="memItemLeft" align="right" valign="top">static ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac010e8da776dab200a3065ccf5e908b7">task_cli_wakeup_queue_storage</a> [<a class="el" href="#ga22950bad3ba811b0458a7d0af3182307">TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH</a> *sizeof(<a class="el" href="struct_t_a_s_k___c_l_i___w_a_k_e_u_p___r_e_a_s_o_n.html">TASK_CLI_WAKEUP_REASON</a>)/sizeof(uint32_t)]</td></tr>
-<tr class="memitem:ga594832e2c234774451356e79688e98f0" id="r_ga594832e2c234774451356e79688e98f0"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091c">SYSTEM_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga594832e2c234774451356e79688e98f0">system_mode</a></td></tr>
-<tr class="memitem:gafa28618ca6b7e32296e66cde00da19b2" id="r_gafa28618ca6b7e32296e66cde00da19b2"><td class="memItemLeft" align="right" valign="top">TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafa28618ca6b7e32296e66cde00da19b2">task_cli_command_queue</a></td></tr>
+<tr class="memitem:ga594832e2c234774451356e79688e98f0" id="r_ga594832e2c234774451356e79688e98f0"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="system__types_8h.html#a420737db942ef3b915cd91bbd940091c">SYSTEM_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga594832e2c234774451356e79688e98f0">system_mode</a></td></tr>
+<tr class="memitem:gaf673dbe66e4762a9974e800ea2638a90" id="r_gaf673dbe66e4762a9974e800ea2638a90"><td class="memItemLeft" align="right" valign="top">TX_QUEUE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf673dbe66e4762a9974e800ea2638a90">task_cli_request_queue</a></td></tr>
 <tr class="memitem:ga1a07f0c7de5d8a0e10bde6205f5429b3" id="r_ga1a07f0c7de5d8a0e10bde6205f5429b3"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1a07f0c7de5d8a0e10bde6205f5429b3">command_help</a> [] =&quot;help&quot;</td></tr>
 <tr class="memdesc:ga1a07f0c7de5d8a0e10bde6205f5429b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command string for "help" command.  <br /></td></tr>
 <tr class="memitem:ga68fce5355de167da549766e0a43e5447" id="r_ga68fce5355de167da549766e0a43e5447"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga68fce5355de167da549766e0a43e5447">command_switch_mode</a> [] =&quot;mode&quot;</td></tr>
@@ -203,7 +206,8 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga04e5f021a853090f9aeca63986a3d375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command string for "show" command, can be used for showing various system information.  <br /></td></tr>
 <tr class="memitem:ga628518c9e8b10b7168e4899ed13f67e7" id="r_ga628518c9e8b10b7168e4899ed13f67e7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga628518c9e8b10b7168e4899ed13f67e7">command_show_mem</a> [] =&quot;memory&quot;</td></tr>
 <tr class="memdesc:ga628518c9e8b10b7168e4899ed13f67e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child command string for showing memory information.  <br /></td></tr>
-<tr class="memitem:ga49dcd58430ec104f7c5e6c0218debbae" id="r_ga49dcd58430ec104f7c5e6c0218debbae"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga49dcd58430ec104f7c5e6c0218debbae">command_show_children</a> [] ={<a class="el" href="#ga628518c9e8b10b7168e4899ed13f67e7">command_show_mem</a>}</td></tr>
+<tr class="memitem:ga192180b39cd593a8611b65b0f54e8894" id="r_ga192180b39cd593a8611b65b0f54e8894"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga192180b39cd593a8611b65b0f54e8894">command_show_radio</a> [] =&quot;radio&quot;</td></tr>
+<tr class="memitem:ga49dcd58430ec104f7c5e6c0218debbae" id="r_ga49dcd58430ec104f7c5e6c0218debbae"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga49dcd58430ec104f7c5e6c0218debbae">command_show_children</a> [] ={<a class="el" href="#ga628518c9e8b10b7168e4899ed13f67e7">command_show_mem</a>,<a class="el" href="#ga192180b39cd593a8611b65b0f54e8894">command_show_radio</a>}</td></tr>
 <tr class="memdesc:ga49dcd58430ec104f7c5e6c0218debbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of child command strings for the "show" command.  <br /></td></tr>
 <tr class="memitem:ga21363c4c2db60ee76fca646a2e5fbfa5" id="r_ga21363c4c2db60ee76fca646a2e5fbfa5"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga21363c4c2db60ee76fca646a2e5fbfa5">command_show_mem_ram1</a> [] =&quot;ram1&quot;</td></tr>
 <tr class="memdesc:ga21363c4c2db60ee76fca646a2e5fbfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child command string for showing RAM1 information.  <br /></td></tr>
@@ -213,6 +217,10 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga8ec0c92e5c5ef2b36ea0e553912a964d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child command string for showing CCSRAM information.  <br /></td></tr>
 <tr class="memitem:ga89c62ba6983f4ba756858b84cb9b5805" id="r_ga89c62ba6983f4ba756858b84cb9b5805"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga89c62ba6983f4ba756858b84cb9b5805">command_show_mem_children</a> [] ={<a class="el" href="#ga21363c4c2db60ee76fca646a2e5fbfa5">command_show_mem_ram1</a>,<a class="el" href="#gaa5c2920aafd4c44e97ad54efeb9aeb05">command_show_mem_ram2</a>,<a class="el" href="#ga8ec0c92e5c5ef2b36ea0e553912a964d">command_show_mem_ccsram</a>}</td></tr>
 <tr class="memdesc:ga89c62ba6983f4ba756858b84cb9b5805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of child command strings for the "show memory" command.  <br /></td></tr>
+<tr class="memitem:gabab613b7ca480a7fe727141259a47c2f" id="r_gabab613b7ca480a7fe727141259a47c2f"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabab613b7ca480a7fe727141259a47c2f">command_show_radio_stats</a> [] =&quot;stats&quot;</td></tr>
+<tr class="memitem:gad70a008e0996743d8df3a61cb53b5709" id="r_gad70a008e0996743d8df3a61cb53b5709"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad70a008e0996743d8df3a61cb53b5709">command_show_radio_runtime</a> [] =&quot;runtime&quot;</td></tr>
+<tr class="memitem:gaa4f9d4a17e101dde2ab524cc818bb3ce" id="r_gaa4f9d4a17e101dde2ab524cc818bb3ce"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa4f9d4a17e101dde2ab524cc818bb3ce">command_show_radio_settings</a> [] =&quot;settings&quot;</td></tr>
+<tr class="memitem:gac49a625fb296064a6122c2bd38e5c190" id="r_gac49a625fb296064a6122c2bd38e5c190"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac49a625fb296064a6122c2bd38e5c190">command_show_radio_children</a> [] ={<a class="el" href="#gabab613b7ca480a7fe727141259a47c2f">command_show_radio_stats</a>,<a class="el" href="#gad70a008e0996743d8df3a61cb53b5709">command_show_radio_runtime</a>,<a class="el" href="#gaa4f9d4a17e101dde2ab524cc818bb3ce">command_show_radio_settings</a>}</td></tr>
 <tr class="memitem:gaeb919724398b8f32d255df35ba96377b" id="r_gaeb919724398b8f32d255df35ba96377b"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeb919724398b8f32d255df35ba96377b">command_write</a> [] =&quot;write&quot;</td></tr>
 <tr class="memdesc:gaeb919724398b8f32d255df35ba96377b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command string for write operation.  <br /></td></tr>
 <tr class="memitem:ga4cdcfd5532646b0f5389a203b5fa3864" id="r_ga4cdcfd5532646b0f5389a203b5fa3864"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4cdcfd5532646b0f5389a203b5fa3864">command_read</a> [] =&quot;read&quot;</td></tr>
@@ -230,17 +238,19 @@ Variables</h2></td></tr>
 <tr class="memdesc:gaefe9a2b6d82b4b0b0c383dc65c25bf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help message for "show" command and its child commands.  <br /></td></tr>
 <tr class="memitem:gaddd662466ff5dde0552bc88f94dfba5a" id="r_gaddd662466ff5dde0552bc88f94dfba5a"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaddd662466ff5dde0552bc88f94dfba5a">msg_task_CLI_help_write</a> []</td></tr>
 <tr class="memdesc:gaddd662466ff5dde0552bc88f94dfba5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help message for "write" command and its child commands.  <br /></td></tr>
-<tr class="memitem:ga97f844d8c86c97dafa6133133880b4d7" id="r_ga97f844d8c86c97dafa6133133880b4d7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga97f844d8c86c97dafa6133133880b4d7">msg_task_CLI_diag_menu_header</a> [] =&quot;[CLI] DIAG&gt; &quot;</td></tr>
-<tr class="memdesc:ga97f844d8c86c97dafa6133133880b4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default menu header for CLI task.  <br /></td></tr>
-<tr class="memitem:gac9ad7594f130eb29e457ed1bdfdee272" id="r_gac9ad7594f130eb29e457ed1bdfdee272"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9ad7594f130eb29e457ed1bdfdee272">msg_task_CLI_test_menu_header</a> [] =&quot;[CLI] <a class="el" href="_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091cab2f0cd22b1963becef8b91d29d567fe8">TEST</a>&gt; &quot;</td></tr>
+<tr class="memitem:ga144a2a076eadb0a8b0fa3e631cd4e60f" id="r_ga144a2a076eadb0a8b0fa3e631cd4e60f"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga144a2a076eadb0a8b0fa3e631cd4e60f">msg_task_CLI_run_menu_header</a> [] =&quot;[CLI] DIAG&gt; &quot;</td></tr>
+<tr class="memdesc:ga144a2a076eadb0a8b0fa3e631cd4e60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default menu header for CLI task.  <br /></td></tr>
+<tr class="memitem:gac9ad7594f130eb29e457ed1bdfdee272" id="r_gac9ad7594f130eb29e457ed1bdfdee272"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9ad7594f130eb29e457ed1bdfdee272">msg_task_CLI_test_menu_header</a> [] =&quot;[CLI] TEST&gt; &quot;</td></tr>
 <tr class="memdesc:gac9ad7594f130eb29e457ed1bdfdee272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test menu header for CLI task.  <br /></td></tr>
+<tr class="memitem:ga8708e54cc38d43217bd7aa43bf801d70" id="r_ga8708e54cc38d43217bd7aa43bf801d70"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8708e54cc38d43217bd7aa43bf801d70">msg_task_CLI_failsafe_menu_header</a> [] =&quot;[CLI] FAILSAFE&gt; &quot;</td></tr>
+<tr class="memitem:gaadc87e222849a2a83d0dcf49c967a0e7" id="r_gaadc87e222849a2a83d0dcf49c967a0e7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaadc87e222849a2a83d0dcf49c967a0e7">msg_task_CLI_fault_menu_header</a> [] =&quot;[CLI] FAULT&gt; &quot;</td></tr>
 <tr class="memitem:ga5a859079bebce45466f97ab5f44f131d" id="r_ga5a859079bebce45466f97ab5f44f131d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5a859079bebce45466f97ab5f44f131d">msg_task_CLI_unknown_command</a> [] =&quot;[CLI] Unknown command. Type help for available commands\r\n&quot;</td></tr>
 <tr class="memdesc:ga5a859079bebce45466f97ab5f44f131d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating unknown command received in CLI task.  <br /></td></tr>
-<tr class="memitem:gaf674d97cca6cf8b9f0138cb292dc2b54" id="r_gaf674d97cca6cf8b9f0138cb292dc2b54"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf674d97cca6cf8b9f0138cb292dc2b54">msg_task_CLI_mode_switched_to_diag</a> [] =&quot;[CLI] Switched to diagnostics mode\r\n&quot;</td></tr>
+<tr class="memitem:gaf674d97cca6cf8b9f0138cb292dc2b54" id="r_gaf674d97cca6cf8b9f0138cb292dc2b54"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf674d97cca6cf8b9f0138cb292dc2b54">msg_task_CLI_mode_switched_to_diag</a> [] =&quot;Switched to diagnostics mode\r\n&quot;</td></tr>
 <tr class="memdesc:gaf674d97cca6cf8b9f0138cb292dc2b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating that CLI mode has been switched to diagnostics mode.  <br /></td></tr>
-<tr class="memitem:ga3a2f7735d676cc492e425fd8c36d0d13" id="r_ga3a2f7735d676cc492e425fd8c36d0d13"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3a2f7735d676cc492e425fd8c36d0d13">msg_task_CLI_mode_switched_to_test</a> [] =&quot;[CLI] Switched to test mode\r\n&quot;</td></tr>
+<tr class="memitem:ga3a2f7735d676cc492e425fd8c36d0d13" id="r_ga3a2f7735d676cc492e425fd8c36d0d13"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3a2f7735d676cc492e425fd8c36d0d13">msg_task_CLI_mode_switched_to_test</a> [] =&quot;Switched to test mode\r\n&quot;</td></tr>
 <tr class="memdesc:ga3a2f7735d676cc492e425fd8c36d0d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating that CLI mode has been switched to test mode.  <br /></td></tr>
-<tr class="memitem:gafbddc8b618354370b518e1eb996ac188" id="r_gafbddc8b618354370b518e1eb996ac188"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafbddc8b618354370b518e1eb996ac188">msg_task_CLI_mode_switch_failed</a> [] =&quot;[CLI] Failed to switch mode\r\n[CLI] Correct usage: mode &lt;diag/test&gt;\r\n&quot;</td></tr>
+<tr class="memitem:gafbddc8b618354370b518e1eb996ac188" id="r_gafbddc8b618354370b518e1eb996ac188"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafbddc8b618354370b518e1eb996ac188">msg_task_CLI_mode_switch_failed</a> [] =&quot;Failed to switch mode\r\n&quot;</td></tr>
 <tr class="memdesc:gafbddc8b618354370b518e1eb996ac188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating that CLI mode switch failed with correct usage hint.  <br /></td></tr>
 <tr class="memitem:ga78ce82d93d10f30848150365e0eaa312" id="r_ga78ce82d93d10f30848150365e0eaa312"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga78ce82d93d10f30848150365e0eaa312">msg_task_CLI_write_executed</a> [] =&quot;Write command executed\r\n&quot;</td></tr>
 <tr class="memdesc:ga78ce82d93d10f30848150365e0eaa312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating that a write command has been executed.  <br /></td></tr>
@@ -248,6 +258,12 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga681acf89b35bd704992e100baa332a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating that a read command has been executed.  <br /></td></tr>
 <tr class="memitem:ga54fda7dd51ac77a8a4d9740550f59d13" id="r_ga54fda7dd51ac77a8a4d9740550f59d13"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga54fda7dd51ac77a8a4d9740550f59d13">msg_task_CLI_read_executed_format_string</a> [] =&quot; Register 0x%02X: 0x%02X\r\n&quot;</td></tr>
 <tr class="memdesc:ga54fda7dd51ac77a8a4d9740550f59d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format string for message indicating read register and its value.  <br /></td></tr>
+<tr class="memitem:gab59caada51de3f75ccc467f5cedbda3a" id="r_gab59caada51de3f75ccc467f5cedbda3a"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab59caada51de3f75ccc467f5cedbda3a">msg_task_CLI_show_radio_stats_header</a> [] =&quot;Radio stats\r\n&quot;</td></tr>
+<tr class="memitem:gae6c958c19c2f9c8cb9471204532a2bcf" id="r_gae6c958c19c2f9c8cb9471204532a2bcf"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae6c958c19c2f9c8cb9471204532a2bcf">msg_task_CLI_show_radio_stats_total_packages_format_string</a> [] =&quot;Total packages %zu\r\n&quot;</td></tr>
+<tr class="memitem:gafb7fd61124e51d1c84e19d19bfcc0587" id="r_gafb7fd61124e51d1c84e19d19bfcc0587"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafb7fd61124e51d1c84e19d19bfcc0587">msg_task_CLI_show_radio_stats_received_packages_format_string</a> [] =&quot;Received packages %zu\r\n&quot;</td></tr>
+<tr class="memitem:ga9eef7b418b5306743faddfbcbe2bbfab" id="r_ga9eef7b418b5306743faddfbcbe2bbfab"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9eef7b418b5306743faddfbcbe2bbfab">msg_task_CLI_show_radio_stats_dropped_packages_format_string</a> [] =&quot;Dropped packages %zu\r\n&quot;</td></tr>
+<tr class="memitem:ga2a162631314234b00cc351303359a168" id="r_ga2a162631314234b00cc351303359a168"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2a162631314234b00cc351303359a168">msg_task_CLI_show_radio_stats_duplicate_packages_format_string</a> [] =&quot;Duplicated packages %zu\r\n&quot;</td></tr>
+<tr class="memitem:gaee4c4c4da13dcb87dd0158f33dbd859d" id="r_gaee4c4c4da13dcb87dd0158f33dbd859d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaee4c4c4da13dcb87dd0158f33dbd859d">msg_task_CLI_show_radio_stats_out_of_order_packages_format_string</a> [] =&quot;Out of order packages %zu\r\n&quot;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 CLI Task variables</h2></td></tr>
@@ -255,9 +271,11 @@ CLI Task variables</h2></td></tr>
 </td></tr>
 <tr class="memitem:ga4c09a676cc3ea4f70e1e99adcc3e7be2" id="r_ga4c09a676cc3ea4f70e1e99adcc3e7be2"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4c09a676cc3ea4f70e1e99adcc3e7be2">txBuffer</a> [<a class="el" href="#ga1663dae3272bb5f3bdbaf32ec33e0da6">TASK_CLI_TX_BUFFER_SIZE</a>]</td></tr>
 <tr class="memitem:ga4147e1e8ccd2b5591cefb00ad34d34d1" id="r_ga4147e1e8ccd2b5591cefb00ad34d34d1"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4147e1e8ccd2b5591cefb00ad34d34d1">rxBuffer</a> [<a class="el" href="#ga4e8240e8c264eb6eee10bb3b81be7de7">TASK_CLI_RX_BUFFER_SIZE</a>]</td></tr>
-<tr class="memitem:gada50f240c5dbf0bb11d51bd1406f4ae5" id="r_gada50f240c5dbf0bb11d51bd1406f4ae5"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gada50f240c5dbf0bb11d51bd1406f4ae5">commandStatus</a></td></tr>
-<tr class="memitem:gaf4329edb22f26c401510b62bc5876f64" id="r_gaf4329edb22f26c401510b62bc5876f64"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf4329edb22f26c401510b62bc5876f64">task_cli_command</a></td></tr>
+<tr class="memitem:ga6bc89987dfda5cfec33af163eaed2c1a" id="r_ga6bc89987dfda5cfec33af163eaed2c1a"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6bc89987dfda5cfec33af163eaed2c1a">commandStatus</a></td></tr>
+<tr class="memitem:gaa442a24103175e2b9f9f1719b55a6814" id="r_gaa442a24103175e2b9f9f1719b55a6814"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_system_request.html">SystemRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa442a24103175e2b9f9f1719b55a6814">task_cli_SystemRequest</a></td></tr>
 <tr class="memitem:gaa5122bbab1686f1b76ff700fc7b81241" id="r_gaa5122bbab1686f1b76ff700fc7b81241"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa5122bbab1686f1b76ff700fc7b81241">tempBuffer</a> [<a class="el" href="#gabb72a65f76a49acde256eede64f94b4f">TASK_CLI_TEMPORARY_BUFFER_SIZE</a>]</td></tr>
+<tr class="memitem:ga26124a7627630fdf09d5483fb0ef786e" id="r_ga26124a7627630fdf09d5483fb0ef786e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_r_a_d_i_o___s_t_a_t_s.html">RADIO_STATS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga26124a7627630fdf09d5483fb0ef786e">radio_stats</a></td></tr>
+<tr class="memitem:ga0fcea00c774a9ecc08ffa35407c1c4b6" id="r_ga0fcea00c774a9ecc08ffa35407c1c4b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_r_a_d_i_o___r_u_n_t_i_m_e___s_t_a_t_s.html">RADIO_RUNTIME_STATS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0fcea00c774a9ecc08ffa35407c1c4b6">radio_runtime_stats</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 CLI Commands</h2></td></tr>
@@ -277,6 +295,7 @@ CLI Commands</h2></td></tr>
 <tr class="memdesc:ga04e5f021a853090f9aeca63986a3d375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command string for "show" command, can be used for showing various system information.  <br /></td></tr>
 <tr class="memitem:ga628518c9e8b10b7168e4899ed13f67e7" id="r_ga628518c9e8b10b7168e4899ed13f67e7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga628518c9e8b10b7168e4899ed13f67e7">command_show_mem</a> []</td></tr>
 <tr class="memdesc:ga628518c9e8b10b7168e4899ed13f67e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child command string for showing memory information.  <br /></td></tr>
+<tr class="memitem:ga192180b39cd593a8611b65b0f54e8894" id="r_ga192180b39cd593a8611b65b0f54e8894"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga192180b39cd593a8611b65b0f54e8894">command_show_radio</a> []</td></tr>
 <tr class="memitem:ga49dcd58430ec104f7c5e6c0218debbae" id="r_ga49dcd58430ec104f7c5e6c0218debbae"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga49dcd58430ec104f7c5e6c0218debbae">command_show_children</a> []</td></tr>
 <tr class="memdesc:ga49dcd58430ec104f7c5e6c0218debbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of child command strings for the "show" command.  <br /></td></tr>
 <tr class="memitem:ga21363c4c2db60ee76fca646a2e5fbfa5" id="r_ga21363c4c2db60ee76fca646a2e5fbfa5"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga21363c4c2db60ee76fca646a2e5fbfa5">command_show_mem_ram1</a> []</td></tr>
@@ -287,6 +306,10 @@ CLI Commands</h2></td></tr>
 <tr class="memdesc:ga8ec0c92e5c5ef2b36ea0e553912a964d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child command string for showing CCSRAM information.  <br /></td></tr>
 <tr class="memitem:ga89c62ba6983f4ba756858b84cb9b5805" id="r_ga89c62ba6983f4ba756858b84cb9b5805"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga89c62ba6983f4ba756858b84cb9b5805">command_show_mem_children</a> []</td></tr>
 <tr class="memdesc:ga89c62ba6983f4ba756858b84cb9b5805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of child command strings for the "show memory" command.  <br /></td></tr>
+<tr class="memitem:gabab613b7ca480a7fe727141259a47c2f" id="r_gabab613b7ca480a7fe727141259a47c2f"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabab613b7ca480a7fe727141259a47c2f">command_show_radio_stats</a> []</td></tr>
+<tr class="memitem:gad70a008e0996743d8df3a61cb53b5709" id="r_gad70a008e0996743d8df3a61cb53b5709"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad70a008e0996743d8df3a61cb53b5709">command_show_radio_runtime</a> []</td></tr>
+<tr class="memitem:gaa4f9d4a17e101dde2ab524cc818bb3ce" id="r_gaa4f9d4a17e101dde2ab524cc818bb3ce"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa4f9d4a17e101dde2ab524cc818bb3ce">command_show_radio_settings</a> []</td></tr>
+<tr class="memitem:gac49a625fb296064a6122c2bd38e5c190" id="r_gac49a625fb296064a6122c2bd38e5c190"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac49a625fb296064a6122c2bd38e5c190">command_show_radio_children</a> []</td></tr>
 <tr class="memitem:gaeb919724398b8f32d255df35ba96377b" id="r_gaeb919724398b8f32d255df35ba96377b"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeb919724398b8f32d255df35ba96377b">command_write</a> []</td></tr>
 <tr class="memdesc:gaeb919724398b8f32d255df35ba96377b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command string for write operation.  <br /></td></tr>
 <tr class="memitem:ga4cdcfd5532646b0f5389a203b5fa3864" id="r_ga4cdcfd5532646b0f5389a203b5fa3864"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4cdcfd5532646b0f5389a203b5fa3864">command_read</a> []</td></tr>
@@ -305,10 +328,12 @@ CLI Messages</h2></td></tr>
 <tr class="memdesc:gaefe9a2b6d82b4b0b0c383dc65c25bf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help message for "show" command and its child commands.  <br /></td></tr>
 <tr class="memitem:gaddd662466ff5dde0552bc88f94dfba5a" id="r_gaddd662466ff5dde0552bc88f94dfba5a"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaddd662466ff5dde0552bc88f94dfba5a">msg_task_CLI_help_write</a> []</td></tr>
 <tr class="memdesc:gaddd662466ff5dde0552bc88f94dfba5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help message for "write" command and its child commands.  <br /></td></tr>
-<tr class="memitem:ga97f844d8c86c97dafa6133133880b4d7" id="r_ga97f844d8c86c97dafa6133133880b4d7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga97f844d8c86c97dafa6133133880b4d7">msg_task_CLI_diag_menu_header</a> []</td></tr>
-<tr class="memdesc:ga97f844d8c86c97dafa6133133880b4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default menu header for CLI task.  <br /></td></tr>
+<tr class="memitem:ga144a2a076eadb0a8b0fa3e631cd4e60f" id="r_ga144a2a076eadb0a8b0fa3e631cd4e60f"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga144a2a076eadb0a8b0fa3e631cd4e60f">msg_task_CLI_run_menu_header</a> []</td></tr>
+<tr class="memdesc:ga144a2a076eadb0a8b0fa3e631cd4e60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default menu header for CLI task.  <br /></td></tr>
 <tr class="memitem:gac9ad7594f130eb29e457ed1bdfdee272" id="r_gac9ad7594f130eb29e457ed1bdfdee272"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9ad7594f130eb29e457ed1bdfdee272">msg_task_CLI_test_menu_header</a> []</td></tr>
 <tr class="memdesc:gac9ad7594f130eb29e457ed1bdfdee272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test menu header for CLI task.  <br /></td></tr>
+<tr class="memitem:ga8708e54cc38d43217bd7aa43bf801d70" id="r_ga8708e54cc38d43217bd7aa43bf801d70"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8708e54cc38d43217bd7aa43bf801d70">msg_task_CLI_failsafe_menu_header</a> []</td></tr>
+<tr class="memitem:gaadc87e222849a2a83d0dcf49c967a0e7" id="r_gaadc87e222849a2a83d0dcf49c967a0e7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaadc87e222849a2a83d0dcf49c967a0e7">msg_task_CLI_fault_menu_header</a> []</td></tr>
 <tr class="memitem:ga5a859079bebce45466f97ab5f44f131d" id="r_ga5a859079bebce45466f97ab5f44f131d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5a859079bebce45466f97ab5f44f131d">msg_task_CLI_unknown_command</a> []</td></tr>
 <tr class="memdesc:ga5a859079bebce45466f97ab5f44f131d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating unknown command received in CLI task.  <br /></td></tr>
 <tr class="memitem:gaf674d97cca6cf8b9f0138cb292dc2b54" id="r_gaf674d97cca6cf8b9f0138cb292dc2b54"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf674d97cca6cf8b9f0138cb292dc2b54">msg_task_CLI_mode_switched_to_diag</a> []</td></tr>
@@ -323,6 +348,12 @@ CLI Messages</h2></td></tr>
 <tr class="memdesc:ga681acf89b35bd704992e100baa332a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indicating that a read command has been executed.  <br /></td></tr>
 <tr class="memitem:ga54fda7dd51ac77a8a4d9740550f59d13" id="r_ga54fda7dd51ac77a8a4d9740550f59d13"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga54fda7dd51ac77a8a4d9740550f59d13">msg_task_CLI_read_executed_format_string</a> []</td></tr>
 <tr class="memdesc:ga54fda7dd51ac77a8a4d9740550f59d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format string for message indicating read register and its value.  <br /></td></tr>
+<tr class="memitem:gab59caada51de3f75ccc467f5cedbda3a" id="r_gab59caada51de3f75ccc467f5cedbda3a"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab59caada51de3f75ccc467f5cedbda3a">msg_task_CLI_show_radio_stats_header</a> []</td></tr>
+<tr class="memitem:gae6c958c19c2f9c8cb9471204532a2bcf" id="r_gae6c958c19c2f9c8cb9471204532a2bcf"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae6c958c19c2f9c8cb9471204532a2bcf">msg_task_CLI_show_radio_stats_total_packages_format_string</a> []</td></tr>
+<tr class="memitem:gafb7fd61124e51d1c84e19d19bfcc0587" id="r_gafb7fd61124e51d1c84e19d19bfcc0587"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafb7fd61124e51d1c84e19d19bfcc0587">msg_task_CLI_show_radio_stats_received_packages_format_string</a> []</td></tr>
+<tr class="memitem:ga9eef7b418b5306743faddfbcbe2bbfab" id="r_ga9eef7b418b5306743faddfbcbe2bbfab"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9eef7b418b5306743faddfbcbe2bbfab">msg_task_CLI_show_radio_stats_dropped_packages_format_string</a> []</td></tr>
+<tr class="memitem:ga2a162631314234b00cc351303359a168" id="r_ga2a162631314234b00cc351303359a168"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2a162631314234b00cc351303359a168">msg_task_CLI_show_radio_stats_duplicate_packages_format_string</a> []</td></tr>
+<tr class="memitem:gaee4c4c4da13dcb87dd0158f33dbd859d" id="r_gaee4c4c4da13dcb87dd0158f33dbd859d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaee4c4c4da13dcb87dd0158f33dbd859d">msg_task_CLI_show_radio_stats_out_of_order_packages_format_string</a> []</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Diagnostics task for system monitoring and testing with CLI interface. </p>
@@ -438,7 +469,7 @@ CLI Messages</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TASK_CLI_TEMPORARY_BUFFER_SIZE&#160;&#160;&#160;31</td>
+          <td class="memname">#define TASK_CLI_TEMPORARY_BUFFER_SIZE&#160;&#160;&#160;41</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -463,6 +494,20 @@ CLI Messages</h2></td></tr>
 
 </div>
 </div>
+<a id="ga0e106093d33c7f858591afc07fff584b" name="ga0e106093d33c7f858591afc07fff584b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e106093d33c7f858591afc07fff584b">&#9670;&#160;</a></span>TASK_CLI_WAKEUP_MODE_CHANGED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CLI_WAKEUP_MODE_CHANGED&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga22950bad3ba811b0458a7d0af3182307" name="ga22950bad3ba811b0458a7d0af3182307"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga22950bad3ba811b0458a7d0af3182307">&#9670;&#160;</a></span>TASK_CLI_WAKEUP_QUEUE_STORAGE_LENGTH</h2>
 
@@ -476,6 +521,48 @@ CLI Messages</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Length of the CLI wakeup queue storage in words (uint32_t), can be adjusted as needed. </p>
+
+</div>
+</div>
+<a id="gaade3335886452c8086860b92b159eb17" name="gaade3335886452c8086860b92b159eb17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaade3335886452c8086860b92b159eb17">&#9670;&#160;</a></span>TASK_CLI_WAKEUP_RADIO_RUNTIME_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CLI_WAKEUP_RADIO_RUNTIME_READ&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaea30dd7ed7c1faa5a7c71a9ab3807a65" name="gaea30dd7ed7c1faa5a7c71a9ab3807a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea30dd7ed7c1faa5a7c71a9ab3807a65">&#9670;&#160;</a></span>TASK_CLI_WAKEUP_RADIO_SETTINGS_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CLI_WAKEUP_RADIO_SETTINGS_READ&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5f15e5199109297d02df5ddc537d2b35" name="ga5f15e5199109297d02df5ddc537d2b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f15e5199109297d02df5ddc537d2b35">&#9670;&#160;</a></span>TASK_CLI_WAKEUP_RADIO_STATS_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CLI_WAKEUP_RADIO_STATS_READ&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -636,9 +723,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="5,31,146,57"/>
 <area shape="rect" href="group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="231,5,306,32"/>
 <area shape="poly" title=" " alt="" coords="146,32,215,23,216,28,146,37"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="194,56,343,83"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="194,56,343,83"/>
 <area shape="poly" title=" " alt="" coords="146,51,178,55,178,60,146,56"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="391,48,533,91"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="391,48,533,91"/>
 <area shape="poly" title=" " alt="" coords="344,67,376,67,376,72,344,72"/>
 </map>
 </div>
@@ -657,8 +744,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga07bc02a597c512923232a5b47b898838" name="ga07bc02a597c512923232a5b47b898838"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga07bc02a597c512923232a5b47b898838">&#9670;&#160;</a></span>callback_cli_data_received()</h2>
+<a id="gaab3bc09d6a4efd0ef73314b65579eace" name="gaab3bc09d6a4efd0ef73314b65579eace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab3bc09d6a4efd0ef73314b65579eace">&#9670;&#160;</a></span>callback_cli_data_received()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -666,7 +753,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void callback_cli_data_received </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -681,86 +768,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
-
-</div>
-</div>
-<a id="ga3f7d496c3c1bba98e6ffc229aac0a3c9" name="ga3f7d496c3c1bba98e6ffc229aac0a3c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3f7d496c3c1bba98e6ffc229aac0a3c9">&#9670;&#160;</a></span>callback_cli_read_executed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void callback_cli_read_executed </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback function for when a CLI read command has been executed. This function is called after a read command has been executed to notify the CLI task that it can perform any necessary actions after read command execution, such as sending read data back to terminal or showing command status. It sends a wakeup reason to the CLI task's wakeup queue to indicate that a read command has been executed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">None.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__task___c_l_i_ga3f7d496c3c1bba98e6ffc229aac0a3c9_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga3f7d496c3c1bba98e6ffc229aac0a3c9_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__task___c_l_i_ga3f7d496c3c1bba98e6ffc229aac0a3c9_icgraph" id="agroup__task___c_l_i_ga3f7d496c3c1bba98e6ffc229aac0a3c9_icgraph">
-<area shape="rect" title="Callback function for when a CLI read command has been executed. This function is called after a read..." alt="" coords="203,5,384,32"/>
-<area shape="rect" href="group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5" title=" " alt="" coords="5,5,155,32"/>
-<area shape="poly" title=" " alt="" coords="187,21,155,21,155,16,187,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="gac444bd0d61a9b85e773c9ac14e1d12d2" name="gac444bd0d61a9b85e773c9ac14e1d12d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac444bd0d61a9b85e773c9ac14e1d12d2">&#9670;&#160;</a></span>callback_cli_write_executed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void callback_cli_write_executed </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback function for when a CLI command has been executed. This function is called after a command has been executed to notify the CLI task that it can perform any necessary actions after command execution, such as updating the menu header or showing command status. It sends a wakeup reason to the CLI task's wakeup queue to indicate that a command has been executed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">None.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group__task___c_l_i_gac444bd0d61a9b85e773c9ac14e1d12d2_icgraph.png" border="0" usemap="#agroup__task___c_l_i_gac444bd0d61a9b85e773c9ac14e1d12d2_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__task___c_l_i_gac444bd0d61a9b85e773c9ac14e1d12d2_icgraph" id="agroup__task___c_l_i_gac444bd0d61a9b85e773c9ac14e1d12d2_icgraph">
-<area shape="rect" title="Callback function for when a CLI command has been executed. This function is called after a command h..." alt="" coords="840,23,964,65"/>
-<area shape="rect" href="group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="640,5,792,32"/>
-<area shape="poly" title=" " alt="" coords="824,36,792,32,792,26,825,31"/>
-<area shape="rect" href="group__task___c_l_i.html#gaff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="667,56,765,83"/>
-<area shape="poly" title=" " alt="" coords="825,57,766,65,765,60,824,52"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="427,56,592,83"/>
-<area shape="poly" title=" " alt="" coords="651,72,592,72,592,67,651,67"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,56,379,83"/>
-<area shape="poly" title=" " alt="" coords="412,72,380,72,380,67,412,67"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,56,216,83"/>
-<area shape="poly" title=" " alt="" coords="248,72,216,72,216,67,248,67"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<div class="center"><img src="group__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph.png" border="0" usemap="#agroup__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph" id="agroup__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph">
+<area shape="rect" title="Callback function for when CLI task receives data from USART. This function is called in the USART1 D..." alt="" coords="221,5,398,32"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga34dbcebf9df0cd27de3f616b41471303" title="Callback function called when USART3 DMA reception is complete." alt="" coords="5,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
 </map>
 </div>
 
@@ -795,9 +810,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="group__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_cgraph" id="agroup__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_cgraph">
 <area shape="rect" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="5,13,153,40"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="201,13,350,40"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="201,13,350,40"/>
 <area shape="poly" title=" " alt="" coords="153,24,185,24,185,29,153,29"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="398,5,540,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="398,5,540,48"/>
 <area shape="poly" title=" " alt="" coords="351,24,383,24,383,29,351,29"/>
 </map>
 </div>
@@ -850,9 +865,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="group__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_cgraph.png" border="0" usemap="#agroup__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_cgraph" id="agroup__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_cgraph">
 <area shape="rect" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="5,13,123,40"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="171,13,320,40"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="171,13,320,40"/>
 <area shape="poly" title=" " alt="" coords="123,24,155,24,155,29,123,29"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="368,5,510,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="368,5,510,48"/>
 <area shape="poly" title=" " alt="" coords="321,24,353,24,353,29,321,29"/>
 </map>
 </div>
@@ -905,9 +920,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="group__task___c_l_i_ga804c51bf9d9a919cbf34f9f9dd0c6c35_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga804c51bf9d9a919cbf34f9f9dd0c6c35_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga804c51bf9d9a919cbf34f9f9dd0c6c35_cgraph" id="agroup__task___c_l_i_ga804c51bf9d9a919cbf34f9f9dd0c6c35_cgraph">
 <area shape="rect" title="Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command..." alt="" coords="5,13,154,40"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="202,13,351,40"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="202,13,351,40"/>
 <area shape="poly" title=" " alt="" coords="154,24,186,24,186,29,154,29"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="399,5,541,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="399,5,541,48"/>
 <area shape="poly" title=" " alt="" coords="352,24,384,24,384,29,352,29"/>
 </map>
 </div>
@@ -938,16 +953,16 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="group__task___c_l_i_ga9f3d13bd4e44a42e7bd15897476d19e5_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga9f3d13bd4e44a42e7bd15897476d19e5_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga9f3d13bd4e44a42e7bd15897476d19e5_cgraph" id="agroup__task___c_l_i_ga9f3d13bd4e44a42e7bd15897476d19e5_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,155,83"/>
-<area shape="rect" href="group__task___c_l_i.html#ga9da5ff1e1909f7926657592feb573e9f" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="223,31,364,57"/>
-<area shape="poly" title=" " alt="" coords="155,58,207,52,208,57,155,63"/>
-<area shape="rect" href="group__task___c_l_i.html#ga3f7d496c3c1bba98e6ffc229aac0a3c9" title="Callback function for when a CLI read command has been executed. This function is called after a read..." alt="" coords="203,81,384,108"/>
-<area shape="poly" title=" " alt="" coords="155,76,187,79,187,85,155,81"/>
-<area shape="rect" href="group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="470,5,544,32"/>
-<area shape="poly" title=" " alt="" coords="363,33,454,22,454,27,364,38"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="432,56,581,83"/>
-<area shape="poly" title=" " alt="" coords="364,50,417,56,416,61,363,55"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="629,48,772,91"/>
-<area shape="poly" title=" " alt="" coords="582,67,614,67,614,72,582,72"/>
+<area shape="rect" href="group__task___c_l_i.html#ga9da5ff1e1909f7926657592feb573e9f" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="219,31,360,57"/>
+<area shape="poly" title=" " alt="" coords="154,58,203,52,204,57,155,63"/>
+<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="203,81,376,108"/>
+<area shape="poly" title=" " alt="" coords="155,76,187,80,187,85,154,81"/>
+<area shape="rect" href="group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="462,5,536,32"/>
+<area shape="poly" title=" " alt="" coords="360,33,446,22,446,28,360,38"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="424,56,573,83"/>
+<area shape="poly" title=" " alt="" coords="360,50,409,56,408,61,360,55"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="621,48,764,91"/>
+<area shape="poly" title=" " alt="" coords="574,67,606,67,606,72,574,72"/>
 </map>
 </div>
 
@@ -986,23 +1001,25 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_gaff9c7d9576e5b718a18ee9136e2b8011_cgraph.png" border="0" usemap="#agroup__task___c_l_i_gaff9c7d9576e5b718a18ee9136e2b8011_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_gaff9c7d9576e5b718a18ee9136e2b8011_cgraph" id="agroup__task___c_l_i_gaff9c7d9576e5b718a18ee9136e2b8011_cgraph">
-<area shape="rect" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="5,107,161,133"/>
-<area shape="rect" href="group___trinity_track6000___mem_info.html#ga92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="209,5,333,32"/>
-<area shape="poly" title=" " alt="" coords="108,104,207,48,228,37,231,42,210,53,110,108"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="381,107,530,133"/>
-<area shape="poly" title=" " alt="" coords="140,103,208,92,271,88,333,92,386,100,385,106,333,97,271,93,209,97,141,109"/>
-<area shape="rect" href="group___trinity_track6000___mem_info.html#gaa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="216,107,326,133"/>
-<area shape="poly" title=" " alt="" coords="161,117,200,117,200,123,161,123"/>
-<area shape="rect" href="group___trinity_track6000___mem_info.html#ga4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="220,157,322,184"/>
-<area shape="poly" title=" " alt="" coords="136,131,205,150,204,156,135,137"/>
-<area shape="rect" href="group___trinity_track6000___mem_info.html#ga9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="220,208,322,235"/>
-<area shape="poly" title=" " alt="" coords="106,132,153,161,210,194,221,199,219,204,207,198,150,166,103,136"/>
-<area shape="poly" title=" " alt="" coords="300,30,334,48,419,96,416,101,332,53,298,35"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="578,99,721,141"/>
-<area shape="poly" title=" " alt="" coords="531,117,563,117,563,123,531,123"/>
-<area shape="poly" title=" " alt="" coords="326,117,365,117,365,123,326,123"/>
-<area shape="poly" title=" " alt="" coords="322,154,389,135,391,140,323,159"/>
-<area shape="poly" title=" " alt="" coords="307,205,332,194,420,140,423,145,334,198,309,210"/>
+<area shape="rect" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="5,132,161,159"/>
+<area shape="rect" href="group___trinity_track6000___mem_info.html#ga92d37852195d387827a2b3834e2cf915" title="Print detailed CCSRAM diagnostics." alt="" coords="233,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="98,129,145,90,207,48,234,36,236,40,210,53,148,95,101,134"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="430,107,579,133"/>
+<area shape="poly" title=" " alt="" coords="109,129,154,108,208,92,267,85,327,86,383,92,433,100,432,106,382,97,326,91,267,91,209,97,156,113,111,134"/>
+<area shape="rect" href="group___trinity_track6000___mem_info.html#gaa48ab58ff320a5df5eb89661c8a7481a" title="Print general RAM usage information via dedicated UART with DMA support." alt="" coords="240,107,350,133"/>
+<area shape="poly" title=" " alt="" coords="161,133,225,126,225,131,162,139"/>
+<area shape="rect" href="group___trinity_track6000___mem_info.html#ga4e1e8cacf31413d3521761f8f6a7170f" title="Print detailed RAM1 diagnostics." alt="" coords="244,157,346,184"/>
+<area shape="poly" title=" " alt="" coords="162,152,229,160,228,165,161,157"/>
+<area shape="rect" href="group___trinity_track6000___mem_info.html#ga9d3a9f1daf5dd097138738d27b93b504" title="Print detailed RAM2 diagnostics." alt="" coords="244,208,346,235"/>
+<area shape="poly" title=" " alt="" coords="117,157,210,193,230,200,229,205,208,199,115,162"/>
+<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="209,259,382,285"/>
+<area shape="poly" title=" " alt="" coords="99,157,146,200,177,224,210,244,223,250,220,255,207,249,174,228,142,204,96,161"/>
+<area shape="poly" title=" " alt="" coords="339,30,383,48,470,96,467,101,381,53,337,35"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="627,99,770,141"/>
+<area shape="poly" title=" " alt="" coords="580,117,612,117,612,123,580,123"/>
+<area shape="poly" title=" " alt="" coords="351,117,415,117,415,123,351,123"/>
+<area shape="poly" title=" " alt="" coords="346,156,431,135,432,140,347,161"/>
+<area shape="poly" title=" " alt="" coords="346,206,381,194,429,168,471,140,474,145,432,172,383,198,348,211"/>
 </map>
 </div>
 
@@ -1041,11 +1058,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_gab95ac13f16242b28e0389734b21d1dc6_cgraph.png" border="0" usemap="#agroup__task___c_l_i_gab95ac13f16242b28e0389734b21d1dc6_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_gab95ac13f16242b28e0389734b21d1dc6_cgraph" id="agroup__task___c_l_i_gab95ac13f16242b28e0389734b21d1dc6_cgraph">
-<area shape="rect" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="5,13,207,40"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="255,13,404,40"/>
-<area shape="poly" title=" " alt="" coords="207,24,239,24,239,29,207,29"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="452,5,594,48"/>
-<area shape="poly" title=" " alt="" coords="405,24,437,24,437,29,405,29"/>
+<area shape="rect" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="5,31,207,57"/>
+<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="255,5,428,32"/>
+<area shape="poly" title=" " alt="" coords="207,30,239,27,239,32,207,36"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="267,56,416,83"/>
+<area shape="poly" title=" " alt="" coords="207,52,252,57,251,62,207,58"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="476,48,618,91"/>
+<area shape="poly" title=" " alt="" coords="417,67,460,67,460,72,417,72"/>
 </map>
 </div>
 
@@ -1084,17 +1103,17 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga7e4a305579b0c91e3c92f22d7c57ade4_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga7e4a305579b0c91e3c92f22d7c57ade4_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga7e4a305579b0c91e3c92f22d7c57ade4_cgraph" id="agroup__task___c_l_i_ga7e4a305579b0c91e3c92f22d7c57ade4_cgraph">
-<area shape="rect" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="5,60,158,87"/>
-<area shape="rect" href="group__task___c_l_i.html#ga9da5ff1e1909f7926657592feb573e9f" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="206,31,346,57"/>
-<area shape="poly" title=" " alt="" coords="158,59,190,54,191,60,158,64"/>
-<area shape="rect" href="group__task___c_l_i.html#gac444bd0d61a9b85e773c9ac14e1d12d2" title="Callback function for when a CLI command has been executed. This function is called after a command h..." alt="" coords="214,81,338,124"/>
-<area shape="poly" title=" " alt="" coords="158,82,198,88,198,94,158,87"/>
-<area shape="rect" href="group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="432,5,506,32"/>
-<area shape="poly" title=" " alt="" coords="346,32,416,23,417,28,347,37"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="394,56,543,83"/>
-<area shape="poly" title=" " alt="" coords="347,51,379,55,378,60,346,56"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="591,48,734,91"/>
-<area shape="poly" title=" " alt="" coords="544,67,576,67,576,72,544,72"/>
+<area shape="rect" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="5,56,158,83"/>
+<area shape="rect" href="group__task___c_l_i.html#ga9da5ff1e1909f7926657592feb573e9f" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="222,31,362,57"/>
+<area shape="poly" title=" " alt="" coords="158,58,206,52,207,57,158,63"/>
+<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="206,81,379,108"/>
+<area shape="poly" title=" " alt="" coords="158,76,190,80,190,85,158,81"/>
+<area shape="rect" href="group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="464,5,539,32"/>
+<area shape="poly" title=" " alt="" coords="363,33,449,22,449,28,363,38"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="427,56,576,83"/>
+<area shape="poly" title=" " alt="" coords="363,50,412,56,411,61,363,55"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="624,48,767,91"/>
+<area shape="poly" title=" " alt="" coords="577,67,609,67,609,72,577,72"/>
 </map>
 </div>
 
@@ -1148,51 +1167,165 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga2a3b6d569d061b4e9895524cc69734f9" name="ga2a3b6d569d061b4e9895524cc69734f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2a3b6d569d061b4e9895524cc69734f9">&#9670;&#160;</a></span>show_command_status()</h2>
+<a id="ga863b01ac894d528c340fd7b86429d021" name="ga863b01ac894d528c340fd7b86429d021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga863b01ac894d528c340fd7b86429d021">&#9670;&#160;</a></span>show_command_status_radio_stats()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void show_command_status </td>
+          <td class="memname">void show_command_status_radio_stats </td>
           <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>wakeupReason</em></span></td><td>)</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Show command execution status. This function is called after a command has been executed to show the status of the command execution to the user. For now, it just sends a static message back to the terminal, but in the future, it can be enhanced to show more detailed information about the command execution status. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">uint32_t</td><td>wakeupReason: The reason for the wakeup event that triggered the status display.. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_cgraph" id="agroup__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_cgraph">
-<area shape="rect" title="Show command execution status. This function is called after a command has been executed to show the ..." alt="" coords="5,13,165,40"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="213,13,362,40"/>
+<div class="center"><img src="group__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_cgraph" id="agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,165,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="213,13,362,40"/>
 <area shape="poly" title=" " alt="" coords="165,24,197,24,197,29,165,29"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="410,5,552,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="410,5,552,48"/>
 <area shape="poly" title=" " alt="" coords="363,24,395,24,395,29,363,29"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_icgraph" id="agroup__task___c_l_i_ga2a3b6d569d061b4e9895524cc69734f9_icgraph">
-<area shape="rect" title="Show command execution status. This function is called after a command has been executed to show the ..." alt="" coords="319,5,478,32"/>
+<div class="center"><img src="group__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph" id="agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph">
+<area shape="rect" title=" " alt="" coords="319,5,478,48"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,13,271,40"/>
+<area shape="poly" title=" " alt="" coords="304,29,272,29,272,24,304,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga33287dbfb56a6a36e0e0c4a8c1806c5c" name="ga33287dbfb56a6a36e0e0c4a8c1806c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33287dbfb56a6a36e0e0c4a8c1806c5c">&#9670;&#160;</a></span>show_command_status_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_command_status_read </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_cgraph" id="agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,197,40"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="245,13,394,40"/>
+<area shape="poly" title=" " alt="" coords="197,24,229,24,229,29,197,29"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="442,5,584,48"/>
+<area shape="poly" title=" " alt="" coords="395,24,427,24,427,29,395,29"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph" id="agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph">
+<area shape="rect" title=" " alt="" coords="319,5,510,32"/>
 <area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="304,21,272,21,272,16,304,16"/>
+<area shape="poly" title=" " alt="" coords="303,21,271,21,271,16,303,16"/>
 <area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8034fe0b3faa51679bef29030c4a7e85" name="ga8034fe0b3faa51679bef29030c4a7e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8034fe0b3faa51679bef29030c4a7e85">&#9670;&#160;</a></span>show_command_status_switch_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_command_status_switch_mode </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_cgraph" id="agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,165,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="213,13,362,40"/>
+<area shape="poly" title=" " alt="" coords="165,24,197,24,197,29,165,29"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="410,5,552,48"/>
+<area shape="poly" title=" " alt="" coords="363,24,395,24,395,29,363,29"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph" id="agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph">
+<area shape="rect" title=" " alt="" coords="319,5,478,48"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,13,271,40"/>
+<area shape="poly" title=" " alt="" coords="304,29,272,29,272,24,304,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga9dd3488482fe604e3704eff60e3d0ea4" name="ga9dd3488482fe604e3704eff60e3d0ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9dd3488482fe604e3704eff60e3d0ea4">&#9670;&#160;</a></span>show_command_status_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_command_status_write </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_cgraph" id="agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,165,48"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="213,13,362,40"/>
+<area shape="poly" title=" " alt="" coords="165,24,197,24,197,29,165,29"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="410,5,552,48"/>
+<area shape="poly" title=" " alt="" coords="363,24,395,24,395,29,363,29"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph" id="agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph">
+<area shape="rect" title=" " alt="" coords="319,5,478,48"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,13,271,40"/>
+<area shape="poly" title=" " alt="" coords="304,29,272,29,272,24,304,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
 </map>
 </div>
 
@@ -1226,21 +1359,30 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_cgraph" id="agroup__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_cgraph">
-<area shape="rect" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="5,81,80,108"/>
-<area shape="rect" href="group__task___c_l_i.html#ga569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="134,5,281,32"/>
-<area shape="poly" title=" " alt="" coords="62,78,126,42,141,35,144,40,129,46,65,83"/>
-<area shape="rect" href="group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="149,56,266,83"/>
-<area shape="poly" title=" " alt="" coords="80,86,133,78,133,83,81,92"/>
-<area shape="rect" href="group__task___c_l_i.html#ga2a3b6d569d061b4e9895524cc69734f9" title="Show command execution status. This function is called after a command has been executed to show the ..." alt="" coords="128,107,287,133"/>
-<area shape="poly" title=" " alt="" coords="81,98,113,103,112,108,80,103"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga5c81b8f300eba80193fcb84729ba8529" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="131,157,284,184"/>
-<area shape="poly" title=" " alt="" coords="65,106,129,143,144,149,141,154,126,148,62,111"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="335,56,484,83"/>
-<area shape="poly" title=" " alt="" coords="264,30,339,49,338,54,263,35"/>
-<area shape="rect" href="group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="532,48,675,91"/>
-<area shape="poly" title=" " alt="" coords="485,67,517,67,517,72,485,72"/>
-<area shape="poly" title=" " alt="" coords="266,67,320,67,320,72,266,72"/>
-<area shape="poly" title=" " alt="" coords="263,103,338,84,339,90,264,109"/>
+<area shape="rect" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="5,173,80,200"/>
+<area shape="rect" href="group__task___c_l_i.html#ga569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="150,5,297,32"/>
+<area shape="poly" title=" " alt="" coords="46,172,72,109,95,73,126,42,134,36,137,41,129,46,100,76,77,112,50,174"/>
+<area shape="rect" href="group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="165,56,282,83"/>
+<area shape="poly" title=" " alt="" coords="50,171,81,132,102,111,126,92,149,82,151,86,129,97,106,115,85,136,55,174"/>
+<area shape="rect" href="group__task___c_l_i.html#ga863b01ac894d528c340fd7b86429d021" title=" " alt="" coords="144,107,303,149"/>
+<area shape="poly" title=" " alt="" coords="79,172,140,152,142,157,81,177"/>
+<area shape="rect" href="group__task___c_l_i.html#ga33287dbfb56a6a36e0e0c4a8c1806c5c" title=" " alt="" coords="128,173,319,200"/>
+<area shape="poly" title=" " alt="" coords="80,184,112,184,112,189,80,189"/>
+<area shape="rect" href="group__task___c_l_i.html#ga8034fe0b3faa51679bef29030c4a7e85" title=" " alt="" coords="144,224,303,267"/>
+<area shape="poly" title=" " alt="" coords="81,196,142,216,140,221,79,201"/>
+<area shape="rect" href="group__task___c_l_i.html#ga9dd3488482fe604e3704eff60e3d0ea4" title=" " alt="" coords="144,291,303,333"/>
+<area shape="poly" title=" " alt="" coords="55,199,85,237,106,258,129,276,137,281,134,286,126,281,103,262,81,241,51,202"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga935ea3369409ee31333843815a366a25" title="Reads data from the USART3 receive ring buffer into the provided destination buffer." alt="" coords="147,357,300,384"/>
+<area shape="poly" title=" " alt="" coords="50,200,59,230,75,269,98,309,129,343,135,347,132,352,126,347,94,312,70,271,54,232,45,201"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="367,144,516,171"/>
+<area shape="poly" title=" " alt="" coords="294,30,320,42,351,62,378,85,422,130,418,134,375,89,347,66,318,46,292,35"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="564,136,707,179"/>
+<area shape="poly" title=" " alt="" coords="517,155,549,155,549,160,517,160"/>
+<area shape="poly" title=" " alt="" coords="283,80,320,92,406,134,403,139,318,97,281,85"/>
+<area shape="poly" title=" " alt="" coords="303,136,352,143,351,148,303,141"/>
+<area shape="poly" title=" " alt="" coords="319,171,351,167,352,172,320,176"/>
+<area shape="poly" title=" " alt="" coords="288,221,318,210,397,175,399,180,320,214,290,226"/>
+<area shape="poly" title=" " alt="" coords="296,288,318,276,348,254,375,229,419,181,423,185,379,233,351,259,320,281,299,292"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1284,9 +1426,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph.png" border="0" usemap="#agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph" id="agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph">
-<area shape="rect" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="5,13,104,40"/>
-<area shape="rect" href="group__task___c_l_i.html#gac444bd0d61a9b85e773c9ac14e1d12d2" title="Callback function for when a CLI command has been executed. This function is called after a command h..." alt="" coords="152,5,276,48"/>
-<area shape="poly" title=" " alt="" coords="104,24,136,24,136,29,104,29"/>
+<area shape="rect" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="5,5,104,32"/>
+<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="152,5,325,32"/>
+<area shape="poly" title=" " alt="" coords="104,16,136,16,136,21,104,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1308,21 +1450,52 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ga74e543d2ef299953e408dda48c0aa6ad" name="ga74e543d2ef299953e408dda48c0aa6ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga74e543d2ef299953e408dda48c0aa6ad">&#9670;&#160;</a></span>cli_task_state</h2>
+<a id="ga0669a273fe9b06345bcd52fc2d20e0e7" name="ga0669a273fe9b06345bcd52fc2d20e0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0669a273fe9b06345bcd52fc2d20e0e7">&#9670;&#160;</a></span>task_cli_wakeup_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ga16d46536a8bbcde3a927de14ac1f68cc">CLI_Task_State</a> cli_task_state =<a class="el" href="#gga16d46536a8bbcde3a927de14ac1f68cca2f347d4d6701a0ab054cb3b9463082a1">CLI_STATE_DIAG_MENU</a></td>
+          <td class="memname">void task_cli_wakeup_callback </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Callback function for processing CLI requests. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph" id="agroup__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph">
+<area shape="rect" title="Callback function for processing CLI requests." alt="" coords="889,107,1062,133"/>
+<area shape="rect" href="group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5" title=" " alt="" coords="666,5,815,32"/>
+<area shape="poly" title=" " alt="" coords="940,100,894,72,840,46,806,35,807,30,842,42,896,68,943,96"/>
+<area shape="rect" href="group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="663,56,818,83"/>
+<area shape="poly" title=" " alt="" coords="895,105,805,86,806,81,896,100"/>
+<area shape="rect" href="group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="640,107,841,133"/>
+<area shape="poly" title=" " alt="" coords="873,123,841,123,841,117,873,117"/>
+<area shape="rect" href="group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="664,157,816,184"/>
+<area shape="poly" title=" " alt="" coords="896,140,806,159,805,154,895,135"/>
+<area shape="rect" href="group__task___c_l_i.html#gaff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="691,208,790,235"/>
+<area shape="poly" title=" " alt="" coords="943,144,896,172,842,198,791,214,789,209,840,194,894,168,940,140"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="427,208,592,235"/>
+<area shape="poly" title=" " alt="" coords="676,224,592,224,592,219,676,219"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,208,379,235"/>
+<area shape="poly" title=" " alt="" coords="412,224,380,224,380,219,412,219"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,208,216,235"/>
+<area shape="poly" title=" " alt="" coords="248,224,216,224,216,219,248,219"/>
+<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,208,55,235"/>
+<area shape="poly" title=" " alt="" coords="87,224,55,224,55,219,87,219"/>
+</map>
+</div>
+
 </div>
 </div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
 <a id="gaea5a326ee38a4c786d021325c8fb7dbe" name="gaea5a326ee38a4c786d021325c8fb7dbe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaea5a326ee38a4c786d021325c8fb7dbe">&#9670;&#160;</a></span>command_array <span class="overload">[1/2]</span></h2>
 
@@ -1340,11 +1513,11 @@ Here is the caller graph for this function:</div>
 <div class="line">    <a class="code hl_variable" href="#ga04e5f021a853090f9aeca63986a3d375">command_show</a>,</div>
 <div class="line">    <a class="code hl_variable" href="#gaeb919724398b8f32d255df35ba96377b">command_write</a>,</div>
 <div class="line">    <a class="code hl_variable" href="#ga4cdcfd5532646b0f5389a203b5fa3864">command_read</a>}</div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga04e5f021a853090f9aeca63986a3d375"><div class="ttname"><a href="#ga04e5f021a853090f9aeca63986a3d375">command_show</a></div><div class="ttdeci">const char command_show[]</div><div class="ttdoc">Command string for &quot;show&quot; command, can be used for showing various system information.</div><div class="ttdef"><b>Definition</b> task_CLI.c:57</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga1a07f0c7de5d8a0e10bde6205f5429b3"><div class="ttname"><a href="#ga1a07f0c7de5d8a0e10bde6205f5429b3">command_help</a></div><div class="ttdeci">const char command_help[]</div><div class="ttdoc">Command string for &quot;help&quot; command.</div><div class="ttdef"><b>Definition</b> task_CLI.c:50</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga4cdcfd5532646b0f5389a203b5fa3864"><div class="ttname"><a href="#ga4cdcfd5532646b0f5389a203b5fa3864">command_read</a></div><div class="ttdeci">const char command_read[]</div><div class="ttdoc">Command string for read operation.</div><div class="ttdef"><b>Definition</b> task_CLI.c:67</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga68fce5355de167da549766e0a43e5447"><div class="ttname"><a href="#ga68fce5355de167da549766e0a43e5447">command_switch_mode</a></div><div class="ttdeci">const char command_switch_mode[]</div><div class="ttdoc">Command string for switching CLI mode.</div><div class="ttdef"><b>Definition</b> task_CLI.c:52</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_gaeb919724398b8f32d255df35ba96377b"><div class="ttname"><a href="#gaeb919724398b8f32d255df35ba96377b">command_write</a></div><div class="ttdeci">const char command_write[]</div><div class="ttdoc">Command string for write operation.</div><div class="ttdef"><b>Definition</b> task_CLI.c:66</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga04e5f021a853090f9aeca63986a3d375"><div class="ttname"><a href="#ga04e5f021a853090f9aeca63986a3d375">command_show</a></div><div class="ttdeci">const char command_show[]</div><div class="ttdoc">Command string for &quot;show&quot; command, can be used for showing various system information.</div><div class="ttdef"><b>Definition</b> task_CLI.c:55</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga1a07f0c7de5d8a0e10bde6205f5429b3"><div class="ttname"><a href="#ga1a07f0c7de5d8a0e10bde6205f5429b3">command_help</a></div><div class="ttdeci">const char command_help[]</div><div class="ttdoc">Command string for &quot;help&quot; command.</div><div class="ttdef"><b>Definition</b> task_CLI.c:48</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga4cdcfd5532646b0f5389a203b5fa3864"><div class="ttname"><a href="#ga4cdcfd5532646b0f5389a203b5fa3864">command_read</a></div><div class="ttdeci">const char command_read[]</div><div class="ttdoc">Command string for read operation.</div><div class="ttdef"><b>Definition</b> task_CLI.c:71</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga68fce5355de167da549766e0a43e5447"><div class="ttname"><a href="#ga68fce5355de167da549766e0a43e5447">command_switch_mode</a></div><div class="ttdeci">const char command_switch_mode[]</div><div class="ttdoc">Command string for switching CLI mode.</div><div class="ttdef"><b>Definition</b> task_CLI.c:50</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_gaeb919724398b8f32d255df35ba96377b"><div class="ttname"><a href="#gaeb919724398b8f32d255df35ba96377b">command_write</a></div><div class="ttdeci">const char command_write[]</div><div class="ttdoc">Command string for write operation.</div><div class="ttdef"><b>Definition</b> task_CLI.c:70</div></div>
 </div><!-- fragment -->
 <p>CLI Task command strings and messages These are constant strings used for command recognition and user feedback in the CLI task. </p>
 <p>Array of command strings for command recognition, indexed by command type </p>
@@ -1503,7 +1676,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char* command_show_children[] ={<a class="el" href="#ga628518c9e8b10b7168e4899ed13f67e7">command_show_mem</a>}</td>
+          <td class="memname">const char* command_show_children[] ={<a class="el" href="#ga628518c9e8b10b7168e4899ed13f67e7">command_show_mem</a>,<a class="el" href="#ga192180b39cd593a8611b65b0f54e8894">command_show_radio</a>}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1736,6 +1909,186 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ga192180b39cd593a8611b65b0f54e8894" name="ga192180b39cd593a8611b65b0f54e8894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga192180b39cd593a8611b65b0f54e8894">&#9670;&#160;</a></span>command_show_radio <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio[] =&quot;radio&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga192180b39cd593a8611b65b0f54e8894" name="ga192180b39cd593a8611b65b0f54e8894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga192180b39cd593a8611b65b0f54e8894">&#9670;&#160;</a></span>command_show_radio <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac49a625fb296064a6122c2bd38e5c190" name="gac49a625fb296064a6122c2bd38e5c190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac49a625fb296064a6122c2bd38e5c190">&#9670;&#160;</a></span>command_show_radio_children <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* command_show_radio_children[] ={<a class="el" href="#gabab613b7ca480a7fe727141259a47c2f">command_show_radio_stats</a>,<a class="el" href="#gad70a008e0996743d8df3a61cb53b5709">command_show_radio_runtime</a>,<a class="el" href="#gaa4f9d4a17e101dde2ab524cc818bb3ce">command_show_radio_settings</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac49a625fb296064a6122c2bd38e5c190" name="gac49a625fb296064a6122c2bd38e5c190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac49a625fb296064a6122c2bd38e5c190">&#9670;&#160;</a></span>command_show_radio_children <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* command_show_radio_children[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad70a008e0996743d8df3a61cb53b5709" name="gad70a008e0996743d8df3a61cb53b5709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad70a008e0996743d8df3a61cb53b5709">&#9670;&#160;</a></span>command_show_radio_runtime <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio_runtime[] =&quot;runtime&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad70a008e0996743d8df3a61cb53b5709" name="gad70a008e0996743d8df3a61cb53b5709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad70a008e0996743d8df3a61cb53b5709">&#9670;&#160;</a></span>command_show_radio_runtime <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio_runtime[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa4f9d4a17e101dde2ab524cc818bb3ce" name="gaa4f9d4a17e101dde2ab524cc818bb3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4f9d4a17e101dde2ab524cc818bb3ce">&#9670;&#160;</a></span>command_show_radio_settings <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio_settings[] =&quot;settings&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa4f9d4a17e101dde2ab524cc818bb3ce" name="gaa4f9d4a17e101dde2ab524cc818bb3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4f9d4a17e101dde2ab524cc818bb3ce">&#9670;&#160;</a></span>command_show_radio_settings <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio_settings[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabab613b7ca480a7fe727141259a47c2f" name="gabab613b7ca480a7fe727141259a47c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabab613b7ca480a7fe727141259a47c2f">&#9670;&#160;</a></span>command_show_radio_stats <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio_stats[] =&quot;stats&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabab613b7ca480a7fe727141259a47c2f" name="gabab613b7ca480a7fe727141259a47c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabab613b7ca480a7fe727141259a47c2f">&#9670;&#160;</a></span>command_show_radio_stats <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char command_show_radio_stats[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga68fce5355de167da549766e0a43e5447" name="ga68fce5355de167da549766e0a43e5447"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga68fce5355de167da549766e0a43e5447">&#9670;&#160;</a></span>command_switch_mode <span class="overload">[1/2]</span></h2>
 
@@ -1936,8 +2289,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="gada50f240c5dbf0bb11d51bd1406f4ae5" name="gada50f240c5dbf0bb11d51bd1406f4ae5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gada50f240c5dbf0bb11d51bd1406f4ae5">&#9670;&#160;</a></span>commandStatus</h2>
+<a id="ga6bc89987dfda5cfec33af163eaed2c1a" name="ga6bc89987dfda5cfec33af163eaed2c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bc89987dfda5cfec33af163eaed2c1a">&#9670;&#160;</a></span>commandStatus</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1946,7 +2299,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t commandStatus</td>
+          <td class="memname">uint8_t commandStatus</td>
         </tr>
       </table>
   </td>
@@ -1958,24 +2311,22 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga97f844d8c86c97dafa6133133880b4d7" name="ga97f844d8c86c97dafa6133133880b4d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97f844d8c86c97dafa6133133880b4d7">&#9670;&#160;</a></span>msg_task_CLI_diag_menu_header <span class="overload">[1/2]</span></h2>
+<a id="ga8708e54cc38d43217bd7aa43bf801d70" name="ga8708e54cc38d43217bd7aa43bf801d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8708e54cc38d43217bd7aa43bf801d70">&#9670;&#160;</a></span>msg_task_CLI_failsafe_menu_header <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_task_CLI_diag_menu_header[] =&quot;[CLI] DIAG&gt; &quot;</td>
+          <td class="memname">const char msg_task_CLI_failsafe_menu_header[] =&quot;[CLI] FAILSAFE&gt; &quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default menu header for CLI task. </p>
-
 </div>
 </div>
-<a id="ga97f844d8c86c97dafa6133133880b4d7" name="ga97f844d8c86c97dafa6133133880b4d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97f844d8c86c97dafa6133133880b4d7">&#9670;&#160;</a></span>msg_task_CLI_diag_menu_header <span class="overload">[2/2]</span></h2>
+<a id="ga8708e54cc38d43217bd7aa43bf801d70" name="ga8708e54cc38d43217bd7aa43bf801d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8708e54cc38d43217bd7aa43bf801d70">&#9670;&#160;</a></span>msg_task_CLI_failsafe_menu_header <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1984,7 +2335,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_task_CLI_diag_menu_header[]</td>
+          <td class="memname">const char msg_task_CLI_failsafe_menu_header[]</td>
         </tr>
       </table>
   </td>
@@ -1994,7 +2345,41 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Default menu header for CLI task. </p>
+</div>
+</div>
+<a id="gaadc87e222849a2a83d0dcf49c967a0e7" name="gaadc87e222849a2a83d0dcf49c967a0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaadc87e222849a2a83d0dcf49c967a0e7">&#9670;&#160;</a></span>msg_task_CLI_fault_menu_header <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_fault_menu_header[] =&quot;[CLI] FAULT&gt; &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaadc87e222849a2a83d0dcf49c967a0e7" name="gaadc87e222849a2a83d0dcf49c967a0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaadc87e222849a2a83d0dcf49c967a0e7">&#9670;&#160;</a></span>msg_task_CLI_fault_menu_header <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_fault_menu_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2060,7 +2445,7 @@ Here is the caller graph for this function:</div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line"><span class="stringliteral">&quot;[CLI] Available show commands:\r\n\</span></div>
 <div class="line"><span class="stringliteral">      show memory - &lt;ram1/ram2/ccsram&gt; Show memory information\r\n\</span></div>
-<div class="line"><span class="stringliteral">      show radio\r\n&quot;</span></div>
+<div class="line"><span class="stringliteral">      show radio - &lt;stats/runtime/settings&gt; Show radio information\r\n&quot;</span></div>
 </div><!-- fragment -->
 <p>Help message for "show" command and its child commands. </p>
 
@@ -2151,7 +2536,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_task_CLI_mode_switch_failed[] =&quot;[CLI] Failed to switch mode\r\n[CLI] Correct usage: mode &lt;diag/test&gt;\r\n&quot;</td>
+          <td class="memname">const char msg_task_CLI_mode_switch_failed[] =&quot;Failed to switch mode\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2191,7 +2576,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_task_CLI_mode_switched_to_diag[] =&quot;[CLI] Switched to diagnostics mode\r\n&quot;</td>
+          <td class="memname">const char msg_task_CLI_mode_switched_to_diag[] =&quot;Switched to diagnostics mode\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2231,7 +2616,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_task_CLI_mode_switched_to_test[] =&quot;[CLI] Switched to test mode\r\n&quot;</td>
+          <td class="memname">const char msg_task_CLI_mode_switched_to_test[] =&quot;Switched to test mode\r\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2344,6 +2729,262 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ga144a2a076eadb0a8b0fa3e631cd4e60f" name="ga144a2a076eadb0a8b0fa3e631cd4e60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga144a2a076eadb0a8b0fa3e631cd4e60f">&#9670;&#160;</a></span>msg_task_CLI_run_menu_header <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_run_menu_header[] =&quot;[CLI] DIAG&gt; &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default menu header for CLI task. </p>
+
+</div>
+</div>
+<a id="ga144a2a076eadb0a8b0fa3e631cd4e60f" name="ga144a2a076eadb0a8b0fa3e631cd4e60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga144a2a076eadb0a8b0fa3e631cd4e60f">&#9670;&#160;</a></span>msg_task_CLI_run_menu_header <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_run_menu_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default menu header for CLI task. </p>
+
+</div>
+</div>
+<a id="ga9eef7b418b5306743faddfbcbe2bbfab" name="ga9eef7b418b5306743faddfbcbe2bbfab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9eef7b418b5306743faddfbcbe2bbfab">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_dropped_packages_format_string <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_dropped_packages_format_string[] =&quot;Dropped packages %zu\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9eef7b418b5306743faddfbcbe2bbfab" name="ga9eef7b418b5306743faddfbcbe2bbfab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9eef7b418b5306743faddfbcbe2bbfab">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_dropped_packages_format_string <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_dropped_packages_format_string[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2a162631314234b00cc351303359a168" name="ga2a162631314234b00cc351303359a168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a162631314234b00cc351303359a168">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_duplicate_packages_format_string <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_duplicate_packages_format_string[] =&quot;Duplicated packages %zu\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2a162631314234b00cc351303359a168" name="ga2a162631314234b00cc351303359a168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a162631314234b00cc351303359a168">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_duplicate_packages_format_string <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_duplicate_packages_format_string[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab59caada51de3f75ccc467f5cedbda3a" name="gab59caada51de3f75ccc467f5cedbda3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab59caada51de3f75ccc467f5cedbda3a">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_header <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_header[] =&quot;Radio stats\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab59caada51de3f75ccc467f5cedbda3a" name="gab59caada51de3f75ccc467f5cedbda3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab59caada51de3f75ccc467f5cedbda3a">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_header <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaee4c4c4da13dcb87dd0158f33dbd859d" name="gaee4c4c4da13dcb87dd0158f33dbd859d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee4c4c4da13dcb87dd0158f33dbd859d">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_out_of_order_packages_format_string <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_out_of_order_packages_format_string[] =&quot;Out of order packages %zu\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaee4c4c4da13dcb87dd0158f33dbd859d" name="gaee4c4c4da13dcb87dd0158f33dbd859d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee4c4c4da13dcb87dd0158f33dbd859d">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_out_of_order_packages_format_string <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_out_of_order_packages_format_string[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafb7fd61124e51d1c84e19d19bfcc0587" name="gafb7fd61124e51d1c84e19d19bfcc0587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb7fd61124e51d1c84e19d19bfcc0587">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_received_packages_format_string <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_received_packages_format_string[] =&quot;Received packages %zu\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafb7fd61124e51d1c84e19d19bfcc0587" name="gafb7fd61124e51d1c84e19d19bfcc0587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb7fd61124e51d1c84e19d19bfcc0587">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_received_packages_format_string <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_received_packages_format_string[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae6c958c19c2f9c8cb9471204532a2bcf" name="gae6c958c19c2f9c8cb9471204532a2bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6c958c19c2f9c8cb9471204532a2bcf">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_total_packages_format_string <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_total_packages_format_string[] =&quot;Total packages %zu\r\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae6c958c19c2f9c8cb9471204532a2bcf" name="gae6c958c19c2f9c8cb9471204532a2bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6c958c19c2f9c8cb9471204532a2bcf">&#9670;&#160;</a></span>msg_task_CLI_show_radio_stats_total_packages_format_string <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char msg_task_CLI_show_radio_stats_total_packages_format_string[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gac9ad7594f130eb29e457ed1bdfdee272" name="gac9ad7594f130eb29e457ed1bdfdee272"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac9ad7594f130eb29e457ed1bdfdee272">&#9670;&#160;</a></span>msg_task_CLI_test_menu_header <span class="overload">[1/2]</span></h2>
 
@@ -2351,7 +2992,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char msg_task_CLI_test_menu_header[] =&quot;[CLI] <a class="el" href="_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091cab2f0cd22b1963becef8b91d29d567fe8">TEST</a>&gt; &quot;</td>
+          <td class="memname">const char msg_task_CLI_test_menu_header[] =&quot;[CLI] TEST&gt; &quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2488,11 +3129,11 @@ Here is the caller graph for this function:</div>
 <div class="line">    <a class="code hl_function" href="#gaff9c7d9576e5b718a18ee9136e2b8011">parse_command_show</a>,</div>
 <div class="line">    <a class="code hl_function" href="#ga7e4a305579b0c91e3c92f22d7c57ade4">parse_command_write</a>,</div>
 <div class="line">    <a class="code hl_function" href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a>}</div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga7e4a305579b0c91e3c92f22d7c57ade4"><div class="ttname"><a href="#ga7e4a305579b0c91e3c92f22d7c57ade4">parse_command_write</a></div><div class="ttdeci">void parse_command_write(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:377</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga804c51bf9d9a919cbf34f9f9dd0c6c35"><div class="ttname"><a href="#ga804c51bf9d9a919cbf34f9f9dd0c6c35">parse_command_help</a></div><div class="ttdeci">void parse_command_help(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command...</div><div class="ttdef"><b>Definition</b> task_CLI.c:262</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga9f3d13bd4e44a42e7bd15897476d19e5"><div class="ttname"><a href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a></div><div class="ttdeci">void parse_command_read(uint8_t argc, char *argv[])</div><div class="ttdef"><b>Definition</b> task_CLI.c:400</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_gab95ac13f16242b28e0389734b21d1dc6"><div class="ttname"><a href="#gab95ac13f16242b28e0389734b21d1dc6">parse_command_switch_mode</a></div><div class="ttdeci">void parse_command_switch_mode(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ...</div><div class="ttdef"><b>Definition</b> task_CLI.c:295</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_gaff9c7d9576e5b718a18ee9136e2b8011"><div class="ttname"><a href="#gaff9c7d9576e5b718a18ee9136e2b8011">parse_command_show</a></div><div class="ttdeci">void parse_command_show(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:331</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga7e4a305579b0c91e3c92f22d7c57ade4"><div class="ttname"><a href="#ga7e4a305579b0c91e3c92f22d7c57ade4">parse_command_write</a></div><div class="ttdeci">void parse_command_write(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:427</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga804c51bf9d9a919cbf34f9f9dd0c6c35"><div class="ttname"><a href="#ga804c51bf9d9a919cbf34f9f9dd0c6c35">parse_command_help</a></div><div class="ttdeci">void parse_command_help(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command...</div><div class="ttdef"><b>Definition</b> task_CLI.c:280</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga9f3d13bd4e44a42e7bd15897476d19e5"><div class="ttname"><a href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a></div><div class="ttdeci">void parse_command_read(uint8_t argc, char *argv[])</div><div class="ttdef"><b>Definition</b> task_CLI.c:450</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_gab95ac13f16242b28e0389734b21d1dc6"><div class="ttname"><a href="#gab95ac13f16242b28e0389734b21d1dc6">parse_command_switch_mode</a></div><div class="ttdeci">void parse_command_switch_mode(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ...</div><div class="ttdef"><b>Definition</b> task_CLI.c:313</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_gaff9c7d9576e5b718a18ee9136e2b8011"><div class="ttname"><a href="#gaff9c7d9576e5b718a18ee9136e2b8011">parse_command_show</a></div><div class="ttdeci">void parse_command_show(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:351</div></div>
 </div><!-- fragment --><p>Array of function pointers for parsing commands, indexed by command type </p>
 
 </div>
@@ -2524,6 +3165,50 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <p>Array of function pointers for parsing commands, indexed by command type </p>
+
+</div>
+</div>
+<a id="ga0fcea00c774a9ecc08ffa35407c1c4b6" name="ga0fcea00c774a9ecc08ffa35407c1c4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0fcea00c774a9ecc08ffa35407c1c4b6">&#9670;&#160;</a></span>radio_runtime_stats</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_r_a_d_i_o___r_u_n_t_i_m_e___s_t_a_t_s.html">RADIO_RUNTIME_STATS</a> radio_runtime_stats</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga26124a7627630fdf09d5483fb0ef786e" name="ga26124a7627630fdf09d5483fb0ef786e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26124a7627630fdf09d5483fb0ef786e">&#9670;&#160;</a></span>radio_stats</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_r_a_d_i_o___s_t_a_t_s.html">RADIO_STATS</a> radio_stats</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2559,51 +3244,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091c">SYSTEM_MODE</a> system_mode</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="gaf4329edb22f26c401510b62bc5876f64" name="gaf4329edb22f26c401510b62bc5876f64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf4329edb22f26c401510b62bc5876f64">&#9670;&#160;</a></span>task_cli_command</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_t_a_s_k___c_l_i___c_o_m_m_a_n_d.html">TASK_CLI_COMMAND</a> task_cli_command</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="gafa28618ca6b7e32296e66cde00da19b2" name="gafa28618ca6b7e32296e66cde00da19b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafa28618ca6b7e32296e66cde00da19b2">&#9670;&#160;</a></span>task_cli_command_queue</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TX_QUEUE task_cli_command_queue</td>
+          <td class="memname">enum <a class="el" href="system__types_8h.html#a420737db942ef3b915cd91bbd940091c">SYSTEM_MODE</a> system_mode</td>
         </tr>
       </table>
   </td>
@@ -2691,6 +3332,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="gaf673dbe66e4762a9974e800ea2638a90" name="gaf673dbe66e4762a9974e800ea2638a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf673dbe66e4762a9974e800ea2638a90">&#9670;&#160;</a></span>task_cli_request_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TX_QUEUE task_cli_request_queue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga9dfa0850f464840126ee4999fca7c8de" name="ga9dfa0850f464840126ee4999fca7c8de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9dfa0850f464840126ee4999fca7c8de">&#9670;&#160;</a></span>task_CLI_stack <span class="overload">[1/2]</span></h2>
 
@@ -2728,6 +3391,28 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Stack for CLI task. </p>
+
+</div>
+</div>
+<a id="gaa442a24103175e2b9f9f1719b55a6814" name="gaa442a24103175e2b9f9f1719b55a6814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa442a24103175e2b9f9f1719b55a6814">&#9670;&#160;</a></span>task_cli_SystemRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_system_request.html">SystemRequest</a> task_cli_SystemRequest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,13 +1,13 @@
 <map id="parse_command_write" name="parse_command_write">
-<area shape="rect" id="Node000001" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="5,60,158,87"/>
-<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#ga9da5ff1e1909f7926657592feb573e9f" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="206,31,346,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,59,190,54,191,60,158,64"/>
-<area shape="rect" id="Node000006" href="$group__task___c_l_i.html#gac444bd0d61a9b85e773c9ac14e1d12d2" title="Callback function for when a CLI command has been executed. This function is called after a command h..." alt="" coords="214,81,338,124"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="158,82,198,88,198,94,158,87"/>
-<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="432,5,506,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,32,416,23,417,28,347,37"/>
-<area shape="rect" id="Node000004" href="$group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="394,56,543,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="347,51,379,55,378,60,346,56"/>
-<area shape="rect" id="Node000005" href="$group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="591,48,734,91"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="544,67,576,67,576,72,544,72"/>
+<area shape="rect" id="Node000001" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="5,56,158,83"/>
+<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#ga9da5ff1e1909f7926657592feb573e9f" title="Build a bus command based on the received CLI command arguments. This function takes the parsed comma..." alt="" coords="222,31,362,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,58,206,52,207,57,158,63"/>
+<area shape="rect" id="Node000006" href="$group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="206,81,379,108"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="158,76,190,80,190,85,158,81"/>
+<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#gada8242e625d28df008e0fb7074d7bbb3" title=" " alt="" coords="464,5,539,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,33,449,22,449,28,363,38"/>
+<area shape="rect" id="Node000004" href="$group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="427,56,576,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="363,50,412,56,411,61,363,55"/>
+<area shape="rect" id="Node000005" href="$group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="624,48,767,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="577,67,609,67,609,72,577,72"/>
 </map>

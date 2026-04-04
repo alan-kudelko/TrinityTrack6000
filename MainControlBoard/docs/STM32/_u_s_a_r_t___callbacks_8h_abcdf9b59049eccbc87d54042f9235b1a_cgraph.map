@@ -1,7 +1,7 @@
 <map id="HAL_UART_TxCpltCallback" name="HAL_UART_TxCpltCallback">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,13,193,40"/>
-<area shape="rect" id="Node000002" href="$group___u_s_a_r_t1___d_m_a.html#ga0803a38b4f987d37a2a165e9cb48e085" title="Callback function called when USART1 DMA transmission is complete." alt="" coords="241,13,408,40"/>
+<area shape="rect" id="Node000002" href="$group___u_s_a_r_t3___d_m_a.html#gac99e100856774b4b01b6ee3c86dac500" title="Callback function called when USART3 DMA transmission is complete." alt="" coords="241,13,408,40"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,24,225,24,225,29,193,29"/>
-<area shape="rect" id="Node000003" href="$group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="456,5,598,48"/>
+<area shape="rect" id="Node000003" href="$group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="456,5,598,48"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,24,440,24,440,29,408,29"/>
 </map>

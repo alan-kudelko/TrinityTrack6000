@@ -1,0 +1,11 @@
+<map id="parse_cli_queue" name="parse_cli_queue">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,121,140"/>
+<area shape="rect" id="Node000002" href="$task___system_dispatcher_8c.html#aabe8650da2a8b033a7ea044d1b2f5337" title=" " alt="" coords="169,5,334,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,111,121,85,167,58,178,52,180,57,170,62,124,89,85,115"/>
+<area shape="rect" id="Node000003" href="$task___system_dispatcher_8c.html#ab19fe4531b8d7c8e4b245b0ccb25cf80" title=" " alt="" coords="169,72,334,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,114,153,108,154,113,122,119"/>
+<area shape="rect" id="Node000004" href="$task___system_dispatcher_8c.html#af775866ac407dad44dc40f042b62d5c9" title=" " alt="" coords="169,139,334,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="122,134,154,140,153,145,121,139"/>
+<area shape="rect" id="Node000005" href="$task___system_dispatcher_8c.html#ade4149984081f52a93fdd8f436ead285" title=" " alt="" coords="169,205,334,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="85,138,124,164,170,191,180,196,178,201,167,196,121,169,82,143"/>
+</map>

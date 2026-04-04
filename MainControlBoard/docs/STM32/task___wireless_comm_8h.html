@@ -161,6 +161,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a844ec780bbbbf470c424e3a8a12818c7" id="r_a844ec780bbbbf470c424e3a8a12818c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a844ec780bbbbf470c424e3a8a12818c7">OPERATION_BUFFER_SIZE</a>&#160;&#160;&#160;33</td></tr>
 <tr class="memitem:a910e6c5be64efd6a980964c967f1eff6" id="r_a910e6c5be64efd6a980964c967f1eff6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a910e6c5be64efd6a980964c967f1eff6">TASK_WIRELESS_COMM_STACK_SIZE</a>&#160;&#160;&#160;1512</td></tr>
 <tr class="memitem:a30fa6c32b134ca1c49b53de88fb12450" id="r_a30fa6c32b134ca1c49b53de88fb12450"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30fa6c32b134ca1c49b53de88fb12450">TASK_WIRELESS_COMM_PRIORITY</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memitem:a08007a12dd58cbc833c2dfc75833f377" id="r_a08007a12dd58cbc833c2dfc75833f377"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08007a12dd58cbc833c2dfc75833f377">TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH</a>&#160;&#160;&#160;3</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -170,7 +171,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae87e6ccd049c86cf6af7766a6a2acd96" id="r_ae87e6ccd049c86cf6af7766a6a2acd96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae87e6ccd049c86cf6af7766a6a2acd96">task_wireless_comm_write_settings</a> (<a class="el" href="struct_n_r_f___s_e_t_t_i_n_g_s.html">NRF_SETTINGS</a> *settings)</td></tr>
 <tr class="memitem:a0f5f3d2433fbc12bbdde4d314fffd860" id="r_a0f5f3d2433fbc12bbdde4d314fffd860"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f5f3d2433fbc12bbdde4d314fffd860">task_wireless_comm_read_settings</a> (void)</td></tr>
 <tr class="memitem:a293731bd2f3003922b6484fd4e6cf8ea" id="r_a293731bd2f3003922b6484fd4e6cf8ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a293731bd2f3003922b6484fd4e6cf8ea">task_wireless_comm_verify_settings</a> (void)</td></tr>
-<tr class="memitem:af841c3592a9de96a848fb5c32e42f72c" id="r_af841c3592a9de96a848fb5c32e42f72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af841c3592a9de96a848fb5c32e42f72c">task_wireless_comm_update_radio_stats</a> (<a class="el" href="struct_r_a_d_i_o___s_t_a_t_s.html">RADIO_STATS</a> *<a class="el" href="task___wireless_comm_8cpp.html#a26124a7627630fdf09d5483fb0ef786e">radio_stats</a>, uint8_t packet_id)</td></tr>
+<tr class="memitem:af841c3592a9de96a848fb5c32e42f72c" id="r_af841c3592a9de96a848fb5c32e42f72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af841c3592a9de96a848fb5c32e42f72c">task_wireless_comm_update_radio_stats</a> (<a class="el" href="struct_r_a_d_i_o___s_t_a_t_s.html">RADIO_STATS</a> *<a class="el" href="group__task___c_l_i.html#ga26124a7627630fdf09d5483fb0ef786e">radio_stats</a>, uint8_t packet_id)</td></tr>
+<tr class="memitem:a5c50b9ab34392d67f2bcdd1852b8be3d" id="r_a5c50b9ab34392d67f2bcdd1852b8be3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c50b9ab34392d67f2bcdd1852b8be3d">task_wireless_comm_process_request</a> (void)</td></tr>
+<tr class="memitem:aec14ba6a6dbc19941545ae89e9ffc491" id="r_aec14ba6a6dbc19941545ae89e9ffc491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec14ba6a6dbc19941545ae89e9ffc491">task_wireless_comm_process_request_radio_stats</a> (void)</td></tr>
 <tr class="memitem:ad4929e9e77e9e2c4900c215a515eddec" id="r_ad4929e9e77e9e2c4900c215a515eddec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4929e9e77e9e2c4900c215a515eddec">task_wireless_comm</a> (ULONG arg)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -228,6 +231,20 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08007a12dd58cbc833c2dfc75833f377" name="a08007a12dd58cbc833c2dfc75833f377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08007a12dd58cbc833c2dfc75833f377">&#9670;&#160;</a></span>TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -354,13 +371,17 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="task___wireless_comm_8h_ad4929e9e77e9e2c4900c215a515eddec_cgraph.png" border="0" usemap="#atask___wireless_comm_8h_ad4929e9e77e9e2c4900c215a515eddec_cgraph" loading="lazy" alt=""/></div>
 <map name="atask___wireless_comm_8h_ad4929e9e77e9e2c4900c215a515eddec_cgraph" id="atask___wireless_comm_8h_ad4929e9e77e9e2c4900c215a515eddec_cgraph">
-<area shape="rect" title=" " alt="" coords="5,80,150,107"/>
+<area shape="rect" title=" " alt="" coords="5,113,150,140"/>
 <area shape="rect" href="task___wireless_comm_8cpp.html#a7b6b3eb37cb232306a2705ccc726bf0e" title=" " alt="" coords="202,5,338,48"/>
-<area shape="poly" title=" " alt="" coords="118,77,191,51,193,56,119,82"/>
-<area shape="rect" href="task___wireless_comm_8cpp.html#af841c3592a9de96a848fb5c32e42f72c" title=" " alt="" coords="198,72,342,115"/>
-<area shape="poly" title=" " alt="" coords="150,91,182,91,182,96,150,96"/>
-<area shape="rect" href="task___wireless_comm_8cpp.html#ae87e6ccd049c86cf6af7766a6a2acd96" title=" " alt="" coords="198,139,342,181"/>
-<area shape="poly" title=" " alt="" coords="119,105,193,131,191,136,118,110"/>
+<area shape="poly" title=" " alt="" coords="101,111,196,58,206,53,208,58,199,62,104,115"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#a5c50b9ab34392d67f2bcdd1852b8be3d" title=" " alt="" coords="198,72,342,115"/>
+<area shape="poly" title=" " alt="" coords="150,112,182,106,183,111,150,117"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#af841c3592a9de96a848fb5c32e42f72c" title=" " alt="" coords="198,139,342,181"/>
+<area shape="poly" title=" " alt="" coords="150,137,183,142,182,148,150,142"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#ae87e6ccd049c86cf6af7766a6a2acd96" title=" " alt="" coords="198,205,342,248"/>
+<area shape="poly" title=" " alt="" coords="104,138,199,191,208,196,206,200,196,196,101,143"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#aec14ba6a6dbc19941545ae89e9ffc491" title=" " alt="" coords="390,72,585,115"/>
+<area shape="poly" title=" " alt="" coords="342,91,375,91,375,96,342,96"/>
 </map>
 </div>
 <div class="dynheader">
@@ -412,6 +433,92 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
 <area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c50b9ab34392d67f2bcdd1852b8be3d" name="a5c50b9ab34392d67f2bcdd1852b8be3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c50b9ab34392d67f2bcdd1852b8be3d">&#9670;&#160;</a></span>task_wireless_comm_process_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_wireless_comm_process_request </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_cgraph.png" border="0" usemap="#atask___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_cgraph" loading="lazy" alt=""/></div>
+<map name="atask___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_cgraph" id="atask___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,150,48"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#aec14ba6a6dbc19941545ae89e9ffc491" title=" " alt="" coords="198,5,393,48"/>
+<area shape="poly" title=" " alt="" coords="150,24,182,24,182,29,150,29"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_icgraph.png" border="0" usemap="#atask___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_icgraph" id="atask___wireless_comm_8h_a5c50b9ab34392d67f2bcdd1852b8be3d_icgraph">
+<area shape="rect" title=" " alt="" coords="389,5,533,48"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#ad4929e9e77e9e2c4900c215a515eddec" title=" " alt="" coords="197,13,341,40"/>
+<area shape="poly" title=" " alt="" coords="374,29,341,29,341,24,374,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec14ba6a6dbc19941545ae89e9ffc491" name="aec14ba6a6dbc19941545ae89e9ffc491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec14ba6a6dbc19941545ae89e9ffc491">&#9670;&#160;</a></span>task_wireless_comm_process_request_radio_stats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_wireless_comm_process_request_radio_stats </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="task___wireless_comm_8h_aec14ba6a6dbc19941545ae89e9ffc491_icgraph.png" border="0" usemap="#atask___wireless_comm_8h_aec14ba6a6dbc19941545ae89e9ffc491_icgraph" loading="lazy" alt=""/></div>
+<map name="atask___wireless_comm_8h_aec14ba6a6dbc19941545ae89e9ffc491_icgraph" id="atask___wireless_comm_8h_aec14ba6a6dbc19941545ae89e9ffc491_icgraph">
+<area shape="rect" title=" " alt="" coords="581,5,777,48"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#a5c50b9ab34392d67f2bcdd1852b8be3d" title=" " alt="" coords="389,5,533,48"/>
+<area shape="poly" title=" " alt="" coords="566,29,534,29,534,24,566,24"/>
+<area shape="rect" href="task___wireless_comm_8cpp.html#ad4929e9e77e9e2c4900c215a515eddec" title=" " alt="" coords="197,13,341,40"/>
+<area shape="poly" title=" " alt="" coords="374,29,341,29,341,24,374,24"/>
+<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
 </map>
 </div>
 

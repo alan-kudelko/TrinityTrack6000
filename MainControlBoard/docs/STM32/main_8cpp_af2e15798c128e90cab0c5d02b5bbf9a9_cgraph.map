@@ -1,37 +1,60 @@
 <map id="tx_application_define" name="tx_application_define">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,208,149,235"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#a0443eb7a80a5df8845d2d0e788013b45" title=" " alt="" coords="237,56,318,83"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,205,245,90,248,94,98,210"/>
-<area shape="rect" id="Node000004" href="$group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="240,157,314,184"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,205,225,181,226,186,134,210"/>
-<area shape="rect" id="Node000011" href="$task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,233,358,260"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="149,228,181,232,181,237,149,233"/>
-<area shape="rect" id="Node000014" href="$task___wireless_comm_8cpp.html#ad4929e9e77e9e2c4900c215a515eddec" title=" " alt="" coords="205,351,350,377"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="99,233,246,339,243,344,96,237"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#abe89f19890616ba94b27398c050b38a4" title=" " alt="" coords="438,5,534,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,57,422,31,423,37,318,62"/>
-<area shape="rect" id="Node000005" href="$group__task___c_l_i.html#ga569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="412,56,559,83"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="297,155,345,124,405,92,421,86,423,91,407,97,348,129,300,159"/>
-<area shape="rect" id="Node000008" href="$group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="427,107,544,133"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="314,159,412,135,414,140,316,164"/>
-<area shape="rect" id="Node000009" href="$group__task___c_l_i.html#ga2a3b6d569d061b4e9895524cc69734f9" title="Show command execution status. This function is called after a command has been executed to show the ..." alt="" coords="406,157,565,184"/>
-<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="315,168,390,168,390,173,315,173"/>
-<area shape="rect" id="Node000010" href="$group___u_s_a_r_t1___d_m_a.html#ga5c81b8f300eba80193fcb84729ba8529" title="Reads data from the USART1 receive ring buffer into the provided destination buffer." alt="" coords="409,208,562,235"/>
-<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="316,177,414,201,412,206,314,182"/>
-<area shape="rect" id="Node000006" href="$group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="613,107,763,133"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="543,81,618,100,616,105,541,86"/>
-<area shape="rect" id="Node000007" href="$group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="811,99,953,141"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="763,117,796,117,796,123,763,123"/>
-<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="545,117,598,117,598,123,545,123"/>
-<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="541,154,616,135,618,140,543,159"/>
-<area shape="rect" id="Node000012" href="$group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="417,259,554,285"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="359,254,402,259,401,264,358,259"/>
-<area shape="rect" id="Node000013" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="632,259,744,285"/>
-<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="555,269,617,269,617,275,555,275"/>
-<area shape="rect" id="Node000015" href="$task___wireless_comm_8cpp.html#a7b6b3eb37cb232306a2705ccc726bf0e" title=" " alt="" coords="418,309,554,352"/>
-<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="350,350,402,341,402,347,350,355"/>
-<area shape="rect" id="Node000016" href="$task___wireless_comm_8cpp.html#af841c3592a9de96a848fb5c32e42f72c" title=" " alt="" coords="414,376,558,419"/>
-<area shape="poly" id="edge17_Node000014_Node000016" title=" " alt="" coords="350,373,398,381,398,386,350,378"/>
-<area shape="rect" id="Node000017" href="$task___wireless_comm_8cpp.html#ae87e6ccd049c86cf6af7766a6a2acd96" title=" " alt="" coords="414,443,558,485"/>
-<area shape="poly" id="edge18_Node000014_Node000017" title=" " alt="" coords="305,376,407,428,419,434,417,439,405,433,303,380"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,371,149,397"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a0443eb7a80a5df8845d2d0e788013b45" title=" " alt="" coords="237,104,318,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,368,255,142,259,145,91,372"/>
+<area shape="rect" id="Node000004" href="$group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="240,253,314,280"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="100,368,238,286,241,291,103,372"/>
+<area shape="rect" id="Node000014" href="$task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="197,459,358,485"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="111,396,232,449,230,454,109,400"/>
+<area shape="rect" id="Node000022" href="$task___wireless_comm_8cpp.html#ad4929e9e77e9e2c4900c215a515eddec" title=" " alt="" coords="205,637,350,664"/>
+<area shape="poly" id="edge26_Node000001_Node000022" title=" " alt="" coords="91,396,259,623,255,626,87,400"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#abe89f19890616ba94b27398c050b38a4" title=" " alt="" coords="454,5,550,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,101,345,71,405,42,437,30,439,35,407,46,348,76,300,106"/>
+<area shape="rect" id="Node000005" href="$group__task___c_l_i.html#ga569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="428,56,575,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="285,252,341,167,375,122,404,93,413,87,416,92,408,97,379,125,345,170,289,255"/>
+<area shape="rect" id="Node000008" href="$group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="443,107,560,133"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="287,251,334,198,367,169,405,143,427,133,430,138,407,148,371,173,338,202,291,254"/>
+<area shape="rect" id="Node000009" href="$group__task___c_l_i.html#ga863b01ac894d528c340fd7b86429d021" title=" " alt="" coords="422,157,581,200"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="308,250,405,210,422,203,424,208,407,214,310,255"/>
+<area shape="rect" id="Node000010" href="$group__task___c_l_i.html#ga33287dbfb56a6a36e0e0c4a8c1806c5c" title=" " alt="" coords="406,224,597,251"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="314,259,390,249,391,255,315,265"/>
+<area shape="rect" id="Node000011" href="$group__task___c_l_i.html#ga8034fe0b3faa51679bef29030c4a7e85" title=" " alt="" coords="422,275,581,317"/>
+<area shape="poly" id="edge13_Node000004_Node000011" title=" " alt="" coords="315,269,407,281,406,286,314,274"/>
+<area shape="rect" id="Node000012" href="$group__task___c_l_i.html#ga9dd3488482fe604e3704eff60e3d0ea4" title=" " alt="" coords="422,341,581,384"/>
+<area shape="poly" id="edge15_Node000004_Node000012" title=" " alt="" coords="306,278,407,327,422,333,420,338,405,332,303,283"/>
+<area shape="rect" id="Node000013" href="$group___u_s_a_r_t3___d_m_a.html#ga935ea3369409ee31333843815a366a25" title="Reads data from the USART3 receive ring buffer into the provided destination buffer." alt="" coords="425,408,578,435"/>
+<area shape="poly" id="edge17_Node000004_Node000013" title=" " alt="" coords="290,279,336,335,370,367,407,394,418,399,416,404,405,398,366,371,332,338,286,282"/>
+<area shape="rect" id="Node000006" href="$group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="668,195,818,221"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="570,81,598,92,634,113,667,136,719,182,716,186,663,141,631,117,596,97,568,86"/>
+<area shape="rect" id="Node000007" href="$group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="889,187,1031,229"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="818,205,873,205,873,211,818,211"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="561,131,598,143,701,185,699,190,596,148,559,136"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="582,186,653,194,652,200,581,191"/>
+<area shape="poly" id="edge12_Node000010_Node000006" title=" " alt="" coords="597,223,653,216,653,222,598,228"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="565,272,596,260,690,225,692,230,598,265,566,277"/>
+<area shape="poly" id="edge16_Node000012_Node000006" title=" " alt="" coords="573,338,596,327,631,305,663,279,716,231,720,235,667,283,634,309,599,332,575,343"/>
+<area shape="rect" id="Node000015" href="$task___system_dispatcher_8c.html#a9444e1b286fcfdb411dc7e9d5c421012" title=" " alt="" coords="444,459,559,485"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="358,469,428,469,428,475,358,475"/>
+<area shape="rect" id="Node000020" href="$group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="433,511,570,537"/>
+<area shape="poly" id="edge24_Node000014_Node000020" title=" " alt="" coords="339,483,427,504,426,509,337,489"/>
+<area shape="rect" id="Node000016" href="$task___system_dispatcher_8c.html#aabe8650da2a8b033a7ea044d1b2f5337" title=" " alt="" coords="660,316,826,359"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="559,461,578,455,596,445,612,427,619,408,627,388,644,369,649,365,652,369,647,373,631,391,624,410,616,430,599,449,581,459,561,466"/>
+<area shape="rect" id="Node000017" href="$task___system_dispatcher_8c.html#ab19fe4531b8d7c8e4b245b0ccb25cf80" title=" " alt="" coords="660,383,826,425"/>
+<area shape="poly" id="edge21_Node000015_Node000017" title=" " alt="" coords="555,455,597,444,654,428,655,433,598,449,557,461"/>
+<area shape="rect" id="Node000018" href="$task___system_dispatcher_8c.html#af775866ac407dad44dc40f042b62d5c9" title=" " alt="" coords="660,449,826,492"/>
+<area shape="poly" id="edge22_Node000015_Node000018" title=" " alt="" coords="560,469,644,469,644,474,560,474"/>
+<area shape="rect" id="Node000019" href="$task___system_dispatcher_8c.html#ade4149984081f52a93fdd8f436ead285" title=" " alt="" coords="660,516,826,559"/>
+<area shape="poly" id="edge23_Node000015_Node000019" title=" " alt="" coords="554,483,648,509,646,514,553,488"/>
+<area shape="rect" id="Node000021" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="687,583,799,609"/>
+<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="558,535,598,548,646,568,672,576,671,581,644,573,596,553,556,541"/>
+<area shape="rect" id="Node000023" href="$task___wireless_comm_8cpp.html#a7b6b3eb37cb232306a2705ccc726bf0e" title=" " alt="" coords="434,563,570,605"/>
+<area shape="poly" id="edge27_Node000022_Node000023" title=" " alt="" coords="324,634,417,606,419,611,326,639"/>
+<area shape="rect" id="Node000024" href="$task___wireless_comm_8cpp.html#a5c50b9ab34392d67f2bcdd1852b8be3d" title=" " alt="" coords="430,629,574,672"/>
+<area shape="poly" id="edge28_Node000022_Node000024" title=" " alt="" coords="350,648,414,648,414,653,350,653"/>
+<area shape="rect" id="Node000026" href="$task___wireless_comm_8cpp.html#af841c3592a9de96a848fb5c32e42f72c" title=" " alt="" coords="430,696,574,739"/>
+<area shape="poly" id="edge30_Node000022_Node000026" title=" " alt="" coords="326,662,415,689,414,694,324,667"/>
+<area shape="rect" id="Node000027" href="$task___wireless_comm_8cpp.html#ae87e6ccd049c86cf6af7766a6a2acd96" title=" " alt="" coords="430,763,574,805"/>
+<area shape="poly" id="edge31_Node000022_Node000027" title=" " alt="" coords="295,662,343,704,407,748,418,754,415,758,405,753,339,708,291,666"/>
+<area shape="rect" id="Node000025" href="$task___wireless_comm_8cpp.html#aec14ba6a6dbc19941545ae89e9ffc491" title=" " alt="" coords="645,633,841,676"/>
+<area shape="poly" id="edge29_Node000024_Node000025" title=" " alt="" coords="574,649,630,650,630,655,574,655"/>
 </map>

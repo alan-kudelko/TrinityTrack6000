@@ -1,9 +1,11 @@
 <map id="Infra/Messaging/system_commands.h" name="Infra/Messaging/system_commands.h">
-<area shape="rect" id="Node000001" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="83,5,244,48"/>
+<area shape="rect" id="Node000001" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="179,5,340,48"/>
 <area shape="rect" id="Node000002" href="$task___c_l_i_8c.html" title=" " alt="" coords="5,96,130,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,60,84,98,81,93,126,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,57,99,98,97,93,195,52"/>
 <area shape="rect" id="Node000003" href="$task___system_dispatcher_8h.html" title=" " alt="" coords="154,96,365,123"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,56,246,93,243,98,198,60"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,64,262,95,257,95,257,64"/>
+<area shape="rect" id="Node000008" href="$task___wireless_comm_8cpp.html" title=" " alt="" coords="389,96,596,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="334,51,457,93,455,98,333,56"/>
 <area shape="rect" id="Node000004" href="$task___system_dispatcher_8c.html" title=" " alt="" coords="63,171,274,197"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="234,135,186,172,183,168,230,130"/>
 <area shape="rect" id="Node000005" href="$tasks_8h.html" title="Header file for various RTOS tasks used in the system." alt="" coords="298,171,402,197"/>

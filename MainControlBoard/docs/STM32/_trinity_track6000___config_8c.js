@@ -10,15 +10,14 @@ var _trinity_track6000___config_8c =
     [ "hdma_spi1_tx", "group___s_p_i1___d_m_a.html#gac8cdcfbb7adfcccc5717da58e1e10ae4", null ],
     [ "hdma_spi2_rx", "_trinity_track6000___config_8c.html#abe50191cba67fd4af93c490865bca7d5", null ],
     [ "hdma_spi2_tx", "_trinity_track6000___config_8c.html#ab07da35360152a5ea4188e6bdd947b14", null ],
-    [ "hdma_usart1_rx", "group___u_s_a_r_t1___d_m_a.html#ga34251392f0d5e2461e3aef615918c235", null ],
-    [ "hdma_usart1_tx", "group___u_s_a_r_t1___d_m_a.html#ga5af94ab36bfe698db3e6beea96d10a90", null ],
-    [ "hdma_usart2_rx", "_trinity_track6000___config_8c.html#a784aa25dc7e4580cfbf80658340f482c", null ],
-    [ "hdma_usart2_tx", "_trinity_track6000___config_8c.html#a0083b476c2a75ab9fb2ccbed0048857e", null ],
+    [ "hdma_usart3_rx", "group___u_s_a_r_t3___d_m_a.html#ga418ff7f6b595dcf41b10de1083e62340", null ],
+    [ "hdma_usart3_tx", "group___u_s_a_r_t3___d_m_a.html#ga8556819c2aafb13de4f13869b2c315ed", null ],
     [ "hi2c2", "_trinity_track6000___config_8c.html#ac379bcc152d860f08b1279fd3e232295", null ],
     [ "hspi1", "group___s_p_i1___d_m_a.html#ga9c6222bae4d0328dd843ae099623b40b", null ],
     [ "hspi2", "_trinity_track6000___config_8c.html#ab9da65f935e805137e2eb4e18c5ab224", null ],
-    [ "htim2", "_trinity_track6000___config_8c.html#a2c80fd5510e2990a59a5c90d745c716c", null ],
-    [ "htim3", "_trinity_track6000___config_8c.html#aac3d2c59ee0e3bbae1b99529a154eb62", null ],
-    [ "huart1", "group___u_s_a_r_t1___d_m_a.html#ga2cf715bef37f7e8ef385a30974a5f0d5", null ],
-    [ "huart2", "_trinity_track6000___config_8c.html#aa9479c261d65eecedd3d9582f7f0f89c", null ]
+    [ "hspi3", "_trinity_track6000___config_8c.html#aec51920045aad7f70cbfd1f58228d866", null ],
+    [ "htim1", "_trinity_track6000___config_8c.html#a25fc663547539bc49fecc0011bd76ab5", null ],
+    [ "htim20", "_trinity_track6000___config_8c.html#a81cdfd240eeb8a4bb8fb34d7b52a192a", null ],
+    [ "huart2", "_trinity_track6000___config_8c.html#aa9479c261d65eecedd3d9582f7f0f89c", null ],
+    [ "huart3", "group___u_s_a_r_t3___d_m_a.html#gab7c63c1b0f65db92b6a4ea19edf957e1", null ]
 ];

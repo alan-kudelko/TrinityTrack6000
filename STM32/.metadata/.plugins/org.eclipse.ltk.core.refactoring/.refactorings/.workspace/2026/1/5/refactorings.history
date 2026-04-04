@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;STM32G473CET6/Src/tx_initialize_low_level.S&apos;" deleteContents="false" description="Delete resource &apos;STM32G473CET6/Src/tx_initialize_low_level.S&apos;" element1="/STM32G473CET6/Src/tx_initialize_low_level.S" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1769796871705"/>
-</session>

@@ -1,13 +1,16 @@
 <map id="Tasks/task_SystemDispatcher.h" name="Tasks/task_SystemDispatcher.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,217,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="12,80,79,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,34,69,70,65,67,98,31"/>
-<area shape="rect" id="Node000003" href="$system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="103,80,250,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,31,157,67,153,70,120,34"/>
-<area shape="rect" id="Node000004" href="$_radio___types_8h.html" title=" " alt="" coords="122,155,230,181"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,107,179,139,174,139,174,107"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="64,229,128,256"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="164,184,123,221,119,217,161,180"/>
-<area shape="rect" id="Node000006" href="$_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="152,229,360,256"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="192,180,233,217,230,221,188,184"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="64,5,275,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,73,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,35,77,74,74,70,146,30"/>
+<area shape="rect" id="Node000003" href="$system__commands_8h.html" title="Header file for system commands used in the CLI task and system dispatcher. This header defines the d..." alt="" coords="96,80,243,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,33,172,64,167,64,167,33"/>
+<area shape="rect" id="Node000007" href="$system__types_8h.html" title=" " alt="" coords="223,155,338,181"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="198,30,229,50,257,78,272,109,280,139,275,140,267,110,253,82,226,54,195,35"/>
+<area shape="rect" id="Node000004" href="$_radio___types_8h.html" title=" " alt="" coords="90,155,198,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="168,108,156,141,151,139,163,106"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="190,105,250,144,247,148,187,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="32,229,96,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="132,184,91,221,87,217,129,180"/>
+<area shape="rect" id="Node000006" href="$_trinity_track6000___radio_config_8h.html" title=" " alt="" coords="120,229,328,256"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="160,180,201,217,198,221,156,184"/>
 </map>

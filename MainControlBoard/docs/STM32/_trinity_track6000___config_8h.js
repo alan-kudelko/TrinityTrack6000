@@ -10,13 +10,7 @@ var _trinity_track6000___config_8h =
     [ "SPI2_TIMEOUT_RETRY_COUNT", "group___s_p_i___config.html#ga9257f5d774f0d50b45f1d9a97c79cb79", null ],
     [ "USART1_BAUD_RATE", "group___u_a_r_t___config.html#gafe113e56a05bd5097639092b7cabf908", null ],
     [ "USART2_BAUD_RATE", "group___u_a_r_t___config.html#gaa32c17a1ef01a9fcb5487d1efe4a8e19", null ],
-    [ "SYSTEM_MODE", "_trinity_track6000___config_8h.html#ae4327843fab2c0781e43ee4505e207a9", null ],
-    [ "SYSTEM_MODE", "_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091c", [
-      [ "DEBUG", "_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091ca0593585da9181e972974c1274d8f2b4f", null ],
-      [ "TEST", "_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091cab2f0cd22b1963becef8b91d29d567fe8", null ],
-      [ "FAILSAFE_FAULT", "_trinity_track6000___config_8h.html#a420737db942ef3b915cd91bbd940091ca196aa1e4319601e97b0a73e6928dcd21", null ]
-    ] ],
-    [ "__attribute", "_trinity_track6000___config_8h.html#a6aab47ab3908cee45af83d65ea26cabd", null ],
+    [ "__attribute", "_trinity_track6000___config_8h.html#a11bbac8f4748eb8c204ab8ef946e833c", null ],
     [ "hadc1", "_trinity_track6000___config_8h.html#a22b804736f5648d52f639b2647d4ed13", null ],
     [ "hcordic", "_trinity_track6000___config_8h.html#a12a49867e76bf8c5652a8aa16caccc34", null ],
     [ "hdma_adc1", "_trinity_track6000___config_8h.html#a1c126854bb1813d31ab4776b21dcc51f", null ],
@@ -26,15 +20,14 @@ var _trinity_track6000___config_8h =
     [ "hdma_spi1_tx", "_trinity_track6000___config_8h.html#ac8cdcfbb7adfcccc5717da58e1e10ae4", null ],
     [ "hdma_spi2_rx", "_trinity_track6000___config_8h.html#abe50191cba67fd4af93c490865bca7d5", null ],
     [ "hdma_spi2_tx", "_trinity_track6000___config_8h.html#ab07da35360152a5ea4188e6bdd947b14", null ],
-    [ "hdma_usart1_rx", "_trinity_track6000___config_8h.html#a34251392f0d5e2461e3aef615918c235", null ],
-    [ "hdma_usart1_tx", "_trinity_track6000___config_8h.html#a5af94ab36bfe698db3e6beea96d10a90", null ],
-    [ "hdma_usart2_rx", "_trinity_track6000___config_8h.html#a784aa25dc7e4580cfbf80658340f482c", null ],
-    [ "hdma_usart2_tx", "_trinity_track6000___config_8h.html#a0083b476c2a75ab9fb2ccbed0048857e", null ],
+    [ "hdma_usart3_rx", "_trinity_track6000___config_8h.html#a418ff7f6b595dcf41b10de1083e62340", null ],
+    [ "hdma_usart3_tx", "_trinity_track6000___config_8h.html#a8556819c2aafb13de4f13869b2c315ed", null ],
     [ "hi2c2", "_trinity_track6000___config_8h.html#ac379bcc152d860f08b1279fd3e232295", null ],
     [ "hspi1", "_trinity_track6000___config_8h.html#a9c6222bae4d0328dd843ae099623b40b", null ],
     [ "hspi2", "_trinity_track6000___config_8h.html#ab9da65f935e805137e2eb4e18c5ab224", null ],
-    [ "htim2", "_trinity_track6000___config_8h.html#a2c80fd5510e2990a59a5c90d745c716c", null ],
-    [ "htim3", "_trinity_track6000___config_8h.html#aac3d2c59ee0e3bbae1b99529a154eb62", null ],
-    [ "huart1", "_trinity_track6000___config_8h.html#a2cf715bef37f7e8ef385a30974a5f0d5", null ],
-    [ "huart2", "_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c", null ]
+    [ "hspi3", "_trinity_track6000___config_8h.html#aec51920045aad7f70cbfd1f58228d866", null ],
+    [ "htim1", "_trinity_track6000___config_8h.html#a25fc663547539bc49fecc0011bd76ab5", null ],
+    [ "htim20", "_trinity_track6000___config_8h.html#a81cdfd240eeb8a4bb8fb34d7b52a192a", null ],
+    [ "huart2", "_trinity_track6000___config_8h.html#aa9479c261d65eecedd3d9582f7f0f89c", null ],
+    [ "huart3", "_trinity_track6000___config_8h.html#ab7c63c1b0f65db92b6a4ea19edf957e1", null ]
 ];

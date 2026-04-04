@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['wakeupreason_0',['wakeupReason',['../struct_t_a_s_k___c_l_i___w_a_k_e_u_p___r_e_a_s_o_n.html#a13d76f43d38c53418c5d4f5160b285f6',1,'TASK_CLI_WAKEUP_REASON']]],
-  ['watchdog_5ffeed_5fgpio_5fport_1',['WATCHDOG_FEED_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1373dc47fb1254c7f2888355194694e7',1,'TrinityTrack6000_Pinout.h']]],
-  ['watchdog_5ffeed_5fpin_2',['WATCHDOG_FEED_Pin',['../_trinity_track6000___pinout_8h.html#a3a72654a6ecd659e2e1bbdf957c22af9',1,'TrinityTrack6000_Pinout.h']]],
-  ['werdon_3',['werdon',['../task___wireless_comm_8cpp.html#a822ee66e5e25d3bbc3523510306858b1',1,'task_WirelessComm.cpp']]],
-  ['werdon2_4',['werdon2',['../task___wireless_comm_8cpp.html#a6052abde17ae57599425bdfa02fafd72',1,'task_WirelessComm.cpp']]],
+  ['wakeupreason_0',['wakeupReason',['../struct_t_a_s_k___c_l_i___w_a_k_e_u_p___r_e_a_s_o_n.html#ad2677d6ee57558257ab74b4336fd42f9',1,'TASK_CLI_WAKEUP_REASON']]],
+  ['watchdog_5fen_5fgpio_5fport_1',['WATCHDOG_EN_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1d30f246bb3ddda7af77fc820032620c',1,'TrinityTrack6000_Pinout.h']]],
+  ['watchdog_5fen_5fpin_2',['WATCHDOG_EN_Pin',['../_trinity_track6000___pinout_8h.html#ac926941850963cac5b47997c91cdfc67',1,'TrinityTrack6000_Pinout.h']]],
+  ['watchdog_5ffeed_5fgpio_5fport_3',['WATCHDOG_FEED_GPIO_Port',['../_trinity_track6000___pinout_8h.html#a1373dc47fb1254c7f2888355194694e7',1,'TrinityTrack6000_Pinout.h']]],
+  ['watchdog_5ffeed_5fpin_4',['WATCHDOG_FEED_Pin',['../_trinity_track6000___pinout_8h.html#a3a72654a6ecd659e2e1bbdf957c22af9',1,'TrinityTrack6000_Pinout.h']]],
   ['write_5',['write',['../class_m_c_p23_s17.html#a893c14d3cc112b9b3737f51502f2c20b',1,'MCP23S17']]],
   ['write_5fack_5fpayload_6',['write_ack_payload',['../group___n_r_f24_l01.html#ga11082eee47aee758ced7f706010c4f29',1,'NRF24L01']]],
   ['write_5freg_5fconfig_7',['write_reg_config',['../group___n_r_f24_l01.html#gab63f50f2ef0f98cd5f80e3e556b77e04',1,'NRF24L01']]],
