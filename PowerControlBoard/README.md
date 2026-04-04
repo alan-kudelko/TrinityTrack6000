@@ -1,6 +1,6 @@
-**PowerControlBoard** – **Power Conversion Board**  
+**PowerConversionBoard** – **Power Management & Conversion**
 
-This board is responsible for converting battery voltage to the required voltages for all system boards and managing power distribution and protection.  
+Handles battery voltage conversion, power distribution, and system protection.
 
-> ⚠️ Status: Conceptual stage  
-> The design and development of this board have not yet been implemented in the project. Details on components, schematics, and testing will be added once development begins.
+> ⚠️ **Status: Planned**
+> This module is not yet implemented.
