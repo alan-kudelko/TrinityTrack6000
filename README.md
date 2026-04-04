@@ -2,23 +2,34 @@
 
 **TrinityTrack6000** is a physically built, custom, multi-MCU remote-controlled tank, constructed from 2 mm and 3 mm steel sheets. It features a suspension system and a movable turret equipped with a BB‑pellet pistol for non-lethal target practice and sensor payload mounting. The project emphasizes a modular hardware approach: each functionality is implemented on a dedicated PCB module, enabling easy system expansion, parallel development of hardware and firmware, and straightforward integration of new features. This platform combines real-world mechanical construction with advanced electronics, serving both as a functional robotic vehicle and as an educational system for exploring embedded multi-MCU coordination, real-time control, and hardware integration.
 
-The system consists of multiple PCBs based on STM32, Infineon, NXP, RENESANS and FPGA microcontrollers, responsible for:
+## 📦 System Modules
 
-1. **ControlBoard** – **STM32 + Infineon**  
-   - **STM32**: Main logic and system coordination, communication via radio 
-   - **Infineon**: Motor and servo control, current and temperature monitoring
-2. **SensorHub** – **Sensor Interface Board**  
-   - Handles integration of various sensors: temperature, acceleration, gas sensors (CO₂, O₂, ethanol, methane, butane), GPS, and others
-3. **MotorInterfaceBoard** – **Motor & Servo Interface Board**  
-   - Routes control signals to motors and servos; includes an H-bridge for motor control and handles power distribution and signal conditioning
-4. **PowerControlBoard** – **Power Conversion Board**  
-   - Converts battery voltage to the required voltages for all system boards; manages power distribution and protection
-5. **VideoAudioBoard** – **FPGA**  
-   - Handles audio and video capture, hardware compression (H.264/265), and transmission back to the operator
-6. **FireControlBoard** – **NXP / RENESANS (TBD)**  
-   - Responsible for the fire control system using a laser rangefinder
-7. **RadarBoard** – **NXP / RENESANS (TBD)**  
-   - Responsible for integration of a custom radar for object detection
+The system is built as a set of dedicated PCB modules, each responsible for a specific function within the platform.
+A subset of modules forms a **stackable backplane**, connected via a shared SPI bus and a common 5V power rail distributed through a high-density board-to-board connector.
+Other modules are connected externally depending on their function and power requirements.
+
+### 🔌 Stack Modules (SPI Backplane)
+
+These modules are physically stacked and share:
+* SPI communication bus
+* Dedicated control lines (CS, READY, RESET)
+* Common 5V power rail
+* **MainControlBoard** – STM32 + XMC4200 (system coordinator and real-time control)
+* **VideoAudioBoard** – FPGA-based processing *(planned)*
+* **FireControlBoard** – Ballistic computation *(planned)*
+* **RadarBoard** – Radar processing module *(planned)*
+
+### 🔧 External Modules
+
+These modules are connected outside of the stack and may use separate power paths or interfaces:
+* **PowerConversionBoard** – Power regulation and distribution
+* **HardwareControlBoard** – Motor/servo interface and power-stage control
+* **BMSBoard** – Battery management system
+
+---
+
+Each module is developed independently and integrates into the system through clearly defined electrical and communication interfaces.
+
 
 The project serves as a learning platform for:
 
