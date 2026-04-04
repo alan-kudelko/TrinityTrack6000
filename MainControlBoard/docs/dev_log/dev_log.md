@@ -6,7 +6,181 @@ This file contains raw development notes, observations, and decisions made durin
 
 Content may be informal, incomplete, or experimental by nature.
 
+## System Architecture Overview
 
+The system is built as a **message-driven, multi-task RTOS architecture** with a clear separation of responsibilities between components.
+
+At its core, the design follows a **central dispatcher pattern**, where all control flow is routed through a dedicated task, ensuring consistency, safety, and scalability.
+
+---
+
+### 🧠 Architectural Principles
+
+- **Separation of concerns**
+  - Each task has a clearly defined responsibility
+  - No task performs unrelated operations
+
+- **Message-based communication**
+  - All inter-task communication is done via queues
+  - Requests are encapsulated in a unified `SystemRequest` structure
+
+- **RTOS-aware application layer**
+  - Tasks coordinate using queues, semaphores, and callbacks
+
+- **RTOS-agnostic driver layer**
+  - Low-level drivers (SPI, UART, etc.) are unaware of the RTOS
+  - Drivers operate using callbacks only
+
+- **Asynchronous execution model**
+  - Tasks enqueue requests and receive completion via callbacks
+  - Optional blocking behavior implemented via semaphores
+
+- **Strict ISR discipline**
+  - Interrupts only signal events (no heavy processing)
+  - All logic is executed in task context
+
+---
+
+### 🧩 Core Components
+
+#### 🔹 SystemDispatcher (Control Plane)
+
+- Central routing and decision-making task
+- Receives requests from:
+  - CLI task
+  - Wireless task
+  - Health Monitor
+
+- Routes commands based on:
+  - Request type
+  - Current system mode
+
+- Delegates execution to:
+  - Peripheral-specific handlers
+  - External MCU (Infineon)
+
+- Does NOT perform direct hardware access
+
+---
+
+#### 🔹 Wireless Task (Data Plane + Monitoring)
+
+- Handles NRF24L01 communication (receiver role)
+- Processes incoming control frames
+- Forwards commands to Dispatcher
+
+- Maintains link statistics:
+  - Packet loss
+  - Retransmissions
+  - Link quality
+
+- Implements frequency hopping
+
+- Collects telemetry from system tasks
+- Sends telemetry via ACK payload
+
+- Reports link status to Health Monitor
+
+---
+
+#### 🔹 CLI Task (Debug Interface)
+
+- Provides user interface over UART
+- Allows:
+  - System diagnostics
+  - Manual control (debug mode only)
+  - Raw communication with devices
+
+- Communicates exclusively with Dispatcher
+- Does not access hardware directly
+
+---
+
+#### 🔹 Health Monitor (Supervisor Layer)
+
+- Collects heartbeats from all tasks
+- Evaluates system health
+
+- Controls watchdog behavior:
+  - Feeds watchdog in normal operation
+  - Stops feeding in critical failure
+
+- Monitors radio link quality
+- Triggers:
+  - `FAULT` mode (system issues)
+  - `FAILSAFE` mode (link failure)
+
+- Requests mode changes via Dispatcher
+
+---
+
+### ⚙️ System Modes
+
+The system operates in multiple modes:
+
+- `RUN`
+  - Normal operation
+  - Commands come from wireless interface
+
+- `DEBUG`
+  - CLI allowed to control system
+
+- `FAULT`
+  - Limited operation
+  - Diagnostics enabled
+
+- `FAILSAFE`
+  - Safety-focused behavior
+  - Triggered on critical failure or communication loss
+
+All mode transitions are performed via the **Dispatcher**.
+
+---
+
+### 🔄 Communication Model
+
+- Requests are asynchronous by design
+- Tasks may optionally block using semaphores
+- Callback signals completion of operation
+
+---
+
+### 💾 Memory & Data Ownership
+
+- Buffers are owned by the calling task
+- Buffers are defined statically within task scope
+- No dynamic memory allocation (no malloc)
+
+- Drivers operate on pointers provided in requests
+- Caller is responsible for buffer lifetime until callback execution
+
+---
+
+### 🔌 Driver Model
+
+- Drivers are:
+  - Stateless
+  - RTOS-agnostic
+  - Callback-driven
+
+- No direct use of RTOS primitives inside drivers
+- All synchronization handled at task level
+
+---
+
+### 🧠 Design Summary
+
+The system separates responsibilities into three main layers:
+
+- **Control Plane** → Dispatcher
+- **Data Plane** → Wireless, peripherals
+- **Supervision Layer** → Health Monitor
+
+This architecture ensures:
+- Deterministic behavior
+- Scalability
+- Clear control flow
+- Safe failure handling
 
 ## 🟢 STM32G4
 
