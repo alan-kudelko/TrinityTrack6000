@@ -74,27 +74,55 @@ This structure allows independent development, easier navigation, and scalable i
 
 ---
 
-## 🖼️ Project Overview
+## 🖼️ Hardware Overview
+
+### 🚜 Tank Platform
 
 ![Tank Chassis](Media/Tank_Body_1.jpg)
 ![Tank Chassis](Media/Tank_Body_2.jpg)
 
+---
 
-**Physical Specifications:**
+### 🧠 MainControlBoard (STM32 + XMC4200)
 
-| Dimension            | Value        |
-|----------------------|-------------|
-| Length               | 70 cm       |
-| Width (without tracks)| 32 cm       |
-| Width (with tracks)  | 42 cm       |
-| Height               | 20 cm       |
-| Ground Clearance     | 5 cm        |
-| Weight               | 25 kg       |
+*PCB preview and assembly*
 
-**Performance:**
+![Main control board top](/MainControlBoard/Media/PCB_Top.png)
 
-- Maximum Speed: 5 km/h
-- Features: Suspension system, rotating turret with BB gun
+![Main control board bottom](/MainControlBoard/Media/PCB_Bottom.png)
+
+---
+
+### ⚡ PowerConversionBoard
+
+*PCB preview and assembly*
+
+---
+
+### 🔧 HardwareControlBoard
+
+*PCB preview and assembly*
+
+---
+
+### 🎥 VideoAudioBoard (FPGA)
+
+*PCB preview and assembly*
+
+---
+
+### 🎯 FireControlBoard *(planned)*
+
+---
+
+### 📡 RadarBoard *(planned)*
+
+---
+
+### 🔋 BMSBoard
+
+*PCB preview and assembly*
+
 
 ## ⚙️ Technical Overview 
 
