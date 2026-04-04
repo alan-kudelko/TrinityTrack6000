@@ -8,8 +8,6 @@ Content may be informal, incomplete, or experimental by nature.
 
 ## System Architecture Overview
 
-<<<<<<< HEAD
-=======
 The system is built as a **message-driven, multi-task RTOS architecture** with a clear separation of responsibilities between components.
 
 At its core, the design follows a **central dispatcher pattern**, where all control flow is routed through a dedicated task, ensuring consistency, safety, and scalability.
