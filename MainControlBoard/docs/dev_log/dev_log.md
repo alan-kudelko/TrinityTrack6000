@@ -393,7 +393,7 @@ Content may be informal, incomplete, or experimental by nature.
 
 ### [030] MCU migration (STM32G473 → STM32G474)
 
-> ✅ **Status: OK**
+> 🔄 **Status: WIP**
 
 **Notes:**
 - Migration required due to STM32G473 availability issues
@@ -414,7 +414,8 @@ Content may be informal, incomplete, or experimental by nature.
 
 **Result:**
 - No functional changes required
-- Project builds and runs correctly on STM32G474
+- Project builds
+- I will be sure if the project runs as soon as I finish my PCB
 
 ---
 
