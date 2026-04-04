@@ -170,361 +170,91 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ## ⚙️ Technical Overview 
 
-### 1. 📦 Module Structure
+### 1. 📁 Module Structure
 
-    MainControlBoard/
-    ├── STM32/ # Main MCU firmware (STM32G4, prototyping and production)
-    ├── XMC4200/ # Peripheral MCU firmware
-    ├── AVR_NRF_Tester/ # Simple test tool for radio communication
-    ├── docs/ # Technical documentation (Doxygen, notes)
-    ├── Media/ # Schematics, PCB previews, diagrams
-    └── README.md # Module documentation
+The module is organized around firmware for both MCUs and supporting resources.
 
----
-
-### 2. Design considerations
-
-#### 2.1 MCU Responsibilities / Scope of Control
-
-Due to the complexity of the system, it is essential to clearly define the responsibilities and scope of each MCU during the theoretical design stage to ensure proper modularization, communication efficiency, and maintainability. During the design phase, it is difficult to predict all possible scenarios or critical connections, which is why the design process follows an iterative improvement loop.
-
-##### 2.1.1 STM32's Responsibilities
-
-The STM32 serves as the main system controller and high-level supervisor – effectively the central "brain" of the project. It coordinates communication between all MCUs, monitors their responsiveness, and can reset individual modules in case of a timeout or fault condition.
-
-Inter-MCU communication is implemented using a dedicated high-speed SPI interface with separate CS lines and reset control signals, allowing robust fault recovery and module reinitialization.
-
-In addition, the STM32 handles all non-power-electronics-related peripherals, wireless communication, telemetry processing, and system-level diagnostics. It also manages persistent data storage using an onboard FRAM device.
-
-*List of responsibilities:*
-- System-level supervision and synchronization
-- Inter-MCU communication (SPI-based)
-- Fault detection and module reset handling
-- Wireless communication via nRF24L01+ (2.4 GHz)
-- GNSS data acquisition from L76L-M33 module
-- Gas sensing:
-  - MQ-6 (LPG / flammable gases)
-  - MQ-7 (carbon monoxide)
-- Motion sensing via ADXL345 accelerometer
-- Data logging and persistent storage using FM25L16B-GTR FRAM
-- Buzzer control for diagnostics and system feedback
-- Control logic for turret systems (arming, disarming, firing)
+* `STM32/` – main MCU firmware (STM32G4, prototyping and production)
+* `XMC4200/` – peripheral MCU firmware and low-level control
+* `AVR_NRF_Tester/` – simple tool for radio communication testing
+* `docs/` – technical documentation and development notes
+* `Media/` – schematics, PCB previews, and diagrams
+* `README.md` – module documentation
 
 ---
 
-##### 2.1.2 XMC4200 Responsibilities
+### 🧠 2. System Architecture
 
-The Infineon XMC4200 MCU is responsible for all real-time hardware control tasks, especially those related to power electronics and precise timing. It acts as a dedicated low-level controller for motors, actuators, and high-power subsystems.
+The system uses two MCUs with clearly separated roles and responsibilities.
 
-This MCU generates control signals, processes feedback from sensors and encoders, and ensures safe operation of all power-demanding components.
+#### 2.1 STM32G4 (Main Controller)
 
-*List of responsibilities:*
-- Generation of PWM signals for DC motors, servos and actuators
-- Encoder signal processing for position and speed feedback
-- Acquisition of temperature and current measurements via external ADCs (I²C bus, HardwareControlBoard)
-- Control of the smoke generation system (heater and glycerin pump)
-- Monitoring of current limits and implementation of basic fault protection mechanisms
-- Real-time control loops for precise positioning (e.g. radar servo systems)
+Acts as the central coordinator and system supervisor, running a ThreadX-based firmware.
+
+**Core responsibilities:**
+
+- System-level control and task coordination  
+- Communication with all modules (SPI-based)  
+- Fault detection and module reset handling  
+- Wireless communication (nRF24L01)  
+- Telemetry processing and diagnostics  
+- Data logging (FRAM)  
+- Sensor integration (GPS, gas sensors, accelerometer)  
+
+**Core tasks:**
+
+- `CLI Task` – diagnostic interface and manual control  
+- `SystemDispatcher` – central request handler and task delegation  
+- `Wireless Task` – radio communication and telemetry  
+- `HealthMonitor` – system supervision, watchdog, fail-safe handling  
+
+#### 2.2 XMC4200 (Peripheral Controller)
+
+Handles time-critical and low-level hardware control tasks.
+
+**Core responsibilities:**
+
+- PWM generation for motors and actuators  
+- Encoder signal processing  
+- Current and temperature acquisition  
+- Control of power-related subsystems  
+- Real-time control loops  
+- Basic safety and protection mechanisms  
 
 ---
 
-### 3. MCU's pinouts
+#### 2.3 System Diagram
 
-#### 3.1 STM32G473RET6 Pinout (LQFP-64)
+![Control board logic diagram](/MainControlBoard/Media/PCB_Architecture.png)
+
+Block diagram showing communication interfaces and signal flow between system components, including SPI, I²C, and UART buses.
+
+---
+
+### 🧩 3. MCU Pinout
+
+#### 3.1 STM32G473RET6 (LQFP-64)
 
 ![STM32 Pinout](/MainControlBoard/Media/STM32_Pinout.png)
 
 **Notes:**
-- Pins labeleded as **NC_x** are currently not used. They are provided as futureproofing of the project.
-
-#### 3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)
-
+- Pins labeled as **NC_x** are currently unused and reserved for future expansion.
 
 ---
 
-### 4. Control board logic diagram
+#### 3.2 XMC4200 (TQFP-64)
 
-![Control board logic diagram](/MainControlBoard/Media/PCB_Architecture.png)
+![XMC4200 Pinout](/MainControlBoard/Media/XMC4200_Pinout.png)
 
 ---
 
-### 5. STM32G473RET6
+### ⚙️ 4. STM32 Configuration
 
-#### 5.1 Clock configuration
+#### 4.1 Clock Configuration
 
 ![STM32G473 Clock Configuration](/MainControlBoard/Media/STM32G473RET6_ClockConfiguration.png)
 
-#### 5.2 System initialization
 
-The system initialization process on the STM32G4 microcontroller is one of the most critical stages in the TrinityTrack6000 startup sequence.
-As the main MCU in a distributed, multi-controller architecture, it is responsible for establishing a stable runtime environment and verifying the integrity of all essential hardware components before launching the operating system.
-
-#### 5.3 Normal start
-
-#### 5.4 Fault start
-
-#### 5.5 Normal operation
-
-#### 5.6 Task Overview
-
-| Task ID | Task Name                  | Description                                                                                                               | Priority | Stack Size | Free Stack |
-|---------|----------------------------|---------------------------------------------------------------------------------------------------------------------------|----------|------------|------------|
-| 00      | `taskErrorHandler`         | Handles critical faults such as stack overflows and guard zone corruption, and logs errors to EEPROM                      |    3     |    256     |     50     |
-| 01      | `taskSerialDiagnostics`    |                                                                                                                           |    1     |    x       |     x      |
-
-#### 5.7 ThreadX Architecture
-
-#### 5.8 💾 Memory Layout
-
-##### 5.8.1 RAM Map
-
-This section provides a detailed description of the memory sections and their roles within the project. It covers the organization of all RAM banks (RAM1, RAM2, and CCSRAM), custom linker-defined sections, and their purpose in task management, memory diagnostics, and system operation.
-
-![STM32G473_RAM_MAP](/MainControlBoard/Media/STM32G473_RAM_MAP.png)
-
-###### 5.8.1.1 RAM1
-- `__DATA_start__` is a custom linker symbol representing the starting address of the `.data` section in RAM1 on STM32G473CET6
-- `__DATA_end__` is a custom linker symbol representing the ending address of the `.data` section in RAM1 on STM32G473CET6
-- `__BSS_start__` is a custom linker symbol representing the starting address of the `.bss` section in RAM1 on STM32G473CET6
-- `__BSS_end__` is a custom linker symbol representing the ending address of the `.bss` section in RAM1 on STM32G473CET6
-- `__TDAT_start__` is a custom linker symbol representing the starting address of the `.tdat` section in RAM1 on STM32G473CET6
-- `__TDAT_end__` is a custom linker symbol representing the ending address of the `.tdat` section in RAM1 on STM32G473CET6
-- `ramDiagnosticsRAM1_lastHeapEnd` is a C variable defined by me to represent the current end of the heap. Its value is calculated at runtime (see Notes below).
-- `ramDiagnosticsRAM1_lastMSP` is a C variable defined by me to capture the last value of the main stack pointer before the RTOS scheduler starts (see Notes below).
-- `__RAM1_end__` is a custom linker symbol representing the last address of RAM1 on STM32G473CET6
-
-*RAM1 notes:*
-- The `.tdat` section is a custom linker-defined memory segment used to store non-critical or rarely used Task Control Blocks (TCBs), their stacks, and associated guard zones. By placing these stacks contiguously within `.tdat`, the system ensures controlled allocation and simplifies stack overflow detection for non-critical tasks.
-- The symbols `__TDAT_start__` and `__TDAT_end__` were predefined in the linker script, along with a custom `.tdat` section. This section is used to store Task Control Blocks (TCBs), task stacks, and corresponding guard zones. The `.tdat` section ensures that stacks and their guard zones are placed contiguously in memory, enabling reliable stack overflow monitoring.
-- The `ramDiagnosticsRAM1_lastHeapEnd` variable is computed as:
-  
-      ramDiagnosticsRAM1_lastHeapEnd = (__sbrk_heap_end != NULL) ? __sbrk_heap_end : (void*)&__TDAT_end__;
-  
-  Here, `__sbrk_heap_end` is a pointer managed by the STM32's custom implementation of `_sbrk`, indicating the current top of the heap. If no memory has been allocated yet, it remains `NULL`.
-- The `ramDiagnosticsRAM1_lastMSP` variable captures the value of the main stack pointer (`MSP`) before the RTOS scheduler starts. After the scheduler starts, `MSP` is switched to the currently running task's stack pointer, which would make direct free memory calculations invalid if used afterward.
-
-###### 5.8.1.2 RAM2
-- `__RAM_DIAGNOSTICS_start__` is a custom linker symbol representing the starting address of the `.ramDiagnostics` section in RAM2
-- `__RAM_DIAGNOSTICS_end__` is a custom linker symbol representing the ending address of the `.ramDiagnostics` section in RAM2
-- `__SYS_DIAGNOSTICS_start__` is a custom linker symbol representing the starting address of the `.sysDiag` section in RAM2
-- `__SYS_DIAGNOSTICS_end__` is a custom linker symbol representing the ending address of the `.sysDiag` section in RAM2
-- `__RAM2_end` is a custom linker symbol representing the ending address of the RAM2 on STM32G473CET6
-
-*RAM2 notes:*
-- The `.ramDiagnostics` section stores variables related to memory usage and diagnostics of the RAM state. These variables are not time-critical, allowing them to reside in RAM2, which has slower access compared to other RAM regions.
-- The `.sysDiag` section is used for storing global error flags and other system diagnostics that are also not time-critical.
-- Access to RAM2 is slower compared to other RAM regions, making it suitable for non-time-critical data storage.
-
-###### 5.8.1.3 CCSRAM
-- `__CRIT_start__` is a custom linker symbol representing the starting address of the `.crit` section in CCSRAM
-- `__CRIT_end__` is a custom linker symbol representing the ending address of the `.crit` section in CCSRAM
-- `__CCSRAM_end__` is a custom linker symbol representing the ending address of the CCSRAM on STM32G473CET6
-
-*CCSRAM notes:*
-- The `.crit` section (located in CCSRAM) stores TCBs, stacks, guard zones, and buffers for critical or frequently executed tasks, ensuring maximum performance and predictability.
-- CCSRAM is tightly coupled with the CPU core, providing the fastest access compared to other RAM regions on STM32G473, making it ideal for time-critical data and task management.
-
-##### 5.8.2 Custom RAM Segments
-
-The default linker script generated by STM32CubeIDE only includes sections for the RAM1 bank and the minimal sections required for basic programs to run on the STM32.  
-
-To fully utilize the available memory and support advanced features such as runtime memory diagnostics and critical task management, the linker script was modified. Additional RAM banks (RAM2 and CCSRAM) and custom memory sections were added, including `.tdat`, `.crit`, `.ramDiagnostics`, and `.sysDiag`, allowing fine-grained control over task stacks, guard zones, and system diagnostics.
-
-The naming convention was intentionally unified across all regions to improve **code readability and maintainability**.
-
-These symbols representing the **start and ending addresses of each RAM bank**.  
-
-    __RAM1_start__ = ORIGIN(RAM);
-    __RAM1_end__ = ORIGIN(RAM) + LENGTH(RAM);
-
-    __RAM2_start__ = ORIGIN(RAM2);
-    __RAM2_end__ = ORIGIN(RAM2) + LENGTH(RAM2);
-
-    __CCSRAM_start__ = ORIGIN(CCSRAM);
-	__CCSRAM_end__ = ORIGIN(CCSRAM) + LENGTH(CCSRAM);
-
-In addition to the custom sections, the variables in the default `.data` and `.bss` sections have been **renamed and unified** with consistent naming conventions.  
-This unification improves **code readability**, simplifies memory diagnostics, and ensures a coherent approach when calculating used and free memory across RAM1, RAM2, and CCSRAM.
-
-	__DATA_start__ = .
-    __DATA_end__ = .
-
- 	__BSS_start__ = .
-    __BSS_end__ = .
-
-The `.tdat` section, located in **RAM1**, contains variables such as **Task Control Blocks (TCBs)**, task **stacks**, and corresponding **guard zones** for non-critical or rarely executed tasks.  
-
-By placing these elements in `.tdat`, the system ensures that stack memory for less critical tasks is grouped together, enabling efficient memory usage and reliable **stack overflow detection**, while keeping time-critical memory regions free for high-priority tasks.
-
-    .tdat :
-    {
-	. = ALIGN(4);
-	PROVIDE (__TDAT_start__ = . );
-	
-	KEEP(*(.tdat.guardZone0));	
-	KEEP(*(.tdat.errorHandlerStack));	
-	
-	KEEP(*(.tdat))
-	KEEP(*(.tdat*))
-	PROVIDE (__TDAT_end__ = . );
-    } >RAM
- 
-
-The `.ramDiagnostics` section is defined in **RAM2** and groups diagnostic variables by their data type (`uint8_t`, `uint16_t`, `uint32_t`).  
-This organization ensures proper alignment while minimizing unused padding ("fill") between variables.  
-
-The reason for this optimization is that the final size of the project is not yet known, so reducing RAM waste is important to keep the system scalable and efficient as the codebase grows.
-
-    .ramDiagnostics : 
-    {
-    PROVIDE ( __RAM_DIAGNOSTICS_START__ = . );
-    . = ALIGN(4);
-    *(.ramDiagnostics.uint8_t)
-    . = ALIGN(2);
-    *(.ramDiagnostics.uint16_t)
-    . = ALIGN(4);
-    *(.ramDiagnostics.uint32_t)
-    PROVIDE ( __RAM_DIAGNOSTICS_END__ = . );
-    } >RAM2
-
-The `.sysDiag` section is also placed in **RAM2** and contains diagnostic variables such as **global error flags** and other system state indicators.  
-Access to these variables is not time-critical, which makes RAM2 suitable for storing them.  
-
-In fact, all of **RAM2** is dedicated to variables whose access is not timing-critical, including memory usage diagnostics (`.ramDiagnostics`) and system status indicators (`.sysDiag`).  
-This separation allows the main RAM (RAM1 and CCSRAM) to be used for time-critical tasks and stacks, while still providing a centralized location for runtime diagnostics and error monitoring.
-
-    .sysDiag :
-    {
-    PROVIDE ( __SYS_DIAGNOSTICS_START__ = . );
-    . = ALIGN(4);
-    *(sysDiag);
-    PROVIDE ( __SYS_DIAGNOSTICS_END__ = . );
-    } >RAM2
-
-##### 5.8.3 Free Memory Calculation
-
-Free memory is calculated separately for each RAM bank (RAM1, RAM2, and CCSRAM) based on linker symbols and runtime diagnostics variables.
-- `ramDiagnosticsRAM1_used` calculates the memory used in RAM1, including the main stack (MSP) before the RTOS scheduler starts and the heap usage
-- `ramDiagnosticsRAM2_used` calculates the memory occupied by sections in RAM2
-- `ramDiagnosticsCCSRAM_used` calculates the memory occupied by the sections in CCSRAM
-
-All used memory values are expressed in **kilobytes (kB)**:
-
-    ramDiagnosticsRAM1_used=(((uint32_t)&__RAM1_end__ - ramDiagnosticsRAM1_lastMSP) + (ramDiagnosticsRAM1_lastHeapEnd - (uint32_t)&__RAM1_start__))/1024;
-    ramDiagnosticsRAM2_used=((uint32_t)&__RAM_DIAGNOSTICS_end__ - (uint32_t)&__RAM2_start__)/1024;
- 	ramDiagnosticsCCSRAM_used=((uint32_t)&__CRIT_end__ - (uint32_t)&__CCSRAM_start__)/1024;
-    ramDiagnosticsGeneral_used = ramDiagnosticsRAM1_used + ramDiagnosticsRAM2_used + ramDiagnosticsCCSRAM_used;
-
-The free memory for each RAM bank and the overall system is then calculated by subtracting the used memory from the total size of the corresponding memory region:
-
-    ramDiagnosticsRAM1_total_size - ramDiagnosticsRAM1_used
-    ramDiagnosticsRAM2_total_size - ramDiagnosticsRAM2_used
-    ramDiagnosticsCCSRAM_total_size - ramDiagnosticsCCSRAM_used
-    ramDiagnosticsGeneral_total_size - ramDiagnosticsGeneral_used
-
-##### 5.8.4 RAM Usage Overview
-
-(will be summarized after adding ThreadX and tasks to the project)
-
----
-
-#### 5.9 MCU Diagnostics
-
-Diagnostics for the STM32G473CET6 microcontroller can be performed either via the **ST-LINK** interface in STM32CubeIDE or through a **UART** interface.
-
-The diagnostics system provides real-time insight into:
-- The current state of system tasks (Task Control Blocks, stack usage, and guard zones)
-- RAM usage and memory status across all memory banks
-- The most recent error codes and system fault flags
-
-This enables developers and engineers to monitor system health, detect stack overflows, and analyze runtime behavior for both critical and non-critical tasks.
-
-##### 5.9.1 ThreadX Tasks Diagnostics
-
-(soon)
-
-##### 5.9.2 RAM Usage Diagnostics
-
-RAM usage diagnostics provide a detailed view of the memory sections for each RAM bank (RAM1, RAM2, and CCSRAM).  
-
-This diagnostics functionality is accessible via the **UART interface**, allowing real-time monitoring of:
-- Memory usage per section
-- Free and used memory in kilobytes (kB)
-- Task stack allocation and guard zones (for RAM1 and CCSRAM)
-
-This diagnostics functionality is accessible via the **UART interface** and consists of:
-- A **main menu** summarizing all RAM banks and their overall usage
-- Detailed views for each individual RAM bank, showing section-specific memory usage, free and used memory in kilobytes (kB), and task stack allocation with guard zones (for RAM1 and CCSRAM)
-
-The diagnostics interface is structured similarly to the diagrams below, providing an intuitive visualization of memory allocation and usage.
-
-      +-------------------------[ RAM DIAGNOSTICS ]--------------------------+
-      | Bank   | Start      | End        | Size    | Usage      | Used       |
-      +--------+------------+------------+---------+------------+------------+
-      | RAM1   | 0x20000000 | 0x2001FFFF | 128 KB  | ########## | 80%        |
-	  | RAM2   | 0x20020000 | 0x2003FFFF |  64 KB  | ####------ | 40%        |
-      | CCSRAM | 0x10000000 | 0x10003FFF |  16 KB  | ##-------- | 20%        |
-	  +--------+------------+------------+---------+------------+------------+
-      | FREE RAM TOTAL: 250 KB                                               |
-      | Commands: s(snapshot) b(bank) q(quit)                                |
-	  +----------------------------------------------------------------------+
-
-      +------------------------[ BANK RAM1 DETAILS ]-------------------------+
-	  | Section | Start      | End        | Size    | Usage     |            |
-      +---------+------------+------------+---------+-----------+------------+
-	  | .DATA   | 0x20000000 | 0x20007FFF | 32 KB   | 32 KB     |            |
-      | .BSS    | 0x20008000 | 0x2000DFFF | 24 KB   | 18 KB     |            |
-      | .TDAT   | 0x20008000 | 0x2000DFFF | 24 KB   | 18 KB     |            |
-	  | .HEAP   | 0x2000E000 | 0x2000FFFF | 16 KB   | 8 KB      |            |
-      | .STACK  | 0x20010000 | 0x20013FFF | 16 KB   | 4 KB      |            |
-	  +---------+------------+------------+---------+-----------+------------+
-      | FREE RAM TOTAL: 120 KB                                               |
-      | Commands: s(snapshot) b(bank) q(quit)                                |
-	  +----------------------------------------------------------------------+	  
-
-      +------------------------[ BANK RAM2 DETAILS ]-------------------------+
-	  | Section | Start      | End        | Size    | Usage     |            |
-      +---------+------------+------------+---------+-----------+------------+
-      | .ramDia | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
-	  | .sysDia | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
-	  +---------+------------+------------+---------+-----------+------------+
-      | FREE RAM TOTAL: 60 KB                                                |                                      
-      | Commands: s(snapshot) b(bank) q(quit)                                |
-	  +----------------------------------------------------------------------+
-
-      +-----------------------[ BANK CCSRAM DETAILS ]------------------------+
-	  | Section | Start      | End        | Size    | Usage     |            |
-      +---------+------------+------------+---------+-----------+------------+
-      | .crit   | 0x10000000 | 0x10004000 |  4 KB   |  4 KB     |            |
-	  +---------+------------+------------+---------+-----------+------------+
-      | FREE RAM TOTAL: 60 KB                                                |                                      
-      | Commands: s(snapshot) b(bank) q(quit)                                |
-	  +----------------------------------------------------------------------+
-   
-
-### 6. XMC4200
-
-#### 6.1 Task Overview
-
-#### 6.2 Micrium µC/OS Architecture
-
-#### 6.3 System initialization
-
-#### 6.4 Normal start
-
-#### 6.5 Fault start
-
-#### 6.6 Normal operation
-
-#### 6.7 💾 Memory Layout
-
-##### 6.7.1 RAM Map
-
-###### 6.7.1.1 RAM1
-
-###### 6.7.1.2 RAM2
-
-###### 6.7.1.3 CCSRAM
 
 ---
 
