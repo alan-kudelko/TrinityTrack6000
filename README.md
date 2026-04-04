@@ -26,97 +26,53 @@ These modules are connected outside of the stack and may use separate power path
 * **HardwareControlBoard** – Motor/servo interface and power-stage control
 * **BMSBoard** – Battery management system
 
----
-
 Each module is developed independently and integrates into the system through clearly defined electrical and communication interfaces.
 
+---
 
-The project serves as a learning platform for:
+## 🧪 Project Scope
 
-- Communication between multiple MCUs and real-time systems
-- Understanding and working with different real-time operating systems
-- Synchronization between MCUs and failsafe implementations
-- FPGA programming and real-time video/audio processing
-- Radar theory and object detection
-- Power electronics (switch-mode power supplies) and H-bridge motor control
+The project serves as a practical platform for exploring and implementing:
 
-Given the project’s complexity, it is developed in stages, focusing on one PCB at a time. Each PCB has a dedicated README detailing system operation, component selection, program implementation or theory behind it.
+* Distributed embedded systems and **multi-MCU coordination**
+* Real-time system design using **RTOS (ThreadX / bare-metal approaches)**
+* Inter-module communication over a **shared SPI backplane**
+* System-level synchronization, fault detection, and **failsafe mechanisms**
+* FPGA-based **real-time audio/video processing and compression**
+* Radar signal processing and **object detection techniques**
+* Power electronics, including **switch-mode power supplies and motor control (H-bridge)**
+* Modular hardware design and **scalable PCB-based system architecture**
+
+Due to the modular nature of the system, the repository is organized around individual PCB modules.
+
+Each module is contained in a dedicated directory and includes:
+
+* hardware design files (schematics and PCB)
+* firmware for the corresponding MCU(s)
+* local documentation and development notes
+
+Every module has its own `README.md`, describing its functionality, design decisions, and implementation details.
+
+This structure allows independent development, easier navigation, and scalable integration of new modules into the system.
 
 ---
 
-## 🔧 Status - Planning phase and component selection for **ControlBoard** (STM32 + Infineon)
+## 🔧 Status
+
+- 🔄 Ongoing development of **MainControlBoard (STM32 + XMC4200)**
+- 🔄 Firmware development, hardware bring-up, and system integration in progress
 
 ---
 
-## 🧪 Project Goals
-- Communication between multiple MCUs and real-time systems
-- Synchronization between MCUs and failsafe implementations
-- FPGA programming and real-time video/audio processing
-- Radar theory and object detection
-- Power electronics (switch-mode power supplies)
-- Learning different real-time system architectures along with other industrial MCUs
-- Practical implementation of H-bridge and motor control with current and temperature feedback
-- Designing modular PCBs and integrating multiple MCUs within a single system
+
+## 🛠 Tech Stack
+
+- **MCUs:** STM32G4, XMC4200, NXP / Renesas (planned), FPGA  
+- **RTOS:** ThreadX  
+- **Communication:** SPI, UART, I2C, wireless link  
+- **Build system:** CMake + arm-gcc
 
 ---
-
-## ✳️ Planned Technologies & Tools
-
-- **MCUs & Processors**: STM32, Infineon, NXP, RENESANS, FPGA  
-- **Sensor Modules**: Temperature, acceleration, gas sensors (CO₂, O₂, ethanol, methane, butane), GPS (TBD)  
-- **Communication**: Radio modules
-- **Motor Control**: H-bridge, servo drivers, current and temperature monitoring  
-- **Audio/Video**: FPGA-based capture, hardware compression (H.264/265), transmission  
-- **Power Electronics**: Switch-mode power supplies, battery voltage conversion, power distribution  
-- **Software / RTOS**: ThreadX, Micrium uC (TBD)  
-- **Development Tools**: VS Code, CMake, Ninja, ARM-GCC toolchain  
-- **PCB Design**: KiCAD 
-- **Debugging & Monitoring**: Multimeter, Oscilloscope
-
----
-
-## 🛠️ Development Strategy
-
-Each system board will be developed, prototyped, and tested sequentially, following the same design pipeline.  
-The process for each board includes:
-
-1. **Component Selection** – choosing appropriate components based on functionality, performance, and availability.  
-2. **Schematic Design** – creating the circuit schematic and verifying signal flow.  
-3. **Breadboard Testing & Firmware Development** – validating the concept on a breadboard while simultaneously developing and testing the firmware.  
-4. **Electrical Design** – preparing detailed electrical connections and pin mapping for PCB integration.  
-5. **PCB Design & Prototyping** – designing and manufacturing the first PCB version for testing.  
-6. **Testing & Validation** – verifying correct operation, signal integrity, and communication between modules.  
-7. **Iteration & Optimization** – refining both hardware and firmware based on test results.
-
-*Note:*  
-- In parallel, mechanical design and construction of the tank chassis, turret, and suspension are being developed alongside the electronics to ensure seamless integration between hardware and mechanics.
-
----
-
-## 🌟 Key Features
-
-- **Physically built prototype** — a fully custom-designed, steel-constructed tracked platform with an operational turret and BB gun.  
-- **Modular electronic architecture** — each functional domain (control, power, sensors, video, etc.) is handled by a dedicated PCB, designed for scalability and ease of maintenance.  
-- **Multi-MCU communication** — cooperative control between STM32, Infineon, FPGA, and other processors using various real-time communication interfaces.  
-- **Real-time systems** — development and testing of different RTOS solutions, synchronization methods, and failsafe mechanisms.  
-- **Advanced motor control** — H-bridge integration, servo signal routing, and feedback monitoring for current and temperature.  
-- **High-performance video/audio processing** — FPGA-based real-time compression (H.264/265) and wireless transmission to the operator.  
-- **Custom sensor integration** — environmental data collection (temperature, acceleration, gas concentration, GPS) for real-time feedback.  
-- **Scalable power management** — modular power distribution with switch-mode power supplies and battery voltage conversion.  
-- **Mechanical and electronic co-design** — parallel development of the chassis, suspension system, and electronic control boards.
-
----
-
-## 🗺️ Project Roadmap
-
-1. **ControlBoard** — Develop main logic and motor/servo interface, implement communication (radio) and current/temperature monitoring.  
-2. **SensorHub** — Integrate and validate all environmental sensors, GPS, and accelerometers.  
-3. **Motor & Servo Interface Board** — Finalize H-bridge, signal routing, and power distribution for motors and servos.  
-4. **PowerControlBoard** — Design and test battery voltage conversion and power distribution.  
-5. **VideoAudioBoard** — Implement FPGA-based audio/video capture, compression, and wireless transmission.  
-6. **FireControlBoard** — Develop fire control system using laser rangefinding.  
-7. **RadarBoard** — Integrate and validate custom radar for object detection.
-
 
 ## 🖼️ Project Overview
 
