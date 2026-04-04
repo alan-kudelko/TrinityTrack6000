@@ -148,3 +148,5 @@ Each module contains its own firmware, hardware design files, and documentation.
 ## 🤝 Acknowledgments
 
 PCB manufacturing for this project was sponsored by **PCBWay**, enabling rapid prototyping and validation of the hardware design.
+
+<img src="Media/PCBWay-Logo.png" width="200"/>
