@@ -134,27 +134,25 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 1. [Module Structure](#1--module-structure)
 2. [System Architecture](#-2-system-architecture)
+   - [2.1 STM32G4 (Main Controller)](#21-stm32g4-main-controller)
+   - [2.2 XMC4200 (Peripheral Controller)](#22-xmc4200-peripheral-controller)
+   - [2.3 System Diagram](#23-system-diagram)
 3. [MCU Pinout](#-3-mcu-pinout)
-   - [3.1 STM32G473RET6 Pinout (LQFP-64)](#31-stm32g473ret6-pinout-lqfp-64)
-   - [3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)](#32-XMC4200F64K256BAXQSA1-pinout-tqfp-64)
-4. [System's architecture](#%EF%B8%8F-4-stm32-configuration)
-5. [STM32G473RET6](#5-stm32g473ret6)
-   - [5.7 💾 Memory Layout](#57--memory-layout)
-     - [5.7.1 RAM Map](#571-ram-map)
-     - [5.7.2 Custom RAM segments](#572-custom-ram-segments)
-     - [5.7.3 Free Memory Calculation](#573-free-memory-calculation)
-     - [5.7.4 RAM Usage Overview](#574-ram-usage-overview)
-   - [5.8 MCU Diagnostics](#58-mcu-diagnostics)
-     - [5.8.1 ThreadX Tasks Diagnostics](#581-threadx-tasks-diagnostics)
-     - [5.8.2 RAM Usage Diagnostics](#582-ram-usage-diagnostics)
-6. [XMC4200](#6-xmc4200)
+   - [3.1 STM32G473RET6 (LQFP-64)](#31-stm32g473ret6-lqfp-64)
+   - [3.2 XMC4200 (TQFP-64)](#32-xmc4200-tqfp-64)
+4. [STM32 Software Architecture](#-4-stm32-software-architecture)
+   - [4.1 Task Model](#41-task-model)
+   - [4.2 Inter-Task Communication](#42-inter-task-communication)
+   - [4.3 Request Flow](#43-request-flow)
+
+
 7. [Electrical Schematic](#7--electrical-schematic)
    - [7.1 Voltage regulation for logic part](#71-voltage-regulation-for-logic-part)
    - [7.2 Gas Sensors](#72-gas-sensors)
    - [7.3 NRF24L01P 2.4GHz Transceiver](#73-nrf24l01p-24ghz-transceiver)
    - [7.4 L76L-M33 GPS](#74-l76l-m33-gps)
    - [7.5 STWD100NYWY3F external watchdog timer](#75-stwd100nywy3f-external-watchdog-timer)
-   - [7.6 FM25L16B-GTR FRAM](#76-stwd100nywy3f-external-watchdog-timer)
+   - [7.6 FM25L16B-GTR FRAM](#76-fm25l16b-gtr-fram)
    - [7.7 ADXL-345 Accelerometer](#77-adxl-345-accelerometer)
    - [7.8 Buzzer](#78-buzzer)
    - [7.9 STM32G473RET6](#79-stm32g473ret6)
@@ -162,7 +160,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [7.11 Programming and Debug Interfaces](#711-programming-and-debug-interfaces)
    - [7.12 Hardware Control Connector](#712-hardware-control-connector)
    - [7.13 PCB Stack SPI Interface](#713-pcb-stack-spi-interface)
-8. [PCB](#8--pcb)
+9. [PCB](#8--pcb)
    - [8.1 PCB Preview](#81-pcb-preview)
    - [8.2 Assembly Notes](#82-assembly-notes)
    - [8.3 BOM (Bill of Materials)](#83-bom-bill-of-materials)
@@ -248,13 +246,56 @@ Block diagram showing communication interfaces and signal flow between system co
 
 ---
 
-### ⚙️ 4. STM32 Configuration
+### ⚙️ 4. STM32 Software Architecture
 
-#### 4.1 Clock Configuration
-
-![STM32G473 Clock Configuration](/MainControlBoard/Media/STM32G473RET6_ClockConfiguration.png)
+The STM32 firmware is based on a ThreadX RTOS and follows an event-driven architecture.
 
 
+#### 4.1 Task Model
+
+The system is composed of dedicated tasks, each responsible for a specific subsystem.
+
+- `CLI Task`  
+  Handles user interaction, diagnostics, and manual control.  
+  Communicates only with the Dispatcher.
+
+- `SystemDispatcher`  
+  Central coordination unit.  
+  Receives requests and delegates them to appropriate subsystems.
+
+- `Wireless Task`  
+  Handles radio communication (nRF24L01), including packet processing and telemetry.
+
+- `HealthMonitor`  
+  Monitors system state, task heartbeats, and controls watchdog behavior.
+
+
+#### 4.2 Inter-Task Communication
+
+Tasks communicate using a request-based mechanism.
+
+- Requests are passed via a queue  
+- Each request contains a command type and associated payload  
+- Execution is asynchronous  
+- Completion is signaled via callback functions  
+
+This approach ensures modularity and decoupling between system components.
+
+
+#### 4.3 Request Flow
+
+Typical request flow in the system:
+
+```
+CLI / Wireless Task
+        ↓
+   SystemDispatcher
+        ↓
+   Peripheral / Driver
+        ↓
+   Callback → Task
+
+```
 
 ---
 
