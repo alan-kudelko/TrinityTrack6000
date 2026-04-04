@@ -4,24 +4,24 @@
 
 ## 🟢 STM32G4
 
-### [001] Programowanie + UART
+### [001] Programming + UART (STM32)
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Programowanie działa po obniżeniu częstotliwości ST-LINK
-- Debugowanie wolne (SWD?)
-- Konflikty pinów (SPI / UART / I2C)
+**Notes:**
+- Programming works after lowering ST-LINK frequency
+- Debugging is slow (likely SWD-related)
+- Pin configuration conflicts (SPI / UART / I2C)
 
 ---
 
-### [016] ThreadX
+### [016] ThreadX bring-up
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Kompiluje się bez problemów
-- Podobne do FreeRTOS
+**Notes:**
+- No major issues during setup
+- Behavior similar to FreeRTOS
 
 ---
 
@@ -35,18 +35,18 @@
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Działa dla SPI1 (zmienna długość ramki)
-- SPI2 wymaga innego podejścia
+**Notes:**
+- Works for SPI1 (variable frame length)
+- SPI2 requires a different approach
 
 ---
 
-### [010-2] DMA SPI testy (STM32)
+### [010-2] DMA SPI testing
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Testy zakończone sukcesem dla SPI1
+**Notes:**
+- Successfully validated for SPI1
 
 ---
 
@@ -54,17 +54,17 @@
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Zmienione API (timeout, retry – HAL_Delay / tx_thread_sleep)
+**Notes:**
+- API updated to support timeout and retransmission (HAL_Delay / tx_thread_sleep)
 
 ---
 
-### [014-2] ThreadX (clock config)
+### [014-2] ThreadX clock configuration
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- HAL korzysta z TIM6 zamiast SysTick
+**Notes:**
+- HAL uses TIM6 instead of SysTick
 
 ---
 
@@ -72,41 +72,41 @@
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- DMA_HT_IT do wywalenia
-- VREF+ musi być podłączone
-- Czas konwersji zależny od impedancji
+**Notes:**
+- DMA_HT interrupt should be disabled
+- VREF+ must be connected
+- Conversion time depends on input impedance
 
 ---
 
-### [021] Linker – CCSRAM
+### [021] Linker update (CCSRAM)
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- CCSRAM tylko dla CPU
-- Bufory DMA rozdzielone
-- Brak konfliktów AHB
+**Notes:**
+- CCSRAM dedicated to CPU
+- DMA buffers separated
+- No AHB arbitration conflicts
 
 ---
 
-### [022] RAM sections / DMA
+### [022] RAM sections / DMA placement
 
 > 🔄 **Status: WIP**
 
 ---
 
-### [024] ISR safety / NVIC
+### [024] ISR safety / NVIC priorities
 
 > 🔄 **Status: WIP**
 
-**Obserwacje:**
-- Częściowo poprawione
-- Wpływ na DMA balancing
+**Notes:**
+- Partially improved
+- Impacts DMA balancing
 
 ---
 
-### [025] Init bez UART
+### [025] Initialization without UART
 
 > 🔄 **Status: WIP**
 
@@ -118,7 +118,7 @@
 
 ---
 
-### [027] EXTI → LL (radio IRQ)
+### [027] EXTI optimization (radio IRQ → LL)
 
 > 🔄 **Status: WIP**
 
@@ -130,7 +130,7 @@
 
 ---
 
-### [029] IRQ timing measurement
+### [029] IRQ latency measurement
 
 > 🔄 **Status: WIP**
 
@@ -148,18 +148,18 @@
 
 ---
 
-### [032] Radio API
+### [032] Radio abstraction (API)
 
 > 🔄 **Status: WIP**
 
 ---
 
-### [033] Migracja G473CET6 → G473RET6
+### [033] Migration G473CET6 → G473RET6
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Zmienione mapowanie pinów
+**Notes:**
+- Pin mapping updated
 
 ---
 
@@ -167,17 +167,17 @@
 
 ## 🔵 XMC4200
 
-### [002] Programowanie + UART
+### [002] Programming + UART
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Brak problemów
-- Uwaga na VDDC
+**Notes:**
+- No issues during programming
+- Important: verify VDDC connections
 
 ---
 
-### [010] PWM (CCU4 / CCU8)
+### [010] PWM generation (CCU4 / CCU8)
 
 > 🔄 **Status: WIP**
 
@@ -189,18 +189,18 @@
 
 ---
 
-### [015] Encoder (pulse counter)
+### [015] Encoder (pulse counter mode)
 
 > 🔄 **Status: WIP**
 
 ---
 
-### [017] Micrium µC/OS
+### [017] Micrium µC/OS evaluation
 
 > 🔄 **Status: WIP**
 
-**Obserwacje:**
-- Rozważenie przejścia na bare-metal (event-driven)
+**Notes:**
+- Considering bare-metal event-driven approach instead
 
 ---
 
@@ -208,8 +208,8 @@
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Problem z CSN (brak podłączenia)
+**Notes:**
+- Issue caused by missing CSN connection
 
 ---
 
@@ -233,9 +233,9 @@
 
 > ❌ **Status: ISSUE**
 
-**Obserwacje:**
-- Pierwszy bajt niepoprawny
-- Reszta transmisji OK
+**Notes:**
+- First byte corrupted
+- Remaining data correct
 
 ---
 
@@ -245,7 +245,7 @@
 
 ---
 
-### [007] I2C ADXL345 (STM32)
+### [007] I2C (ADXL345, STM32)
 
 > 🔄 **Status: WIP**
 
@@ -257,27 +257,28 @@
 
 ---
 
-### [009] SPI FRAM (XMC przez STM32)
+### [009] SPI FRAM (XMC via STM32)
 
 > 🔄 **Status: WIP**
 
 ---
 
-### [012] MQ-7 heater current
+### [012] MQ-7 heater current verification
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Pobór prądu niższy niż datasheet
+**Notes:**
+- Measured current lower than datasheet
 
 ---
 
-### [013] Buzzer
+### [013] Buzzer diagnostics
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Timer2, regulowana częstotliwość
+**Notes:**
+- TIM2 used
+- Adjustable frequency
 
 ---
 
@@ -285,14 +286,14 @@
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- Najpierw PWR_UP w CONFIG, potem reszta
+**Notes:**
+- CONFIG must be initialized with PWR_UP first
 
 ---
 
-### [034] SPI STM32 ↔ XMC4200 (hardware check)
+### [034] SPI STM32 ↔ XMC4200 (hardware validation)
 
 > ✅ **Status: OK**
 
-**Obserwacje:**
-- PCB poprawne
+**Notes:**
+- PCB connections verified as correct
