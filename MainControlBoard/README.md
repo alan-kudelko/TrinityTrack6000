@@ -144,26 +144,28 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [4.1 Task Model](#41-task-model)
    - [4.2 Inter-Task Communication](#42-inter-task-communication)
    - [4.3 Request Flow](#43-request-flow)
-
-
-7. [Electrical Schematic](#7--electrical-schematic)
-   - [7.1 Voltage regulation for logic part](#71-voltage-regulation-for-logic-part)
-   - [7.2 Gas Sensors](#72-gas-sensors)
-   - [7.3 NRF24L01P 2.4GHz Transceiver](#73-nrf24l01p-24ghz-transceiver)
-   - [7.4 L76L-M33 GPS](#74-l76l-m33-gps)
-   - [7.5 STWD100NYWY3F external watchdog timer](#75-stwd100nywy3f-external-watchdog-timer)
-   - [7.6 FM25L16B-GTR FRAM](#76-fm25l16b-gtr-fram)
-   - [7.7 ADXL-345 Accelerometer](#77-adxl-345-accelerometer)
-   - [7.8 Buzzer](#78-buzzer)
-   - [7.9 STM32G473RET6](#79-stm32g473ret6)
-   - [7.10 XMC4200F64K256BAXQSA1](#710-xmc4200f64k256baxqsa1)
-   - [7.11 Programming and Debug Interfaces](#711-programming-and-debug-interfaces)
-   - [7.12 Hardware Control Connector](#712-hardware-control-connector)
-   - [7.13 PCB Stack SPI Interface](#713-pcb-stack-spi-interface)
-9. [PCB](#8--pcb)
-   - [8.1 PCB Preview](#81-pcb-preview)
-   - [8.2 Assembly Notes](#82-assembly-notes)
-   - [8.3 BOM (Bill of Materials)](#83-bom-bill-of-materials)
+5. [XMC4200 Software Architecture](#-5-xmc4200-software-architecture)
+   - [5.1 Task Model](#51-task-model)
+   - [5.2 Inter-Task Communication](#52-inter-task-communication)
+   - [5.3 Control Flow](#53-control-flow)
+6. [Electrical Schematic](#6--electrical-schematic)
+   - [6.1 Voltage regulation for logic part](#61-voltage-regulation-for-logic-part)
+   - [6.2 Gas Sensors](#62-gas-sensors)
+   - [6.3 NRF24L01P 2.4GHz Transceiver](#63-nrf24l01p-24ghz-transceiver)
+   - [6.4 L76L-M33 GPS](#64-l76l-m33-gps)
+   - [6.5 STWD100NYWY3F external watchdog timer](#65-stwd100nywy3f-external-watchdog-timer)
+   - [6.6 FM25L16B-GTR FRAM](#66-fm25l16b-gtr-fram)
+   - [6.7 ADXL-345 Accelerometer](#67-adxl-345-accelerometer)
+   - [6.8 Buzzer](#68-buzzer)
+   - [6.9 STM32G473RET6](#69-stm32g473ret6)
+   - [6.10 XMC4200F64K256BAXQSA1](#610-xmc4200f64k256baxqsa1)
+   - [6.11 Programming and Debug Interfaces](#611-programming-and-debug-interfaces)
+   - [6.12 Hardware Control Connector](#612-hardware-control-connector)
+   - [6.13 PCB Stack SPI Interface](#613-pcb-stack-spi-interface)
+7. [PCB](#7--pcb)
+   - [7.1 PCB Preview](#71-pcb-preview)
+   - [7.2 Assembly Notes](#72-assembly-notes)
+   - [7.3 BOM (Bill of Materials)](#73-bom-bill-of-materials)
 ---
 
 ## ⚙️ Technical Overview 
@@ -198,13 +200,6 @@ Acts as the central coordinator and system supervisor, running a ThreadX-based f
 - Telemetry processing and diagnostics  
 - Data logging (FRAM)  
 - Sensor integration (GPS, gas sensors, accelerometer)  
-
-**Core tasks:**
-
-- `CLI Task` – diagnostic interface and manual control  
-- `SystemDispatcher` – central request handler and task delegation  
-- `Wireless Task` – radio communication and telemetry  
-- `HealthMonitor` – system supervision, watchdog, fail-safe handling  
 
 #### 2.2 XMC4200 (Peripheral Controller)
 
@@ -297,11 +292,26 @@ CLI / Wireless Task
 
 ```
 
+## ⚙️ 5. XMC4200 Software Architecture
+
 ---
 
-### 7. 🔌 Electrical Schematic
+### 5.1 Task Model
 
-#### 7.1 Voltage regulation for logic part
+---
+
+### 5.2 Inter-Task Communication
+
+---
+
+### 5.3 Control Flow
+
+
+---
+
+### 6. 🔌 Electrical Schematic
+
+#### 6.1 Voltage regulation for logic part
 
 The MCU and all logic components operate at 3.3 V.
 To ensure stable and noise-free operation of both the microcontroller and peripheral ICs, a dedicated linear voltage regulator (TLV76133DCYR) is used.
@@ -309,7 +319,7 @@ The regulator provides a clean and stable 3.3 V output with a current capability
 
 ![Voltage regulation](/MainControlBoard/Media/VoltageRegulation.png)
 
-#### 7.2 Gas Sensors
+#### 6.2 Gas Sensors
 
 Gas sensors from the MQ family require an initial **preheating period** of approximately **48 hours** to stabilize their sensing elements. During normal operation, they follow a **heating cycle**: 60 seconds of heating followed by 90 seconds without heating. 
 
@@ -325,7 +335,7 @@ According to the datasheets, the **maximum heater power** should not exceed **95
 
 ![MQ-X Sensors](/MainControlBoard/Media/MQ_X_Sensors_Schematic.png)
 
-#### 7.3 NRF24L01P 2.4GHz Transceiver
+#### 6.3 NRF24L01P 2.4GHz Transceiver
 
 The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM32G473RET6 via the SPI1 bus.
 
@@ -347,7 +357,7 @@ The NRF24L01P is used as a 2.4 GHz wireless transceiver, interfaced with the STM
 
 ![NRF24L01P](/MainControlBoard/Media/NRF24L01P_Schematic.png)
 
-#### 7.4 L76L-M33 GPS
+#### 6.4 L76L-M33 GPS
 
 The L76L-M33 is used as an onboard GNSS (GPS) receiver module, interfaced with the STM32G473RET6 via UART.
 
@@ -373,7 +383,7 @@ The L76L-M33 is used as an onboard GNSS (GPS) receiver module, interfaced with t
 
 ![L76L-M33](/MainControlBoard/Media/GPS_Schematic.png)
 
-#### 7.5 STWD100NYWY3F external watchdog timer
+#### 6.5 STWD100NYWY3F external watchdog timer
 
 An external watchdog is used to increase system reliability and ensure recovery from unexpected failures.
 
@@ -397,7 +407,7 @@ An external watchdog is used to increase system reliability and ensure recovery 
 
 ![Watchdog](/MainControlBoard/Media/STWD100NYWY3F_Schematic.png)
 
-#### 7.6 FM25L16B-GTR FRAM
+#### 6.6 FM25L16B-GTR FRAM
 
 The FM25L16B FRAM is used for non-volatile data storage.
 
@@ -423,7 +433,7 @@ The FM25L16B FRAM is used for non-volatile data storage.
 
 ![FM25L16B](/MainControlBoard/Media/FM25L16B_Schematic.png)
 
-#### 7.7 ADXL-345 Accelerometer
+#### 6.7 ADXL-345 Accelerometer
 
 The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
 
@@ -440,7 +450,7 @@ The ADXL345 is a 3-axis digital accelerometer used for motion sensing.
 
 ![ADXL345](/MainControlBoard/Media/ADXL345_Schematic.png)
 
-#### 7.8 Buzzer
+#### 6.8 Buzzer
 
 The buzzer is used for basic acoustic feedback and system indication.
 
@@ -458,7 +468,7 @@ The buzzer is used for basic acoustic feedback and system indication.
 
 ![Buzzer](/MainControlBoard/Media/Buzzer_Schematic.png)
 
-#### 7.9 STM32G473RET6
+#### 6.9 STM32G473RET6
 
 The STM32G473RET6 serves as the main system controller.
 
@@ -485,7 +495,7 @@ The STM32G473RET6 serves as the main system controller.
 
 ![STM32G473RET6](/MainControlBoard/Media/STM32G473RET6_Schematic.png)
 
-#### 7.10 XMC4200F64K256BAXQSA1
+#### 6.10 XMC4200F64K256BAXQSA1
 
 The XMC4200 is used as a dedicated real-time hardware control MCU.
 
@@ -525,7 +535,7 @@ The XMC4200 is used as a dedicated real-time hardware control MCU.
 
 ![XMC4200](/MainControlBoard/Media/XMC4200_Schematic.png)
 
-#### 7.11 Programming and Debug Interfaces
+#### 6.11 Programming and Debug Interfaces
 
 The board provides programming and debugging interfaces for both MCUs using modified 10-pin Cortex-M debug connectors (2x5, 2.54 mm).
 
@@ -555,7 +565,7 @@ For reference, the official Cortex-M 10-pin debug connector pinout is shown belo
 
 ![CORTEX-M-DEBUG_CONN](/MainControlBoard/Media/cortex_debug10pin.png)
 
-#### 7.12 Hardware Control Connector
+#### 6.12 Hardware Control Connector
 
 This connector provides the interface between the Main Control Board and the external **HardwareControlBoard**.
 
@@ -602,7 +612,7 @@ This connector acts as the primary hardware abstraction boundary between:
 
 ![Samtec ETMM Series](/MainControlBoard/Media/samtec_etmm_series.png)
 
-#### 7.13 PCB Stack SPI Interface
+#### 6.13 PCB Stack SPI Interface
 
 This connector provides the **inter-board communication interface** within the PCB stack.
 
@@ -652,7 +662,7 @@ This interface enables a **modular stacked architecture**, allowing the system t
 
 ---
 
-### 8. 🧩 PCB
+### 7. 🧩 PCB
 
 The PCB is designed as a **multi-layer mixed-signal board**, integrating digital control, RF communication, and power distribution in a compact form factor.
 
@@ -694,7 +704,7 @@ The PCB is designed as a **multi-layer mixed-signal board**, integrating digital
 
 The PCB is designed with a focus on **reliability, modularity, and ease of debugging**, making it suitable for both prototyping and further system expansion.
 
-#### 8.1 PCB Preview
+#### 7.1 PCB Preview
 
 Top layer view:
 ![PCB Top](/MainControlBoard/Media/PCB_Top.png)
@@ -704,7 +714,7 @@ Bottom layer view:
 
 > *Images will be updated after final routing and manufacturing.*
 
-#### 8.2 Assembly Notes
+#### 7.2 Assembly Notes
 
 **Solder jumpers (SJ1–SJ28):**
 - Located on the bottom side of the PCB
@@ -753,7 +763,7 @@ In practice, slightly lower nominal inductance values are selected to compensate
 - Several components are intentionally left as DNP to allow flexibility during bring-up
 - Final values may be adjusted after testing and signal validation
 
-#### 8.3 BOM (Bill of Materials)
+#### 7.3 BOM (Bill of Materials)
 
 ## 📦 Bill of Materials (BOM)
 
@@ -814,3 +824,9 @@ In practice, slightly lower nominal inductance values are selected to compensate
 | U9 | STWD100NYWY3F | - | SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR | 1 | 511-STWD100NYWY3F | Watchdog supervisor |
 | U10 | ADXL345BCCZ-RL7 | - | LGA-14_L5.0-W3.0-P0.80-BL | 1 | 584-ADXL345BCCZ-R7 | 3-axis accelerometer |
 | X1 | XTAL-16M | - | CRYSTAL-TH_L10.8-W4.5-P4.88 | 1 | - | RF reference crystal |
+
+## 8 🤝 Acknowledgments
+
+PCB manufacturing for this project was sponsored by **PCBWay**, enabling rapid prototyping and validation of the hardware design.
+
+<img src="Media/PCBWay-Logo.png" width="200"/>
