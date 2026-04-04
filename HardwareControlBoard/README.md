@@ -1,6 +1,6 @@
-**HardwareControlBoard** – **Motor & Servo Interface Board**  
+**HardwareControlBoard** – **Motor & Actuator Interface**
 
-This board routes control signals to motors and servos, including an H-bridge for motor control, and handles power distribution and signal conditioning.  
+Interfaces motors and servos, including H-bridge control, signal routing, and power handling.
 
-> ⚠️ Status: Conceptual stage  
-> The design and implementation of this board have not yet been carried out. Detailed schematics, component selection, and testing procedures will be added once development starts.
+> ⚠️ **Status: Planned**
+> This module is not yet implemented.
