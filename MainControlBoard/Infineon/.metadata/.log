@@ -12981,3 +12981,107 @@ rg_constraint_property_value('pwm_ccu4$2093922737$3', speed_class of rg_property
 
 !ENTRY org.eclipse.core.jobs 2 2 2026-03-30 22:29:27.315
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-04-04 16:57:27.619 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_222
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2026-04-04 16:58:01.827
+!MESSAGE USER_ACTION : Default solver exe path is: D:\Programy\4.5.0.202105191637\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2026-04-04 16:58:01.960
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2026-04-04 16:58:01.962
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2026-04-04 16:58:02.340
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2026-04-04 16:58:03.498
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 1155 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:04.165
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 5 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:35.330
+!MESSAGE USER_ACTION : Active project:XMC4200[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2026-04-04 16:58:39.755
+!MESSAGE Time Taken By De-Serialization  : 2445 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-04 16:58:39.809
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:40.490
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 5160 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:40.522
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 28 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:40.544
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 22 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:40.547
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:43.637
+!MESSAGE USER_ACTION : Time taken for rendering views is: 3089 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:44.492
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 40332 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-04 16:58:45.641
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-04 16:58:45.836
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-04 16:58:46.820
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-04 16:58:46.852
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-04 16:58:47.050
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/CE/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-04-04 16:58:47.083
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-04 16:58:47.407
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/ARM-GCC-Update/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-04-04 16:58:47.408
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-04 16:58:47.713
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/Solver_emWin_update/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-04-04 16:58:47.713
+!MESSAGE General connection error with response code=202
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-04 16:58:48.014
+!MESSAGE HTTP Server Unknown HTTP Response Code (202):https://www.infineon.com/dave/Neon/4.5/Debugger/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=202
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2026-04-04 16:58:48.014
+!MESSAGE General connection error with response code=202
