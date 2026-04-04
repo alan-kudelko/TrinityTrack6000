@@ -1013,6 +1013,12 @@ In practice, slightly lower nominal inductance values are selected to compensate
 - L1: nominal value 8.2 nH → selected value 6.8 nH  
 - L3: nominal value 3.9 nH → selected value 3.7 nH
 
+**STM32 MCU substitution:**
+- U1 (STM32G473RET6)
+- Due to limited availability, **STM32G474RET6** is used instead
+- Fully pin-compatible and firmware-compatible with STM32G473RET6
+- No hardware modifications required
+
 **General notes:**
 - Several components are intentionally left as DNP to allow flexibility during bring-up
 - Final values may be adjusted after testing and signal validation
