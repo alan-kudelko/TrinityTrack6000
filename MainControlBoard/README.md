@@ -126,7 +126,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - ✅ Migration to CMake-based build system (DAVE-generated sources)
 - 🔄 SPI communication with STM32 (in progress)
 
-📓 Detailed development notes: [docs/dev_log](docs/dev_log)
+📓 Detailed development notes: [docs/dev_log](docs/dev_log/dev_log.md)
 
 ---
 
