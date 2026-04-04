@@ -132,12 +132,12 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 
 ## Technical Table of Contents
 
-1. [ControlBoard Module Structure & File Overview](#1--controlboard-module-structure--file-overview)
-2. [Design considerations](#2-design-considerations)
-3. [MCU's pinouts](#3-mcus-pinouts)
+1. [Module Structure](#1--module-structure)
+2. [System Architecture](#-2-system-architecture)
+3. [MCU Pinout](#-3-mcu-pinout)
    - [3.1 STM32G473RET6 Pinout (LQFP-64)](#31-stm32g473ret6-pinout-lqfp-64)
    - [3.2 XMC4200F64K256BAXQSA1 Pinout (TQFP-64)](#32-XMC4200F64K256BAXQSA1-pinout-tqfp-64)
-4. [System's architecture](#4-systems-architecture)
+4. [System's architecture](#%EF%B8%8F-4-stm32-configuration)
 5. [STM32G473RET6](#5-stm32g473ret6)
    - [5.7 💾 Memory Layout](#57--memory-layout)
      - [5.7.1 RAM Map](#571-ram-map)
