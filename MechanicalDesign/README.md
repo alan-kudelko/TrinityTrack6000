@@ -1,86 +1,89 @@
-# **Mechanical Design**  
+# **Mechanical Design**
 
 ---
 
 ## 🧠 Design Goals
 
+* Achieve reliable mobility for a ~25 kg tracked platform
+* Ensure sufficient torque for movement from standstill
+* Maintain modularity for easy integration with electronics and PCB stack
+* Design a mechanically robust chassis resistant to load and vibrations
+
 ---
 
 ## 🗺️ Production Roadmap
 
-- 🔄 
-- 🔄 
+* 🔄 Chassis refinement and weight optimization
+* 🔄 Drive train tuning (gear ratio, efficiency, thermal behavior)
 
----
-
-## Technical Table of Contents
-
-1. [Mechanical Overview](#1-mechanical-overview)
-   - [2.1 SPI Max frequency vs line length and type](#21-spi-max-frequency-vs-line-length-and-type)
-   - 
 ---
 
 ## 1. Mechanical Overview
 
-### 1.1 Tank Dimensions and weight
+### 1.1 Dimensions and Weight
 
-| Dimension    |         |
-|--------------|---------|
-| $Length$     | 70 [cm] |
-| $Width_{1}$  | 32 [cm] |
-| $Width_{2}$  | 42 [cm] |
-| $Height$     | 20 [cm] |
-| $Ground\ clearance$ | 5 [cm] |
-| $Weight$     | 25 [kg] |
+| Parameter              | Value |
+| ---------------------- | ----- |
+| Length                 | 70 cm |
+| Width (without tracks) | 32 cm |
+| Width (with tracks)    | 42 cm |
+| Height                 | 20 cm |
+| Ground clearance       | 5 cm  |
+| Weight                 | 25 kg |
 
-###### $Width_{1}$ - Width of tank without tracks  
-###### $Width_{2}$ - Width of tank with tracks  
+Target maximum speed: **~5 km/h**
 
-Speed of the tank has to be at least $V_{Max}=5\frac{km}{h}$
+---
 
-### 1.2 Tank Body Overview
+### 1.2 Chassis Overview
 
 ![Tank Chassis](/Media/Tank_Body_1.jpg)
 ![Tank Chassis](/Media/Tank_Body_2.jpg)
 
-### 1.3 Drive Train Components
+---
 
-#### 1.3.1 Tracks and Sprocket Wheels
+### 1.3 Drive Train
+
+#### 1.3.1 Tracks and Sprocket
 
 ![Tank Tracks](/Media/Tank_Tracks.png)
-![Tank Tracks](/Media/Sprocket_Wheel.png)
+![Sprocket Wheel](/Media/Sprocket_Wheel.png)
+
+---
 
 #### 1.3.2 DC Motors
 
-The selected DC motors are Injora 540 13T models. They were chosen primarily due to their low cost and relatively high peak power output of up to 300 W.  
-The main drawback of these motors is their high RPM, which requires the use of a reduction gearbox to achieve suitable torque and speed for the application.
+The system uses **Injora 540 13T DC motors**, selected for:
 
-![Tank Tracks](/Media/Injora540_13T_Parameters.png)
-![Tank Tracks](/Media/Injora540_Parameters_Comparison.png)
-![Tank Tracks](/Media/DC_Motor_Selection.png)
+* high peak power (~300 W)
+* availability and cost-effectiveness
 
-The performance graphs were generated in **MATLAB** based on the manufacturer’s specifications and the fundamental DC motor equations.  
+The main limitation is **very high RPM**, which makes direct drive impractical and requires gear reduction.
 
-According to these graphs, the Injora 540 13T motor reaches a peak power of around **300 W**, but its RPM is too high for practical use in an RC tank. In order to move a heavy vehicle, a reduction gearbox is required to convert the excessive RPM into usable torque.
+Motor characteristics and performance curves were analyzed in **MATLAB** based on manufacturer data and standard DC motor equations.
 
+![Motor Parameters](/Media/Injora540_13T_Parameters.png)
+![Motor Comparison](/Media/Injora540_Parameters_Comparison.png)
+![Motor Selection](/Media/DC_Motor_Selection.png)
 
-#### 1.3.3 Reduction Gearbox
+---
 
-| Drivetrain parameters    |         |
-|--------------|---------|
-| Sprocket wheel diameter     | D=48 [mm] |
-| Motor RPM  | n=32500 [rpm] |
-| Gearbox reduction  ratio | r=1:50 |
+#### 1.3.3 Gearbox and Kinematics
 
-![Tank Tracks](/Media/DC_Motor_Gearbox_1_50.png)
-![Tank Tracks](/Media/DC_Motor_Gearbox_dims_1.png)
-![Tank Tracks](/Media/DC_Motor_Gearbox_dims_2.png)
-![Tank Tracks](/Media/DC_Motor_Gearbox_Selection.png)
+| Parameter         | Value     |
+| ----------------- | --------- |
+| Sprocket diameter | 48 mm     |
+| Motor speed       | 32500 rpm |
+| Gear ratio        | 1:50      |
 
-With the selected **DC motor** and **1:50 reduction gearbox**, the theoretical sprocket speed is:  
+![Gearbox](/Media/DC_Motor_Gearbox_1_50.png)
+![Gearbox Dimensions](/Media/DC_Motor_Gearbox_dims_1.png)
+![Gearbox Dimensions](/Media/DC_Motor_Gearbox_dims_2.png)
+![Gearbox Selection](/Media/DC_Motor_Gearbox_Selection.png)
 
-$n_{out} = \frac{n}{r} = \frac{32500}{50} \approx 650 \ \text{rpm}$
+After reduction:
 
-$V_{max} = \frac{\pi \cdot D \cdot n_{out}}{60} = \frac{\pi \cdot 0.048 \cdot 650}{60} \approx 1.63 \ \text{m/s} \approx 5.88 \ \text{km/h}$
+* Output speed ≈ **650 rpm**
+* Estimated vehicle speed ≈ **5.9 km/h**
 
-
+This configuration provides a balance between achievable speed and usable torque for a heavy tracked platform.
