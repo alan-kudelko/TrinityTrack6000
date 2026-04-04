@@ -166,6 +166,7 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
    - [7.1 PCB Preview](#71-pcb-preview)
    - [7.2 Assembly Notes](#72-assembly-notes)
    - [7.3 BOM (Bill of Materials)](#73-bom-bill-of-materials)
+8. [Acknowledgments](#8--acknowledgments)
 ---
 
 ## ⚙️ Technical Overview 
@@ -829,4 +830,4 @@ In practice, slightly lower nominal inductance values are selected to compensate
 
 PCB manufacturing for this project was sponsored by **PCBWay**, enabling rapid prototyping and validation of the hardware design.
 
-<img src="Media/PCBWay-Logo.png" width="200"/>
+<img src="/Media/PCBWay-Logo.png" width="200"/>
