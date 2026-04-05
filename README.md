@@ -133,10 +133,6 @@ The diagram below presents a high-level overview of the system architecture, inc
 
 It illustrates how individual boards are interconnected, the role of each subsystem, and the overall data and energy flow within the platform.
 
-> 🔵 Communication (SPI, I2C)  
-> 🔴 Power distribution  
-> 🟡 Control signals (PWM / actuation)
-
 ![System Architecture Diagram](/Media/System_Architecture_Diagram.png)
 
 
