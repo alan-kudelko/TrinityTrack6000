@@ -131,17 +131,17 @@ This structure allows independent development, easier navigation, and scalable i
 
 The repository is organized around modular hardware components and supporting resources.
 
-* `MainControlBoard/` – main control system (STM32 + XMC4200)
-* `HardwareControlBoard/` – motor and actuator interface
-* `PowerConversionBoard/` – power regulation and distribution
-* `RadarModuleBoard/` – radar module *(planned)*
-* `AVProcessingBoard/` – FPGA-based audio/video processing *(planned)*
-* `FireControlBoard/` – fire control system *(planned)*
-* `MechanicalDesign/` – chassis and mechanical components
-* `Datasheets/` – documentation for used components
-* `docs/` – technical documentation and generated files (e.g. Doxygen)
-* `Media/` – images, diagrams, and visual materials
-* `tools/` – development tools and helper scripts
+* [`MainControlBoard/`](MainControlBoard/) – main control system (STM32 + XMC4200)
+* [`HardwareControlBoard/`](HardwareControlBoard/) – motor and actuator interface
+* [`PowerConversionBoard/`](PowerConversionBoard/) – power regulation and distribution
+* [`RadarModuleBoard/`](RadarModuleBoard/) – radar module *(planned)*
+* [`AVProcessingBoard/`](AVProcessingBoard/) – FPGA-based audio/video processing *(planned)*
+* [`FireControlBoard/`](FireControlBoard/) – fire control system *(planned)*
+* [`MechanicalDesign/`](MechanicalDesign/) – chassis and mechanical components
+* [`Datasheets/`](Datasheets/) – documentation for used components
+* [`docs/`](docs/) – technical documentation and generated files (e.g. Doxygen)
+* [`Media/`](Media/) – images, diagrams, and visual materials
+* [`tools/`](tools/) – development tools and helper scripts
 
 Each module contains its own firmware, hardware design files, and documentation.
 
