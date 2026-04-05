@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 OPR/127.0.0.0" version="29.6.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 OPR/127.0.0.0">
   <diagram name="Page-1" id="nOcq_ycjKAmvL4zrq7nE">
-    <mxGraphModel dx="1324" dy="1892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1577" dy="2050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -151,8 +151,8 @@
         <mxCell id="emdkuMdDltbXJdJQAzYn-83" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#1F6FEB);fontSize=16;" value="SPI" vertex="1">
           <mxGeometry height="100" width="50" x="100" y="-220" as="geometry" />
         </mxCell>
-        <mxCell id="emdkuMdDltbXJdJQAzYn-84" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=16;" value="🔵 Communication SPI (CS, RST, RDY)&lt;div&gt;🟢 Communication I2C, Kill Switch&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22text%3Bhtml%3D1%3BwhiteSpace%3Dwrap%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Brounded%3D0%3BfontColor%3Dlight-dark(%23000000%2C%231F6FEB)%3BfontSize%3D16%3B%22%20value%3D%22SPI%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22100%22%20width%3D%2250%22%20x%3D%22100%22%20y%3D%22-220%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGra🟢🟢🟢&lt;/span&gt;🔴 Power&lt;br&gt;🟡 Control (PWM / actuation)&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="320" x="900" y="-370" as="geometry" />
+        <mxCell id="emdkuMdDltbXJdJQAzYn-84" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=16;" value="🔵 Communication SPI (CS, RST, RDY)&lt;div&gt;🟢 Communication I2C, Kill Switch, CCU4, CCU8, GPIO&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22text%3Bhtml%3D1%3BwhiteSpace%3Dwrap%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Brounded%3D0%3BfontColor%3Dlight-dark(%23000000%2C%231F6FEB)%3BfontSize%3D16%3B%22%20value%3D%22SPI%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22100%22%20width%3D%2250%22%20x%3D%22100%22%20y%3D%22-220%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGra🟢🟢🟢&lt;/span&gt;🔴 Power&lt;br&gt;🟡 Control (PWM / actuation)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="410" x="810" y="-370" as="geometry" />
         </mxCell>
         <mxCell id="emdkuMdDltbXJdJQAzYn-85" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#1F6FEB);fontSize=16;" value="SPI" vertex="1">
           <mxGeometry height="100" width="50" x="100" y="-20" as="geometry" />
