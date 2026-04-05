@@ -722,6 +722,12 @@ Bottom layer view:
 
 #### 7.2 Assembly Notes
 
+**Solder paste (SMD291AX10):**
+- No-clean leaded solder paste used for SMD assembly  
+- Provides good wetting and reliable joints for fine-pitch components  
+- Suitable for both manual reflow (hot air / hot plate) and stencil-based assembly  
+- Does not require cleaning after soldering under normal conditions
+
 **Solder jumpers (SJ1–SJ28):**
 - Located on the bottom side of the PCB
 - Allow insertion of series resistors or direct short (0Ω)
