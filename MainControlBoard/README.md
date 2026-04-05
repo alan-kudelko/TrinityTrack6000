@@ -312,6 +312,11 @@ CLI / Wireless Task
 
 ### 6. 🔌 Electrical Schematic
 
+The complete electrical schematic is available here:  
+👉 [MainControlBoard Schematic](PCB/Schematic_MainControlBoard.svg)
+
+Below is a breakdown of individual sections of the design.
+
 #### 6.1 Voltage regulation for logic part
 
 The MCU and all logic components operate at 3.3 V.
