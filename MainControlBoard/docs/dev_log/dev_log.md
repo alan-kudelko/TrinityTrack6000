@@ -184,7 +184,6 @@ This architecture ensures:
 
 ---
 
->>>>>>> a1162ece29c920f8f28118ffa907cf8881ac6b0f
 ## 🟢 STM32G4
 
 ### [001] CubeIDE project setup (initial HAL)
