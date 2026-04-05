@@ -1,10 +1,8 @@
 # **Mechanical Design**
 
----
-
 ## 🧠 Design Goals
 
-* Achieve reliable mobility for a ~25 kg tracked platform
+* Achieve reliable mobility for a ~35 kg tracked platform
 * Ensure sufficient torque for movement from standstill
 * Maintain modularity for easy integration with electronics and PCB stack
 * Design a mechanically robust chassis resistant to load and vibrations
@@ -29,7 +27,7 @@
 | Width (with tracks)    | 42 cm |
 | Height                 | 20 cm |
 | Ground clearance       | 5 cm  |
-| Weight                 | 25 kg |
+| Weight                 | 35 kg |
 
 Target maximum speed: **~5 km/h**
 
@@ -44,6 +42,8 @@ Target maximum speed: **~5 km/h**
 
 ### 1.3 Drive Train
 
+Overview of the drivetrain components.
+
 #### 1.3.1 Tracks and Sprocket
 
 ![Tank Tracks](/Media/Tank_Tracks.png)
@@ -56,7 +56,11 @@ Target maximum speed: **~5 km/h**
 The system uses **Injora 540 13T DC motors**, selected for:
 
 * high peak power (~300 W)
+* wide operating RPM range
 * availability and cost-effectiveness
+
+The selection of the **13T variant** was driven by its higher peak power and broader speed range compared to alternatives.  
+Although the motor operates at very high RPM, this is mitigated by the gearbox, allowing the system to convert speed into usable torque.
 
 The main limitation is **very high RPM**, which makes direct drive impractical and requires gear reduction.
 
@@ -85,5 +89,8 @@ After reduction:
 
 * Output speed ≈ **650 rpm**
 * Estimated vehicle speed ≈ **5.9 km/h**
+* Peak torque ≈ **16–17 Nm** (for 1:50 gearbox)
 
-This configuration provides a balance between achievable speed and usable torque for a heavy tracked platform.
+The selected configuration provides sufficient torque to accelerate a heavy tracked platform while maintaining a reasonable maximum speed.
+
+The analysis and calculations were performed specifically for the **Injora 540 13T motor**, taking into account its operating characteristics and performance curves.
