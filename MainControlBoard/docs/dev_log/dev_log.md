@@ -331,9 +331,22 @@ This architecture ensures:
 > 🔄 **Status: WIP**
 
 **Notes:**
-- DMA operations should be distributed across multiple controllers
-- Goal: reduce jitter and avoid contention
-- Requires analysis of current DMA channel usage and priorities
+- DMA operations should be distributed across multiple controllers  
+- Goal: reduce jitter and avoid contention  
+- Final configuration will be adjusted in STM32Cube after full system validation post-migration  
+- Requires verification of DMA channel allocation, priorities, and RAM placement  
+
+**Planned DMA configuration:**
+
+| Interface | RAM Bank | DMA Priority | TX Channel | RX Channel |
+|----------|----------|-------------|-----------|-----------|
+| SPI1     | RAM1     | Very High   | DMA1_3    | DMA1_4    |
+| SPI2     | RAM2     | Very High   | DMA2_1    | DMA2_2    |
+| SPI3     | RAM1     | High        | DMA1_7    | DMA1_8    |
+| I2C2     | RAM1     | Low         | DMA1_1    | DMA1_2    |
+| ADC1     | RAM2     | Low         | DMA2_3    | N/A       |
+| USART3   | RAM2     | Low         | DMA2_8    | DMA2_7    |
+| USART2   | RAM1     | Low         | DMA1_5    | DMA1_6    |
 
 ### [022] ADC1 initialization refactor
 
