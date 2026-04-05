@@ -127,6 +127,23 @@ This structure allows independent development, easier navigation, and scalable i
 
 *PCB preview and assembly*
 
+## 🧠 System Architecture
+
+The diagram below presents a high-level overview of the system architecture, including communication interfaces, control paths, and power distribution between all modules.
+
+It illustrates how individual boards are interconnected, the role of each subsystem, and the overall data and energy flow within the platform.
+
+> 🔵 Communication (SPI, I2C)  
+> 🔴 Power distribution  
+> 🟡 Control signals (PWM / actuation)
+
+![System Architecture Diagram](/Media/System_Architecture_Diagram.png)
+
+
+> ⚠️ Note: This diagram represents a high-level abstraction of the system and does not include low-level implementation details such as signal timing, electrical characteristics, or protocol configurations.
+
+---
+
 ## 📁 Repository Structure
 
 The repository is organized around modular hardware components and supporting resources.
