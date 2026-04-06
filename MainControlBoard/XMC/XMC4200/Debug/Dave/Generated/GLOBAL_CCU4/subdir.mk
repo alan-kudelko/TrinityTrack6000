@@ -7,13 +7,13 @@ C_SRCS += \
 ../Dave/Generated/GLOBAL_CCU4/global_ccu4.c \
 ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c 
 
-OBJS += \
-./Dave/Generated/GLOBAL_CCU4/global_ccu4.o \
-./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o 
-
 C_DEPS += \
 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.d \
 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.d 
+
+OBJS += \
+./Dave/Generated/GLOBAL_CCU4/global_ccu4.o \
+./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

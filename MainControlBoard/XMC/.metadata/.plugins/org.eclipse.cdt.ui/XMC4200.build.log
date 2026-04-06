@@ -1,29 +1,32 @@
-22:29:19 **** Incremental Build of configuration Debug for project XMC4200 ****
+17:08:29 **** Incremental Build of configuration Debug for project XMC4200 ****
 "\"D:\\Programy\\4.5.0.202105191637\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j12 all 
-'Building file: ../Dave/Generated/SPI_SLAVE/spi_slave_conf.c'
-'Invoking: ARM-GCC C Compiler'
-"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/SPI_SLAVE/spi_slave_conf.o" -DXMC4200_F64x256 -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/XMCLib/inc" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/CMSIS/Include" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries/CMSIS/Infineon/XMC4200_series/Include" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Dave/Generated" -I"D:/Projekty/TrinityTrack6000/MainControlBoard/Infineon/XMC4200/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -mfloat-abi=softfp -Wa,-adhlns="Dave/Generated/SPI_SLAVE/spi_slave_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/SPI_SLAVE/spi_slave_conf.d" -MT"Dave/Generated/SPI_SLAVE/spi_slave_conf.d Dave/Generated/SPI_SLAVE/spi_slave_conf.o" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mthumb -g -gdwarf-2 -o "Dave/Generated/SPI_SLAVE/spi_slave_conf.o" "../Dave/Generated/SPI_SLAVE/spi_slave_conf.c" 
-'Finished building: ../Dave/Generated/SPI_SLAVE/spi_slave_conf.c'
-
 'Building target: XMC4200.elf'
-'Invoking: ARM-GCC C Linker'
-"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"XMC4200.map" -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mthumb -g -gdwarf-2 -o "XMC4200.elf" "@objects.rsp"  -lm
-'Finished building target: XMC4200.elf'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_compiler+0x0): multiple definition of `info_compiler'
+'Invoking: ARM-GCC C++ Linker'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_compiler+0x0): first defined here
+"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-g++" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"XMC4200.map" -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mthumb -g -gdwarf-2 -o "XMC4200.elf" "@objects.rsp"  -lm
+./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_platform+0x0): multiple definition of `info_platform'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_platform+0x0): first defined here
+./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_arch+0x0): multiple definition of `info_arch'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_arch+0x0): first defined here
+./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_language_standard_default+0x0): multiple definition of `info_language_standard_default'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_language_standard_default+0x0): first defined here
+./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o:(.data.info_language_extensions_default+0x0): multiple definition of `info_language_extensions_default'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:(.data.info_language_extensions_default+0x0): first defined here
+./build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.o: In function `main':
+D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdC/CMakeCCompilerId.c:909: multiple definition of `main'
+makefile:83: recipe for target 'XMC4200.elf' failed
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.cpp:925: first defined here
+./Src/main.o: In function `main':
+D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Debug/../Src/main.cpp:29: multiple definition of `main'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.cpp:925: first defined here
+./main.o: In function `main':
+D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Debug/../main.c:29: multiple definition of `main'
+./build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.o:D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Debug/../build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.cpp:925: first defined here
+d:/programy/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o): In function `__libc_init_array':
+init.c:(.text.__libc_init_array+0x1c): undefined reference to `_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [XMC4200.elf] Error 1
 
-'Invoking: ARM-GCC Create Flash Image'
-"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-objcopy" -O ihex "XMC4200.elf" "XMC4200.hex"
-'Finished building: XMC4200.hex'
-
-'Invoking: ARM-GCC Print Size'
-"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "XMC4200.elf"
-   text	   data	    bss	    dec	    hex	filename
-  23176	    684	   2136	  25996	   658c	XMC4200.elf
-'Finished building: XMC4200.siz'
-
-'Invoking: ARM-GCC Create Listing'
-"D:/Programy/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-objdump" -h -S "XMC4200.elf" > "XMC4200.lst"
-'Finished building: XMC4200.lst'
-
-
-22:29:21 Build Finished (took 1s.867ms)
+17:08:30 Build Finished (took 709ms)
 

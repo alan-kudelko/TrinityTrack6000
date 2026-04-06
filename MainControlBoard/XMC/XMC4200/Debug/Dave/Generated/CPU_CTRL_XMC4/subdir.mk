@@ -7,13 +7,13 @@ C_SRCS += \
 ../Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.c \
 ../Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.c 
 
-OBJS += \
-./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o \
-./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o 
-
 C_DEPS += \
 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.d \
 ./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.d 
+
+OBJS += \
+./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4.o \
+./Dave/Generated/CPU_CTRL_XMC4/cpu_ctrl_xmc4_conf.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

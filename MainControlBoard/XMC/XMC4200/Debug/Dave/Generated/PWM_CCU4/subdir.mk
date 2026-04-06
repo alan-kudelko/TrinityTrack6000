@@ -7,13 +7,13 @@ C_SRCS += \
 ../Dave/Generated/PWM_CCU4/pwm_ccu4.c \
 ../Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c 
 
-OBJS += \
-./Dave/Generated/PWM_CCU4/pwm_ccu4.o \
-./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o 
-
 C_DEPS += \
 ./Dave/Generated/PWM_CCU4/pwm_ccu4.d \
 ./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.d 
+
+OBJS += \
+./Dave/Generated/PWM_CCU4/pwm_ccu4.o \
+./Dave/Generated/PWM_CCU4/pwm_ccu4_conf.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

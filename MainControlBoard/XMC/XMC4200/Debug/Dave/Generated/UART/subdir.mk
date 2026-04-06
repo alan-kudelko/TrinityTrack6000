@@ -7,13 +7,13 @@ C_SRCS += \
 ../Dave/Generated/UART/uart.c \
 ../Dave/Generated/UART/uart_conf.c 
 
-OBJS += \
-./Dave/Generated/UART/uart.o \
-./Dave/Generated/UART/uart_conf.o 
-
 C_DEPS += \
 ./Dave/Generated/UART/uart.d \
 ./Dave/Generated/UART/uart_conf.d 
+
+OBJS += \
+./Dave/Generated/UART/uart.o \
+./Dave/Generated/UART/uart_conf.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

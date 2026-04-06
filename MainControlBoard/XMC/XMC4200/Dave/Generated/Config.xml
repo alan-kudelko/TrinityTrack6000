@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="XMC4200" Path="D:\Projekty\TrinityTrack6000\MainControlBoard\Infineon\XMC4200">
+<Project MotherSystem_Version="" Name="XMC4200" Path="D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>

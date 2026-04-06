@@ -9,15 +9,15 @@ C_SRCS += \
 S_UPPER_SRCS += \
 ../Startup/startup_XMC4200.S 
 
+C_DEPS += \
+./Startup/system_XMC4200.d 
+
 OBJS += \
 ./Startup/startup_XMC4200.o \
 ./Startup/system_XMC4200.o 
 
 S_UPPER_DEPS += \
 ./Startup/startup_XMC4200.d 
-
-C_DEPS += \
-./Startup/system_XMC4200.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

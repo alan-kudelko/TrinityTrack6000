@@ -218,48 +218,13 @@
  112 0064 00000000 	 .word Heap_Bank1_End
  113              	 .cfi_endproc
  114              	.LFE0:
- 116              	 .section .text._init,"ax",%progbits
+ 116              	 .section .bss.heap_ptr.4331,"aw",%nobits
  117              	 .align 2
- 118              	 .global _init
- 119              	 .thumb
- 120              	 .thumb_func
- 122              	_init:
- 123              	.LFB1:
- 110:../Libraries/Newlib/syscalls.c **** 
- 111:../Libraries/Newlib/syscalls.c **** /* Init */
- 112:../Libraries/Newlib/syscalls.c **** void _init(void)
- 113:../Libraries/Newlib/syscalls.c **** {}
- 124              	 .loc 1 113 0
- 125              	 .cfi_startproc
- 126              	 
- 127              	 
- 128              	 
- 129 0000 80B4     	 push {r7}
- 130              	.LCFI5:
- 131              	 .cfi_def_cfa_offset 4
- 132              	 .cfi_offset 7,-4
- 133 0002 00AF     	 add r7,sp,#0
- 134              	.LCFI6:
- 135              	 .cfi_def_cfa_register 7
- 136              	 .loc 1 113 0
- 137 0004 BD46     	 mov sp,r7
- 138              	.LCFI7:
- 139              	 .cfi_def_cfa_register 13
- 140              	 
- 141 0006 5DF8047B 	 ldr r7,[sp],#4
- 142              	.LCFI8:
- 143              	 .cfi_restore 7
- 144              	 .cfi_def_cfa_offset 0
- 145 000a 7047     	 bx lr
- 146              	 .cfi_endproc
- 147              	.LFE1:
- 149              	 .section .bss.heap_ptr.4331,"aw",%nobits
- 150              	 .align 2
- 153              	heap_ptr.4331:
- 154 0000 00000000 	 .space 4
- 155              	 .text
- 156              	.Letext0:
- 157              	 .file 2 "d:\\programy\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\sys\\types.h"
+ 120              	heap_ptr.4331:
+ 121 0000 00000000 	 .space 4
+ 122              	 .text
+ 123              	.Letext0:
+ 124              	 .file 2 "d:\\programy\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\sys\\types.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 syscalls.c
     {standard input}:24     .bss.__dso_handle:00000000 __dso_handle
@@ -267,10 +232,8 @@ DEFINED SYMBOLS
     {standard input}:27     .text._sbrk:00000000 $t
     {standard input}:32     .text._sbrk:00000000 _sbrk
     {standard input}:110    .text._sbrk:0000005c $d
-    {standard input}:153    .bss.heap_ptr.4331:00000000 heap_ptr.4331
-    {standard input}:117    .text._init:00000000 $t
-    {standard input}:122    .text._init:00000000 _init
-    {standard input}:150    .bss.heap_ptr.4331:00000000 $d
+    {standard input}:120    .bss.heap_ptr.4331:00000000 heap_ptr.4331
+    {standard input}:117    .bss.heap_ptr.4331:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

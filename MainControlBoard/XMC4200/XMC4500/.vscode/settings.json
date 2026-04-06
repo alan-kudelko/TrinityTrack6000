@@ -1,0 +1,13 @@
+{
+  "cmake.generator": "Ninja",
+  "cmake.configureSettings": {
+  "CMAKE_MAKE_PROGRAM": "ninja"
+  },
+  "files.associations": {
+
+  },
+  "cmake.buildtypes":[
+    "Debug",
+    "Release"
+  ]
+}

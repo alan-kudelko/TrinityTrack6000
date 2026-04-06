@@ -7,13 +7,13 @@ C_SRCS += \
 ../Dave/Generated/DIGITAL_IO/digital_io.c \
 ../Dave/Generated/DIGITAL_IO/digital_io_conf.c 
 
-OBJS += \
-./Dave/Generated/DIGITAL_IO/digital_io.o \
-./Dave/Generated/DIGITAL_IO/digital_io_conf.o 
-
 C_DEPS += \
 ./Dave/Generated/DIGITAL_IO/digital_io.d \
 ./Dave/Generated/DIGITAL_IO/digital_io_conf.d 
+
+OBJS += \
+./Dave/Generated/DIGITAL_IO/digital_io.o \
+./Dave/Generated/DIGITAL_IO/digital_io_conf.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

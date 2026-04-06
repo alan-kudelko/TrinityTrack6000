@@ -6,11 +6,11 @@
 C_SRCS += \
 ../Dave/Generated/DAVE.c 
 
-OBJS += \
-./Dave/Generated/DAVE.o 
-
 C_DEPS += \
 ./Dave/Generated/DAVE.d 
+
+OBJS += \
+./Dave/Generated/DAVE.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

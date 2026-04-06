@@ -109,7 +109,7 @@ caddr_t _sbrk(int nbytes)
 }
 
 /* Init */
-void _init(void)
-{}
+//void _init(void) 
+//{}
 
 #endif /* __GNUC__ */

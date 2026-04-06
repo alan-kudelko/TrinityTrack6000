@@ -7,13 +7,13 @@ C_SRCS += \
 ../Dave/Generated/SPI_SLAVE/spi_slave.c \
 ../Dave/Generated/SPI_SLAVE/spi_slave_conf.c 
 
-OBJS += \
-./Dave/Generated/SPI_SLAVE/spi_slave.o \
-./Dave/Generated/SPI_SLAVE/spi_slave_conf.o 
-
 C_DEPS += \
 ./Dave/Generated/SPI_SLAVE/spi_slave.d \
 ./Dave/Generated/SPI_SLAVE/spi_slave_conf.d 
+
+OBJS += \
+./Dave/Generated/SPI_SLAVE/spi_slave.o \
+./Dave/Generated/SPI_SLAVE/spi_slave_conf.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
