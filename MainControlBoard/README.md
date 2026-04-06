@@ -238,7 +238,7 @@ Block diagram showing communication interfaces and signal flow between system co
 
 #### 3.2 XMC4200 (TQFP-64)
 
-![XMC4200 Pinout](/MainControlBoard/Media/XMC4200_Pinout.png)
+![XMC4200 Pinout](/MainControlBoard/Media/XMC_Pinout.png)
 
 ---
 
