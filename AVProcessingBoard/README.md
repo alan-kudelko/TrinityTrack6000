@@ -48,7 +48,7 @@ The design is based on **Lattice FPGA devices**, selected for their balance betw
 
 ---
 
-### 🔊 Audio (optional)
+### 🔊 Audio
 - **PDM or I2S input**  
 
 ---
@@ -99,17 +99,6 @@ The design is based on **Lattice FPGA devices**, selected for their balance betw
 | Lattice ECP5 LFE5U-85F | 🟢 Alternative | Resource margin |
 | Lattice iCE40          | ❌ Rejected | Insufficient resources |
 | Lattice CrossLink-NX   | ❌ Rejected | Limited LUT/IO capacity |
-
----
-
-## ⚠️ Design Risks
-
-| Area | Risk |
-|------|-----|
-| TX / RF | Throughput and physical interface constraints |
-| Timing | Clock domain synchronization |
-| IO routing | Pin count and signal integrity |
-| Serializer | High-speed data transmission implementation |
 
 ---
 
