@@ -100,6 +100,8 @@ The design is based on **Lattice FPGA devices**, selected for their balance betw
 | Lattice iCE40          | ❌ Rejected | Insufficient resources |
 | Lattice CrossLink-NX   | ❌ Rejected | Limited LUT/IO capacity |
 
+LIFCL-17-7SG72C
+
 ---
 
 ## 💡 Design Assumptions
