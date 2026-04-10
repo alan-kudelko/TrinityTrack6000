@@ -1,15 +1,90 @@
-## 🎥 AVProcessingBoard – Overview
+# **AVProcessingBoard** – **Lattice LIFCL-17-7SG72C (FPGA)**
 
-The **AVProcessingBoard** is an FPGA-based module responsible for real-time audio and video data processing.
+**LIFCL-17-7SG72C**: Dedicated FPGA for real-time video and audio processing, handling camera and microphone data, and transmitting processed streams to the receiver.
 
-It is designed as a high-throughput datapath unit, where all time-critical operations are implemented in hardware.  
-A separate MCU (STM32) is used only for control and configuration via SPI.
+The system is implemented on a custom PCB and functions as a slave module within the overall architecture, controlled by the **MainControlBoard**.
 
-The design is based on **Lattice FPGA devices**, selected for their balance between performance, cost, and toolchain accessibility.
-
-> ⚠️ Note: All parameters below are preliminary and subject to change during the design phase.
+> ⚠️ Status: Requirements definition & early exploration phase  
+> 🔧 Goal: Serve as an educational platform for learning FPGA-based systems, including real-time video and audio processing, as well as wireless streaming of multimedia data
 
 ---
+
+## ✳️ Planned Technologies & Tools
+
+- **Processing Unit**: Lattice FPGA (e.g. LIFCL-17-7SG72C)  
+  - real-time video and audio processing  
+  - streaming datapath implementation  
+
+- **Interfaces**:  
+  - Camera interface (DVP / parallel) *(TBD)*  
+  - Audio input (PDM / I2S) *(TBD)*  
+  - SPI (control interface with MainControlBoard)  
+  - TX / RF interface *(TBD)*  
+
+- **Memory**:  
+  - External Flash / EEPROM *(TBD)*  
+    - configuration storage  
+    - image / asset storage  
+
+- **Development Tools**:  
+  - **Lattice Radiant** (primary FPGA design environment)  
+  - **Lattice Diamond** *(optional / legacy)*  
+  - **Verilog / SystemVerilog** (HDL design)  
+
+## Development Strategy
+
+- **Prototyping Phase:**  
+  Early validation of interfaces and data pipeline using development boards and simple test setups.  
+  Focus on:
+  - camera interface bring-up  
+  - basic video pipeline (capture → processing → output)  
+  - clocking and timing validation  
+
+- **Production Phase:**  
+  Final implementation on a custom PCB featuring:
+  - Lattice FPGA as a dedicated video/audio processing unit  
+  - integration with camera, memory and RF interface  
+  - SPI-based control from MainControlBoard  
+
+## Key Features
+
+- FPGA-based real-time video and audio processing  
+- Streaming pipeline architecture (no full framebuffer)  
+- Deterministic and low-latency data path  
+- Modular integration with MainControlBoard (SPI control)  
+- Scalable design for higher resolutions and future extensions  
+
+### 🔌 Hardware & Electronics
+
+- Custom PCB hosting:
+  - **Lattice FPGA (LIFCL-17-7SG72C or similar)**  
+    - real-time video/audio processing  
+  - Camera module *(TBD)*  
+  - Microphone interface *(TBD)*  
+  - External Flash / EEPROM *(TBD)*  
+  - RF / transmission interface *(TBD)*  
+  - Power regulation circuitry (local FPGA supply)  
+
+### 🧠 System Architecture & Concepts
+
+- Fully hardware-based **streaming datapath**  
+- Line-buffer-based processing (no full framebuffer)  
+- Separation of **control plane (SPI)** and **data plane (FPGA)**  
+- Clock domain separation (camera / system / TX)  
+- Deterministic processing latency  
+
+### 🧰 Development Tools & Libraries
+
+- **Verilog / SystemVerilog** for FPGA development  
+- **Lattice Radiant / Diamond** toolchain  
+- Simulation tools *(TBD – e.g. ModelSim / Questa / open-source)*  
+- Basic testbenches for pipeline validation  
+
+
+
+
+
+
 
 ## ⚙️ System Requirements
 
