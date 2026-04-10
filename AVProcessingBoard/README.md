@@ -11,21 +11,18 @@ The system is implemented on a custom PCB and functions as a slave module within
 
 ## ✳️ Planned Technologies & Tools
 
-- **Processing Unit**: Lattice FPGA (e.g. LIFCL-17-7SG72C)  
-  - real-time video and audio processing  
-  - streaming datapath implementation  
-
-- **Interfaces**:  
-  - Camera interface (DVP / parallel) *(TBD)*  
+- **Processing Unit**: Lattice FPGA (LIFCL-17-7SG72C)
+  - real-time video and audio processing
+  - streaming datapath implementation
+- **Interfaces**:
+  - Camera interface (DVP / parallel) *(TBD)*
   - Audio input (PDM / I2S) *(TBD)*  
-  - SPI (control interface with MainControlBoard)  
-  - TX / RF interface *(TBD)*  
-
+  - SPI (control interface with MainControlBoard)
+  - TX / RF interface *(TBD)*
 - **Memory**:  
   - External Flash / EEPROM *(TBD)*  
     - configuration storage  
     - image / asset storage  
-
 - **Development Tools**:  
   - **Lattice Radiant** (primary FPGA design environment)  
   - **Lattice Diamond** *(optional / legacy)*  
@@ -47,17 +44,15 @@ The system is implemented on a custom PCB and functions as a slave module within
   - SPI-based control from MainControlBoard  
 
 ## Key Features
-
 - FPGA-based real-time video and audio processing  
-- Streaming pipeline architecture (no full framebuffer)  
+- Streaming pipeline architecture (full framebuffer)  
 - Deterministic and low-latency data path  
 - Modular integration with MainControlBoard (SPI control)  
 - Scalable design for higher resolutions and future extensions  
 
 ### 🔌 Hardware & Electronics
-
 - Custom PCB hosting:
-  - **Lattice FPGA (LIFCL-17-7SG72C or similar)**  
+  - **Lattice FPGA (LIFCL-17-7SG72C)**  
     - real-time video/audio processing  
   - Camera module *(TBD)*  
   - Microphone interface *(TBD)*  
@@ -66,7 +61,6 @@ The system is implemented on a custom PCB and functions as a slave module within
   - Power regulation circuitry (local FPGA supply)  
 
 ### 🧠 System Architecture & Concepts
-
 - Fully hardware-based **streaming datapath**  
 - Line-buffer-based processing (no full framebuffer)  
 - Separation of **control plane (SPI)** and **data plane (FPGA)**  
@@ -74,121 +68,80 @@ The system is implemented on a custom PCB and functions as a slave module within
 - Deterministic processing latency  
 
 ### 🧰 Development Tools & Libraries
-
 - **Verilog / SystemVerilog** for FPGA development  
 - **Lattice Radiant / Diamond** toolchain  
 - Simulation tools *(TBD – e.g. ModelSim / Questa / open-source)*  
 - Basic testbenches for pipeline validation  
 
+---
 
+## 🧠 Design Goals
 
+- 🎯 Design a **dedicated FPGA-based module** for real-time video and audio processing and streaming  
 
+- 📹 Implement camera input support:
+  - Resolution: **480×320 @ 60 fps** *(target, scalable)*
+  - Interface: **DVP / parallel (8–12 bit)**
+  - Signals: HSYNC / VSYNC / PCLK
 
+- 📡 Develop a video transmission path:
+  - Throughput: **~300–500 Mbps**
+  - Interface: **TBD (LVDS / parallel / serial)**
+  - Custom RF-oriented transmission protocol
 
+- 🧠 Build a fully hardware-based processing pipeline:
+  - Streaming architecture (full framebuffer)
+  - Deterministic latency
+  - Line-buffer-based processing
 
-## ⚙️ System Requirements
+- 🔌 Define a clear separation between control and data planes:
+  - **SPI slave interface** for control (STM32 → FPGA)
+  - **RDY (open-drain)** synchronization signal
 
-### 📹 Video Input
-- Resolution: **800×600 @ 60 fps** *(target, scalable)*  
-- Interface: **DVP / parallel (8–12 bit)**  
-- Signals: HSYNC / VSYNC / PCLK  
+- 💾 Integrate external memory:
+  - **QSPI Flash / EEPROM (TBD)**
+  - configuration storage
+  - image / asset storage
+  - potential buffering
+
+- 🔊 Support audio acquisition:
+  - **PDM or I2S input**
+
+- 📶 Design a transmission interface:
+  - High-speed data path *(TBD)*
+  - Optimized for RF communication
+
+- 🔧 Define FPGA I/O requirements:
+  - ~30–40 GPIOs
+  - camera + RF + SPI + memory interfaces
+
+- 🧠 Select appropriate FPGA resources:  
+  - LUT: ≥ 30k  
+  - BRAM: ≥ 500 kB  
+  - DSP: optional  
+  - sufficient PLL / clocking resources  
+  - IO count ≥ 40  
+
+- ⏱️ Establish system timing constraints:  
+  - Pixel clock: ~40–50 MHz  
+  - System clock: ~80–150 MHz  
+  - TX clock: ~100–300 MHz *(interface-dependent)*  
+
+- 🧪 Serve as an educational platform for:  
+  - FPGA design and HDL development
+  - real-time video/audio processing
+  - streaming architectures
+  - clock domain crossing and timing closure
+  - hardware-software system integration
+
+- 🧩 Maintain modular system integration:
+  - seamless cooperation with **MainControlBoard**
+  - SPI-based control architecture
+  - scalable for future extensions
 
 ---
 
-### 📡 Video Output
-- Throughput: **~300–500 Mbps**  
-- Interface: **TBD (LVDS / parallel / serial)**  
-- Custom transmission protocol (RF-oriented)
-
----
-
-### 🧠 Processing Model
-- Fully **streaming pipeline**  
-- No full framebuffer (initial design)  
-- Deterministic latency  
-
----
-
-### 🔌 MCU Interface
-- **SPI slave** (control plane)  
-- **RDY (open-drain)** signal for synchronization  
-
----
-
-### 💾 Memory
-- External **QSPI Flash**  
-  - configuration  
-  - data storage  
-  - bitstream / assets  
-
----
-
-### 🔊 Audio
-- **PDM or I2S input**  
-
----
-
-### 📶 RF Interface
-- **High-speed interface (TBD)**  
-- Critical subsystem for data transmission  
-
----
-
-### 🔧 GPIO Requirements
-- Estimated: **30–40 GPIOs**  
-- Used for:
-  - camera interface  
-  - RF interface  
-  - SPI  
-  - external memory  
-
----
-
-## 🧠 FPGA Requirements (Hardware)
-
-| Resource | Minimum | Recommended |
-|----------|---------|-------------|
-| LUT      | ≥ 30k  | 45k–85k    |
-| BRAM     | ≥ 500 kB | 500 kB – 1 MB |
-| DSP      | optional | ✔          |
-| PLL / Clocking | ✔ | ✔          |
-| IO count | ≥ 40   | ≥ 50       |
-
----
-
-## ⏱️ Timing Requirements
-
-| Parameter     | Value |
-|--------------|------|
-| Pixel clock   | ~40–50 MHz |
-| System clock  | ~80–150 MHz |
-| TX clock      | ~100–300 MHz (interface-dependent) |
-
----
-
-## 🎯 Target FPGA Devices
-
-| Device | Status | Notes |
-|--------|-------|------|
-| Lattice ECP5 LFE5U-45F | 🥇 Target | Best performance / cost balance |
-| Lattice ECP5 LFE5U-85F | 🟢 Alternative | Resource margin |
-| Lattice iCE40          | ❌ Rejected | Insufficient resources |
-| Lattice CrossLink-NX   | ❌ Rejected | Limited LUT/IO capacity |
-
-LIFCL-17-7SG72C
-
----
-
-## 💡 Design Assumptions
-
-- **Streaming architecture** – no full framebuffer (initial stage)  
-- **Modular design** – SPI-based control plane  
-- **Scalability** – resolution and throughput can be increased  
-- **FPGA-first approach** – entire datapath implemented in hardware  
-
----
-
-## ⚠️ Design Status
+## 🗺️ Development Progress
 
 The design is currently in the **requirements definition phase**.
 
