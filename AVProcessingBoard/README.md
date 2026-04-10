@@ -80,23 +80,20 @@ The system is implemented on a custom PCB and functions as a slave module within
 - 🎯 Design a **dedicated FPGA-based module** for real-time video and audio processing and streaming  
 
 - 📹 Implement camera input support:
-  - Resolution: **480×320 @ 60 fps** *(target, scalable)*
+  - Resolution: **480×320 @ 30–60 fps** *(target)*
+  - Optional: **640×480 @ 30 fps (max)**
   - Interface: **DVP / parallel (8–12 bit)**
   - Signals: HSYNC / VSYNC / PCLK
 
 - 📡 Develop a video transmission path:
-  - Throughput: **~300–500 Mbps**
-  - Interface: **TBD (LVDS / parallel / serial)**
+  - Throughput: **~40–80 Mbps**
+  - Interface: **TBD (parallel / simple serial)**
   - Custom RF-oriented transmission protocol
 
 - 🧠 Build a fully hardware-based processing pipeline:
   - Streaming architecture (full framebuffer)
   - Deterministic latency
   - Line-buffer-based processing
-
-- 🔌 Define a clear separation between control and data planes:
-  - **SPI slave interface** for control (STM32 → FPGA)
-  - **RDY (open-drain)** synchronization signal
 
 - 💾 Integrate external memory:
   - **QSPI Flash / EEPROM (TBD)**
@@ -111,21 +108,17 @@ The system is implemented on a custom PCB and functions as a slave module within
   - High-speed data path *(TBD)*
   - Optimized for RF communication
 
-- 🔧 Define FPGA I/O requirements:
-  - ~30–40 GPIOs
-  - camera + RF + SPI + memory interfaces
+- 🧠 Select appropriate FPGA resources:
+  - LUT: ~10k–15k
+  - BRAM: ~300–600 kB
+  - DSP: optional
+  - sufficient PLL / clocking resources
+  - IO count: ~30–40
 
-- 🧠 Select appropriate FPGA resources:  
-  - LUT: ≥ 30k  
-  - BRAM: ≥ 500 kB  
-  - DSP: optional  
-  - sufficient PLL / clocking resources  
-  - IO count ≥ 40  
-
-- ⏱️ Establish system timing constraints:  
-  - Pixel clock: ~40–50 MHz  
-  - System clock: ~80–150 MHz  
-  - TX clock: ~100–300 MHz *(interface-dependent)*  
+- ⏱️ Establish system timing constraints:
+  - Pixel clock: ~20–40 MHz
+  - System clock: ~40–80 MHz
+  - TX clock: application-dependent
 
 - 🧪 Serve as an educational platform for:  
   - FPGA design and HDL development
@@ -143,15 +136,18 @@ The system is implemented on a custom PCB and functions as a slave module within
 
 ## 🗺️ Development Progress
 
-The design is currently in the **requirements definition phase**.
+🔄 The design is currently in the **requirements definition and early exploration phase**.
 
 At this stage:
-- System requirements are defined  
-- FPGA family selection is narrowed down  
-- High-level architecture is established  
+- System requirements are being defined
+- FPGA ecosystem is being explored (tools, architecture, workflow)
+- Initial FPGA family selection is in progress
+- High-level system architecture is being established
 
 Further work will include:
-- Interface selection (camera / RF)  
-- Detailed FPGA resource estimation  
-- Timing closure strategy  
-- PCB design and signal integrity analysis  
+- Selection of development board for prototyping
+- Interface definition (camera / audio / RF)
+- Detailed FPGA resource estimation
+- Initial pipeline architecture design
+- Timing constraints definition and validation
+- PCB design and signal integrity analysis
