@@ -14020,3 +14020,27 @@ java.lang.Exception: D:/Projekty/TrinityTrack6000/MainControlBoard/XMC/XMC4200/b
 
 !ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-04-06 17:58:50.102
 !MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-06 20:42:33.134
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-06 20:42:33.260
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-04-06 20:42:33.669
+!MESSAGE Time Taken By Serialization  : 408 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-06 20:42:33.745
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-06 20:42:33.848
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 121 msec 
+
+!ENTRY SOLVER 1 0 2026-04-06 20:42:33.849
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-04-06 20:42:34.111
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-06 20:42:39.405
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
