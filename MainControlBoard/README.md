@@ -714,9 +714,11 @@ The PCB is designed with a focus on **reliability, modularity, and ease of debug
 
 Top layer view:
 ![PCB Top](/MainControlBoard/Media/PCB_Top.png)
+![PCB Top raw](/MainControlBoard/Media/PCB_Top_.png)
 
 Bottom layer view:
 ![PCB Bottom](/MainControlBoard/Media/PCB_Bottom.png)
+![PCB Bottom raw](/MainControlBoard/Media/PCB_Bottom_.png)
 
 > *Images will be updated after final routing and manufacturing.*
 
