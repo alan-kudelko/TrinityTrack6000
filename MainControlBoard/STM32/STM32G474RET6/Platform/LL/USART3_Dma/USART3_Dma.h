@@ -3,6 +3,7 @@
  * @brief USART3 low level driver with DMA functionality with dedicated ring buffer
  * @note This module uses modified USART3_IRQHandler in stm32g4xx_it.c to handle USART3 rx interrupts.
  * 
+ * @date 2026.02.15
  * @author Alan Kudełko
  * @copyright
  * Copyright (c) 2025 Alan Kudełko.  

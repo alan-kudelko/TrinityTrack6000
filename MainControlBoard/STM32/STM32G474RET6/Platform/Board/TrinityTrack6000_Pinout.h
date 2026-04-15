@@ -5,6 +5,13 @@
  * for the TrinityTrack6000 hardware platform.
  * 
  * @author Alan Kudełko
+ * @date 2026.13.04
+ * @copyright
+ * Copyright (c) 2026 Alan Kudełko.  
+ * All rights reserved.  
+ * For educational and research purposes only.  
+ * Redistribution, modification, or commercial use prohibited without
+ * explicit written permission.
  */
 
 #ifndef TRINITY_TRACK6000_PINOUT_H_
