@@ -720,7 +720,11 @@ Bottom layer view:
 ![PCB Bottom](/MainControlBoard/Media/PCB_Bottom.png)
 ![PCB Bottom raw](/MainControlBoard/Media/PCB_Bottom_.png)
 
-> *Images will be updated after final routing and manufacturing.*
+![PCB View1](/MainControlBoard/Media/PCB_View1.jpg)
+![PCB View2](/MainControlBoard/Media/PCB_View2.jpg)
+![PCB View3](/MainControlBoard/Media/PCB_View3.jpg)
+![PCB View4](/MainControlBoard/Media/PCB_View4.jpg)
+![PCB View5](/MainControlBoard/Media/PCB_View5.jpg)
 
 #### 7.2 Assembly Notes
 
