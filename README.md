@@ -89,7 +89,11 @@ This structure allows independent development, easier navigation, and scalable i
 
 ### 🧠 MainControlBoard (STM32 + XMC4200)
 
-*PCB preview and assembly*
+![PCB View1](/MainControlBoard/Media/PCB_View1.jpg)
+![PCB View2](/MainControlBoard/Media/PCB_View2.jpg)
+![PCB View3](/MainControlBoard/Media/PCB_View3.jpg)
+![PCB View4](/MainControlBoard/Media/PCB_View4.jpg)
+![PCB View5](/MainControlBoard/Media/PCB_View5.jpg)
 
 ![Main control board top](/MainControlBoard/Media/PCB_Top.png)
 
