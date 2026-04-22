@@ -832,9 +832,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : KILL_SWITCH_Pin WATCHDOG_EN_Pin GPS_STANDBY_Pin WATCHDOG_FEED_Pin
-                           NRF24L01_PWR_Pin NRF24L01_CE_Pin */
+                           NRF24L01_CE_Pin */
   GPIO_InitStruct.Pin = KILL_SWITCH_Pin|WATCHDOG_EN_Pin|GPS_STANDBY_Pin|WATCHDOG_FEED_Pin
-                          |NRF24L01_PWR_Pin|NRF24L01_CE_Pin;
+                          |NRF24L01_CE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -853,6 +853,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPS_RST_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : NRF24L01_PWR_Pin */
+  GPIO_InitStruct.Pin = NRF24L01_PWR_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(NRF24L01_PWR_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : NRF24L01_CS_Pin FRAM_CS_Pin INFINEON_CS_Pin */
   GPIO_InitStruct.Pin = NRF24L01_CS_Pin|FRAM_CS_Pin|INFINEON_CS_Pin;

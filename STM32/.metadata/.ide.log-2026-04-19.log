@@ -1,0 +1,99 @@
+2026-04-20 00:00:30,809 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 983356640 Bytes (1073741824)
+2026-04-20 00:00:32,412 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 791867360 Bytes (1073741824)
+2026-04-20 00:00:36,771 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 900392928 Bytes (1073741824)
+2026-04-20 00:00:37,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-04-20 00:00:37,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-04-20 00:00:37,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-04-20 00:00:37,526 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-04-20 00:00:37,529 [INFO] CodeGenerator:892 - code generatio: config db path: D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-04-20 00:00:37,630 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\license.tmp_save
+2026-04-20 00:00:37,940 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\license.tmp
+2026-04-20 00:00:38,004 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\gpio.tmp_save
+2026-04-20 00:00:38,248 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\gpio.tmp
+2026-04-20 00:00:38,296 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\stm32g4xx_it.c_save
+2026-04-20 00:00:38,603 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\stm32g4xx_it.c
+2026-04-20 00:00:38,610 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_it.h_save
+2026-04-20 00:00:38,697 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_it.h
+2026-04-20 00:00:38,714 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\stm32g4xx_hal_msp.c_save
+2026-04-20 00:00:38,895 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\stm32g4xx_hal_msp.c
+2026-04-20 00:00:38,901 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\system.tmp_save
+2026-04-20 00:00:38,982 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\system.tmp
+2026-04-20 00:00:38,998 [INFO] CodeEngine:321 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-04-20 00:00:39,189 [INFO] CodeEngine:345 - Generated code: D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_hal_conf.h
+2026-04-20 00:00:39,234 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-04-20 00:00:39,248 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\main.h_save
+2026-04-20 00:00:39,478 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Inc\main.h
+2026-04-20 00:00:39,484 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\main.c_save
+2026-04-20 00:00:39,688 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\main.c
+2026-04-20 00:00:40,069 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 162mS.
+2026-04-20 00:00:40,072 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-04-20 00:00:40,161 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-04-20 00:00:41,502 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1429mS.
+2026-04-20 00:00:41,503 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-04-20 00:00:41,509 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-04-20 00:13:02,944 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 978005424 Bytes (1073741824)
+2026-04-20 00:13:05,038 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1006843312 Bytes (1073741824)
+2026-04-20 00:13:07,887 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 905057448 Bytes (1073741824)
+2026-04-20 00:13:08,094 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-04-20 00:13:08,094 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-04-20 00:13:08,094 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-04-20 00:13:08,094 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-04-20 00:13:08,095 [INFO] CodeGenerator:892 - code generatio: config db path: D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-04-20 00:13:08,180 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\license.tmp_save
+2026-04-20 00:13:08,460 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\license.tmp
+2026-04-20 00:13:08,504 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\gpio.tmp_save
+2026-04-20 00:13:08,707 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\gpio.tmp
+2026-04-20 00:13:08,745 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\stm32g4xx_it.c_save
+2026-04-20 00:13:09,005 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\stm32g4xx_it.c
+2026-04-20 00:13:09,012 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_it.h_save
+2026-04-20 00:13:09,117 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_it.h
+2026-04-20 00:13:09,139 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\stm32g4xx_hal_msp.c_save
+2026-04-20 00:13:09,361 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\stm32g4xx_hal_msp.c
+2026-04-20 00:13:09,368 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\system.tmp_save
+2026-04-20 00:13:09,447 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\system.tmp
+2026-04-20 00:13:09,460 [INFO] CodeEngine:321 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-04-20 00:13:09,632 [INFO] CodeEngine:345 - Generated code: D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_hal_conf.h
+2026-04-20 00:13:09,662 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-04-20 00:13:09,672 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\main.h_save
+2026-04-20 00:13:09,838 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Inc\main.h
+2026-04-20 00:13:09,845 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\main.c_save
+2026-04-20 00:13:10,030 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\main.c
+2026-04-20 00:13:11,021 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 302mS.
+2026-04-20 00:13:11,026 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-04-20 00:13:11,168 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-04-20 00:13:12,598 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1573mS.
+2026-04-20 00:13:12,601 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-04-20 00:13:12,603 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-04-20 20:35:09,286 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 810356976 Bytes (1073741824)
+2026-04-20 20:35:10,653 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 773889232 Bytes (1073741824)
+2026-04-20 20:35:14,792 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 883467472 Bytes (1073741824)
+2026-04-20 20:35:15,038 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-04-20 20:35:15,039 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-04-20 20:35:15,040 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-04-20 20:35:15,040 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-04-20 20:35:15,042 [INFO] CodeGenerator:892 - code generatio: config db path: D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-04-20 20:35:15,173 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\license.tmp_save
+2026-04-20 20:35:15,631 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\license.tmp
+2026-04-20 20:35:15,744 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\gpio.tmp_save
+2026-04-20 20:35:15,967 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\gpio.tmp
+2026-04-20 20:35:16,027 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\stm32g4xx_it.c_save
+2026-04-20 20:35:16,425 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\stm32g4xx_it.c
+2026-04-20 20:35:16,432 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_it.h_save
+2026-04-20 20:35:16,571 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_it.h
+2026-04-20 20:35:16,594 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\stm32g4xx_hal_msp.c_save
+2026-04-20 20:35:16,833 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\stm32g4xx_hal_msp.c
+2026-04-20 20:35:16,841 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\MXTmpFiles\system.tmp_save
+2026-04-20 20:35:16,958 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\MXTmpFiles\system.tmp
+2026-04-20 20:35:17,004 [INFO] CodeEngine:321 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-04-20 20:35:17,214 [INFO] CodeEngine:345 - Generated code: D:\STM32Playground\Werdon\Core\Inc\stm32g4xx_hal_conf.h
+2026-04-20 20:35:17,271 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-04-20 20:35:17,284 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Inc\main.h_save
+2026-04-20 20:35:17,513 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Inc\main.h
+2026-04-20 20:35:17,521 [INFO] CodeEngine:265 - oldGeneratedFile, D:\STM32Playground\Werdon\Core\Src\main.c_save
+2026-04-20 20:35:17,744 [INFO] CodeEngine:289 - Generated code: D:\STM32Playground\Werdon\Core\Src\main.c
+2026-04-20 20:35:18,481 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 393mS.
+2026-04-20 20:35:18,486 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-04-20 20:35:18,638 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-04-20 20:35:22,525 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 4038mS.
+2026-04-20 20:35:22,527 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-04-20 20:35:22,530 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.

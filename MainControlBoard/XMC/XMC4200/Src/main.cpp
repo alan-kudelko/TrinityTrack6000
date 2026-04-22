@@ -27,12 +27,10 @@ uint8_t tx_data[10];
 uint8_t rx_data[10];
 
 extern "C" int main(void){
-    // No o co chodzi
     DAVE_Init();
     memset(tx_data,0x55,10);
     memset(rx_data,0,10);
 
-    // zaraz zgnije
 
     XMC_GPIO_SetMode(XMC_GPIO_PORT0,9,XMC_GPIO_MODE_INPUT_TRISTATE);
 

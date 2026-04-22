@@ -5151,7 +5151,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x693 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
  .debug_macro   0x00000000       0xa6 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
  .debug_macro   0x00000000      0x358 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
- .debug_macro   0x00000000      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
@@ -5280,7 +5280,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1e5 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
  .debug_macro   0x00000000       0x10 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
  .debug_macro   0x00000000       0x3c CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
- .debug_macro   0x00000000      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
@@ -5424,7 +5424,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x693 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
  .debug_macro   0x00000000       0xa6 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
  .debug_macro   0x00000000      0x358 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
- .debug_macro   0x00000000      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .group         0x00000000        0xc CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
@@ -5582,7 +5582,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x358 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .debug_macro   0x00000000       0x3a CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .debug_macro   0x00000000       0x40 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x00000000      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
  .debug_macro   0x00000000       0x10 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
@@ -5943,7 +5943,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x167 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
  .debug_macro   0x00000000      0x949 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
  .debug_macro   0x00000000       0x64 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
- .debug_macro   0x00000000      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
  .debug_macro   0x00000000       0x3a CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
@@ -6421,7 +6421,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
  .debug_macro   0x00000000       0x3a CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
  .debug_macro   0x00000000       0x1c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
- .debug_macro   0x00000000      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
  .debug_macro   0x00000000       0x4c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
  .debug_macro   0x00000000       0x1c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
  .debug_macro   0x00000000       0x10 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
@@ -18495,7 +18495,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x08000f10                NRF24L01::reuse_tx_pl()
                 0x08000f3a                NRF24L01::activate()
                 0x08000f6e                NRF24L01::write_ack_payload(unsigned char, unsigned char)
- .text          0x08000fac      0xe14 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .text          0x08000fac      0xe30 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
                 0x08000fac                SystemClock_Config
                 0x08001056                MX_ADC1_Init
                 0x080011e0                MX_CORDIC_Init
@@ -18509,55 +18509,54 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x08001848                MX_USART3_UART_Init
                 0x08001908                MX_DMA_Init
                 0x080019f4                MX_GPIO_Init
-                0x08001c78                initializeThreadXMemory
-                0x08001c8c                initializeMemory
-                0x08001ca0                initializeSystem
- .text          0x08001dc0      0x3f4 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
-                0x08001dc0                task_blink
-                0x08001de8                tx_application_define
-                0x08001ee0                test_function
-                0x08001ef8                delay_function
-                0x08001f10                test_SPI_communication()
-                0x08002128                xmc4200_spi_test()
-                0x08002184                main
- .text          0x080021b4      0x8c4 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
-                0x080021b4                radioDataReceived_callback
-                0x080021d0                radioOperationDone_callback
-                0x080021ec                task_wireless_comm_init
-                0x08002240                task_wireless_comm_write_settings
-                0x080027d4                task_wireless_comm_update_radio_stats
-                0x080028ac                task_wireless_comm_process_request
-                0x080028d0                task_wireless_comm_process_request_radio_stats
-                0x0800290c                task_wireless_comm
- *fill*         0x08002a78        0x8 
- .text          0x08002a80       0x80 CMakeFiles/STM32G474RET6.elf.dir/Core/Src/tx_initialize_low_level.S.obj
-                0x08002a80                _tx_initialize_low_level
-                0x08002ac4                __tx_BadHandler
-                0x08002ac8                __tx_HardfaultHandler
-                0x08002acc                __tx_SVCallHandler
-                0x08002ad0                __tx_IntHandler
-                0x08002ad8                __tx_SysTickHandler
-                0x08002ad8                SysTick_Handler
-                0x08002ae4                __tx_NMIHandler
-                0x08002ae8                __tx_DBGHandler
- .text          0x08002b00       0xc0 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.S.obj
-                0x08002b00                _tx_thread_schedule
-                0x08002b2c                PendSV_Handler
-                0x08002b2c                __tx_PendSVHandler
-                0x08002bae                tx_thread_fpu_disable
-                0x08002bae                tx_thread_fpu_enable
- .text          0x08002bc0       0x40 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.S.obj
-                0x08002bc0                _tx_thread_stack_build
- .text          0x08002c00       0xb8 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.S.obj
-                0x08002c00                _tx_timer_interrupt
- .text          0x08002cb8       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
-                0x08002cb8                __aeabi_uldivmod
- .text          0x08002ce8        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                0x08002ce8                __aeabi_idiv0
-                0x08002ce8                __aeabi_ldiv0
- .text          0x08002cec      0x134 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
-                0x08002cec                memcpy
- *fill*         0x08002e20       0x20 
+                0x08001c94                initializeThreadXMemory
+                0x08001ca8                initializeMemory
+                0x08001cbc                initializeSystem
+ .text          0x08001ddc      0x3f4 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+                0x08001ddc                task_blink
+                0x08001e04                tx_application_define
+                0x08001efc                test_function
+                0x08001f14                delay_function
+                0x08001f2c                test_SPI_communication()
+                0x08002144                xmc4200_spi_test()
+                0x080021a0                main
+ .text          0x080021d0      0x8c4 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+                0x080021d0                radioDataReceived_callback
+                0x080021ec                radioOperationDone_callback
+                0x08002208                task_wireless_comm_init
+                0x0800225c                task_wireless_comm_write_settings
+                0x080027f0                task_wireless_comm_update_radio_stats
+                0x080028c8                task_wireless_comm_process_request
+                0x080028ec                task_wireless_comm_process_request_radio_stats
+                0x08002928                task_wireless_comm
+ *fill*         0x08002a94        0xc 
+ .text          0x08002aa0       0x80 CMakeFiles/STM32G474RET6.elf.dir/Core/Src/tx_initialize_low_level.S.obj
+                0x08002aa0                _tx_initialize_low_level
+                0x08002ae4                __tx_BadHandler
+                0x08002ae8                __tx_HardfaultHandler
+                0x08002aec                __tx_SVCallHandler
+                0x08002af0                __tx_IntHandler
+                0x08002af8                __tx_SysTickHandler
+                0x08002af8                SysTick_Handler
+                0x08002b04                __tx_NMIHandler
+                0x08002b08                __tx_DBGHandler
+ .text          0x08002b20       0xc0 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.S.obj
+                0x08002b20                _tx_thread_schedule
+                0x08002b4c                PendSV_Handler
+                0x08002b4c                __tx_PendSVHandler
+                0x08002bce                tx_thread_fpu_disable
+                0x08002bce                tx_thread_fpu_enable
+ .text          0x08002be0       0x40 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.S.obj
+                0x08002be0                _tx_thread_stack_build
+ .text          0x08002c20       0xb8 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.S.obj
+                0x08002c20                _tx_timer_interrupt
+ .text          0x08002cd8       0x30 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x08002cd8                __aeabi_uldivmod
+ .text          0x08002d08        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x08002d08                __aeabi_idiv0
+                0x08002d08                __aeabi_ldiv0
+ .text          0x08002d0c      0x134 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
+                0x08002d0c                memcpy
  .text          0x08002e40       0xd8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
                 0x08002e40                strlen
  *fill*         0x08002f18        0x8 
@@ -21217,7 +21216,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_rnglists
                 0x00001947       0x14 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_thread_create.c.obj
 
-.debug_macro    0x00000000    0x32350
+.debug_macro    0x00000000    0x32354
  .debug_macro   0x00000000      0x272 CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_macro   0x00000272      0xacc CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_macro   0x00000d3e      0x173 CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
@@ -21334,97 +21333,97 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_macro   0x0002af51       0x3a CMakeFiles/STM32G474RET6.elf.dir/Platform/Board/TrinityTrack6000_Config.c.obj
  .debug_macro   0x0002af8b       0x40 CMakeFiles/STM32G474RET6.elf.dir/Platform/Board/TrinityTrack6000_Config.c.obj
  .debug_macro   0x0002afcb      0x22d CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/EXTI_Callbacks.c.obj
- .debug_macro   0x0002b1f8      0x1c0 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/EXTI_Callbacks.c.obj
- .debug_macro   0x0002b3b8      0x224 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/HAL_Timer_Callbacks.c.obj
- .debug_macro   0x0002b5dc      0x22d CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/SPI_Callbacks.c.obj
- .debug_macro   0x0002b809       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/SPI_Callbacks.c.obj
- .debug_macro   0x0002b81f      0x237 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
- .debug_macro   0x0002ba56      0x2fe CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
- .debug_macro   0x0002bd54      0x349 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
- .debug_macro   0x0002c09d       0x56 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
- .debug_macro   0x0002c0f3      0x44c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002c53f      0x1f2 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002c731       0x10 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002c741       0xc1 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002c802       0xed CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002c8ef      0x45d CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cd4c       0x10 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cd5c       0x1c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cd78       0xde CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002ce56       0x76 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cecc       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cee2       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cef8       0x3a CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cf32       0x1c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cf4e       0x22 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cf70       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cf86       0x28 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cfae       0x1c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cfca       0x22 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_macro   0x0002cfec      0x461 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002d44d       0x16 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002d463       0x16 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002d479       0x10 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002d489      0x955 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002ddde       0x16 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002ddf4       0x64 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_macro   0x0002de58      0x3bf CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
- .debug_macro   0x0002e217       0x1c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
- .debug_macro   0x0002e233       0x4c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
- .debug_macro   0x0002e27f       0x22 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
- .debug_macro   0x0002e2a1      0x337 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
- .debug_macro   0x0002e5d8       0x16 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
- .debug_macro   0x0002e5ee       0x10 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
- .debug_macro   0x0002e5fe      0x379 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_SystemDispatcher.c.obj
- .debug_macro   0x0002e977      0x42d CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
- .debug_macro   0x0002eda4      0x11c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
- .debug_macro   0x0002eec0       0xa2 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
- .debug_macro   0x0002ef62      0x138 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
- .debug_macro   0x0002f09a      0x22d CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_macro   0x0002f2c7      0x393 CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_macro   0x0002f65a      0x16d CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_macro   0x0002f7c7      0x1a2 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002f969       0x34 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002f99d       0x23 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002f9c0       0x29 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002f9e9       0x2f CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002fa18       0x35 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002fa4d       0x29 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002fa76       0x29 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002fa9f       0x3b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_macro   0x0002fada      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.c.obj
- .debug_macro   0x0002fc37      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_cleanup.c.obj
- .debug_macro   0x0002fd8b       0x23 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_cleanup.c.obj
- .debug_macro   0x0002fdae      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_create.c.obj
- .debug_macro   0x0002ff02      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_receive.c.obj
- .debug_macro   0x0003005f      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_send.c.obj
- .debug_macro   0x000301bc      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.c.obj
- .debug_macro   0x00030310      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_create.c.obj
- .debug_macro   0x00030464      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_get.c.obj
- .debug_macro   0x000305c1      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_put.c.obj
- .debug_macro   0x0003071e      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_create.c.obj
- .debug_macro   0x0003087b      0x15a CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_initialize.c.obj
- .debug_macro   0x000309d5      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_shell_entry.c.obj
- .debug_macro   0x00030b20      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_sleep.c.obj
- .debug_macro   0x00030c7d      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.c.obj
- .debug_macro   0x00030dc8      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_resume.c.obj
- .debug_macro   0x00030f25      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_suspend.c.obj
- .debug_macro   0x00031082      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_time_slice.c.obj
- .debug_macro   0x000311df      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_timeout.c.obj
- .debug_macro   0x00031333      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_expiration_process.c.obj
- .debug_macro   0x00031487      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_initialize.c.obj
- .debug_macro   0x000315db      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_activate.c.obj
- .debug_macro   0x00031726      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.c.obj
- .debug_macro   0x00031871      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_thread_entry.c.obj
- .debug_macro   0x000319c5      0x166 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_create.c.obj
- .debug_macro   0x00031b2b      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_receive.c.obj
- .debug_macro   0x00031c88      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_send.c.obj
- .debug_macro   0x00031de5      0x166 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_create.c.obj
- .debug_macro   0x00031f4b      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_get.c.obj
- .debug_macro   0x000320a8      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_put.c.obj
- .debug_macro   0x000321f3      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_thread_create.c.obj
+ .debug_macro   0x0002b1f8      0x1c4 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/EXTI_Callbacks.c.obj
+ .debug_macro   0x0002b3bc      0x224 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/HAL_Timer_Callbacks.c.obj
+ .debug_macro   0x0002b5e0      0x22d CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/SPI_Callbacks.c.obj
+ .debug_macro   0x0002b80d       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/SPI_Callbacks.c.obj
+ .debug_macro   0x0002b823      0x237 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
+ .debug_macro   0x0002ba5a      0x2fe CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
+ .debug_macro   0x0002bd58      0x349 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
+ .debug_macro   0x0002c0a1       0x56 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
+ .debug_macro   0x0002c0f7      0x44c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002c543      0x1f2 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002c735       0x10 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002c745       0xc1 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002c806       0xed CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002c8f3      0x45d CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cd50       0x10 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cd60       0x1c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cd7c       0xde CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002ce5a       0x76 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002ced0       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cee6       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cefc       0x3a CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cf36       0x1c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cf52       0x22 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cf74       0x16 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cf8a       0x28 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cfb2       0x1c CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cfce       0x22 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_macro   0x0002cff0      0x461 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002d451       0x16 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002d467       0x16 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002d47d       0x10 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002d48d      0x955 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002dde2       0x16 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002ddf8       0x64 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_macro   0x0002de5c      0x3bf CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
+ .debug_macro   0x0002e21b       0x1c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
+ .debug_macro   0x0002e237       0x4c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
+ .debug_macro   0x0002e283       0x22 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
+ .debug_macro   0x0002e2a5      0x337 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
+ .debug_macro   0x0002e5dc       0x16 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
+ .debug_macro   0x0002e5f2       0x10 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
+ .debug_macro   0x0002e602      0x379 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_SystemDispatcher.c.obj
+ .debug_macro   0x0002e97b      0x42d CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+ .debug_macro   0x0002eda8      0x11c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+ .debug_macro   0x0002eec4       0xa2 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+ .debug_macro   0x0002ef66      0x138 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+ .debug_macro   0x0002f09e      0x22d CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_macro   0x0002f2cb      0x393 CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x0002f65e      0x16d CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_macro   0x0002f7cb      0x1a2 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002f96d       0x34 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002f9a1       0x23 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002f9c4       0x29 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002f9ed       0x2f CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002fa1c       0x35 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002fa51       0x29 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002fa7a       0x29 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002faa3       0x3b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_macro   0x0002fade      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.c.obj
+ .debug_macro   0x0002fc3b      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_cleanup.c.obj
+ .debug_macro   0x0002fd8f       0x23 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_cleanup.c.obj
+ .debug_macro   0x0002fdb2      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_create.c.obj
+ .debug_macro   0x0002ff06      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_receive.c.obj
+ .debug_macro   0x00030063      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_send.c.obj
+ .debug_macro   0x000301c0      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.c.obj
+ .debug_macro   0x00030314      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_create.c.obj
+ .debug_macro   0x00030468      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_get.c.obj
+ .debug_macro   0x000305c5      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_put.c.obj
+ .debug_macro   0x00030722      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_create.c.obj
+ .debug_macro   0x0003087f      0x15a CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_initialize.c.obj
+ .debug_macro   0x000309d9      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_shell_entry.c.obj
+ .debug_macro   0x00030b24      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_sleep.c.obj
+ .debug_macro   0x00030c81      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.c.obj
+ .debug_macro   0x00030dcc      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_resume.c.obj
+ .debug_macro   0x00030f29      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_suspend.c.obj
+ .debug_macro   0x00031086      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_time_slice.c.obj
+ .debug_macro   0x000311e3      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_timeout.c.obj
+ .debug_macro   0x00031337      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_expiration_process.c.obj
+ .debug_macro   0x0003148b      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_initialize.c.obj
+ .debug_macro   0x000315df      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_activate.c.obj
+ .debug_macro   0x0003172a      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.c.obj
+ .debug_macro   0x00031875      0x154 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_thread_entry.c.obj
+ .debug_macro   0x000319c9      0x166 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_create.c.obj
+ .debug_macro   0x00031b2f      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_receive.c.obj
+ .debug_macro   0x00031c8c      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_send.c.obj
+ .debug_macro   0x00031de9      0x166 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_create.c.obj
+ .debug_macro   0x00031f4f      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_get.c.obj
+ .debug_macro   0x000320ac      0x14b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_put.c.obj
+ .debug_macro   0x000321f7      0x15d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_thread_create.c.obj
 
-.debug_line     0x00000000    0x36e63
+.debug_line     0x00000000    0x36e70
  .debug_line    0x00000000      0xc6c CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_line    0x00000c6c     0x233a CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_line    0x00002fa6     0x1cae CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -21457,45 +21456,45 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .debug_line    0x000225b2      0x8b9 CMakeFiles/STM32G474RET6.elf.dir/Platform/Callbacks/USART_Callbacks.c.obj
  .debug_line    0x00022e6b      0xb20 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/SPI1_Dma/SPI1_Dma.c.obj
  .debug_line    0x0002398b      0xda5 CMakeFiles/STM32G474RET6.elf.dir/Platform/LL/USART3_Dma/USART3_Dma.c.obj
- .debug_line    0x00024730     0x1798 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
- .debug_line    0x00025ec8     0x11b1 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
- .debug_line    0x00027079     0x137c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
- .debug_line    0x000283f5      0x9f6 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
- .debug_line    0x00028deb      0xca8 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_SystemDispatcher.c.obj
- .debug_line    0x00029a93     0x13a3 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
- .debug_line    0x0002ae36      0x855 CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
- .debug_line    0x0002b68b     0x1092 CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
- .debug_line    0x0002c71d      0x53e CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
- .debug_line    0x0002cc5b      0x4dd CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.c.obj
- .debug_line    0x0002d138      0x55b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_cleanup.c.obj
- .debug_line    0x0002d693      0x51f CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_create.c.obj
- .debug_line    0x0002dbb2      0x692 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_receive.c.obj
- .debug_line    0x0002e244      0x628 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_send.c.obj
- .debug_line    0x0002e86c      0x55c CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.c.obj
- .debug_line    0x0002edc8      0x509 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_create.c.obj
- .debug_line    0x0002f2d1      0x581 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_get.c.obj
- .debug_line    0x0002f852      0x541 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_put.c.obj
- .debug_line    0x0002fd93      0x5cc CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_create.c.obj
- .debug_line    0x0003035f      0x4d3 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_initialize.c.obj
- .debug_line    0x00030832      0x54a CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_shell_entry.c.obj
- .debug_line    0x00030d7c      0x586 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_sleep.c.obj
- .debug_line    0x00031302      0x4f2 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.c.obj
- .debug_line    0x000317f4      0x655 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_resume.c.obj
- .debug_line    0x00031e49      0x70a CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_suspend.c.obj
- .debug_line    0x00032553      0x517 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_time_slice.c.obj
- .debug_line    0x00032a6a      0x507 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_timeout.c.obj
- .debug_line    0x00032f71      0x4e6 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_expiration_process.c.obj
- .debug_line    0x00033457      0x4ea CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_initialize.c.obj
- .debug_line    0x00033941      0x4ed CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_activate.c.obj
- .debug_line    0x00033e2e      0x4ca CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.c.obj
- .debug_line    0x000342f8      0x62d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_thread_entry.c.obj
- .debug_line    0x00034925      0x5cf CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_create.c.obj
- .debug_line    0x00034ef4      0x501 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_receive.c.obj
- .debug_line    0x000353f5      0x4fe CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_send.c.obj
- .debug_line    0x000358f3      0x5bf CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_create.c.obj
- .debug_line    0x00035eb2      0x4ff CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_get.c.obj
- .debug_line    0x000363b1      0x4ad CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_put.c.obj
- .debug_line    0x0003685e      0x605 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_thread_create.c.obj
+ .debug_line    0x00024730     0x17a5 CMakeFiles/STM32G474RET6.elf.dir/Platform/Startup/TrinityTrack6000_Init.cpp.obj
+ .debug_line    0x00025ed5     0x11b1 CMakeFiles/STM32G474RET6.elf.dir/Src/main.cpp.obj
+ .debug_line    0x00027086     0x137c CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_CLI.c.obj
+ .debug_line    0x00028402      0x9f6 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_McuAnalog.c.obj
+ .debug_line    0x00028df8      0xca8 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_SystemDispatcher.c.obj
+ .debug_line    0x00029aa0     0x13a3 CMakeFiles/STM32G474RET6.elf.dir/Tasks/task_WirelessComm.cpp.obj
+ .debug_line    0x0002ae43      0x855 CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_Errors.c.obj
+ .debug_line    0x0002b698     0x1092 CMakeFiles/STM32G474RET6.elf.dir/Utils/TrinityTrack6000_MemInfo.c.obj
+ .debug_line    0x0002c72a      0x53e CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_high_level.c.obj
+ .debug_line    0x0002cc68      0x4dd CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.c.obj
+ .debug_line    0x0002d145      0x55b CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_cleanup.c.obj
+ .debug_line    0x0002d6a0      0x51f CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_create.c.obj
+ .debug_line    0x0002dbbf      0x692 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_receive.c.obj
+ .debug_line    0x0002e251      0x628 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_queue_send.c.obj
+ .debug_line    0x0002e879      0x55c CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.c.obj
+ .debug_line    0x0002edd5      0x509 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_create.c.obj
+ .debug_line    0x0002f2de      0x581 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_get.c.obj
+ .debug_line    0x0002f85f      0x541 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_semaphore_put.c.obj
+ .debug_line    0x0002fda0      0x5cc CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_create.c.obj
+ .debug_line    0x0003036c      0x4d3 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_initialize.c.obj
+ .debug_line    0x0003083f      0x54a CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_shell_entry.c.obj
+ .debug_line    0x00030d89      0x586 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_sleep.c.obj
+ .debug_line    0x0003130f      0x4f2 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.c.obj
+ .debug_line    0x00031801      0x655 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_resume.c.obj
+ .debug_line    0x00031e56      0x70a CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_system_suspend.c.obj
+ .debug_line    0x00032560      0x517 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_time_slice.c.obj
+ .debug_line    0x00032a77      0x507 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_thread_timeout.c.obj
+ .debug_line    0x00032f7e      0x4e6 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_expiration_process.c.obj
+ .debug_line    0x00033464      0x4ea CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_initialize.c.obj
+ .debug_line    0x0003394e      0x4ed CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_activate.c.obj
+ .debug_line    0x00033e3b      0x4ca CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.c.obj
+ .debug_line    0x00034305      0x62d CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/tx_timer_thread_entry.c.obj
+ .debug_line    0x00034932      0x5cf CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_create.c.obj
+ .debug_line    0x00034f01      0x501 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_receive.c.obj
+ .debug_line    0x00035402      0x4fe CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_queue_send.c.obj
+ .debug_line    0x00035900      0x5bf CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_create.c.obj
+ .debug_line    0x00035ebf      0x4ff CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_get.c.obj
+ .debug_line    0x000363be      0x4ad CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_semaphore_put.c.obj
+ .debug_line    0x0003686b      0x605 CMakeFiles/STM32G474RET6.elf.dir/Middlewares/ST/threadx/common/src/txe_thread_create.c.obj
 
 .debug_str      0x00000000   0x12a9e2
  .debug_str     0x00000000   0x12a9e2 CMakeFiles/STM32G474RET6.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
