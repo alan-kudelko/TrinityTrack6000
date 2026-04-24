@@ -18,7 +18,7 @@ The system includes **robust diagnostics and fault-handling mechanisms**, such a
 
 The project follows **MISRA C:2025** guidelines to ensure code safety, maintainability and portability.
 
-![PCB Top](/MainControlBoard/Media/PCB_Top.png)
+![PCB View1](/MainControlBoard/Media/PCB_View1.jpg)
 
 **4-layer PCB with RF (SMA), GNSS and dual-MCU architecture**
 
