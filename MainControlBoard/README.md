@@ -773,8 +773,11 @@ In practice, slightly lower nominal inductance values are selected to compensate
 
 **STM32 MCU substitution:**
 - U1 (STM32G473RET6)
-- Due to limited availability, **STM32G474RET6** is used instead
-- Fully pin-compatible and firmware-compatible with STM32G473RET6
+- Due to limited availability, compatible substitutes can be used:
+  - **STM32G474RET6**
+  - **STM32G483RET6**
+  - **STM32G484RET6** *(preferred – currently available)*  
+- All listed devices are pin-compatible and largely firmware-compatible within the STM32G4 family  
 - No hardware modifications required
 
 **General notes:**
