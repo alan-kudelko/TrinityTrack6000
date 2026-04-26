@@ -45,7 +45,7 @@ static NRF_SETTINGS nrf_default_settings{
     NRF_BIT_AW1|NRF_BIT_AW0, // setup_aw
     0x00, // setup_retr
     NRF_BIT_RF_CH1|NRF_BIT_RF_CH5|NRF_BIT_RF_CH4, // rf_ch
-    NRF_BIT_RF_PWR2|NRF_BIT_RF_PWR1|NRF_BIT_RF_LNA_HCURR, // rf_setup
+    NRF_BIT_RF_PWR2|NRF_BIT_RF_PWR1, // rf_setup
     RADIO_DEFAULT_ADDRESS, // rx_addr_p0
     {0x00}, // rx_addr_p1
     0x00, // rx_addr_p2
@@ -275,7 +275,7 @@ extern "C" void task_wireless_comm_write_settings(NRF_SETTINGS*settings){
     }
     tx_semaphore_get(&task_wireless_comm_operation_done_sem,TX_WAIT_FOREVER);
 
-    tx_thread_sleep(3);
+    tx_thread_sleep(30);
 
     __HAL_GPIO_EXTI_CLEAR_IT(NRF24L01_IRQ_Pin);
     HAL_GPIO_WritePin(NRF24L01_CE_GPIO_Port,NRF24L01_CE_Pin,GPIO_PIN_SET);

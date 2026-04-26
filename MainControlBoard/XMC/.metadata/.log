@@ -14917,3 +14917,554 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 
 !ENTRY SOLVER 1 0 2026-04-20 20:19:09.468
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2026-04-26 18:12:43.139 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_222
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2026-04-26 18:13:14.044
+!MESSAGE USER_ACTION : Default solver exe path is: D:\Programy\4.5.0.202105191637\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2026-04-26 18:13:14.224
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2026-04-26 18:13:14.225
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2026-04-26 18:13:15.021
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2026-04-26 18:13:16.728
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 1699 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:17.108
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 9 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:18.259
+!MESSAGE USER_ACTION : Active project:XMC4200[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2026-04-26 18:13:21.735
+!MESSAGE Time Taken By De-Serialization  : 1820 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:13:21.779
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:22.385
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 4126 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:22.426
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 37 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:22.451
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 24 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:22.454
+!MESSAGE USER_ACTION : Time taken for updating views is: 2 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:24.955
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2500 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:26.606
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 9507 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:13:27.148
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:13:27.310
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:13:27.983
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:13:27.994
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:13:28.051
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:13:28.051
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:13:28.118
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:13:29.534
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/CE/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:13:29.724
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/ARM-GCC-Update/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:13:29.924
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/Solver_emWin_update/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:13:30.103
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/Debugger/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-04-26 18:13:43.070
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-04-26 18:13:43.071
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.resources 4 372 2026-04-26 18:13:43.075
+!MESSAGE Resource '/XMC4500' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2026-04-26 18:13:43.076
+!MESSAGE Resource '/XMC4502F100F768ACXQMA1' is not open.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-04-26 18:13:44.539
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-04-26 18:13:45.747
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.ui 4 4 2026-04-26 18:13:49.097
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction in org.eclipse.debug.ui)} vs {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction in com.dave.activeproject)}
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-04-26 18:14:32.626
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3c090f3b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2026-04-26 18:14:32.627
+!MESSAGE Context cannot be suspended.
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:14:51.988
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:14:52.140
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-04-26 18:14:52.347
+!MESSAGE Time Taken By Serialization  : 206 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:14:52.401
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:14:52.634
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 238 msec 
+
+!ENTRY SOLVER 1 0 2026-04-26 18:14:52.634
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-04-26 18:14:52.890
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-26 18:14:57.193
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-04-26 18:21:15.233 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_222
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2026-04-26 18:21:30.410
+!MESSAGE USER_ACTION : Default solver exe path is: D:\Programy\4.5.0.202105191637\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2026-04-26 18:21:30.492
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2026-04-26 18:21:30.492
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2026-04-26 18:21:30.673
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2026-04-26 18:21:31.300
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 280 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:31.432
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:32.610
+!MESSAGE USER_ACTION : Active project:XMC4200[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2026-04-26 18:21:34.864
+!MESSAGE Time Taken By De-Serialization  : 1623 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:21:34.879
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:35.221
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 2611 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:35.260
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 35 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:35.272
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 12 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:35.274
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:37.582
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2308 msec 
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2026-04-26 18:21:38.852
+!MESSAGE Project facet jst.ejb has not been defined. It is used in plugin org.eclipse.jst.j2ee.
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:38.904
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 7475 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:21:39.407
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:21:39.448
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:21:39.736
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:21:39.737
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:21:39.809
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:21:39.809
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-04-26 18:21:39.881
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:21:41.203
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/CE/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:21:41.373
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/ARM-GCC-Update/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:21:41.549
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/Solver_emWin_update/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-04-26 18:21:41.734
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/Debugger/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-04-26 18:22:11.683
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-04-26 18:22:11.684
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.resources 4 372 2026-04-26 18:22:11.691
+!MESSAGE Resource '/XMC4500' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2026-04-26 18:22:11.691
+!MESSAGE Resource '/XMC4502F100F768ACXQMA1' is not open.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-04-26 18:22:12.302
+!MESSAGE C:/Program Files/SEGGER/JLink_V878/JLinkGDBServerCL.exe -if swd -device XMC4200-F64x256 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2026-04-26 18:22:12.684
+!MESSAGE D:\Programy\4.5.0.202105191637\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:52:23.431
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:52:23.564
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-04-26 18:52:23.914
+!MESSAGE Time Taken By Serialization  : 348 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-04-26 18:52:23.970
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-04-26 18:52:24.054
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 93 msec 
+
+!ENTRY SOLVER 1 0 2026-04-26 18:52:24.054
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-04-26 18:52:24.318
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-26 18:52:29.815
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob

@@ -31,7 +31,7 @@ const char msg_init_mcu_initialized_info[]         ="[SYS][0x00][  OK  ] System 
 const char msg_init_memory_initialized_info[]      ="[SYS][0x01][  OK  ] Memory ready\r\n";
 const char msg_init_threadx_startup_info[]         ="[SYS][0xA0][  OK  ] ThreadX starting up...\r\n";
 
-extern "C" void usart1_dma_init(void);
+extern "C" void usart3_dma_init(void);
 extern "C" void spi1_dma_init(void);
 extern "C" void nrf24l01_init(void);
 
@@ -562,13 +562,13 @@ void MX_DMA_Init(void){
   HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
   /* DMA1_Channel7_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel7_IRQn);
   /* DMA2_Channel3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Channel3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Channel3_IRQn);
   /* DMA1_Channel8_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel8_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel8_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel8_IRQn);
 }
 
@@ -734,12 +734,6 @@ void initializeMemory(void){
 
 void initializeSystem(){
 // STM32CubeIDE generated initialization sequence
-  __disable_irq();
-  for(int i= 0;i<8;i++) {
-    NVIC->ICER[i]=0xFFFFFFFF; // disable IRQs
-    NVIC->ICPR[i]=0xFFFFFFFF; // clear pending IRQs
-  }
-
   HAL_Init();
 	SystemClock_Config();
   MX_GPIO_Init();
@@ -755,17 +749,17 @@ void initializeSystem(){
   MX_TIM1_Init();
   MX_TIM20_Init();
 
-  __enable_irq();
-
+  HAL_Delay(10);
 	__HAL_DMA_DISABLE_IT(&hdma_adc1,DMA_IT_HT);
 	__HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_HT3);
   HAL_ADCEx_Calibration_Start(&hadc1,ADC_SINGLE_ENDED);
 
 // Timers initialization
 
-  usart1_dma_init();
+  usart3_dma_init();
   spi1_dma_init();
 
+  HAL_Delay(10);
 	while(usart3_dma_enq_data((uint8_t*)msg_init_mcu_initialized_info,strlen(msg_init_mcu_initialized_info))!=true){
 		HAL_Delay(10);
 	}

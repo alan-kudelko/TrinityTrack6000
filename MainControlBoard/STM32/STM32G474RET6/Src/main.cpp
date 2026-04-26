@@ -249,7 +249,7 @@ int main(void){
 
     uint32_t adc_buffer[4]{0};
     //nrf24l01_init();
-    xmc4200_spi_test();
+    //xmc4200_spi_test();
     while(false){
         HAL_ADC_Start_DMA(&hadc1,adc_buffer,4);
         

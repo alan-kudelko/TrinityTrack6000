@@ -2387,3 +2387,210 @@ arm-none-eabi-size  Test.elf
    5688	     12	   1572	   7272	   1c68	Test.elf
 Finished building: default.size.stdout
  
+18:13:04 **** Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:14:57 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:32:41 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:42:18 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:49:59 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+19:04:15 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+19:49:29 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:40:48 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:40:38 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:45:13 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:46:16 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:47:39 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:48:41 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:49:09 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:49:53 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:51:45 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:52:21 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:54:36 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:58:07 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:59:44 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+22:00:27 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+22:02:16 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+22:03:07 **** Incremental Build of configuration Debug for project STM32G474RET6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -DTX_INCLUDE_USER_DEFINE_FILE -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../AZURE_RTOS/App -I../Middlewares/ST/threadx/common/inc/ -I../Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+../Core/Src/stm32g4xx_it.c:25:10: fatal error: USART3_Dma.h: No such file or directory
+   25 | #include <USART3_Dma.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:47: Core/Src/stm32g4xx_it.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.

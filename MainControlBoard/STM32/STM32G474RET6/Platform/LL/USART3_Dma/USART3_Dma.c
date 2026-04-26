@@ -47,7 +47,7 @@ extern DMA_HandleTypeDef hdma_usart3_rx;
 
 extern void callback_cli_data_received(void);
 
-void usart1_dma_init(void){
+void usart3_dma_init(void){
     // Initialize ring buffer variables
     // all variables are stored in .dmaBuff section in CCSRAM memory region for faster access
     huart3_dma_rx_old_pos=0;
@@ -102,9 +102,9 @@ bool usart3_dma_enq_data(const uint8_t*data,const uint16_t length){
             // Check if data will fit into DMA buffer
             usart3_dma_copy_to_tx_buffer(huart3_dma_tx_buffer);
             huart3_dma_tx_active=true;
+            __enable_irq();
             HAL_UART_Transmit_DMA(&huart3,huart3_dma_tx_buffer,huart3_dma_tx_buffer_length);
         }
-        __enable_irq();
         // If DMA is active, data will be sent upon DMA completion interrupt
         return true;
     }
@@ -157,7 +157,7 @@ bool usart3_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength){
     }
     // Disable only USART3 and DMA1_Channel7 interrupts to avoid inconsistencies during buffer update
     __NVIC_DisableIRQ(DMA1_Channel7_IRQn);
-    __NVIC_DisableIRQ(USART1_IRQn);
+    __NVIC_DisableIRQ(USART3_IRQn);
     // Check if there is data available in the receive ring buffer
     // This is correct
     if(huart3_dma_rx_ring_buffer_length==0){
@@ -230,7 +230,7 @@ bool usart3_dma_read_data(uint8_t*dst,uint16_t*length,const uint16_t maxLength){
             huart3_dma_rx_ring_buffer_tail=huart3_dma_rx_ring_buffer_head;
             huart3_dma_rx_ring_buffer_length=0;
             __NVIC_EnableIRQ(DMA1_Channel7_IRQn);
-            __NVIC_EnableIRQ(USART1_IRQn);
+            __NVIC_EnableIRQ(USART3_IRQn);
             return false;
     }
 }

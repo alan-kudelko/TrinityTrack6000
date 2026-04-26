@@ -32,7 +32,7 @@
 #include <tx_api.h>
 
 /**
- * @brief USART1 DMA Buffers Configuration
+ * @brief USART3 DMA Buffers Configuration
  * @defgroup DMA_Buffers_Config DMA Buffers Configuration
  * @{
  */
@@ -59,7 +59,7 @@
 /**
  * @brief Initializes USART3 DMA functionality, ring buffers and variables.
  * @note This function must be called before using any other USART3 DMA functions.
- * It sets up the necessary buffers and prepares USART1 for DMA operations.
+ * It sets up the necessary buffers and prepares USART3 for DMA operations.
  * @warning This function should be called only once during system initialization.
  */
 extern void usart3_dma_init(void);

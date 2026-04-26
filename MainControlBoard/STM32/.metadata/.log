@@ -4971,3 +4971,351 @@ Error finishing flash operation
 java.lang.Exception: Error finishing flash operation
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SESSION 2026-04-23 22:37:46.037 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-23 22:38:15.168
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-23 22:38:15.169
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-23 22:38:23.309
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-23 22:38:36.872
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-04-23 23:15:02.613 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-23 23:15:10.322
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-23 23:15:10.323
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-23 23:15:15.205
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-23 23:15:18.200
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-04-24 22:29:20.074 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-24 22:29:53.869
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-24 22:29:53.870
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-24 22:30:03.468
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-24 22:30:17.771
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-04-26 18:11:52.620 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-26 18:12:40.889
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-26 18:12:40.890
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-26 18:12:49.489
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-26 18:12:59.753
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2026-04-26 18:13:28.323
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-04-26 18:13:28.324
+!MESSAGE Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SESSION 2026-04-26 20:40:25.169 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-26 20:40:34.562
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-26 20:40:34.564
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-26 20:40:40.921
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-26 20:40:47.239
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-04-26 21:39:52.340 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-26 21:40:09.279
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-26 21:40:09.280
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-26 21:40:16.624
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-26 21:40:23.453
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-04-26 23:14:27.589 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-26 23:14:38.994
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-26 23:14:38.996
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-26 23:14:45.532
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-26 23:14:52.677
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-26 23:14:53.407
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$39 RUNNING
+	 at java.desktop/sun.font.FileFontStrike._getGlyphImageFromWindows(Native Method)
+	 at java.desktop/sun.font.FileFontStrike.getGlyphImageFromWindows(FileFontStrike.java:304)
+	 at java.desktop/sun.font.FileFontStrike.getGlyphImageFromNative(FileFontStrike.java:282)
+	 at java.desktop/sun.font.FileFontStrike.getGlyphImagePtr(FileFontStrike.java:355)
+	 at java.desktop/sun.font.FileFontStrike.getGlyphAdvance(FileFontStrike.java:661)
+	 at java.desktop/sun.font.FileFontStrike.getGlyphAdvance(FileFontStrike.java:572)
+	 at java.desktop/sun.font.CompositeStrike.getGlyphAdvance(CompositeStrike.java:149)
+	 at java.desktop/sun.font.CompositeStrike.getCodePointAdvance(CompositeStrike.java:160)
+	 at java.desktop/sun.font.FontDesignMetrics.handleCharWidth(FontDesignMetrics.java:414)
+	 at java.desktop/sun.font.FontDesignMetrics.getLatinCharWidth(FontDesignMetrics.java:423)
+	 at java.desktop/sun.font.FontDesignMetrics.charsWidth(FontDesignMetrics.java:505)
+	 at java.desktop/sun.swing.SwingUtilities2.getFontCharsWidth(SwingUtilities2.java:961)
+	 at java.desktop/javax.swing.text.Utilities.getTabbedTextWidth(Utilities.java:365)
+	 at java.desktop/javax.swing.text.Utilities.getTabbedTextWidth(Utilities.java:287)
+	 at java.desktop/javax.swing.text.GlyphPainter1.getSpan(GlyphPainter1.java:63)
+	 at java.desktop/javax.swing.text.GlyphView.getPreferredSpan(GlyphView.java:585)
+	 at java.desktop/javax.swing.text.FlowView$LogicalView.getPreferredSpan(FlowView.java:753)
+	 at java.desktop/javax.swing.text.FlowView.calculateMinorAxisRequirements(FlowView.java:241)
+	 at java.desktop/javax.swing.text.ParagraphView.calculateMinorAxisRequirements(ParagraphView.java:709)
+	 at java.desktop/javax.swing.text.html.ParagraphView.calculateMinorAxisRequirements(ParagraphView.java:162)
+	 at java.desktop/javax.swing.text.BoxView.checkRequests(BoxView.java:936)
+	 at java.desktop/javax.swing.text.BoxView.getMinimumSpan(BoxView.java:569)
+	 at java.desktop/javax.swing.text.html.ParagraphView.getMinimumSpan(ParagraphView.java:275)
+	 at java.desktop/javax.swing.text.BoxView.calculateMinorAxisRequirements(BoxView.java:904)
+	 at java.desktop/javax.swing.text.html.BlockView.calculateMinorAxisRequirements(BlockView.java:146)
+	 at java.desktop/javax.swing.text.BoxView.checkRequests(BoxView.java:936)
+	 at java.desktop/javax.swing.text.BoxView.getMinimumSpan(BoxView.java:569)
+	 at java.desktop/javax.swing.text.html.BlockView.getMinimumSpan(BlockView.java:378)
+	 at java.desktop/javax.swing.text.BoxView.calculateMinorAxisRequirements(BoxView.java:904)
+	 at java.desktop/javax.swing.text.html.BlockView.calculateMinorAxisRequirements(BlockView.java:146)
+	 at java.desktop/javax.swing.text.BoxView.checkRequests(BoxView.java:936)
+	 at java.desktop/javax.swing.text.BoxView.getPreferredSpan(BoxView.java:546)
+	 at java.desktop/javax.swing.text.html.BlockView.getPreferredSpan(BlockView.java:362)
+	 at java.desktop/javax.swing.plaf.basic.BasicHTML$Renderer.<init>(BasicHTML.java:452)
+	 at java.desktop/javax.swing.plaf.basic.BasicHTML.createHTMLView(BasicHTML.java:78)
+	 at java.desktop/javax.swing.plaf.basic.BasicHTML.updateRenderer(BasicHTML.java:225)
+	 at java.desktop/javax.swing.plaf.basic.BasicLabelUI.propertyChange(BasicLabelUI.java:493)
+	 at java.desktop/java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343)
+	 at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335)
+	 at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268)
+	 at java.desktop/java.awt.Component.firePropertyChange(Component.java:8717)
+	 at java.desktop/java.awt.Component.setFont(Component.java:1958)
+	 at java.desktop/java.awt.Container.setFont(Container.java:1780)
+	 at java.desktop/javax.swing.JComponent.setFont(JComponent.java:2823)
+	 at com.st.microxplorer.maingui.HomeProjectLinePanel.<init>(HomeProjectLinePanel.java:66)
+	 at com.st.microxplorer.maingui.HomeProjectPanel.updateOpenedProjectsList(HomeProjectPanel.java:90)
+	 at com.st.microxplorer.maingui.HomeProjectPanel.<init>(HomeProjectPanel.java:73)
+	 at com.st.microxplorer.maingui.HomePanel.InitStartupPanel(HomePanel.java:116)
+	 at com.st.microxplorer.maingui.HomePanel.<init>(HomePanel.java:81)
+	 at com.st.microxplorer.maingui.MainPanel.initialization(MainPanel.java:398)
+	 at com.st.microxplorer.maingui.AppletMainFrameCubeIde.init(AppletMainFrameCubeIde.java:242)
+	 at com.st.stm32cube.common.mx.core.CubeMxInstance.<init>(CubeMxInstance.java:117)
+	 at com.st.stm32cube.common.mx.core.CubeMxInstance.getInstance(CubeMxInstance.java:91)
+	 at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.<init>(UserAuthAdapter.java:25)
+	 at com.st.stm32cube.common.mx.userauth.UserAuthProvider.getUserAuthAdapter(UserAuthProvider.java:16)
+	 at com.st.stm32cube.common.ecosystemintegration.ui.core.MCUEcoSystemIntegrationUiHelper.getUserAuth(MCUEcoSystemIntegrationUiHelper.java:100)
+	 at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:32)
+	 at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	 at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	 at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	 at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2733)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
