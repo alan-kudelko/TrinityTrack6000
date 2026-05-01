@@ -24,7 +24,6 @@
 		      "${workspaceFolder}/Include",
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Tasks",
-          "${workspaceFolder}/Src",
 
           "${workspaceFolder}/Devices/MCP23S17",
           "${workspaceFolder}/Devices/NRF24L01",
@@ -55,7 +54,6 @@
           "${workspaceFolder}/Platform/Callbacks",
 
 		      "${workspaceFolder}/Include",
-          "${workspaceFolder}/Src",
           "${workspaceFolder}/Utils",
           "${workspaceFolder}/Tasks",
 

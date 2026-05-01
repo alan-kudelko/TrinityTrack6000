@@ -3,7 +3,7 @@
  * @{
  */
 
-#include <NRF24L01.h>
+#include <NRF24L01.hpp>
 
 #include <string.h>
 

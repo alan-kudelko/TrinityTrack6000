@@ -115,56 +115,56 @@ void systemDiagnostics_print_devices_Status(void){
     // serial data to process
 
 // Send System Diagnostics headers 1-3
-    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header1,strlen(msg_Diagnostics_header1),DEBUG_UART_TIMEOUT);
-    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header2,strlen(msg_Diagnostics_header2),DEBUG_UART_TIMEOUT);
-    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header3,strlen(msg_Diagnostics_header3),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header1,strlen(msg_Diagnostics_header1),1000);
+    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header2,strlen(msg_Diagnostics_header2),1000);
+    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header3,strlen(msg_Diagnostics_header3),1000);
 // Send System Diagnostics NRF24L01 status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_NRF_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.nrf_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics FM25L16B-GTR status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_FRAM_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.fram_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics MCP23S17 status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_MCP_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.mcp_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics ADXL345 status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_ADXL_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.adxl_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics L76K status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_GPS_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.gps_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics Infineon status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_Infineon_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.infineon_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics NXP status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_NXP_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.nxp_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics RENESANS status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_RENESANS_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.renesans_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics FPGA status
     snprintf(buffer,DIAGNOSTICS_LINE_BUFFER_SIZE,msg_Diagnostics_FPGA_status_formatString,
         msg_Diagnostics_device_status[g_SystemErrors.fpga_error]
     );
-    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)buffer,strlen(buffer),1000);
 // Send System Diagnostics footers
-    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header3,strlen(msg_Diagnostics_header3),DEBUG_UART_TIMEOUT);
-    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_footer1,strlen(msg_Diagnostics_footer1),DEBUG_UART_TIMEOUT);
-    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_footer2,strlen(msg_Diagnostics_footer2),DEBUG_UART_TIMEOUT);
+    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_header3,strlen(msg_Diagnostics_header3),1000);
+    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_footer1,strlen(msg_Diagnostics_footer1),1000);
+    HAL_UART_Transmit(&huart3,(uint8_t*)msg_Diagnostics_footer2,strlen(msg_Diagnostics_footer2),1000);
 }

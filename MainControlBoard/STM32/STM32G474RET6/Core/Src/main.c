@@ -67,7 +67,13 @@ DMA_HandleTypeDef hdma_usart3_rx;
 DMA_HandleTypeDef hdma_usart3_tx;
 
 /* USER CODE BEGIN PV */
+extern void usart3_dma_init(void);
+extern void spi1_dma_init(void);
+extern void initializeMemory(void);
 
+extern void task_CLI_create(void);
+extern void task_SystemDispatcher_create(void);
+extern void task_wireless_comm_create(void);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,7 +96,28 @@ static void MX_TIM20_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void xmc4200_spi_test(void){
+    uint8_t tx_data[10];
 
+    memset(tx_data,0xAA,10);
+
+    uint8_t rx_data[10]={0};
+
+    while(1){
+        HAL_GPIO_WritePin(INFINEON_CS_GPIO_Port,INFINEON_CS_Pin,GPIO_PIN_RESET);
+
+        HAL_SPI_TransmitReceive(&hspi2,tx_data,rx_data,10,1);
+        HAL_GPIO_WritePin(INFINEON_CS_GPIO_Port,INFINEON_CS_Pin,GPIO_PIN_SET);
+        HAL_Delay(1000);
+    }
+}
+
+void tx_application_define(void*first_unused_memory){
+    (void)first_unused_memory;
+    task_CLI_create();
+    task_SystemDispatcher_create();
+    task_wireless_comm_create();
+}
 /* USER CODE END 0 */
 
 /**
@@ -110,7 +137,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  // Disable global interrupts before all initialization is done
+  __disable_irq();
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -134,9 +162,36 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM20_Init();
   /* USER CODE BEGIN 2 */
+  // Clear all pending interrupts before enabling them to avoid unintended behavior
+  USART2->ICR=0xFFFFFFFF;
+  USART3->ICR=0xFFFFFFFF;
+  // ADC interrupts
+  ADC1->ISR=0xFFFFFFFF;
+  ADC2->ISR=0xFFFFFFFF;
+  // DMA interrupts
+  DMA1->IFCR=0xFFFFFFFF;
+  DMA2->IFCR=0xFFFFFFFF;
 
+  // EXTI pending
+  EXTI->PR1=0xFFFFFFFF;
+  EXTI->PR2=0xFFFFFFFF;
+
+  // NVIC pending
+  for(uint8_t i=0;i<8;i++) {
+      NVIC->ICPR[i]=0xFFFFFFFF;
+  }
+	__HAL_DMA_DISABLE_IT(&hdma_adc1,DMA_IT_HT);
+	__HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_HT3);
+
+  HAL_GPIO_WritePin(NRF24L01_PWR_GPIO_Port,NRF24L01_PWR_Pin,GPIO_PIN_RESET);
+
+  usart3_dma_init();
+  spi1_dma_init();
+
+  initializeMemory();
+
+  __enable_irq();
   /* USER CODE END 2 */
-
   MX_ThreadX_Init();
 
   /* We should never get here as control is now taken by the scheduler */
@@ -937,28 +992,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
-
-/**
-  * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM6 interrupt took place, inside
-  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-  * a global variable "uwTick" used as application time base.
-  * @param  htim : TIM handle
-  * @retval None
-  */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  /* USER CODE BEGIN Callback 0 */
-
-  /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM6)
-  {
-    HAL_IncTick();
-  }
-  /* USER CODE BEGIN Callback 1 */
-
-  /* USER CODE END Callback 1 */
-}
 
 /**
   * @brief  This function is executed in case of error occurrence.

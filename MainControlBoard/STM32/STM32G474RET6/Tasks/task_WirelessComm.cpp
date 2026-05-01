@@ -11,7 +11,7 @@
  * explicit written permission.
  */
 
-#include <task_WirelessComm.h>
+#include <task_WirelessComm.hpp>
 #include <TrinityTrack6000_Pinout.h>
 #include <USART3_Dma.h>
 #include <string.h>
@@ -108,7 +108,7 @@ extern "C" void radioOperationDone_callback(uint8_t event){
     tx_semaphore_put(&task_wireless_comm_operation_done_sem);
 }
 
-extern "C" void task_wireless_comm_init(void){
+extern "C" void task_wireless_comm_create(void){
     tx_semaphore_create(&task_wireless_comm_wakeup_sem,
        (char*)"Wireless Wakeup",
        0);
@@ -120,6 +120,17 @@ extern "C" void task_wireless_comm_init(void){
         sizeof(SystemRequest)/sizeof(uint32_t),
         task_wireless_comm_request_queue_storage,
         TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest));
+
+    tx_thread_create(&task_wireless_comm_handle,
+                    (char*)task_wireless_comm_name,
+                    task_wireless_comm,
+                    0,
+                    &task_wireless_comm_stack,
+                    sizeof(task_wireless_comm_stack),
+                    TASK_WIRELESS_COMM_PRIORITY,
+                    TASK_WIRELESS_COMM_PRIORITY,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
 }
 
 extern "C" void task_wireless_comm_write_settings(NRF_SETTINGS*settings){

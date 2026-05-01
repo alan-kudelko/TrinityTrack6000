@@ -32,7 +32,7 @@ extern DMA_HandleTypeDef hdma_spi1_rx;
 
 void spi1_dma_init(void){
     // Initialize ring buffer variables
-    // all variables are stored in .dmaBuff section in RAM2 memory region for faster access
+    // all variables are stored in .dmaBuff section in RAM2 memory region
     memset((void*)hspi1_transaction_buffer,0,sizeof(hspi1_transaction_buffer));
     hspi1_transaction_buffer_head=0;
     hspi1_transaction_buffer_tail=0;

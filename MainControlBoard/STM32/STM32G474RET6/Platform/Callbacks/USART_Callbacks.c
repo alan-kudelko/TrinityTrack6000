@@ -19,9 +19,6 @@
 extern void usart3_dma_tx_complete(void);
 //extern void usart2_dma_tx_complete(void);
 
-extern void usart3_dma_rx_complete(uint16_t dma_transfer_size);
-//extern void usart2_dma_rx_complete(void);
-
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef*huart){
     if(huart->Instance==USART3){
         usart3_dma_tx_complete();

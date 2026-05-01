@@ -102,15 +102,24 @@ void parse_cli_queue_request_radio_stats(SystemRequest*command){
     tx_queue_send(&task_wireless_comm_request_queue,command,0);
 }
 
-void task_SystemDispatcher_init(void){
-    // For now just a placeholder
+void task_SystemDispatcher_create(void){
     tx_queue_create(&task_cli_request_queue,
         "CLI Commands",
         sizeof(SystemRequest)/sizeof(uint32_t),
         task_cli_request_queue_storage,
         TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH*sizeof(SystemRequest));
 
-        system_mode=SYSTEM_MODE_FAILSAFE; // Temporary
+        system_mode=SYSTEM_MODE_FAILSAFE; // Temporary    
+    tx_thread_create(&task_SystemDispatcher_handle,
+                    (char*)task_SystemDispatcher_name,
+                    task_SystemDispatcher,
+                    0,
+                    &task_SystemDispatcher_stack,
+                    sizeof(task_SystemDispatcher_stack),
+                    TASKS_SYSTEM_DISPATCHER_PRIORITY,
+                    TASKS_SYSTEM_DISPATCHER_PRIORITY,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);
 }
 
 void task_SystemDispatcher(ULONG arg){

@@ -5319,3 +5319,440 @@ Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć okr
 	 at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
 	 at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2733)
 	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2026-04-28 23:07:35.799 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-28 23:08:46.587
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-28 23:08:46.588
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-28 23:08:54.306
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-28 23:09:04.809
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-04-28 23:15:01.220 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-28 23:15:14.188
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-28 23:15:14.190
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-28 23:15:25.790
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-28 23:15:34.230
+!MESSAGE Started RMI Server, listening on port 41338
+!SESSION 2026-04-28 23:23:09.270 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-28 23:23:21.069
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-28 23:23:21.070
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-28 23:23:30.827
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-28 23:23:43.717
+!MESSAGE Started RMI Server, listening on port 41338
+!SESSION 2026-04-29 00:35:36.714 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-29 00:35:46.549
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-29 00:35:46.552
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-29 00:35:53.092
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-29 00:36:13.695
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-04-30 00:27:09.093
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\build\Debug\STM32G474RET6.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-04-30 00:27:09.093
+!MESSAGE D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\build\Debug\STM32G474RET6.elf not found
+!STACK 0
+java.io.FileNotFoundException: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\build\Debug\STM32G474RET6.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2026-04-30 00:31:28.888
+!MESSAGE TimeoutException while shutting down launch com.st.stm32cube.ide.mcu.debug.launch.MCUGdbLaunch@573de22a
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-30 00:31:29.273
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$ErrorReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.io.PipedInputStream.read(PipedInputStream.java:332)
+	 at java.base/java.io.PipedInputStream.read(PipedInputStream.java:380)
+	 at java.base/java.io.InputStream.read(InputStream.java:220)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$ErrorReadJob.run(GdbBasicCliConsole.java:301)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-30 00:31:29.274
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$OutputReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.io.PipedInputStream.read(PipedInputStream.java:332)
+	 at java.base/java.io.PipedInputStream.read(PipedInputStream.java:380)
+	 at java.base/java.io.InputStream.read(InputStream.java:220)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$OutputReadJob.run(GdbBasicCliConsole.java:275)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-30 00:31:29.274
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2026-04-30 19:46:55.070 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-30 19:47:29.151
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-30 19:47:29.154
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-30 19:47:39.666
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-30 19:47:52.406
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-04-30 19:56:54.180
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@77c2e1d6): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-04-30 19:56:54.180
+!MESSAGE Suspend operation timeout.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-04-30 20:33:12.479
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@707260da): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-04-30 20:33:12.479
+!MESSAGE Suspend operation timeout.
+
+!ENTRY org.eclipse.cdt.dsf 4 -1 2026-04-30 22:12:23.240
+!MESSAGE Invocation exception when calling a service event handler method
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:541)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:408)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@6ae3fb94 is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:84)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:254)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:102)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	... 9 more
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4922)
+	at org.eclipse.swt.SWT.error(SWT.java:4837)
+	at org.eclipse.swt.SWT.error(SWT.java:4808)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1311)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:786)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:81)
+	... 12 more
+Root exception:
+java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@6ae3fb94 is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:84)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:254)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:102)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:541)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:408)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4922)
+	at org.eclipse.swt.SWT.error(SWT.java:4837)
+	at org.eclipse.swt.SWT.error(SWT.java:4808)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1311)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:786)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:81)
+	... 12 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-04-30 22:12:23.677
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:185)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:206)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:661)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-30 22:12:23.992
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:200)
+	 at org.eclipse.swt.widgets.Display.syncExec(Display.java:4855)
+	 at com.st.stm32cube.ide.mcu.debug.launch.Activator$DebugEventListener.inDebugPerspective(Activator.java:152)
+	 at com.st.stm32cube.ide.mcu.debug.launch.Activator$DebugEventListener.handleDebugEvents(Activator.java:85)
+	 at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1287)
+	 at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	 at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1321)
+	 at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-04-30 22:12:23.993
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2026-04-30 22:12:28.135 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-04-30 22:12:48.981
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-04-30 22:12:48.983
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-04-30 22:12:56.654
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-04-30 22:13:11.083
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-04-30 23:12:04.609
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@417862a2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2026-04-30 23:12:04.610
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2026-04-30 23:12:04.628
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2026-04-30 23:12:04.629
+!MESSAGE Setup exceptions
+!SESSION 2026-05-01 12:19:07.840 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-05-01 12:20:01.849
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-01 12:20:01.850
+!MESSAGE Log4j2 initialized with config file D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-05-01 12:20:10.419
+!MESSAGE Failed to obtain 'WinDefend' service state
+!STACK 0
+java.io.IOException: Cannot run program "powershell.exe": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runProcess(WindowsDefenderConfigurator.java:383)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runPowershell(WindowsDefenderConfigurator.java:378)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderServiceRunning(WindowsDefenderConfigurator.java:302)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 8 more
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-01 12:20:20.301
+!MESSAGE Started RMI Server, listening on port 41337

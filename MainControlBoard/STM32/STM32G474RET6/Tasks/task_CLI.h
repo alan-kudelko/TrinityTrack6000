@@ -26,6 +26,7 @@
 #endif // __DOXYGEN__
 
 #include <stdbool.h>
+#include <stdint.h>
 
 #include <tx_api.h>
 
@@ -164,13 +165,12 @@ extern const char msg_task_CLI_show_radio_stats_out_of_order_packages_format_str
 #endif // __cplusplus
 
 /**
- * @brief Initialize CLI task.
- * This function sets up necessary resources for the CLI task,
- * such as semaphores.
+ * @brief Create CLI task.
+ * This function creates the CLI task and its associated resources.
  * @param None.
  * @return None.
  */
-void task_CLI_init(void);
+void task_CLI_create(void);
 
 /**
  * @brief Parse received command from CLI interface.

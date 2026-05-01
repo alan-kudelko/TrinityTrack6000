@@ -125,11 +125,6 @@ file(GLOB ARM_CORE_SOURCES
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.s"
     "${CMAKE_SOURCE_DIR}/Core/Startup/*.S"
 )
-# Exlucde stm32g4xx_it.c as it's redefined with threadx support
-#list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/stm32g4xx_it.c")
-
-list(REMOVE_ITEM ARM_CORE_SOURCES "${CMAKE_SOURCE_DIR}/Core/Src/main.c")
-# Note file /Core/main.c is intentionally excluded here
 message(STATUS "[10] Adding STM32 Core headers")
 file(GLOB ARM_CORE_HEADERS
     "${CMAKE_SOURCE_DIR}/Core/Inc/*.h"
@@ -148,10 +143,8 @@ file(GLOB THREADX_HEADERS
     "${CMAKE_SOURCE_DIR}/Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/*.h"
 )
 
-message(STATUS "[12] Adding project sources")
+message(STATUS "[13] Adding project sources")
 file(GLOB PROJECT_SOURCES
-    "${CMAKE_SOURCE_DIR}/Src/*.c*"
-
     "${CMAKE_SOURCE_DIR}/Utils/*.c*"
 
     "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*c*"
@@ -168,27 +161,26 @@ file(GLOB PROJECT_SOURCES
     "${CMAKE_SOURCE_DIR}/Platform/Startup/*.c*"
     "${CMAKE_SOURCE_DIR}/Platform/Callbacks/*.c*"
 )
-#list(REMOVE_ITEM PROJECT_SOURCES "${CMAKE_SOURCE_DIR}/Src/stm32g4xx_it.c")
 
-message(STATUS "[13] Adding project headers")
+message(STATUS "[14] Adding project headers")
 file(GLOB PROJECT_HEADERS
-    "${CMAKE_SOURCE_DIR}/Include/*.h"
+    "${CMAKE_SOURCE_DIR}/Include/*.h*"
 
-    "${CMAKE_SOURCE_DIR}/Utils/*.h"
+    "${CMAKE_SOURCE_DIR}/Utils/*.h*"
 
-    "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*.h"
-    "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/*.h"
-    "${CMAKE_SOURCE_DIR}/Devices/*.h"
+    "${CMAKE_SOURCE_DIR}/Devices/MCP23S17/*.h*"
+    "${CMAKE_SOURCE_DIR}/Devices/NRF24L01/*.h*"
+    "${CMAKE_SOURCE_DIR}/Devices/*.h*"
 
-    "${CMAKE_SOURCE_DIR}/Tasks/*.h"
+    "${CMAKE_SOURCE_DIR}/Tasks/*.h*"
 
-    "${CMAKE_SOURCE_DIR}/Infra"
+    "${CMAKE_SOURCE_DIR}/Infra/*.h*"
 
-    "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma/*.h"
-    "${CMAKE_SOURCE_DIR}/Platform/LL/USART3_Dma/*.h"
-    "${CMAKE_SOURCE_DIR}/Platform/Board/*.h"
-    "${CMAKE_SOURCE_DIR}/Platform/Startup/*.h"
-    "${CMAKE_SOURCE_DIR}/Platform/Callbacks/*.h"
+    "${CMAKE_SOURCE_DIR}/Platform/LL/SPI1_Dma/*.h*"
+    "${CMAKE_SOURCE_DIR}/Platform/LL/USART3_Dma/*.h*"
+    "${CMAKE_SOURCE_DIR}/Platform/Board/*.h*"
+    "${CMAKE_SOURCE_DIR}/Platform/Startup/*.h*"
+    "${CMAKE_SOURCE_DIR}/Platform/Callbacks/*.h*"
 )
 #
 include_directories(

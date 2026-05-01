@@ -185,8 +185,7 @@ static RADIO_RUNTIME_STATS radio_runtime_stats;
 
 /**@} */
 
-void task_CLI_init(void){
-    // Initialize queue for waking up the CLI task when a command is received from the terminal
+void task_CLI_create(void){
     tx_queue_create(&task_cli_wakeup_queue,
         "CLI Wakeup",
         sizeof(TASK_CLI_WAKEUP_REASON)/sizeof(uint32_t),
@@ -205,6 +204,16 @@ void task_CLI_init(void){
     UNUSED(rxBuffer);
     UNUSED(txBuffer);
 
+    tx_thread_create(&task_CLI_handle,
+                    (char*)task_CLI_name,
+                    task_CLI,
+                    0,
+                    &task_CLI_stack,
+                    sizeof(task_CLI_stack),
+                    TASKS_CLI_PRIORITY,
+                    TASKS_CLI_PRIORITY,
+                    TX_NO_TIME_SLICE,
+                    TX_AUTO_START);   
 }
 
 void parse_command(char*command,uint16_t length){

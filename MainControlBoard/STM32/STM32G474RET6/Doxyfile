@@ -1,9 +1,9 @@
 # === Main settings ===
 PROJECT_NAME           = "TrinityTrack6000"
 OUTPUT_DIRECTORY       = ../../docs
-INPUT                  = Include Src Infra Platform Tasks Devices Utils
+INPUT                  = Core/Inc Core/Src Include Infra Platform Tasks Devices Utils
 RECURSIVE              = YES
-FILE_PATTERNS          = *.h *.c *.cpp
+FILE_PATTERNS          = *.h *.hpp *.c *.cpp
 
 # === Analysis files ===
 EXTRACT_ALL            = YES

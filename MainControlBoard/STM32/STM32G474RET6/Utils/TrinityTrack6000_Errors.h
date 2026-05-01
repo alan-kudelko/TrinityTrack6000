@@ -64,8 +64,6 @@ typedef struct{
     extern "C"{
 #endif // __cplusplus
 
-void Error_Handler(void);
-
 #ifdef __cplusplus
     }
 #endif // __cplusplus
