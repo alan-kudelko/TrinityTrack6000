@@ -13,6 +13,7 @@ var task___system_dispatcher_8h =
     [ "parse_cli_queue_request_set_value", "task___system_dispatcher_8h.html#af775866ac407dad44dc40f042b62d5c9", null ],
     [ "parse_cli_queue_request_switch_mode", "task___system_dispatcher_8h.html#ade4149984081f52a93fdd8f436ead285", null ],
     [ "task_SystemDispatcher", "task___system_dispatcher_8h.html#acf42b7456aae7764a7c7dd4562589edd", null ],
+    [ "task_SystemDispatcher_create", "task___system_dispatcher_8h.html#aca56553916f4228c0d70551a85c2e8a1", null ],
     [ "task_SystemDispatcher_init", "task___system_dispatcher_8h.html#a181eb8bd781ccfc16f41ec30b3b961f6", null ],
     [ "task_cli_request_queue", "group__task___c_l_i.html#gaf673dbe66e4762a9974e800ea2638a90", null ],
     [ "task_cli_request_queue_storage", "task___system_dispatcher_8h.html#aab08d0c9cb5171f885a2c664fecc05ea", null ],

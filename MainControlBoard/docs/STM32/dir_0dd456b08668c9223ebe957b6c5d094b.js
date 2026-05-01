@@ -7,6 +7,5 @@ var dir_0dd456b08668c9223ebe957b6c5d094b =
     [ "task_SystemDispatcher.c", "task___system_dispatcher_8c.html", "task___system_dispatcher_8c" ],
     [ "task_SystemDispatcher.h", "task___system_dispatcher_8h.html", "task___system_dispatcher_8h" ],
     [ "task_WirelessComm.cpp", "task___wireless_comm_8cpp.html", "task___wireless_comm_8cpp" ],
-    [ "task_WirelessComm.h", "task___wireless_comm_8h.html", "task___wireless_comm_8h" ],
-    [ "tasks.h", "tasks_8h.html", null ]
+    [ "task_WirelessComm.hpp", "task___wireless_comm_8hpp.html", "task___wireless_comm_8hpp" ]
 ];

@@ -153,8 +153,8 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gada8242e625d28df008e0fb7074d7bbb3" id="r_gada8242e625d28df008e0fb7074d7bbb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gada8242e625d28df008e0fb7074d7bbb3">safe_atoi</a> (const char *str, uint8_t length, uint8_t *result)</td></tr>
-<tr class="memitem:gaff608362c445b45101c84364713ccb5a" id="r_gaff608362c445b45101c84364713ccb5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaff608362c445b45101c84364713ccb5a">task_CLI_init</a> (void)</td></tr>
-<tr class="memdesc:gaff608362c445b45101c84364713ccb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores.  <br /></td></tr>
+<tr class="memitem:ga11bf687c013131ca42a478b720432bb6" id="r_ga11bf687c013131ca42a478b720432bb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga11bf687c013131ca42a478b720432bb6">task_CLI_create</a> (void)</td></tr>
+<tr class="memdesc:ga11bf687c013131ca42a478b720432bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create CLI task. This function creates the CLI task and its associated resources.  <br /></td></tr>
 <tr class="memitem:gadaa6a403f36f5d75d37e91df042bac34" id="r_gadaa6a403f36f5d75d37e91df042bac34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadaa6a403f36f5d75d37e91df042bac34">parse_command</a> (char *command, uint16_t length)</td></tr>
 <tr class="memdesc:gadaa6a403f36f5d75d37e91df042bac34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse received command from CLI interface. This function takes a received command and its length, parses it, and executes corresponding actions based on the command.  <br /></td></tr>
 <tr class="memitem:ga804c51bf9d9a919cbf34f9f9dd0c6c35" id="r_ga804c51bf9d9a919cbf34f9f9dd0c6c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga804c51bf9d9a919cbf34f9f9dd0c6c35">parse_command_help</a> (uint8_t argc, char *argv[])</td></tr>
@@ -773,9 +773,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph.png" border="0" usemap="#agroup__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph" id="agroup__task___c_l_i_gaab3bc09d6a4efd0ef73314b65579eace_icgraph">
-<area shape="rect" title="Callback function for when CLI task receives data from USART. This function is called in the USART1 D..." alt="" coords="221,5,398,32"/>
-<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga34dbcebf9df0cd27de3f616b41471303" title="Callback function called when USART3 DMA reception is complete." alt="" coords="5,5,173,32"/>
-<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
+<area shape="rect" title="Callback function for when CLI task receives data from USART. This function is called in the USART1 D..." alt="" coords="418,5,595,32"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga34dbcebf9df0cd27de3f616b41471303" title="Callback function called when USART3 DMA reception is complete." alt="" coords="203,5,370,32"/>
+<area shape="poly" title=" " alt="" coords="402,21,371,21,371,16,402,16"/>
+<area shape="rect" href="stm32g4xx__it_8c.html#a0d108a3468b2051548183ee5ca2158a0" title="This function handles USART3 global interrupt / USART3 wake&#45;up interrupt through EXTI line 28." alt="" coords="5,5,155,32"/>
+<area shape="poly" title=" " alt="" coords="187,21,155,21,155,16,187,16"/>
 </map>
 </div>
 
@@ -821,10 +823,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_icgraph" id="agroup__task___c_l_i_ga569030fbbf6cfa84f55be3438653d219_icgraph">
-<area shape="rect" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="319,5,466,32"/>
-<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="304,21,271,21,271,16,304,16"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="484,5,632,32"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,5,436,32"/>
+<area shape="poly" title=" " alt="" coords="469,21,437,21,437,16,469,16"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,5,314,32"/>
+<area shape="poly" title=" " alt="" coords="346,21,314,21,314,16,346,16"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
 </map>
 </div>
@@ -876,10 +880,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_icgraph.png" border="0" usemap="#agroup__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_icgraph" id="agroup__task___c_l_i_gadaa6a403f36f5d75d37e91df042bac34_icgraph">
-<area shape="rect" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="319,5,436,32"/>
-<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="303,21,271,21,271,16,303,16"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="484,5,602,32"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,5,436,32"/>
+<area shape="poly" title=" " alt="" coords="469,21,437,21,437,16,469,16"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,5,314,32"/>
+<area shape="poly" title=" " alt="" coords="346,21,314,21,314,16,346,16"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
 </map>
 </div>
@@ -1198,10 +1204,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph" id="agroup__task___c_l_i_ga863b01ac894d528c340fd7b86429d021_icgraph">
-<area shape="rect" title=" " alt="" coords="319,5,478,48"/>
-<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,13,271,40"/>
-<area shape="poly" title=" " alt="" coords="304,29,272,29,272,24,304,24"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="rect" title=" " alt="" coords="484,5,644,48"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,13,436,40"/>
+<area shape="poly" title=" " alt="" coords="469,29,437,29,437,24,469,24"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,13,314,40"/>
+<area shape="poly" title=" " alt="" coords="346,29,314,29,314,24,346,24"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
 <area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
 </map>
 </div>
@@ -1239,10 +1247,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph" id="agroup__task___c_l_i_ga33287dbfb56a6a36e0e0c4a8c1806c5c_icgraph">
-<area shape="rect" title=" " alt="" coords="319,5,510,32"/>
-<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="303,21,271,21,271,16,303,16"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" title=" " alt="" coords="484,5,676,32"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,5,436,32"/>
+<area shape="poly" title=" " alt="" coords="469,21,437,21,437,16,469,16"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,5,314,32"/>
+<area shape="poly" title=" " alt="" coords="346,21,314,21,314,16,346,16"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
 </map>
 </div>
@@ -1280,10 +1290,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph" id="agroup__task___c_l_i_ga8034fe0b3faa51679bef29030c4a7e85_icgraph">
-<area shape="rect" title=" " alt="" coords="319,5,478,48"/>
-<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,13,271,40"/>
-<area shape="poly" title=" " alt="" coords="304,29,272,29,272,24,304,24"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="rect" title=" " alt="" coords="484,5,644,48"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,13,436,40"/>
+<area shape="poly" title=" " alt="" coords="469,29,437,29,437,24,469,24"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,13,314,40"/>
+<area shape="poly" title=" " alt="" coords="346,29,314,29,314,24,346,24"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
 <area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
 </map>
 </div>
@@ -1321,10 +1333,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph" id="agroup__task___c_l_i_ga9dd3488482fe604e3704eff60e3d0ea4_icgraph">
-<area shape="rect" title=" " alt="" coords="319,5,478,48"/>
-<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,13,271,40"/>
-<area shape="poly" title=" " alt="" coords="304,29,272,29,272,24,304,24"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
+<area shape="rect" title=" " alt="" coords="484,5,644,48"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,13,436,40"/>
+<area shape="poly" title=" " alt="" coords="469,29,437,29,437,24,469,24"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,13,314,40"/>
+<area shape="poly" title=" " alt="" coords="346,29,314,29,314,24,346,24"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
 <area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
 </map>
 </div>
@@ -1390,22 +1404,24 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_icgraph" id="agroup__task___c_l_i_ga11ec70c795688cdda2170896d5f552e9_icgraph">
-<area shape="rect" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="197,5,271,32"/>
-<area shape="rect" href="main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="362,5,436,32"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,5,314,32"/>
+<area shape="poly" title=" " alt="" coords="346,21,314,21,314,16,346,16"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="gaff608362c445b45101c84364713ccb5a" name="gaff608362c445b45101c84364713ccb5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaff608362c445b45101c84364713ccb5a">&#9670;&#160;</a></span>task_CLI_init()</h2>
+<a id="ga11bf687c013131ca42a478b720432bb6" name="ga11bf687c013131ca42a478b720432bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11bf687c013131ca42a478b720432bb6">&#9670;&#160;</a></span>task_CLI_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void task_CLI_init </td>
+          <td class="memname">void task_CLI_create </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1413,7 +1429,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores. </p>
+<p>Create CLI task. This function creates the CLI task and its associated resources. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None.</td><td></td></tr>
@@ -1424,27 +1440,46 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph.png" border="0" usemap="#agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph" id="agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_cgraph">
-<area shape="rect" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="5,5,104,32"/>
-<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="152,5,325,32"/>
-<area shape="poly" title=" " alt="" coords="104,16,136,16,136,21,104,21"/>
+<div class="center"><img src="group__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_cgraph.png" border="0" usemap="#agroup__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_cgraph" id="agroup__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_cgraph">
+<area shape="rect" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="5,199,123,225"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9" title="CLI task function. This task handles system diagnostics and provides a CLI interface for monitoring s..." alt="" coords="220,173,294,200"/>
+<area shape="poly" title=" " alt="" coords="123,202,205,191,205,196,123,207"/>
+<area shape="rect" href="group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="171,224,344,251"/>
+<area shape="poly" title=" " alt="" coords="123,217,156,221,155,227,123,222"/>
+<area shape="rect" href="group__task___c_l_i.html#ga569030fbbf6cfa84f55be3438653d219" title="Display CLI menu header based on current FSM state. This function checks the current state of the CLI..." alt="" coords="414,5,561,32"/>
+<area shape="poly" title=" " alt="" coords="265,171,313,109,349,73,391,42,401,36,404,41,393,46,353,77,317,112,270,175"/>
+<area shape="rect" href="group__task___c_l_i.html#gadaa6a403f36f5d75d37e91df042bac34" title="Parse received command from CLI interface. This function takes a received command and its length,..." alt="" coords="429,56,546,83"/>
+<area shape="poly" title=" " alt="" coords="273,171,324,132,391,92,413,84,415,89,393,97,327,136,276,175"/>
+<area shape="rect" href="group__task___c_l_i.html#ga863b01ac894d528c340fd7b86429d021" title=" " alt="" coords="408,107,567,149"/>
+<area shape="poly" title=" " alt="" coords="294,175,392,149,394,155,295,180"/>
+<area shape="rect" href="group__task___c_l_i.html#ga33287dbfb56a6a36e0e0c4a8c1806c5c" title=" " alt="" coords="392,173,583,200"/>
+<area shape="poly" title=" " alt="" coords="295,184,376,184,376,189,295,189"/>
+<area shape="rect" href="group__task___c_l_i.html#ga8034fe0b3faa51679bef29030c4a7e85" title=" " alt="" coords="408,224,567,267"/>
+<area shape="poly" title=" " alt="" coords="295,193,394,219,392,224,294,199"/>
+<area shape="rect" href="group__task___c_l_i.html#ga9dd3488482fe604e3704eff60e3d0ea4" title=" " alt="" coords="408,291,567,333"/>
+<area shape="poly" title=" " alt="" coords="296,189,321,197,346,210,362,227,371,244,379,260,394,277,400,281,397,285,390,281,374,263,366,246,358,230,342,214,319,202,294,195"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga935ea3369409ee31333843815a366a25" title="Reads data from the USART3 receive ring buffer into the provided destination buffer." alt="" coords="411,357,564,384"/>
+<area shape="poly" title=" " alt="" coords="296,187,322,195,346,210,360,227,367,244,370,279,374,312,381,328,394,343,400,348,396,352,390,347,376,331,369,313,365,279,362,246,355,230,342,214,320,200,294,192"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0" title="Enqueues data to be sent over USART3 using DMA if the transmit ring buffer has enough space." alt="" coords="631,144,781,171"/>
+<area shape="poly" title=" " alt="" coords="558,30,585,42,615,62,643,85,686,130,682,134,639,89,612,66,582,46,556,35"/>
+<area shape="rect" href="group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="829,136,971,179"/>
+<area shape="poly" title=" " alt="" coords="781,155,814,155,814,160,781,160"/>
+<area shape="poly" title=" " alt="" coords="547,80,584,92,670,134,668,139,582,97,546,85"/>
+<area shape="poly" title=" " alt="" coords="568,136,616,143,615,148,567,141"/>
+<area shape="poly" title=" " alt="" coords="583,171,616,167,616,172,584,176"/>
+<area shape="poly" title=" " alt="" coords="552,221,582,210,661,175,663,180,584,214,554,226"/>
+<area shape="poly" title=" " alt="" coords="560,288,582,276,612,254,639,229,683,181,687,185,643,233,615,259,585,281,563,292"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__task___c_l_i_gaff608362c445b45101c84364713ccb5a_icgraph.png" border="0" usemap="#agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_icgraph" id="agroup__task___c_l_i_gaff608362c445b45101c84364713ccb5a_icgraph">
-<area shape="rect" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="640,5,738,32"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="427,5,592,32"/>
-<area shape="poly" title=" " alt="" coords="624,21,592,21,592,16,624,16"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,5,379,32"/>
-<area shape="poly" title=" " alt="" coords="412,21,380,21,380,16,412,16"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<div class="center"><img src="group__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_icgraph" id="agroup__task___c_l_i_ga11bf687c013131ca42a478b720432bb6_icgraph">
+<area shape="rect" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="197,5,314,32"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
 </map>
 </div>
 
@@ -1471,25 +1506,19 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph.png" border="0" usemap="#agroup__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph" id="agroup__task___c_l_i_ga0669a273fe9b06345bcd52fc2d20e0e7_icgraph">
-<area shape="rect" title="Callback function for processing CLI requests." alt="" coords="889,107,1062,133"/>
-<area shape="rect" href="group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5" title=" " alt="" coords="666,5,815,32"/>
-<area shape="poly" title=" " alt="" coords="940,100,894,72,840,46,806,35,807,30,842,42,896,68,943,96"/>
-<area shape="rect" href="group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="663,56,818,83"/>
-<area shape="poly" title=" " alt="" coords="895,105,805,86,806,81,896,100"/>
-<area shape="rect" href="group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="640,107,841,133"/>
-<area shape="poly" title=" " alt="" coords="873,123,841,123,841,117,873,117"/>
-<area shape="rect" href="group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="664,157,816,184"/>
-<area shape="poly" title=" " alt="" coords="896,140,806,159,805,154,895,135"/>
-<area shape="rect" href="group__task___c_l_i.html#gaff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="691,208,790,235"/>
-<area shape="poly" title=" " alt="" coords="943,144,896,172,842,198,791,214,789,209,840,194,894,168,940,140"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="427,208,592,235"/>
-<area shape="poly" title=" " alt="" coords="676,224,592,224,592,219,676,219"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,208,379,235"/>
-<area shape="poly" title=" " alt="" coords="412,224,380,224,380,219,412,219"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,208,216,235"/>
-<area shape="poly" title=" " alt="" coords="248,224,216,224,216,219,248,219"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,208,55,235"/>
-<area shape="poly" title=" " alt="" coords="87,224,55,224,55,219,87,219"/>
+<area shape="rect" title="Callback function for processing CLI requests." alt="" coords="446,107,619,133"/>
+<area shape="rect" href="group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5" title=" " alt="" coords="223,5,372,32"/>
+<area shape="poly" title=" " alt="" coords="497,100,451,72,397,46,363,35,364,30,399,42,453,68,500,96"/>
+<area shape="rect" href="group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="220,56,375,83"/>
+<area shape="poly" title=" " alt="" coords="452,105,362,86,363,81,453,100"/>
+<area shape="rect" href="group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="197,107,398,133"/>
+<area shape="poly" title=" " alt="" coords="430,123,398,123,398,117,430,117"/>
+<area shape="rect" href="group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="221,157,374,184"/>
+<area shape="poly" title=" " alt="" coords="453,140,363,159,362,154,452,135"/>
+<area shape="rect" href="group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="239,208,356,235"/>
+<area shape="poly" title=" " alt="" coords="500,144,453,172,399,198,357,212,355,207,397,194,451,168,497,140"/>
+<area shape="rect" href="main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,208,149,235"/>
+<area shape="poly" title=" " alt="" coords="223,224,149,224,149,219,223,219"/>
 </map>
 </div>
 
@@ -3129,11 +3158,11 @@ Here is the caller graph for this function:</div>
 <div class="line">    <a class="code hl_function" href="#gaff9c7d9576e5b718a18ee9136e2b8011">parse_command_show</a>,</div>
 <div class="line">    <a class="code hl_function" href="#ga7e4a305579b0c91e3c92f22d7c57ade4">parse_command_write</a>,</div>
 <div class="line">    <a class="code hl_function" href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a>}</div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga7e4a305579b0c91e3c92f22d7c57ade4"><div class="ttname"><a href="#ga7e4a305579b0c91e3c92f22d7c57ade4">parse_command_write</a></div><div class="ttdeci">void parse_command_write(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:427</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga804c51bf9d9a919cbf34f9f9dd0c6c35"><div class="ttname"><a href="#ga804c51bf9d9a919cbf34f9f9dd0c6c35">parse_command_help</a></div><div class="ttdeci">void parse_command_help(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command...</div><div class="ttdef"><b>Definition</b> task_CLI.c:280</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_ga9f3d13bd4e44a42e7bd15897476d19e5"><div class="ttname"><a href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a></div><div class="ttdeci">void parse_command_read(uint8_t argc, char *argv[])</div><div class="ttdef"><b>Definition</b> task_CLI.c:450</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_gab95ac13f16242b28e0389734b21d1dc6"><div class="ttname"><a href="#gab95ac13f16242b28e0389734b21d1dc6">parse_command_switch_mode</a></div><div class="ttdeci">void parse_command_switch_mode(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ...</div><div class="ttdef"><b>Definition</b> task_CLI.c:313</div></div>
-<div class="ttc" id="agroup__task___c_l_i_html_gaff9c7d9576e5b718a18ee9136e2b8011"><div class="ttname"><a href="#gaff9c7d9576e5b718a18ee9136e2b8011">parse_command_show</a></div><div class="ttdeci">void parse_command_show(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:351</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga7e4a305579b0c91e3c92f22d7c57ade4"><div class="ttname"><a href="#ga7e4a305579b0c91e3c92f22d7c57ade4">parse_command_write</a></div><div class="ttdeci">void parse_command_write(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:436</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga804c51bf9d9a919cbf34f9f9dd0c6c35"><div class="ttname"><a href="#ga804c51bf9d9a919cbf34f9f9dd0c6c35">parse_command_help</a></div><div class="ttdeci">void parse_command_help(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;help&quot; command to display CLI help information. This function is called when the &quot;help&quot; command...</div><div class="ttdef"><b>Definition</b> task_CLI.c:289</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_ga9f3d13bd4e44a42e7bd15897476d19e5"><div class="ttname"><a href="#ga9f3d13bd4e44a42e7bd15897476d19e5">parse_command_read</a></div><div class="ttdeci">void parse_command_read(uint8_t argc, char *argv[])</div><div class="ttdef"><b>Definition</b> task_CLI.c:459</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_gab95ac13f16242b28e0389734b21d1dc6"><div class="ttname"><a href="#gab95ac13f16242b28e0389734b21d1dc6">parse_command_switch_mode</a></div><div class="ttdeci">void parse_command_switch_mode(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ...</div><div class="ttdef"><b>Definition</b> task_CLI.c:322</div></div>
+<div class="ttc" id="agroup__task___c_l_i_html_gaff9c7d9576e5b718a18ee9136e2b8011"><div class="ttname"><a href="#gaff9c7d9576e5b718a18ee9136e2b8011">parse_command_show</a></div><div class="ttdeci">void parse_command_show(uint8_t argc, char *argv[])</div><div class="ttdoc">Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i...</div><div class="ttdef"><b>Definition</b> task_CLI.c:360</div></div>
 </div><!-- fragment --><p>Array of function pointers for parsing commands, indexed by command type </p>
 
 </div>

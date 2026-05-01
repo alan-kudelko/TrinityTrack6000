@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['observe_5ftx_0',['observe_tx',['../struct_r_a_d_i_o___r_u_n_t_i_m_e___s_t_a_t_s.html#a002fd3c24fb5e0127d160828af51cf74',1,'RADIO_RUNTIME_STATS']]],
-  ['operation_5fbuffer_5fsize_1',['OPERATION_BUFFER_SIZE',['../task___wireless_comm_8h.html#a844ec780bbbbf470c424e3a8a12818c7',1,'task_WirelessComm.h']]]
+  ['kill_5fswitch_5fgpio_5fport_0',['KILL_SWITCH_GPIO_Port',['../_core_2_inc_2main_8h.html#a8d1a31d31ff8e0e6cf8387375ef36e4d',1,'KILL_SWITCH_GPIO_Port:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#a8d1a31d31ff8e0e6cf8387375ef36e4d',1,'KILL_SWITCH_GPIO_Port:&#160;TrinityTrack6000_Pinout.h']]],
+  ['kill_5fswitch_5fpin_1',['KILL_SWITCH_Pin',['../_core_2_inc_2main_8h.html#a767e62d31398e21b27837dc6cca8c1d6',1,'KILL_SWITCH_Pin:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#a767e62d31398e21b27837dc6cca8c1d6',1,'KILL_SWITCH_Pin:&#160;TrinityTrack6000_Pinout.h']]]
 ];

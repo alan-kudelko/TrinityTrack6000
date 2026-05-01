@@ -1,12 +1,10 @@
 <map id="ramInfoRefresh" name="ramInfoRefresh">
-<area shape="rect" id="Node000001" title="Refresh RAM diagnostics data." alt="" coords="559,5,670,32"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,5,379,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="543,21,380,21,380,16,543,16"/>
-<area shape="rect" id="Node000005" href="$group___trinity_track6000___mem_info.html#ga3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="427,31,511,57"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="544,34,511,39,511,34,543,28"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="411,37,379,31,380,26,412,32"/>
+<area shape="rect" id="Node000001" title="Refresh RAM diagnostics data." alt="" coords="397,5,509,32"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title=" " alt="" coords="103,5,218,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,21,218,21,218,16,382,16"/>
+<area shape="rect" id="Node000004" href="$group___trinity_track6000___mem_info.html#ga3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="266,31,349,57"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="382,34,350,39,349,34,381,28"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="250,37,218,31,219,26,251,32"/>
 </map>

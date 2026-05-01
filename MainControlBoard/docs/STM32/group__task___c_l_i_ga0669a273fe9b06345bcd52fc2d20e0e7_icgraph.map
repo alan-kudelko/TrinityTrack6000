@@ -1,21 +1,15 @@
 <map id="task_cli_wakeup_callback" name="task_cli_wakeup_callback">
-<area shape="rect" id="Node000001" title="Callback function for processing CLI requests." alt="" coords="889,107,1062,133"/>
-<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5" title=" " alt="" coords="666,5,815,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="940,100,894,72,840,46,806,35,807,30,842,42,896,68,943,96"/>
-<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="663,56,818,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="895,105,805,86,806,81,896,100"/>
-<area shape="rect" id="Node000004" href="$group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="640,107,841,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="873,123,841,123,841,117,873,117"/>
-<area shape="rect" id="Node000005" href="$group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="664,157,816,184"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="896,140,806,159,805,154,895,135"/>
-<area shape="rect" id="Node000006" href="$group__task___c_l_i.html#gaff608362c445b45101c84364713ccb5a" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="691,208,790,235"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="943,144,896,172,842,198,791,214,789,209,840,194,894,168,940,140"/>
-<area shape="rect" id="Node000007" href="$_trinity_track6000___init_8cpp.html#ac5a71095e7ff4714d2248ed6dde28647" title="ThreadX Memory Initialization Function." alt="" coords="427,208,592,235"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="676,224,592,224,592,219,676,219"/>
-<area shape="rect" id="Node000008" href="$_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,208,379,235"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="412,224,380,224,380,219,412,219"/>
-<area shape="rect" id="Node000009" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,208,216,235"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="248,224,216,224,216,219,248,219"/>
-<area shape="rect" id="Node000010" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,208,55,235"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="87,224,55,224,55,219,87,219"/>
+<area shape="rect" id="Node000001" title="Callback function for processing CLI requests." alt="" coords="446,107,619,133"/>
+<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#ga9f3d13bd4e44a42e7bd15897476d19e5" title=" " alt="" coords="223,5,372,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="497,100,451,72,397,46,363,35,364,30,399,42,453,68,500,96"/>
+<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="220,56,375,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="452,105,362,86,363,81,453,100"/>
+<area shape="rect" id="Node000004" href="$group__task___c_l_i.html#gab95ac13f16242b28e0389734b21d1dc6" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="197,107,398,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="430,123,398,123,398,117,430,117"/>
+<area shape="rect" id="Node000005" href="$group__task___c_l_i.html#ga7e4a305579b0c91e3c92f22d7c57ade4" title="Parse &quot;write&quot; command to perform write operations. This function is called when the &quot;write&quot; command i..." alt="" coords="221,157,374,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="453,140,363,159,362,154,452,135"/>
+<area shape="rect" id="Node000006" href="$group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6" title="Create CLI task. This function creates the CLI task and its associated resources." alt="" coords="239,208,356,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="500,144,453,172,399,198,357,212,355,207,397,194,451,168,497,140"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,208,149,235"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="223,224,149,224,149,219,223,219"/>
 </map>

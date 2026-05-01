@@ -1,6 +1,6 @@
 <map id="Platform/Board/TrinityTrack6000_Pinout.h" name="Platform/Board/TrinityTrack6000_Pinout.h">
 <area shape="rect" id="Node000001" title="Pinout definitions for TrinityTrack6000 project. This header file defines the pin mappings and config..." alt="" coords="488,5,698,48"/>
-<area shape="rect" id="Node000002" href="$_e_x_t_i___callbacks_8c.html" title=" " alt="" coords="5,96,138,139"/>
+<area shape="rect" id="Node000002" href="$_e_x_t_i___callbacks_8c.html" title="Implementation of EXTI callbacks for handling external interrupts. This file contains the implementat..." alt="" coords="5,96,138,139"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,46,319,69,151,99,138,101,137,96,150,93,318,63,472,41"/>
 <area shape="rect" id="Node000003" href="$_u_s_a_r_t___callbacks_8c.html" title="Implementation of USART DMA Callbacks." alt="" coords="162,96,309,139"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="495,55,310,100,308,95,494,50"/>

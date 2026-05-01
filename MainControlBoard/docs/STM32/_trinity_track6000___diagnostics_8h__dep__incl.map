@@ -1,7 +1,5 @@
 <map id="Utils/TrinityTrack6000_Diagnostics.h" name="Utils/TrinityTrack6000_Diagnostics.h">
-<area shape="rect" id="Node000001" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="53,5,202,48"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Main program body." alt="" coords="5,104,104,131"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,62,67,105,63,102,99,58"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="128,96,277,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,58,187,94,183,97,153,62"/>
+<area shape="rect" id="Node000001" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="5,5,155,48"/>
+<area shape="rect" id="Node000002" href="$_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="5,96,155,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,64,83,96,77,96,77,64"/>
 </map>

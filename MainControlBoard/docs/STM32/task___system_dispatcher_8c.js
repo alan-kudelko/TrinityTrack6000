@@ -8,7 +8,7 @@ var task___system_dispatcher_8c =
     [ "parse_cli_queue_request_set_value", "task___system_dispatcher_8c.html#af775866ac407dad44dc40f042b62d5c9", null ],
     [ "parse_cli_queue_request_switch_mode", "task___system_dispatcher_8c.html#ade4149984081f52a93fdd8f436ead285", null ],
     [ "task_SystemDispatcher", "task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd", null ],
-    [ "task_SystemDispatcher_init", "task___system_dispatcher_8c.html#a181eb8bd781ccfc16f41ec30b3b961f6", null ],
+    [ "task_SystemDispatcher_create", "task___system_dispatcher_8c.html#aca56553916f4228c0d70551a85c2e8a1", null ],
     [ "spi_transaction_data", "task___system_dispatcher_8c.html#abd54a9d31e5db659f58ee0f4b2a399e9", null ],
     [ "system_mode", "group__task___c_l_i.html#ga594832e2c234774451356e79688e98f0", null ],
     [ "task_cli_command", "task___system_dispatcher_8c.html#aeda17e195cee6951d76178a0ed1c1edc", null ],

@@ -1,9 +1,15 @@
-<map id="Src/stm32g4xx_it.c" name="Src/stm32g4xx_it.c">
-<area shape="rect" id="Node000001" title="Interrupt Service Routines." alt="" coords="53,5,187,32"/>
-<area shape="rect" id="Node000002" href="$main_8h.html" title="Header for main.c file. This file contains the common defines of the application." alt="" coords="35,80,96,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,34,86,69,82,66,109,31"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="120,80,230,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,31,158,66,154,69,128,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,126,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,107,68,139,63,139,63,107"/>
+<map id="Core/Src/stm32g4xx_it.c" name="Core/Src/stm32g4xx_it.c">
+<area shape="rect" id="Node000001" title="Interrupt Service Routines." alt="" coords="62,5,228,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,66,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,35,68,74,66,69,124,30"/>
+<area shape="rect" id="Node000003" href="$stm32g4xx__it_8h.html" title="This file contains the headers of the interrupt handlers." alt="" coords="90,80,200,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,33,148,64,142,64,142,33"/>
+<area shape="rect" id="Node000004" href="$_u_s_a_r_t3___dma_8h.html" title=" " alt="" coords="224,80,343,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,30,247,70,244,75,168,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="158,155,222,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="269,109,220,147,217,143,266,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="246,155,321,181"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="286,107,286,139,281,139,281,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="344,155,412,181"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="302,105,351,143,348,147,298,109"/>
 </map>

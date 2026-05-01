@@ -1,9 +1,9 @@
 var _u_s_a_r_t3___dma_8c =
 [
     [ "callback_cli_data_received", "group___u_s_a_r_t3___d_m_a.html#gabf87e61793806b14a5aa63a7b3fc7c62", null ],
-    [ "usart1_dma_init", "group___u_s_a_r_t3___d_m_a.html#ga79e119baa565a33480ab200c72fd6d3e", null ],
     [ "usart3_dma_copy_to_tx_buffer", "group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6", null ],
     [ "usart3_dma_enq_data", "group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0", null ],
+    [ "usart3_dma_init", "group___u_s_a_r_t3___d_m_a.html#ga2c9ba4bb9e46485991893d67667b3d03", null ],
     [ "usart3_dma_read_data", "group___u_s_a_r_t3___d_m_a.html#ga935ea3369409ee31333843815a366a25", null ],
     [ "usart3_dma_rx_complete", "group___u_s_a_r_t3___d_m_a.html#ga34dbcebf9df0cd27de3f616b41471303", null ],
     [ "usart3_dma_tx_complete", "group___u_s_a_r_t3___d_m_a.html#gac99e100856774b4b01b6ee3c86dac500", null ],

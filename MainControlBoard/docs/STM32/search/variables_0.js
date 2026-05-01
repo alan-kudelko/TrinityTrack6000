@@ -12,7 +12,7 @@ var searchData=
   ['_5f_5fram2_5fstart_5f_5f_9',['__RAM2_start__',['../group___trinity_track6000___mem_info.html#ga7a262ec869198c39ea2780d1c34a25ab',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5f_5fram_5fdiagnostics_5fend_5f_5f_10',['__RAM_DIAGNOSTICS_END__',['../group___trinity_track6000___mem_info.html#ga49433164e75bde7c33a071580ffe6f8e',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5f_5fram_5fdiagnostics_5fstart_5f_5f_11',['__RAM_DIAGNOSTICS_START__',['../group___trinity_track6000___mem_info.html#ga490f63abeb05d97d096a7e8dca7a479f',1,'TrinityTrack6000_MemInfo.c']]],
-  ['_5f_5fsbrk_5fheap_5fend_12',['__sbrk_heap_end',['../group___trinity_track6000___mem_info.html#ga2cf862d604e9c7cfcf0528a0f539a6a5',1,'TrinityTrack6000_MemInfo.c']]],
+  ['_5f_5fsbrk_5fheap_5fend_12',['__sbrk_heap_end',['../group___trinity_track6000___mem_info.html#ga2cf862d604e9c7cfcf0528a0f539a6a5',1,'__sbrk_heap_end:&#160;sysmem.c'],['../group___trinity_track6000___mem_info.html#ga2cf862d604e9c7cfcf0528a0f539a6a5',1,'__sbrk_heap_end:&#160;sysmem.c']]],
   ['_5f_5fsys_5fdiagnostics_5fend_5f_5f_13',['__SYS_DIAGNOSTICS_END__',['../group___trinity_track6000___mem_info.html#ga112036e9eeadd8c14fab46d2949f24f6',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5f_5fsys_5fdiagnostics_5fstart_5f_5f_14',['__SYS_DIAGNOSTICS_START__',['../group___trinity_track6000___mem_info.html#ga59ff0a30009e0e8f5ff83e81320dc621',1,'TrinityTrack6000_MemInfo.c']]],
   ['_5f_5ftask_5fhandles_5fend_5f_5f_15',['__TASK_HANDLES_END__',['../group___trinity_track6000___mem_info.html#ga0f7fa4ea5916b672de0d42e81c155d88',1,'TrinityTrack6000_MemInfo.c']]],

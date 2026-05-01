@@ -1,0 +1,10 @@
+<map id="HAL_TIM_MspPostInit" name="HAL_TIM_MspPostInit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="261,31,415,57"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function." alt="" coords="106,5,210,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,34,209,29,210,23,246,28"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#aa5bd6b035909f7b1602032e90e2c013f" title="TIM20 Initialization Function." alt="" coords="103,56,213,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,60,214,64,213,59,245,54"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,35,55,42,54,37,90,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="87,58,54,51,55,46,88,53"/>
+</map>

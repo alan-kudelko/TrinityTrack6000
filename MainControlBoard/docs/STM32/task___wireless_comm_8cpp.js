@@ -3,7 +3,7 @@ var task___wireless_comm_8cpp =
     [ "radioDataReceived_callback", "task___wireless_comm_8cpp.html#a75212f15b77658f99b5b11102bd01dc3", null ],
     [ "radioOperationDone_callback", "task___wireless_comm_8cpp.html#a7b6b3eb37cb232306a2705ccc726bf0e", null ],
     [ "task_wireless_comm", "task___wireless_comm_8cpp.html#ad4929e9e77e9e2c4900c215a515eddec", null ],
-    [ "task_wireless_comm_init", "task___wireless_comm_8cpp.html#a296d2aa7b04273e3ed7a2467fc6c2afe", null ],
+    [ "task_wireless_comm_create", "task___wireless_comm_8cpp.html#a70e86148c8606479379d1df3fd163455", null ],
     [ "task_wireless_comm_process_request", "task___wireless_comm_8cpp.html#a5c50b9ab34392d67f2bcdd1852b8be3d", null ],
     [ "task_wireless_comm_process_request_radio_stats", "task___wireless_comm_8cpp.html#aec14ba6a6dbc19941545ae89e9ffc491", null ],
     [ "task_wireless_comm_update_radio_stats", "task___wireless_comm_8cpp.html#af841c3592a9de96a848fb5c32e42f72c", null ],

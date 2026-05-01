@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['task_5fcli_5fcommand_5fqueue_5fstorage_5flength_0',['TASK_CLI_COMMAND_QUEUE_STORAGE_LENGTH',['../task___system_dispatcher_8h.html#a85df099d31ca6f3bda180ef64040df85',1,'task_SystemDispatcher.h']]],
-  ['task_5fcli_5fcommand_5fqueue_5ftimeout_1',['TASK_CLI_COMMAND_QUEUE_TIMEOUT',['../task___system_dispatcher_8h.html#a9a4ccd70efaaedc780605822d4db6eba',1,'task_SystemDispatcher.h']]],
-  ['task_5fwireless_5fcomm_5fcommand_5fqueue_5fstorage_5flength_2',['TASK_WIRELESS_COMM_COMMAND_QUEUE_STORAGE_LENGTH',['../task___wireless_comm_8h.html#a08007a12dd58cbc833c2dfc75833f377',1,'task_WirelessComm.h']]],
-  ['task_5fwireless_5fcomm_5fpriority_3',['TASK_WIRELESS_COMM_PRIORITY',['../task___wireless_comm_8h.html#a30fa6c32b134ca1c49b53de88fb12450',1,'task_WirelessComm.h']]],
-  ['task_5fwireless_5fcomm_5fstack_5fsize_4',['TASK_WIRELESS_COMM_STACK_SIZE',['../task___wireless_comm_8h.html#a910e6c5be64efd6a980964c967f1eff6',1,'task_WirelessComm.h']]],
-  ['task_5fwireless_5fcomm_5ftimeout_5',['TASK_WIRELESS_COMM_TIMEOUT',['../task___system_dispatcher_8h.html#a77919ad521c14b5a1d19e3f206e4f7fc',1,'task_SystemDispatcher.h']]],
-  ['tasks_5fsystem_5fdispatcher_5fpriority_6',['TASKS_SYSTEM_DISPATCHER_PRIORITY',['../task___system_dispatcher_8h.html#ad1bc7835f2c7c2a6f2ba4a574b80de7c',1,'task_SystemDispatcher.h']]],
-  ['tasks_5fsystem_5fdispatcher_5fstack_5fsize_7',['TASKS_SYSTEM_DISPATCHER_STACK_SIZE',['../task___system_dispatcher_8h.html#a475a71add3e7dc49813c9fa67e9ffd2e',1,'task_SystemDispatcher.h']]],
-  ['trinity_5ftrack6000_5fradio_5fconfig_5fh_5f_8',['TRINITY_TRACK6000_RADIO_CONFIG_H_',['../_trinity_track6000___radio_config_8h.html#a8cb91bd157fc23ca263307a13d88a6d1',1,'TrinityTrack6000_RadioConfig.h']]]
+  ['radio_5fdefault_5faddress_0',['RADIO_DEFAULT_ADDRESS',['../_trinity_track6000___radio_config_8h.html#ae8a0371ae9001662c085134c8661e6bc',1,'TrinityTrack6000_RadioConfig.h']]],
+  ['radio_5fdefault_5faddress_5flength_1',['RADIO_DEFAULT_ADDRESS_LENGTH',['../_trinity_track6000___radio_config_8h.html#af6de96fcfaf333b9320a1e0614dc8988',1,'TrinityTrack6000_RadioConfig.h']]],
+  ['radio_5fdefault_5fpayload_5fsize_5f16_2',['RADIO_DEFAULT_PAYLOAD_SIZE_16',['../_trinity_track6000___radio_config_8h.html#a3fc6308cd2a61a21b541c4c4600ac023',1,'TrinityTrack6000_RadioConfig.h']]],
+  ['radio_5fdefault_5fpayload_5fsize_5f32_3',['RADIO_DEFAULT_PAYLOAD_SIZE_32',['../_trinity_track6000___radio_config_8h.html#a4db2367cd8a62eb747576b8a46d61a5d',1,'TrinityTrack6000_RadioConfig.h']]],
+  ['radio_5fdefault_5fpayload_5fsize_5f8_4',['RADIO_DEFAULT_PAYLOAD_SIZE_8',['../_trinity_track6000___radio_config_8h.html#a93dc6266e7d9282e0042ae23b6c8263d',1,'TrinityTrack6000_RadioConfig.h']]],
+  ['renesans_5fcs_5fgpio_5fport_5',['RENESANS_CS_GPIO_Port',['../_core_2_inc_2main_8h.html#aeee621a43a4b6be654df06a59658b3f6',1,'RENESANS_CS_GPIO_Port:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#aeee621a43a4b6be654df06a59658b3f6',1,'RENESANS_CS_GPIO_Port:&#160;TrinityTrack6000_Pinout.h']]],
+  ['renesans_5fcs_5fpin_6',['RENESANS_CS_Pin',['../_core_2_inc_2main_8h.html#a7aeaa3ebd3732f2d0096e4017e965f04',1,'RENESANS_CS_Pin:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#a7aeaa3ebd3732f2d0096e4017e965f04',1,'RENESANS_CS_Pin:&#160;TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frdy_5fexti_5firqn_7',['RENESANS_RDY_EXTI_IRQn',['../_core_2_inc_2main_8h.html#ab0d98b5e456683e56f0339e3fca1ef84',1,'RENESANS_RDY_EXTI_IRQn:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#ab0d98b5e456683e56f0339e3fca1ef84',1,'RENESANS_RDY_EXTI_IRQn:&#160;TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frdy_5fgpio_5fport_8',['RENESANS_RDY_GPIO_Port',['../_core_2_inc_2main_8h.html#a07392e02634eda5915d0592426523bc7',1,'RENESANS_RDY_GPIO_Port:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#a07392e02634eda5915d0592426523bc7',1,'RENESANS_RDY_GPIO_Port:&#160;TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frdy_5fpin_9',['RENESANS_RDY_Pin',['../_core_2_inc_2main_8h.html#aa30e505e9ec3ee83b3bed01b5a01d0b1',1,'RENESANS_RDY_Pin:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#aa30e505e9ec3ee83b3bed01b5a01d0b1',1,'RENESANS_RDY_Pin:&#160;TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frst_5fgpio_5fport_10',['RENESANS_RST_GPIO_Port',['../_core_2_inc_2main_8h.html#af7982d37025ad7e4783760872a56407b',1,'RENESANS_RST_GPIO_Port:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#af7982d37025ad7e4783760872a56407b',1,'RENESANS_RST_GPIO_Port:&#160;TrinityTrack6000_Pinout.h']]],
+  ['renesans_5frst_5fpin_11',['RENESANS_RST_Pin',['../_core_2_inc_2main_8h.html#a1b0eb94840b017c0b8ae5e1e3607d0b1',1,'RENESANS_RST_Pin:&#160;main.h'],['../_trinity_track6000___pinout_8h.html#a1b0eb94840b017c0b8ae5e1e3607d0b1',1,'RENESANS_RST_Pin:&#160;TrinityTrack6000_Pinout.h']]]
 ];

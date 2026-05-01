@@ -1,0 +1,26 @@
+var stm32g4xx__hal__msp_8c =
+[
+    [ "HAL_ADC_MspDeInit", "stm32g4xx__hal__msp_8c.html#a39b0f8e80268ab3e660ead921ad4b22f", null ],
+    [ "HAL_ADC_MspInit", "stm32g4xx__hal__msp_8c.html#aa30863492d5c3103e3e8ce8a63dadd07", null ],
+    [ "HAL_CORDIC_MspDeInit", "stm32g4xx__hal__msp_8c.html#a0a2ba1306eff2d0ad2f743f2243f5fb8", null ],
+    [ "HAL_CORDIC_MspInit", "stm32g4xx__hal__msp_8c.html#acfd8f15d1aa4ec4aa20a2cce3b5ef4e1", null ],
+    [ "HAL_I2C_MspDeInit", "stm32g4xx__hal__msp_8c.html#a2ec8d9b09854c732e2feed549278f048", null ],
+    [ "HAL_I2C_MspInit", "stm32g4xx__hal__msp_8c.html#abe01a202c27b23fc150aa66af3130073", null ],
+    [ "HAL_MspInit", "stm32g4xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f", null ],
+    [ "HAL_SPI_MspDeInit", "stm32g4xx__hal__msp_8c.html#abadc4d4974af1afd943e8d13589068e1", null ],
+    [ "HAL_SPI_MspInit", "stm32g4xx__hal__msp_8c.html#a17f583be14b22caffa6c4e56dcd035ef", null ],
+    [ "HAL_TIM_Base_MspDeInit", "stm32g4xx__hal__msp_8c.html#a555b8a2d3c7a07341f8cb1255318fa2b", null ],
+    [ "HAL_TIM_Base_MspInit", "stm32g4xx__hal__msp_8c.html#abb25ade2f7e3f7aae167bd52270c2b86", null ],
+    [ "HAL_TIM_MspPostInit", "stm32g4xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b", null ],
+    [ "HAL_UART_MspDeInit", "stm32g4xx__hal__msp_8c.html#a718f39804e3b910d738a0e1e46151188", null ],
+    [ "HAL_UART_MspInit", "stm32g4xx__hal__msp_8c.html#a0e553b32211877322f949b14801bbfa7", null ],
+    [ "hdma_adc1", "stm32g4xx__hal__msp_8c.html#a1c126854bb1813d31ab4776b21dcc51f", null ],
+    [ "hdma_i2c2_rx", "stm32g4xx__hal__msp_8c.html#a359a88f73f8c878a975809a7d824801a", null ],
+    [ "hdma_i2c2_tx", "stm32g4xx__hal__msp_8c.html#a59582237877151c52551fac4b2c12aa5", null ],
+    [ "hdma_spi1_rx", "stm32g4xx__hal__msp_8c.html#ad70fe79aa3139fc9184d8ffb5dfba323", null ],
+    [ "hdma_spi1_tx", "stm32g4xx__hal__msp_8c.html#ac8cdcfbb7adfcccc5717da58e1e10ae4", null ],
+    [ "hdma_spi2_rx", "stm32g4xx__hal__msp_8c.html#abe50191cba67fd4af93c490865bca7d5", null ],
+    [ "hdma_spi2_tx", "stm32g4xx__hal__msp_8c.html#ab07da35360152a5ea4188e6bdd947b14", null ],
+    [ "hdma_usart3_rx", "stm32g4xx__hal__msp_8c.html#a418ff7f6b595dcf41b10de1083e62340", null ],
+    [ "hdma_usart3_tx", "stm32g4xx__hal__msp_8c.html#a8556819c2aafb13de4f13869b2c315ed", null ]
+];

@@ -99,7 +99,7 @@ $(function(){initNavTree('_trinity_track6000___diagnostics_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnostics functions, including memory diagnostics and overall system health checks after initialization and before entering the main application loop in main.c.  
+<p>Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnostics functions, including memory diagnostics and overall system health checks after initialization and before entering the main application loop in <a class="el" href="main_8c.html" title=": Main program body">main.c</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="_trinity_track6000___errors_8h_source.html">TrinityTrack6000_Errors.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -119,11 +119,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_trinity_track6000___diagnostics_8h__dep__incl.png" border="0" usemap="#a_utils_2_trinity_track6000___diagnostics_8hdep" loading="lazy" alt=""/></div>
 <map name="a_utils_2_trinity_track6000___diagnostics_8hdep" id="a_utils_2_trinity_track6000___diagnostics_8hdep">
-<area shape="rect" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="53,5,202,48"/>
-<area shape="rect" href="main_8cpp.html" title="Main program body." alt="" coords="5,104,104,131"/>
-<area shape="poly" title=" " alt="" coords="103,62,67,105,63,102,99,58"/>
-<area shape="rect" href="_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="128,96,277,139"/>
-<area shape="poly" title=" " alt="" coords="157,58,187,94,183,97,153,62"/>
+<area shape="rect" title="Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnosti..." alt="" coords="5,5,155,48"/>
+<area shape="rect" href="_trinity_track6000___diagnostics_8c.html" title="Implementation of TrinityTrack6000_Diagnostics.h." alt="" coords="5,96,155,139"/>
+<area shape="poly" title=" " alt="" coords="83,64,83,96,77,96,77,64"/>
 </map>
 </div>
 </div>
@@ -178,8 +176,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a5c0fe8532aa78a9a5b41fec65c2a93f4" id="r_a5c0fe8532aa78a9a5b41fec65c2a93f4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c0fe8532aa78a9a5b41fec65c2a93f4">msg_Diagnostics_status</a> [<a class="el" href="_trinity_track6000___errors_8h.html#a48f0a84690ce9913f70d2101ccea15ba">ERROR_DEVICE_STATUS_COUNT</a>]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnostics functions, including memory diagnostics and overall system health checks after initialization and before entering the main application loop in main.c. </p>
-<dl class="section note"><dt>Note</dt><dd>All functions set global_error_code in case of failure, which can be used by <a class="el" href="_trinity_track6000___errors_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of critical error occurrence from which system can no safely recove...">Error_Handler()</a> for debugging or startup without faulty functionalities.</dd>
+<div class="textblock"><p>Diagnostics header for TrinityTrack6000 project. This header provides prototypes for system diagnostics functions, including memory diagnostics and overall system health checks after initialization and before entering the main application loop in <a class="el" href="main_8c.html" title=": Main program body">main.c</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>All functions set global_error_code in case of failure, which can be used by <a class="el" href="_core_2_inc_2main_8h.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence.">Error_Handler()</a> for debugging or startup without faulty functionalities.</dd>
 <dd>
 All functions can be called within systemDiagnostics() or separately if needed.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Alan Kudełko </dd></dl>
@@ -269,7 +267,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and functionality of the system components after initialization. </p>
-<dl class="section note"><dt>Note</dt><dd>This function should be called after <a class="el" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function.">initializeSystem()</a> in main.c and before entering the main application loop. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function should be called after initializeSystem() in <a class="el" href="main_8c.html" title=": Main program body">main.c</a> and before entering the main application loop. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">

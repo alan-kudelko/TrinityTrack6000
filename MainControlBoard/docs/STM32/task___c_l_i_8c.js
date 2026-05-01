@@ -15,7 +15,7 @@ var task___c_l_i_8c =
     [ "show_command_status_switch_mode", "group__task___c_l_i.html#ga8034fe0b3faa51679bef29030c4a7e85", null ],
     [ "show_command_status_write", "group__task___c_l_i.html#ga9dd3488482fe604e3704eff60e3d0ea4", null ],
     [ "task_CLI", "group__task___c_l_i.html#ga11ec70c795688cdda2170896d5f552e9", null ],
-    [ "task_CLI_init", "group__task___c_l_i.html#gaff608362c445b45101c84364713ccb5a", null ],
+    [ "task_CLI_create", "group__task___c_l_i.html#ga11bf687c013131ca42a478b720432bb6", null ],
     [ "task_cli_wakeup_callback", "group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7", null ],
     [ "command_array", "group__task___c_l_i.html#gaea5a326ee38a4c786d021325c8fb7dbe", null ],
     [ "command_help", "group__task___c_l_i.html#ga1a07f0c7de5d8a0e10bde6205f5429b3", null ],

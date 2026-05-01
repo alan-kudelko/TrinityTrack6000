@@ -4,7 +4,6 @@ var group___u_s_a_r_t3___d_m_a =
     [ "ALIGNED", "group___u_s_a_r_t3___d_m_a.html#ga8e7a3bf6003d72a62606f343c2db6245", null ],
     [ "SECTION", "group___u_s_a_r_t3___d_m_a.html#ga9982c2dc93e94348913cd6b7b0618973", null ],
     [ "callback_cli_data_received", "group___u_s_a_r_t3___d_m_a.html#gabf87e61793806b14a5aa63a7b3fc7c62", null ],
-    [ "usart1_dma_init", "group___u_s_a_r_t3___d_m_a.html#ga79e119baa565a33480ab200c72fd6d3e", null ],
     [ "usart3_dma_copy_to_tx_buffer", "group___u_s_a_r_t3___d_m_a.html#gaa559c386d1eee4a2558d1984bcb531c6", null ],
     [ "usart3_dma_enq_data", "group___u_s_a_r_t3___d_m_a.html#ga206c6425db6fa1176c80a0c1f67a26d0", null ],
     [ "usart3_dma_init", "group___u_s_a_r_t3___d_m_a.html#ga2c9ba4bb9e46485991893d67667b3d03", null ],

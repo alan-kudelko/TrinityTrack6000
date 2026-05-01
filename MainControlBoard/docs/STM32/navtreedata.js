@@ -39,7 +39,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", "globals_vars" ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -52,11 +52,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_device___def_8h.html",
-"_trinity_track6000___init_8h.html#a3d04b903a77089f6ce08dd0bf1c81a81",
-"group___n_r_f24_l01.html#ga569da706a93c8316ab2395776489ce94",
-"group___trinity_track6000___mem_info.html#ga87ee06503f29371f5def1abd49d34640",
-"struct_d_e_v_i_c_e___i_o.html#a9f04842e6ba655aeb8cd6a9dfa22b03e"
+"_core_2_inc_2main_8h.html",
+"_trinity_track6000___diagnostics_8h.html#a105685449de4c7628dd777fa71659896",
+"globals_g.html",
+"group___s_p_i1___d_m_a.html#gaff2619d6a91f49d4307b09f737abbf9e",
+"group__task___c_l_i.html#gabab613b7ca480a7fe727141259a47c2f",
+"struct_r_a_d_i_o___r_u_n_t_i_m_e___s_t_a_t_s.html#a002fd3c24fb5e0127d160828af51cf74"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

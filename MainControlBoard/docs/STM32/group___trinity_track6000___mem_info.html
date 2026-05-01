@@ -152,7 +152,7 @@ Variables</h2></td></tr>
 <tr class="memitem:ga40b1ee10e0b2f38b9643592f8d2d52b6" id="r_ga40b1ee10e0b2f38b9643592f8d2d52b6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga40b1ee10e0b2f38b9643592f8d2d52b6">__TASK_STACKS_CCSRAM_START__</a></td></tr>
 <tr class="memitem:gaf6fd1181faa1426aecf9da276e012d1d" id="r_gaf6fd1181faa1426aecf9da276e012d1d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf6fd1181faa1426aecf9da276e012d1d">__TASK_STACKS_CCSRAM_END__</a></td></tr>
 <tr class="memitem:ga2cf862d604e9c7cfcf0528a0f539a6a5" id="r_ga2cf862d604e9c7cfcf0528a0f539a6a5"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cf862d604e9c7cfcf0528a0f539a6a5">__sbrk_heap_end</a></td></tr>
-<tr class="memdesc:ga2cf862d604e9c7cfcf0528a0f539a6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined in sysmem.c.  <br /></td></tr>
+<tr class="memdesc:ga2cf862d604e9c7cfcf0528a0f539a6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined in <a class="el" href="sysmem_8c.html" title="STM32CubeIDE System Memory calls file.">sysmem.c</a>.  <br /></td></tr>
 <tr class="memitem:ga2cf715bef37f7e8ef385a30974a5f0d5" id="r_ga2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
 <tr class="memitem:ga322e88092787cb5fab8d065979f92ce8" id="r_ga322e88092787cb5fab8d065979f92ce8"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga322e88092787cb5fab8d065979f92ce8">msg_ramDiagnosticsGeneral_header1</a> [] =&quot;+----------------------------[ RAM DIAGNOSTICS ]-----------------------------+\r\n&quot;</td></tr>
 <tr class="memitem:ga2c94bd67996549203d2ca442a74a04ae" id="r_ga2c94bd67996549203d2ca442a74a04ae"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2c94bd67996549203d2ca442a74a04ae">msg_ramDiagnosticsGeneral_header2</a> [] =&quot;| Bank | Start | End | Size | Usage | Used |\r\n&quot;</td></tr>
@@ -462,7 +462,7 @@ Here is the caller graph for this function:</div>
 
 <p>Initialize RAM diagnostics. </p>
 <p>Calculates the total sizes of all RAM banks and refreshes the current usage. <br  />
- This function should be called once during system initialization (e.g., inside <span class="tt"><a class="el" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function.">initializeSystem()</a></span>). </p>
+ This function should be called once during system initialization (e.g., inside <span class="tt">initializeSystem()</span>). </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -478,12 +478,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group___trinity_track6000___mem_info_ga3ef2b47170729565a03ab59854758b18_icgraph.png" border="0" usemap="#agroup___trinity_track6000___mem_info_ga3ef2b47170729565a03ab59854758b18_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup___trinity_track6000___mem_info_ga3ef2b47170729565a03ab59854758b18_icgraph" id="agroup___trinity_track6000___mem_info_ga3ef2b47170729565a03ab59854758b18_icgraph">
-<area shape="rect" title="Initialize RAM diagnostics." alt="" coords="427,5,511,32"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,5,379,32"/>
-<area shape="poly" title=" " alt="" coords="412,21,380,21,380,16,412,16"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="rect" title="Initialize RAM diagnostics." alt="" coords="266,5,349,32"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title=" " alt="" coords="103,5,218,32"/>
+<area shape="poly" title=" " alt="" coords="251,21,218,21,218,16,251,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
@@ -618,16 +616,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group___trinity_track6000___mem_info_ga3f8a2d6d7be7bf049aaa5429a534366c_icgraph.png" border="0" usemap="#agroup___trinity_track6000___mem_info_ga3f8a2d6d7be7bf049aaa5429a534366c_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup___trinity_track6000___mem_info_ga3f8a2d6d7be7bf049aaa5429a534366c_icgraph" id="agroup___trinity_track6000___mem_info_ga3f8a2d6d7be7bf049aaa5429a534366c_icgraph">
-<area shape="rect" title="Refresh RAM diagnostics data." alt="" coords="559,5,670,32"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title="Memory Initialization Function." alt="" coords="264,5,379,32"/>
-<area shape="poly" title=" " alt="" coords="543,21,380,21,380,16,543,16"/>
-<area shape="rect" href="group___trinity_track6000___mem_info.html#ga3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="427,31,511,57"/>
-<area shape="poly" title=" " alt="" coords="544,34,511,39,511,34,543,28"/>
-<area shape="rect" href="_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,5,216,32"/>
-<area shape="poly" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
-<area shape="rect" href="main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="rect" title="Refresh RAM diagnostics data." alt="" coords="397,5,509,32"/>
+<area shape="rect" href="_trinity_track6000___init_8cpp.html#a55220b932943708be12fdcf12f8840f8" title=" " alt="" coords="103,5,218,32"/>
+<area shape="poly" title=" " alt="" coords="382,21,218,21,218,16,382,16"/>
+<area shape="rect" href="group___trinity_track6000___mem_info.html#ga3ef2b47170729565a03ab59854758b18" title="Initialize RAM diagnostics." alt="" coords="266,31,349,57"/>
+<area shape="poly" title=" " alt="" coords="382,34,350,39,349,34,381,28"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-<area shape="poly" title=" " alt="" coords="411,37,379,31,380,26,412,32"/>
+<area shape="poly" title=" " alt="" coords="250,37,218,31,219,26,251,32"/>
 </map>
 </div>
 
@@ -918,7 +914,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Defined in sysmem.c. </p>
+<p>Defined in <a class="el" href="sysmem_8c.html" title="STM32CubeIDE System Memory calls file.">sysmem.c</a>. </p>
+<p>Pointer to the current high watermark of the heap usage Note: This is the only modification in the default <a class="el" href="sysmem_8c.html" title="STM32CubeIDE System Memory calls file.">sysmem.c</a> file previous definition was: static uint8_t *__sbrk_heap_end = NULL; </p>
 
 </div>
 </div>

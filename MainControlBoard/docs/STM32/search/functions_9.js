@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.cpp']]],
+  ['main_0',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
   ['mcp23s17_1',['MCP23S17',['../class_m_c_p23_s17.html#a30a846434a6c6579ad70b71ecaedbd68',1,'MCP23S17']]],
-  ['mx_5fadc1_5finit_2',['MX_ADC1_Init',['../_trinity_track6000___init_8cpp.html#acccd58aa70215a6b184ad242312ffd0c',1,'MX_ADC1_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#acccd58aa70215a6b184ad242312ffd0c',1,'MX_ADC1_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fcordic_5finit_3',['MX_CORDIC_Init',['../_trinity_track6000___init_8cpp.html#abaa7174b8ca9458dc28ada25ee797b78',1,'MX_CORDIC_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#abaa7174b8ca9458dc28ada25ee797b78',1,'MX_CORDIC_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fdma_5finit_4',['MX_DMA_Init',['../_trinity_track6000___init_8cpp.html#a323249dac769f9855c10b4ec9446b707',1,'MX_DMA_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a323249dac769f9855c10b4ec9446b707',1,'MX_DMA_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fgpio_5finit_5',['MX_GPIO_Init',['../_trinity_track6000___init_8cpp.html#ac724e431d2af879252de35615be2bdea',1,'MX_GPIO_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#ac724e431d2af879252de35615be2bdea',1,'MX_GPIO_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fi2c2_5finit_6',['MX_I2C2_Init',['../_trinity_track6000___init_8cpp.html#a021114cd02d4beb0b256095cfbd088b2',1,'MX_I2C2_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a021114cd02d4beb0b256095cfbd088b2',1,'MX_I2C2_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fspi1_5finit_7',['MX_SPI1_Init',['../_trinity_track6000___init_8cpp.html#af81398f9775695df0b172367651ca3e6',1,'MX_SPI1_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#af81398f9775695df0b172367651ca3e6',1,'MX_SPI1_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fspi2_5finit_8',['MX_SPI2_Init',['../_trinity_track6000___init_8cpp.html#aea85daa666c03d85fd59edef711ebb08',1,'MX_SPI2_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#aea85daa666c03d85fd59edef711ebb08',1,'MX_SPI2_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fspi3_5finit_9',['MX_SPI3_Init',['../_trinity_track6000___init_8cpp.html#a03aff927b2793cac09e443299c6d6e7e',1,'MX_SPI3_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a03aff927b2793cac09e443299c6d6e7e',1,'MX_SPI3_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5ftim1_5finit_10',['MX_TIM1_Init',['../_trinity_track6000___init_8cpp.html#ad1f9d42690163f73f73e5b820c81ca14',1,'MX_TIM1_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#ad1f9d42690163f73f73e5b820c81ca14',1,'MX_TIM1_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5ftim20_5finit_11',['MX_TIM20_Init',['../_trinity_track6000___init_8cpp.html#aac52c566e88a6d97f0a78fd9882e31b6',1,'MX_TIM20_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#aac52c566e88a6d97f0a78fd9882e31b6',1,'MX_TIM20_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fusart2_5fuart_5finit_12',['MX_USART2_UART_Init',['../_trinity_track6000___init_8cpp.html#a052088fe5bb3f807a4b2502e664fd4fd',1,'MX_USART2_UART_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a052088fe5bb3f807a4b2502e664fd4fd',1,'MX_USART2_UART_Init(void):&#160;TrinityTrack6000_Init.cpp']]],
-  ['mx_5fusart3_5fuart_5finit_13',['MX_USART3_UART_Init',['../_trinity_track6000___init_8cpp.html#a3d04b903a77089f6ce08dd0bf1c81a81',1,'MX_USART3_UART_Init(void):&#160;TrinityTrack6000_Init.cpp'],['../_trinity_track6000___init_8h.html#a3d04b903a77089f6ce08dd0bf1c81a81',1,'MX_USART3_UART_Init(void):&#160;TrinityTrack6000_Init.cpp']]]
+  ['memmanage_5fhandler_2',['MemManage_Handler',['../stm32g4xx__it_8h.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32g4xx_it.c'],['../stm32g4xx__it_8c.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32g4xx_it.c']]],
+  ['mx_5fadc1_5finit_3',['MX_ADC1_Init',['../main_8c.html#aaa163e37853e6fc971474824d9f655ca',1,'main.c']]],
+  ['mx_5fcordic_5finit_4',['MX_CORDIC_Init',['../main_8c.html#ada2d7594fc33b20870c7d3dd1a54afa7',1,'main.c']]],
+  ['mx_5fdma_5finit_5',['MX_DMA_Init',['../main_8c.html#a608dc9e9bcaf978f1611f3ec57670f64',1,'main.c']]],
+  ['mx_5fgpio_5finit_6',['MX_GPIO_Init',['../main_8c.html#ae89fdd15729ad41a66911190fcbab23a',1,'main.c']]],
+  ['mx_5fi2c2_5finit_7',['MX_I2C2_Init',['../main_8c.html#af71812af4fbb9ebbe0f681165b657433',1,'main.c']]],
+  ['mx_5fspi1_5finit_8',['MX_SPI1_Init',['../main_8c.html#a28dbf2494083ac5f39daa87bf09e4eb3',1,'main.c']]],
+  ['mx_5fspi2_5finit_9',['MX_SPI2_Init',['../main_8c.html#ade0c8abfcfc1615647bfdd244bd1ee00',1,'main.c']]],
+  ['mx_5fspi3_5finit_10',['MX_SPI3_Init',['../main_8c.html#ad13211e797777a447435fa0b54dcac7c',1,'main.c']]],
+  ['mx_5fthreadx_5finit_11',['MX_ThreadX_Init',['../app__threadx_8h.html#ae873c2b5cb7a3a68d2704f5a08d8da3c',1,'MX_ThreadX_Init(void):&#160;app_threadx.c'],['../app__threadx_8c.html#ae873c2b5cb7a3a68d2704f5a08d8da3c',1,'MX_ThreadX_Init(void):&#160;app_threadx.c']]],
+  ['mx_5ftim1_5finit_12',['MX_TIM1_Init',['../main_8c.html#a1d1beb7da60021ee1adbca294f28ba88',1,'main.c']]],
+  ['mx_5ftim20_5finit_13',['MX_TIM20_Init',['../main_8c.html#aa5bd6b035909f7b1602032e90e2c013f',1,'main.c']]],
+  ['mx_5fusart2_5fuart_5finit_14',['MX_USART2_UART_Init',['../main_8c.html#a6db1014d713f6f5c0f52a13299ee0733',1,'main.c']]],
+  ['mx_5fusart3_5fuart_5finit_15',['MX_USART3_UART_Init',['../main_8c.html#a1c98cc38e233c6b46ca2bf9598a5fce8',1,'main.c']]]
 ];
