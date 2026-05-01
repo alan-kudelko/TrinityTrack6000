@@ -1,6 +1,6 @@
 "STM32G474RET6 Debug.launch"
 "CMake STM32G474RET6.launch"
 ".mxproject"
-"Debug"
-"build"
-".metadata"
+/Debug
+/build
+/.metadata
