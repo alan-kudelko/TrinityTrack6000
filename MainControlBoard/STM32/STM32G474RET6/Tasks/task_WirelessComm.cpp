@@ -369,7 +369,7 @@ extern "C" void task_wireless_comm(ULONG arg){
         }
 
         if(tx_semaphore_get(&task_wireless_comm_wakeup_sem,12000)==TX_SUCCESS){ // For debug time
-        // Read data
+        // Read data from nrf
         radio.dev->attach_callback_function(radioOperationDone_callback,0);
 
         do{
