@@ -582,7 +582,7 @@ This architecture ensures:
 
 ### [030] MCU migration (STM32G473 → STM32G474)
 
-> 🔄 **Status: WIP**
+> ✅ **Status: OK**
 
 **Notes:**
 - Migration required due to STM32G473 availability issues
@@ -605,6 +605,30 @@ This architecture ensures:
 - No functional changes required
 - Project builds
 - I will be sure if the project runs as soon as I finish my PCB
+
+### [031] System ADC measurements
+
+> 🔄 **Status: WIP**
+
+**Architecture:**
+- ADC conversions are periodically triggered by **TIM17**
+- Results are transferred automatically using **DMA**
+- No dedicated ADC task is planned
+
+**Rationale:**
+- ADC sampling is not application-critical
+- TIM17 provides deterministic sampling intervals
+- DMA minimizes CPU involvement during data acquisition
+- Eliminates unnecessary RTOS context switches
+- Other tasks simply read the latest available measurements
+
+**Future improvements:**
+- Signal filtering (moving average / low-pass filter)
+- Threshold-based event generation
+
+**Notes:**
+- TIM17 is used only as the ADC trigger source
+- ADC acquisition is handled entirely by hardware (TIM17 + ADC + DMA)
 
 ---
 
