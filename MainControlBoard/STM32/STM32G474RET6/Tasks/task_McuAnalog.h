@@ -15,6 +15,10 @@
  * @{
  */
 
+ // After considering the requirements this task is obsolete and can be removed. System measurements can be handled
+ // by timer triggered ADC conversions and DMA transfers
+ // This way we can avoid the overhead of a separate task and reduce the overall complexity of the system.
+
 #ifndef TASK_MCU_ANALOG_H_
     #define TASK_MCU_ANALOG_H_
 
@@ -36,11 +40,23 @@ extern const char task_McuAnalog_name[]; /**< Name of the MCU Analog task */
 extern TX_THREAD task_McuAnalog_handle; /**< Thread handle for Mcu Analog task */
 extern ULONG task_McuAnalog_stack[TASK_MCU_ANALOG_STACK_SIZE]; //!< Stack for Mcu Analog task
 
+typedef struct{
+    float vrefint; /**< Vrefint voltage in volts */
+    float vdda; /**< VDDA voltage in volts */
+    float mcu_temp; /**< MCU temperature in degrees Celsius */
+    float mq6_sensor; /**< MQ-6 gas sensor reading in ppm */
+    float mq7_sensor; /**< MQ-7 gas sensor reading in ppm */
+}SystemMeasurement_t;
+
+extern SystemMeasurement_t system_measurements; /**< Structure holding the latest system measurements */
+
 #ifdef __cplusplus
     extern "C"{
 #endif // __cplusplus
 
 void task_McuAnalog_init(void);
+
+void task_McuAnalog_create(void);
 
 void task_McuAnalog(ULONG arg);
 

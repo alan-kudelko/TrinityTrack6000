@@ -57,8 +57,6 @@ void parse_cli_queue_request_radio_stats(SystemRequest*command);
 
 void task_SystemDispatcher_create(void);
 
-void task_SystemDispatcher_init(void);
-
 void task_SystemDispatcher(ULONG arg);
 
 #ifdef __cplusplus

@@ -59,6 +59,7 @@ DMA_HandleTypeDef hdma_spi2_rx;
 DMA_HandleTypeDef hdma_spi2_tx;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim7;
 TIM_HandleTypeDef htim20;
 
 UART_HandleTypeDef huart2;
@@ -74,6 +75,7 @@ extern void initializeMemory(void);
 extern void task_CLI_create(void);
 extern void task_SystemDispatcher_create(void);
 extern void task_wireless_comm_create(void);
+extern void task_McuAnalog_create(void);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,6 +92,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM20_Init(void);
+static void MX_TIM7_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -117,6 +120,7 @@ void tx_application_define(void*first_unused_memory){
     task_CLI_create();
     task_SystemDispatcher_create();
     task_wireless_comm_create();
+    task_McuAnalog_create();
 }
 /* USER CODE END 0 */
 
@@ -161,6 +165,7 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM1_Init();
   MX_TIM20_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
   // Clear all pending interrupts before enabling them to avoid unintended behavior
   USART2->ICR=0xFFFFFFFF;
@@ -191,6 +196,8 @@ int main(void)
   initializeMemory();
 
   __enable_irq();
+
+  HAL_TIM_Base_Start_IT(&htim7);
   //xmc4200_spi_test();
   // Enable timer 1 channel 4
   //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 100);
@@ -627,6 +634,44 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);
+
+}
+
+/**
+  * @brief TIM7 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM7_Init(void)
+{
+
+  /* USER CODE BEGIN TIM7_Init 0 */
+
+  /* USER CODE END TIM7_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM7_Init 1 */
+
+  /* USER CODE END TIM7_Init 1 */
+  htim7.Instance = TIM7;
+  htim7.Init.Prescaler = 15900;
+  htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim7.Init.Period = 50000;
+  htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM7_Init 2 */
+
+  /* USER CODE END TIM7_Init 2 */
 
 }
 
