@@ -8,40 +8,27 @@
 
 #include <usart3_dma.h>
 
-const char task_McuAnalog_name[]="MCU Analog Task";
-
-TX_THREAD task_McuAnalog_handle SECTION(".task_handles");;
-ULONG task_McuAnalog_stack[TASK_MCU_ANALOG_STACK_SIZE] SECTION(".task_stacks_ccsram");;
-
 SystemMeasurement_t system_measurements SECTION(".sysDiag"); // Structure holding the latest system measurements
 
+static uint32_t adc_dma_buffer[ADC_NUMBER_OF_CONVERSIONS]; // DMA buffer for ADC readings
+
+extern ADC_HandleTypeDef hadc1; // ADC handle
+
 void mcu_analog_timer_callback(void){
-    // This function is called from the timer interrupt handler
-    // It should trigger ADC conversions and read the results
-    // For now, just a placeholder
+    HAL_ADC_Start_DMA(&hadc1,adc_dma_buffer,ADC_NUMBER_OF_CONVERSIONS);
 }
 
-void task_McuAnalog_create(void){
-    memset(&system_measurements,0,sizeof(system_measurements));
-
-    tx_thread_create(&task_McuAnalog_handle,
-                    (char*)task_McuAnalog_name,
-                    task_McuAnalog,
-                    0,
-                    &task_McuAnalog_stack,
-                    sizeof(task_McuAnalog_stack),
-                    TASK_MCU_ANALOG_PRIORITY,
-                    TASK_MCU_ANALOG_PRIORITY,
-                    TX_NO_TIME_SLICE,
-                    TX_AUTO_START);
+void mcu_analog_update_measurements(void){
+    // Update the system measurements from the ADC DMA buffer
+    system_measurements.vrefint=__HAL_ADC_CALC_VREFANALOG_VOLTAGE(adc_dma_buffer[0],ADC_RESOLUTION_12B);
+    system_measurements.mcu_temp=__HAL_ADC_CALC_TEMPERATURE(system_measurements.vrefint,adc_dma_buffer[1],ADC_RESOLUTION_12B);
+    system_measurements.mq6_sensor=(float)adc_dma_buffer[2]*system_measurements.vrefint/4095.0f;
+    system_measurements.mq7_sensor=(float)adc_dma_buffer[3]*system_measurements.vrefint/4095.0f;
 }
 
-void task_McuAnalog(ULONG arg){
-    UNUSED(arg);
-
-    while(1){
-
-        tx_thread_sleep(5000);
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*hadc){
+    if(hadc->Instance==hadc1.Instance){
+        mcu_analog_update_measurements();
     }
 }
 

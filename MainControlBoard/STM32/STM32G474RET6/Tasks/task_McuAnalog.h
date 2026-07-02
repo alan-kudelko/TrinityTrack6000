@@ -1,12 +1,11 @@
 /**
- * @defgroup task_McuAnalog MCU Analog Task
- * @brief Task responsible for monitoring and managing the analog components of the system, such as ADC readings
- * backup domain voltage monitoring, MCU temperature monitoring, Vrefint monitoring, MQ-6 and MQ-7 gas sensors monitoring
+ * @defgroup mcu_analog MCU Analog Measurements
+ * @brief This module handles the analog measurements of the MCU, including Vrefint, MCU temperature, and gas sensor readings.
  * 
- * @date 2026.02.03
+ * @date 2026.07.02
  * @author Alan Kudełko
  * @copyright
- * Copyright (c) 2025 Alan Kudełko.  
+ * Copyright (c) 2026 Alan Kudełko.  
  * All rights reserved.  
  * For educational and research purposes only.  
  * Redistribution, modification, or commercial use prohibited without
@@ -30,22 +29,13 @@
     #define ALIGNED(x) __attribute((aligned(x)))
 #endif // __DOXYGEN__
 
-#include <tx_api.h>
-
-#define TASK_MCU_ANALOG_STACK_SIZE 1024 //!< Stack size for MCU Analog task
-#define TASK_MCU_ANALOG_PRIORITY 6 //!< Priority for MCU Analog task
-
-extern const char task_McuAnalog_name[]; /**< Name of the MCU Analog task */
-
-extern TX_THREAD task_McuAnalog_handle; /**< Thread handle for Mcu Analog task */
-extern ULONG task_McuAnalog_stack[TASK_MCU_ANALOG_STACK_SIZE]; //!< Stack for Mcu Analog task
+#define ADC_NUMBER_OF_CONVERSIONS 4 /**< Number of ADC conversions to be performed */
 
 typedef struct{
-    float vrefint; /**< Vrefint voltage in volts */
-    float vdda; /**< VDDA voltage in volts */
+    float vrefint; /**< Vrefint voltage in mV */
     float mcu_temp; /**< MCU temperature in degrees Celsius */
-    float mq6_sensor; /**< MQ-6 gas sensor reading in ppm */
-    float mq7_sensor; /**< MQ-7 gas sensor reading in ppm */
+    float mq6_sensor; /**< MQ-6 gas sensor reading in mV */
+    float mq7_sensor; /**< MQ-7 gas sensor reading in mV */
 }SystemMeasurement_t;
 
 extern SystemMeasurement_t system_measurements; /**< Structure holding the latest system measurements */
@@ -54,11 +44,24 @@ extern SystemMeasurement_t system_measurements; /**< Structure holding the lates
     extern "C"{
 #endif // __cplusplus
 
-void task_McuAnalog_init(void);
+/**
+ * @brief Callback function for the MCU Analog timer
+ * This function is called from the timer interrupt handler
+ * It should trigger ADC conversions and read the results
+ * @param None
+ * @return None
+ */
+void mcu_analog_timer_callback(void);
 
-void task_McuAnalog_create(void);
+/**
+ * @brief Update the system measurements
+ * This function reads the latest ADC values and updates the system_measurements structure
+ * @param None
+ * @return None
+ */
+void mcu_analog_update_measurements(void);
 
-void task_McuAnalog(ULONG arg);
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*hadc);
 
 #ifdef __cplusplus
     }
