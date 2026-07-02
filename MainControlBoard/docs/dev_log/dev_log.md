@@ -611,13 +611,13 @@ This architecture ensures:
 > 🔄 **Status: WIP**
 
 **Architecture:**
-- ADC conversions are periodically triggered by **TIM17**
+- ADC conversions are periodically triggered by **TIM7**
 - Results are transferred automatically using **DMA**
 - No dedicated ADC task is planned
 
 **Rationale:**
 - ADC sampling is not application-critical
-- TIM17 provides deterministic sampling intervals
+- TIM7 provides deterministic sampling intervals
 - DMA minimizes CPU involvement during data acquisition
 - Eliminates unnecessary RTOS context switches
 - Other tasks simply read the latest available measurements
@@ -627,8 +627,8 @@ This architecture ensures:
 - Threshold-based event generation
 
 **Notes:**
-- TIM17 is used only as the ADC trigger source
-- ADC acquisition is handled entirely by hardware (TIM17 + ADC + DMA)
+- TIM7 is used only as the ADC trigger source
+- ADC acquisition is handled entirely by hardware (TIM7 + ADC + DMA)
 
 ---
 
