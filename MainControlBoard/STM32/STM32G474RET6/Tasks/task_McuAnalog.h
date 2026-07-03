@@ -30,6 +30,7 @@
 #endif // __DOXYGEN__
 
 #define ADC_NUMBER_OF_CONVERSIONS 4 /**< Number of ADC conversions to be performed */
+#define VDDA_CALIBRATION_FACTOR 0.964f /**< Calibration factor for VDDA (all measurements are around 4% higher than actual) */
 
 typedef struct{
     float vrefint; /**< Vrefint voltage in mV */
