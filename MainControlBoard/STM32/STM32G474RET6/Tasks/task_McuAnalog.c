@@ -20,8 +20,9 @@ void mcu_analog_timer_callback(void){
 
 void mcu_analog_update_measurements(void){
     // Update the system measurements from the ADC DMA buffer
-    system_measurements.vrefint=__HAL_ADC_CALC_VREFANALOG_VOLTAGE(adc_dma_buffer[0],ADC_RESOLUTION_12B)*VDDA_CALIBRATION_FACTOR;
+    system_measurements.vrefint=__HAL_ADC_CALC_VREFANALOG_VOLTAGE(adc_dma_buffer[0],ADC_RESOLUTION_12B);
     system_measurements.mcu_temp=__HAL_ADC_CALC_TEMPERATURE(system_measurements.vrefint,adc_dma_buffer[1],ADC_RESOLUTION_12B);
+    system_measurements.vrefint=system_measurements.vrefint*VDDA_CALIBRATION_FACTOR; // Apply calibration factor to Vrefint
     system_measurements.mq6_sensor=(float)adc_dma_buffer[2]*system_measurements.vrefint/4095.0f;
     system_measurements.mq7_sensor=(float)adc_dma_buffer[3]*system_measurements.vrefint/4095.0f;
 }
