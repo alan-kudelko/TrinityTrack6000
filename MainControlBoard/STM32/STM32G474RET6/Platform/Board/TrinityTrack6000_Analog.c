@@ -1,10 +1,10 @@
 /**
- * @addtogroup task_McuAnalog
+ * @addtogroup mcu_analog
  * @{
  */
 #include <stm32g4xx_hal.h>
 
-#include <task_McuAnalog.h>
+#include <TrinityTrack6000_Analog.h>
 
 #include <usart3_dma.h>
 

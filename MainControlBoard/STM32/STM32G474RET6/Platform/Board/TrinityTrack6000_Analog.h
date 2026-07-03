@@ -14,12 +14,8 @@
  * @{
  */
 
- // After considering the requirements this task is obsolete and can be removed. System measurements can be handled
- // by timer triggered ADC conversions and DMA transfers
- // This way we can avoid the overhead of a separate task and reduce the overall complexity of the system.
-
-#ifndef TASK_MCU_ANALOG_H_
-    #define TASK_MCU_ANALOG_H_
+#ifndef MCU_ANALOG_H
+    #define MCU_ANALOG_H_
 
 #ifdef __DOXYGEN__
     #define SECTION(x)
@@ -68,6 +64,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*hadc);
     }
 #endif // __cplusplus
 
-#endif // TASK_MCU_ANALOG_H_
+#endif // MCU_ANALOG_H_
 
 /**@} */
