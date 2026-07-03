@@ -342,22 +342,22 @@ This architecture ensures:
 > 🔄 **Status: WIP**
 
 **Notes:**
-- DMA operations should be distributed across multiple controllers  
-- Goal: reduce jitter and avoid contention  
-- Final configuration will be adjusted in STM32Cube after full system validation post-migration  
-- Requires verification of DMA channel allocation, priorities, and RAM placement  
+- DMA operations should be distributed across multiple DMA controllers
+- Goal: reduce jitter and minimize resource contention
+- Final configuration will be verified after full hardware validation
+- DMA channel allocation, priorities and RAM placement may change during optimization
 
 **Planned DMA configuration:**
 
-| Interface | RAM Bank | DMA Priority | TX Channel | RX Channel |
-|----------|----------|-------------|-----------|-----------|
-| SPI1     | RAM1     | Very High   | DMA1_3    | DMA1_4    |
-| SPI2     | RAM2     | Very High   | DMA2_1    | DMA2_2    |
-| SPI3     | RAM1     | High        | DMA1_7    | DMA1_8    |
-| I2C2     | RAM1     | Low         | DMA1_1    | DMA1_2    |
-| ADC1     | RAM2     | Low         | DMA2_3    | N/A       |
-| USART3   | RAM2     | Low         | DMA2_8    | DMA2_7    |
-| USART2   | RAM1     | Low         | DMA1_5    | DMA1_6    |
+| Interface | RAM Bank | DMA Priority | TX Channel | RX Channel | Purpose |
+|-----------|----------|--------------|------------|------------|---------|
+| SPI1 | RAM1 | Very High | DMA1_3 | DMA1_4 | Communication with the NRF24L01 transceiver (critical) and FM25L16B FRAM (non-critical) |
+| SPI2 | RAM2 | Very High | DMA2_1 | DMA2_2 | Communication with the XMC4200 motor-control MCU (critical) |
+| SPI3 | RAM1 | High | DMA1_7 | DMA1_8 | Communication with additional MCUs in the PCB stack (critical) |
+| I2C2 | RAM1 | Low | DMA1_1 | DMA1_2 | Communication with the ADXL345 and other peripheral devices (non-critical) |
+| ADC1 | RAM2 | Low | DMA2_3 | N/A | Periodic system measurements (non-critical) |
+| USART3 | RAM2 | Low | DMA2_8 | DMA2_7 | Debug terminal / PC communication (non-critical) |
+| USART2 | RAM1 | Low | DMA1_5 | DMA1_6 | Communication with the L76-M33 GNSS module (non-critical) |
 
 ### [022] ADC1 initialization refactor
 
