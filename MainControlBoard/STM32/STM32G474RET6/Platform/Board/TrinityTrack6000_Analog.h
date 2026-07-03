@@ -42,13 +42,13 @@ extern SystemMeasurement_t system_measurements; /**< Structure holding the lates
 #endif // __cplusplus
 
 /**
- * @brief Callback function for the MCU Analog timer
- * This function is called from the timer interrupt handler
- * It should trigger ADC conversions and read the results
+ * @brief Initialize the MCU Analog module
+ * This function initializes the ADC and starts the DMA for analog measurements.
+ * @note This function is called only once during initializion. After that the measurements are updated via TRGO from TIM7
  * @param None
  * @return None
  */
-void mcu_analog_timer_callback(void);
+void mcu_analog_init(void);
 
 /**
  * @brief Update the system measurements

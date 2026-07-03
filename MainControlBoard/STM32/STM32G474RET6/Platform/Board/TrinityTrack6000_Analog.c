@@ -14,7 +14,8 @@ static uint32_t adc_dma_buffer[ADC_NUMBER_OF_CONVERSIONS]; // DMA buffer for ADC
 
 extern ADC_HandleTypeDef hadc1; // ADC handle
 
-void mcu_analog_timer_callback(void){
+void mcu_analog_init(void){
+    // Start the ADC in DMA mode
     HAL_ADC_Start_DMA(&hadc1,adc_dma_buffer,ADC_NUMBER_OF_CONVERSIONS);
 }
 

@@ -42,7 +42,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern void mcu_analog_timer_callback(void);
 extern void mcu_analog_update_measurements(void);
 /* USER CODE END PV */
 
@@ -355,7 +354,7 @@ void TIM7_DAC_IRQHandler(void)
   /* USER CODE END TIM7_DAC_IRQn 0 */
   HAL_TIM_IRQHandler(&htim7);
   /* USER CODE BEGIN TIM7_DAC_IRQn 1 */
-  mcu_analog_timer_callback();
+
   /* USER CODE END TIM7_DAC_IRQn 1 */
 }
 
