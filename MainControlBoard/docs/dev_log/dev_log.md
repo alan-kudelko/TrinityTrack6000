@@ -608,7 +608,7 @@ This architecture ensures:
 
 ### [031] System ADC measurements
 
-> 🔄 **Status: WIP**
+> ✅ **Status: OK**
 
 **Architecture:**
 - ADC conversions are periodically triggered by **TIM7**
@@ -629,6 +629,9 @@ This architecture ensures:
 **Notes:**
 - TIM7 is used only as the ADC trigger source
 - ADC acquisition is handled entirely by hardware (TIM7 + ADC + DMA)
+
+**Issues**
+- VREFINT-based VDDA estimation requires an empirical calibration factor (~3.7% on current hardware)
 
 ---
 
