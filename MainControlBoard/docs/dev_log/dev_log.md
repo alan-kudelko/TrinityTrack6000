@@ -242,9 +242,20 @@ This architecture ensures:
 
 > 🔄 **Status: WIP**
 
-### [009] DMA UART (interrupt-driven queue)
+### [009] Terminal DMA UART (interrupt-driven queue)
 
 > ✅ **Status: OK**
+
+**Architecture:**
+- DMA handles data transfers
+- USART interrupts handle transfer completion
+- Ring buffers decouple application code from hardware
+- No polling required
+
+**Notes:**
+- Uses a custom `USART3_IRQHandler`
+- Optimized for high-throughput debug logging
+- Fully non-blocking transmission
 
 ### [010] GPS communication (L76L-M33)
 
