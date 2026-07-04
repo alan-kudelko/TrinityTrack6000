@@ -45,7 +45,7 @@ At its core, the design follows a **central dispatcher pattern**, where all cont
 
 STM32_FlowDiagram.drawio.html
 
-![System Flow Diagrams](/STM32_FlowDiagram.drawio.html)
+![System Flow Diagrams](/MainControlBoard/docs/dev_log/STM32_FlowDiagram.drawio.html)
 
 ---
 
