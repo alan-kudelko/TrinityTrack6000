@@ -6525,7 +6525,7 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
                 0x00000800                        stack_size = DEFINED (stack_size)?stack_size:0x800
                 0x00000040                        no_init_size = 0x40
 
-.text           0x08000000     0x5d08 load address 0x0c000000
+.text           0x08000000     0x5d14 load address 0x0c000000
                 0x08000000                        sText = .
  *(.reset)
  .reset         0x08000000      0x292 CMakeFiles/XMC4200.elf.dir/Startup/startup_XMC4200.S.obj
@@ -6845,414 +6845,414 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  .text.XMC_SPI_CH_EnableInputInversion
                 0x0800265a       0x1e CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
  .text.SPI_SLAVE_0_init
-                0x08002678       0xe4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
+                0x08002678       0xf0 CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
                 0x08002678                SPI_SLAVE_0_init
  .text.XMC_USIC_CH_DisableEvent
-                0x0800275c       0x24 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x08002768       0x24 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x08002780       0x20 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x0800278c       0x20 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.XMC_USIC_CH_TXFIFO_DisableEvent
-                0x080027a0       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x080027ac       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.XMC_USIC_CH_TXFIFO_IsFull
-                0x080027c8       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x080027d4       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.XMC_USIC_CH_TXFIFO_IsEmpty
-                0x080027f0       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x080027fc       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.XMC_USIC_CH_RXFIFO_DisableEvent
-                0x08002818       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x08002824       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.XMC_USIC_CH_RXFIFO_IsEmpty
-                0x08002840       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x0800284c       0x28 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
  .text.UART_Init
-                0x08002868       0x22 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
-                0x08002868                UART_Init
+                0x08002874       0x22 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x08002874                UART_Init
  .text.UART_lTransmitHandler
-                0x0800288a      0x104 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
-                0x0800288a                UART_lTransmitHandler
+                0x08002896      0x104 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x08002896                UART_lTransmitHandler
  .text.UART_lReceiveHandler
-                0x0800298e      0x128 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
-                0x0800298e                UART_lReceiveHandler
+                0x0800299a      0x128 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+                0x0800299a                UART_lReceiveHandler
  .text.UART_lReconfigureRxFIFO
-                0x08002ab6       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
- *fill*         0x08002b06        0x2 
+                0x08002ac2       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+ *fill*         0x08002b12        0x2 
  .text.__NVIC_GetPriorityGrouping
-                0x08002b08       0x1c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002b14       0x1c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
  .text.__NVIC_EnableIRQ
-                0x08002b24       0x3c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002b30       0x3c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
  .text.__NVIC_SetPriority
-                0x08002b60       0x54 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002b6c       0x54 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
  .text.NVIC_EncodePriority
-                0x08002bb4       0x66 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002bc0       0x66 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
  .text.XMC_USIC_CH_SetInputSource
-                0x08002c1a       0x3c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002c26       0x3c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
  .text.XMC_UART_CH_Init
-                0x08002c56       0x1c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002c62       0x1c CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
  .text.XMC_UART_CH_Start
-                0x08002c72       0x24 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
- *fill*         0x08002c96        0x2 
+                0x08002c7e       0x24 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+ *fill*         0x08002ca2        0x2 
  .text.UART_DEBUG_init
-                0x08002c98       0xd4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08002c98                UART_DEBUG_init
+                0x08002ca4       0xd4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002ca4                UART_DEBUG_init
  .text.USIC0_3_IRQHandler
-                0x08002d6c       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08002d6c                USIC0_3_IRQHandler
+                0x08002d78       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002d78                USIC0_3_IRQHandler
  .text.USIC0_5_IRQHandler
-                0x08002d80       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08002d80                USIC0_5_IRQHandler
+                0x08002d8c       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08002d8c                USIC0_5_IRQHandler
  .text.XMC_GPIO_Init
-                0x08002d94      0x140 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_gpio.c.obj
-                0x08002d94                XMC_GPIO_Init
+                0x08002da0      0x140 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_gpio.c.obj
+                0x08002da0                XMC_GPIO_Init
  .text.XMC_SCU_CLOCK_GetCpuClockFrequency
-                0x08002ed4       0x18 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08002ee0       0x18 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
  .text.XMC_SCU_GetMirrorStatus
-                0x08002eec       0x18 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08002ef8       0x18 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
  .text.XMC_SCU_lDelay
-                0x08002f04       0x48 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08002f10       0x48 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
  .text.XMC_SCU_INTERUPT_GetEventStatus
-                0x08002f4c       0x18 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08002f4c                XMC_SCU_INTERUPT_GetEventStatus
+                0x08002f58       0x18 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08002f58                XMC_SCU_INTERUPT_GetEventStatus
  .text.XMC_SCU_INTERRUPT_ClearEventStatus
-                0x08002f64       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08002f64                XMC_SCU_INTERRUPT_ClearEventStatus
+                0x08002f70       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08002f70                XMC_SCU_INTERRUPT_ClearEventStatus
  .text.XMC_SCU_CLOCK_Init
-                0x08002f84       0xf4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08002f84                XMC_SCU_CLOCK_Init
+                0x08002f90       0xf4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08002f90                XMC_SCU_CLOCK_Init
  .text.XMC_SCU_RESET_DeassertPeripheralReset
-                0x08003078       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003078                XMC_SCU_RESET_DeassertPeripheralReset
+                0x08003084       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003084                XMC_SCU_RESET_DeassertPeripheralReset
  .text.XMC_SCU_RESET_IsPeripheralResetAsserted
-                0x080030b4       0x48 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080030b4                XMC_SCU_RESET_IsPeripheralResetAsserted
+                0x080030c0       0x48 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080030c0                XMC_SCU_RESET_IsPeripheralResetAsserted
  .text.XMC_SCU_CLOCK_GetPeripheralClockFrequency
-                0x080030fc       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080030fc                XMC_SCU_CLOCK_GetPeripheralClockFrequency
+                0x08003108       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003108                XMC_SCU_CLOCK_GetPeripheralClockFrequency
  .text.XMC_SCU_CLOCK_SetSystemClockSource
-                0x0800311c       0x28 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x0800311c                XMC_SCU_CLOCK_SetSystemClockSource
+                0x08003128       0x28 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003128                XMC_SCU_CLOCK_SetSystemClockSource
  .text.XMC_SCU_CLOCK_SetWdtClockSource
-                0x08003144       0x28 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003144                XMC_SCU_CLOCK_SetWdtClockSource
+                0x08003150       0x28 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003150                XMC_SCU_CLOCK_SetWdtClockSource
  .text.XMC_SCU_CLOCK_SetSystemPllClockSource
-                0x0800316c       0x44 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x0800316c                XMC_SCU_CLOCK_SetSystemPllClockSource
+                0x08003178       0x44 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003178                XMC_SCU_CLOCK_SetSystemPllClockSource
  .text.XMC_SCU_HIB_SetRtcClockSource
-                0x080031b0       0x40 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080031b0                XMC_SCU_HIB_SetRtcClockSource
+                0x080031bc       0x40 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080031bc                XMC_SCU_HIB_SetRtcClockSource
  .text.XMC_SCU_HIB_SetStandbyClockSource
-                0x080031f0       0x40 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080031f0                XMC_SCU_HIB_SetStandbyClockSource
+                0x080031fc       0x40 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080031fc                XMC_SCU_HIB_SetStandbyClockSource
  .text.XMC_SCU_CLOCK_SetSystemClockDivider
-                0x08003230       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003230                XMC_SCU_CLOCK_SetSystemClockDivider
+                0x0800323c       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x0800323c                XMC_SCU_CLOCK_SetSystemClockDivider
  .text.XMC_SCU_CLOCK_SetCcuClockDivider
-                0x0800325c       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x0800325c                XMC_SCU_CLOCK_SetCcuClockDivider
+                0x08003268       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003268                XMC_SCU_CLOCK_SetCcuClockDivider
  .text.XMC_SCU_CLOCK_SetCpuClockDivider
-                0x08003288       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003288                XMC_SCU_CLOCK_SetCpuClockDivider
+                0x08003294       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003294                XMC_SCU_CLOCK_SetCpuClockDivider
  .text.XMC_SCU_CLOCK_SetPeripheralClockDivider
-                0x080032b4       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080032b4                XMC_SCU_CLOCK_SetPeripheralClockDivider
+                0x080032c0       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080032c0                XMC_SCU_CLOCK_SetPeripheralClockDivider
  .text.XMC_SCU_CLOCK_SetWdtClockDivider
-                0x080032e0       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080032e0                XMC_SCU_CLOCK_SetWdtClockDivider
+                0x080032ec       0x2c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080032ec                XMC_SCU_CLOCK_SetWdtClockDivider
  .text.XMC_SCU_CLOCK_EnableClock
-                0x0800330c       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x0800330c                XMC_SCU_CLOCK_EnableClock
+                0x08003318       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003318                XMC_SCU_CLOCK_EnableClock
  .text.XMC_SCU_CLOCK_UngatePeripheralClock
-                0x0800332c       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x0800332c                XMC_SCU_CLOCK_UngatePeripheralClock
+                0x08003338       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003338                XMC_SCU_CLOCK_UngatePeripheralClock
  .text.XMC_SCU_CLOCK_IsPeripheralClockGated
-                0x08003368       0x48 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003368                XMC_SCU_CLOCK_IsPeripheralClockGated
+                0x08003374       0x48 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003374                XMC_SCU_CLOCK_IsPeripheralClockGated
  .text.XMC_SCU_CLOCK_SetBackupClockCalibrationMode
-                0x080033b0       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080033b0                XMC_SCU_CLOCK_SetBackupClockCalibrationMode
+                0x080033bc       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080033bc                XMC_SCU_CLOCK_SetBackupClockCalibrationMode
  .text.XMC_SCU_HIB_EnableHibernateDomain
-                0x080033fc       0x58 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080033fc                XMC_SCU_HIB_EnableHibernateDomain
+                0x08003408       0x58 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003408                XMC_SCU_HIB_EnableHibernateDomain
  .text.XMC_SCU_CLOCK_IsLowPowerOscillatorStable
-                0x08003454       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003454                XMC_SCU_CLOCK_IsLowPowerOscillatorStable
+                0x08003460       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003460                XMC_SCU_CLOCK_IsLowPowerOscillatorStable
  .text.XMC_SCU_CLOCK_EnableLowPowerOscillator
-                0x08003478       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003478                XMC_SCU_CLOCK_EnableLowPowerOscillator
+                0x08003484       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003484                XMC_SCU_CLOCK_EnableLowPowerOscillator
  .text.XMC_SCU_CLOCK_EnableHighPerformanceOscillator
-                0x080034ec       0x50 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080034ec                XMC_SCU_CLOCK_EnableHighPerformanceOscillator
+                0x080034f8       0x50 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080034f8                XMC_SCU_CLOCK_EnableHighPerformanceOscillator
  .text.XMC_SCU_CLOCK_IsHighPerformanceOscillatorStable
-                0x0800353c       0x28 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x0800353c                XMC_SCU_CLOCK_IsHighPerformanceOscillatorStable
+                0x08003548       0x28 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003548                XMC_SCU_CLOCK_IsHighPerformanceOscillatorStable
  .text.XMC_SCU_CLOCK_EnableSystemPll
-                0x08003564       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003564                XMC_SCU_CLOCK_EnableSystemPll
+                0x08003570       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003570                XMC_SCU_CLOCK_EnableSystemPll
  .text.XMC_SCU_CLOCK_DisableSystemPll
-                0x08003588       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003588                XMC_SCU_CLOCK_DisableSystemPll
+                0x08003594       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003594                XMC_SCU_CLOCK_DisableSystemPll
  .text.XMC_SCU_CLOCK_StartSystemPll
-                0x080035ac      0x19c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x080035ac                XMC_SCU_CLOCK_StartSystemPll
+                0x080035b8      0x19c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x080035b8                XMC_SCU_CLOCK_StartSystemPll
  .text.XMC_SCU_CLOCK_StepSystemPllFrequency
-                0x08003748       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
-                0x08003748                XMC_SCU_CLOCK_StepSystemPllFrequency
+                0x08003754       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+                0x08003754                XMC_SCU_CLOCK_StepSystemPllFrequency
  .text.XMC_CCU4_StartPrescaler
-                0x08003784       0x1c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003790       0x1c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
  .text.XMC_CCU4_lDeassertReset
-                0x080037a0       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x080037ac       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
  .text.XMC_CCU4_lUngateClock
-                0x080037d8       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x080037e4       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
  .text.XMC_CCU4_EnableModule
-                0x08003810       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003810                XMC_CCU4_EnableModule
+                0x0800381c       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x0800381c                XMC_CCU4_EnableModule
  .text.XMC_CCU4_Init
-                0x08003832       0x3e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003832                XMC_CCU4_Init
+                0x0800383e       0x3e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x0800383e                XMC_CCU4_Init
  .text.XMC_CCU4_SetMultiChannelShadowTransferMode
-                0x08003870       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003870                XMC_CCU4_SetMultiChannelShadowTransferMode
+                0x0800387c       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x0800387c                XMC_CCU4_SetMultiChannelShadowTransferMode
  .text.XMC_CCU4_SLICE_CompareInit
-                0x080038a8       0x6e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x080038a8                XMC_CCU4_SLICE_CompareInit
+                0x080038b4       0x6e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x080038b4                XMC_CCU4_SLICE_CompareInit
  .text.XMC_CCU4_SLICE_StartConfig
-                0x08003916       0x5c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003916                XMC_CCU4_SLICE_StartConfig
+                0x08003922       0x5c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003922                XMC_CCU4_SLICE_StartConfig
  .text.XMC_CCU4_SLICE_StopConfig
-                0x08003972       0x58 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003972                XMC_CCU4_SLICE_StopConfig
+                0x0800397e       0x58 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x0800397e                XMC_CCU4_SLICE_StopConfig
  .text.XMC_CCU4_SLICE_LoadConfig
-                0x080039ca       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x080039ca                XMC_CCU4_SLICE_LoadConfig
+                0x080039d6       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x080039d6                XMC_CCU4_SLICE_LoadConfig
  .text.XMC_CCU4_SLICE_ModulationConfig
-                0x08003a00       0x80 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003a00                XMC_CCU4_SLICE_ModulationConfig
+                0x08003a0c       0x80 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003a0c                XMC_CCU4_SLICE_ModulationConfig
  .text.XMC_CCU4_SLICE_CountConfig
-                0x08003a80       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003a80                XMC_CCU4_SLICE_CountConfig
+                0x08003a8c       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003a8c                XMC_CCU4_SLICE_CountConfig
  .text.XMC_CCU4_SLICE_GateConfig
-                0x08003ab6       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003ab6                XMC_CCU4_SLICE_GateConfig
+                0x08003ac2       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003ac2                XMC_CCU4_SLICE_GateConfig
  .text.XMC_CCU4_SLICE_DirectionConfig
-                0x08003aec       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003aec                XMC_CCU4_SLICE_DirectionConfig
+                0x08003af8       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003af8                XMC_CCU4_SLICE_DirectionConfig
  .text.XMC_CCU4_SLICE_StatusBitOverrideConfig
-                0x08003b22       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003b22                XMC_CCU4_SLICE_StatusBitOverrideConfig
+                0x08003b2e       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003b2e                XMC_CCU4_SLICE_StatusBitOverrideConfig
  .text.XMC_CCU4_SLICE_TrapConfig
-                0x08003b52       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003b52                XMC_CCU4_SLICE_TrapConfig
+                0x08003b5e       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003b5e                XMC_CCU4_SLICE_TrapConfig
  .text.XMC_CCU4_SLICE_ConfigureStatusBitOverrideEvent
-                0x08003bc6       0xc4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003bc6                XMC_CCU4_SLICE_ConfigureStatusBitOverrideEvent
+                0x08003bd2       0xc4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003bd2                XMC_CCU4_SLICE_ConfigureStatusBitOverrideEvent
  .text.XMC_CCU4_SLICE_ConfigureEvent
-                0x08003c8a       0xd4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003c8a                XMC_CCU4_SLICE_ConfigureEvent
- *fill*         0x08003d5e        0x2 
+                0x08003c96       0xd4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003c96                XMC_CCU4_SLICE_ConfigureEvent
+ *fill*         0x08003d6a        0x2 
  .text.XMC_CCU4_SLICE_SetInterruptNode
-                0x08003d60       0xc8 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
-                0x08003d60                XMC_CCU4_SLICE_SetInterruptNode
+                0x08003d6c       0xc8 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+                0x08003d6c                XMC_CCU4_SLICE_SetInterruptNode
  .text.XMC_CCU8_StartPrescaler
-                0x08003e28       0x1c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003e34       0x1c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
  .text.XMC_CCU8_SLICE_StopTimer
-                0x08003e44       0x1a CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
- *fill*         0x08003e5e        0x2 
+                0x08003e50       0x1a CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+ *fill*         0x08003e6a        0x2 
  .text.XMC_CCU8_lDeassertReset
-                0x08003e60       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003e6c       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
  .text.XMC_CCU8_lUngateClock
-                0x08003e84       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003e90       0x24 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
  .text.XMC_CCU8_EnableModule
-                0x08003ea8       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08003ea8                XMC_CCU8_EnableModule
+                0x08003eb4       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003eb4                XMC_CCU8_EnableModule
  .text.XMC_CCU8_Init
-                0x08003eca       0x3e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08003eca                XMC_CCU8_Init
+                0x08003ed6       0x3e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003ed6                XMC_CCU8_Init
  .text.XMC_CCU8_SLICE_CompareInit
-                0x08003f08       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08003f08                XMC_CCU8_SLICE_CompareInit
+                0x08003f14       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003f14                XMC_CCU8_SLICE_CompareInit
  .text.XMC_CCU8_SetMultiChannelShadowTransferMode
-                0x08003f7c       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08003f7c                XMC_CCU8_SetMultiChannelShadowTransferMode
+                0x08003f88       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003f88                XMC_CCU8_SetMultiChannelShadowTransferMode
  .text.XMC_CCU8_SLICE_StartConfig
-                0x08003fb4       0x5c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08003fb4                XMC_CCU8_SLICE_StartConfig
+                0x08003fc0       0x5c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08003fc0                XMC_CCU8_SLICE_StartConfig
  .text.XMC_CCU8_SLICE_StopConfig
-                0x08004010       0x58 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004010                XMC_CCU8_SLICE_StopConfig
+                0x0800401c       0x58 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x0800401c                XMC_CCU8_SLICE_StopConfig
  .text.XMC_CCU8_SLICE_LoadConfig
-                0x08004068       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004068                XMC_CCU8_SLICE_LoadConfig
+                0x08004074       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08004074                XMC_CCU8_SLICE_LoadConfig
  .text.XMC_CCU8_SLICE_LoadSelector
-                0x0800409e       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x0800409e                XMC_CCU8_SLICE_LoadSelector
+                0x080040aa       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x080040aa                XMC_CCU8_SLICE_LoadSelector
  .text.XMC_CCU8_SLICE_ModulationConfig
-                0x080040d4       0x92 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x080040d4                XMC_CCU8_SLICE_ModulationConfig
+                0x080040e0       0x92 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x080040e0                XMC_CCU8_SLICE_ModulationConfig
  .text.XMC_CCU8_SLICE_CountConfig
-                0x08004166       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004166                XMC_CCU8_SLICE_CountConfig
+                0x08004172       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08004172                XMC_CCU8_SLICE_CountConfig
  .text.XMC_CCU8_SLICE_GateConfig
-                0x0800419c       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x0800419c                XMC_CCU8_SLICE_GateConfig
+                0x080041a8       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x080041a8                XMC_CCU8_SLICE_GateConfig
  .text.XMC_CCU8_SLICE_DirectionConfig
-                0x080041d2       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x080041d2                XMC_CCU8_SLICE_DirectionConfig
+                0x080041de       0x36 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x080041de                XMC_CCU8_SLICE_DirectionConfig
  .text.XMC_CCU8_SLICE_StatusBitOverrideConfig
-                0x08004208       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004208                XMC_CCU8_SLICE_StatusBitOverrideConfig
+                0x08004214       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08004214                XMC_CCU8_SLICE_StatusBitOverrideConfig
  .text.XMC_CCU8_SLICE_TrapConfig
-                0x08004238       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004238                XMC_CCU8_SLICE_TrapConfig
+                0x08004244       0x74 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08004244                XMC_CCU8_SLICE_TrapConfig
  .text.XMC_CCU8_SLICE_ConfigureStatusBitOverrideEvent
-                0x080042ac       0xc4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x080042ac                XMC_CCU8_SLICE_ConfigureStatusBitOverrideEvent
+                0x080042b8       0xc4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x080042b8                XMC_CCU8_SLICE_ConfigureStatusBitOverrideEvent
  .text.XMC_CCU8_SLICE_ConfigureEvent
-                0x08004370       0xd4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004370                XMC_CCU8_SLICE_ConfigureEvent
+                0x0800437c       0xd4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x0800437c                XMC_CCU8_SLICE_ConfigureEvent
  .text.XMC_CCU8_SLICE_SetTimerPeriodMatch
-                0x08004444       0x1e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004444                XMC_CCU8_SLICE_SetTimerPeriodMatch
+                0x08004450       0x1e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08004450                XMC_CCU8_SLICE_SetTimerPeriodMatch
  .text.XMC_CCU8_SLICE_SetTimerCompareMatch
-                0x08004462       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004462                XMC_CCU8_SLICE_SetTimerCompareMatch
- *fill*         0x08004492        0x2 
+                0x0800446e       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x0800446e                XMC_CCU8_SLICE_SetTimerCompareMatch
+ *fill*         0x0800449e        0x2 
  .text.XMC_CCU8_SLICE_SetInterruptNode
-                0x08004494       0xd4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004494                XMC_CCU8_SLICE_SetInterruptNode
+                0x080044a0       0xd4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x080044a0                XMC_CCU8_SLICE_SetInterruptNode
  .text.XMC_CCU8_SLICE_DeadTimeInit
-                0x08004568       0x2e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
-                0x08004568                XMC_CCU8_SLICE_DeadTimeInit
+                0x08004574       0x2e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+                0x08004574                XMC_CCU8_SLICE_DeadTimeInit
  .text.XMC_GPIO_SetMode
-                0x08004596       0x82 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj
-                0x08004596                XMC_GPIO_SetMode
+                0x080045a2       0x82 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj
+                0x080045a2                XMC_GPIO_SetMode
  .text.XMC_GPIO_SetHardwareControl
-                0x08004618       0x46 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj
-                0x08004618                XMC_GPIO_SetHardwareControl
+                0x08004624       0x46 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj
+                0x08004624                XMC_GPIO_SetHardwareControl
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x0800465e       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x0800466a       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
  .text.XMC_I2C_CH_ClearStatusFlag
-                0x0800467e       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x0800468a       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
  .text.XMC_I2C_CH_InitEx
-                0x080046a0       0x60 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x080046a0                XMC_I2C_CH_InitEx
+                0x080046ac       0x60 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x080046ac                XMC_I2C_CH_InitEx
  .text.XMC_I2C_CH_SetSlaveAddress
-                0x08004700       0x54 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x08004700                XMC_I2C_CH_SetSlaveAddress
+                0x0800470c       0x54 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x0800470c                XMC_I2C_CH_SetSlaveAddress
  .text.XMC_I2C_CH_SetBaudrateEx
-                0x08004754       0x9c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x08004754                XMC_I2C_CH_SetBaudrateEx
+                0x08004760       0x9c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x08004760                XMC_I2C_CH_SetBaudrateEx
  .text.XMC_I2C_CH_MasterStop
-                0x080047f0       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x080047f0                XMC_I2C_CH_MasterStop
+                0x080047fc       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x080047fc                XMC_I2C_CH_MasterStop
  .text.XMC_I2C_CH_MasterTransmit
-                0x0800483c       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x0800483c                XMC_I2C_CH_MasterTransmit
+                0x08004848       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x08004848                XMC_I2C_CH_MasterTransmit
  .text.XMC_I2C_CH_MasterReceiveAck
-                0x08004888       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x08004888                XMC_I2C_CH_MasterReceiveAck
+                0x08004894       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x08004894                XMC_I2C_CH_MasterReceiveAck
  .text.XMC_I2C_CH_MasterReceiveNack
-                0x080048d4       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x080048d4                XMC_I2C_CH_MasterReceiveNack
+                0x080048e0       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x080048e0                XMC_I2C_CH_MasterReceiveNack
  .text.XMC_I2C_CH_GetReceivedData
-                0x08004920       0x34 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x08004920                XMC_I2C_CH_GetReceivedData
+                0x0800492c       0x34 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x0800492c                XMC_I2C_CH_GetReceivedData
  .text.XMC_I2C_CH_DisableEvent
-                0x08004954       0x40 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
-                0x08004954                XMC_I2C_CH_DisableEvent
+                0x08004960       0x40 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+                0x08004960                XMC_I2C_CH_DisableEvent
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x08004994       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+                0x080049a0       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
  .text.XMC_SPI_CH_ClearStatusFlag
-                0x080049b4       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
- *fill*         0x080049d6        0x2 
+                0x080049c0       0x22 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+ *fill*         0x080049e2        0x2 
  .text.XMC_SPI_CH_InitEx
-                0x080049d8       0x8c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
-                0x080049d8                XMC_SPI_CH_InitEx
+                0x080049e4       0x8c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+                0x080049e4                XMC_SPI_CH_InitEx
  .text.XMC_SPI_CH_Transmit
-                0x08004a64       0x6c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
-                0x08004a64                XMC_SPI_CH_Transmit
+                0x08004a70       0x6c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+                0x08004a70                XMC_SPI_CH_Transmit
  .text.XMC_SPI_CH_GetReceivedData
-                0x08004ad0       0x34 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
-                0x08004ad0                XMC_SPI_CH_GetReceivedData
+                0x08004adc       0x34 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+                0x08004adc                XMC_SPI_CH_GetReceivedData
  .text.XMC_USIC_CH_GetTransmitBufferStatus
-                0x08004b04       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
+                0x08004b10       0x20 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
  .text.XMC_UART_CH_ClearStatusFlag
-                0x08004b24       0x1c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
+                0x08004b30       0x1c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
  .text.XMC_UART_CH_InitEx
-                0x08004b40       0xd2 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
-                0x08004b40                XMC_UART_CH_InitEx
+                0x08004b4c       0xd2 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
+                0x08004b4c                XMC_UART_CH_InitEx
  .text.XMC_UART_CH_Transmit
-                0x08004c12       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
-                0x08004c12                XMC_UART_CH_Transmit
+                0x08004c1e       0x4c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
+                0x08004c1e                XMC_UART_CH_Transmit
  .text.XMC_UART_CH_GetReceivedData
-                0x08004c5e       0x34 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
-                0x08004c5e                XMC_UART_CH_GetReceivedData
- *fill*         0x08004c92        0x2 
+                0x08004c6a       0x34 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
+                0x08004c6a                XMC_UART_CH_GetReceivedData
+ *fill*         0x08004c9e        0x2 
  .text.XMC_USIC_CH_Enable
-                0x08004c94       0x78 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004c94                XMC_USIC_CH_Enable
+                0x08004ca0       0x78 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004ca0                XMC_USIC_CH_Enable
  .text.XMC_USIC_CH_SetBaudrate
-                0x08004d0c       0xe4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004d0c                XMC_USIC_CH_SetBaudrate
+                0x08004d18       0xe4 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004d18                XMC_USIC_CH_SetBaudrate
  .text.XMC_USIC_CH_SetBaudrateEx
-                0x08004df0      0x100 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004df0                XMC_USIC_CH_SetBaudrateEx
+                0x08004dfc      0x100 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004dfc                XMC_USIC_CH_SetBaudrateEx
  .text.XMC_USIC_CH_TXFIFO_Configure
-                0x08004ef0       0x50 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004ef0                XMC_USIC_CH_TXFIFO_Configure
+                0x08004efc       0x50 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004efc                XMC_USIC_CH_TXFIFO_Configure
  .text.XMC_USIC_CH_RXFIFO_Configure
-                0x08004f40       0x54 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004f40                XMC_USIC_CH_RXFIFO_Configure
+                0x08004f4c       0x54 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004f4c                XMC_USIC_CH_RXFIFO_Configure
  .text.XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit
-                0x08004f94       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004f94                XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit
+                0x08004fa0       0x30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004fa0                XMC_USIC_CH_RXFIFO_SetSizeTriggerLimit
  .text.XMC_USIC_CH_SetInterruptNodePointer
-                0x08004fc4       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004fc4                XMC_USIC_CH_SetInterruptNodePointer
+                0x08004fd0       0x38 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08004fd0                XMC_USIC_CH_SetInterruptNodePointer
  .text.XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
-                0x08004ffc       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08004ffc                XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
+                0x08005008       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08005008                XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
  .text.XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
-                0x08005038       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08005038                XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
+                0x08005044       0x3c CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08005044                XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
  .text.XMC_USIC_Enable
-                0x08005074       0x88 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
-                0x08005074                XMC_USIC_Enable
+                0x08005080       0x88 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+                0x08005080                XMC_USIC_Enable
  .text.SystemInit
-                0x080050fc       0x34 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
-                0x080050fc                SystemInit
+                0x08005108       0x34 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
+                0x08005108                SystemInit
  .text.SystemCoreClockUpdate
-                0x08005130       0xd4 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
-                0x08005130                SystemCoreClockUpdate
+                0x0800513c       0xd4 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
+                0x0800513c                SystemCoreClockUpdate
  .text.OSCHP_GetFrequency
-                0x08005204       0x14 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
-                0x08005204                OSCHP_GetFrequency
- .text          0x08005218       0x8c CMakeFiles/XMC4200.elf.dir/Src/main.cpp.obj
-                0x0800523e                main
- .text.memset   0x080052a4       0x9c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
-                0x080052a4                memset
+                0x08005210       0x14 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
+                0x08005210                OSCHP_GetFrequency
+ .text          0x08005224       0x8c CMakeFiles/XMC4200.elf.dir/Src/main.cpp.obj
+                0x0800524a                main
+ .text.memset   0x080052b0       0x9c D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+                0x080052b0                memset
  .text.__libc_init_array
-                0x08005340       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
-                0x08005340                __libc_init_array
+                0x0800534c       0x50 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+                0x0800534c                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08005390        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08005390                __retarget_lock_acquire_recursive
+                0x0800539c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x0800539c                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08005394        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08005394                __retarget_lock_release_recursive
+                0x080053a0        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x080053a0                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x08005398       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x080053ac        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
-                0x080053ac                atexit
+                0x080053a4       0x14 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x080053b8        0xc D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+                0x080053b8                atexit
  .text.__libc_fini_array
-                0x080053b8       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
-                0x080053b8                __libc_fini_array
+                0x080053c4       0x28 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+                0x080053c4                __libc_fini_array
  .text.__register_exitproc
-                0x080053e0       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x080053e0                __register_exitproc
+                0x080053ec       0x80 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x080053ec                __register_exitproc
  *(.init)
- .init          0x08005460        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005460                _init
- .init          0x08005464        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0800546c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800546c                _init
+ .init          0x08005470        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800546c        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800546c                _fini
- .fini          0x08005470        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .fini          0x08005478        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005478                _fini
+ .fini          0x0800547c        0x8 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -7264,356 +7264,356 @@ LOAD D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x8
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.rodata .rodata.*)
- .rodata        0x08005478       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.c.obj
+ .rodata        0x08005484       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.c.obj
  .rodata.DIGITAL_IO_0
-                0x0800548c       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x0800548c                DIGITAL_IO_0
+                0x08005498       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x08005498                DIGITAL_IO_0
  .rodata.DIGITAL_IO_1
-                0x080054a0       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x080054a0                DIGITAL_IO_1
+                0x080054ac       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x080054ac                DIGITAL_IO_1
  .rodata.DIGITAL_IO_2
-                0x080054b4       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x080054b4                DIGITAL_IO_2
+                0x080054c0       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x080054c0                DIGITAL_IO_2
  .rodata.DIGITAL_IO_3
-                0x080054c8       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x080054c8                DIGITAL_IO_3
+                0x080054d4       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x080054d4                DIGITAL_IO_3
  .rodata.DIGITAL_IO_4
-                0x080054dc       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x080054dc                DIGITAL_IO_4
+                0x080054e8       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x080054e8                DIGITAL_IO_4
  .rodata.DIGITAL_IO_5
-                0x080054f0       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x080054f0                DIGITAL_IO_5
+                0x080054fc       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x080054fc                DIGITAL_IO_5
  .rodata.DIGITAL_IO_6
-                0x08005504       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x08005504                DIGITAL_IO_6
+                0x08005510       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x08005510                DIGITAL_IO_6
  .rodata.DIGITAL_IO_7
-                0x08005518       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x08005518                DIGITAL_IO_7
+                0x08005524       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x08005524                DIGITAL_IO_7
  .rodata.DIGITAL_IO_8
-                0x0800552c       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
-                0x0800552c                DIGITAL_IO_8
+                0x08005538       0x14 CMakeFiles/XMC4200.elf.dir/Dave/Generated/DIGITAL_IO/digital_io_conf.c.obj
+                0x08005538                DIGITAL_IO_8
  .rodata.I2C_BUS_sda_pin_config
-                0x08005540        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
- .rodata.I2C_BUS_scl_pin_config
                 0x0800554c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
+ .rodata.I2C_BUS_scl_pin_config
+                0x08005558        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
  .rodata.I2C_BUS_channel_config
-                0x08005558        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
-                0x08005558                I2C_BUS_channel_config
+                0x08005564        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
+                0x08005564                I2C_BUS_channel_config
  .rodata.I2C_BUS_config
-                0x08005560       0x2c CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
-                0x08005560                I2C_BUS_config
+                0x0800556c       0x2c CMakeFiles/XMC4200.elf.dir/Dave/Generated/I2C_MASTER/i2c_master_conf.c.obj
+                0x0800556c                I2C_BUS_config
  .rodata.PWM_CCU4_0_timer_handle
-                0x0800558c        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800558c                PWM_CCU4_0_timer_handle
+                0x08005598        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005598                PWM_CCU4_0_timer_handle
  .rodata.PWM_CCU4_0_event0_config
-                0x08005594        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005594                PWM_CCU4_0_event0_config
+                0x080055a0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080055a0                PWM_CCU4_0_event0_config
  .rodata.PWM_CCU4_0_event1_config
-                0x08005598        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005598                PWM_CCU4_0_event1_config
+                0x080055a4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080055a4                PWM_CCU4_0_event1_config
  .rodata.PWM_CCU4_0_event2_config
-                0x0800559c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800559c                PWM_CCU4_0_event2_config
+                0x080055a8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080055a8                PWM_CCU4_0_event2_config
  .rodata.PWM_CCU4_0_ch1_out0_config
-                0x080055a0        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080055a0                PWM_CCU4_0_ch1_out0_config
+                0x080055ac        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080055ac                PWM_CCU4_0_ch1_out0_config
  .rodata.PWM_CCU4_0_config_handle
-                0x080055ac       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080055ac                PWM_CCU4_0_config_handle
+                0x080055b8       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080055b8                PWM_CCU4_0_config_handle
  .rodata.PWM_CCU4_1_timer_handle
-                0x080055fc        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080055fc                PWM_CCU4_1_timer_handle
+                0x08005608        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005608                PWM_CCU4_1_timer_handle
  .rodata.PWM_CCU4_1_event0_config
-                0x08005604        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005604                PWM_CCU4_1_event0_config
+                0x08005610        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005610                PWM_CCU4_1_event0_config
  .rodata.PWM_CCU4_1_event1_config
-                0x08005608        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005608                PWM_CCU4_1_event1_config
+                0x08005614        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005614                PWM_CCU4_1_event1_config
  .rodata.PWM_CCU4_1_event2_config
-                0x0800560c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800560c                PWM_CCU4_1_event2_config
+                0x08005618        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005618                PWM_CCU4_1_event2_config
  .rodata.PWM_CCU4_1_ch1_out0_config
-                0x08005610        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005610                PWM_CCU4_1_ch1_out0_config
+                0x0800561c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x0800561c                PWM_CCU4_1_ch1_out0_config
  .rodata.PWM_CCU4_1_config_handle
-                0x0800561c       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800561c                PWM_CCU4_1_config_handle
+                0x08005628       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005628                PWM_CCU4_1_config_handle
  .rodata.PWM_CCU4_2_timer_handle
-                0x0800566c        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800566c                PWM_CCU4_2_timer_handle
+                0x08005678        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005678                PWM_CCU4_2_timer_handle
  .rodata.PWM_CCU4_2_event0_config
-                0x08005674        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005674                PWM_CCU4_2_event0_config
+                0x08005680        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005680                PWM_CCU4_2_event0_config
  .rodata.PWM_CCU4_2_event1_config
-                0x08005678        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005678                PWM_CCU4_2_event1_config
+                0x08005684        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005684                PWM_CCU4_2_event1_config
  .rodata.PWM_CCU4_2_event2_config
-                0x0800567c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800567c                PWM_CCU4_2_event2_config
+                0x08005688        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005688                PWM_CCU4_2_event2_config
  .rodata.PWM_CCU4_2_ch1_out0_config
-                0x08005680        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005680                PWM_CCU4_2_ch1_out0_config
+                0x0800568c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x0800568c                PWM_CCU4_2_ch1_out0_config
  .rodata.PWM_CCU4_2_config_handle
-                0x0800568c       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800568c                PWM_CCU4_2_config_handle
+                0x08005698       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005698                PWM_CCU4_2_config_handle
  .rodata.PWM_CCU4_3_timer_handle
-                0x080056dc        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080056dc                PWM_CCU4_3_timer_handle
+                0x080056e8        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080056e8                PWM_CCU4_3_timer_handle
  .rodata.PWM_CCU4_3_event0_config
-                0x080056e4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080056e4                PWM_CCU4_3_event0_config
+                0x080056f0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080056f0                PWM_CCU4_3_event0_config
  .rodata.PWM_CCU4_3_event1_config
-                0x080056e8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080056e8                PWM_CCU4_3_event1_config
+                0x080056f4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080056f4                PWM_CCU4_3_event1_config
  .rodata.PWM_CCU4_3_event2_config
-                0x080056ec        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080056ec                PWM_CCU4_3_event2_config
+                0x080056f8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080056f8                PWM_CCU4_3_event2_config
  .rodata.PWM_CCU4_3_ch1_out0_config
-                0x080056f0        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080056f0                PWM_CCU4_3_ch1_out0_config
+                0x080056fc        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080056fc                PWM_CCU4_3_ch1_out0_config
  .rodata.PWM_CCU4_3_config_handle
-                0x080056fc       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080056fc                PWM_CCU4_3_config_handle
+                0x08005708       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005708                PWM_CCU4_3_config_handle
  .rodata.PWM_CCU4_4_timer_handle
-                0x0800574c        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800574c                PWM_CCU4_4_timer_handle
+                0x08005758        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005758                PWM_CCU4_4_timer_handle
  .rodata.PWM_CCU4_4_event0_config
-                0x08005754        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005754                PWM_CCU4_4_event0_config
+                0x08005760        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005760                PWM_CCU4_4_event0_config
  .rodata.PWM_CCU4_4_event1_config
-                0x08005758        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005758                PWM_CCU4_4_event1_config
+                0x08005764        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005764                PWM_CCU4_4_event1_config
  .rodata.PWM_CCU4_4_event2_config
-                0x0800575c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800575c                PWM_CCU4_4_event2_config
+                0x08005768        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005768                PWM_CCU4_4_event2_config
  .rodata.PWM_CCU4_4_ch1_out0_config
-                0x08005760        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005760                PWM_CCU4_4_ch1_out0_config
+                0x0800576c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x0800576c                PWM_CCU4_4_ch1_out0_config
  .rodata.PWM_CCU4_4_config_handle
-                0x0800576c       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800576c                PWM_CCU4_4_config_handle
+                0x08005778       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005778                PWM_CCU4_4_config_handle
  .rodata.PWM_CCU4_5_timer_handle
-                0x080057bc        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080057bc                PWM_CCU4_5_timer_handle
+                0x080057c8        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080057c8                PWM_CCU4_5_timer_handle
  .rodata.PWM_CCU4_5_event0_config
-                0x080057c4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080057c4                PWM_CCU4_5_event0_config
+                0x080057d0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080057d0                PWM_CCU4_5_event0_config
  .rodata.PWM_CCU4_5_event1_config
-                0x080057c8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080057c8                PWM_CCU4_5_event1_config
+                0x080057d4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080057d4                PWM_CCU4_5_event1_config
  .rodata.PWM_CCU4_5_event2_config
-                0x080057cc        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080057cc                PWM_CCU4_5_event2_config
+                0x080057d8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080057d8                PWM_CCU4_5_event2_config
  .rodata.PWM_CCU4_5_ch1_out0_config
-                0x080057d0        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080057d0                PWM_CCU4_5_ch1_out0_config
+                0x080057dc        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080057dc                PWM_CCU4_5_ch1_out0_config
  .rodata.PWM_CCU4_5_config_handle
-                0x080057dc       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080057dc                PWM_CCU4_5_config_handle
+                0x080057e8       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080057e8                PWM_CCU4_5_config_handle
  .rodata.PWM_CCU4_6_timer_handle
-                0x0800582c        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800582c                PWM_CCU4_6_timer_handle
+                0x08005838        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005838                PWM_CCU4_6_timer_handle
  .rodata.PWM_CCU4_6_event0_config
-                0x08005834        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005834                PWM_CCU4_6_event0_config
+                0x08005840        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005840                PWM_CCU4_6_event0_config
  .rodata.PWM_CCU4_6_event1_config
-                0x08005838        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005838                PWM_CCU4_6_event1_config
+                0x08005844        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005844                PWM_CCU4_6_event1_config
  .rodata.PWM_CCU4_6_event2_config
-                0x0800583c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800583c                PWM_CCU4_6_event2_config
+                0x08005848        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005848                PWM_CCU4_6_event2_config
  .rodata.PWM_CCU4_6_ch1_out0_config
-                0x08005840        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x08005840                PWM_CCU4_6_ch1_out0_config
+                0x0800584c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x0800584c                PWM_CCU4_6_ch1_out0_config
  .rodata.PWM_CCU4_6_config_handle
-                0x0800584c       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800584c                PWM_CCU4_6_config_handle
+                0x08005858       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x08005858                PWM_CCU4_6_config_handle
  .rodata.PWM_CCU4_7_timer_handle
-                0x0800589c        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x0800589c                PWM_CCU4_7_timer_handle
+                0x080058a8        0x8 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080058a8                PWM_CCU4_7_timer_handle
  .rodata.PWM_CCU4_7_event0_config
-                0x080058a4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080058a4                PWM_CCU4_7_event0_config
+                0x080058b0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080058b0                PWM_CCU4_7_event0_config
  .rodata.PWM_CCU4_7_event1_config
-                0x080058a8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080058a8                PWM_CCU4_7_event1_config
+                0x080058b4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080058b4                PWM_CCU4_7_event1_config
  .rodata.PWM_CCU4_7_event2_config
-                0x080058ac        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080058ac                PWM_CCU4_7_event2_config
+                0x080058b8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080058b8                PWM_CCU4_7_event2_config
  .rodata.PWM_CCU4_7_ch1_out0_config
-                0x080058b0        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080058b0                PWM_CCU4_7_ch1_out0_config
+                0x080058bc        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080058bc                PWM_CCU4_7_ch1_out0_config
  .rodata.PWM_CCU4_7_config_handle
-                0x080058bc       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
-                0x080058bc                PWM_CCU4_7_config_handle
+                0x080058c8       0x50 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU4/pwm_ccu4_conf.c.obj
+                0x080058c8                PWM_CCU4_7_config_handle
  .rodata.PWM_CCU8_0_timer_handle
-                0x0800590c       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x0800590c                PWM_CCU8_0_timer_handle
+                0x08005918       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005918                PWM_CCU8_0_timer_handle
  .rodata.PWM_CCU8_0_event0_config
-                0x0800591c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x0800591c                PWM_CCU8_0_event0_config
+                0x08005928        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005928                PWM_CCU8_0_event0_config
  .rodata.PWM_CCU8_0_event1_config
-                0x08005920        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005920                PWM_CCU8_0_event1_config
+                0x0800592c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x0800592c                PWM_CCU8_0_event1_config
  .rodata.PWM_CCU8_0_event2_config
-                0x08005924        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005924                PWM_CCU8_0_event2_config
+                0x08005930        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005930                PWM_CCU8_0_event2_config
  .rodata.PWM_CCU8_0_dt_config
-                0x08005928        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005928                PWM_CCU8_0_dt_config
- .rodata.PWM_CCU8_0_ch1_out0_config
                 0x08005934        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005934                PWM_CCU8_0_ch1_out0_config
+                0x08005934                PWM_CCU8_0_dt_config
+ .rodata.PWM_CCU8_0_ch1_out0_config
+                0x08005940        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005940                PWM_CCU8_0_ch1_out0_config
  .rodata.PWM_CCU8_0_config_handle
-                0x08005940       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005940                PWM_CCU8_0_config_handle
+                0x0800594c       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x0800594c                PWM_CCU8_0_config_handle
  .rodata.PWM_CCU8_1_timer_handle
-                0x080059d0       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x080059d0                PWM_CCU8_1_timer_handle
+                0x080059dc       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x080059dc                PWM_CCU8_1_timer_handle
  .rodata.PWM_CCU8_1_event0_config
-                0x080059e0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x080059e0                PWM_CCU8_1_event0_config
+                0x080059ec        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x080059ec                PWM_CCU8_1_event0_config
  .rodata.PWM_CCU8_1_event1_config
-                0x080059e4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x080059e4                PWM_CCU8_1_event1_config
+                0x080059f0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x080059f0                PWM_CCU8_1_event1_config
  .rodata.PWM_CCU8_1_event2_config
-                0x080059e8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x080059e8                PWM_CCU8_1_event2_config
+                0x080059f4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x080059f4                PWM_CCU8_1_event2_config
  .rodata.PWM_CCU8_1_dt_config
-                0x080059ec        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x080059ec                PWM_CCU8_1_dt_config
- .rodata.PWM_CCU8_1_ch1_out0_config
                 0x080059f8        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x080059f8                PWM_CCU8_1_ch1_out0_config
+                0x080059f8                PWM_CCU8_1_dt_config
+ .rodata.PWM_CCU8_1_ch1_out0_config
+                0x08005a04        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005a04                PWM_CCU8_1_ch1_out0_config
  .rodata.PWM_CCU8_1_config_handle
-                0x08005a04       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005a04                PWM_CCU8_1_config_handle
+                0x08005a10       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005a10                PWM_CCU8_1_config_handle
  .rodata.PWM_CCU8_2_timer_handle
-                0x08005a94       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005a94                PWM_CCU8_2_timer_handle
+                0x08005aa0       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005aa0                PWM_CCU8_2_timer_handle
  .rodata.PWM_CCU8_2_event0_config
-                0x08005aa4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005aa4                PWM_CCU8_2_event0_config
+                0x08005ab0        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005ab0                PWM_CCU8_2_event0_config
  .rodata.PWM_CCU8_2_event1_config
-                0x08005aa8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005aa8                PWM_CCU8_2_event1_config
+                0x08005ab4        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005ab4                PWM_CCU8_2_event1_config
  .rodata.PWM_CCU8_2_event2_config
-                0x08005aac        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005aac                PWM_CCU8_2_event2_config
+                0x08005ab8        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005ab8                PWM_CCU8_2_event2_config
  .rodata.PWM_CCU8_2_dt_config
-                0x08005ab0        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005ab0                PWM_CCU8_2_dt_config
- .rodata.PWM_CCU8_2_ch1_out0_config
                 0x08005abc        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005abc                PWM_CCU8_2_ch1_out0_config
- .rodata.PWM_CCU8_2_ch2_out2_config
+                0x08005abc                PWM_CCU8_2_dt_config
+ .rodata.PWM_CCU8_2_ch1_out0_config
                 0x08005ac8        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005ac8                PWM_CCU8_2_ch2_out2_config
+                0x08005ac8                PWM_CCU8_2_ch1_out0_config
+ .rodata.PWM_CCU8_2_ch2_out2_config
+                0x08005ad4        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005ad4                PWM_CCU8_2_ch2_out2_config
  .rodata.PWM_CCU8_2_config_handle
-                0x08005ad4       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005ad4                PWM_CCU8_2_config_handle
+                0x08005ae0       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005ae0                PWM_CCU8_2_config_handle
  .rodata.PWM_CCU8_3_timer_handle
-                0x08005b64       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b64                PWM_CCU8_3_timer_handle
+                0x08005b70       0x10 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005b70                PWM_CCU8_3_timer_handle
  .rodata.PWM_CCU8_3_event0_config
-                0x08005b74        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b74                PWM_CCU8_3_event0_config
+                0x08005b80        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005b80                PWM_CCU8_3_event0_config
  .rodata.PWM_CCU8_3_event1_config
-                0x08005b78        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b78                PWM_CCU8_3_event1_config
+                0x08005b84        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005b84                PWM_CCU8_3_event1_config
  .rodata.PWM_CCU8_3_event2_config
-                0x08005b7c        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b7c                PWM_CCU8_3_event2_config
+                0x08005b88        0x4 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005b88                PWM_CCU8_3_event2_config
  .rodata.PWM_CCU8_3_dt_config
-                0x08005b80        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b80                PWM_CCU8_3_dt_config
- .rodata.PWM_CCU8_3_ch1_out0_config
                 0x08005b8c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b8c                PWM_CCU8_3_ch1_out0_config
- .rodata.PWM_CCU8_3_ch2_out2_config
+                0x08005b8c                PWM_CCU8_3_dt_config
+ .rodata.PWM_CCU8_3_ch1_out0_config
                 0x08005b98        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005b98                PWM_CCU8_3_ch2_out2_config
+                0x08005b98                PWM_CCU8_3_ch1_out0_config
+ .rodata.PWM_CCU8_3_ch2_out2_config
+                0x08005ba4        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005ba4                PWM_CCU8_3_ch2_out2_config
  .rodata.PWM_CCU8_3_config_handle
-                0x08005ba4       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
-                0x08005ba4                PWM_CCU8_3_config_handle
+                0x08005bb0       0x90 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
+                0x08005bb0                PWM_CCU8_3_config_handle
  .rodata.SPI_SLAVE_0_channel_config
-                0x08005c34        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c34                SPI_SLAVE_0_channel_config
- .rodata.SPI_SLAVE_0_mosi1_pin_config
                 0x08005c40        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c40                SPI_SLAVE_0_mosi1_pin_config
- .rodata.SPI_SLAVE_0_miso_pin
+                0x08005c40                SPI_SLAVE_0_channel_config
+ .rodata.SPI_SLAVE_0_mosi1_pin_config
                 0x08005c4c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c4c                SPI_SLAVE_0_miso_pin
- .rodata.SPI_SLAVE_0_mosi_pin_config
+                0x08005c4c                SPI_SLAVE_0_mosi1_pin_config
+ .rodata.SPI_SLAVE_0_miso_pin
                 0x08005c58        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c58                SPI_SLAVE_0_mosi_pin_config
- .rodata.SPI_SLAVE_0_mosi_pin
+                0x08005c58                SPI_SLAVE_0_miso_pin
+ .rodata.SPI_SLAVE_0_mosi_pin_config
                 0x08005c64        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c64                SPI_SLAVE_0_mosi_pin
- .rodata.SPI_SLAVE_0_sclk_pin_config
+                0x08005c64                SPI_SLAVE_0_mosi_pin_config
+ .rodata.SPI_SLAVE_0_mosi_pin
                 0x08005c70        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c70                SPI_SLAVE_0_sclk_pin_config
- .rodata.SPI_SLAVE_0_slavesel_pin_config
+                0x08005c70                SPI_SLAVE_0_mosi_pin
+ .rodata.SPI_SLAVE_0_sclk_pin_config
                 0x08005c7c        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c7c                SPI_SLAVE_0_slavesel_pin_config
+                0x08005c7c                SPI_SLAVE_0_sclk_pin_config
+ .rodata.SPI_SLAVE_0_slavesel_pin_config
+                0x08005c88        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
+                0x08005c88                SPI_SLAVE_0_slavesel_pin_config
  .rodata.SPI_SLAVE_0_conf
-                0x08005c88       0x20 CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
-                0x08005c88                SPI_SLAVE_0_conf
+                0x08005c94       0x20 CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
+                0x08005c94                SPI_SLAVE_0_conf
  .rodata.UART_DEBUG_channel_config
-                0x08005ca8        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08005ca8                UART_DEBUG_channel_config
- .rodata.UART_DEBUG_tx_pin_config
                 0x08005cb4        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08005cb4                UART_DEBUG_tx_pin_config
- .rodata.UART_DEBUG_tx_pin
+                0x08005cb4                UART_DEBUG_channel_config
+ .rodata.UART_DEBUG_tx_pin_config
                 0x08005cc0        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08005cc0                UART_DEBUG_tx_pin
+                0x08005cc0                UART_DEBUG_tx_pin_config
+ .rodata.UART_DEBUG_tx_pin
+                0x08005ccc        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08005ccc                UART_DEBUG_tx_pin
  .rodata.UART_DEBUG_config
-                0x08005ccc       0x30 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08005ccc                UART_DEBUG_config
+                0x08005cd8       0x30 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08005cd8                UART_DEBUG_config
  .rodata.UART_DEBUG_rx_pin_config
-                0x08005cfc        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
-                0x08005cfc                UART_DEBUG_rx_pin_config
+                0x08005d08        0xc CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+                0x08005d08                UART_DEBUG_rx_pin_config
  *(.gnu.linkonce.r*)
  *(vtable)
-                0x08005d08                        . = ALIGN (0x4)
+                0x08005d14                        . = ALIGN (0x4)
 
-.glue_7         0x08005d08        0x0 load address 0x0c005d08
- .glue_7        0x08005d08        0x0 linker stubs
+.glue_7         0x08005d14        0x0 load address 0x0c005d14
+ .glue_7        0x08005d14        0x0 linker stubs
 
-.glue_7t        0x08005d08        0x0 load address 0x0c005d08
- .glue_7t       0x08005d08        0x0 linker stubs
+.glue_7t        0x08005d14        0x0 load address 0x0c005d14
+ .glue_7t       0x08005d14        0x0 linker stubs
 
-.vfp11_veneer   0x08005d08        0x0 load address 0x0c005d08
- .vfp11_veneer  0x08005d08        0x0 linker stubs
+.vfp11_veneer   0x08005d14        0x0 load address 0x0c005d14
+ .vfp11_veneer  0x08005d14        0x0 linker stubs
 
-.v4_bx          0x08005d08        0x0 load address 0x0c005d08
- .v4_bx         0x08005d08        0x0 linker stubs
+.v4_bx          0x08005d14        0x0 load address 0x0c005d14
+ .v4_bx         0x08005d14        0x0 linker stubs
 
-.iplt           0x08005d08        0x0 load address 0x0c005d08
- .iplt          0x08005d08        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08005d14        0x0 load address 0x0c005d14
+ .iplt          0x08005d14        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x08005d08        0x4 load address 0x0c005d08
+.eh_frame       0x08005d14        0x4 load address 0x0c005d14
  *(.eh_frame)
- .eh_frame      0x08005d08        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
- .eh_frame      0x08005d08        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .eh_frame      0x08005d14        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08005d14        0x4 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.rel.dyn        0x08005d0c        0x0 load address 0x0c005d0c
- .rel.iplt      0x08005d0c        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08005d18        0x0 load address 0x0c005d18
+ .rel.iplt      0x08005d18        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005d0c                        . = ALIGN (0x4)
-                0x08005d0c                        __exidx_start = .
+                0x08005d18                        . = ALIGN (0x4)
+                0x08005d18                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08005d0c                        __exidx_end = .
-                0x08005d0c                        . = ALIGN (0x4)
+                0x08005d18                        __exidx_end = .
+                0x08005d18                        . = ALIGN (0x4)
 
 Stack           0x1fffc000      0x800
                 0x1fffc000                        __stack_start = .
@@ -7622,16 +7622,16 @@ Stack           0x1fffc000      0x800
                 0x1fffc800                        __stack_end = .
                 0x1fffc800                        __initial_sp = .
 
-.ram_code       0x1fffc800        0x0 load address 0x0c005d0c
+.ram_code       0x1fffc800        0x0 load address 0x0c005d18
                 0x1fffc800                        . = ALIGN (0x4)
                 0x1fffc800                        __ram_code_start = .
  *(.ram_code)
                 0x1fffc800                        . = ALIGN (0x4)
                 0x1fffc800                        __ram_code_end = .
-                0x0c005d0c                        __ram_code_load = LOADADDR (.ram_code)
+                0x0c005d18                        __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                        __ram_code_size = (__ram_code_end - __ram_code_start)
 
-.data           0x1fffc800      0x2bc load address 0x0c005d0c
+.data           0x1fffc800      0x2bc load address 0x0c005d18
                 0x1fffc800                        . = ALIGN (0x4)
                 0x1fffc800                        __data_start = .
  *(.data)
@@ -7720,22 +7720,22 @@ Stack           0x1fffc000      0x800
                 0x1fffcabc                        PROVIDE (__fini_array_end = .)
                 0x1fffcabc                        . = ALIGN (0x4)
                 0x1fffcabc                        __data_end = .
-                0x0c005d0c                        __data_load = LOADADDR (.data)
+                0x0c005d18                        __data_load = LOADADDR (.data)
                 0x000002bc                        __data_size = (__data_end - __data_start)
-                0x00005fc8                        __text_size = (((__exidx_end - sText) + __data_size) + __ram_code_size)
-                0x08005fc8                        eText = (sText + __text_size)
+                0x00005fd4                        __text_size = (((__exidx_end - sText) + __data_size) + __ram_code_size)
+                0x08005fd4                        eText = (sText + __text_size)
 
 .tm_clone_table
-                0x1fffcabc        0x0 load address 0x0c005fc8
+                0x1fffcabc        0x0 load address 0x0c005fd4
  .tm_clone_table
                 0x1fffcabc        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x1fffcabc        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x1fffcabc        0x0 load address 0x0c005fc8
+.igot.plt       0x1fffcabc        0x0 load address 0x0c005fd4
  .igot.plt      0x1fffcabc        0x0 D:/Projekty/TrinityTrack6000/tools/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.bss            0x1fffcabc      0x1e8 load address 0x0c005fc8
+.bss            0x1fffcabc      0x1e8 load address 0x0c005fd4
                 0x1fffcabc                        . = ALIGN (0x4)
                 0x1fffcabc                        __bss_start = .
  *(.bss)
@@ -7950,7 +7950,7 @@ USB_RAM         0x20000000        0x0
  .debug_abbrev  0x00003fdb      0x1f9 CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
  .debug_abbrev  0x000041d4      0x278 CMakeFiles/XMC4200.elf.dir/Src/main.cpp.obj
 
-.debug_line     0x00000000    0x13406
+.debug_line     0x00000000    0x1340e
  *(.debug_line)
  .debug_line    0x00000000      0x667 CMakeFiles/XMC4200.elf.dir/Dave/Generated/CLOCK_XMC4/clock_xmc4.c.obj
  .debug_line    0x00000667      0x63c CMakeFiles/XMC4200.elf.dir/Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.c.obj
@@ -7969,20 +7969,20 @@ USB_RAM         0x20000000        0x0
  .debug_line    0x000075b0     0x10f3 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8.c.obj
  .debug_line    0x000086a3      0x6c5 CMakeFiles/XMC4200.elf.dir/Dave/Generated/PWM_CCU8/pwm_ccu8_conf.c.obj
  .debug_line    0x00008d68      0xd4a CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave.c.obj
- .debug_line    0x00009ab2      0x809 CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
- .debug_line    0x0000a2bb      0xcee CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
- .debug_line    0x0000afa9      0x7d7 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
- .debug_line    0x0000b780      0x651 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_gpio.c.obj
- .debug_line    0x0000bdd1     0x1d49 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
- .debug_line    0x0000db1a      0xc30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
- .debug_line    0x0000e74a      0xdbf CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
- .debug_line    0x0000f509      0x5db CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj
- .debug_line    0x0000fae4      0x958 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
- .debug_line    0x0001043c      0x892 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
- .debug_line    0x00010cce      0x80e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
- .debug_line    0x000114dc      0xb71 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
- .debug_line    0x0001204d      0x78e CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
- .debug_line    0x000127db      0xc2b CMakeFiles/XMC4200.elf.dir/Src/main.cpp.obj
+ .debug_line    0x00009ab2      0x811 CMakeFiles/XMC4200.elf.dir/Dave/Generated/SPI_SLAVE/spi_slave_conf.c.obj
+ .debug_line    0x0000a2c3      0xcee CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart.c.obj
+ .debug_line    0x0000afb1      0x7d7 CMakeFiles/XMC4200.elf.dir/Dave/Generated/UART/uart_conf.c.obj
+ .debug_line    0x0000b788      0x651 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_gpio.c.obj
+ .debug_line    0x0000bdd9     0x1d49 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc4_scu.c.obj
+ .debug_line    0x0000db22      0xc30 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj
+ .debug_line    0x0000e752      0xdbf CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj
+ .debug_line    0x0000f511      0x5db CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj
+ .debug_line    0x0000faec      0x958 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj
+ .debug_line    0x00010444      0x892 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+ .debug_line    0x00010cd6      0x80e CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj
+ .debug_line    0x000114e4      0xb71 CMakeFiles/XMC4200.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj
+ .debug_line    0x00012055      0x78e CMakeFiles/XMC4200.elf.dir/Startup/system_XMC4200.c.obj
+ .debug_line    0x000127e3      0xc2b CMakeFiles/XMC4200.elf.dir/Src/main.cpp.obj
 
 .debug_frame    0x00000000     0x4ddc
  *(.debug_frame)

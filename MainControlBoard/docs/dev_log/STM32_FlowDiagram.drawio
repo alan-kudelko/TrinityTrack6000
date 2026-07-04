@@ -1,0 +1,234 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="3HLxhg9U5XPxJ05BJpcJ">
+    <mxGraphModel dx="1314" dy="1847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3cZar7swNIIJWqbTVuFk-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="550" width="420" x="640" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="440" width="420" x="1060" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="440" width="220" x="200" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-6" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;TIM7&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-7" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ADC" vertex="1">
+          <mxGeometry height="30" width="180" x="220" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-8" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="DMA" vertex="1">
+          <mxGeometry height="30" width="180" x="220" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ADC Measurements Updated" vertex="1">
+          <mxGeometry height="30" width="180" x="220" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="&lt;span style=&quot;font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; text-align: start;&quot;&gt;🕒 5000 ms&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="210" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="Periodic ADC Measurement Flow" vertex="1">
+          <mxGeometry height="40" width="200" x="210" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="760" width="220" x="420" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="   Wireless Reception Flow" vertex="1">
+          <mxGeometry height="40" width="200" x="430" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-27" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; nRF24L01 IRQ (LOW)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-28" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;  EXTI Interrupt&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="440" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-29" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;   Wake Wireless Task&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="440" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-30" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Read RX Payload&lt;br&gt;SPI + DMA" vertex="1">
+          <mxGeometry height="30" width="180" x="440" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-31" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Clear Radio Status" vertex="1">
+          <mxGeometry height="30" width="180" x="440" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-32" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Build Control Request" vertex="1">
+          <mxGeometry height="30" width="180" x="440" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Queue Request to&lt;br&gt; SystemDispatcher" vertex="1">
+          <mxGeometry height="30" width="180" x="440" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="   SystemDispatcher Mediation Flow" vertex="1">
+          <mxGeometry height="40" width="420" x="640" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-67" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; CLI Task&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="660" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="   Request source&lt;div&gt;CLI Task&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="660" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-68" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-75" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; System Dispatcher&lt;/font&gt;&lt;div&gt;&lt;font&gt;Validate Request&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;Check system mode&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;Route to task/service&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="660" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-65" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Target Task/Service" vertex="1">
+          <mxGeometry height="30" width="180" x="660" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="   SystemDispatcher Mediation Flow" vertex="1">
+          <mxGeometry height="40" width="420" x="1060" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-78" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; Wireless Task&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1080" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="   Request source&lt;div&gt;Wireless Task&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="1080" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; XMC4200 Communication Task&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1080" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CLI Task" vertex="1">
+          <mxGeometry height="30" width="180" x="760" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="&lt;span style=&quot;font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; text-align: start;&quot;&gt;Request accepted&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="755" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="&lt;span style=&quot;font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; text-align: start;&quot;&gt;Request rejected&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="850" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-76" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Error response" vertex="1">
+          <mxGeometry height="30" width="180" x="860" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-79" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-82" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-77" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; System Dispatcher&lt;/font&gt;&lt;div&gt;&lt;font&gt;Validate Request&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;Check system mode&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="1080" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-80" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="&lt;span style=&quot;font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; text-align: start;&quot;&gt;Mode&lt;br&gt;OK&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="1080" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-81" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; Request discarded&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1280" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-83" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="Mode Not Allowed" vertex="1">
+          <mxGeometry height="30" width="90" x="1270" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-84" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="550" width="820" x="1480" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-85" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="   Health Monitor Supervision Flow" vertex="1">
+          <mxGeometry height="40" width="820" x="1480" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-106" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-107" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-86" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Health Monitor&lt;div&gt;Evaluate Health&lt;/div&gt;&lt;div&gt;Evaluate Safety&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="1800" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-88" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;Periodic external watchdog feed&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1900" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-97" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-89" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-89" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Task/Service Heartbeats" vertex="1">
+          <mxGeometry height="30" width="180" x="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-98" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-90" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-90" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Hardware Fault Signals" vertex="1">
+          <mxGeometry height="30" width="180" x="1700" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-99" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-91" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-91" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Wireless Link Status" vertex="1">
+          <mxGeometry height="30" width="180" x="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-104" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-92" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; System mode change request&lt;/font&gt;&lt;div&gt;&lt;font&gt;Fault/Faisafe&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1700" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-93" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; System Dispatcher&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1700" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-108" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3cZar7swNIIJWqbTVuFk-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-94" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt; Power Electronics Disable&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1700" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-100" edge="1" parent="1" source="3cZar7swNIIJWqbTVuFk-95" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="3cZar7swNIIJWqbTVuFk-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-95" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Periodic wakeup" vertex="1">
+          <mxGeometry height="30" width="180" x="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-103" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="&lt;span style=&quot;font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; text-align: start;&quot;&gt;🕒&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="2035" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-109" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="Critical System Fault" vertex="1">
+          <mxGeometry height="30" width="90" x="1700" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-110" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;labelBackgroundColor=default;fontSize=12;" value="System Health&lt;div&gt;OK&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="1990" y="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
