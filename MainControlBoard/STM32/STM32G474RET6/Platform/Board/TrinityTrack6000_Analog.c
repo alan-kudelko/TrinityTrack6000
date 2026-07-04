@@ -13,8 +13,16 @@ SystemMeasurement_t system_measurements SECTION(".sysDiag"); // Structure holdin
 static uint32_t adc_dma_buffer[ADC_NUMBER_OF_CONVERSIONS]; // DMA buffer for ADC readings
 
 extern ADC_HandleTypeDef hadc1; // ADC handle
+extern TIM_HandleTypeDef htim7; // Timer handle for triggering ADC conversions
+extern DMA_HandleTypeDef hdma_adc1; // DMA handle for ADC
 
 void mcu_analog_init(void){
+    // Disable ADC DMA half-transfer interrupt to avoid unnecessary callbacks
+    __HAL_DMA_DISABLE_IT(&hdma_adc1,DMA_IT_HT);
+    // Clear any pending half-transfer flags to ensure a clean start
+	__HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_HT3);
+    // Start TIM7 in interrupt mode to trigger ADC conversions via TRGO
+    HAL_TIM_Base_Start_IT(&htim7);
     // Start the ADC in DMA mode
     HAL_ADC_Start_DMA(&hadc1,adc_dma_buffer,ADC_NUMBER_OF_CONVERSIONS);
 }
