@@ -41,6 +41,14 @@ At its core, the design follows a **central dispatcher pattern**, where all cont
 
 ---
 
+### 🧩 System Flow Diagrams
+
+STM32_FlowDiagram.drawio.html
+
+![System Flow Diagrams](/STM32_FlowDiagram.drawio.html)
+
+---
+
 ### 🧩 Core Components
 
 #### 🔹 SystemDispatcher (Control Plane)
@@ -183,6 +191,8 @@ This architecture ensures:
 - Safe failure handling
 
 ---
+
+
 
 ## 🟢 STM32G4
 
