@@ -18,7 +18,7 @@ These modules are physically stacked and share:
 * SPI communication bus
 * Dedicated control lines (CS, READY, RESET)
 * Common 5V power rail
-* **MainControlBoard** – STM32 + XMC4200 (system coordinator and real-time control)
+* **MainControlBoard** – STM32 (system coordinator and real-time control)
 * **VideoAudioBoard** – FPGA-based processing *(planned)*
 * **FireControlBoard** – Ballistic computation *(planned)*
 * **RadarBoard** – Radar processing module *(planned)*
@@ -26,8 +26,8 @@ These modules are physically stacked and share:
 ### 🔧 External Modules
 
 These modules are connected outside of the stack and may use separate power paths or interfaces:
-* **PowerConversionBoard** – Power regulation and distribution
 * **HardwareControlBoard** – Motor/servo interface and power-stage control
+* **PowerConversionBoard** – Power regulation and distribution
 * **BMSBoard** – Battery management system
 
 Each module is developed independently and integrates into the system through clearly defined electrical and communication interfaces.
@@ -63,7 +63,7 @@ This structure allows independent development, easier navigation, and scalable i
 
 ## 🔧 Status
 
-- 🔄 Ongoing development of **MainControlBoard (STM32 + XMC4200)**
+- 🔄 Ongoing development of **MainControlBoard (STM32G4)**
 - 🔄 Firmware development, hardware bring-up, and system integration in progress
 
 ---
@@ -87,7 +87,7 @@ This structure allows independent development, easier navigation, and scalable i
 
 ---
 
-### 🧠 MainControlBoard (STM32 + XMC4200)
+### 🧠 MainControlBoard
 
 ![PCB View1](/MainControlBoard/Media/PCB_View1.jpg)
 ![PCB View2](/MainControlBoard/Media/PCB_View2.jpg)
@@ -101,13 +101,13 @@ This structure allows independent development, easier navigation, and scalable i
 
 ---
 
-### ⚡ PowerConversionBoard
+### 🔧 HardwareControlBoard
 
 *PCB preview and assembly*
 
 ---
 
-### 🔧 HardwareControlBoard
+### ⚡ PowerConversionBoard
 
 *PCB preview and assembly*
 
@@ -148,8 +148,8 @@ It illustrates how individual boards are interconnected, the role of each subsys
 
 The repository is organized around modular hardware components and supporting resources.
 
-* [`MainControlBoard/`](MainControlBoard/) – main control system (STM32 + XMC4200)
-* [`HardwareControlBoard/`](HardwareControlBoard/) – motor and actuator interface
+* [`MainControlBoard/`](MainControlBoard/) – high-level system coordination, communication and telemetry
+* [`HardwareControlBoard/`](HardwareControlBoard/) – power electronics and motion control
 * [`PowerConversionBoard/`](PowerConversionBoard/) – power regulation and distribution
 * [`RadarModuleBoard/`](RadarModuleBoard/) – radar module *(planned)*
 * [`AVProcessingBoard/`](AVProcessingBoard/) – FPGA-based audio/video processing *(planned)*
