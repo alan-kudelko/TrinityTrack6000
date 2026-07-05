@@ -63,6 +63,7 @@ DMA_HandleTypeDef hdma_spi3_rx;
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim7;
+TIM_HandleTypeDef htim17;
 TIM_HandleTypeDef htim20;
 
 UART_HandleTypeDef huart2;
@@ -98,6 +99,7 @@ static void MX_TIM1_Init(void);
 static void MX_TIM20_Init(void);
 static void MX_TIM7_Init(void);
 static void MX_TIM6_Init(void);
+static void MX_TIM17_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -129,6 +131,8 @@ void tx_application_define(void*first_unused_memory){
 
 extern void mcu_analog_init(void);
 extern void mcu_analog_mq_init(void);
+extern void buzzer_init(void);
+extern void buzzer_play(uint32_t sound);
 /* USER CODE END 0 */
 
 /**
@@ -174,6 +178,7 @@ int main(void)
   MX_TIM20_Init();
   MX_TIM7_Init();
   MX_TIM6_Init();
+  MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
   // Clear all pending interrupts before enabling them to avoid unintended behavior
   USART2->ICR=0xFFFFFFFF;
@@ -201,13 +206,11 @@ int main(void)
   mcu_analog_init();
   initializeMemory();
   mcu_analog_mq_init(); // Initialize MQ-6 and MQ-7 sensors
+  buzzer_init();
+  buzzer_play(0);
   __enable_irq();
 
   //xmc4200_spi_test();
-  // Enable timer 1 channel 4
-  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 100);
-  //HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_4);
-  //__HAL_TIM_MOE_ENABLE(&htim1);
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();
@@ -584,10 +587,10 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 159;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 9;
+  htim1.Init.Period = 999;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -716,6 +719,38 @@ static void MX_TIM7_Init(void)
   /* USER CODE BEGIN TIM7_Init 2 */
 
   /* USER CODE END TIM7_Init 2 */
+
+}
+
+/**
+  * @brief TIM17 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM17_Init(void)
+{
+
+  /* USER CODE BEGIN TIM17_Init 0 */
+
+  /* USER CODE END TIM17_Init 0 */
+
+  /* USER CODE BEGIN TIM17_Init 1 */
+
+  /* USER CODE END TIM17_Init 1 */
+  htim17.Instance = TIM17;
+  htim17.Init.Prescaler = 15999;
+  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim17.Init.Period = 10;
+  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim17.Init.RepetitionCounter = 0;
+  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM17_Init 2 */
+
+  /* USER CODE END TIM17_Init 2 */
 
 }
 
