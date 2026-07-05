@@ -100,32 +100,81 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 ---
 
 
-# RevB
+# RevB — System Architecture Update
 
 > 🔄 **Status:** Planned
 
 ## Objectives
 
-...
+- Simplify the MainControlBoard architecture.
+- Improve hardware modularity.
+- Increase debugging capabilities.
+- Improve EMC and signal integrity.
+- Prepare the platform for future expansion.
+
+---
 
 ## Changes from RevA
 
-...
+### MCU
 
-## Validation Results
+- Migrate from **STM32G474** to **STM32G484**.
+- Utilize the hardware AES accelerator for future encrypted communication.
 
-...
+### Architecture
 
-## Known Issues
+- Remove the **XMC4200** from the MainControlBoard.
+- Move deterministic motor control to a dedicated **Power Electronics Control Board**.
+- Simplify the inter-board communication interface.
 
-...
+### RF
 
-## Lessons Learned
+- Power the RF section exclusively from the dedicated `NRF_VCC` rail.
+- Improve RF grounding using additional GND stitching vias.
 
-...
+### Debug
 
-## Engineering Change Requests (RevC)
+- Add full Cortex-M Trace support (ETM/Trace).
+- Increase the number of test points.
+- Add diagnostic LEDs.
 
-...
+### Protection
+
+- Add TVS protection to external interfaces.
+- Improve thermal reliefs for THT components.
+
+### PCB Layout
+
+- Increase GND via stitching.
+- Reduce the number of THT components where possible.
+- Improve routing around high-speed interfaces.
+
+### Expansion
+
+- Reserve connectors and GPIOs for future peripherals.
+- Add footprint for Backup Domain battery.
+- Reserve interfaces for:
+  - CAN
+  - USB
+  - Future expansion modules
 
 ---
+
+## Expected Validation
+
+- Verify STM32G484 migration.
+- Verify ETM/Trace functionality.
+- Verify RF power isolation.
+- Verify communication with the Power Electronics Control Board.
+- Verify all reserved expansion interfaces.
+
+---
+
+## Expected Benefits
+
+- Cleaner system architecture.
+- Easier firmware development.
+- Better hardware modularity.
+- Improved debugging capabilities.
+- Increased maintainability.
+- Better readiness for future features.
