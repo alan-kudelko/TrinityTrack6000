@@ -1,6 +1,6 @@
 # PCB Revision Log
 
-This document tracks the evolution of the PCB hardware throughout the development process.
+This document tracks the evolution of the MainControlBoard throughout the development process.
 
 ---
 
