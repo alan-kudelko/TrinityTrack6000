@@ -95,6 +95,7 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 - Separate real-time motor control hardware (XMC4200) from the system supervisor PCB to improve modularity and reduce routing complexity.
 - Reserve PCB space for ETM/trace debugging support on the STM32.
 - Add TVS diodes on external connectors to improve ESD robustness.
+- Add diagnostics LEDs.
 
 ---
 
