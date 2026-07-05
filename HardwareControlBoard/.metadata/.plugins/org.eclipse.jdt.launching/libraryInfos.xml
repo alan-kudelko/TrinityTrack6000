@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\Programy\4.5.0.202105191637\eclipse" version="1.8.0_222">
+<bootpath>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\resources.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\rt.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\sunrsasign.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\jsse.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\jce.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\charsets.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\jfr.jar"/>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\Programy\4.5.0.202105191637\eclipse\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>
