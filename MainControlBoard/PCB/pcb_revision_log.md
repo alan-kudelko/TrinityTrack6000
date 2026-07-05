@@ -4,9 +4,9 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 
 ---
 
-# RevA — Initial Prototype
+# RevA — Initial Prototyp
 
-> 🟡 **Status:** Prototype
+> 🟡 **Status:** Prototype • **Current Revision**
 
 ## Objectives
 
@@ -79,21 +79,28 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 
 ## Known Issues
 
-- None
+- RF section is partially powered through pull-up resistors instead of the dedicated `NRF_VCC` rail.
+- XMC4200 should be moved to a dedicated Power Electronics Control Board to improve system modularity and simplify PCB routing.
+- Insufficient test points reduce debugging and bring-up efficiency.
+- Limited via stitching in GND areas may negatively affect EMI performance and return current paths.
+- Missing TVS protection on selected external interfaces.
+- Limited trace capability for STM32 debugging and runtime analysis.
 
 ---
 
 ## Lessons Learned
 
-- To be completed during hardware validation.
+- Increase GND via stitching, especially around RF and high-speed signal areas.
+- Add more test points for power rails, SPI, UART, I²C and debugging.
+- Use thermal reliefs on large copper pours connected to THT components to improve solderability.
+- Reduce the number of THT components where practical to simplify manual assembly and rework.
+- Keep RF power completely isolated using the dedicated `NRF_VCC` supply rail.
+- Separate real-time motor control hardware (XMC4200) from the system supervisor PCB to improve modularity and reduce routing complexity.
+- Reserve PCB space for ETM/trace debugging support on the STM32.
+- Add TVS diodes on external connectors to improve ESD robustness.
 
 ---
 
-## Engineering Change Requests (RevB)
-
-- None
-
----
 
 # RevB
 
