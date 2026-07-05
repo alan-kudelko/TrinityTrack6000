@@ -18,7 +18,7 @@ These modules are physically stacked and share:
 * SPI communication bus
 * Dedicated control lines (CS, READY, RESET)
 * Common 5V power rail
-* **MainControlBoard** – STM32 (system coordinator and real-time control)
+* **MainControlBoard** – System coordination, communication and telemetry
 * **VideoAudioBoard** – FPGA-based processing *(planned)*
 * **FireControlBoard** – Ballistic computation *(planned)*
 * **RadarBoard** – Radar processing module *(planned)*
@@ -26,7 +26,7 @@ These modules are physically stacked and share:
 ### 🔧 External Modules
 
 These modules are connected outside of the stack and may use separate power paths or interfaces:
-* **HardwareControlBoard** – Motor/servo interface and power-stage control
+* **HardwareControlBoard** – Power electronics, motor control and actuator supervision
 * **PowerConversionBoard** – Power regulation and distribution
 * **BMSBoard** – Battery management system
 
@@ -63,15 +63,16 @@ This structure allows independent development, easier navigation, and scalable i
 
 ## 🔧 Status
 
-- 🔄 Ongoing development of **MainControlBoard (STM32G4)**
-- 🔄 Firmware development, hardware bring-up, and system integration in progress
+- 🔄 **MainControlBoard** hardware validation and firmware development
+- 🔄 **HardwareControlBoard** architecture and hardware design
+- 🔄 System architecture refinement and module integration
 
 ---
 
 
 ## 🛠 Tech Stack
 
-- **MCUs:** STM32G4, XMC4200, NXP / Renesas (planned), FPGA  
+- **MCUs:** STM32G4, Infineon XMC4000 Family, NXP / Renesas (planned), FPGA  
 - **RTOS:** ThreadX  
 - **Communication:** SPI, UART, I2C, wireless link  
 - **Build system:** CMake + arm-gcc
