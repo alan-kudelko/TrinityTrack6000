@@ -1,4 +1,0 @@
-D:/Projekty/TrinityTrack6000/MainControlBoard/XMC/XMC4200/build/CMakeFiles/XMC4200.elf.dir
-D:/Projekty/TrinityTrack6000/MainControlBoard/XMC/XMC4200/build/CMakeFiles/Generate_Doc.dir
-D:/Projekty/TrinityTrack6000/MainControlBoard/XMC/XMC4200/build/CMakeFiles/edit_cache.dir
-D:/Projekty/TrinityTrack6000/MainControlBoard/XMC/XMC4200/build/CMakeFiles/rebuild_cache.dir
