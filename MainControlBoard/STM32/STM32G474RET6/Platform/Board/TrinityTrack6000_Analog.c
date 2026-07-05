@@ -14,7 +14,7 @@ static uint32_t adc_dma_buffer[ADC_NUMBER_OF_CONVERSIONS]; // DMA buffer for ADC
 
 static const uint32_t heater_pwm_fills[2]={950,300}; // PWM fill values for heating and cooling cycles
 
-static const uint32_t heater_cycle_duration_s[2]={5,1}; // Duration of heating and cooling cycles in seconds
+static const uint32_t heater_cycle_duration_s[2]={60/5,90/5}; // Duration of heating and cooling cycles in 5 seconds intervals
 
 extern ADC_HandleTypeDef hadc1; // ADC handle
 
@@ -60,7 +60,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*hadc){
 void mcu_analog_mq_init(void){
     HAL_TIM_Base_Start_IT(&htim6); // Start TIM6 in interrupt mode for system tick
     HAL_TIM_PWM_Start(&htim20,TIM_CHANNEL_2); // Start PWM on TIM20 channel
-    mcu_analog_start_heating_cycle(); // Start the heating cycle for MQ-6 and MQ-7 sensors
+    __HAL_TIM_SET_COMPARE(&htim20,TIM_CHANNEL_2,heater_pwm_fills[0]); // Set initial PWM fill value for heating cycle
 }
 
 void mcu_analog_mq_deinit(void){
@@ -68,24 +68,22 @@ void mcu_analog_mq_deinit(void){
     HAL_TIM_Base_Stop_IT(&htim6); // Stop TIM6 interrupt for heating and cooling cycles
 }
 
-void mcu_analog_start_heating_cycle(void){
-    __HAL_TIM_SET_COMPARE(&htim20,TIM_CHANNEL_2,heater_pwm_fills[0]); // Set PWM fill for heating cycle
-}
-
-void mcu_analog_start_cooling_cycle(void){
-    __HAL_TIM_SET_COMPARE(&htim20,TIM_CHANNEL_2,heater_pwm_fills[1]); // Set PWM fill for cooling cycle
-}
-
 void mcu_analog_tim6_callback(void){
     static uint8_t cycle_state=0; // 0: heating, 1: cooling
-    // Set the PWM fill value based on the current cycle state
-    __HAL_TIM_SET_COMPARE(&htim20,TIM_CHANNEL_2,heater_pwm_fills[cycle_state]);
-    // Set the duration for the current cycle
-    __HAL_TIM_SET_COMPARE(&htim6,TIM_CHANNEL_1,heater_cycle_duration_s[cycle_state]);
-    // Clear the TIM6 CNT register to reset the timer count
-    __HAL_TIM_SET_COUNTER(&htim6,0);
-    // Toggle cycle state for the next callback
-    cycle_state=(cycle_state+1)%2;
+    static uint32_t counter=0; // Counter to track the duration of the current cycle (interrupt occurs every 5 seconds)
+
+    // Update ISR counter to track the number of interrupts (5 seconds intervals)
+    counter++;
+
+    if(counter>=heater_cycle_duration_s[cycle_state]){
+        // If the current cycle duration has elapsed, switch to the next cycle
+        cycle_state=(cycle_state+1)%2;
+        counter=0; // Reset the counter for the new cycle
+
+        // Set the PWM fill value based on the current cycle state
+        __HAL_TIM_SET_COMPARE(&htim20,TIM_CHANNEL_2,heater_pwm_fills[cycle_state]);
+    }
+    // Otherwise, continue counting
 }
 
 /**@} */

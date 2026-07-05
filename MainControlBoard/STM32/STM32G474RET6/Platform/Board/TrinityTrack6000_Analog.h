@@ -92,22 +92,6 @@ void mcu_analog_mq_init(void);
 void mcu_analog_mq_deinit(void);
 
 /**
- * @brief Start the heating cycle for MQ-6 and MQ-7 sensors
- * This function starts the heating cycle for the MQ-6 and MQ-7 sensors by setting the appropriate PWM duty cycle on TIM20.
- * @param None
- * @return None
- */
-void mcu_analog_start_heating_cycle(void);
-
-/**
- * @brief Start the cooling cycle for MQ-6 and MQ-7 sensors
- * This function starts the cooling cycle for the MQ-6 and MQ-7 sensors by setting the appropriate PWM duty cycle on TIM20.
- * @param None
- * @return None
- */
-void mcu_analog_start_cooling_cycle(void);
-
-/**
  * @brief TIM6 callback for triggering heating and cooling cycles
  * This function is called periodically by TIM6 interrupt to manage the heating and cooling cycles of the MQ-6 and MQ-7 sensors.
  * @param None
