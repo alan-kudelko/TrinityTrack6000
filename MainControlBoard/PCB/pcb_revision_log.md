@@ -52,7 +52,6 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 - Test points
 - Configuration jumpers
 
----
 
 ## Design Rationale
 
@@ -75,7 +74,6 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 - Multiple reset sources
 - Hardware fault detection
 
----
 
 ## Known Issues
 
@@ -86,7 +84,6 @@ This document tracks the evolution of the PCB hardware throughout the developmen
 - Missing TVS protection on selected external interfaces.
 - Limited trace capability for STM32 debugging and runtime analysis.
 
----
 
 ## Lessons Learned
 
