@@ -1,4 +1,4 @@
-# **ControlBoard** – **STM32G4 + XMC4200**  
+# **ControlBoard** – **System Coordination & Communication**
 
 **STM32G4**: Main system controller responsible for coordination, telemetry handling and communication (radio via nRF24L01+)
 
