@@ -16182,3 +16182,410 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 
 !ENTRY SOLVER 1 0 2026-07-01 14:39:11.801
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2026-07-04 10:45:55.239 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_222
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2026-07-04 10:46:21.272
+!MESSAGE USER_ACTION : Default solver exe path is: D:\Programy\4.5.0.202105191637\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2026-07-04 10:46:21.441
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2026-07-04 10:46:21.441
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2026-07-04 10:46:21.826
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:22.792
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.2.00.F64.ALL] is: 963 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:22.875
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:23.738
+!MESSAGE USER_ACTION : Active project:XMC4200[ Software ID:XMC4.2.00.F64.ALL]
+
+!ENTRY COMMON 1 0 2026-07-04 10:46:26.744
+!MESSAGE Time Taken By De-Serialization  : 1588 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:46:26.789
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:27.441
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 3704 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:27.469
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 26 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:27.486
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 17 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:27.490
+!MESSAGE USER_ACTION : Time taken for updating views is: 2 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:29.976
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2486 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:30.694
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 7823 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:46:31.386
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-07-04 10:46:31.530
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-07-04 10:46:32.244
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/Examples/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-07-04 10:46:32.255
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-07-04 10:46:32.327
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/DAVE_Libs/XMC_IFX/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-07-04 10:46:32.327
+!MESSAGE Reading file: https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2026-07-04 10:46:32.405
+!MESSAGE ConnectionException:
+:https://www.infineon.com/dave/Libraries/DAVE_Libs/Contributed/latest//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-07-04 10:46:33.748
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/CE/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-07-04 10:46:33.935
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/ARM-GCC-Update/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-07-04 10:46:34.122
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/Solver_emWin_update/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-07-04 10:46:34.328
+!MESSAGE Unable to read repository at https://www.infineon.com/dave/Neon/4.5/Debugger/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1946)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:316)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:310)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1639)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:223)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1037)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:965)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1064)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:167)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:116)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:397)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:240)
+	at sun.security.validator.Validator.validate(Validator.java:262)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:330)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:237)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1621)
+	... 13 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:392)
+	... 19 more
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.033
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\XMC4.2.00.F64.ALL\device\xmc4200\0\MANIFEST\xmc4200.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.061
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\LQFP64.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.085
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\0\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.131
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.156
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\2\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.177
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\3\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.197
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.1\port\p\14\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.212
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\usb_port\0\MANIFEST\usb_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.228
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.0\port\hcu_port\0\MANIFEST\hcu_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.244
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\debug_port\0\MANIFEST\debug_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.257
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\reset_port\0\MANIFEST\reset_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.275
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.0.0\port\crystal_port\0\MANIFEST\crystal_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.291
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.6.0\port\rtc_port\0\MANIFEST\rtc_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.319
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\power_port\0\MANIFEST\power_port.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:46:41.339
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.64.0\port\analogpower_port\0\MANIFEST\analogpower_port.dd
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:53:07.628
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:53:07.756
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.18/app/DIGITAL_IO/8
+
+!ENTRY SOLVER 1 0 2026-07-04 10:53:07.769
+!MESSAGE USER_ACTION : Library store ECO file :D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\XMC4.2.00.F64.ALL\device\xmc4200\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2026-07-04 10:53:07.867
+!MESSAGE USER_ACTION : Copied ECO file to temp location :D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2026-07-04 10:53:09.796
+!MESSAGE USER_ACTION : Loaded ECO file :D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\.metadata\.plugins\solver_data\XMC4.2.00.F64.ALL\xmc4500_solver.eco
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:10.669
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\42.0.1\peripheral\scu\0\MANIFEST\scu.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:10.769
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.4.2\peripheral\cpu\0\MANIFEST\cpu.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:10.812
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.29\peripheral\ccu4\1\MANIFEST\ccu4.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:10.876
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.31\peripheral\ccu8\0\MANIFEST\ccu8.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:10.915
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.29\peripheral\ccu4\0\MANIFEST\ccu4.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:10.980
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.30\peripheral\usic\1\MANIFEST\usic.dd
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:53:11.072
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\0.1.30\peripheral\usic\0\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:53:11.089
+!MESSAGE Time taken for processing complete solver result is: 519 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:53:11.091
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:53:11.091
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:53:11.214
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-04 10:53:11.406
+!MESSAGE Time Taken By Serialization  : 190 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:53:11.459
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:53:11.626
+!MESSAGE Time taken for serialization in msec: 535
+
+!ENTRY SOLVER 1 0 2026-07-04 10:53:11.712
+!MESSAGE Time Taken By Solver for UI Action: 3948 ms
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:54:17.708
+!MESSAGE USER_ACTION : App Getting Added: ADC_MEASUREMENT [4.1.24]
+
+!ENTRY SOLVER 1 0 2026-07-04 10:54:17.767
+!MESSAGE USER_ACTION : Creating an APP: ADC_MEASUREMENT [4.1.24]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:54:18.198
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ GLOBAL_ADC [4.0.16] lStoreAppVersion: 4.0.22:l
+
+!ENTRY SOLVER 1 0 2026-07-04 10:54:18.427
+!MESSAGE USER_ACTION : Creating an APP: GLOBAL_ADC [4.0.22]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:54:18.490
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC4 [4.0.2] lStoreAppVersion: 4.0.24:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:54:18.678
+!MESSAGE USER_ACTION : Created APP: GLOBAL_ADC [4.0.22]-->http://resources/4.0.22/app/GLOBAL_ADC/0
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 10:54:18.808
+!MESSAGE USER_ACTION : Created APP: ADC_MEASUREMENT [4.1.24]-->http://resources/4.1.24/app/ADC_MEASUREMENT/0
+
+!ENTRY APPSTORE 1 0 2026-07-04 10:54:19.936
+!MESSAGE USER_ACTION : Loaded DD: D:\Programy\4.5.0.202105191637\D_LibraryStore_4.4\resources\42.64.1\peripheral\vadc\0\MANIFEST\vadc.dd
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:54:20.085
+!MESSAGE Time taken for processing complete solver result is: 260 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:54:20.085
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:54:20.085
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:54:20.167
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-04 10:54:20.371
+!MESSAGE Time Taken By Serialization  : 203 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:54:20.423
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 10:54:20.511
+!MESSAGE Time taken for serialization in msec: 425
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-04 10:54:26.274
+!MESSAGE USER_ACTION : Time taken for opening editor is: 1079 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-04 10:54:36.922
+!MESSAGE USER_ACTION : Time taken for opening editor is: 372 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 11:38:06.232
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 11:38:06.326
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-04 11:38:06.532
+!MESSAGE Time Taken By Serialization  : 205 ms :: D:\Projekty\TrinityTrack6000\MainControlBoard\XMC\XMC4200\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-04 11:38:06.845
+!MESSAGE ****************Cleaning project data:XMC4200*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-04 11:38:06.862
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 222 msec 
+
+!ENTRY SOLVER 1 0 2026-07-04 11:38:06.863
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2026-07-04 11:38:07.136
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED

@@ -5,6 +5,7 @@
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_1.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../UART/v4_1_14/UART_0.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_ADC/v4_0_22/GLOBAL_ADC_0.app#//@requiredApps.0"/>
   <properties singleton="true" provideInit="true" sharable="true"/>
   <virtualSignals name="clk_perbridge_output" URI="http://resources/4.0.24/app/CLOCK_XMC4/0/vs_fpb" hwSignal="fpb" hwResource="//@hwResources.3" visible="true"/>
   <virtualSignals name="clk_ccu_output" URI="http://resources/4.0.24/app/CLOCK_XMC4/0/vs_fccu" hwSignal="fccu" hwResource="//@hwResources.4" visible="true">

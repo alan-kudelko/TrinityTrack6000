@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Port xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/0.6.1/port/p/3" description="Port 3" baseAddress="0x48028300">
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.0 / #5" URI="http://resources/0.6.1/port/p/3/pad/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_8.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.6.1/port/p/3/out/p0"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.6.1/port/p/3/omr/ps0"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.6.1/port/p/3/omr/pr0"/>
