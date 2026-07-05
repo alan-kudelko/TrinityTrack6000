@@ -41,6 +41,8 @@ extern DMA_HandleTypeDef hdma_spi3_tx;
 
 extern DMA_HandleTypeDef hdma_spi3_rx;
 
+extern DMA_HandleTypeDef hdma_tim17_up;
+
 extern DMA_HandleTypeDef hdma_usart2_tx;
 
 extern DMA_HandleTypeDef hdma_usart2_rx;
@@ -699,6 +701,25 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     /* USER CODE END TIM17_MspInit 0 */
     /* Peripheral clock enable */
     __HAL_RCC_TIM17_CLK_ENABLE();
+
+    /* TIM17 DMA Init */
+    /* TIM17_UP Init */
+    hdma_tim17_up.Instance = DMA2_Channel6;
+    hdma_tim17_up.Init.Request = DMA_REQUEST_TIM17_UP;
+    hdma_tim17_up.Init.Direction = DMA_MEMORY_TO_PERIPH;
+    hdma_tim17_up.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_tim17_up.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_tim17_up.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_tim17_up.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_tim17_up.Init.Mode = DMA_NORMAL;
+    hdma_tim17_up.Init.Priority = DMA_PRIORITY_MEDIUM;
+    if (HAL_DMA_Init(&hdma_tim17_up) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(htim_base,hdma[TIM_DMA_ID_UPDATE],hdma_tim17_up);
+
     /* TIM17 interrupt Init */
     HAL_NVIC_SetPriority(TIM1_TRG_COM_TIM17_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(TIM1_TRG_COM_TIM17_IRQn);
@@ -830,6 +851,9 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
     /* USER CODE END TIM17_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_TIM17_CLK_DISABLE();
+
+    /* TIM17 DMA DeInit */
+    HAL_DMA_DeInit(htim_base->hdma[TIM_DMA_ID_UPDATE]);
 
     /* TIM17 interrupt DeInit */
     /* USER CODE BEGIN TIM17:TIM1_TRG_COM_TIM17_IRQn disable */

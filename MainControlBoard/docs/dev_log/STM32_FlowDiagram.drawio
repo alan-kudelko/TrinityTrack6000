@@ -282,6 +282,12 @@
         <mxCell id="3cZar7swNIIJWqbTVuFk-144" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;Return from ISR&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="180" x="-90" y="660" as="geometry" />
         </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-147" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="Buzzer sequence player" vertex="1">
+          <mxGeometry height="40" width="320" x="-440" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="3cZar7swNIIJWqbTVuFk-148" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="770" width="320" x="-440" y="-60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
