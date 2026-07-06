@@ -52,4 +52,6 @@
 		<item value="org.eclipse.xtext.xbase:2.10.0.v201605250459"/>
 		<item value="org.eclipse.xtext.xtext.ui:2.10.0.v201605250459"/>
 	</list>
+	<section name="NewWizardAction">
+	</section>
 </section>

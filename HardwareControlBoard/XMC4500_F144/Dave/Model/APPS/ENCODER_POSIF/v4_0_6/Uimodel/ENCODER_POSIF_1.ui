@@ -1,0 +1,183 @@
+<p1:Tab  xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt" xmlns:p1="clr-namespace:com.ifx.davex.ui.controls.app" x:Class="e" layout="{x:Null}">
+	<p1:TabFolder bounds="5, 5, 570, 597">
+		<p1:GTab text="Encoder Settings" widgetName="gtab_encoder_config" visible="true" enabled="true" manifestObj="true">
+			<p1:GTab.control>
+				<p1:Tab layout="{x:Null}">
+					<p1:GGroup text="Encoder Configurations:" manifestObj="true" widgetName="ggroup_encoder_config" bounds="10, 17, 520, 237">
+						<p1:GGroup.layout>
+							<GridLayout numColumns="9"/>
+						</p1:GGroup.layout>
+						<p1:GLabel text="Ticks per revolution:" visible="true" manifestObj="true" widgetName="glabel_ticks_per_revolution"/>
+						<p1:GInteger x:Style="NONE" minValue="0" maxValue="65535" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="gint_ticks_per_revolution" value="500" toolTipText="Enter the number of phase a/b ticks for one revolution" description="Integer box allows user to define the number of phase a/b ticks for one revolution">
+							<p1:GInteger.layoutData>
+								<GridData horizontalAlignment="FILL" horizontalSpan="8" grabExcessHorizontalSpace="true"/>
+							</p1:GInteger.layoutData>
+						</p1:GInteger>
+						<p1:GLabel text="Phase A level selector:" visible="true" manifestObj="true" widgetName="glabel_pha_levsel"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_pha_levsel" options="Active Low&#13;&#10;Active High" value="Active High" toolTipText="Defines phase a level" description="Defines phase a level">
+							<p1:GCombo.layoutData>
+								<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true" horizontalSpan="8"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Phase B level selector:" visible="true" manifestObj="true" widgetName="glabel_phb_levsel"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_phb_levsel" options="Active Low&#13;&#10;Active High" value="Active High" toolTipText="Defines phase b level" description="Defines phase b level">
+							<p1:GCombo.layoutData>
+								<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true" horizontalSpan="8"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Clockwise direction definition:" visible="true" manifestObj="true" widgetName="glabel_direction_def">
+							<p1:GLabel.layoutData>
+								<GridData horizontalAlignment="RIGHT"/>
+							</p1:GLabel.layoutData>
+						</p1:GLabel>
+						<p1:GCombo description="Defines the clockwise direction for phase signal" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Phase A is Leading&#13;&#10;Phase B is Leading" toolTipText="Defines the clockwise direction for phase signal" value="Phase B is Leading" widgetName="gcombo_direction_def">
+							<p1:GCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL" horizontalSpan="8"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Low pass filter:" visible="true" manifestObj="true" widgetName="glabel_lp_filter"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_lp_filter" options="Disable&#13;&#10;1 Clock Cycles&#13;&#10;2 Clock Cycles&#13;&#10;4 Clock Cycles&#13;&#10;8 Clock Cycles&#13;&#10;16 Clock Cycles&#13;&#10;32 Clock Cycles&#13;&#10;64 Clock Cycles" value="Disable" description="Low pass filtering on three input controls the cut frequency." toolTipText="Low pass filtering on three input controls the cut frequency.">
+							<p1:GCombo.layoutData>
+								<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true" horizontalSpan="8"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Index marker generation:" visible="true" manifestObj="true" widgetName="glabel_idxsig_config"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_idxsig_config" options="Generates Only On First Index Signal&#13;&#10;Generates On Every Index Signal" value="Generates Only On First Index Signal" toolTipText="Index signal generation on POSIFx.OUT3" description="It controls the generation of the index marker&#13;&#10;that is linked to the output pin POSIFx.OUT3.">
+							<p1:GCombo.layoutData>
+								<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true" horizontalSpan="8"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel text="Encoder enable pin:" visible="true" manifestObj="true" widgetName="glabel_encpin_enable"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_encpin_enable" options="Disabled&#13;&#10;Active Low&#13;&#10;Active High" value="Active Low" toolTipText="Select the active level of encoder enable pin" description="Defines the level of encoder enable pin">
+							<p1:GCombo.layoutData>
+								<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true" horizontalSpan="8"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+					</p1:GGroup>
+					<p1:GGroup manifestObj="true" text="Encoder Input" widgetName="gGroup5" bounds="9, 456, 237, 106">
+						<p1:GGroup.layout>
+							<GridLayout horizontalSpacing="10" marginBottom="10" marginHeight="0" marginTop="10" marginWidth="10" verticalSpacing="10"/>
+						</p1:GGroup.layout>
+						<p1:GCheck description="If enabled then phase a input is connected via ERU." manifestObj="true" text="Phase A via ERU" toolTipText="If enabled then phase a input is connected via ERU." widgetName="gcheck_eph_a_eru"/>
+						<p1:GCheck description="If enabled then phase b input is connected via ERU." manifestObj="true" text="Phase B via ERU" toolTipText="If enabled then phase b input is connected via ERU." widgetName="gcheck_eph_b_eru"/>
+						<p1:GCheck description="If enabled then index input is connected via ERU." manifestObj="true" text="Index via ERU" toolTipText="If enabled then index input is connected via ERU." widgetName="gcheck_eidx_eru"/>
+					</p1:GGroup>
+					<p1:GImage visible="true" manifestObj="true" widgetName="gimage_phases" bounds="8, 262, 525, 185" path="Uimodel/PhaseA_lead.png">
+						<p1:GCheck manifestObj="true" widgetName="gcheck_index" bounds="172, 137, 13, 16" description="Uses the index signal for motor revolution control" toolTipText="Uses the index signal for motor revolution control"/>
+						<p1:GLabel text="Index" visible="true" manifestObj="true" widgetName="glabel_index" bounds="140, 137, 32, 15"/>
+					</p1:GImage>
+					<p1:GGroup bounds="253, 456, 279, 106" manifestObj="true" text="Encoder Tick Timer Configuration" widgetName="ggroup_tick_tmr_config">
+						<p1:GGroup.layout>
+							<GridLayout numColumns="2"/>
+						</p1:GGroup.layout>
+						<p1:GLabel manifestObj="true" text="Resolution [ns]:" widgetName="glabel_resolution_tcap"/>
+						<p1:GFloat description="Input resolution for CCU4 clock. &#13;&#10;This decides the clock divider factor for the time capture CCU4 slice." format="*,6" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" maxValue="273066.66" minValue="8.3" toolTipText="Input resolution for CCU4 clock. &#13;&#10;This decides the clock divider factor for the time capture CCU4 slice." value="9" widgetName="gfloat_resolution_tcap" x:Style="BORDER">
+							<p1:GFloat.layoutData>
+								<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+							</p1:GFloat.layoutData>
+						</p1:GFloat>
+						<p1:GLabel manifestObj="true" text="Actual resolution [ns]:" widgetName="glabel_actresolution_tcap"/>
+						<p1:GFloat description="It is calculated actual resolution based on user desired resolution.&#13;&#10;prescaler values are decided based on this actual resolution" format="*,6" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" maxValue="273066.66" minValue="8.3" value="8.3" widgetName="gfloat_actresolution_tcap" x:Style="BORDER">
+							<p1:GFloat.layoutData>
+								<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+							</p1:GFloat.layoutData>
+						</p1:GFloat>
+					</p1:GGroup>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+		<p1:GTab text="Synchronization" visible="true" enabled="true" manifestObj="true" widgetName="gtab_timer_settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_23">
+					<p1:GImage visible="true" manifestObj="true" widgetName="gimage_timersettings" bounds="5, 27, 551, 320" path="Uimodel/Angle_calculation.png">
+						<p1:GCheck bounds="367, 231, 12, 12" manifestObj="true" toolTipText="Enable/Disable revolution counter" widgetName="gcheck_rev_counter" description="It enables revolution counter"/>
+						<p1:GInteger x:Style="NONE" minValue="0" maxValue="65535" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="gint_rev_count" bounds="321, 247, 70, 23" value="65535" toolTipText="Enter revolution counter overflow value" description="It allows to enter revolution counter overflow value"/>
+						<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_extrapol_type" bounds="227, 65, 158, 21" options="1st Order&#13;&#10;2nd Order" value="1st Order" toolTipText="Selects the angle extrapolation type.&lt;br&gt;&#13;&#10;2nd order extrapolation is available only for XMC4x device." description="Selects the angle extrapolation type.&lt;br&gt;&#13;&#10;2nd order extrapolation is available only for XMC4x device."/>
+						<p1:GFloat x:Style="BORDER" minValue="0" maxValue="1000" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="*,6" manifestObj="true" widgetName="gfloat_time_constant" value="200" toolTipText="Time constant for speed filter" description="Time constant for speed filter" bounds="429, 188, 81, 21"/>
+						<p1:GFloat x:Style="BORDER" minValue="1" maxValue="1000" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="*,6" manifestObj="true" widgetName="gfloat_timestamp" bounds="80, 69, 90, 21" value="25" toolTipText="This tells at what rate the encoder angle &#13;&#10;should be captured" description="This tells at what rate the encoder angle &#13;&#10;should be captured"/>
+					</p1:GImage>
+					<p1:GGroup manifestObj="true" text="CCU4 Configuration" widgetName="ggroup_cc4_label" bounds="2, 388, 492, 56">
+						<p1:GLabel bounds="5, 17, 146, 15" manifestObj="true" text="Trigger slice resolution [ns]:" widgetName="glabel_resolution_triggerslice"/>
+						<p1:GLabel bounds="12, 33, 181, 15" manifestObj="true" text="Trigger slice actual resolution [ns]:" widgetName="glabel_actresolution_triggerslice"/>
+						<p1:GLabel bounds="193, 34, 148, 15" manifestObj="true" text="Trigger slice frequency [Hz]:" widgetName="glabel_freq_triggerslice"/>
+						<p1:GLabel text="Counter overflow:" visible="true" manifestObj="true" widgetName="glabel_rev_count" bounds="154, 18, 99, 19"/>
+						<p1:GLabel text="Revolution counter" visible="true" manifestObj="true" widgetName="glabel_rev_counter" bounds="276, 20, 55, 15"/>
+						<p1:GLabel text="Trigger slice period match ISR" visible="true" manifestObj="true" widgetName="glabel_anglecalculation_isr" bounds="287, 9, 55, 15"/>
+						<p1:GLabel text="Extrapolation type:" visible="true" manifestObj="true" widgetName="glabel_extrapol_type" bounds="361, 15, 111, 15"/>
+						<p1:GLabel text="Time stamp period" visible="true" manifestObj="true" widgetName="glabel_timestamp" bounds="359, 32, 114, 15"/>
+					</p1:GGroup>
+					<p1:GGroup text="Speed Filter Configuration" manifestObj="true" widgetName="ggroup_pt1_config" bounds="5, 453, 267, 50">
+						<p1:GGroup.layout>
+							<GridLayout numColumns="3"/>
+						</p1:GGroup.layout>
+						<p1:GLabel text="Time Constant [ms]:" visible="true" manifestObj="true" widgetName="glabel_time_constant"/>
+						<p1:GFloat x:Style="BORDER" minValue="0" maxValue="65535" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="*,6" manifestObj="true" widgetName="gfloat_sample_time" value="25" description="It allows to configure speed filter sample time ">
+							<p1:GFloat.layoutData>
+								<GridData horizontalAlignment="FILL"/>
+							</p1:GFloat.layoutData>
+						</p1:GFloat>
+						<p1:GLabel text="Sample time [us]:" visible="true" manifestObj="true" widgetName="glabel_sample_time"/>
+					</p1:GGroup>
+					<p1:GInteger x:Style="NONE" minValue="1" maxValue="200000" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="gint_motorspeed" value="6200" toolTipText="Configure no load motor speed." description="Configure no load motor speed." bounds="169, 357, 118, 23"/>
+					<p1:GLabel text="No load motor speed [rpm]:" visible="true" manifestObj="true" widgetName="glabel_motorspeed" bounds="9, 360, 158, 15"/>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+		<p1:GTab text="Interrupt Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_interrupt_settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_4">
+					<p1:GGroup text="Time Stamp Trigger(CCU4 PM) Interrupt Configuration" manifestObj="true" widgetName="ggroup_trigger_gen_int_config" bounds="13, 15, 325, 150" layout="{x:Null}">
+						<p1:GLabel text="ISR handler:" visible="true" manifestObj="true" widgetName="glabel_isr_handler" bounds="11, 53, 62, 15"/>
+						<p1:GString x:Style="BORDER" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gstring_isr_handler" toolTipText="" value="&lt;APP_Inst&gt;_TimeStampTrigger_ISR" enabled="false" description="It is the ISR handler mapped to trigger slice period match." bounds="83, 50, 229, 21"/>
+						<p1:GInterruptPrio text="Priority Configuration" x:Style="NONE" minPriority="0" maxPriority="63" minSubPriority="0" maxSubPriority="63" priorityValue="63" subPriorityValue="0" priorityMandatory="false" subPriorityMandatory="false" manifestObj="true" widgetName="ginterruptprio_triggerslice_pm_isr" toolTipText="min &amp; max range varies dynamically based on device and CPU APP configuration." description="Sub priority is not applicable to XMC1x devices.&lt;BR&gt;&#13;&#10;min &amp; max range varies dynamically based on device and CPU APP configuration." bounds="11, 81, 301, 59"/>
+						<p1:GCheck bounds="11, 25, 302, 16" description="Updates angle at every period match ISR of&#13;&#10;trigger slice" manifestObj="true" toolTipText="Performs speed and angle calculation at every period match ISR of&#13;&#10;time stamp trigger" widgetName="gcheck_timestamp_pmisr" text="Enable period match for angle and speed calculation"/>
+					</p1:GGroup>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+		<p1:GTab text="Event Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_event_settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_9">
+					<p1:GGroup bounds="7, 10, 445, 178" manifestObj="true" text="Enable events" widgetName="ggroup_event_enable">
+						<p1:GGroup.layout>
+							<GridLayout/>
+						</p1:GGroup.layout>
+						<p1:GCheck manifestObj="true" text="Index event" widgetName="gcheck_idx_evt" description="The occurance of index pulse is defined as index event" toolTipText="The occurance of index pulse is defined as index event&lt;br&gt;"/>
+						<p1:GCheck manifestObj="true" text="Phase error event" widgetName="gcheck_ph_error_event" description="Phase error signal can be generated when a wrong phase pair is detected." toolTipText="Phase error signal is generated when a wrong phase pair is detected."/>
+						<p1:GCheck manifestObj="true" text="Direction change event" widgetName="gcheck_dir_change_event" description="This event is detected when the direction of motor is changed" toolTipText="This event is detected when the direction of motor is changed"/>
+						<p1:GCheck manifestObj="true" text="Pclock event" widgetName="gcheck_pclk_event" description="Pclock event is detected on assertion of pclk pulse" toolTipText="Pclock event is detected on occurance of pclk pulse"/>
+						<p1:GCheck manifestObj="true" text="Qclock event" widgetName="gcheck_qclk_event" description="Qclock event is detected on assertion of qclk pulse" toolTipText="Qclock event is detected on occurance of qclk pulse"/>
+						<p1:GCheck text="Revolution counter overflow event" manifestObj="true" widgetName="gcheck_rev_overflow_cnt" description="Revolution counter overflow event is detected&lt;br&gt;when period match of revolution counter  is occurs." toolTipText="Revolution counter overflow event is detected&lt;br&gt;when period match of revolution counter  is occurs."/>
+					</p1:GGroup>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+		<p1:GTab text="Pin Settings" visible="true" enabled="true" manifestObj="true" widgetName="gtab_pin_settings">
+			<p1:GTab.control>
+				<p1:Tab widgetName="composite_2">
+					<p1:GGroup bounds="11, 16, 385, 85" manifestObj="true" text="Encoder Enable Pin Configuration" widgetName="ggroup_inverter_pin_config">
+						<p1:GGroup.layout>
+							<GridLayout horizontalSpacing="10" marginBottom="5" verticalSpacing="10" numColumns="2"/>
+						</p1:GGroup.layout>
+						<p1:GLabel manifestObj="true" text="Mode:" widgetName="glabel_enc_enable_opchar">
+							<p1:GLabel.layoutData>
+								<GridData widthHint="131" horizontalAlignment="RIGHT"/>
+							</p1:GLabel.layoutData>
+						</p1:GLabel>
+						<p1:GCombo description="Encoder enable pin output mode" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Push Pull&#13;&#10;Open Drain" toolTipText="Encoder enable pin output mode" value="Push Pull" widgetName="gcombo_enc_enable_opchar">
+							<p1:GCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+						<p1:GLabel manifestObj="true" text="Driver strength:" widgetName="glabel_invout_dstrength"/>
+						<p1:GCombo description="inverter enable pin output driver strength" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" options="Weak Driver&#13;&#10;Medium Driver&#13;&#10;Strong Driver Soft Edge&#13;&#10;Strong Driver Slow Edge&#13;&#10;Strong Driver Sharp Edge&#13;&#10;Strong Driver Medium Edge" toolTipText="inverter enable pin output driver strength" value="Strong Driver Sharp Edge" widgetName="gcombo_invout_dstrength">
+							<p1:GCombo.layoutData>
+								<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+							</p1:GCombo.layoutData>
+						</p1:GCombo>
+					</p1:GGroup>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+	</p1:TabFolder>
+</p1:Tab>

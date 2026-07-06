@@ -1,0 +1,155 @@
+package Model.APPS.ENCODER_POSIF.v4_0_6;
+
+// Import statements
+import ifx.davex.app.manifest.*
+
+abstract class ENCODER_POSIF_GUI extends AppManifest {
+	/* Begin : UI variable section */
+	 public GTab gtab_encoder_config;
+	 public GTab gtab_timer_settings;
+	 public GTab gtab_interrupt_settings;
+	 public GTab gtab_event_settings;
+	 public GTab gtab_pin_settings;
+	 public GImage gimage_phases;
+	 public GImage gimage_timersettings;
+	 public GInteger gint_ticks_per_revolution;
+	 public GInteger gint_rev_count;
+	 public GInteger gint_motorspeed;
+	 public GCombo gcombo_pha_levsel;
+	 public GCombo gcombo_phb_levsel;
+	 public GCombo gcombo_direction_def;
+	 public GCombo gcombo_lp_filter;
+	 public GCombo gcombo_idxsig_config;
+	 public GCombo gcombo_encpin_enable;
+	 public GCombo gcombo_extrapol_type;
+	 public GCombo gcombo_enc_enable_opchar;
+	 public GCombo gcombo_invout_dstrength;
+	 public GFloat gfloat_resolution_tcap;
+	 public GFloat gfloat_actresolution_tcap;
+	 public GFloat gfloat_time_constant;
+	 public GFloat gfloat_timestamp;
+	 public GFloat gfloat_sample_time;
+	 public GString gstring_isr_handler;
+	 public GCheck gcheck_eph_a_eru;
+	 public GCheck gcheck_eph_b_eru;
+	 public GCheck gcheck_eidx_eru;
+	 public GCheck gcheck_index;
+	 public GCheck gcheck_rev_counter;
+	 public GCheck gcheck_timestamp_pmisr;
+	 public GCheck gcheck_idx_evt;
+	 public GCheck gcheck_ph_error_event;
+	 public GCheck gcheck_dir_change_event;
+	 public GCheck gcheck_pclk_event;
+	 public GCheck gcheck_qclk_event;
+	 public GCheck gcheck_rev_overflow_cnt;
+	 public GLabel glabel_ticks_per_revolution;
+	 public GLabel glabel_pha_levsel;
+	 public GLabel glabel_phb_levsel;
+	 public GLabel glabel_direction_def;
+	 public GLabel glabel_lp_filter;
+	 public GLabel glabel_idxsig_config;
+	 public GLabel glabel_encpin_enable;
+	 public GLabel glabel_index;
+	 public GLabel glabel_resolution_tcap;
+	 public GLabel glabel_actresolution_tcap;
+	 public GLabel glabel_resolution_triggerslice;
+	 public GLabel glabel_actresolution_triggerslice;
+	 public GLabel glabel_freq_triggerslice;
+	 public GLabel glabel_rev_count;
+	 public GLabel glabel_rev_counter;
+	 public GLabel glabel_anglecalculation_isr;
+	 public GLabel glabel_extrapol_type;
+	 public GLabel glabel_timestamp;
+	 public GLabel glabel_time_constant;
+	 public GLabel glabel_sample_time;
+	 public GLabel glabel_motorspeed;
+	 public GLabel glabel_isr_handler;
+	 public GLabel glabel_enc_enable_opchar;
+	 public GLabel glabel_invout_dstrength;
+	 public GGroup ggroup_encoder_config;
+	 public GGroup gGroup5;
+	 public GGroup ggroup_tick_tmr_config;
+	 public GGroup ggroup_cc4_label;
+	 public GGroup ggroup_pt1_config;
+	 public GGroup ggroup_trigger_gen_int_config;
+	 public GGroup ggroup_event_enable;
+	 public GGroup ggroup_inverter_pin_config;
+	 public GInterruptPrio ginterruptprio_triggerslice_pm_isr;
+
+	 public ENCODER_POSIF_GUI(DaveEnv daveEnv){
+
+	 gtab_encoder_config = GTab(widgetName:"gtab_encoder_config", text:"Encoder Settings", enabled:true, visible:true)
+	 gtab_timer_settings = GTab(widgetName:"gtab_timer_settings", text:"Synchronization", enabled:true, visible:true)
+	 gtab_interrupt_settings = GTab(widgetName:"gtab_interrupt_settings", text:"Interrupt Settings", enabled:true, visible:true)
+	 gtab_event_settings = GTab(widgetName:"gtab_event_settings", text:"Event Settings", enabled:true, visible:true)
+	 gtab_pin_settings = GTab(widgetName:"gtab_pin_settings", text:"Pin Settings", enabled:true, visible:true)
+	 gimage_phases = GImage(widgetName:"gimage_phases", path: "Uimodel/PhaseA_lead.png", enabled:true, visible:true)
+	 gimage_timersettings = GImage(widgetName:"gimage_timersettings", path: "Uimodel/Angle_calculation.png", enabled:true, visible:true)
+	 gint_ticks_per_revolution = GInteger(widgetName:"gint_ticks_per_revolution", value:500, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 gint_rev_count = GInteger(widgetName:"gint_rev_count", value:65535, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 gint_motorspeed = GInteger(widgetName:"gint_motorspeed", value:6200, minValue:1, maxValue:200000, enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_pha_levsel = GCombo(widgetName:"gcombo_pha_levsel", options:["Active Low","Active High"], value:"Active High", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_phb_levsel = GCombo(widgetName:"gcombo_phb_levsel", options:["Active Low","Active High"], value:"Active High", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_direction_def = GCombo(widgetName:"gcombo_direction_def", options:["Phase A is Leading","Phase B is Leading"], value:"Phase B is Leading", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_lp_filter = GCombo(widgetName:"gcombo_lp_filter", options:["Disable","1 Clock Cycles","2 Clock Cycles","4 Clock Cycles","8 Clock Cycles","16 Clock Cycles","32 Clock Cycles","64 Clock Cycles"], value:"Disable", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_idxsig_config = GCombo(widgetName:"gcombo_idxsig_config", options:["Generates Only On First Index Signal","Generates On Every Index Signal"], value:"Generates Only On First Index Signal", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_encpin_enable = GCombo(widgetName:"gcombo_encpin_enable", options:["Disabled","Active Low","Active High"], value:"Active Low", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_extrapol_type = GCombo(widgetName:"gcombo_extrapol_type", options:["1st Order","2nd Order"], value:"1st Order", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_enc_enable_opchar = GCombo(widgetName:"gcombo_enc_enable_opchar", options:["Push Pull","Open Drain"], value:"Push Pull", enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_invout_dstrength = GCombo(widgetName:"gcombo_invout_dstrength", options:["Weak Driver","Medium Driver","Strong Driver Soft Edge","Strong Driver Slow Edge","Strong Driver Sharp Edge","Strong Driver Medium Edge"], value:"Strong Driver Sharp Edge", enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_resolution_tcap = GFloat(widgetName:"gfloat_resolution_tcap", value:9, minValue:8.3, maxValue:273066.66, enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_actresolution_tcap = GFloat(widgetName:"gfloat_actresolution_tcap", value:8.3, minValue:8.3, maxValue:273066.66, enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_time_constant = GFloat(widgetName:"gfloat_time_constant", value:200, minValue:0, maxValue:1000, enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_timestamp = GFloat(widgetName:"gfloat_timestamp", value:25, minValue:1, maxValue:1000, enabled:true, visible:true, isMandatoryValue:false)
+	 gfloat_sample_time = GFloat(widgetName:"gfloat_sample_time", value:25, minValue:0, maxValue:65535, enabled:true, visible:true, isMandatoryValue:false)
+	 gstring_isr_handler = GString(widgetName:"gstring_isr_handler", value:"<APP_Inst>_TimeStampTrigger_ISR", enabled:false, visible:true, isMandatoryValue:false)
+	 gcheck_eph_a_eru = GCheck(widgetName:"gcheck_eph_a_eru", value:false, enabled:true, visible:true)
+	 gcheck_eph_b_eru = GCheck(widgetName:"gcheck_eph_b_eru", value:false, enabled:true, visible:true)
+	 gcheck_eidx_eru = GCheck(widgetName:"gcheck_eidx_eru", value:false, enabled:true, visible:true)
+	 gcheck_index = GCheck(widgetName:"gcheck_index", value:false, enabled:true, visible:true)
+	 gcheck_rev_counter = GCheck(widgetName:"gcheck_rev_counter", value:false, enabled:true, visible:true)
+	 gcheck_timestamp_pmisr = GCheck(widgetName:"gcheck_timestamp_pmisr", value:false, enabled:true, visible:true)
+	 gcheck_idx_evt = GCheck(widgetName:"gcheck_idx_evt", value:false, enabled:true, visible:true)
+	 gcheck_ph_error_event = GCheck(widgetName:"gcheck_ph_error_event", value:false, enabled:true, visible:true)
+	 gcheck_dir_change_event = GCheck(widgetName:"gcheck_dir_change_event", value:false, enabled:true, visible:true)
+	 gcheck_pclk_event = GCheck(widgetName:"gcheck_pclk_event", value:false, enabled:true, visible:true)
+	 gcheck_qclk_event = GCheck(widgetName:"gcheck_qclk_event", value:false, enabled:true, visible:true)
+	 gcheck_rev_overflow_cnt = GCheck(widgetName:"gcheck_rev_overflow_cnt", value:false, enabled:true, visible:true)
+	 glabel_ticks_per_revolution = GLabel(widgetName:"glabel_ticks_per_revolution", text:"Ticks per revolution:", enabled:true, visible:true)
+	 glabel_pha_levsel = GLabel(widgetName:"glabel_pha_levsel", text:"Phase A level selector:", enabled:true, visible:true)
+	 glabel_phb_levsel = GLabel(widgetName:"glabel_phb_levsel", text:"Phase B level selector:", enabled:true, visible:true)
+	 glabel_direction_def = GLabel(widgetName:"glabel_direction_def", text:"Clockwise direction definition:", enabled:true, visible:true)
+	 glabel_lp_filter = GLabel(widgetName:"glabel_lp_filter", text:"Low pass filter:", enabled:true, visible:true)
+	 glabel_idxsig_config = GLabel(widgetName:"glabel_idxsig_config", text:"Index marker generation:", enabled:true, visible:true)
+	 glabel_encpin_enable = GLabel(widgetName:"glabel_encpin_enable", text:"Encoder enable pin:", enabled:true, visible:true)
+	 glabel_index = GLabel(widgetName:"glabel_index", text:"Index", enabled:true, visible:true)
+	 glabel_resolution_tcap = GLabel(widgetName:"glabel_resolution_tcap", text:"Resolution [ns]:", enabled:true, visible:true)
+	 glabel_actresolution_tcap = GLabel(widgetName:"glabel_actresolution_tcap", text:"Actual resolution [ns]:", enabled:true, visible:true)
+	 glabel_resolution_triggerslice = GLabel(widgetName:"glabel_resolution_triggerslice", text:"Trigger slice resolution [ns]:", enabled:true, visible:true)
+	 glabel_actresolution_triggerslice = GLabel(widgetName:"glabel_actresolution_triggerslice", text:"Trigger slice actual resolution [ns]:", enabled:true, visible:true)
+	 glabel_freq_triggerslice = GLabel(widgetName:"glabel_freq_triggerslice", text:"Trigger slice frequency [Hz]:", enabled:true, visible:true)
+	 glabel_rev_count = GLabel(widgetName:"glabel_rev_count", text:"Counter overflow:", enabled:true, visible:true)
+	 glabel_rev_counter = GLabel(widgetName:"glabel_rev_counter", text:"Revolution counter", enabled:true, visible:true)
+	 glabel_anglecalculation_isr = GLabel(widgetName:"glabel_anglecalculation_isr", text:"Trigger slice period match ISR", enabled:true, visible:true)
+	 glabel_extrapol_type = GLabel(widgetName:"glabel_extrapol_type", text:"Extrapolation type:", enabled:true, visible:true)
+	 glabel_timestamp = GLabel(widgetName:"glabel_timestamp", text:"Time stamp period", enabled:true, visible:true)
+	 glabel_time_constant = GLabel(widgetName:"glabel_time_constant", text:"Time Constant [ms]:", enabled:true, visible:true)
+	 glabel_sample_time = GLabel(widgetName:"glabel_sample_time", text:"Sample time [us]:", enabled:true, visible:true)
+	 glabel_motorspeed = GLabel(widgetName:"glabel_motorspeed", text:"No load motor speed [rpm]:", enabled:true, visible:true)
+	 glabel_isr_handler = GLabel(widgetName:"glabel_isr_handler", text:"ISR handler:", enabled:true, visible:true)
+	 glabel_enc_enable_opchar = GLabel(widgetName:"glabel_enc_enable_opchar", text:"Mode:", enabled:true, visible:true)
+	 glabel_invout_dstrength = GLabel(widgetName:"glabel_invout_dstrength", text:"Driver strength:", enabled:true, visible:true)
+	 ggroup_encoder_config = GGroup(widgetName:"ggroup_encoder_config", text:"Encoder Configurations:", enabled:true, visible:true)
+	 gGroup5 = GGroup(widgetName:"gGroup5", text:"Encoder Input", enabled:true, visible:true)
+	 ggroup_tick_tmr_config = GGroup(widgetName:"ggroup_tick_tmr_config", text:"Encoder Tick Timer Configuration", enabled:true, visible:true)
+	 ggroup_cc4_label = GGroup(widgetName:"ggroup_cc4_label", text:"CCU4 Configuration", enabled:true, visible:true)
+	 ggroup_pt1_config = GGroup(widgetName:"ggroup_pt1_config", text:"Speed Filter Configuration", enabled:true, visible:true)
+	 ggroup_trigger_gen_int_config = GGroup(widgetName:"ggroup_trigger_gen_int_config", text:"Time Stamp Trigger(CCU4 PM) Interrupt Configuration", enabled:true, visible:true)
+	 ggroup_event_enable = GGroup(widgetName:"ggroup_event_enable", text:"Enable events", enabled:true, visible:true)
+	 ggroup_inverter_pin_config = GGroup(widgetName:"ggroup_inverter_pin_config", text:"Encoder Enable Pin Configuration", enabled:true, visible:true)
+	 ginterruptprio_triggerslice_pm_isr = GInterruptPrio(widgetName:"ginterruptprio_triggerslice_pm_isr", priorityValue:63, minPriority:0, maxPriority:63, subPriorityValue:0, minSubPriority:0, maxSubPriority:63, subPriorityVisible:true, enabled:true, visible:true)
+
+
+	 }
+	/* End : UI variable section */
+}

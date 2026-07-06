@@ -1,0 +1,47 @@
+<p1:Tab  xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt" xmlns:p1="clr-namespace:com.ifx.davex.ui.controls.app" x:Class="e" layout="{x:Null}">
+	<p1:TabFolder bounds="5, 5, 600, 500">
+		<p1:GTab text="General Settings" widgetName="tab_1" visible="true" enabled="true">
+			<p1:GTab.control>
+				<p1:Tab>
+					<p1:Tab.layout>
+						<GridLayout numColumns="2"/>
+					</p1:Tab.layout>
+					<p1:GLabel text="Number of up channels:" visible="true" widgetName="glabel_max_up_buffers" description="SEGGER_RTT_MAX_NUM_UP_BUFFERS: Max. number of up-buffers (T-&gt;H) available on this target" toolTipText="SEGGER_RTT_MAX_NUM_UP_BUFFERS: Max. number of up-buffers (T-&gt;H) available on this target"/>
+					<p1:GInteger x:Style="NONE" minValue="1" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_max_up_buffers" value="1" description="SEGGER_RTT_MAX_NUM_UP_BUFFERS: Max. number of up-buffers (T-&gt;H) available on this target" toolTipText="SEGGER_RTT_MAX_NUM_UP_BUFFERS: Max. number of up-buffers (T-&gt;H) available on this target">
+						<p1:GInteger.layoutData>
+							<GridData widthHint="40"/>
+						</p1:GInteger.layoutData>
+					</p1:GInteger>
+					<p1:GLabel text="Size of the output buffer (bytes):" visible="true" widgetName="glabel_size_terminal_output_buffer" description="BUFFER_SIZE_UP: Size of the buffer for terminal output of target, up to host" toolTipText="BUFFER_SIZE_UP: Size of the buffer for terminal output of target, up to host"/>
+					<p1:GInteger x:Style="NONE" minValue="1" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_size_terminal_output_buffer" value="1024" description="BUFFER_SIZE_UP: Size of the buffer for terminal output of target, up to host" toolTipText="BUFFER_SIZE_UP: Size of the buffer for terminal output of target, up to host"/>
+					<p1:GLabel text="Number of down channels:" visible="true" widgetName="glabel_max_down_buffers" description="SEGGER_RTT_MAX_NUM_DOWN_BUFFERS: Max. number of down-buffers (H-&gt;T) available on this target" toolTipText="SEGGER_RTT_MAX_NUM_DOWN_BUFFERS: Max. number of down-buffers (H-&gt;T) available on this target"/>
+					<p1:GInteger x:Style="NONE" minValue="1" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_max_down_buffers" value="1" description="SEGGER_RTT_MAX_NUM_DOWN_BUFFERS: Max. number of down-buffers (H-&gt;T) available on this target" toolTipText="SEGGER_RTT_MAX_NUM_DOWN_BUFFERS: Max. number of down-buffers (H-&gt;T) available on this target">
+						<p1:GInteger.layoutData>
+							<GridData widthHint="40"/>
+						</p1:GInteger.layoutData>
+					</p1:GInteger>
+					<p1:GLabel text="Size of the input buffer (bytes):" visible="true" widgetName="glabel_size_terminal_input_buffer" description="BUFFER_SIZE_DOWN: Size of the buffer for terminal input to target from host (Usually keyboard input)" toolTipText="BUFFER_SIZE_DOWN: Size of the buffer for terminal input to target from host (Usually keyboard input)"/>
+					<p1:GInteger x:Style="NONE" minValue="1" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_size_terminal_input_buffer" value="16" description="BUFFER_SIZE_DOWN: Size of the buffer for terminal input to target from host (Usually keyboard input)" toolTipText="BUFFER_SIZE_DOWN: Size of the buffer for terminal input to target from host (Usually keyboard input)"/>
+					<p1:GLabel text="Operating mode:" visible="true" widgetName="glabel_mode" description="SEGGER_RTT_MODE_DEFAULT: Mode for pre-initialized terminal channel (buffer 0)" toolTipText="SEGGER_RTT_MODE_DEFAULT: Mode for pre-initialized terminal channel (buffer 0)"/>
+					<p1:GCombo mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" manifestObj="true" widgetName="gcombo_mode" toolTipText="SEGGER_RTT_MODE_DEFAULT: Mode for pre-initialized terminal channel (buffer 0)" options="Skip: Do not block, output nothing&#13;&#10;Trim: Do not block, output as much as fits&#13;&#10;Block: Wait until there is space in the buffer&#13;&#10;&#13;&#10;" value="Trim: Do not block, output as much as fits" description="SEGGER_RTT_MODE_DEFAULT: Mode for pre-initialized terminal channel (buffer 0)"/>
+					<p1:GLabel text="Max. interrupt priority" visible="true" manifestObj="true" widgetName="glabel_max_interrupt_priority" toolTipText="SEGGER_RTT_MAX_INTERRUPT_PRIORITY: Target is not allowed to perform other RTT operations while string still has not been stored completely. Otherwise we would probably end up with a mixed string in the buffer. If using  RTT from within interrupts, multiple tasks or multi processors, define the SEGGER_RTT_LOCK() and SEGGER_RTT_UNLOCK() function here.&#13;&#10;&#13;&#10;SEGGER_RTT_MAX_INTERRUPT_PRIORITY can be used in the sample lock routines on Cortex-M3/4." description="SEGGER_RTT_MAX_INTERRUPT_PRIORITY: Target is not allowed to perform other RTT operations while string still has not been stored completely. Otherwise we would probably end up with a mixed string in the buffer. If using  RTT from within interrupts, multiple tasks or multi processors, define the SEGGER_RTT_LOCK() and SEGGER_RTT_UNLOCK() function here.&#13;&#10;&#13;&#10;SEGGER_RTT_MAX_INTERRUPT_PRIORITY can be used in the sample lock routines on Cortex-M3/4."/>
+					<p1:GInteger x:Style="NONE" minValue="0" maxValue="63" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_max_interrupt_priority" value="63" toolTipText="SEGGER_RTT_MAX_INTERRUPT_PRIORITY: Target is not allowed to perform other RTT operations while string still has not been stored completely. Otherwise we would probably end up with a mixed string in the buffer. If using  RTT from within interrupts, multiple tasks or multi processors, define the SEGGER_RTT_LOCK() and SEGGER_RTT_UNLOCK() function here.&#13;&#10;&#13;&#10;SEGGER_RTT_MAX_INTERRUPT_PRIORITY can be used in the sample lock routines on Cortex-M3/4." description="SEGGER_RTT_MAX_INTERRUPT_PRIORITY: Target is not allowed to perform other RTT operations while string still has not been stored completely. Otherwise we would probably end up with a mixed string in the buffer. If using  RTT from within interrupts, multiple tasks or multi processors, define the SEGGER_RTT_LOCK() and SEGGER_RTT_UNLOCK() function here.&#13;&#10;&#13;&#10;SEGGER_RTT_MAX_INTERRUPT_PRIORITY can be used in the sample lock routines on Cortex-M3/4.">
+						<p1:GInteger.layoutData>
+							<GridData widthHint="40"/>
+						</p1:GInteger.layoutData>
+					</p1:GInteger>
+					<p1:GLabel text="Printf buffer size (bytes):" visible="true" widgetName="glabel_printf_buffer_size" description="SEGGER_RTT_PRINTF_BUFFER_SIZE: Size of buffer for RTT printf to bulk-send chars via RTT" toolTipText="SEGGER_RTT_PRINTF_BUFFER_SIZE: Size of buffer for RTT printf to bulk-send chars via RTT"/>
+					<p1:GInteger x:Style="NONE" minValue="1" maxValue="MAX_VALUE" mandatory="(com.ifx.davex.ui.controls.util.AppUiConstants).FALSE" format="(com.ifx.davex.ui.controls.util.AppUiConstants).DEC" manifestObj="true" widgetName="ginteger_printf_buffer_size" value="64" description="SEGGER_RTT_PRINTF_BUFFER_SIZE: Size of buffer for RTT printf to bulk-send chars via RTT" toolTipText="SEGGER_RTT_PRINTF_BUFFER_SIZE: Size of buffer for RTT printf to bulk-send chars via RTT">
+						<p1:GInteger.layoutData>
+							<GridData widthHint="40"/>
+						</p1:GInteger.layoutData>
+					</p1:GInteger>
+					<p1:GCheck text="Enable printf retargeting" widgetName="gcheck_retarget" description="Enable replacement of standard printf to write formatted data via RT. Extra stack space may be needed. " manifestObj="true" toolTipText="Enable replacement for printf to write formatted data via RTT. Extra stack space may be needed. "/>
+					<Label/>
+					<p1:GCheck text="Use byte loop memcpy" manifestObj="true" widgetName="gcheck_byte_loop_memcpy" description="SEGGER_RTT_MEMCPY_USE_BYTELOOP: memcpy() is good for large amounts of data,&#13;&#10;but the overhead is big for small amounts, which are usually stored via RTT.&#13;&#10;With SEGGER_RTT_MEMCPY_USE_BYTELOOP a simple byte loop can be used instead.&#13;&#10;If unchecked  SEGGER_RTT_MEMCPY() can be used to replace standard memcpy() in RTT functions." toolTipText="SEGGER_RTT_MEMCPY_USE_BYTELOOP: memcpy() is good for large amounts of data,&#13;&#10;but the overhead is big for small amounts, which are usually stored via RTT.&#13;&#10;With SEGGER_RTT_MEMCPY_USE_BYTELOOP a simple byte loop can be used instead.&#13;&#10;If unchecked  SEGGER_RTT_MEMCPY() can be used to replace standard memcpy() in RTT functions."/>
+					<Label/>
+				</p1:Tab>
+			</p1:GTab.control>
+		</p1:GTab>
+	</p1:TabFolder>
+</p1:Tab>

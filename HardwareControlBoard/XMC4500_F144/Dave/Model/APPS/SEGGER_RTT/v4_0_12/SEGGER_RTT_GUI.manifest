@@ -1,0 +1,35 @@
+package Model.APPS.SEGGER_RTT.v4_0_12;
+
+// Import statements
+import ifx.davex.app.manifest.*
+
+abstract class SEGGER_RTT_GUI extends AppManifest {
+	/* Begin : UI variable section */
+	 public GInteger ginteger_max_up_buffers;
+	 public GInteger ginteger_size_terminal_output_buffer;
+	 public GInteger ginteger_max_down_buffers;
+	 public GInteger ginteger_size_terminal_input_buffer;
+	 public GInteger ginteger_max_interrupt_priority;
+	 public GInteger ginteger_printf_buffer_size;
+	 public GCombo gcombo_mode;
+	 public GCheck gcheck_retarget;
+	 public GCheck gcheck_byte_loop_memcpy;
+	 public GLabel glabel_max_interrupt_priority;
+
+	 public SEGGER_RTT_GUI(DaveEnv daveEnv){
+
+	 ginteger_max_up_buffers = GInteger(widgetName:"ginteger_max_up_buffers", value:1, minValue:1, maxValue:Long.MAX_VALUE, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_size_terminal_output_buffer = GInteger(widgetName:"ginteger_size_terminal_output_buffer", value:1024, minValue:1, maxValue:Long.MAX_VALUE, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_max_down_buffers = GInteger(widgetName:"ginteger_max_down_buffers", value:1, minValue:1, maxValue:Long.MAX_VALUE, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_size_terminal_input_buffer = GInteger(widgetName:"ginteger_size_terminal_input_buffer", value:16, minValue:1, maxValue:Long.MAX_VALUE, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_max_interrupt_priority = GInteger(widgetName:"ginteger_max_interrupt_priority", value:63, minValue:0, maxValue:63, enabled:true, visible:true, isMandatoryValue:false)
+	 ginteger_printf_buffer_size = GInteger(widgetName:"ginteger_printf_buffer_size", value:64, minValue:1, maxValue:Long.MAX_VALUE, enabled:true, visible:true, isMandatoryValue:false)
+	 gcombo_mode = GCombo(widgetName:"gcombo_mode", options:["Skip: Do not block, output nothing","Trim: Do not block, output as much as fits","Block: Wait until there is space in the buffer"], value:"Trim: Do not block, output as much as fits", enabled:true, visible:true, isMandatoryValue:false)
+	 gcheck_retarget = GCheck(widgetName:"gcheck_retarget", value:false, enabled:true, visible:true)
+	 gcheck_byte_loop_memcpy = GCheck(widgetName:"gcheck_byte_loop_memcpy", value:false, enabled:true, visible:true)
+	 glabel_max_interrupt_priority = GLabel(widgetName:"glabel_max_interrupt_priority", text:"Max. interrupt priority", enabled:true, visible:true)
+
+
+	 }
+	/* End : UI variable section */
+}

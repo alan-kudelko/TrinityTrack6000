@@ -1,0 +1,168 @@
+package Model.APPS.SEGGER_RTT.v4_0_12;
+
+/*
+ Copyright (c) 2016-2020, Infineon Technologies AG
+ All rights reserved.
+											
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+ following conditions are met:
+																			 
+ Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+ disclaimer.
+  
+ Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided with the distribution.
+  
+ Neither the name of the copyright holders nor the names of its contributors may be used to endorse or promote
+ products derived from this software without specific prior written permission.
+																			 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+																			 
+ To improve the quality of the software, users are encouraged to share modifications, enhancements or bug fixes with
+ Infineon Technologies AG: dave@infineon.com. */
+
+/*************** Revision History **********************************************
+Version        Date          Description 
+
+  4.0.0       06-Nov-2015    Initial version
+  4.0.2       08-Jan-2016    Update to RTT version 5.10g
+  4.0.4       17-Feb-2016    Fixed printf compilation issues under GCC. <br>
+                             Update to RTT version 5.10m     
+  4.0.6       10-Aug-2016    Update to RTT version 6.00e     
+  4.0.8       27-Jun-2017    Update to RTT version 6.30     
+  4.0.10      09-Oct-2018    Update to RTT version 6.34d     
+  4.0.12      12-Jan-2021    Update to RTT version 6.94     
+*******************************************************************************/
+
+// Import statements
+import ifx.davex.app.manifest.*
+
+class  SEGGER_RTT extends SEGGER_RTT_GUI {
+
+	 /* Note  : Following APP properties are mandatory and important */
+	 
+	 /* Begin : APP property section */
+	
+	/**
+	 * APP version
+	 * Format: a string with three digit separated by a dot.
+	 */
+	def version            = '4.0.12'
+	
+	/**
+	 * APP categories declaration. 
+	 * It is list of strings. Subcategories are separated by slash.
+	 * No limits on number of categories and subcategories depth.
+	 */
+	def categoriesDescription = ["Contributed APPs"] 
+
+	/** 
+	 * Minimum DAVE version required for this APP.
+	 * 
+	 * It is string with three digit separated by a dot.
+	 */
+	def minDaveVersion           = '4.1.2'
+	
+	/** 
+	 * Keywords used by search feature in APPs selection view
+	 * 
+	 * It is a list of string.
+	 */
+	def keywords      = ['SEGGER_RTT', 'Segger', 'RTT', 'Semihosting', 'Logger']
+	
+	/** 
+	 * softwareIDs is used to declare which devices are compatible with this APP.
+	 * It is a map with key a string containing a pattern that shall match the SW id of
+	 * the device and as value the minimal version of the APP.
+	 */
+	def softwareIDs  = [
+	                     "XMC4.8.*.*.*":"1.0.0",
+		                 "XMC4.7.*.*.*":"1.0.0",
+		                 "XMC4.5.*.*.*":"1.0.0",
+		                 "XMC4.4.*.*.*":"1.0.0",
+						 "XMC4.3.*.*.*":"1.0.0",
+		                 "XMC4.2.*.*.*":"1.0.0",
+		                 "XMC4.1.*.*.*":"1.0.0",
+						 "XMC1.4.*.*.*":"1.0.0",
+						 "XMC1.3.*.*.*":"1.0.0",
+						 "XMC1.2.*.*.*":"1.0.0",
+						 "XMC1.1.*.*.*":"1.0.0"		
+		               ]
+	
+	/**
+	 * Singleton property:
+	 * When it is true the app can be instantiated only once. 
+	 */
+	def singleton     = true
+
+
+	/**
+	 * initProvider property
+	 * It shall be true to add a call to <AppName>_Init() 
+	 */
+	def initProvider  = false
+	
+	/**
+	 * Deprecated APP
+	 * Set it to true to indicate that the app shall be not used for new projects.
+	 */
+	def deprecated    = false
+	
+	/**
+	 * Sharable property.
+	 * It shall be true to allows multiple APPs to require the same instance of this APP.
+	 */
+	def sharable      = true
+
+	/**
+	 *  APP function description.
+	 */
+	def description = "SEGGER's Real Time Transfer (RTT) is the new technology for interactive user I/O in embedded applications. It combines the advantages of SWO and semihosting at very high performance."
+	
+	/* End   : APP property section */
+	
+	/* Begin : User APP property section */
+	
+	MRequiredApp appres_cpu
+
+	/* End   : User APP property section */
+
+	/* APP Constructor */
+	public SEGGER_RTT(DaveEnv daveEnv) {
+		String family = daveEnv.project.selectedDevice.deviceId.family
+		
+		if (family == "XMC4") {
+			appres_cpu =  MRequiredApp("CPU_CTRL_XMC4", "CPU_CTRL_XMC4", RSHARABLE, "4.0.2")
+		}
+	
+		if (family == "XMC1") {
+			appres_cpu =  MRequiredApp("CPU_CTRL_XMC1", "CPU_CTRL_XMC1", RSHARABLE, "4.0.2")
+			glabel_max_interrupt_priority.visible = false
+			ginteger_max_interrupt_priority.visible = false
+		}
+	}
+	
+	// File Generation
+	def generateFiles(){
+
+		generate("SEGGER_RTT_Confh.tmpl", "SEGGER_RTT_Conf.h", false)
+		copy("License.txt", "License.txt")
+		copy("SEGGER_RTT.h", "SEGGER_RTT.h")
+		copy("SEGGER_RTT.c", "SEGGER_RTT.c")
+		copy("SEGGER_RTT_ASM_ARMv7M.S", "SEGGER_RTT_ASM_ARMv7M.S")
+		copy("SEGGER_RTT_Syscalls_GCC.c", "SEGGER_RTT_Syscalls_GCC.c")
+		copy("SEGGER_RTT_Syscalls_IAR.c", "SEGGER_RTT_Syscalls_IAR.c")
+		copy("SEGGER_RTT_Syscalls_KEIL.c", "SEGGER_RTT_Syscalls_KEIL.c")
+		copy("SEGGER_RTT_printf.c", "SEGGER_RTT_printf.c")		
+	}
+	
+	/**
+	 * Add main code here
+	 */
+}

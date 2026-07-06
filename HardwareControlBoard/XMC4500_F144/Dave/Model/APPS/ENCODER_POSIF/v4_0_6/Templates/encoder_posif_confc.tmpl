@@ -1,0 +1,951 @@
+package Model.APPS.ENCODER_POSIF.v4_0_6.Templates;
+
+import Model.APPS.ENCODER_POSIF.v4_0_6.ENCODER_POSIF
+
+out.print("""
+/**
+ * @cond
+ ***********************************************************************************************************************
+ *
+ * Copyright (c) 2015-2020, Infineon Technologies AG
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,are permitted provided that the
+ * following conditions are met:
+ *
+ *   Redistributions of source code must retain the above copyright notice, this list of conditions and the  following
+ *   disclaimer.
+ *
+ *   Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+ *   following disclaimer in the documentation and/or other materials provided with the distribution.
+ *
+ *   Neither the name of the copyright holders nor the names of its contributors may be used to endorse or promote
+ *   products derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT  OF THE
+ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * To improve the quality of the software, users are encouraged to share modifications, enhancements or bug fixes
+ * with Infineon Technologies AG (dave@infineon.com).
+ ***********************************************************************************************************************
+ *
+ * Change History
+ * --------------
+ *
+ * 2015-07-06:
+ *     - Initial version
+ *
+ * 2019-11-26:
+ *     - CCU4 inputs adaptations for XMC14
+ *
+ * @endcond
+ *
+ */
+/***********************************************************************************************************************
+ * HEADER FILES
+ **********************************************************************************************************************/
+#include "encoder_posif.h"
+/**********************************************************************************************************************
+* DATA STRUCTURES
+**********************************************************************************************************************/
+""");
+
+List posifuri = null;
+List pos_counter_uri = null;
+List rev_counter_uri = null;
+List time_bw_ticks_uri = null;
+List trigger_gen_uri = null;
+
+List pad1uri = null;
+List pad2uri = null;
+List pad3uri = null;
+List enable_enc_pad = null;
+List gpio_mode  =
+[
+    "XMC_GPIO_MODE_INPUT_TRISTATE" ,              //!< XMC_GPIO_MODE_INPUT_TRISTATE
+    "XMC_GPIO_MODE_INPUT_PULL_DOWN" ,             //!< XMC_GPIO_MODE_INPUT_PULL_DOWN
+    "XMC_GPIO_MODE_INPUT_PULL_UP" ,               //!< XMC_GPIO_MODE_INPUT_PULL_UP
+    "XMC_GPIO_MODE_INPUT_SAMPLING" ,              //!< XMC_GPIO_MODE_INPUT_SAMPLING
+    "XMC_GPIO_MODE_INPUT_INVERTED_TRISTATE" ,     //!< XMC_GPIO_MODE_INPUT_INVERTED_TRISTATE
+    "XMC_GPIO_MODE_INPUT_INVERTED_PULL_DOWN",     //!< XMC_GPIO_MODE_INPUT_INVERTED_PULL_DOWN
+    "XMC_GPIO_MODE_INPUT_INVERTED_PULL_UP",       //!< XMC_GPIO_MODE_INPUT_INVERTED_PULL_UP
+    "XMC_GPIO_MODE_INPUT_INVERTED_SAMPLING",      //!< XMC_GPIO_MODE_INPUT_INVERTED_SAMPLING
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL",             //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT1",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT2",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT3",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT4",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT5",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT6",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT7",        //!< XMC_GPIO_MODE_OUTPUT_PUSH_PULL
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN",            //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT1",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT2",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT3",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT4",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT5",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT6",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+    "XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN_ALT7",       //!< XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN
+];
+List outputstrengthArray = [
+    'XMC_GPIO_OUTPUT_STRENGTH_WEAK',
+    'XMC_GPIO_OUTPUT_STRENGTH_MEDIUM',
+    'XMC_GPIO_OUTPUT_STRENGTH_STRONG_SOFT_EDGE',
+    'XMC_GPIO_OUTPUT_STRENGTH_STRONG_SLOW_EDGE',
+    'XMC_GPIO_OUTPUT_STRENGTH_STRONG_SHARP_EDGE',
+    'XMC_GPIO_OUTPUT_STRENGTH_STRONG_MEDIUM_EDGE'
+    ]
+
+String appInst  = null;
+String xmc_device = null;
+String series = null;
+String port_en_enc = null;
+String pin_en_enc  = null;
+String encoder_pin = null;
+//List triggen_pm_nvic  = null;
+Integer encoder_pin_mode = 0;
+/*This function return 1 if argument is true else return 0*/
+def boolvalreturn = {def arg -> (arg == false ? 0 : 1)}
+
+/** Start of Instance specific configuration**/
+for (Object appIns : appInstancesList ) {
+  appInst            = appIns.getInstanceLabel()
+  List posif_sr      = ["XMC_POSIF_SR_ID_0","XMC_POSIF_SR_ID_1","XMC_POSIF_SR_ID_MAX"]
+  List ccu4_sr       = ["XMC_CCU4_SLICE_SR_ID_0","XMC_CCU4_SLICE_SR_ID_1","XMC_CCU4_SLICE_SR_ID_2",
+				        "XMC_CCU4_SLICE_SR_ID_3","XMC_CCU4_SLICE_SR_ID_MAX"]
+  List ETL_1         = ["NULL","NULL","NULL"]
+  List ETL_2         = ["NULL","NULL","NULL"]
+  List ETL_3         = ["NULL","NULL","NULL"]
+  posifuri           = appIns.hwres_posif_hsc_qd_0.getSolverUri()
+  pos_counter_uri    = appIns.hwres_ccu4_slice0.getSolverUri()
+  time_bw_ticks_uri  = appIns.hwres_ccu4_slice2.getSolverUri()
+  trigger_gen_uri    = appIns.hwres_ccu4_slice3.getSolverUri()
+  if(appIns.gcheck_rev_counter.value == true)
+  {
+    rev_counter_uri  = appIns.hwres_ccu4_slice1.getSolverUri()
+  }
+  /** encoder input pin*/
+  pad1uri            = appIns.hwres_port_pad_1.getSolverUri()
+  pad2uri            = appIns.hwres_port_pad_2.getSolverUri()
+  pad3uri            = appIns.hwres_port_pad_3.getSolverUri()
+  /** encoder enable pin */
+  enable_enc_pad     = appIns.hwres_port_enable_encoder_pad.getSolverUri()
+  if(enable_enc_pad != null)
+  {
+    port_en_enc      = enable_enc_pad[4];
+    pin_en_enc       = enable_enc_pad[6];
+  }
+  /** GPIO configuration for ouptput mode of encoder enable pins*/
+  if (appIns.gcombo_enc_enable_opchar.value == "Push Pull")
+  {
+    encoder_pin_mode = 8 //"XMC_GPIO_MODE_OUTPUT_PUSH_PULL"
+  }
+  else
+  {
+    encoder_pin_mode = 16 //"XMC_GPIO_MODE_OUTPUT_OPEN_DRAIN"
+  }
+  xmc_device = daveEnv.project.selectedDevice.deviceId.family
+  series = daveEnv.project.selectedDevice.deviceId.family + daveEnv.project.selectedDevice.deviceId.series
+  
+  /** determine encoder pin enable low/high/disabled*/
+  if(appIns.gcombo_encpin_enable.value != "Disabled")
+  {
+    if(appIns.gcombo_encpin_enable.value == "Active High")
+    {
+      encoder_pin = "ENCODER_POSIF_EPIN_HIGH";
+    }
+    else
+    {
+      encoder_pin = "ENCODER_POSIF_EPIN_LOW";
+    }
+  }
+  else
+  {
+    encoder_pin = "ENCODER_POSIF_EPIN_DISABLED";
+  }
+  
+  if(boolvalreturn(appIns.gcheck_eph_a_eru.value) == 1 )
+  {
+    ETL_1 = ["&${appInst}_ETL_1_Config","&${appInst}_ETL_1","&${appInst}_OGU_1_Config"]
+  } 
+  if(boolvalreturn(appIns.gcheck_eph_b_eru.value) == 1 )
+  {
+    ETL_2 = ["&${appInst}_ETL_2_Config","&${appInst}_ETL_2","&${appInst}_OGU_2_Config"]
+  }
+  if((appIns.gcheck_eidx_eru.value) && 
+      (appIns.gcheck_index.value == true))
+  {
+    ETL_3 = ["&${appInst}_ETL_3_Config","&${appInst}_ETL_3","&${appInst}_OGU_3_Config"]
+  }
+
+  /*Its dummy read for IO Pad*/
+   appIns.hwres_port_pad_1.getRegValue("pdis","pdisc_pdis")
+   appIns.hwres_port_pad_2.getRegValue("pdis","pdisc_pdis")
+   appIns.hwres_port_pad_3.getRegValue("pdis","pdisc_pdis")
+  
+  (appIns.hwres_port_pad_1.getRegValue("","hwsel_hw"))
+  (appIns.hwres_port_pad_2.getRegValue("","hwsel_hw")) 
+  (appIns.hwres_port_pad_3.getRegValue("","hwsel_hw"))
+  Integer angle_scale;
+  Integer extrapol_type;
+  extrapol_type = (int)(appIns.gcombo_extrapol_type.options.indexOf(appIns.gcombo_extrapol_type.value))
+  angle_scale = (int)(65535/((appIns.gint_ticks_per_revolution.value*4) - 1))
+  if(daveEnv.project.selectedDevice.deviceId.family == "XMC4")
+  {
+    if(extrapol_type == 1)
+    {
+	  angle_scale = (int)(16777216/(appIns.gint_ticks_per_revolution.value*4))
+	}
+  }
+  /** [60/((ticks per rev) * min cc4 resolution in seconds)]/time_bw_ticks*/
+  Integer motor_speed = appIns.gint_motorspeed.value
+  Integer pole_pairs = 1
+  Float speed_scale = (16383/motor_speed);
+  Float resolution
+  resolution = (float)(appIns.gfloat_actresolution_tcap.value/1000000000)
+  Float speed_const
+  speed_const = ((60 * speed_scale)/(float)((float)(appIns.gint_ticks_per_revolution.value* 4) * (float)(resolution))) 
+
+if (posifuri) {
+if(boolvalreturn(appIns.gcheck_eph_a_eru.value) == 1 )
+{
+out.print("""
+/**********************************************************************************************************************/
+/******************************************Phase A routed through ERU**************************************************/
+/**********************************************************************************************************************/
+XMC_ERU_ETL_CONFIG_t ${appInst}_ETL_1_Config =
+{
+  .input                  = (XMC_ERU_ETL_INPUT_A${appIns.hwres_ers_etl_1.getRegValue("exisel","exisel_exsxa")}) | (XMC_ERU_ETL_INPUT_B${appIns.hwres_ers_etl_1.getRegValue("exisel","exisel_exsxb")}), /* Event input selection for A(0-3) and B(0-3) */
+  .enable_output_trigger  = ${appIns.hwres_ers_etl_1.getRegValue("exicon","exicon_pe")},
+  .status_flag_mode       = XMC_ERU_ETL_STATUS_FLAG_MODE_HWCTRL,                    
+  .edge_detection         = XMC_ERU_ETL_EDGE_DETECTION_RISING,                                              /* Select the edge/s to convert as event */
+  .output_trigger_channel = ${'XMC_ERU_ETL_OUTPUT_TRIGGER_CHANNEL'+appIns.hwres_ers_etl_1.getRegValue("exicon","exicon_ocs")}, /* Select the source for event */
+  .source                 = XMC_ERU_ETL_SOURCE_A                                                              /* Select the source for event,Input directly used */
+};
+ENCODER_POSIF_ERU_t ${appInst}_ETL_1 = 
+{
+   .eru         = XMC_ERU${appIns.hwres_ers_etl_1.getSolverUri()[4]},       /* ERU module assigned(ERU0/ERU1) */ 
+   .ogu_channel = ${appIns.hwres_eru_ogu_1.getSolverUri()[6]}U,          /* ERU channel assigned(0-3) */
+   .etl_channel = (uint8_t)${appIns.hwres_ers_etl_1.getSolverUri()[6]}  /* ERU channel assigned(0-3) */
+};
+
+XMC_ERU_OGU_CONFIG_t ${appInst}_OGU_1_Config =
+{
+  .peripheral_trigger         = ${if(appIns.hwres_eru_ogu_1.getRegValue("exocon","exocon_iss") == 0)
+                                '0U'
+                                  else
+                                     'XMC_ERU_OGU_PERIPHERAL_TRIGGER'+"${appIns.hwres_eru_ogu_1.getRegValue("exocon","exocon_iss")}"
+                                 }, /* OGU input peripheral trigger */
+  .enable_pattern_detection   = 1U,
+  .service_request            = XMC_ERU_OGU_SERVICE_REQUEST_DISABLED, /* Interrupt gating signal (ERUx_GOUTy) */
+  .pattern_detection_input    = (${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT0"][(int)(appIns.hwres_eru_ogu_1.getRegValue("exocon", "exocon_ipen0"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT1"][(int)(appIns.hwres_eru_ogu_1.getRegValue("exocon", "exocon_ipen1"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT2"][(int)(appIns.hwres_eru_ogu_1.getRegValue("exocon", "exocon_ipen2"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT3"][(int)(appIns.hwres_eru_ogu_1.getRegValue("exocon", "exocon_ipen3"))]})    /* Status flag input for pattern detection for OGU0/OGU1/OGU2/OGU3 */
+};
+""");
+}
+if(boolvalreturn(appIns.gcheck_eph_b_eru.value) == 1 )
+{
+out.print("""
+/**********************************************************************************************************************/
+/******************************************Phase B routed through ERU**************************************************/
+/**********************************************************************************************************************/
+XMC_ERU_ETL_CONFIG_t ${appInst}_ETL_2_Config =
+{
+  .input                  = (XMC_ERU_ETL_INPUT_A${appIns.hwres_ers_etl_2.getRegValue("exisel","exisel_exsxa")}) | (XMC_ERU_ETL_INPUT_B${appIns.hwres_ers_etl_2.getRegValue("exisel","exisel_exsxb")}), /* Event input selection for A(0-3) and B(0-3) */
+  .enable_output_trigger  = ${appIns.hwres_ers_etl_2.getRegValue("exicon","exicon_pe")},
+  .status_flag_mode       = XMC_ERU_ETL_STATUS_FLAG_MODE_HWCTRL,                    
+  .edge_detection         = XMC_ERU_ETL_EDGE_DETECTION_RISING,                                              /* Select the edge/s to convert as event */
+  .output_trigger_channel = ${'XMC_ERU_ETL_OUTPUT_TRIGGER_CHANNEL'+appIns.hwres_ers_etl_2.getRegValue("exicon","exicon_ocs")}, /* Select the source for event */
+  .source                 = XMC_ERU_ETL_SOURCE_A
+};
+ENCODER_POSIF_ERU_t ${appInst}_ETL_2 = 
+{
+  .eru         = XMC_ERU${appIns.hwres_ers_etl_2.getSolverUri()[4]},         /* ERU module assigned(ERU0/ERU1) */  
+  .ogu_channel = (uint8_t)${appIns.hwres_eru_ogu_2.getSolverUri()[6]}U,     /* ERU channel assigned(0-3) */
+  .etl_channel = (uint8_t)${appIns.hwres_ers_etl_2.getSolverUri()[6]}       /* ERU channel assigned(0-3) */
+};
+
+XMC_ERU_OGU_CONFIG_t ${appInst}_OGU_2_Config =
+{
+  .peripheral_trigger         = ${if(appIns.hwres_eru_ogu_2.getRegValue("exocon","exocon_iss") == 0)
+                                '0U'
+                                  else
+                                     'XMC_ERU_OGU_PERIPHERAL_TRIGGER'+"${appIns.hwres_eru_ogu_2.getRegValue("exocon","exocon_iss")}"
+                                 }, /* OGU input peripheral trigger */
+  .enable_pattern_detection   = 1U,
+  .service_request            = XMC_ERU_OGU_SERVICE_REQUEST_DISABLED, /* Interrupt gating signal (ERUx_GOUTy) */
+  .pattern_detection_input    = (${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT0"][(int)(appIns.hwres_eru_ogu_2.getRegValue("exocon", "exocon_ipen0"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT1"][(int)(appIns.hwres_eru_ogu_2.getRegValue("exocon", "exocon_ipen1"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT2"][(int)(appIns.hwres_eru_ogu_2.getRegValue("exocon", "exocon_ipen2"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT3"][(int)(appIns.hwres_eru_ogu_2.getRegValue("exocon", "exocon_ipen3"))]})    /* Status flag input for pattern detection for OGU0/OGU1/OGU2/OGU3 */
+};
+""");
+}
+if((appIns.gcheck_eidx_eru.value) && (appIns.gcheck_index.value == true))
+{
+out.print("""
+/**********************************************************************************************************************/
+/********************************************Index routed through ERU**************************************************/
+/**********************************************************************************************************************/
+XMC_ERU_ETL_CONFIG_t ${appInst}_ETL_3_Config =
+{
+  .input                  = (XMC_ERU_ETL_INPUT_A${appIns.hwres_ers_etl_3.getRegValue("exisel","exisel_exsxa")}) | (XMC_ERU_ETL_INPUT_B${appIns.hwres_ers_etl_3.getRegValue("exisel","exisel_exsxb")}), /* Event input selection for A(0-3) and B(0-3) */
+  .enable_output_trigger  = ${appIns.hwres_ers_etl_3.getRegValue("exicon","exicon_pe")},
+  .status_flag_mode       = XMC_ERU_ETL_STATUS_FLAG_MODE_HWCTRL,                    
+  .edge_detection         = XMC_ERU_ETL_EDGE_DETECTION_RISING,                                              /* Select the edge/s to convert as event */
+  .output_trigger_channel = ${'XMC_ERU_ETL_OUTPUT_TRIGGER_CHANNEL'+appIns.hwres_ers_etl_3.getRegValue("exicon","exicon_ocs")}, /* Select the source for event */
+  .source                 = XMC_ERU_ETL_SOURCE_A
+};
+ENCODER_POSIF_ERU_t ${appInst}_ETL_3 = 
+{
+   .eru         = XMC_ERU${appIns.hwres_ers_etl_3.getSolverUri()[4]},           /* ERU module assigned(ERU0/ERU1) */    
+   .ogu_channel = (uint8_t)${appIns.hwres_eru_ogu_3.getSolverUri()[6]}U,    /* ERU channel assigned(0-3) */
+   .etl_channel = (uint8_t)${appIns.hwres_ers_etl_3.getSolverUri()[6]}U     /* ERU channel assigned(0-3) */
+};
+XMC_ERU_OGU_CONFIG_t ${appInst}_OGU_3_Config =
+{
+  .peripheral_trigger         = ${if(appIns.hwres_eru_ogu_3.getRegValue("exocon","exocon_iss") == 0)
+                                '0U'
+                                  else
+                                     'XMC_ERU_OGU_PERIPHERAL_TRIGGER'+"${appIns.hwres_eru_ogu_3.getRegValue("exocon","exocon_iss")}"
+                                 }, /* OGU input peripheral trigger */
+  .enable_pattern_detection   = 1U,
+  .service_request            = XMC_ERU_OGU_SERVICE_REQUEST_DISABLED, /* Interrupt gating signal (ERUx_GOUTy) */
+  .pattern_detection_input    = (${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT0"][(int)(appIns.hwres_eru_ogu_3.getRegValue("exocon", "exocon_ipen0"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT1"][(int)(appIns.hwres_eru_ogu_3.getRegValue("exocon", "exocon_ipen1"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT2"][(int)(appIns.hwres_eru_ogu_3.getRegValue("exocon", "exocon_ipen2"))]}| 
+                                 ${[0,"XMC_ERU_OGU_PATTERN_DETECTION_INPUT3"][(int)(appIns.hwres_eru_ogu_3.getRegValue("exocon", "exocon_ipen3"))]})    /* Status flag input for pattern detection for OGU0/OGU1/OGU2/OGU3 */
+};
+""");
+}
+/**************************************************************************************************************/
+/***********************************************Pin Configuration**********************************************/
+/**************************************************************************************************************/
+out.print("""
+XMC_GPIO_CONFIG_t ${appInst}_Encoder_PadConfig  =
+{
+  .mode            = (XMC_GPIO_MODE_t)XMC_GPIO_MODE_INPUT_TRISTATE,
+  .output_level    = (XMC_GPIO_OUTPUT_LEVEL_t)XMC_GPIO_OUTPUT_LEVEL_LOW,
+  """);
+  if(daveEnv.project.selectedDevice.deviceId.family == "XMC4")
+  {
+out.print("""
+  .output_strength = (XMC_GPIO_OUTPUT_STRENGTH_t)XMC_GPIO_OUTPUT_STRENGTH_STRONG_SHARP_EDGE
+  """);
+  }
+  else
+  {
+   out.print("""
+  .input_hysteresis= 0
+  """);
+  }
+out.print("""
+};
+""");
+Integer index_marker = 0;
+if(appIns.gcheck_index.value == true)
+{
+index_marker = (int)((appIns.gcombo_idxsig_config.options.indexOf(appIns.gcombo_idxsig_config.value)) + 1)
+out.print("""
+ENCODER_POSIF_GPIO_t ${appInst}_Index_PadResource =
+{
+  .port = XMC_GPIO_PORT${pad3uri[4]},
+  .pin  = ${pad3uri[6]}U
+};
+""");
+}
+out.print("""
+ENCODER_POSIF_GPIO_t ${appInst}_Phase_A_PadResource =
+{
+  .port = XMC_GPIO_PORT${pad2uri[4]},
+  .pin  = ${pad2uri[6]}U
+};
+ENCODER_POSIF_GPIO_t ${appInst}_Phase_B_PadResource =
+{
+  .port = XMC_GPIO_PORT${pad1uri[4]},
+  .pin  = ${pad1uri[6]}U
+};
+""");
+
+
+if(appIns.gcombo_encpin_enable.options.indexOf(appIns.gcombo_encpin_enable.value) > 0)
+{
+out.print("""
+/**************************************************************************************************************/
+/***************************************Encoder Enable Pin Configuration***************************************/
+/**************************************************************************************************************/
+ENCODER_POSIF_GPIO_t ${appInst}_Enable_Encoder_PadResource =
+{
+  .port = XMC_GPIO_PORT${port_en_enc},
+  .pin  = ${pin_en_enc}U
+};
+""");
+String output_strength_inv
+output_strength_inv = outputstrengthArray[appIns.gcombo_invout_dstrength.options.indexOf(appIns.gcombo_invout_dstrength.value)]
+if (daveEnv.project.selectedDevice.deviceId.family == "XMC1"){
+    out.print("""
+/* GPIO Init handle for Inverter enable Pin */
+XMC_GPIO_CONFIG_t ${appInst}_En_Encoderpin_Config = 
+{
+ .mode             = ${gpio_mode[encoder_pin_mode]},
+ .output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH,
+ .input_hysteresis = (XMC_GPIO_INPUT_HYSTERESIS_t)0,
+};
+""");
+    }
+    else
+    {
+    out.print("""
+/* GPIO Init handle for Inverter enable Pin */
+XMC_GPIO_CONFIG_t ${appInst}_En_Encoderpin_Config = 
+{
+ .mode             = ${gpio_mode[encoder_pin_mode]},
+ .output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH,
+ .output_strength  = ${output_strength_inv},
+};
+""");
+    }
+}
+
+/*z1 = sampletime/(time_const+sampletime)*/
+Float time_const = appIns.gfloat_time_constant.value * Math.pow(10,3);
+Float sample_time
+if(appIns.gint_toplevel.value == 1)
+{
+  sample_time = (appIns.gfloat_sample_time.value);
+}
+else
+{
+  sample_time = (float)(appIns.gfloat_timestamp.value);
+}
+Float Z1 = ((sample_time/(sample_time + time_const)) * 65535)
+
+out.print("""
+MOTOR_LIB_PT1Handle_t ${appInst}_Speed_PT1Filter =
+{
+  .z1      = (int32_t)${(int)Z1},
+  .y_max   = (int32_t)0x7FFFFFFF,
+  .y_min   = (int32_t)0x80000001,
+  .pt1_buf = (int32_t)0
+};
+""");
+
+if(appIns.gcheck_timestamp_pmisr.value == true )
+{
+out.print("""
+
+/**************************************************************************************************************/
+/*********************************Trigger Generator NVIC priority Configuration********************************/
+/**************************************************************************************************************/
+ENCODER_POSIF_ISR_t ${appInst}_Trigger_Gen_ISR =
+{
+  .node_id      = ${appIns.hwres_nvic_trigslice_pm.getSolverUri()[7]}U, 
+  .priority     = ${appIns.ginterruptprio_triggerslice_pm_isr.priorityValue.value}U,
+  .sub_priority = ${appIns.ginterruptprio_triggerslice_pm_isr.subPriorityValue.value}U,
+#if (UC_SERIES == XMC14)
+  .irqctrl      = ${appInst}_TimeStampTrigger_IRQMUX
+#endif
+};
+""");
+}
+
+String mapped_input_position_capture = null;
+String mapped_input_position_counting = null;
+String mapped_input_position_count_dir = null;
+
+if (series != 'XMC14')
+{
+  mapped_input_position_capture = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev2is") + 65)}"
+}
+else
+{
+  mapped_input_position_capture = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev2is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev2is") as int) % 26) + 65)}"
+}
+
+if (series != 'XMC14')
+{
+  mapped_input_position_counting = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev0is") + 65)}"
+}
+else
+{
+  mapped_input_position_counting = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev0is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev0is") as int) % 26) + 65)}"
+}
+
+if (series != 'XMC14')
+{
+  mapped_input_position_count_dir = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev1is") + 65)}"
+}
+else
+{
+  mapped_input_position_count_dir = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev1is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice0.getRegValue("ins","ins_ev1is") as int) % 26) + 65)}"
+}
+
+
+out.print("""
+/**************************************************************************************************************/
+/*************************************CC4 Event Configuration Configuration************************************/
+/**************************************************************************************************************/
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_position_capture_eventconfig =
+{
+  .mapped_input = ${mapped_input_position_capture}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_position_counting_eventconfig =
+{
+  .mapped_input = ${mapped_input_position_counting}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_RISING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_position_count_dir_eventconfig =
+{
+  .mapped_input = ${mapped_input_position_count_dir}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_RISING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_LOW,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+""");
+
+
+if(appIns.gcheck_rev_counter.value == true)
+{
+	
+	String mapped_input_revolution_capture = null;
+	String mapped_input_revolution_count = null;
+	String mapped_input_revolution_count_dir = null;
+	
+	if (series != 'XMC14')
+	{
+	  mapped_input_revolution_capture = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev2is") + 65)}"
+	}
+	else
+	{
+	  mapped_input_revolution_capture = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev2is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev2is") as int) % 26) + 65)}"
+	}
+	
+	if (series != 'XMC14')
+	{
+	  mapped_input_revolution_count = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev0is") + 65)}"
+	}
+	else
+	{
+	  mapped_input_revolution_count = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev0is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev0is") as int) % 26) + 65)}"
+	}
+	
+	if (series != 'XMC14')
+	{
+	  mapped_input_revolution_count_dir = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev1is") + 65)}"
+	}
+	else
+	{
+	  mapped_input_revolution_count_dir = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev1is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice1.getRegValue("ins","ins_ev1is") as int) % 26) + 65)}"
+	}
+	
+out.print("""
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_revolution_capture_eventconfig =
+{
+  .mapped_input = ${mapped_input_revolution_capture}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_revolution_count_eventconfig =
+{
+  .mapped_input = ${mapped_input_revolution_count}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_revolution_count_dir_eventconfig =
+{
+  .mapped_input = ${mapped_input_revolution_count_dir}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_LOW,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+""");
+}
+
+String mapped_input_time_bw_ticks_capture = null;
+String mapped_input_time_triggerpoint_capture = null;
+String mapped_input_triggergen_start = null;
+
+if (series != 'XMC14')
+{
+  mapped_input_time_bw_ticks_capture = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice2.getRegValue("ins","ins_ev0is") + 65)}"
+}
+else
+{
+  mapped_input_time_bw_ticks_capture = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice2.getRegValue("ins","ins_ev0is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice2.getRegValue("ins","ins_ev0is") as int) % 26) + 65)}"
+}
+
+if (series != 'XMC14')
+{
+  mapped_input_time_triggerpoint_capture = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice2.getRegValue("ins","ins_ev1is") + 65)}"
+}
+else
+{
+  mapped_input_time_triggerpoint_capture = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice2.getRegValue("ins","ins_ev1is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice2.getRegValue("ins","ins_ev1is") as int) % 26) + 65)}"
+}
+
+if (series != 'XMC14')
+{
+  mapped_input_triggergen_start = "XMC_CCU4_SLICE_INPUT_${(char)(appIns.hwres_ccu4_slice3.getRegValue("ins","ins_ev0is") + 65)}"
+}
+else
+{
+  mapped_input_triggergen_start = "XMC_CCU4_SLICE_INPUT_${(char)(((appIns.hwres_ccu4_slice3.getRegValue("ins","ins_ev0is") as int) / 26) + 65)}${(char)(((appIns.hwres_ccu4_slice3.getRegValue("ins","ins_ev0is") as int) % 26) + 65)}"
+}
+
+out.print("""
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_time_bw_ticks_capture_eventconfig =
+{
+  .mapped_input = ${mapped_input_time_bw_ticks_capture}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_RISING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_time_triggerpoint_capture_eventconfig =
+{
+  .mapped_input = ${mapped_input_time_triggerpoint_capture}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+XMC_CCU4_SLICE_EVENT_CONFIG_t ${appInst}_triggergen_start_eventconfig =
+{
+  .mapped_input = ${mapped_input_triggergen_start}, 
+  .edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_RISING_EDGE,          
+  .level        = XMC_CCU4_SLICE_EVENT_LEVEL_SENSITIVITY_ACTIVE_HIGH,         
+  .duration     = XMC_CCU4_SLICE_EVENT_FILTER_DISABLED      
+};
+/**************************************************************************************************************/
+/*************************************CC4 Compare/Capture Init Configuration***********************************/
+/**************************************************************************************************************/
+/* Configure the ccu4 timer structure use for phase delay */
+XMC_CCU4_SLICE_COMPARE_CONFIG_t ${appInst}_trigger_slice_timer_init =
+{
+  .timer_mode          = XMC_CCU4_SLICE_TIMER_COUNT_MODE_EA,        
+  .monoshot            = 0U,      
+  .shadow_xfer_clear   = 1U,  
+  .dither_timer_period = 0U,   
+  .dither_duty_cycle   = 0U, 
+  .prescaler_mode      = (uint32_t)XMC_CCU4_SLICE_PRESCALER_MODE_NORMAL,  
+  .mcm_enable          = 0U,
+  .prescaler_initval   = ${appIns.gint_prescalar_trigslice.value}U,
+  .float_limit         = 0U,          
+  .dither_limit        = 0U,          
+  .passive_level       = (uint32_t)XMC_CCU4_SLICE_OUTPUT_PASSIVE_LEVEL_LOW,    
+  .timer_concatenation = 0U
+};
+XMC_CCU4_SLICE_CAPTURE_CONFIG_t ${appInst}_position_capture_init =
+{
+  .timer_clear_mode    = (uint32_t)XMC_CCU4_SLICE_TIMER_CLEAR_MODE_NEVER,
+  .same_event          = 0U,       
+  .fifo_enable         = 0U,     
+  .prescaler_mode      = 0U,
+  .ignore_full_flag    = 0U,
+};
+""");
+if(appIns.gcheck_rev_counter.value == true)
+{
+out.print("""
+XMC_CCU4_SLICE_CAPTURE_CONFIG_t ${appInst}_revolution_counter_capture_init =
+{
+  .timer_clear_mode    = (uint32_t)XMC_CCU4_SLICE_TIMER_CLEAR_MODE_NEVER,
+  .same_event          = 0U,       
+  .fifo_enable         = 0U,     
+  .prescaler_mode      = 0U,
+  .ignore_full_flag    = 0U
+};
+""");
+}
+out.print("""
+XMC_CCU4_SLICE_CAPTURE_CONFIG_t ${appInst}_time_bw_ticks_capture_init =
+{
+  .timer_clear_mode    = (uint32_t)XMC_CCU4_SLICE_TIMER_CLEAR_MODE_CAP_LOW,
+  .same_event          = 0U,       
+  .fifo_enable         = 0U,     
+  .prescaler_mode      = 0U,
+  .ignore_full_flag    = 1U,
+  .prescaler_initval   = ${appIns.gint_prescalar.value}U
+};
+
+ENCODER_POSIF_CCU4_SLICE_t ${appInst}_position_counter=
+{
+  .slice_ptr           = (CCU4_CC4_TypeDef*)(void*)CCU4${pos_counter_uri[4]}_CC4${pos_counter_uri[6]},  
+  .module_ptr          = (CCU4_GLOBAL_TypeDef*)(void*) CCU4${pos_counter_uri[4]}_BASE,  
+  .shadow_transfer_msk = (uint32_t)${["XMC_CCU4_SHADOW_TRANSFER_SLICE_0","XMC_CCU4_SHADOW_TRANSFER_SLICE_1","XMC_CCU4_SHADOW_TRANSFER_SLICE_2","XMC_CCU4_SHADOW_TRANSFER_SLICE_3"][(int)pos_counter_uri[6].toInteger()]},
+  .slice_number        = (uint8_t)${pos_counter_uri[6]} 
+}; 
+""");
+if(appIns.gcheck_rev_counter.value == true)
+{
+out.print(""" 
+ENCODER_POSIF_CCU4_SLICE_t ${appInst}_revolution_counter =
+{
+  .slice_ptr           = (CCU4_CC4_TypeDef*)(void*)CCU4${rev_counter_uri[4]}_CC4${rev_counter_uri[6]},  
+  .module_ptr          = (CCU4_GLOBAL_TypeDef*)(void*) CCU4${rev_counter_uri[4]}_BASE, 
+  .shadow_transfer_msk = (uint32_t)${["XMC_CCU4_SHADOW_TRANSFER_SLICE_0","XMC_CCU4_SHADOW_TRANSFER_SLICE_1","XMC_CCU4_SHADOW_TRANSFER_SLICE_2","XMC_CCU4_SHADOW_TRANSFER_SLICE_3"][(int)rev_counter_uri[6].toInteger()]},  
+  .slice_number        = (uint8_t)${rev_counter_uri[6]}
+}; 
+""");
+}
+out.print("""
+ENCODER_POSIF_CCU4_SLICE_t ${appInst}_time_bw_ticks_counter =
+{
+  .slice_ptr           = (CCU4_CC4_TypeDef*)(void*)CCU4${time_bw_ticks_uri[4]}_CC4${time_bw_ticks_uri[6]},  
+  .module_ptr          = (CCU4_GLOBAL_TypeDef*)(void*) CCU4${time_bw_ticks_uri[4]}_BASE, 
+  .shadow_transfer_msk = (uint32_t)${["XMC_CCU4_SHADOW_TRANSFER_SLICE_0","XMC_CCU4_SHADOW_TRANSFER_SLICE_1","XMC_CCU4_SHADOW_TRANSFER_SLICE_2","XMC_CCU4_SHADOW_TRANSFER_SLICE_3"][(int)time_bw_ticks_uri[6].toInteger()]},  
+  .slice_number        = (uint8_t)${time_bw_ticks_uri[6]}
+}; 
+
+ENCODER_POSIF_CCU4_SLICE_t ${appInst}_trigger_generator =
+{
+  .slice_ptr           = (CCU4_CC4_TypeDef*)(void*)CCU4${trigger_gen_uri[4]}_CC4${trigger_gen_uri[6]},  
+  .module_ptr          = (CCU4_GLOBAL_TypeDef*)(void*) CCU4${trigger_gen_uri[4]}_BASE, 
+  .shadow_transfer_msk = (uint32_t)${["XMC_CCU4_SHADOW_TRANSFER_SLICE_0","XMC_CCU4_SHADOW_TRANSFER_SLICE_1","XMC_CCU4_SHADOW_TRANSFER_SLICE_2","XMC_CCU4_SHADOW_TRANSFER_SLICE_3"][(int)trigger_gen_uri[6].toInteger()]},  
+  .slice_number        = (uint8_t)${trigger_gen_uri[6]}
+}; 
+/***************************************Posif Quadrature init configuration*********************************/ 
+XMC_POSIF_QD_CONFIG_t ${appInst}_InitHandle =
+{
+  .mode                = (XMC_POSIF_QD_MODE_t)0,
+  .phase_a             = ${(int)(appIns.gcombo_pha_levsel.options.indexOf(appIns.gcombo_pha_levsel.value))}U,
+  .phase_b             = ${(appIns.gcombo_phb_levsel.options.indexOf(appIns.gcombo_phb_levsel.value))}U,
+  .phase_leader        = ${(appIns.gcombo_direction_def.options.indexOf(appIns.gcombo_direction_def.value))}U,
+  .index               = ${index_marker}U
+};
+/**************************************************************************************************************/
+/*******************************************Posif general configuration***********************************************/
+/**************************************************************************************************************/
+XMC_POSIF_CONFIG_t ${appInst}_PosifConf =
+{
+  .mode   = XMC_POSIF_MODE_QD,    /**< POSIF Operational mode */
+  .input0 = ${["XMC_POSIF_INPUT_PORT_A",
+               "XMC_POSIF_INPUT_PORT_B",
+               "XMC_POSIF_INPUT_PORT_C",
+               "XMC_POSIF_INPUT_PORT_D",
+               "XMC_POSIF_INPUT_PORT_E",
+               "XMC_POSIF_INPUT_PORT_F",
+               "XMC_POSIF_INPUT_PORT_G",
+               "XMC_POSIF_INPUT_PORT_H"
+             ][((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pconf","pconf_insel0"))]},    /**< Choice of input for Input-1 */
+  .input1 = ${["XMC_POSIF_INPUT_PORT_A",
+               "XMC_POSIF_INPUT_PORT_B",
+               "XMC_POSIF_INPUT_PORT_C",
+               "XMC_POSIF_INPUT_PORT_D",
+               "XMC_POSIF_INPUT_PORT_E",
+               "XMC_POSIF_INPUT_PORT_F",
+               "XMC_POSIF_INPUT_PORT_G",
+               "XMC_POSIF_INPUT_PORT_H"
+             ][((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pconf","pconf_insel1"))]},    /**< Choice of input for Input-2 */
+  .input2 = ${["XMC_POSIF_INPUT_PORT_A",
+               "XMC_POSIF_INPUT_PORT_B",
+               "XMC_POSIF_INPUT_PORT_C",
+               "XMC_POSIF_INPUT_PORT_D",
+               "XMC_POSIF_INPUT_PORT_E",
+               "XMC_POSIF_INPUT_PORT_F",
+               "XMC_POSIF_INPUT_PORT_G",
+               "XMC_POSIF_INPUT_PORT_H"
+             ][((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pconf","pconf_insel2"))]},   /**< Choice of input for Input-3 */
+  .filter = ${["XMC_POSIF_FILTER_DISABLED",
+               "XMC_POSIF_FILTER_1_CLOCK_CYCLE",
+               "XMC_POSIF_FILTER_2_CLOCK_CYCLE",
+               "XMC_POSIF_FILTER_4_CLOCK_CYCLE",
+               "XMC_POSIF_FILTER_8_CLOCK_CYCLE",
+               "XMC_POSIF_FILTER_16_CLOCK_CYCLE",
+               "XMC_POSIF_FILTER_32_CLOCK_CYCLE",
+               "XMC_POSIF_FILTER_64_CLOCK_CYCLE"
+             ][(appIns.gcombo_lp_filter.options.indexOf(appIns.gcombo_lp_filter.value))]},       /**< Input filter configuration */
+};
+/**************************************************************************************************************/
+/*******************************************APP Config Structure***********************************************/
+/**************************************************************************************************************/
+ENCODER_POSIF_Config_t ${appInst}_Config =
+{
+  .encoder_pin          = (ENCODER_POSIF_ENABLE_PINLEVEL_t)${encoder_pin}, 
+  .extrapolation_type   = ${["ENCODER_POSIF_1ST_ORDER_EXTRAPOLATION","ENCODER_POSIF_2ND_ORDER_EXTRAPOLATION"][extrapol_type]},
+  .timestamp_slice_pm_sr= (XMC_CCU4_SLICE_SR_ID_t)${appIns.hwres_ccu4_slice3.getRegValue("srs","srs_posr")},
+  .encoder_type         = ${["ENCODER_POSIF_ENCODER_WITHOUT_INDEX_SIGNAL","ENCODER_POSIF_ENCODER_WITH_INDEX_SIGNAL"][(boolvalreturn(appIns.gcheck_index.value))]},
+  .angle_scale          = ${angle_scale},
+  .speed_const          = ${(int)speed_const},
+  .module_frequency     = ${appIns.gint_frequency.value}U,
+  .time_offset_scale    = ${appIns.gint_frequency.value/1000}U,
+  .max_toffset          = 1000000U,
+  .ticks_per_revolution = ${((appIns.gint_ticks_per_revolution.value * 4)-1)}U,
+""");
+if(appIns.gcheck_rev_counter.value == true)
+{
+out.print("""
+  .rev_counter_overflow = ${appIns.gint_rev_count.value}U,
+  .rev_counter_pm_sr    = (XMC_CCU4_SLICE_SR_ID_t)${appIns.hwres_ccu4_slice1.getRegValue("srs","srs_posr")},
+""");
+}
+  out.print("""
+  .timestamp_period     = ${appIns.gint_periodreg.value}U,
+  .posif_qd_sr          = {""");
+/*Start: This is dummy read*/
+(appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_indxe"))
+(appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_erre"))
+(appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_cnte"))
+(appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_dire"))
+(appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_pclke"))
+/*End: This is dummy read*/
+                            out.print("""
+                            (uint8_t)${posif_sr[((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_indsel"))]},
+                            (uint8_t)${posif_sr[((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_errsel"))]},
+                            (uint8_t)${posif_sr[((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_cntsel"))]},
+                            (uint8_t)${posif_sr[((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_dirsel"))]},
+                            (uint8_t)${posif_sr[((int)appIns.hwres_posif_hsc_qd_0.getRegValue("pflge","pflge_pclsel"))]}
+                          },
+  .enable_eru           = {
+                            ${boolvalreturn(appIns.gcheck_eph_a_eru.value)}U,
+                            ${boolvalreturn(appIns.gcheck_eph_b_eru.value)}U,
+                            ${boolvalreturn(appIns.gcheck_eidx_eru.value)}U
+                          },
+""");
+if(appIns.gcheck_rev_counter.value == true)
+{
+out.print("""
+  .enable_revcnt_event   = ${boolvalreturn(appIns.gcheck_rev_overflow_cnt.value)}U,
+""");
+}
+out.print("""
+  .enable_anglecalc_isr  = ${boolvalreturn(appIns.gcheck_timestamp_pmisr.value)}U, 
+  .enable_rev_counter    = ${boolvalreturn(appIns.gcheck_rev_counter.value)}U,
+  .enable_index_evt      = ${boolvalreturn(appIns.gcheck_idx_evt.value)}U,
+  .enable_phaseerr_evt   = ${boolvalreturn(appIns.gcheck_ph_error_event.value)}U,
+  .enable_dirchange_evt  = ${boolvalreturn(appIns.gcheck_dir_change_event.value)}U,
+  .enable_qclk_evt       = ${boolvalreturn(appIns.gcheck_qclk_event.value)}U,
+  .enable_pclk_evt       = ${boolvalreturn(appIns.gcheck_pclk_event.value)}U
+};
+ENCODER_POSIF_t ${appInst} =
+{
+""");
+if(appIns.gcombo_encpin_enable.options.indexOf(appIns.gcombo_encpin_enable.value) > 0)
+{
+out.print("""
+  .encoder_enable_input_ptr     = &${appInst}_Enable_Encoder_PadResource,
+""");
+}
+out.print("""
+  .encoder_input_ptr            = {
+                                    &${appInst}_Phase_A_PadResource,
+                                    &${appInst}_Phase_B_PadResource,
+""");
+if(appIns.gcheck_index.value == true)
+{
+out.print("""
+                                    &${appInst}_Index_PadResource,
+""");
+}
+out.print("""
+                                  },
+  #if (ENCODER_POSIF_ERU_AVAILABLE == 1U)
+  .etl_conf_ptr                 = {
+                                   ${ETL_1[0]},
+                                   ${ETL_2[0]},
+                                   ${ETL_3[0]}
+                                  },
+  .etl_resource_ptr             = {
+                                   ${ETL_1[1]},
+                                   ${ETL_2[1]},
+                                   ${ETL_3[1]}
+                                  },
+  .ogu_conf_ptr                 = {
+                                   ${ETL_1[2]},
+                                   ${ETL_2[2]},
+                                   ${ETL_3[2]}
+                                  },
+  #endif  
+  .position_counter_init_ptr    = &${appInst}_position_capture_init,      
+""");  
+if(appIns.gcheck_rev_counter.value == true)
+{
+    out.print("""
+  .revolution_counter_init_ptr  = &${appInst}_revolution_counter_capture_init,
+  .revolution_counter_ptr       = &${appInst}_revolution_counter,
+  .rev_counterevent_ptr         = &${appInst}_revolution_count_eventconfig,
+  .rev_countdir_event_ptr       = &${appInst}_revolution_count_dir_eventconfig,
+  .rev_captureevent_ptr         = &${appInst}_revolution_capture_eventconfig,
+""");  
+}
+else
+{
+  out.print("""
+  .revolution_counter_init_ptr  = NULL,
+  .revolution_counter_ptr       = NULL,
+  .rev_counterevent_ptr         = NULL,
+  .rev_countdir_event_ptr       = NULL,
+  .rev_captureevent_ptr         = NULL,
+""");  
+}
+  out.print("""
+  .time_bw_ticks_init_ptr       = &${appInst}_time_bw_ticks_capture_init,
+  .trigger_slice_init_ptr       = &${appInst}_trigger_slice_timer_init, 
+  .position_counter_ptr         = &${appInst}_position_counter,  
+
+  .time_bw_ticks_ptr            = &${appInst}_time_bw_ticks_counter,
+  .timestamp_trigger_slice_ptr  = &${appInst}_trigger_generator,
+  .global_ptr                   = (POSIF_GLOBAL_TypeDef*)(void*)POSIF${appIns.hwres_posif_hsc_qd_0.getSolverUri()[4]},
+  .config_ptr                   = &${appInst}_Config,
+  .posif_qd_ptr                 = &${appInst}_InitHandle,
+  .posifconfig_ptr              = &${appInst}_PosifConf,
+  .timestamp_trigger_start_ptr  = &${appInst}_triggergen_start_eventconfig,
+  .pos_captureevent_ptr         = &${appInst}_position_capture_eventconfig,
+  .tbt_captureevent_ptr         = &${appInst}_time_bw_ticks_capture_eventconfig,
+  .tbtp_captureevent_ptr        = &${appInst}_time_triggerpoint_capture_eventconfig,
+  .pos_counterevent_ptr         = &${appInst}_position_counting_eventconfig,
+  .pos_countdir_event_ptr       = &${appInst}_position_count_dir_eventconfig,
+  .encoder_pinconfig_ptr        = &${appInst}_Encoder_PadConfig,
+""");
+if(appIns.gcombo_encpin_enable.options.indexOf(appIns.gcombo_encpin_enable.value) > 0)
+{
+    out.print("""
+  .enable_enc_pin_cfg_ptr       = &${appInst}_En_Encoderpin_Config,
+""");
+}
+out.print("""
+  .global_posif_handle_ptr      = &${appIns.appres_global_posif_0.getInstanceLabel()},
+  .global_ccu4_handle_ptr       = &${appIns.appres_global_ccu4_0.getInstanceLabel()},
+""");
+if(appIns.gcheck_timestamp_pmisr.value == true )
+{
+out.print("""
+  .trigger_gen_isr_ptr          = &${appInst}_Trigger_Gen_ISR,
+""");
+}
+  out.print("""
+  .speed_pt1_filter             = &${appInst}_Speed_PT1Filter,
+  .state                        = ENCODER_POSIF_UNINITIALISED,
+};
+""");
+String isr_handler = appIns.gstring_isr_handler.value.replaceAll("<APP_Inst>","${appInst}")
+if(appIns.gcheck_timestamp_pmisr.value == true )
+{
+out.print("""
+/*Speed updation at time stamp trigger isr*/
+void ${isr_handler}(void)
+{
+  ${appInst}.rotor_angle = ENCODER_POSIF_GetRotorAngle(&${appInst},0U);
+  ${appInst}.rotor_speed = ENCODER_POSIF_SpeedCalculation(&${appInst});
+}
+""");
+}
+    } else {
+        out.print("""
+  /*Posif QD resource is not mapped to encoder_posif app*/
+""");
+    }
+}

@@ -1,0 +1,599 @@
+package Model.APPS.ENCODER_POSIF.v4_0_6;
+
+/*
+ Copyright (c) 2016-2020, Infineon Technologies AG
+ All rights reserved.
+											
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+ following conditions are met:
+																			 
+ Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+ disclaimer.
+  
+ Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided with the distribution.
+  
+ Neither the name of the copyright holders nor the names of its contributors may be used to endorse or promote
+ products derived from this software without specific prior written permission.
+																			 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+																			 
+ To improve the quality of the software, users are encouraged to share modifications, enhancements or bug fixes with
+ Infineon Technologies AG: dave@infineon.com. */
+ 
+/************************ Revision History *****************************
+ Version      Date          Description
+ 1.0.0       06-Jul-2015   1. Initial version<br/> 
+ 4.0.2       02-Feb-2019   1. Initial released version<br/> 
+ 4.0.4       23-Oct-2019   1. Add support for XMC1402 and XMC1404
+ 4.0.6      09-Jan-2021   Modified check for minimum XMCLib version. <BR>
+ **********************************************************************/
+import ifx.davex.app.manifest.*
+
+class  ENCODER_POSIF extends ENCODER_POSIF_GUI {
+
+     /* Note  : Following App properties are mandatory and important */
+     
+     /* Begin : APP property section */
+    
+    /**
+     * App version
+     * Format: a string with three digit separated by a dot.
+     */
+    def version            = '4.0.6'
+    
+    /**
+     * App categories declaration. 
+     * It is list of strings. Subcategories are separated by slash.
+     * No limits on number of categories and subcategories depth.
+     */
+    def categoriesDescription = [
+        "Motor Control/Position Interface"
+    ]
+
+    /** 
+     * Minimum DAVE version required for this app.
+     * 
+     * It is string with three digit separated by a dot.
+     */
+    def minDaveVersion           = '4.0.0'
+    
+    /** 
+     * Keywords used by search feature in Apps selection view
+     * 
+     * It is a list of string.
+     */
+        def keywords = [
+        "POSIF",
+        "ENCODER_POSIF",
+        "quadrature encoder",
+        "CCU4",
+        "Speed Measurement",
+        "Position Measurement",
+        "Motor Control",
+        "Motor",
+        "Drive",
+        "sinusoidal",
+        "commutation",
+        "all"
+         ]
+    
+    /** 
+     * softwareIDs is used to declare which devices are compatible with this APP.
+     * It is a map with key a string containing a pattern that sencoder match the SW id of
+     * the device and as value the minimal version of the APP.
+     */
+    
+    /**
+     * Any step of XMC4500F144 and XMC4400F144
+     * Any step of XMC4400F100 and XMC4400F64
+     * Any step, any variant and any packages of XMC1300
+     */
+	def softwareIDs   = [
+		  "XMC1.3.*.*.*":"1.0.0",
+   			"XMC1.4.02.*.*":"1.0.0",
+			"XMC1.4.04.*.*":"1.0.0",
+			"XMC4.8.*.*.*":"1.0.0",
+			"XMC4.7.*.*.*":"1.0.0",
+			"XMC4.5.*.*.*":"1.0.0",
+			"XMC4.4.*.*.*":"1.0.0",
+			"XMC4.2.*.*.*":"1.0.0",
+			"XMC4.1.*.*.*":"1.0.0"
+			]
+    
+    /**
+     * Singleton property:
+     * When it is true the app can be instantiated only once. 
+     */
+    def singleton     = false
+
+
+    /**
+     * initProvider property
+     * It sencoder be true to add a call to <AppName>_Init() 
+     */
+    def initProvider  = true
+    
+    /**
+     * Deprecated app
+     * Set it to true to indicate that the app sencoder be not used for new projects.
+     */
+    def deprecated    = false
+    
+    /**
+     * Sharable property.
+     * It sencoder be true to allows multiple apps to require the same instance of this app.
+     */
+    def sharable      = false
+
+    /**
+     *  App function description.
+     */
+    def description = "APP gets the motor position and\nspeed using  incremental encoder."
+    
+    /* End   : App property section */
+    
+    /* Begin : User app property section */
+    MVirtualResourceGroup hwres_port_pad_1
+    MVirtualResourceGroup hwres_port_pad_2
+    MVirtualResourceGroup hwres_port_pad_3
+    MVirtualResourceGroup hwres_port_enable_encoder_pad
+    MVirtualResourceGroup hwres_posif_hsc_qd_0
+    MVirtualResourceGroup hwres_ccu4_slice0
+    MVirtualResourceGroup hwres_ccu4_slice1
+    MVirtualResourceGroup hwres_ccu4_slice2
+    MVirtualResourceGroup hwres_ccu4_slice3
+    
+    /* Begin : Consumption of ERU resource */
+    MVirtualResourceGroup hwres_ers_etl_1
+    MVirtualResourceGroup hwres_ers_etl_2
+    MVirtualResourceGroup hwres_ers_etl_3
+    
+    MVirtualResourceGroup hwres_eru_ogu_1
+    MVirtualResourceGroup hwres_eru_ogu_2
+    MVirtualResourceGroup hwres_eru_ogu_3
+    /* End : Consumption of ERU resource  */
+    MVirtualResourceGroup hwres_nvic_trigslice_pm
+    /* Required App */
+    MRequiredApp appres_global_posif_0
+    MRequiredApp appres_global_ccu4_0
+    MRequiredApp appres_cpu_ctrl
+    MRequiredApp appres_motorlibs
+    
+    /* Required Signals */
+    MVirtualSignal vs_encoder_posif_globalsignal
+    MVirtualSignal vs_encoder_posif_input0
+    MVirtualSignal vs_encoder_posif_input1
+    MVirtualSignal vs_encoder_posif_input2
+    MVirtualSignal vs_encoder_posif_idxe
+    MVirtualSignal vs_encoder_posif_erre
+    MVirtualSignal vs_encoder_posif_cnte
+    MVirtualSignal vs_encoder_posif_dire
+    MVirtualSignal vs_encoder_posif_pclke
+    
+    MVirtualSignal vs_encoder_posif_out0
+    MVirtualSignal vs_encoder_posif_out1
+    MVirtualSignal vs_encoder_posif_out2
+    MVirtualSignal vs_encoder_posif_out3
+    MVirtualSignal vs_encoder_posif_out4
+    MVirtualSignal vs_encoder_posif_out5
+    
+    MVirtualSignal vs_encoder_posif_pad_ph_a
+    MVirtualSignal vs_encoder_posif_pad_ph_b
+    MVirtualSignal vs_encoder_posif_pad_idx
+	MVirtualSignal vs_encoder_posif_pad_enenc
+    
+    MVirtualSignalRA vs_encoder_posif_global_ccu4_globalsignal
+    MVirtualSignalRA vs_encoder_posif_global_posif_globalsignal
+    
+    MVirtualSignal vs_encoder_posif_slice0_globalsignal
+    MVirtualSignal vs_encoder_posif_slice1_globalsignal
+    MVirtualSignal vs_encoder_posif_slice2_globalsignal
+    MVirtualSignal vs_encoder_posif_slice3_globalsignal
+    MVirtualSignal vs_encoder_posif_triggen_pm_nvicsignal_in
+    MVirtualSignal vs_encoder_posif_ccu43_pmus_omds
+    MVirtualSignal vs_encoder_posif_ccu41_pmus_omds
+    
+    /* Begin : Definition of ERU signals  */
+    MVirtualSignal vs_encoder_posif_eventgen_input_a_ph_a
+    MVirtualSignal vs_encoder_posif_eventgen_input_a_ph_b
+    MVirtualSignal vs_encoder_posif_eventgen_input_a_idx
+    
+    MVirtualSignal vs_encoder_posif_eventgen_flagstatus_ph_a
+    MVirtualSignal vs_encoder_posif_eventgen_flagstatus_ph_b
+    MVirtualSignal vs_encoder_posif_eventgen_flagstatus_idx
+    
+    MVirtualSignal vs_encoder_posif_eventdet_pdin_ph_a
+    MVirtualSignal vs_encoder_posif_eventdet_pdin_ph_b
+    MVirtualSignal vs_encoder_posif_eventdet_pdin_idx
+    
+    MVirtualSignal vs_encoder_posif_eventdet_pdout_ph_a
+    MVirtualSignal vs_encoder_posif_eventdet_pdout_ph_b
+    MVirtualSignal vs_encoder_posif_eventdet_pdout_idx
+    /* End : Definition of ERU signals*/
+    
+    /* Begin : Definition of ERU signals  */
+    MVirtualSignal vs_encoder_posif_ccu40_gp0unsync
+    MVirtualSignal vs_encoder_posif_ccu40_gp1unsync
+    MVirtualSignal vs_encoder_posif_ccu40_gp2unsync
+    MVirtualSignal vs_encoder_posif_ccu40_st
+
+    MVirtualSignal vs_encoder_posif_ccu41_gp0unsync
+    MVirtualSignal vs_encoder_posif_ccu41_gp1unsync
+    MVirtualSignal vs_encoder_posif_ccu41_gp2unsync
+    
+    MVirtualSignal vs_encoder_posif_ccu42_gp0unsync
+    MVirtualSignal vs_encoder_posif_ccu42_gp1unsync
+    MVirtualSignal vs_encoder_posif_ccu42_gp2unsync
+    
+    MVirtualSignal vs_encoder_posif_ccu43_gp0unsync
+    MVirtualSignal vs_encoder_posif_ccu43_gp1unsync
+    MVirtualSignal vs_encoder_posif_ccu43_gp2unsync
+    MVirtualSignal vs_encoder_posif_ccu43_st
+    /* End : Definition of ERU signals*/
+    /* End   : User app property section */
+    /* Variable to read the clock value from global_posif app */
+    GFloat gfloat_clkfrequency = GFloat(value:120)
+	GFloat gfloat_actresolution_triggerslice  = GFloat(value:8.3)
+    /* User defined variable to store the prescalar calculation*/
+    GInteger gint_prescalar = GInteger(value:0)
+    GInteger gint_prescalar_trigslice = GInteger(value:0)
+    GInteger gint_periodreg = GInteger(value:0)
+    GInteger gint_frequency = GInteger(value:0)
+	GInteger gint_toplevel  = GInteger(value:0)
+    /* App Constructor */
+    public ENCODER_POSIF(DaveEnv daveEnv) {
+        /* ------------------------------------------------------------------------------------------------------------------ */
+        /* ----------------------------------- Target Specific User Variable Initialization --------------------------------- */
+        /* ------------------------------------------------------------------------------------------------------------------ */
+        String family = daveEnv.project.selectedDevice.deviceId.family
+        String series = daveEnv.project.selectedDevice.deviceId.series
+        String SubDevicefamily = null
+        
+        /*device selection*/
+        if (family == "XMC4")
+        {
+          if((series == "2") || (series == "1"))
+          {
+            SubDevicefamily = "4.2"
+          }
+        }
+        else
+        {
+          SubDevicefamily = "1.3"
+        }
+        /* -------------------------------------------------------------------------------------------------------------- */
+        /* ------------------------------------------ App consumption Block --------------------------------------------- */
+        /* -------------------------------------------------------------------------------------------------------------- */
+		appres_motorlibs      = MRequiredApp("MOTOR_LIB","Motor Control Library", RSHARABLE, "4.0.2")
+        appres_global_posif_0 = MRequiredApp("GLOBAL_POSIF","Posif Global APP", RSHARABLE, "4.0.2")
+        appres_global_ccu4_0  = MRequiredApp("GLOBAL_CCU4","CCU4 Global APP", RSHARABLE, "4.0.2")
+        /* Consume CPU App to set the min max value*/
+        if (family == "XMC4")
+        {
+          appres_cpu_ctrl    = MRequiredApp("CPU_CTRL_XMC4","CPU APP", RSHARABLE, "4.0.2",MF({return(gcheck_timestamp_pmisr.value == true)}, Boolean))
+        }
+        else
+        {
+          appres_cpu_ctrl    = MRequiredApp("CPU_CTRL_XMC1","CPU APP", RSHARABLE, "4.0.2",MF({return(gcheck_timestamp_pmisr.value == true)}, Boolean))
+        }
+        
+        /* -------------------------------------------------------------------------------------------------------------- */
+        /* ------------------------------------ Hardware resource consumption block ------------------------------------- */
+        /* -------------------------------------------------------------------------------------------------------------- */
+        hwres_posif_hsc_qd_0 = MVirtualResourceGroup( "POSIF encoder", ["peripheral", "posif", "*" , "posif", "hsc_qd"])
+
+        hwres_port_pad_1 = MVirtualResourceGroup( "Phase A"       , ["port"      , "p"    , "*" , "pad"  , "*"     ])
+        hwres_port_pad_2 = MVirtualResourceGroup( "Phase B"       , ["port"      , "p"    , "*" , "pad"  , "*"     ])
+        hwres_port_pad_3 = MVirtualResourceGroup( "Index"       , ["port"      , "p"    , "*" , "pad"  , "*"     ], MF({return(gcheck_index.value == true)}, Boolean))
+        hwres_port_enable_encoder_pad = MVirtualResourceGroup( "Encoder Enable Pad"       , ["port"      , "p"    , "*" , "pad"  , "*"     ], MF({return(gcombo_encpin_enable.options.indexOf(gcombo_encpin_enable.value) > 0)}, Boolean))
+        
+        hwres_ccu4_slice0 = MVirtualResourceGroup( "Position Count Slice", ["peripheral", "ccu4" , "*" , "cc4"  , "*"     ])       
+        hwres_ccu4_slice1 = MVirtualResourceGroup( "Revolution Count Slice", ["peripheral", "ccu4" , "*" , "cc4"  , "*"     ],MF({return(gcheck_rev_counter.value == true)}, Boolean))        
+        hwres_ccu4_slice2 = MVirtualResourceGroup( "Time Between Ticks Slice", ["peripheral", "ccu4" , "*" , "cc4"  , "*"     ])       
+        hwres_ccu4_slice3 = MVirtualResourceGroup( "Time Stamp Trigger Slice", ["peripheral", "ccu4" , "*" , "cc4"  , "*"     ])
+        
+        hwres_ers_etl_1 = MVirtualResourceGroup( "ETL 1", ["peripheral", "eru", "*", "ers_etl","*"],MF({return(gcheck_eph_a_eru.value)}, Boolean))
+        hwres_ers_etl_2 = MVirtualResourceGroup( "ETL 2", ["peripheral", "eru", "*", "ers_etl","*"],MF({return(gcheck_eph_b_eru.value)}, Boolean))
+        hwres_ers_etl_3 = MVirtualResourceGroup( "ETL 3", ["peripheral", "eru", "*", "ers_etl","*"],MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean))
+        
+        hwres_eru_ogu_1 = MVirtualResourceGroup( "OGU 1",  ["peripheral", "eru", "*", "ogu","*"],MF({return(gcheck_eph_a_eru.value)}, Boolean))
+        hwres_eru_ogu_2 = MVirtualResourceGroup( "OGU 2",  ["peripheral", "eru", "*", "ogu","*"],MF({return(gcheck_eph_b_eru.value)}, Boolean))
+        hwres_eru_ogu_3 = MVirtualResourceGroup( "OGU 3",  ["peripheral", "eru", "*", "ogu","*"],MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean))
+        
+        hwres_nvic_trigslice_pm = MVirtualResourceGroup("Time Stamp Trigger Period Match NVIC Node" , ["peripheral", "cpu" ,  "0" , "nvic", "interrupt", "*"],MF({return(gcheck_timestamp_pmisr.value == true)}, Boolean))
+        /* -------------------------------------------------------------------------------------------------------------- */
+        /* ------------------------------------ Virtual signal consumption block ---------------------------------------- */
+        /* -------------------------------------------------------------------------------------------------------------- */
+
+        /* Begin : Local instance of virtual signal from low level app */
+        vs_encoder_posif_global_ccu4_globalsignal  = MVirtualSignalRA(appres_global_ccu4_0 , "vs_global_ccu4_globalsignal")
+        vs_encoder_posif_global_posif_globalsignal  = MVirtualSignalRA(appres_global_posif_0 , "vs_global_posif_globalsignal")
+
+        /* End : Local instance of virtual signal from low level app */
+        
+        /* Begin : Signals belongs to  PAD resource */
+        @AddPin
+        vs_encoder_posif_pad_ph_a = MVirtualSignal(hwres_port_pad_1, "phase_a_pad", "pad"  , true, true)
+        @AddPin
+        vs_encoder_posif_pad_ph_b = MVirtualSignal(hwres_port_pad_2, "phase_b_pad", "pad"  , true, true)
+        @AddPin
+        vs_encoder_posif_pad_idx = MVirtualSignal(hwres_port_pad_3, "index_pad", "pad",MF({return(gcheck_index.value == true)}, Boolean),false)
+		@AddPin
+		vs_encoder_posif_pad_enenc = MVirtualSignal(hwres_port_enable_encoder_pad, "encoder_enable_pad", "pad",MF({return(gcombo_encpin_enable.options.indexOf(gcombo_encpin_enable.value) > 0)}, Boolean),false)
+		/* End : Signals belongs to  PAD resource   */
+        vs_encoder_posif_triggen_pm_nvicsignal_in  = MVirtualSignal(hwres_nvic_trigslice_pm, "sr_timestamp_trigger_periodmatch", "signal_in", MF({return(gcheck_timestamp_pmisr.value == true)}, Boolean), true)
+        /* Begin : Signals belongs to  hsc_qd resource */
+        /* Input signals */
+        //vs_encoder_posif_globalsignal = MVirtualSignal(hwres_posif_hsc_qd_0, "posif_global_signal", "global_signal"  , true, false)
+        
+        vs_encoder_posif_input0 = MVirtualSignal(hwres_posif_hsc_qd_0, "phase_a"                 , "ipos0"    , true, true)
+        vs_encoder_posif_input1 = MVirtualSignal(hwres_posif_hsc_qd_0, "phase_b"                 , "ipos1"    , true, true)
+        vs_encoder_posif_input2 = MVirtualSignal(hwres_posif_hsc_qd_0, "index"                 , "ipos2"    , MF({return(gcheck_index.value == true)}, Boolean), false)
+        /* Output signals */
+        vs_encoder_posif_slice0_globalsignal = MVirtualSignal(hwres_ccu4_slice0, "position_counter_slice_global_signal", "global_signal", true, false)
+        vs_encoder_posif_slice1_globalsignal = MVirtualSignal(hwres_ccu4_slice1, "revolution_counter_slice_global_signal", "global_signal", MF({return(gcheck_rev_counter.value == true)}, Boolean), false)
+        vs_encoder_posif_slice2_globalsignal = MVirtualSignal(hwres_ccu4_slice2, "time_capture_slice_global_signal", "global_signal", true, false)
+        vs_encoder_posif_slice3_globalsignal = MVirtualSignal(hwres_ccu4_slice3, "timestamp_triggerslice_global_signal", "global_signal", true, false)
+        
+        /* Begin : Signals belongs to  posif resource */
+        vs_encoder_posif_out0   = MVirtualSignal(hwres_posif_hsc_qd_0, "quadrature_clock" , "out0", true, false)
+        vs_encoder_posif_out1   = MVirtualSignal(hwres_posif_hsc_qd_0, "quadrature_direction", "out1"     , true, false)
+        vs_encoder_posif_out2   = MVirtualSignal(hwres_posif_hsc_qd_0, "period_clock", "out2"     , true, true)
+        vs_encoder_posif_out3   = MVirtualSignal(hwres_posif_hsc_qd_0, "index_signal", "out3"     , MF({return(gcheck_index.value == true)}, Boolean), true)
+        vs_encoder_posif_out4   = MVirtualSignal(hwres_posif_hsc_qd_0, "index_count" , "out4"     , MF({return(gcheck_index.value == true)}, Boolean), true)
+        vs_encoder_posif_out5   = MVirtualSignal(hwres_posif_hsc_qd_0, "syncstart"   , "out5"     , true, true)
+        
+        /* Interrupt signals */
+        vs_encoder_posif_idxe   = MVirtualSignal(hwres_posif_hsc_qd_0, "event_index_signal"  , "indxe", MF({return(gcheck_index.value == true)}, Boolean), true)
+        vs_encoder_posif_erre   = MVirtualSignal(hwres_posif_hsc_qd_0, "event_phase_error_signal"  , "erre", true, true)
+        vs_encoder_posif_cnte   = MVirtualSignal(hwres_posif_hsc_qd_0, "event_qclock_signal"  , "cnte", true, true)
+        vs_encoder_posif_dire   = MVirtualSignal(hwres_posif_hsc_qd_0, "event_direction_change_signal"  , "dire", true, true)
+        vs_encoder_posif_pclke   = MVirtualSignal(hwres_posif_hsc_qd_0, "event_period_clock_signal"  , "pcle", true, true)
+        
+        /* Begin : Signals belongs to  cc4 resource */
+        vs_encoder_posif_ccu40_gp0unsync = MVirtualSignal(hwres_ccu4_slice0, "qclock_input", "gp0_unsync", true, false)
+        vs_encoder_posif_ccu40_gp1unsync = MVirtualSignal(hwres_ccu4_slice0, "qdirection_input", "gp1_unsync", true, false)
+        vs_encoder_posif_ccu40_gp2unsync = MVirtualSignal(hwres_ccu4_slice0, "timestamp_trigger_slice_st_input", "gp2_unsync", true, false)
+        vs_encoder_posif_ccu40_st        = MVirtualSignal(hwres_ccu4_slice0, "position_counter_status_signal", "st", true, false)
+        
+        vs_encoder_posif_ccu41_gp0unsync = MVirtualSignal(hwres_ccu4_slice1, "position_counter_status_input", "gp0_unsync", MF({return(gcheck_rev_counter.value == true)}, Boolean), false)
+        vs_encoder_posif_ccu41_gp1unsync = MVirtualSignal(hwres_ccu4_slice1, "revolution_counter_qdirection_input", "gp1_unsync", MF({return(gcheck_rev_counter.value == true)}, Boolean), false)
+        vs_encoder_posif_ccu41_gp2unsync = MVirtualSignal(hwres_ccu4_slice1, "timestamp_trigger_slice_st_input", "gp2_unsync", MF({return(gcheck_rev_counter.value == true)}, Boolean), false)
+        vs_encoder_posif_ccu41_pmus_omds = MVirtualSignal(hwres_ccu4_slice1,"event_revolution_counter_overflow","pmus_omds",MF({return(gcheck_rev_overflow_cnt.value)}, Boolean),true)
+       
+        vs_encoder_posif_ccu42_gp0unsync = MVirtualSignal(hwres_ccu4_slice2, "pclock_input", "gp0_unsync", true, false)
+        vs_encoder_posif_ccu42_gp1unsync = MVirtualSignal(hwres_ccu4_slice2, "timestamp_trigger_slice_st_input", "gp1_unsync", true, false)
+        
+        vs_encoder_posif_ccu43_gp0unsync = MVirtualSignal(hwres_ccu4_slice3, "syncstart_input", "gp0_unsync", true, false)
+        vs_encoder_posif_ccu43_st        = MVirtualSignal(hwres_ccu4_slice3, "timestamp_trigger_slice_status_signal", "st", true, false)
+        vs_encoder_posif_ccu43_pmus_omds = MVirtualSignal(hwres_ccu4_slice3,"event_timestamp_trigger_period_match","pmus_omds",MF({return(gcheck_timestamp_pmisr.value)}, Boolean),true)
+        
+        /* Begin : Signals belongs to  ERU resource */
+        vs_encoder_posif_eventgen_input_a_ph_a = MVirtualSignal(hwres_ers_etl_1, "phase_a_event_generation_signal_a" , "a"  , MF({return(gcheck_eph_a_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventgen_input_a_ph_b = MVirtualSignal(hwres_ers_etl_2, "phase_b_event_generation_signal_a" , "a"  , MF({return(gcheck_eph_b_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventgen_input_a_idx = MVirtualSignal(hwres_ers_etl_3, "index_event_generation_signal_a" , "a"  , MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean),false)
+        
+        vs_encoder_posif_eventgen_flagstatus_ph_a = MVirtualSignal(hwres_ers_etl_1, "phase_a_event_generation_flag_status"  , "fl" , MF({return(gcheck_eph_a_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventgen_flagstatus_ph_b = MVirtualSignal(hwres_ers_etl_2, "phase_b_event_generation_flag_status"  , "fl" , MF({return(gcheck_eph_b_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventgen_flagstatus_idx = MVirtualSignal(hwres_ers_etl_3, "index_event_generation_flag_status"  , "fl" , MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean),false)
+        
+        vs_encoder_posif_eventdet_pdin_ph_a = MVirtualSignal(hwres_eru_ogu_1, "phase_a_event_detection_in", "pdin"  , MF({return(gcheck_eph_a_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventdet_pdin_ph_b = MVirtualSignal(hwres_eru_ogu_2, "phase_b_event_detection_in", "pdin"  , MF({return(gcheck_eph_b_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventdet_pdin_idx = MVirtualSignal(hwres_eru_ogu_3, "index_event_detection_in", "pdin"  , MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean),false)
+        
+        vs_encoder_posif_eventdet_pdout_ph_a = MVirtualSignal(hwres_eru_ogu_1, "phase_a_event_detection_out", "pdout"  , MF({return(gcheck_eph_a_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventdet_pdout_ph_b = MVirtualSignal(hwres_eru_ogu_2, "phase_b_event_detection_out", "pdout"  , MF({return(gcheck_eph_b_eru.value)}, Boolean),false)
+        vs_encoder_posif_eventdet_pdout_idx = MVirtualSignal(hwres_eru_ogu_3, "index_event_detection_out", "pdout"  , MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean),false)
+        /* End : Signals belongs to  ERU resource   */
+
+        
+        /* ------------------------------------------------------------------------------------------------------------------------ */
+        /* ------------------------------------------------- APP IO Connections --------------------------------------------------- */
+        /* ------------------------------------------------------------------------------------------------------------------------ */
+        addConnectionConstraint(vs_encoder_posif_ccu43_pmus_omds,vs_encoder_posif_triggen_pm_nvicsignal_in,MF({return(gcheck_timestamp_pmisr.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_global_ccu4_globalsignal, vs_encoder_posif_slice0_globalsignal)
+        addConnectionConstraint(vs_encoder_posif_global_ccu4_globalsignal, vs_encoder_posif_slice1_globalsignal, MF({return(gcheck_rev_counter.value == true)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_global_ccu4_globalsignal, vs_encoder_posif_slice2_globalsignal)
+        addConnectionConstraint(vs_encoder_posif_global_ccu4_globalsignal, vs_encoder_posif_slice3_globalsignal)
+        
+        //addConnectionConstraint(vs_encoder_posif_global_posif_globalsignal, vs_encoder_posif_globalsignal)
+        
+        addConnectionConstraint(vs_encoder_posif_out0, vs_encoder_posif_ccu40_gp0unsync)
+        addConnectionConstraint(vs_encoder_posif_out1, vs_encoder_posif_ccu40_gp1unsync)
+        addConnectionConstraint(vs_encoder_posif_ccu43_st, vs_encoder_posif_ccu40_gp2unsync)
+        
+        addConnectionConstraint(vs_encoder_posif_ccu40_st, vs_encoder_posif_ccu41_gp0unsync, MF({return(gcheck_rev_counter.value == true)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_out1, vs_encoder_posif_ccu41_gp1unsync, MF({return(gcheck_rev_counter.value == true)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_ccu43_st, vs_encoder_posif_ccu41_gp2unsync, MF({return(gcheck_rev_counter.value == true)}, Boolean))
+        
+        addConnectionConstraint(vs_encoder_posif_out2, vs_encoder_posif_ccu42_gp0unsync)
+        addConnectionConstraint(vs_encoder_posif_ccu43_st, vs_encoder_posif_ccu42_gp1unsync)
+        
+        addConnectionConstraint(vs_encoder_posif_pad_ph_a, vs_encoder_posif_input0,MF({return(!gcheck_eph_a_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_pad_ph_b, vs_encoder_posif_input1,MF({return(!gcheck_eph_b_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_pad_idx, vs_encoder_posif_input2,MF({return((!gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean))
+        
+        /* Begin : Signals connection belongs to  ERU resource */
+        addConnectionConstraint(vs_encoder_posif_pad_ph_a, vs_encoder_posif_eventgen_input_a_ph_a,MF({return(gcheck_eph_a_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_pad_ph_b, vs_encoder_posif_eventgen_input_a_ph_b,MF({return(gcheck_eph_b_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_pad_idx, vs_encoder_posif_eventgen_input_a_idx,MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean))
+        
+        addConnectionConstraint(vs_encoder_posif_eventgen_flagstatus_ph_a, vs_encoder_posif_eventdet_pdin_ph_a,MF({return(gcheck_eph_a_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_eventgen_flagstatus_ph_b, vs_encoder_posif_eventdet_pdin_ph_b,MF({return(gcheck_eph_b_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_eventgen_flagstatus_idx, vs_encoder_posif_eventdet_pdin_idx,MF({return((gcheck_eidx_eru.value) && (gcheck_index.value == true))}, Boolean))
+        
+        addConnectionConstraint(vs_encoder_posif_eventdet_pdout_ph_a, vs_encoder_posif_input0,MF({return(gcheck_eph_a_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_eventdet_pdout_ph_b, vs_encoder_posif_input1,MF({return(gcheck_eph_b_eru.value)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_eventdet_pdout_idx, vs_encoder_posif_input2,MF({return((gcheck_eidx_eru.value) && gcheck_index.value == true)}, Boolean))
+        addConnectionConstraint(vs_encoder_posif_out5,vs_encoder_posif_ccu43_gp0unsync)
+        /* End : Signals connection belongs to  ERU resource   */
+        
+        /*------------------------------------------Device specific control-----------------------------------------------------*/
+        if(family == "XMC1")
+        {
+          gfloat_resolution_tcap.value = 35
+          ginterruptprio_triggerslice_pm_isr.subPriorityVisible = false
+          ginterruptprio_triggerslice_pm_isr.priorityValue = 3
+		  gcombo_extrapol_type.options = ["1st Order"]
+		  gcombo_encpin_enable.value = "Active High"
+        }
+        else if(SubDevicefamily == "4.2")
+        {
+          gfloat_resolution_tcap.value = 35
+        }
+        else
+        {
+          gfloat_resolution_tcap.value = 35
+        }
+        /*------------------------------------------Encoder settings tab control-----------------------------------------------------*/
+        gcombo_idxsig_config.enabled = MF({return(gcheck_index.value == true)}, Boolean)
+        gimage_phases.path = MF({
+                           if(gcombo_direction_def.options.indexOf(gcombo_direction_def.value) == 1)
+                           {
+                             return "Uimodel/PhaseB_lead.png"
+                           }
+                           else
+                           {
+                             return "Uimodel/PhaseA_lead.png" 
+                           }
+                         }
+                 , String);
+        gcheck_eidx_eru.enabled = MF({return(gcheck_index.value == true)}, Boolean)
+        /*------------------------------------------Timer settings tab control-----------------------------------------------------*/
+        gint_rev_count.enabled = MF({return(gcheck_rev_counter.value == true)}, Boolean)
+        /* Reading clock frequency from global_posif app and storing in the user defined variable*/
+        gfloat_clkfrequency.value = MF({return(appres_global_posif_0.getVal(["gfloat_clockfrequency","value"]))}, Float)
+
+        /** Minimum resolution value calculated based on clock**/
+        gfloat_resolution_tcap.minValue = MF({(1000/gfloat_clkfrequency.value)},Float)
+        /** Maximum resolution value calculated based on clock**/
+        gfloat_resolution_tcap.maxValue = MF({((1000*65535)/(gfloat_clkfrequency.value))},Float)
+        
+        /** time between tick prescalar : In the range of 0 to 15 */
+        gint_prescalar.value = MF({
+          /* clock divider in nsec*/
+          float clkdiv = (1000 /gfloat_clkfrequency.value)
+          int divider = (int)(gfloat_resolution_tcap.value/ clkdiv)
+          if(divider < 1)
+          {
+              divider = 1
+          }
+          int prescalar  = Math.floor(Math.log(divider)/ Math.log(2))
+          
+          if(prescalar > 15)
+          {
+            prescalar = 15
+          }
+          /* Selected resolution calculation in nsec*/
+          return prescalar
+        }, Integer)
+        
+        
+        /** time between tick slice selected resolution : (clock_divider * 2^prescalar) */
+        gfloat_actresolution_tcap.value  = MF({
+          /* clock divider in nsec*/
+          float clkdiv = (1000 /gfloat_clkfrequency.value)
+          
+          /* Selected resolution calculation in nsec*/
+          return (clkdiv * (1 << gint_prescalar.value))
+        }, Float)
+        gint_frequency.value       = MF({return ((int)((gfloat_clkfrequency.value / (Math.pow(2,gint_prescalar.value)) ) * 1000000))},Integer)
+        /** trigger generator prescalar : In the range of 0 to 15 */
+        gint_prescalar_trigslice.value = MF({
+          /* clock divider in nsec*/
+          float clkdiv = (1000 /gfloat_clkfrequency.value)
+          int divider = (int)(35/ clkdiv)    /*Desired resolution is fixed to 35 nanoseconds*/
+          if(divider < 1)
+          {
+              divider = 1
+          }
+          int prescalar  = Math.floor(Math.log(divider)/ Math.log(2))
+          
+          if(prescalar > 15)
+          {
+            prescalar = 15
+          }
+          /* Selected resolution calculation in nsec*/
+          return prescalar
+        }, Integer)
+        
+        
+        /** trigger generator selected resolution : (clock_divider * 2^prescalar) */
+        gfloat_actresolution_triggerslice.value  = MF({
+          /* clock divider in nsec*/
+          float clkdiv = (1000 /gfloat_clkfrequency.value)
+          
+          /* Selected resolution calculation in nsec*/
+          return (clkdiv * (1 << gint_prescalar_trigslice.value))
+          
+        }, Float)
+        /** trigger generator  period register count value**/
+        gint_periodreg.value = MF({
+          Float resolution = gfloat_actresolution_triggerslice.value
+          Float freq_Hz = (float)((1/gfloat_timestamp.value)*1000000)
+          Float period = 1000000000/freq_Hz                                  /* convert hz to nsec*/
+          Integer period_reg = (period / resolution) - 1                     /* period register value based on PWM freq and actual resolution*/
+          if (period_reg > 65535)
+          {
+            period_reg = 0
+          }
+          return period_reg;
+          }, Integer);
+      /*------------------------------------------Pin settings tab control-----------------------------------------------------*/
+        gtab_pin_settings.visible =  MF({return(gcombo_encpin_enable.options.indexOf(gcombo_encpin_enable.value) > 0)}, Boolean)
+      /*------------------------------------------Interrupt settings tab control-----------------------------------------------------*/
+        ginterruptprio_triggerslice_pm_isr.maxPriority = MF({
+            if((gcheck_timestamp_pmisr.value == true))
+            {
+              return (appres_cpu_ctrl.getVal(["gint_maxInterruptPreemptPriority", "value"]))
+            }
+            else
+            {
+              if(family == "XMC1")
+              {
+                return 3
+              }
+              else
+              {
+                return 63  
+              }
+            }
+            },Integer)
+        if(family != "XMC1")
+        {
+        ginterruptprio_triggerslice_pm_isr.maxSubPriority = MF({
+            if((gcheck_timestamp_pmisr.value == true))
+            {
+              return (appres_cpu_ctrl.getVal(["gint_maxInterruptSubPriority", "value"]))
+            }
+            else
+            {
+                return 63
+            }
+            },Integer)
+        }
+        /*------------------------------------------Event settings tab control-----------------------------------------------------*/
+        gcheck_idx_evt.enabled = MF({return(gcheck_index.value == true)}, Boolean)
+        gcheck_rev_overflow_cnt.enabled = MF({return(gcheck_rev_counter.value == true)}, Boolean)
+        /*-------------------------------------Dummy labels visibility----------------------------------------*/
+        ggroup_cc4_label.visible = false
+		ggroup_pt1_config.visible = false
+		glabel_index.visible = false
+    }
+    
+    /* File Generation*/
+    def generateFiles(){
+        copy("encoder_posif.c", "encoder_posif.c")
+        copy("encoder_posif.h", "encoder_posif.h")
+        generate("encoder_posif_confc.tmpl", "encoder_posif_conf.c")
+        generate("encoder_posif_confh.tmpl", "encoder_posif_conf.h")
+        generate("encoder_posif_extern.tmpl", "encoder_posif_extern.h")
+    }
+}
