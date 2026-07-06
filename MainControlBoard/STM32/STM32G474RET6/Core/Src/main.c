@@ -134,6 +134,7 @@ extern void mcu_analog_init(void);
 extern void mcu_analog_mq_init(void);
 extern void buzzer_init(void);
 extern void buzzer_play(uint32_t sound);
+extern void buzzer_deinit(void);
 /* USER CODE END 0 */
 
 /**
@@ -210,7 +211,6 @@ int main(void)
   buzzer_init();
   buzzer_play(0);
   __enable_irq();
-
   //xmc4200_spi_test();
   /* USER CODE END 2 */
 
@@ -741,7 +741,7 @@ static void MX_TIM17_Init(void)
   htim17.Instance = TIM17;
   htim17.Init.Prescaler = 15999;
   htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim17.Init.Period = 10;
+  htim17.Init.Period = 9;
   htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim17.Init.RepetitionCounter = 0;
   htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
@@ -981,9 +981,6 @@ static void MX_DMA_Init(void)
   /* DMA2_Channel5_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Channel5_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Channel5_IRQn);
-  /* DMAMUX_OVR_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMAMUX_OVR_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMAMUX_OVR_IRQn);
   /* DMA1_Channel8_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel8_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel8_IRQn);
