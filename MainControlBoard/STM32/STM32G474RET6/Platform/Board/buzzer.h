@@ -4,10 +4,6 @@
  * Sequencing through the notes is done via TIM17 interrupts. The buzzer can play a sequence of notes defined
  * as an array of BuzzerNote_t structures. Each note has a frequency and duration.
  * 
- * 
- * @warning This module will be refactored in the future to get rid of CPU operations in the interrupt context. 
- * Target solution is DMA-based buzzer output with a timer to trigger the next note. This will allow for more complex sequences and reduce CPU load.
- * 
  * @date 2026.07.05
  * @author Alan Kudełko
  * @copyright
@@ -54,7 +50,10 @@ enum BuzzerSound_t{
 
 /**@} */
 
-extern const BuzzerNote_t buzzer_test_sequence[];
+extern const BuzzerNote_t buzzer_radio_link_lost_sequence[];
+extern const BuzzerNote_t buzzer_radio_link_established_sequence[];
+extern const BuzzerNote_t buzzer_fault_detected_sequence[];
+extern const BuzzerNote_t buzzer_motor_temp_high_sequence[];
 
 #ifdef __cplusplus
     extern "C"{

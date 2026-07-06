@@ -65,7 +65,6 @@ TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim7;
 TIM_HandleTypeDef htim17;
 TIM_HandleTypeDef htim20;
-DMA_HandleTypeDef hdma_tim17_up;
 
 UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
@@ -209,7 +208,7 @@ int main(void)
   initializeMemory();
   mcu_analog_mq_init(); // Initialize MQ-6 and MQ-7 sensors
   buzzer_init();
-  buzzer_play(0);
+  buzzer_play(2);
   __enable_irq();
   //xmc4200_spi_test();
   /* USER CODE END 2 */
@@ -984,9 +983,6 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel8_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel8_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel8_IRQn);
-  /* DMA2_Channel6_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Channel6_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Channel6_IRQn);
 
 }
 
