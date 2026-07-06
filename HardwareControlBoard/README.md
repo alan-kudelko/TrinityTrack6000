@@ -27,7 +27,7 @@ The project follows **MISRA C:2025** guidelines to ensure code safety, maintaina
 
 ## ✳️ Planned Technologies & Tools
 
-- **MCU:** Infineon XMC4200 / XMC4500
+- **MCU:** Infineon XMC4500
 - **Architecture:** Bare-metal
 - **Memory Management:** Fully static memory allocation
 - **Interfaces:** SPI, I²C, UART
@@ -58,7 +58,7 @@ The project follows **MISRA C:2025** guidelines to ensure code safety, maintaina
 
 ### 🔌 Hardware & Electronics
 
-- **Infineon XMC4200 MCU**
+- **Infineon XMC4500 MCU**
 - H-bridge interface
 - DC motor control
 - Servo control
