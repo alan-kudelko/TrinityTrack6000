@@ -1,9 +1,0 @@
-<map id="spi1_dma_tx_complete" name="spi1_dma_tx_complete">
-<area shape="rect" id="Node000001" title="Callback function called when SPI1 DMA transmission is complete." alt="" coords="244,56,399,83"/>
-<area shape="rect" id="Node000002" href="$_s_p_i___callbacks_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" title="Redefinition of the HAL SPI receive complete callback function. Used to handle the completion of SPI1..." alt="" coords="13,5,188,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,55,161,35,162,30,246,49"/>
-<area shape="rect" id="Node000003" href="$_s_p_i___callbacks_8c.html#a0a99ab4f6aa6ee7dc2abca5483910dde" title="Redefinition of the HAL SPI transmit complete callback function. Used to handle the completion of SPI..." alt="" coords="14,56,187,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,72,188,72,188,67,228,67"/>
-<area shape="rect" id="Node000004" href="$_s_p_i___callbacks_8c.html#a04e63f382f172164c8e7cae4ff5d883c" title="Redefinition of the HAL SPI transmit&#45;receive complete callback function. Used to handle the completio..." alt="" coords="5,107,196,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,89,162,109,161,103,244,84"/>
-</map>

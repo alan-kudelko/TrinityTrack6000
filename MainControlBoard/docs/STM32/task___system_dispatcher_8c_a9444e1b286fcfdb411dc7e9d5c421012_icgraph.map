@@ -1,9 +1,0 @@
-<map id="parse_cli_queue" name="parse_cli_queue">
-<area shape="rect" id="Node000001" title=" " alt="" coords="615,13,731,40"/>
-<area shape="rect" id="Node000002" href="$task___system_dispatcher_8c.html#acf42b7456aae7764a7c7dd4562589edd" title=" " alt="" coords="406,13,567,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="600,29,568,29,568,24,600,24"/>
-<area shape="rect" id="Node000003" href="$task___system_dispatcher_8c.html#aca56553916f4228c0d70551a85c2e8a1" title=" " alt="" coords="197,5,358,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,29,358,29,358,24,390,24"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,13,149,40"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
-</map>

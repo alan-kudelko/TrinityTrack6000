@@ -1,7 +1,0 @@
-<map id="HAL_SPI_TxCpltCallback" name="HAL_SPI_TxCpltCallback">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,179,32"/>
-<area shape="rect" id="Node000002" href="$group___s_p_i1___d_m_a.html#gaaf195c00da311f0133f4f43085e64653" title="Callback function called when SPI1 DMA transmission is complete." alt="" coords="227,5,382,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,16,211,16,211,21,179,21"/>
-<area shape="rect" id="Node000003" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="430,5,542,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,16,415,16,415,21,382,21"/>
-</map>

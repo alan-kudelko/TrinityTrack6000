@@ -1,5 +1,0 @@
-<map id="systemDiagnostics_RENESANS" name="systemDiagnostics_RENESANS">
-<area shape="rect" id="Node000001" title="Perform RENESAS TBD specific diagnostics. This function checks the SPI communication with the RENESAS..." alt="" coords="239,5,454,32"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___diagnostics_8c.html#a38e1fd0858ecefc951f9aa52aec30823" title="Perform system diagnostics. This function runs a series of diagnostics to verify the integrity and fu..." alt="" coords="5,5,191,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
-</map>

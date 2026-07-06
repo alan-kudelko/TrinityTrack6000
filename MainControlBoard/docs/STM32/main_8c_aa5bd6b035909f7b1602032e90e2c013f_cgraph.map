@@ -1,7 +1,0 @@
-<map id="MX_TIM20_Init" name="MX_TIM20_Init">
-<area shape="rect" id="Node000001" title="TIM20 Initialization Function." alt="" coords="5,31,116,57"/>
-<area shape="rect" id="Node000002" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="190,5,292,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,34,174,25,175,31,116,39"/>
-<area shape="rect" id="Node000003" href="$stm32g4xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="164,56,318,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,49,149,54,148,59,116,54"/>
-</map>

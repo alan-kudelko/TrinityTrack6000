@@ -1,7 +1,0 @@
-<map id="ramInfoRAM2" name="ramInfoRAM2">
-<area shape="rect" id="Node000001" title="Print detailed RAM2 diagnostics." alt="" coords="209,31,311,57"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="58,5,108,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,37,108,25,108,19,193,32"/>
-<area shape="rect" id="Node000003" href="$group__task___c_l_i.html#gaff9c7d9576e5b718a18ee9136e2b8011" title="Parse &quot;show&quot; command to display system information. This function is called when the &quot;show&quot; command i..." alt="" coords="5,56,161,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,56,162,61,161,56,193,51"/>
-</map>

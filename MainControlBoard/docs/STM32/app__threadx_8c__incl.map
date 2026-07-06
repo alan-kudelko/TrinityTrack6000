@@ -1,7 +1,0 @@
-<map id="Core/Src/app_threadx.c" name="Core/Src/app_threadx.c">
-<area shape="rect" id="Node000001" title="ThreadX applicative file." alt="" coords="5,5,165,32"/>
-<area shape="rect" id="Node000002" href="$app__threadx_8h.html" title="ThreadX applicative header file." alt="" coords="33,80,137,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,33,88,64,82,64,82,33"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="51,155,119,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,107,88,139,82,139,82,107"/>
-</map>

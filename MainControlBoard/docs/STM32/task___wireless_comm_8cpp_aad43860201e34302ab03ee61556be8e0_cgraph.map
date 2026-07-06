@@ -1,7 +1,0 @@
-<map id="check_packages" name="check_packages">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,125,40"/>
-<area shape="rect" id="Node000002" href="$group___u_s_a_r_t1___d_m_a.html#ga245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="173,13,322,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,24,157,24,157,29,125,29"/>
-<area shape="rect" id="Node000003" href="$group___u_s_a_r_t1___d_m_a.html#ga7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="370,5,512,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,24,355,24,355,29,323,29"/>
-</map>

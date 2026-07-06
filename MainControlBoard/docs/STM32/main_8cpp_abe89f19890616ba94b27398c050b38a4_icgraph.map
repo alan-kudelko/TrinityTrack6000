@@ -1,7 +1,0 @@
-<map id="test_function" name="test_function">
-<area shape="rect" id="Node000001" title=" " alt="" coords="325,5,421,32"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#a0443eb7a80a5df8845d2d0e788013b45" title=" " alt="" coords="197,5,277,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,21,277,21,277,16,309,16"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#af2e15798c128e90cab0c5d02b5bbf9a9" title=" " alt="" coords="5,5,149,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
-</map>

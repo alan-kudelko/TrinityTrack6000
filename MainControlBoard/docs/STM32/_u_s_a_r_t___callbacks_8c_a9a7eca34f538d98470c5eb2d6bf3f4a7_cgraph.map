@@ -1,7 +1,0 @@
-<map id="usart1_dma_rx_complete" name="usart1_dma_rx_complete">
-<area shape="rect" id="Node000001" title="Callback function called when USART1 DMA reception is complete." alt="" coords="5,43,173,69"/>
-<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a9c8112fb591c08eeb982df2f8e0048af" title="Copies data from the source DMA buffer to the receive ring buffer." alt="" coords="221,5,378,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,42,205,37,205,42,173,47"/>
-<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#ac8ef9e25183411bf853e2a9ad431fadf" title="Initializes DMA for USART1 reception." alt="" coords="234,72,365,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,65,219,71,218,77,173,70"/>
-</map>

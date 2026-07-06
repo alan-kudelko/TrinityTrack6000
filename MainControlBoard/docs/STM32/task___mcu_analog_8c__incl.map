@@ -1,9 +1,0 @@
-<map id="Tasks/task_McuAnalog.c" name="Tasks/task_McuAnalog.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="56,5,224,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,126,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,34,91,71,87,67,125,31"/>
-<area shape="rect" id="Node000003" href="$task___mcu_analog_8h.html" title=" " alt="" coords="150,80,280,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,31,193,67,189,71,151,34"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="181,155,248,181"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="218,107,218,139,212,139,212,107"/>
-</map>

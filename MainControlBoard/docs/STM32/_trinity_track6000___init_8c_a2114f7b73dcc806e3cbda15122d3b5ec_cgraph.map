@@ -1,5 +1,0 @@
-<map id="initializeUART" name="initializeUART">
-<area shape="rect" id="Node000001" title="USART Initialization Function." alt="" coords="5,5,110,32"/>
-<area shape="rect" id="Node000002" href="$_trinity_track6000___init_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="158,5,259,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,16,142,16,142,21,110,21"/>
-</map>

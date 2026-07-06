@@ -1,5 +1,0 @@
-<map id="task_CLI_init" name="task_CLI_init">
-<area shape="rect" id="Node000001" title="Initialize CLI task. This function sets up necessary resources for the CLI task, such as semaphores." alt="" coords="5,5,104,32"/>
-<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#ga0669a273fe9b06345bcd52fc2d20e0e7" title="Callback function for processing CLI requests." alt="" coords="152,5,325,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,16,136,16,136,21,104,21"/>
-</map>

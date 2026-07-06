@@ -1,7 +1,0 @@
-<map id="NRF24L01::write_reg_en_rxAddr" name="NRF24L01::write_reg_en_rxAddr">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,151,48"/>
-<area shape="rect" id="Node000002" href="$group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="199,13,336,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,24,183,24,183,29,151,29"/>
-<area shape="rect" id="Node000003" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="384,13,496,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,24,368,24,368,29,336,29"/>
-</map>

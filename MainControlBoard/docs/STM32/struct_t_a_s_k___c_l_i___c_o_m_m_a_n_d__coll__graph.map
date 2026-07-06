@@ -1,9 +1,0 @@
-<map id="TASK_CLI_COMMAND" name="TASK_CLI_COMMAND">
-<area shape="rect" id="Node000001" title=" " alt="" coords="152,104,313,131"/>
-<area shape="rect" id="Node000002" href="$struct_r_a_d_i_o___s_t_a_t_s.html" title=" " alt="" coords="5,5,118,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,38,161,78,207,101,204,106,159,82,92,43"/>
-<area shape="rect" id="Node000003" href="$struct_r_a_d_i_o___r_u_n_t_i_m_e___s_t_a_t_s.html" title=" " alt="" coords="142,5,323,32"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,48,235,104,230,104,230,48"/>
-<area shape="rect" id="Node000004" href="$struct_n_r_f___s_e_t_t_i_n_g_s.html" title=" " alt="" coords="346,5,470,32"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="393,46,376,65,355,82,328,96,299,106,297,101,325,91,352,78,372,62,389,43"/>
-</map>

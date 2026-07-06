@@ -1,9 +1,0 @@
-<map id="initializationStepDone_callback" name="initializationStepDone_callback">
-<area shape="rect" id="Node000001" title=" " alt="" coords="403,5,551,48"/>
-<area shape="rect" id="Node000002" href="$task___wireless_comm_8cpp.html#aae5686395ba6359db8352d09f9d53025" title=" " alt="" coords="264,13,355,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="388,29,356,29,356,24,388,24"/>
-<area shape="rect" id="Node000003" href="$_trinity_track6000___init_8cpp.html#a37b1839968615757fb202e133573b7d3" title="System Initialization Function." alt="" coords="103,13,216,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,29,216,29,216,24,248,24"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,13,55,40"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,29,55,29,55,24,87,24"/>
-</map>

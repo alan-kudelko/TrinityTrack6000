@@ -1,5 +1,0 @@
-<map id="spi1_dma_tx_complete" name="spi1_dma_tx_complete">
-<area shape="rect" id="Node000001" title="Callback function called when SPI1 DMA transmission is complete." alt="" coords="5,5,161,32"/>
-<area shape="rect" id="Node000002" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="209,5,321,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,16,193,16,193,21,161,21"/>
-</map>

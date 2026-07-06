@@ -1,7 +1,0 @@
-<map id="parse_command_switch_mode" name="parse_command_switch_mode">
-<area shape="rect" id="Node000001" title="Parse &quot;mode&quot; command to switch CLI mode. This function is called when the &quot;mode&quot; command is received ..." alt="" coords="5,13,207,40"/>
-<area shape="rect" id="Node000002" href="$_u_s_a_r_t1___dma_8c.html#a245596dce616b996ead2d73a4663329e" title="Enqueues data to be sent over USART1 using DMA if the transmit ring buffer has enough space." alt="" coords="255,13,404,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,24,239,24,239,29,207,29"/>
-<area shape="rect" id="Node000003" href="$_u_s_a_r_t1___dma_8c.html#a7d797b1036e2eff931e508c48810143b" title="Copies data from the transmit ring buffer to the provided DMA buffer." alt="" coords="452,5,594,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="405,24,437,24,437,29,405,29"/>
-</map>

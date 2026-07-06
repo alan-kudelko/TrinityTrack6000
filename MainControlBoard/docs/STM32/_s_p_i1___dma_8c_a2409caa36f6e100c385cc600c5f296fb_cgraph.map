@@ -1,5 +1,0 @@
-<map id="spi1_dma_enq_data" name="spi1_dma_enq_data">
-<area shape="rect" id="Node000001" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="5,5,143,32"/>
-<area shape="rect" id="Node000002" href="$_s_p_i1___dma_8c.html#ae46768023170039e679338a1d5fea831" title=" " alt="" coords="191,5,303,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
-</map>

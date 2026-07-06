@@ -1,5 +1,0 @@
-<map id="usart1_dma_rx_complete" name="usart1_dma_rx_complete">
-<area shape="rect" id="Node000001" title="Callback function called when USART1 DMA reception is complete." alt="" coords="5,5,173,32"/>
-<area shape="rect" id="Node000002" href="$group__task___c_l_i.html#gabf87e61793806b14a5aa63a7b3fc7c62" title=" " alt="" coords="221,5,398,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,16,205,16,205,21,173,21"/>
-</map>

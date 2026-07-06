@@ -1,7 +1,0 @@
-<map id="NRF24L01::flush_tx" name="NRF24L01::flush_tx">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,144,32"/>
-<area shape="rect" id="Node000002" href="$group___s_p_i1___d_m_a.html#ga2409caa36f6e100c385cc600c5f296fb" title="Enqueues an SPI1 transaction for DMA transmission." alt="" coords="192,5,329,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,16,176,16,176,21,144,21"/>
-<area shape="rect" id="Node000003" href="$group___s_p_i1___d_m_a.html#gae46768023170039e679338a1d5fea831" title="Internal function to start SPI1 DMA transmission." alt="" coords="377,5,489,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,16,361,16,361,21,329,21"/>
-</map>

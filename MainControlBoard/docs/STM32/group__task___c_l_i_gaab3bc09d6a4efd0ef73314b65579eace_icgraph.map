@@ -1,7 +1,0 @@
-<map id="callback_cli_data_received" name="callback_cli_data_received">
-<area shape="rect" id="Node000001" title="Callback function for when CLI task receives data from USART. This function is called in the USART1 D..." alt="" coords="418,5,595,32"/>
-<area shape="rect" id="Node000002" href="$group___u_s_a_r_t3___d_m_a.html#ga34dbcebf9df0cd27de3f616b41471303" title="Callback function called when USART3 DMA reception is complete." alt="" coords="203,5,370,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,21,371,21,371,16,402,16"/>
-<area shape="rect" id="Node000003" href="$stm32g4xx__it_8c.html#a0d108a3468b2051548183ee5ca2158a0" title="This function handles USART3 global interrupt / USART3 wake&#45;up interrupt through EXTI line 28." alt="" coords="5,5,155,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,21,155,21,155,16,187,16"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="NRF24L01 Driver" name="NRF24L01 Driver">
-<area shape="rect" id="Node000001" title="Lightweight hardware driver for the NRF24L01 2.4 GHz transceiver." alt="" coords="5,81,129,108"/>
-<area shape="rect" id="Node000005" href="$group___n_r_f24_l01___bit_masks.html" title=" " alt="" coords="181,5,261,32"/>
-<area shape="rect" id="Node000003" href="$group___n_r_f24_l01___commands.html" title=" " alt="" coords="177,56,265,83"/>
-<area shape="rect" id="Node000004" href="$group___n_r_f24_l01___r_x___p_i_p_e_s.html" title=" " alt="" coords="182,107,260,133"/>
-<area shape="rect" id="Node000002" href="$group___n_r_f24_l01___registers.html" title=" " alt="" coords="182,157,260,184"/>
-</map>
