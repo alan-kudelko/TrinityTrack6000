@@ -106,3 +106,57 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
 - 📚 Explore industrial real-time control techniques and embedded safety concepts
 - 🔧 Simplify debugging through comprehensive diagnostics and trace support
 - 🌐 Create a reusable motion-control platform for future embedded projects
+
+---
+
+## Technical Table of Contents
+
+1. [Module Structure](#1--module-structure)
+2. [System Architecture](#-2-system-architecture)
+   - [2.1 STM32G4 (Main Controller)](#21-xmc4500-main-controller)
+   - [2.2 Module Block Diagram](#23-module-block-diagram)
+
+---
+
+## ⚙️ Technical Overview 
+
+### 1. 📁 Module Structure
+
+The module is organized around firmware, hardware design files, and supporting documentation.
+
+* `XMC4500_F144/` – firmware for the Infineon XMC4500 real-time controller
+* `PCB/` – electrical schematics, PCB design files, revision history, and hardware release notes
+* `docs/` – technical documentation, design notes, and development logs
+* `Media/` – schematics, PCB previews, diagrams, and project images
+* `README.md` – module documentation
+
+---
+
+### 🧠 2. System Architecture
+
+The HardwareControlBoard is built around the **Infineon XMC4500**, which serves as a dedicated real-time controller for power electronics and actuator control.
+
+The board provides deterministic control of DC motors, stepper motors, heaters, pumps, and auxiliary outputs while continuously monitoring electrical and thermal parameters. It operates as a hardware execution layer, receiving high-level commands from the MainControlBoard and executing them with precise timing.
+
+#### 2.1 XMC4500 (Real-Time Controller)
+
+Acts as the dedicated real-time controller for power electronics and actuator management.
+
+**Core responsibilities:**
+
+- Closed-loop current and speed control for brushed DC motors
+- PWM generation for H-bridges, heaters, pumps, and auxiliary outputs
+- STEP/DIR generation for external stepper motor drivers
+- Current acquisition using synchronized ADC measurements
+- Temperature monitoring of power stages and motors
+- Quadrature encoder acquisition for feedback control
+- Hardware fault detection and protection handling
+- Communication with the `MainControlBoard` via SPI
+- Transition to a predefined safe state upon communication timeout or critical fault detection
+
+---
+
+#### 2.2 Module Block Diagram
+
+High-level block diagram showing the internal architecture of the HardwareControlBoard, including the XMC4500, power stages, current sensing circuits, stepper motor interfaces, communication links, and signal flow between the analog, digital, and power domains.
+
