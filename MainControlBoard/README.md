@@ -107,24 +107,6 @@ The source code is fully documented using **Doxygen**, which generates up-to-dat
 - 🧩 Implement low-level memory management techniques for optimized and reliable resource control
 - 🧱 Integrate tightly with custom hardware (PCB, sensors, actuators)
 - 🌐 Explore principles of distributed embedded systems and multi-MCU communication commonly used in commercial applications
-  
----
-
-## 🗺️ Development Progress
-
-### Build System & Tooling
-- ✅ Migration to VS Code + CMake + Ninja (arm-gcc toolchain)
-- ✅ Support for Debug / Release builds
-- ✅ Verified `.elf` and `.map` outputs for flashing and debugging
-
-### STM32G4
-- ✅ Custom linker script with extended memory sections (RAM2, CCSRAM, diagnostics)
-- 🔄 System initialization and startup sequence
-- 🔄 Runtime diagnostics (RAM usage, stack monitoring via UART)
-
-### XMC4200
-- ✅ Migration to CMake-based build system (DAVE-generated sources)
-- 🔄 SPI communication with STM32 (in progress)
 
 📓 Detailed development notes: [docs/dev_log](docs/dev_log/dev_log.md)
 
