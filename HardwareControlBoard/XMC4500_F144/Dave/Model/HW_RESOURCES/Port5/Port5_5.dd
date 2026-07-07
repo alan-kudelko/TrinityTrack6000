@@ -232,7 +232,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC1_4" URI="http://resources/0.1.30/port/p/5/iocr0/pc1_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="15" stopPos="15" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P5.0 / #84" URI="http://resources/0.1.30/port/p/5/pad/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_0.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/5/out/p0"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/ps0"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/pr0"/>

@@ -3,6 +3,7 @@
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../SEGGER_RTT/v4_0_12/SEGGER_RTT_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../UART/v4_1_14/UART_0.app#//@requiredApps.1"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PIN_INTERRUPT/v4_0_4/PIN_INTERRUPT_0.app#//@requiredApps.0"/>
   <properties singleton="true" sharable="true"/>
   <virtualSignals name="nmi_irq" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_nmi_irq" hwSignal="nmi_in" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="jtag tck" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_jtag_tck" hwSignal="db_tck" hwResource="//@hwResources.5" required="false" visible="true"/>

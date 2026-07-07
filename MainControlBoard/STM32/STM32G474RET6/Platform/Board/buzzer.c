@@ -30,7 +30,9 @@ const BuzzerNote_t buzzer_radio_link_established_sequence[BUZZER_SOUND_SEQUENCE_
 }; // No need for further experimentation
 
 const BuzzerNote_t buzzer_fault_detected_sequence[BUZZER_SOUND_SEQUENCE_MAX_LENGTH]={
-    {1000,5000}
+    {0,2000},
+    {2000,2000},
+    {1000,2000}
 }; // No need for further experimentation
 
 const BuzzerNote_t buzzer_motor_temp_high_sequence[BUZZER_SOUND_SEQUENCE_MAX_LENGTH]={
@@ -52,7 +54,8 @@ const BuzzerNote_t buzzer_motor_temp_high_sequence[BUZZER_SOUND_SEQUENCE_MAX_LEN
 
 static volatile int16_t buzzer_sequence_index=0; // Index for the current note in the buzzer sequence
 static BuzzerNote_t*buzzer_current_sequence=NULL; // Pointer to the current buzzer sequence being played
-
+// Mamy jakiegos buga ze 1 dzwiek jest pomijany nie wiadomo czemu albo trwa za krotko
+// moze od razu wchodzi w pending przerwanie albo cos
 void buzzer_init(void){
     // Initialize the buzzer hardware (e.g., configure GPIO pin for TIM1_CH1 output)
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_4);
@@ -92,6 +95,7 @@ void buzzer_play(uint32_t sound){
 
         __HAL_TIM_SET_COUNTER(&htim17,0); // Reset the counter for TIM17
         __HAL_TIM_SET_AUTORELOAD(&htim17,buzzer_current_sequence[buzzer_sequence_index].duration_ms*10-1);
+        __HAL_TIM_CLEAR_FLAG(&htim17,TIM_FLAG_UPDATE); // Clear any pending update flag for TIM17
         HAL_TIM_Base_Start_IT(&htim17); // Start TIM17 in interrupt mode to handle buzzer sequencing
     }
 }

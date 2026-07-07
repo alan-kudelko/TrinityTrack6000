@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="UART" URI="http://resources/4.1.14/app/UART/0" description="UART APP configures a USIC channel to perform &#xA;transmit &amp; receive operations using UART protocol." mode="NOTSHARABLE" version="4.1.14" minDaveVersion="4.0.0" instanceLabel="UART_0" appLabel="">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="UART" URI="http://resources/4.1.14/app/UART/0" description="UART APP configures a USIC channel to perform &#xA;transmit &amp; receive operations using UART protocol." mode="NOTSHARABLE" version="4.1.14" minDaveVersion="4.0.0" instanceLabel="UART_Debug" appLabel="">
   <properties provideInit="true"/>
   <virtualSignals name="dx0_input_stage" URI="http://resources/4.1.14/app/UART/0/vs_uart_dx0ins" hwSignal="dx0ins" hwResource="//@hwResources.0"/>
   <virtualSignals name="dx3_input_stage" URI="http://resources/4.1.14/app/UART/0/vs_uart_dx3ins" hwSignal="dx3ins" hwResource="//@hwResources.0"/>

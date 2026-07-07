@@ -208,8 +208,12 @@ int main(void)
   initializeMemory();
   mcu_analog_mq_init(); // Initialize MQ-6 and MQ-7 sensors
   buzzer_init();
+    __enable_irq();
   buzzer_play(2);
-  __enable_irq();
+  uint32_t i=0;
+  for(i=0;i<1000000;i++){
+    asm("nop");
+  }
   //xmc4200_spi_test();
   /* USER CODE END 2 */
 

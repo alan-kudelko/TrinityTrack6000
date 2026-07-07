@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ENCODER_POSIF" URI="http://resources/4.0.6/app/ENCODER_POSIF/1" description="APP gets the motor position and&#xA;speed using  incremental encoder." mode="NOTSHARABLE" version="4.0.6" minDaveVersion="4.0.0" instanceLabel="ENCODER_POSIF_1" appLabel="" containingProxySignal="true">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ENCODER_POSIF" URI="http://resources/4.0.6/app/ENCODER_POSIF/1" description="APP gets the motor position and&#xA;speed using  incremental encoder." mode="NOTSHARABLE" version="4.0.6" minDaveVersion="4.0.0" instanceLabel="ENCODER_POSIF_B" appLabel="" containingProxySignal="true">
   <properties provideInit="true"/>
   <virtualSignals name="phase_a" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_input0" hwSignal="ipos0" hwResource="//@hwResources.4" visible="true"/>
   <virtualSignals name="phase_b" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_input1" hwSignal="ipos1" hwResource="//@hwResources.4" visible="true"/>
