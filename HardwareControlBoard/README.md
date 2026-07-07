@@ -160,3 +160,87 @@ Acts as the dedicated real-time controller for power electronics and actuator ma
 
 High-level block diagram showing the internal architecture of the HardwareControlBoard, including the XMC4500, power stages, current sensing circuits, stepper motor interfaces, communication links, and signal flow between the analog, digital, and power domains.
 
+### 📋 3. Design Requirements
+
+This chapter defines the electrical and functional requirements that guided the hardware architecture and component selection.
+
+All subsequent design decisions, including power electronics, analog front-end, protection mechanisms, and PCB layout, are based on the requirements listed below.
+
+#### 3.1 Functional Requirements
+
+The HardwareControlBoard is responsible for controlling all power-related actuators and acquiring real-time feedback from the platform.
+
+The module shall provide the following functionality:
+
+| Function | Quantity | Description |
+|----------|---------:|-------------|
+| Brushed DC Motor Control | 2 | Independent closed-loop control of left and right drive motors |
+| Winch Motor Control | 1 | Closed-loop control of the winch motor |
+| Stepper Motor Control | 6 | STEP/DIR control for external stepper motor drivers |
+| Heater Control | 1 | PWM control of the glycerin vaporizer heater |
+| Membrane Pump Control | 1 | PWM control of the smoke generator pump |
+| Cooling Fan Control | 2 | PWM control of enclosure cooling fans |
+| Current Measurement | 5 TBD | Current acquisition for all power stages |
+| Temperature Measurement | TBD | Monitoring of H-bridges, motors, and heater |
+| Encoder Acquisition | 2 | Quadrature encoder feedback for drive motors |
+| Fault Monitoring | TBD | Detection of hardware faults and driver error signals |
+| Level Monitoring | 1 | Glycerin reservoir level detection |
+| SPI Communication | 1 | Communication with the MainControlBoard |
+| Debug Interface | 1 | SWD, SWO, ETM and UART debugging support |
+| External Lighting Control | Multiple | Control of external LED lighting and status indicators |
+| Laser Control | 1 | Control of the onboard aiming laser module |
+
+##### 3.2 Low Power Section
+
+The Low Power section is dedicated to driving low-current loads that do not require dedicated H-bridge topologies or closed-loop current control.
+
+All outputs in this section share a common hardware architecture based on low-side N-channel MOSFET switches and a common gate driver, providing a standardized, compact, and scalable design.
+
+**Common Requirements**
+
+- 12 V nominal supply
+- Low-side switching topology
+- Common MOSFET and gate driver architecture
+- PWM capability up to 40 kHz
+- Individual enable and software control
+- Designed for loads up to 1 A continuous
+- Overcurrent protection implemented at the system level
+- Modular and reusable hardware design
+
+##### 3.3 Medium Power Section
+
+The Medium Power section is dedicated to driving medium-power actuators that require dedicated power stages, current monitoring, or integrated motor drivers.
+
+Unlike the Low Power section, these loads require application-specific control strategies, including H-bridge topologies, integrated motor drivers, or closed-loop current measurement.
+
+**Common Requirements**
+
+- 12 V nominal supply
+- Continuous load power up to 50 W
+- PWM operation up to 40 kHz (application dependent)
+- Current measurement for protection and diagnostics
+- Hardware fault monitoring
+- Thermal monitoring where applicable
+- Modular and reusable hardware design
+
+### 3.4 High Power Section
+
+The High Power section is dedicated to the propulsion system and consists of discrete H-bridge power stages designed for high-current brushed DC motors.
+
+Unlike the Low and Medium Power sections, these outputs implement closed-loop current and speed control, providing deterministic real-time motor control, fast dynamic response, and comprehensive hardware protection.
+
+**Common Requirements**
+
+- 12 V nominal supply
+- Continuous output current up to 30 A per motor
+- Peak measurement range up to ±50 A
+- Discrete full H-bridge topology
+- PWM operation up to 40 kHz
+- Closed-loop current control
+- Closed-loop speed control
+- Quadrature encoder feedback
+- Low-side current sensing using shunt resistors
+- Real-time overcurrent and fault detection
+- Temperature monitoring of the power stage
+- Modular and reusable hardware architecture
+
