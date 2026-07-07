@@ -113,8 +113,8 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
 
 1. [Module Structure](#1--module-structure)
 2. [System Architecture](#-2-system-architecture)
-   - [2.1 STM32G4 (Main Controller)](#21-xmc4500-main-controller)
-   - [2.2 Module Block Diagram](#23-module-block-diagram)
+   - [2.1 XMC4500 (Real-Time Controller)](#21-xmc4500-real-time-controller)
+   - [2.2 Module Block Diagram](#22-module-block-diagram)
 
 ---
 
