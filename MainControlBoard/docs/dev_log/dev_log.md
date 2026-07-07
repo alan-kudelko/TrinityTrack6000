@@ -279,7 +279,7 @@ This architecture ensures:
 
 ### [013] ADC + DMA
 
-> ❌ **Status: ISSUE**
+> ✅ **Status: OK**
 
 **Notes:**
 - DMA_HT interrupt should be disabled
@@ -369,7 +369,7 @@ This architecture ensures:
 
 ### [022] ADC1 initialization refactor
 
-> 🔄 **Status: WIP**
+> ✅ **Status: OK**
 
 **Notes:**
 - Introduce helper function wrapping HAL initialization
