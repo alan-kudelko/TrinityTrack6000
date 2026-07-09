@@ -119,10 +119,16 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
    - [3.1 Low Power Section (LPS)](#31-low-power-section-lps)
    - [3.2 Medium Power Section (MPS)](#32-medium-power-section-mps)
    - [3.3 High Power Section (HPS)](#33-high-power-section-hps)
-4. [Functional Requirements](#-3-functional-requirements)
-   - [3.1 Low Power Section (LPS)](#31-low-power-section-lps)
-   - [3.2 Medium Power Section (MPS)](#32-medium-power-section-mps)
-   - [3.3 High Power Section (HPS)](#33-high-power-section-hps)
+4. [Electrical Requirements](#-4-electrical-requirements)
+   - [4.1 Common Electrical Requirements](#41-common-electrical-requirements)
+   - [4.2 Analog Voltage Reference (AVR)](#42-analog-voltage-reference-avr)
+   - [4.3 Low Power Section (LPS)](#43-low-power-section-lps)
+   - [4.4 Medium Power Section (MPS)](#44-medium-power-section-mps)
+       - [4.4.1 Heater Section](#441-heater-section)
+       - [4.4.2 Winch Motor](#442-winch-motor)
+       - [4.4.3 Stepper / Servo](#443-stepper--servo)
+   - [4.5 High Power Section (HPS)](#45-high-power-section-hps)
+  
 ---
 
 ## ⚙️ Technical Overview 
