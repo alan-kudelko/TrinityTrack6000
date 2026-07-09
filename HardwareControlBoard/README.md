@@ -20,7 +20,7 @@ The controller includes dedicated **safety and diagnostic mechanisms**, includin
 
 The project follows **MISRA C:2025** guidelines to ensure code safety, maintainability and portability.
 
-> 🔄 **Status:** Requirements definition and architecture design  
+> 🔄 **Status:** Requirements definition
 > 🔧 **Goal:** Develop a dedicated real-time controller for power electronics and motion control, while exploring deterministic embedded software architecture, safety mechanisms and industrial motor control techniques.
 
 ---
@@ -97,14 +97,11 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
 
 ## 🧠 Design Goals
 
-- 💾 Use 100% static memory allocation (no malloc, no heap)
 - ⚡ Utilize hardware peripherals whenever possible to minimize CPU overhead.
 - 🎯 Achieve deterministic execution for all time-critical control tasks.
 - 🛡️ Implement hardware-oriented safety mechanisms and fault handling
-- 🔁 Provide reliable communication with the MainControlBoard
 - 🧱 Build a modular control platform for motors, servos and future actuators
 - 📚 Explore industrial real-time control techniques and embedded safety concepts
-- 🔧 Simplify debugging through comprehensive diagnostics and trace support
 - 🌐 Create a reusable motion-control platform for future embedded projects
 
 ---
@@ -276,7 +273,16 @@ The following electrical requirements apply to all hardware blocks of the `Hardw
 
 #### 4.2 Analog Voltage Reference (AVR)
 
-**WIP**
+The `HardwareControlBoard` shall use a common precision voltage reference for all analog measurements to ensure consistent scaling, repeatability, and measurement accuracy across the entire system.
+
+**Requirements**
+
+- A single precision voltage reference shall be used for the XMC4500 ADC reference input.
+- The same voltage reference shall be used by all analog signal conditioning circuits.
+- All current sensing circuits shall use a common analog reference to maintain measurement consistency.
+- Analog offset voltages required for bidirectional current measurement shall be derived from the common voltage reference.
+- The analog reference distribution shall minimize noise coupling from high-current switching circuits.
+- The analog reference shall remain independent from the digital 3.3 V supply accuracy.
 
 #### 4.3 Low Power Section (LPS)
 
@@ -345,7 +351,22 @@ As a result, this section serves as the primary research and development area of
 - Temperature monitoring of the power stage
 - Hardware fault monitoring
 
+#### 4.6 Current Measurement Requirements
 
+The `HardwareControlBoard` shall utilize a standardized analog front-end architecture for all current measurement channels whenever practical.
+
+**Requirements**
+
+- All current measurement channels shall use a common analog front-end architecture.
+- A fixed-gain amplifier topology shall be preferred to maximize hardware reuse and simplify firmware calibration.
+- The measurement range of individual channels shall be primarily defined by the selected shunt resistor rather than amplifier gain.
+- Bidirectional current measurement shall use a common analog offset derived from the shared analog voltage reference.
+- Differential current sensing shall be used where required to improve measurement accuracy and noise immunity.
+- Kelvin sensing shall be used for high-current shunt measurements.
+
+
+
+---
 
 
 
