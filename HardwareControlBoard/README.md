@@ -119,7 +119,10 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
    - [3.1 Low Power Section (LPS)](#31-low-power-section-lps)
    - [3.2 Medium Power Section (MPS)](#32-medium-power-section-mps)
    - [3.3 High Power Section (HPS)](#33-high-power-section-hps)
-
+4. [Functional Requirements](#-3-functional-requirements)
+   - [3.1 Low Power Section (LPS)](#31-low-power-section-lps)
+   - [3.2 Medium Power Section (MPS)](#32-medium-power-section-mps)
+   - [3.3 High Power Section (HPS)](#33-high-power-section-hps)
 ---
 
 ## ⚙️ Technical Overview 
@@ -166,6 +169,8 @@ High-level block diagram showing the internal architecture of the HardwareContro
 
 **WIP**
 
+---
+
 ### 📋 3. Functional Requirements
 
 This chapter defines the electrical and functional requirements that guided the hardware architecture and component selection.
@@ -186,7 +191,7 @@ The module shall provide the following functionality:
 | Winch Motor Control | 1 | Closed-loop control of the winch motor |
 | Stepper Motor Control | 6 | STEP/DIR control for external stepper motor drivers |
 | Heater Control | 1 | PWM control of the glycerin vaporizer heater |
-| Membrane Pump Control | 1 | PWM control of the smoke generator pump |
+| Glycerin Pump Control | 1 | PWM control of the smoke generator pump |
 | Cooling Fan Control | 2 | PWM control of enclosure cooling fans |
 | Current Measurement | 5 TBD | Current acquisition for all power stages |
 | Temperature Measurement | TBD | Monitoring of H-bridges, motors, and heater |
@@ -200,55 +205,141 @@ The module shall provide the following functionality:
 
 #### 3.1 Low Power Section (LPS)
 
-The Low Power section is dedicated to driving low-current loads that do not require dedicated H-bridge topologies or closed-loop current control.
+The Low Power Section provides switching and PWM control for auxiliary low-current loads that do not require dedicated power stages or closed-loop current control.
 
-All outputs in this section share a common hardware architecture based on low-side N-channel MOSFET switches and a common gate driver, providing a standardized, compact, and scalable design.
+Typical applications include:
 
-**Common Requirements**
-
-- 12 V nominal supply
-- Low-side switching topology
-- Common MOSFET and gate driver architecture
-- PWM capability up to 40 kHz
-- Individual enable and software control
-- Designed for loads up to 1 A continuous
-- Overcurrent protection implemented at the system level
-- Modular and reusable hardware design
+- External LED lighting
+- Status indicator LEDs
+- Laser module
+- Logic-level control outputs
+- Auxiliary digital outputs
+- Future low-current peripherals
+- Glycerin pump
+- Chassis fans
 
 #### 3.2 Medium Power Section (MPS)
 
-The Medium Power section is dedicated to driving medium-power actuators that require dedicated power stages, current monitoring, or integrated motor drivers.
+The Medium Power Section provides dedicated control of medium-power actuators requiring application-specific power stages, current monitoring, or closed-loop control.
 
-Unlike the Low Power section, these loads require application-specific control strategies, including H-bridge topologies, integrated motor drivers, or closed-loop current measurement.
+Typical applications include:
 
-**Common Requirements**
-
-- 12 V nominal supply
-- Continuous load power up to 50 W
-- PWM operation up to 40 kHz (application dependent)
-- Current measurement for protection and diagnostics
-- Hardware fault monitoring
-- Thermal monitoring where applicable
-- Modular and reusable hardware design
+- Winch DC motor with current feedback
+- Glycerin vaporizer heater with closed-loop power/current control
+- Stepper motor interfaces (external STEP/DIR drivers) or Servo motor control
 
 #### 3.3 High Power Section (HPS)
 
-The High Power section is dedicated to the propulsion system and consists of discrete H-bridge power stages designed for high-current brushed DC motors.
+The High Power Section is dedicated to the propulsion system and provides deterministic closed-loop control of the platform's high-current brushed DC drive motors.
 
-Unlike the Low and Medium Power sections, these outputs implement closed-loop current and speed control, providing deterministic real-time motor control, fast dynamic response, and comprehensive hardware protection.
+Unlike the Low and Medium Power sections, the propulsion system implements cascaded current and velocity control loops to achieve precise torque regulation, fast dynamic response, and reliable vehicle motion under varying load conditions.
+
+Typical functionality includes:
+
+- Closed-loop current control
+- Closed-loop velocity control
+- Cascaded Current → Velocity control architecture
+- Incremental quadrature encoder feedback
+- Real-time motor current measurement
+- H-bridge temperature monitoring
+- Gate driver temperature and fault monitoring
+- Hardware fault detection and protection
+
+---
+
+### ⚡ 4. Electrical Requirements
+
+This chapter defines the electrical requirements that guide the implementation of the `HardwareControlBoard`.
+
+The requirements specified in this section define the electrical characteristics, measurement architecture, protection mechanisms, analog front-end, power stages, and PCB design principles used throughout the project.
+
+Whenever practical, hardware building blocks shall be standardized and reused across the design to simplify validation, manufacturing, firmware development, and future scalability.
+
+Exceptions are permitted only when required by specific electrical, thermal, safety, or performance constraints.
+
+#### 4.1 Common Electrical Requirements
+
+The following electrical requirements apply to all hardware blocks of the `HardwareControlBoard` unless explicitly stated otherwise.
+
+- A global hardware **POWER_ENABLE** signal shall be provided by the `MainControlBoard` and used to enable or disable all power stages.
+- All power stages shall implement a dedicated hardware enable input controlled by the global **POWER_ENABLE** signal.
+- Power stages shall default to a safe disabled state after power-up or reset until explicitly enabled.
+- Precision analog measurements shall use a common voltage reference to ensure consistent ADC scaling and measurement accuracy.
+- All analog measurement circuits shall reference the same ADC reference voltage unless specific application requirements dictate otherwise.
+- Dedicated implementations are permitted only when justified by electrical, thermal, safety, or performance requirements.
+
+#### 4.2 Analog Voltage Reference (AVR)
+
+**WIP**
+
+#### 4.3 Low Power Section (LPS)
+
+- 12 V nominal supply
+- Low-side switching topology
+- PWM capability up to 40 kHz
+- Common MOSFET architecture
+- Standardized gate driver architecture for PWM-controlled outputs
+- Standardized logic buffer architecture for non-PWM digital outputs
+- Individual software control for each output
+- Designed for loads up to 1 A continuous
+- Modular and reusable hardware building blocks
+
+#### 4.4 Medium Power Section (MPS)
 
 **Common Requirements**
 
 - 12 V nominal supply
-- Continuous output current up to 30 A per motor
-- Peak measurement range up to ±50 A
-- Discrete full H-bridge topology
-- PWM operation up to 40 kHz
+- PWM operation up to 40 kHz (application dependent)
+- Current measurement for diagnostics and protection
+- Thermal monitoring where applicable
+- Modular and reusable hardware building blocks
+
+##### 4.4.1 Heater Section
+
+- Low-side MOSFET topology
 - Closed-loop current control
-- Closed-loop speed control
-- Quadrature encoder feedback
+- Heater current measurement
+- Heater temperature measurement
+- PWM power regulation
+- Overtemperature protection
+- 
+##### 4.4.2 Winch Motor
+
+- Full H-bridge topology
+- Closed-loop current control
+- Motor current measurement
+- Motor temperature monitoring
+- H-bridge temperature monitoring
+- Hardware fault detection
+
+#### 4.4.3 Stepper / Servo
+
+**WIP**
+
+#### 4.5 High Power Section (HPS)
+
+The High Power Section is considered the primary engineering challenge of the `HardwareControlBoard`.
+Unlike the remaining sections, it combines high-current power electronics, precision analog measurements, closed-loop control algorithms, thermal management, hardware protection mechanisms, and high-speed PCB layout techniques within a single subsystem.
+
+As a result, this section serves as the primary research and development area of the project.
+
+**Electrical Requirements**
+
+- 12 V nominal supply
+- Continuous operating current up to 20 A per motor
+- Rated current up to 30 A per motor
+- Peak current measurement range up to ±50 A
+- Discrete full H-bridge topology for each motor channel
+- PWM operation up to 40 kHz
+- Dedicated half-bridge gate driver for each H-bridge
+- Dead-time generation shall be performed by the XMC4500 CCU8 peripheral
 - Low-side current sensing using shunt resistors
-- Real-time overcurrent and fault detection
+- Differential current measurement using Kelvin sensing
+- Real-time current measurement for control, diagnostics and protection
 - Temperature monitoring of the power stage
-- Modular and reusable hardware architecture
+- Hardware fault monitoring
+
+
+
+
 
