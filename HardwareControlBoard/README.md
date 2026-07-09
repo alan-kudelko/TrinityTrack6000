@@ -314,7 +314,7 @@ The `HardwareControlBoard` shall use a common precision voltage reference for al
 - Heater temperature measurement
 - PWM power regulation
 - Overtemperature protection
-- 
+  
 ##### 4.4.2 Winch Motor
 
 - Full H-bridge topology
