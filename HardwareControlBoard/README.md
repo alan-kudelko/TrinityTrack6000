@@ -116,7 +116,9 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
    - [2.1 XMC4500 (Real-Time Controller)](#21-xmc4500-real-time-controller)
    - [2.2 Module Block Diagram](#22-module-block-diagram)
 3. [Functional Requirements](#-3-functional-requirements)
-   - [3.1 Module Block Diagram](#22-module-block-diagram)
+   - [3.1 Low Power Section (LPS)](#31-low-power-section-lps)
+   - [3.2 Medium Power Section (MPS)](#32-medium-power-section-mps)
+   - [3.3 High Power Section (HPS)](#33-high-power-section-hps)
 
 ---
 
@@ -162,6 +164,8 @@ Acts as the dedicated real-time controller for power electronics and actuator ma
 
 High-level block diagram showing the internal architecture of the HardwareControlBoard, including the XMC4500, power stages, current sensing circuits, stepper motor interfaces, communication links, and signal flow between the analog, digital, and power domains.
 
+**WIP**
+
 ### 📋 3. Functional Requirements
 
 This chapter defines the electrical and functional requirements that guided the hardware architecture and component selection.
@@ -190,7 +194,7 @@ The module shall provide the following functionality:
 | External Lighting Control | Multiple | Control of external LED lighting and status indicators |
 | Laser Control | 1 | Control of the onboard aiming laser module |
 
-##### 3.1 Low Power Section (LPS)
+#### 3.1 Low Power Section (LPS)
 
 The Low Power section is dedicated to driving low-current loads that do not require dedicated H-bridge topologies or closed-loop current control.
 
@@ -207,7 +211,7 @@ All outputs in this section share a common hardware architecture based on low-si
 - Overcurrent protection implemented at the system level
 - Modular and reusable hardware design
 
-##### 3.2 Medium Power Section (MPS)
+#### 3.2 Medium Power Section (MPS)
 
 The Medium Power section is dedicated to driving medium-power actuators that require dedicated power stages, current monitoring, or integrated motor drivers.
 
@@ -223,7 +227,7 @@ Unlike the Low Power section, these loads require application-specific control s
 - Thermal monitoring where applicable
 - Modular and reusable hardware design
 
-### 3.3 High Power Section (HPS)
+#### 3.3 High Power Section (HPS)
 
 The High Power section is dedicated to the propulsion system and consists of discrete H-bridge power stages designed for high-current brushed DC motors.
 
