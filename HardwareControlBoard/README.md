@@ -174,6 +174,10 @@ All subsequent design decisions, including power electronics, analog front-end, 
 
 The HardwareControlBoard is responsible for controlling all power-related actuators and acquiring real-time feedback from the platform.
 
+**Notes:**
+- The design shall maximize reuse of proven hardware building blocks across all power sections.
+- Where electrical requirements are equivalent, identical circuit topologies and components shall be used. Dedicated implementations shall only be introduced when required by significantly different operating conditions or functional requirements.
+
 The module shall provide the following functionality:
 
 | Function | Quantity | Description |
