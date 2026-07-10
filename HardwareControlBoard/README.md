@@ -25,6 +25,12 @@ The project follows **MISRA C:2025** guidelines to ensure code safety, maintaina
 
 ---
 
+## Preview
+
+**WIP**
+
+---
+
 ## ✳️ Planned Technologies & Tools
 
 - **MCU:** Infineon XMC4500
@@ -127,6 +133,7 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
            - [4.4.3.1 Stepper Motors](#4431-stepper-motors)
            - [4.4.3.2 RC Servos](#4432-rc-servos)
    - [4.5 High Power Section (HPS)](#45-high-power-section-hps)
+  5. [Design Calculations](#-5-design-calculations)
 
 ---
 
@@ -382,22 +389,33 @@ As a result, this section serves as the primary research and development area of
 - Temperature monitoring of the power stage
 - Hardware fault monitoring
 
-#### 4.6 Current Measurement Requirements
+#### 4.6 Analog Front-End (AFE)
 
-The `HardwareControlBoard` shall utilize a standardized analog front-end architecture for all current measurement channels whenever practical.
+The `HardwareControlBoard` shall utilize a standardized analog front-end architecture for all measurement channels whenever practical.
+
+The primary objective is to maximize hardware reuse, simplify PCB layout, reduce firmware complexity, and minimize calibration effort.
 
 **Requirements**
 
-- All current measurement channels shall use a common analog front-end architecture.
-- A fixed-gain amplifier topology shall be preferred to maximize hardware reuse and simplify firmware calibration.
-- The measurement range of individual channels shall be primarily defined by the selected shunt resistor rather than amplifier gain.
-- Bidirectional current measurement shall use a common analog offset derived from the shared analog voltage reference.
-- Differential current sensing shall be used where required to improve measurement accuracy and noise immunity.
-- Kelvin sensing shall be used for high-current shunt measurements.
+- Common precision voltage reference shared across all analog measurement circuits
+- Standardized current sense amplifier family
+- Fixed-gain current measurement architecture preferred
+- Measurement range defined primarily by the selected shunt resistor
+- Common analog offset for bidirectional current measurement
+- Kelvin sensing for all high-current measurements
+- Dedicated analog filtering where required
+- Modular analog building blocks reused across all power sections whenever possible
+- Exceptions shall only be introduced where electrical requirements cannot be satisfied by the standardized architecture
+
+---
+
+### 📐 5. Design Calculations
+
+#### 5.1 Analog Front-End
+
 
 
 
 ---
-
 
 
