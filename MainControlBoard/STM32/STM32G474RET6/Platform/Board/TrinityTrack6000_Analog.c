@@ -79,7 +79,6 @@ void mcu_analog_tim6_callback(void){
         // If the current cycle duration has elapsed, switch to the next cycle
         cycle_state=(cycle_state+1)%2;
         counter=0; // Reset the counter for the new cycle
-
         // Set the PWM fill value based on the current cycle state
         __HAL_TIM_SET_COMPARE(&htim20,TIM_CHANNEL_2,heater_pwm_fills[cycle_state]);
     }

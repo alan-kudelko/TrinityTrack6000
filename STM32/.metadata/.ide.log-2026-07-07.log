@@ -1,0 +1,237 @@
+2026-07-08 00:12:05,773 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1459249936 Bytes (1577058304)
+2026-07-08 00:12:07,446 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1485464336 Bytes (1577058304)
+2026-07-08 00:12:09,266 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 778350688 Bytes (1577058304)
+2026-07-08 00:12:10,901 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM6_7G4
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM6_7G4
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2026-07-08 00:12:10,902 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2026-07-08 00:12:10,903 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-07-08 00:12:10,903 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-07-08 00:12:10,903 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-07-08 00:12:10,903 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2026-07-08 00:12:10,903 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2026-07-08 00:12:10,903 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CORDIC
+2026-07-08 00:12:10,904 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-07-08 00:12:10,905 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2026-07-08 00:12:10,910 [WARN] IP:2250 - TX_NO_TIMER not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - ALIGN_TYPE_VAL not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - TX_BASEPRI_VALUE not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - TX_APP_THREAD_ENTRY not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - TX_APP_THREAD_NAME not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - TX_APP_THREAD_PRIO not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - TX_APP_STACK_SIZE not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,911 [WARN] IP:2250 - TX_SEMAPHORE_NAME not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,912 [WARN] IP:2250 - TX_SEMAPHORE_COUNT not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,912 [WARN] IP:2250 - TX_MUTEX_NAME not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,912 [WARN] IP:2250 - TX_Mutex_INHERITANCE not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,912 [WARN] IP:2250 - TX_MSG_QUEUE_NAME not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,912 [WARN] IP:2250 - TX_MSG_SIZE_WORDS not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,912 [WARN] IP:2250 - TX_NB_MSG not found: check if there is a RefParameter without a condition.
+2026-07-08 00:12:10,918 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,919 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,920 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,920 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,920 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,920 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,920 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,921 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,921 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,921 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,921 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,922 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,924 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,925 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,925 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:10,928 [INFO] CodeGenerator:892 - code generatio: config db path: D:\Programy\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-07-08 00:12:11,346 [INFO] IP:3329 - RTE Config file name : RTE_Component
+2026-07-08 00:12:11,346 [INFO] IP:3347 - RTE template : RTE_Components.ftl
+2026-07-08 00:12:11,378 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\license.tmp_save
+2026-07-08 00:12:12,056 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\license.tmp
+2026-07-08 00:12:12,821 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\gpio.tmp_save
+2026-07-08 00:12:13,230 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\gpio.tmp
+2026-07-08 00:12:32,140 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2026-07-08 00:12:32,168 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2026-07-08 00:12:32,185 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\tx_user.h_save
+2026-07-08 00:12:32,622 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\tx_user.h
+2026-07-08 00:12:32,635 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\tx_initialize_low_level.S_save
+2026-07-08 00:12:32,815 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\tx_initialize_low_level.S
+2026-07-08 00:12:32,829 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\AZURE_RTOS\App\app_azure_rtos_config.h_save
+2026-07-08 00:12:32,987 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\AZURE_RTOS\App\app_azure_rtos_config.h
+2026-07-08 00:12:32,999 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\app_threadx.c_save
+2026-07-08 00:12:33,140 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\app_threadx.c
+2026-07-08 00:12:33,153 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\app_threadx.h_save
+2026-07-08 00:12:33,355 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\app_threadx.h
+2026-07-08 00:12:33,370 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\AZURE_RTOS\App\app_azure_rtos.c_save
+2026-07-08 00:12:33,524 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\AZURE_RTOS\App\app_azure_rtos.c
+2026-07-08 00:12:33,538 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\AZURE_RTOS\App\app_azure_rtos.h_save
+2026-07-08 00:12:33,661 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\AZURE_RTOS\App\app_azure_rtos.h
+2026-07-08 00:12:34,916 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\dma.tmp_save
+2026-07-08 00:12:35,169 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\dma.tmp
+2026-07-08 00:12:35,188 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\dma_GV.tmp_save
+2026-07-08 00:12:35,320 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\dma_GV.tmp
+2026-07-08 00:12:35,400 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\stm32g4xx_it.c_save
+2026-07-08 00:12:35,822 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\stm32g4xx_it.c
+2026-07-08 00:12:35,842 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\stm32g4xx_it.h_save
+2026-07-08 00:12:35,949 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\stm32g4xx_it.h
+2026-07-08 00:12:35,962 [INFO] IP:3329 - RTE Config file name : RTE_Component
+2026-07-08 00:12:35,962 [INFO] IP:3347 - RTE template : RTE_Components.ftl
+2026-07-08 00:12:35,962 [INFO] CodeGenerator:2312 - Add RTE Code Input 
+2026-07-08 00:12:35,975 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\RTE_Components.h_save
+2026-07-08 00:12:36,138 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\RTE_Components.h
+2026-07-08 00:12:36,179 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\stm32g4xx_hal_msp.c_save
+2026-07-08 00:12:36,554 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\stm32g4xx_hal_msp.c
+2026-07-08 00:12:36,574 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\system.tmp_save
+2026-07-08 00:12:36,673 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\MXTmpFiles\system.tmp
+2026-07-08 00:12:36,703 [INFO] CodeEngine:321 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\stm32g4xx_hal_conf.h_save
+2026-07-08 00:12:36,861 [INFO] CodeEngine:345 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\stm32g4xx_hal_conf.h
+2026-07-08 00:12:36,898 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2026-07-08 00:12:36,919 [INFO] ApiDbMcu:532 - Load IP Config File for ADC1
+2026-07-08 00:12:36,923 [INFO] ApiDbMcu:532 - Load IP Config File for CORDIC
+2026-07-08 00:12:36,930 [INFO] ApiDbMcu:532 - Load IP Config File for I2C2
+2026-07-08 00:12:36,935 [INFO] ApiDbMcu:532 - Load IP Config File for SPI1
+2026-07-08 00:12:36,938 [INFO] ApiDbMcu:532 - Load IP Config File for SPI2
+2026-07-08 00:12:36,942 [INFO] ApiDbMcu:532 - Load IP Config File for SPI3
+2026-07-08 00:12:36,960 [INFO] ApiDbMcu:532 - Load IP Config File for TIM1
+2026-07-08 00:12:36,976 [INFO] ApiDbMcu:532 - Load IP Config File for TIM6
+2026-07-08 00:12:36,991 [INFO] ApiDbMcu:532 - Load IP Config File for TIM7
+2026-07-08 00:12:37,005 [INFO] ApiDbMcu:532 - Load IP Config File for TIM17
+2026-07-08 00:12:37,020 [INFO] ApiDbMcu:532 - Load IP Config File for TIM20
+2026-07-08 00:12:37,032 [INFO] ApiDbMcu:532 - Load IP Config File for USART2
+2026-07-08 00:12:37,044 [INFO] ApiDbMcu:532 - Load IP Config File for USART3
+2026-07-08 00:12:37,046 [INFO] ApiDbMcu:532 - Load IP Config File for RCC
+2026-07-08 00:12:37,053 [WARN] IPConfigManager:3811 - IP not found : TIM
+2026-07-08 00:12:37,055 [WARN] CodeGenerator:4259 - IP not found : null
+2026-07-08 00:12:37,066 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\main.h_save
+2026-07-08 00:12:37,276 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Inc\main.h
+2026-07-08 00:12:37,299 [INFO] CodeEngine:265 - oldGeneratedFile, D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\main.c_save
+2026-07-08 00:12:37,635 [INFO] CodeEngine:289 - Generated code: D:\Projekty\TrinityTrack6000\MainControlBoard\STM32\STM32G474RET6\Core\Src\main.c
+2026-07-08 00:12:38,625 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 511mS.
+2026-07-08 00:12:38,625 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,626 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,627 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,628 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,629 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,630 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,630 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,630 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,630 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,630 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,630 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,631 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,631 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,631 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,632 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,632 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,633 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,633 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,633 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,633 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,633 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,634 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,634 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,634 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,634 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,634 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,635 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,637 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,637 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,637 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,637 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,638 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,639 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,639 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,639 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,639 [ERROR] Middleware:2950 - Invalid RefComponent list
+2026-07-08 00:12:38,640 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,641 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,642 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,643 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,644 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,644 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,644 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,644 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,644 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,646 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,646 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 IAR Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,646 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,647 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,647 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,647 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,647 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,647 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,647 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,648 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,648 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:38,649 [WARN] ThirdPartyIpManager:480 - Condition 'CM4 ARMC6 Condition' not fulfilled in pack 'STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0'
+2026-07-08 00:12:39,093 [INFO] ProjectBuilder:9437 - Time for Copy ThirdParty[1] : 440mS.
+2026-07-08 00:12:39,108 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-07-08 00:12:39,257 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2026-07-08 00:12:39,278 [INFO] ApiDbMcu:532 - Load IP Config File for FATFS
+2026-07-08 00:12:39,300 [INFO] ApiDbMcu:532 - Load IP Config File for FREERTOS
+2026-07-08 00:12:39,322 [INFO] ApiDbMcu:532 - Load IP Config File for USBPD
+2026-07-08 00:12:39,346 [INFO] ApiDbMcu:532 - Load IP Config File for USB_DEVICE

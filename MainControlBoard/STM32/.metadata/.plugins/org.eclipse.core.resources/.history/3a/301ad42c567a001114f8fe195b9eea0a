@@ -213,6 +213,7 @@ int main(void)
       NVIC->ICPR[i]=0xFFFFFFFF;
   }
 
+  HAL_GPIO_WritePin(NRF24L01_PWR_GPIO_Port,NRF24L01_PWR_Pin,GPIO_PIN_RESET);
 
   usart3_dma_init();
   spi1_dma_init();
@@ -223,6 +224,10 @@ int main(void)
   buzzer_init();
     __enable_irq();
   buzzer_play(1);
+  uint32_t i=0;
+  for(i=0;i<1000000;i++){
+    asm("nop");
+  }
   //xmc4200_spi_test();
   /* USER CODE END 2 */
 
@@ -790,7 +795,7 @@ static void MX_TIM20_Init(void)
   htim20.Instance = TIM20;
   htim20.Init.Prescaler = 159;
   htim20.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim20.Init.Period = 999;
+  htim20.Init.Period = 1000;
   htim20.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim20.Init.RepetitionCounter = 0;
   htim20.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
