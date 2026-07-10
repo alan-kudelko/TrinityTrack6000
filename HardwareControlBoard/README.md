@@ -178,9 +178,9 @@ Acts as the dedicated real-time controller for power electronics and actuator ma
 
 #### 2.2 Module Block Diagram
 
-High-level block diagram showing the internal architecture of the HardwareControlBoard, including the XMC4500, power stages, current sensing circuits, stepper motor interfaces, communication links, and signal flow between the analog, digital, and power domains.
+High-level block diagram showing the internal architecture of the `HardwareControlBoard`, including the XMC4500, power stages, current sensing circuits, stepper motor interfaces, communication links, and signal flow between the analog, digital, and power domains.
 
-**WIP**
+![Module block diagram1](/HardwareControlBoard/Media/System_Architecture_Diagram.drawio.png)
 
 ---
 
