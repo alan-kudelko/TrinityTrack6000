@@ -413,7 +413,69 @@ The primary objective is to maximize hardware reuse, simplify PCB layout, reduce
 
 #### 5.1 Analog Front-End
 
+##### 5.1.1 ADC Operating Range
 
+The `HardwareControlBoard` utilizes the full input range of the XMC4500 Analog-to-Digital Converter to maximize measurement resolution and minimize quantization error.
+
+All analog signal conditioning circuits shall be designed around the following assumptions:
+
+- ADC input voltage range: **0 V to 3.3 V**
+- Reference voltage: **3.3 V**
+- Mid-scale reference voltage: **1.65 V**
+- Bipolar current measurements shall be centered around **1.65 V**
+- Positive current shall increase the ADC input voltage
+- Negative current shall decrease the ADC input voltage
+
+Consequently:
+
+| ADC Voltage | Measured Current |
+|-------------|------------------|
+| 0 V | Full-scale negative current |
+| 1.65 V | 0 A |
+| 3.3 V | Full-scale positive current |
+
+This voltage mapping shall be used as the common standard for all bidirectional current measurement channels throughout the HardwareControlBoard.
+
+##### 5.1.2 Current Sense Amplifier Gain
+
+The current sensing architecture is designed to maximize the effective utilization of the XMC4500 ADC input range while maintaining a common analog front-end across all current measurement channels.
+
+The High Power Section defines the reference measurement range for the entire platform.
+
+**Design Parameters**
+
+| Parameter | Value |
+|-----------|------:|
+| ADC input range | 0 V – 3.3 V |
+| Mid-scale voltage | 1.65 V |
+| Full-scale current | ±50 A |
+| Shunt resistance | 1 mΩ |
+
+The corresponding shunt voltage is: I * R = 50A * 1mΩ = 50mV
+
+To maximize the effective utilization of the ADC input range, the ideal current sense amplifier gain would be **30 V/V**, resulting in an output voltage swing of approximately **0.15 V to 3.15 V** for a ±50 A measurement range.
+
+However, a commercially available fixed-gain amplifier with **30 V/V** gain could not be identified among the evaluated device families.
+
+Therefore, a gain of **25 V/V** was selected as the best commercially available compromise.
+
+The resulting ADC operating range becomes:
+
+| Current | ADC Voltage |
+|---------|------------:|
+| -50 A | ≈0.4 V |
+| 0 A | 1.65 V |
+| +50 A | ≈2.9 V |
+
+
+| Device | Current Range | Shunt | Gain | ADC Voltage Range | Current / LSB | Shunt Power Loss @ Imax |
+|--------|--------------:|------:|-----:|------------------:|--------------:|------------------------:|
+| Left Drive Motor | -50 A to 50 A | 1 mΩ | 25 V/V | 0.40 V – 2.90 V | 24.41 mA | 2.50 W |
+| Right Drive Motor | -50 A to 50 A | 1 mΩ | 25 V/V | 0.40 V – 2.90 V | 24.41 mA | 2.50 W |
+| Winch Motor | -10 A to 10 A | 5 mΩ | 25 V/V | 0.40 V – 2.90 V | 4.88 mA | 0.50 W |
+| Heater | 0 A to 10 A | 5 mΩ | 25 V/V | 1.65 V – 2.90 V | 2.44 mA | 0.50 W |
+
+The table above summarizes the standardized current measurement architecture adopted throughout the HardwareControlBoard. All current sensing channels share a common amplifier gain, while the measurement range is adjusted solely by the selected shunt resistor.
 
 
 ---
