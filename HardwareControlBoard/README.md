@@ -448,25 +448,12 @@ The High Power Section defines the reference measurement range for the entire pl
 |-----------|------:|
 | ADC input range | 0 V – 3.3 V |
 | Mid-scale voltage | 1.65 V |
-| Full-scale current | ±50 A |
-| Shunt resistance | 1 mΩ |
 
-The corresponding shunt voltage is: I * R = 50A * 1mΩ = 50mV
-
-To maximize the effective utilization of the ADC input range, the ideal current sense amplifier gain would be **30 V/V**, resulting in an output voltage swing of approximately **0.15 V to 3.15 V** for a ±50 A measurement range.
+To maximize the effective utilization of the ADC input range, the ideal current sense amplifier gain would be **30 V/V**, resulting in an output voltage swing of approximately **0.15 V to 3.15 V** for a ±50 A measurement range for driver motors.
 
 However, a commercially available fixed-gain amplifier with **30 V/V** gain could not be identified among the evaluated device families.
 
 Therefore, a gain of **25 V/V** was selected as the best commercially available compromise.
-
-The resulting ADC operating range becomes:
-
-| Current | ADC Voltage |
-|---------|------------:|
-| -50 A | ≈0.4 V |
-| 0 A | 1.65 V |
-| +50 A | ≈2.9 V |
-
 
 | Device | Current Range | Shunt | Gain | ADC Voltage Range | Current / LSB | Shunt Power Loss @ Imax |
 |--------|--------------:|------:|-----:|------------------:|--------------:|------------------------:|
