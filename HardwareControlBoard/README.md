@@ -134,6 +134,7 @@ The firmware and hardware design are documented using **Doxygen** and dedicated 
            - [4.4.3.2 RC Servos](#4432-rc-servos)
    - [4.5 High Power Section (HPS)](#45-high-power-section-hps)
   5. [Design Calculations](#-5-design-calculations)
+   - [5.1 Analog Front-End](#51-analog-front-end)
 
 ---
 
