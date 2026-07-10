@@ -27,7 +27,9 @@ The project follows **MISRA C:2025** guidelines to ensure code safety, maintaina
 
 ## Preview
 
-**WIP**
+![Module block diagram1](/HardwareControlBoard/Media/System_Architecture_Diagram.drawio.png)
+
+
 
 ---
 
