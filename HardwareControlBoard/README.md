@@ -413,8 +413,6 @@ The primary objective is to maximize hardware reuse, simplify PCB layout, reduce
 
 #### 5.1 Analog Front-End
 
-##### 5.1.1 ADC Operating Range
-
 The `HardwareControlBoard` utilizes the full input range of the XMC4500 Analog-to-Digital Converter to maximize measurement resolution and minimize quantization error.
 
 All analog signal conditioning circuits shall be designed around the following assumptions:
@@ -425,29 +423,6 @@ All analog signal conditioning circuits shall be designed around the following a
 - Bipolar current measurements shall be centered around **1.65 V**
 - Positive current shall increase the ADC input voltage
 - Negative current shall decrease the ADC input voltage
-
-Consequently:
-
-| ADC Voltage | Measured Current |
-|-------------|------------------|
-| 0 V | Full-scale negative current |
-| 1.65 V | 0 A |
-| 3.3 V | Full-scale positive current |
-
-This voltage mapping shall be used as the common standard for all bidirectional current measurement channels throughout the HardwareControlBoard.
-
-##### 5.1.2 Current Sense Amplifier Gain
-
-The current sensing architecture is designed to maximize the effective utilization of the XMC4500 ADC input range while maintaining a common analog front-end across all current measurement channels.
-
-The High Power Section defines the reference measurement range for the entire platform.
-
-**Design Parameters**
-
-| Parameter | Value |
-|-----------|------:|
-| ADC input range | 0 V – 3.3 V |
-| Mid-scale voltage | 1.65 V |
 
 To maximize the effective utilization of the ADC input range, the ideal current sense amplifier gain would be **30 V/V**, resulting in an output voltage swing of approximately **0.15 V to 3.15 V** for a ±50 A measurement range for driver motors.
 
@@ -463,6 +438,7 @@ Therefore, a gain of **25 V/V** was selected as the best commercially available 
 | Heater | 0 A to 10 A | 5 mΩ | 25 V/V | 1.65 V – 2.90 V | 2.44 mA | 0.50 W |
 
 The table above summarizes the standardized current measurement architecture adopted throughout the HardwareControlBoard. All current sensing channels share a common amplifier gain, while the measurement range is adjusted solely by the selected shunt resistor.
+
 
 
 ---
