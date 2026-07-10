@@ -27,7 +27,7 @@ The project follows **MISRA C:2025** guidelines to ensure code safety, maintaina
 
 ## Preview
 
-![Module block diagram1](/HardwareControlBoard/Media/System_Architecture_Diagram.drawio.png)
+![Module block diagram1](/HardwareControlBoard/Media/HardwareControlBoard_BlockDiagram.drawio.png)
 
 
 
@@ -182,7 +182,7 @@ Acts as the dedicated real-time controller for power electronics and actuator ma
 
 High-level block diagram showing the internal architecture of the `HardwareControlBoard`, including the XMC4500, power stages, current sensing circuits, stepper motor interfaces, communication links, and signal flow between the analog, digital, and power domains.
 
-![Module block diagram1](/HardwareControlBoard/Media/System_Architecture_Diagram.drawio.png)
+![Module block diagram1](/HardwareControlBoard/Media/HardwareControlBoard_BlockDiagram.drawio.png)
 
 ---
 
