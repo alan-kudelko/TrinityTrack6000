@@ -495,6 +495,47 @@ The total thermal budget consists of:
 
 Each subsystem is evaluated independently in order to identify local hot spots rather than relying only on average PCB temperature.
 
+##### 7.2.2 Lower Power Section (LPS)
+
+The Lower Power Section (LPS) consists of **eight independent low-side outputs** designed for low-current loads operating from a 12 V supply.
+
+The outputs are divided into two groups:
+
+- **4 PWM outputs** capable of operating up to **40 kHz**, driven by dedicated **2EDN7533FXTMA1** gate drivers.
+- **4 digital outputs** intended for ON/OFF control, driven through a logic buffer.
+
+All eight channels use the **SI2300DS-T1-GE3** N-channel MOSFET.
+
+For the four PWM channels, the first-order thermal analysis considers **conduction losses only**. Due to the low switching current (1 A maximum), switching losses are negligible compared to conduction losses and are omitted from the thermal budget.
+
+The remaining four digital outputs operate in static switching mode and therefore only conduction losses are considered.
+
+**Design Parameters**
+
+| Parameter | Value |
+|----------|------:|
+| MOSFET | SI2300DS-T1-GE3 |
+| PWM Gate Driver | 2EDN7533FXTMA1 |
+| Digital Output Driver | Logic Buffer |
+| Drain Voltage | 12 V |
+| Gate Voltage | 5 V |
+| PWM Frequency | Up to 40 kHz |
+| Maximum Continuous Current | 1 A / channel |
+| Total Channels | 8 |
+| PWM Channels | 4 |
+| Digital Channels | 4 |
+
+The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet.
+
+| Output Type | Channels | RDS(on) | Power / Channel | Total Power |
+|------------|---------:|---------:|----------------:|------------:|
+| PWM Outputs | 4 | 60 mΩ | 0.060 W | 0.240 W |
+| Digital Outputs | 4 | 60 mΩ | 0.060 W | 0.240 W |
+| **Total LPS** | **8** | — | — | **0.480 W** |
+
+The total conduction loss of the complete Lower Power Section is therefore estimated to be **0.48 W**, which represents a negligible contribution to the overall PCB thermal budget.
+
+`Switching losses were neglected for the Lower Power Section due to the low operating voltage (12 V), low load current (1 A) and their negligible contribution to the overall thermal budget.`
 
 
 
