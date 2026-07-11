@@ -326,6 +326,7 @@ The `HardwareControlBoard` shall use a common precision voltage reference for al
 - Heater temperature measurement
 - PWM power regulation
 - Overtemperature protection
+- Designed for loads up to 5 A continuous
   
 ##### 4.4.2 Winch Motor
 
@@ -335,6 +336,7 @@ The `HardwareControlBoard` shall use a common precision voltage reference for al
 - Motor temperature monitoring
 - H-bridge temperature monitoring
 - Hardware fault detection
+- Designed for loads up to 5 A continuous
 
 #### 4.4.3 Stepper / Servo
 
@@ -360,6 +362,7 @@ The PCB is designed primarily around external STEP/DIR stepper motor drivers. Wh
 - Microstepping supported by dedicated driver hardware
 - Current regulation performed internally by the selected stepper driver
 - Hardware fault monitoring where supported by the selected driver
+- Designed for loads up to 2 A continuous per phase
 
 ##### 4.4.3.2 RC Servos
 
@@ -442,7 +445,81 @@ Therefore, a gain of **25 V/V** was selected as the best commercially available 
 
 The table above summarizes the standardized current measurement architecture adopted throughout the HardwareControlBoard. All current sensing channels share a common amplifier gain, while the measurement range is adjusted solely by the selected shunt resistor.
 
+---
 
+### 6. Component Selection
+
+**WIP**
+
+### 7. PCB Design Requirements
+
+The `HardwareControlBoard` is designed as a mixed-signal, high-current control system. PCB requirements were established before the layout phase to ensure reliable operation under realistic operating conditions while maintaining reasonable manufacturing complexity.
+
+The following sections define the thermal and electrical design constraints used during PCB development.
+
+#### 7.1 Thermal Requirements
+
+The PCB shall satisfy the following thermal requirements during continuous operation.
+
+| Parameter | Requirement |
+|----------|-------------|
+| PCB material | FR-4, 4-layer, 1 oz copper |
+| PCB thickness | 1.6 mm |
+| Maximum ambient temperature | 40°C |
+| Recommended average PCB temperature | ≤ 70°C |
+| Maximum local PCB temperature (power stage) | ≤ 90°C |
+| Maximum MOSFET junction temperature | ≤ 125°C |
+| Maximum average PCB thermal density | TBD (calculated during thermal budget analysis) |
+
+These limits are intended to provide adequate thermal margin while maximizing long-term reliability of the power electronics.
+
+Two PCB dimensions are considered during the design process:
+
+| PCB Size | Board Area | Total Heat Exchange Area* |
+|----------|-----------:|--------------------------:|
+| 100 × 150 mm | 150 cm² | 300 cm² |
+| 100 × 200 mm | 200 cm² | 400 cm² |
+
+#### 7.2 Thermal Budget
+
+Thermal analysis is performed on every major heat-generating subsystem.
+
+The total thermal budget consists of:
+
+- MOSFET conduction losses
+- MOSFET switching losses
+- Current shunt losses
+- Gate driver losses
+- Stepper driver losses
+- Auxiliary power losses
+
+Each subsystem is evaluated independently in order to identify local hot spots rather than relying only on average PCB temperature.
+
+
+
+
+#### 7.3 Current Budget
+
+The current budget defines electrical loading of the `HardwareControlBoard` under multiple operating scenarios.
+
+Three operating conditions are considered during the design process.
+
+| Scenario | Total Current |
+|----------|--------------:|
+| Theoretical Maximum | 166 A |
+| Engineering Design Case | 102 A |
+| Typical Heavy Operation | 86–92 A |
+
+Theoretical Maximum represents simultaneous peak current of all subsystems and is not considered a continuous operating condition.
+
+The Engineering Design Case represents the expected worst realistic operating condition and is used as the primary reference during PCB layout and thermal analysis.
+
+Current requirements are continuously refined using:
+
+- mathematical motor models,
+- drivetrain analysis,
+- experimental current measurements,
+- closed-loop motor control assumptions.
 
 ---
 
