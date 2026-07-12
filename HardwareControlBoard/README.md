@@ -628,9 +628,9 @@ Three operating conditions are considered during the design process.
 
 | Scenario | Total Current |
 |----------|--------------:|
-| Theoretical Maximum | 166 A |
-| Engineering Design Case | 102 A |
-| Typical Heavy Operation | 86–92 A |
+| Theoretical Maximum | 122 A |
+| Engineering Design Case | 112 A |
+| Typical Heavy Operation | 86–96 A |
 
 Theoretical Maximum represents simultaneous peak current of all subsystems and is not considered a continuous operating condition.
 
