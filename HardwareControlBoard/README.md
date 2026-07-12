@@ -383,7 +383,7 @@ As a result, this section serves as the primary research and development area of
 
 - 12 V nominal supply
 - Continuous operating current up to 20 A per motor
-- Rated current up to 30 A per motor
+- Rated current up to 40 A per motor
 - Peak current measurement range up to ±50 A
 - Discrete full H-bridge topology for each motor channel
 - PWM operation up to 40 kHz
@@ -537,8 +537,83 @@ The total conduction loss of the complete Lower Power Section is therefore estim
 **Note:**
 - Switching losses were neglected for the Lower Power Section due to the low operating voltage (12 V), low load current (1 A) and their negligible contribution to the overall thermal budget.
 
-
 ##### 7.2.2 Medium Power Section (MPS)
+
+###### 7.2.2.1 Heater Output
+
+The heater output is implemented as a **single low-side MOSFET** using the **NTMFS4C09NCT1G** N-channel MOSFET.
+
+Both **conduction losses** and **switching losses** are included in the thermal analysis.
+
+**Design Parameters**
+
+| Parameter | Value |
+|----------|------:|
+| MOSFET | NTMFS4C09NCT1G |
+| Topology | Low-Side |
+| Drain Voltage | 12 V |
+| Gate Voltage | 12 V |
+| PWM Frequency | Up to 40 kHz |
+| Maximum Duty Cycle | 100 % |
+| Continuous Load Current | 5 A |
+| Maximum RDS(on) | 5.8 mΩ |
+| Total Gate Charge | 22.2 nC |
+| Rise Time | 32 ns |
+| Fall Time | 6 ns |
+
+The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet together with the first-order switching loss approximation.
+
+| Loss Type | Quantity | Power / MOSFET | Total Power |
+|-----------|---------:|---------------:|------------:|
+| Conduction Loss | 1 | 0.145 W | 0.145 W |
+| Switching Loss | 1 | 0.046 W | 0.046 W |
+| **Total Heater Output** | — | — | **0.191 W** |
+
+The total estimated power dissipation of the heater output is therefore **0.191 W** under the defined worst-case operating conditions.
+
+**Note:**
+- The analysis assumes continuous PWM operation at **40 kHz** and **100 % duty cycle**.
+- Conduction losses were calculated using the **maximum** datasheet **RDS(on)** value.
+- The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
+
+###### 7.2.2.2 Winch H-Bridge
+
+The winch output is implemented as a **single full H-bridge** using **four NTMFS4C09NCT1G N-channel MOSFETs** driven by dedicated gate drivers.
+
+Both **conduction losses** and **switching losses** are included in the thermal analysis.
+
+**Design Parameters**
+
+| Parameter | Value |
+|----------|------:|
+| MOSFET | NTMFS4C09NCT1G |
+| Topology | Full H-Bridge |
+| Drain Voltage | 12 V |
+| Gate Voltage | 12 V |
+| PWM Frequency | Up to 40 kHz |
+| Maximum Duty Cycle | 85 % |
+| Continuous Motor Current | 5 A |
+| Total MOSFETs | 4 |
+| Maximum RDS(on) | 5.8 mΩ |
+| Total Gate Charge | 22.2 nC |
+| Rise Time | 32 ns |
+| Fall Time | 6 ns |
+
+The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet together with the first-order switching loss approximation.
+
+| Loss Type | Quantity | Power / MOSFET | Total Power |
+|-----------|---------:|---------------:|------------:|
+| Conduction Loss | 2 | 0.145 W | 0.290 W |
+| Switching Loss | 2 | 0.046 W | 0.092 W |
+| **Total Winch H-Bridge** | — | — | **0.382 W** |
+
+The total estimated power dissipation of the winch H-bridge is therefore **0.382 W** under the defined worst-case operating conditions.
+
+**Note:**
+- Only two MOSFETs conduct motor current simultaneously during normal H-bridge operation.
+- Only two MOSFETs are actively switched during PWM operation.
+- Conduction losses were calculated using the **maximum** datasheet **RDS(on)** value.
+- The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
 
 ##### 7.2.3 High Power Section (HPS)
 
@@ -588,7 +663,34 @@ The total estimated power dissipation of the complete High Power Section is ther
 - The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
 
 
-##### 7.2.4 Shunts
+##### 7.2.4 Current Sense Shunts
+
+The thermal budget is calculated assuming the **maximum continuous operating current** for each shunt.
+
+**Design Parameters**
+
+| Parameter | Value |
+|----------|------:|
+| HPS Shunt Resistance | 1 mΩ |
+| HPS Continuous Current | 40 A |
+| HPS Shunt Quantity | 2 |
+| MPS Shunt Resistance | 5 mΩ |
+| MPS Continuous Current | 5 A |
+| MPS Shunt Quantity | 2 |
+
+| Shunt Type | Quantity | Power / Shunt | Total Power |
+|------------|---------:|--------------:|------------:|
+| 1 mΩ @ 40 A | 2 | 1.60 W | 3.20 W |
+| 5 mΩ @ 5 A | 2 | 0.125 W | 0.250 W |
+| **Total Shunts** | **4** | — | **3.45 W** |
+
+The total estimated power dissipation of all current sense shunts is therefore **3.45 W** under the defined worst-case operating conditions.
+
+**Note:**
+- Shunt losses were calculated using the maximum continuous operating current.
+- The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
+
+
 
 ##### 7.2.5 Thermal Summary
 
@@ -598,15 +700,14 @@ The purpose of this summary is to establish the overall PCB thermal budget and v
 
 Unless stated otherwise, all values represent **worst-case theoretical operating conditions** using maximum datasheet parameters and conservative first-order loss calculations.
 
-| Section | Estimated Power Loss | Notes |
+| Section | Worst-Case Power Dissipation | Notes |
 |---------|---------------------:|-------|
 | Lower Power Section (LPS) | 0.48 W | Conduction losses only |
-| Medium Power Section (MPS) | TBD | |
+| Medium Power Section (MPS) | 0.57 W | Conduction + switching losses|
 | High Power Section (HPS) | 26.50 W | Conduction + switching losses |
-| Current Sense Shunts | TBD | |
-| Gate Drivers | TBD | |
-| Other Components | TBD | |
-| **Total PCB Thermal Budget** | **TBD** | Worst-case estimate |
+| Current Sense Shunts | 3.45 W | Conduction losses only |
+| Other Components | TBD | Gate drivers, buffers, IC losses, etc. |
+| **Total PCB Thermal Budget** | **31.0 W** | Worst-case estimate |
 
 The resulting thermal budget will be used during PCB layout to verify:
 
