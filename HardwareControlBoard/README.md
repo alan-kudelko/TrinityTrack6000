@@ -534,8 +534,8 @@ The thermal budget is calculated using the **maximum** RDS(on) value specified i
 | **Total LPS** | **8** | — | — | **0.480 W** |
 
 The total conduction loss of the complete Lower Power Section is therefore estimated to be **0.48 W**, which represents a negligible contribution to the overall PCB thermal budget.
-
-`Switching losses were neglected for the Lower Power Section due to the low operating voltage (12 V), low load current (1 A) and their negligible contribution to the overall thermal budget.`
+**Note:**
+- Switching losses were neglected for the Lower Power Section due to the low operating voltage (12 V), low load current (1 A) and their negligible contribution to the overall thermal budget.
 
 
 
