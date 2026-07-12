@@ -495,7 +495,7 @@ The total thermal budget consists of:
 
 Each subsystem is evaluated independently in order to identify local hot spots rather than relying only on average PCB temperature.
 
-##### 7.2.2 Lower Power Section (LPS)
+##### 7.2.1 Lower Power Section (LPS)
 
 The Lower Power Section (LPS) consists of **eight independent low-side outputs** designed for low-current loads operating from a 12 V supply.
 
@@ -537,6 +537,88 @@ The total conduction loss of the complete Lower Power Section is therefore estim
 **Note:**
 - Switching losses were neglected for the Lower Power Section due to the low operating voltage (12 V), low load current (1 A) and their negligible contribution to the overall thermal budget.
 
+
+##### 7.2.2 Medium Power Section (MPS)
+
+##### 7.2.3 High Power Section (HPS)
+
+The High Power Section (HPS) consists of **two independent full H-bridges** designed for high-current brushed DC motors operating from a **12 V supply**.
+
+Each H-bridge is driven by an isolated **UCC21551** gate driver and implemented using **four STL120N4F6AG N-channel MOSFETs**, resulting in a total of **eight MOSFETs** within the section.
+
+The HPS is designed to operate with PWM frequencies up to **40 kHz** and a design current of **40 A continuous** per motor.
+
+Unlike the Lower Power Section, both **conduction losses** and **switching losses** contribute significantly to the overall thermal budget and are therefore included in the analysis.
+
+During normal H-bridge operation, only **two MOSFETs per bridge** conduct the motor current simultaneously. Consequently, with two H-bridges, the conduction loss calculation assumes **four conducting MOSFETs**, while switching losses are conservatively calculated for all eight actively driven MOSFETs.
+
+**Design Parameters**
+
+| Parameter | Value |
+|----------|------:|
+| MOSFET | STL120N4F6AG |
+| Gate Driver | UCC21551 |
+| Drain Voltage | 12 V |
+| Gate Voltage | 12 V |
+| PWM Frequency | Up to 40 kHz |
+| Maximum Duty Cycle | 85 % |
+| Continuous Motor Current | 40 A / bridge |
+| Total H-Bridges | 2 |
+| MOSFETs per H-Bridge | 4 |
+| Total MOSFETs | 8 |
+| Maximum RDS(on) | 3.6 mΩ |
+| Total Gate Charge | 63 nC |
+| Rise Time | 70 ns |
+| Fall Time | 20 ns |
+
+The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet together with the first-order switching loss approximation.
+
+| Loss Type | Quantity | Power / MOSFET | Total Power |
+|-----------|---------:|---------------:|------------:|
+| Conduction Loss | 4 | 5.76 W | 23.04 W |
+| Switching Loss | 4 | 0.86 W | 3.46 W |
+| **Total HPS** | — | — | **26.5 W** |
+
+The total estimated power dissipation of the complete High Power Section is therefore **26.5 W** under the defined worst-case operating conditions.
+
+**Note:**
+- Only four MOSFETs conduct motor current simultaneously during normal H-bridge operation.
+- Switching losses were calculated for four MOSFETs PWM operation.
+- Conduction losses were calculated using the **maximum** datasheet RDS(on) value.
+- The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
+
+##### 7.2.4 High Power Section (HPS)
+
+##### 7.2.5 Shunts
+
+##### 7.2.6 Thermal Summary
+
+This section summarizes the estimated thermal dissipation of all power stages implemented on the Hardware Control Board.
+
+The purpose of this summary is to establish the overall PCB thermal budget and verify that the total power dissipation remains within the allowable thermal capability of the selected PCB stack-up and cooling method.
+
+Unless stated otherwise, all values represent **worst-case theoretical operating conditions** using maximum datasheet parameters and conservative first-order loss calculations.
+
+| Section | Estimated Power Loss | Notes |
+|---------|---------------------:|-------|
+| Lower Power Section (LPS) | 0.48 W | Conduction losses only |
+| Medium Power Section (MPS) | TBD | |
+| High Power Section (HPS) | 26.50 W | Conduction + switching losses |
+| Current Sense Shunts | TBD | |
+| Gate Drivers | TBD | |
+| Other Components | TBD | |
+| **Total PCB Thermal Budget** | **TBD** | Worst-case estimate |
+
+The resulting thermal budget will be used during PCB layout to verify:
+
+- PCB copper area requirements,
+- thermal via distribution,
+- heatsink requirements (if applicable),
+- expected PCB operating temperature,
+
+**Note:**
+- The presented values represent worst-case design estimates and are intentionally conservative.
+- The actual power dissipation is expected to be lower under normal operating conditions and will be verified experimentally during prototype validation.
 
 
 #### 7.3 Current Budget
