@@ -587,11 +587,10 @@ The total estimated power dissipation of the complete High Power Section is ther
 - Conduction losses were calculated using the **maximum** datasheet RDS(on) value.
 - The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
 
-##### 7.2.4 High Power Section (HPS)
 
-##### 7.2.5 Shunts
+##### 7.2.4 Shunts
 
-##### 7.2.6 Thermal Summary
+##### 7.2.5 Thermal Summary
 
 This section summarizes the estimated thermal dissipation of all power stages implemented on the Hardware Control Board.
 
