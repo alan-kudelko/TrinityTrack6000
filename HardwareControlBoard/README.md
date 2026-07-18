@@ -1,5 +1,3 @@
-# **HardwareControlBoard** – **Power Electronics & Motion Control**
-
 **Infineon XMC4000 Family**: Dedicated real-time controller responsible for deterministic control of motors, servos and other actuators, as well as supervision of power electronics.
 
 The board serves as the low-level hardware control layer of the system, executing all time-critical control tasks independently from the MainControlBoard.
@@ -732,5 +730,32 @@ The resulting thermal budget will be used during PCB layout to verify:
 - The actual power dissipation is expected to be lower under normal operating conditions and will be verified experimentally during prototype validation.
 
 ---
+
+### 8. 🔌 Electrical Schematic
+
+The complete electrical schematic is available here:  
+👉 [HardwareControlBoard_Schematic](PCB/Schematic_HardwareControlBoard.svg)
+
+Below is a breakdown of individual sections of the design.
+
+#### 8.1 Voltage regulation for logic part
+
+#### 8.2 Voltage reference for analog measurements
+
+#### 8.3 Lower Power Section (LPS)
+
+#### 8.4 Medium Power Section (MPS)
+
+#### 8.5 High Power Section (HPS)
+
+[High Power Section H Briges](Media/HPS_H_Schematic.png)
+
+[High Power Section Gate Drive](Media/HPS_Gate_Schematic.png)
+
+#### 8.6 XMC4500
+
+### 9. PCB
+
+**TBD**
 
 
