@@ -264,13 +264,24 @@ Typical functionality includes:
 
 ### ⚡ 4. Electrical Requirements
 
-This chapter defines the electrical requirements that guide the implementation of the `HardwareControlBoard`.
+This chapter defines the electrical requirements governing the implementation of the `HardwareControlBoard`, including the power architecture, protection mechanisms, analog front-end, power electronics, and PCB design principles.
 
-The requirements specified in this section define the electrical characteristics, measurement architecture, protection mechanisms, analog front-end, power stages, and PCB design principles used throughout the project.
+Whenever practical, hardware building blocks shall be standardized and reused across the design to simplify validation, manufacturing, firmware development, and future scalability. Dedicated implementations are permitted only when required by specific electrical, thermal, safety, or performance constraints.
 
-Whenever practical, hardware building blocks shall be standardized and reused across the design to simplify validation, manufacturing, firmware development, and future scalability.
+Unless explicitly stated otherwise, the following requirements apply to the entire `HardwareControlBoard`.
 
-Exceptions are permitted only when required by specific electrical, thermal, safety, or performance constraints.
+| Parameter | Requirement |
+|-----------|-------------|
+| Operating Input Voltage* | 12 V – 30 V DC |
+| Maximum Continuous Input Current | 112 A |
+| Typical Heavy Operating Current | 86–96 A |
+| Theoretical Peak Input Current | 122 A |
+| Logic Supply Voltage | 5 V |
+
+**Notes:**
+
+- The supported operating input voltage is **BOM-dependent**. The current hardware revision targets **12 V – 30 V** operation. Future revisions may support higher operating voltages by selecting components with higher voltage ratings without requiring PCB redesign.
+- The **5 V logic supply** is generated locally on the `HardwareControlBoard` and serves as the primary supply rail for digital logic, gate drivers, and auxiliary circuitry. Additional supply rails, including the **3.3 V digital rail** and the **precision analog reference**, are generated locally from this supply.
 
 #### 4.1 Common Electrical Requirements
 
@@ -719,30 +730,6 @@ The resulting thermal budget will be used during PCB layout to verify:
 **Note:**
 - The presented values represent worst-case design estimates and are intentionally conservative.
 - The actual power dissipation is expected to be lower under normal operating conditions and will be verified experimentally during prototype validation.
-
-
-#### 7.3 Current Budget
-
-The current budget defines electrical loading of the `HardwareControlBoard` under multiple operating scenarios.
-
-Three operating conditions are considered during the design process.
-
-| Scenario | Total Current |
-|----------|--------------:|
-| Theoretical Maximum | 122 A |
-| Engineering Design Case | 112 A |
-| Typical Heavy Operation | 86–96 A |
-
-Theoretical Maximum represents simultaneous peak current of all subsystems and is not considered a continuous operating condition.
-
-The Engineering Design Case represents the expected worst realistic operating condition and is used as the primary reference during PCB layout and thermal analysis.
-
-Current requirements are continuously refined using:
-
-- mathematical motor models,
-- drivetrain analysis,
-- experimental current measurements,
-- closed-loop motor control assumptions.
 
 ---
 
