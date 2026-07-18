@@ -748,9 +748,9 @@ Below is a breakdown of individual sections of the design.
 
 #### 8.5 High Power Section (HPS)
 
-[High Power Section H Briges](Media/HPS_H_Schematic.png)
+![High Power Section H Briges](Media/HPS_H_Schematic.png)
 
-[High Power Section Gate Drive](Media/HPS_Gate_Schematic.png)
+![High Power Section Gate Drive](Media/HPS_Gate_Schematic.png)
 
 #### 8.6 XMC4500
 
