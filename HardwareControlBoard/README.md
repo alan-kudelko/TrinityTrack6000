@@ -636,7 +636,7 @@ Unlike the Lower Power Section, both **conduction losses** and **switching losse
 
 During normal H-bridge operation, only **two MOSFETs per bridge** conduct the motor current simultaneously. Consequently, with two H-bridges, the conduction loss calculation assumes **four conducting MOSFETs**, while switching losses are conservatively calculated for **four actively switching MOSFETs**, since only the devices carrying motor current experience significant turn-on and turn-off energy dissipation.
 
-## Design Parameters
+**Design Parameters**
 
 | Parameter | Value |
 |----------|------:|
