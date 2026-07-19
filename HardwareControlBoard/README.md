@@ -628,19 +628,19 @@ The total estimated power dissipation of the winch H-bridge is therefore **0.382
 
 The High Power Section (HPS) consists of **two independent full H-bridges** designed for high-current brushed DC motors operating from a **12 V supply**.
 
-Each H-bridge is driven by an isolated **UCC21551** gate driver and implemented using **four STL120N4F6AG N-channel MOSFETs**, resulting in a total of **eight MOSFETs** within the section.
+Each H-bridge is driven by an isolated **UCC21551** gate driver and implemented using **four STL160N4F7 N-channel MOSFETs**, resulting in a total of **eight MOSFETs** within the section.
 
 The HPS is designed to operate with PWM frequencies up to **40 kHz** and a design current of **40 A continuous** per motor.
 
 Unlike the Lower Power Section, both **conduction losses** and **switching losses** contribute significantly to the overall thermal budget and are therefore included in the analysis.
 
-During normal H-bridge operation, only **two MOSFETs per bridge** conduct the motor current simultaneously. Consequently, with two H-bridges, the conduction loss calculation assumes **four conducting MOSFETs**, while switching losses are conservatively calculated for all eight actively driven MOSFETs.
+During normal H-bridge operation, only **two MOSFETs per bridge** conduct the motor current simultaneously. Consequently, with two H-bridges, the conduction loss calculation assumes **four conducting MOSFETs**, while switching losses are conservatively calculated for **four actively switching MOSFETs**, since only the devices carrying motor current experience significant turn-on and turn-off energy dissipation.
 
-**Design Parameters**
+## Design Parameters
 
 | Parameter | Value |
 |----------|------:|
-| MOSFET | STL120N4F6AG |
+| MOSFET | STL160N4F7 |
 | Gate Driver | UCC21551 |
 | Drain Voltage | 12 V |
 | Gate Voltage | 12 V |
@@ -650,20 +650,20 @@ During normal H-bridge operation, only **two MOSFETs per bridge** conduct the mo
 | Total H-Bridges | 2 |
 | MOSFETs per H-Bridge | 4 |
 | Total MOSFETs | 8 |
-| Maximum RDS(on) | 3.6 mΩ |
-| Total Gate Charge | 63 nC |
-| Rise Time | 70 ns |
-| Fall Time | 20 ns |
+| Maximum RDS(on) | 2.6 mΩ |
+| Total Gate Charge | 65 nC |
+| Rise Time | 26 ns |
+| Fall Time | 17 ns |
 
-The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet together with the first-order switching loss approximation.
+The thermal budget is calculated using the **maximum** RDS(on) specified in the datasheet together with a first-order switching loss approximation.
 
 | Loss Type | Quantity | Power / MOSFET | Total Power |
 |-----------|---------:|---------------:|------------:|
-| Conduction Loss | 4 | 5.76 W | 23.04 W |
-| Switching Loss | 4 | 0.86 W | 3.46 W |
-| **Total HPS** | — | — | **26.5 W** |
+| Conduction Loss | 4 | 4.16 W | 16.64 W |
+| Switching Loss | 4 | 0.41 W | 1.66 W |
+| **Total HPS** | — | — | **18.30 W** |
 
-The total estimated power dissipation of the complete High Power Section is therefore **26.5 W** under the defined worst-case operating conditions.
+The total estimated power dissipation of the complete High Power Section is therefore **18.30 W** under the defined worst-case operating conditions.
 
 **Note:**
 - Only four MOSFETs conduct motor current simultaneously during normal H-bridge operation.
@@ -713,10 +713,10 @@ Unless stated otherwise, all values represent **worst-case theoretical operating
 |---------|---------------------:|-------|
 | Lower Power Section (LPS) | 0.48 W | Conduction losses only |
 | Medium Power Section (MPS) | 0.57 W | Conduction + switching losses|
-| High Power Section (HPS) | 26.50 W | Conduction + switching losses |
+| High Power Section (HPS) | 18.30 W | Conduction + switching losses |
 | Current Sense Shunts | 3.45 W | Conduction losses only |
 | Other Components | TBD | Gate drivers, buffers, IC losses, etc. |
-| **Total PCB Thermal Budget** | **31.0 W** | Worst-case estimate |
+| **Total PCB Thermal Budget** | **22.8 W** | Worst-case estimate |
 
 The resulting thermal budget will be used during PCB layout to verify:
 
