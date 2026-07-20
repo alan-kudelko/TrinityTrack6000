@@ -55,32 +55,32 @@ The total thermal budget is obtained by summing the worst-case power dissipation
 
 The conduction losses of a MOSFET are calculated using:
 
-\[
-P_{cond}=I_{RMS}^{2}\cdot R_{DS(on)}
-\]
+```text
+Pcond = IRMS² × RDS(on)
+```
 
 where:
 
-- \(P_{cond}\) — conduction power loss [W]
-- \(I_{RMS}\) — RMS current through the MOSFET [A]
-- \(R_{DS(on)}\) — drain-to-source on-state resistance [Ω]
+- **Pcond** — conduction power loss [W]
+- **IRMS** — RMS current through the MOSFET [A]
+- **RDS(on)** — drain-to-source on-state resistance [Ω]
 
 #### Switching Losses
 
 The switching losses are estimated using:
 
-\[
-P_{sw}=\frac{1}{2}V_{DS}\cdot I_D\cdot(t_r+t_f)\cdot f_{PWM}
-\]
+```text
+Psw = ½ × VDS × ID × (tr + tf) × fPWM
+```
 
 where:
 
-- \(P_{sw}\) — switching power loss [W]
-- \(V_{DS}\) — drain-to-source voltage [V]
-- \(I_D\) — drain current [A]
-- \(t_r\) — rise time [s]
-- \(t_f\) — fall time [s]
-- \(f_{PWM}\) — switching frequency [Hz]
+- **Psw** — switching power loss [W]
+- **VDS** — drain-to-source voltage [V]
+- **ID** — drain current during switching [A]
+- **tr** — MOSFET rise time [s]
+- **tf** — MOSFET fall time [s]
+- **fPWM** — PWM switching frequency [Hz]
 
 ### 4.2 Low Power Section
 
@@ -121,41 +121,6 @@ The thermal analysis presented below evaluates the worst-case power dissipation 
 
 The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
 
-##### Conduction Loss
-
-The worst-case conduction loss is calculated assuming continuous conduction at the maximum rated load current.
-
-\[
-P_{cond}=I_D^2 \cdot R_{DS(on)}
-\]
-
-Substituting the design parameters:
-
-\[
-P_{cond}=(1\ \mathrm{A})^2 \cdot 48\,\mathrm{m\Omega}
-\]
-
-\[
-P_{cond}=0.048\ \mathrm{W}
-\]
-
-##### Switching Loss
-
-The switching loss is calculated assuming continuous PWM operation at the maximum switching frequency.
-
-\[
-P_{sw}=\frac{1}{2} \cdot V_{DS} \cdot I_D \cdot (t_r+t_f)\cdot f_{PWM}
-\]
-
-Substituting the design parameters:
-
-\[
-P_{sw}=\frac{1}{2}\cdot12\cdot1\cdot(39+28)\,\mathrm{ns}\cdot40\,000
-\]
-
-\[
-P_{sw}=0.0161\ \mathrm{W}
-\]
 
 ##### Total Low Power Section Power Dissipation
 
