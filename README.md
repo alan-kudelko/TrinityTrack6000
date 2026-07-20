@@ -2,35 +2,37 @@
 
 **TrinityTrack6000** is a physically built, modular, multi-MCU tracked robotic platform.
 
-The system is based on a stackable PCB architecture, where each module is responsible for a specific function such as control, power management, sensing, or data processing. A central STM32-based controller coordinates the system, while additional MCUs and FPGA modules handle specialized real-time tasks.
+The system is built around a modular PCB architecture, consisting of a stackable processing backplane and dedicated external control and power modules. Each module is responsible for a single functional domain such as system coordination, motion control, power management, sensing, or high-performance data processing.
 
-The project combines mechanical design with custom electronics and embedded software, focusing on distributed control, real-time operation, and scalable hardware integration.
+A central STM32-based `MainControlBoard` supervises overall system operation, while dedicated MCU and FPGA modules perform local real-time processing and subsystem control.
+
+The project combines mechanical design, custom electronics, embedded software, and power electronics, focusing on distributed system architecture, real-time operation, and scalable hardware integration.
 
 ## 📦 System Modules
 
 The system is built as a set of dedicated PCB modules, each responsible for a specific function within the platform.
-A subset of modules forms a **stackable backplane**, connected via a shared SPI bus and a common 5V power rail distributed through a high-density board-to-board connector.
-Other modules are connected externally depending on their function and power requirements.
+A subset of modules forms a **stackable processing backplane**, connected via a shared SPI bus and a common 5V power rail distributed through a high-density board-to-board connector.
 
-### 🔌 Stack Modules (SPI Backplane)
+Power electronics and battery-related modules are connected externally through dedicated communication and power interfaces.
 
-These modules are physically stacked and share:
-* SPI communication bus
-* Dedicated control lines (CS, READY, RESET)
-* Common 5V power rail
-* **MainControlBoard** – System coordination, communication and telemetry
-* **VideoAudioBoard** – FPGA-based processing *(planned)*
-* **FireControlBoard** – Ballistic computation *(planned)*
-* **RadarBoard** – Radar processing module *(planned)*
+### 🔌 Stack Modules
+
+These modules are physically stacked and provide the system's processing and control backplane.
+
+* **MainControlBoard** – System supervision, communication and telemetry
+* **VideoAudioBoard** – FPGA-based audio/video processing *(planned)*
+* **FireControlBoard** – Weapon subsystem control and ballistic computation *(planned)*
+* **RadarBoard** – Radar signal processing and radar subsystem control *(planned)*
 
 ### 🔧 External Modules
 
-These modules are connected outside of the stack and may use separate power paths or interfaces:
-* **HardwareControlBoard** – Power electronics, motor control and actuator supervision
+These modules are connected outside of the processing stack and provide power conversion, battery management, and real-time actuator control.
+
+* **HardwareControlBoard** – Generic real-time actuator controller, power electronics and motion control
 * **PowerConversionBoard** – Power regulation and distribution
 * **BMSBoard** – Battery management system
 
-Each module is developed independently and integrates into the system through clearly defined electrical and communication interfaces.
+Each module is developed, tested, and documented independently, while integrating into the system through clearly defined electrical and communication interfaces.
 
 ---
 
@@ -38,26 +40,26 @@ Each module is developed independently and integrates into the system through cl
 
 The project serves as a practical platform for exploring and implementing:
 
-* Distributed embedded systems and **multi-MCU coordination**
-* Real-time system design using **RTOS (ThreadX / bare-metal approaches)**
-* Inter-module communication over a **shared SPI backplane**
-* System-level synchronization, fault detection, and **failsafe mechanisms**
-* FPGA-based **real-time audio/video processing and compression**
-* Radar signal processing and **object detection techniques**
-* Power electronics, including **switch-mode power supplies and motor control (H-bridge)**
-* Modular hardware design and **scalable PCB-based system architecture**
+* Distributed embedded systems and multi-MCU architectures
+* Real-time embedded control systems
+* Inter-module communication
+* System synchronization, diagnostics, and failsafe mechanisms
+* FPGA-based audio/video processing
+* Radar signal processing and object detection
+* Power electronics and motor control
+* Modular hardware and scalable PCB system architecture
 
-Due to the modular nature of the system, the repository is organized around individual PCB modules.
+Due to its modular architecture, the repository is organized into dedicated hardware modules.
 
-Each module is contained in a dedicated directory and includes:
+Each module contains:
 
-* hardware design files (schematics and PCB)
-* firmware for the corresponding MCU(s)
-* local documentation and development notes
+* Hardware design files (schematics and PCB)
+* Firmware
+* Module-specific documentation
 
-Every module has its own `README.md`, describing its functionality, design decisions, and implementation details.
+Every module includes its own `README.md` describing its purpose, architecture, and implementation details.
 
-This structure allows independent development, easier navigation, and scalable integration of new modules into the system.
+This organization enables independent development, testing, and future scalability.
 
 ---
 
@@ -66,16 +68,6 @@ This structure allows independent development, easier navigation, and scalable i
 - 🔄 **MainControlBoard** hardware validation and firmware development
 - 🔄 **HardwareControlBoard** architecture and hardware design
 - 🔄 System architecture refinement and module integration
-
----
-
-
-## 🛠 Tech Stack
-
-- **MCUs:** STM32G4, Infineon XMC4000 Family, NXP / Renesas (planned), FPGA  
-- **RTOS:** ThreadX  
-- **Communication:** SPI, UART, I2C, wireless link  
-- **Build system:** CMake + arm-gcc
 
 ---
 
@@ -122,9 +114,13 @@ This structure allows independent development, easier navigation, and scalable i
 
 ### 🎯 FireControlBoard *(planned)*
 
+*PCB preview and assembly*
+
 ---
 
 ### 📡 RadarBoard *(planned)*
+
+*PCB preview and assembly*
 
 ---
 
@@ -147,21 +143,22 @@ It illustrates how individual boards are interconnected, the role of each subsys
 
 ## 📁 Repository Structure
 
-The repository is organized around modular hardware components and supporting resources.
+The repository is organized into dedicated hardware modules and supporting resources.
 
-* [`MainControlBoard/`](MainControlBoard/) – high-level system coordination, communication and telemetry
-* [`HardwareControlBoard/`](HardwareControlBoard/) – power electronics and motion control
-* [`PowerConversionBoard/`](PowerConversionBoard/) – power regulation and distribution
-* [`RadarModuleBoard/`](RadarModuleBoard/) – radar module *(planned)*
-* [`AVProcessingBoard/`](AVProcessingBoard/) – FPGA-based audio/video processing *(planned)*
-* [`FireControlBoard/`](FireControlBoard/) – fire control system *(planned)*
-* [`MechanicalDesign/`](MechanicalDesign/) – chassis and mechanical components
-* [`Datasheets/`](Datasheets/) – documentation for used components
-* [`docs/`](docs/) – technical documentation and generated files (e.g. Doxygen)
-* [`Media/`](Media/) – images, diagrams, and visual materials
-* [`tools/`](tools/) – development tools and helper scripts
+* [`MainControlBoard/`](MainControlBoard/) – System supervision, communication, telemetry, and coordination of all subsystem modules
+* [`HardwareControlBoard/`](HardwareControlBoard/) – Real-time motion control, actuator control, and power electronics
+* [`PowerConversionBoard/`](PowerConversionBoard/) – System power conversion, regulation, and power distribution
+* [`BMSBoard/`](BMSBoard/) – Battery monitoring, protection, and state estimation
+* [`FireControlBoard/`](FireControlBoard/) – Weapon subsystem control and ballistic computation *(planned)*
+* [`RadarBoard/`](RadarBoard/) – Radar subsystem control and signal processing *(planned)*
+* [`VideoAudioBoard/`](VideoAudioBoard/) – FPGA-based audio and video processing *(planned)*
+* [`MechanicalDesign/`](MechanicalDesign/) – Mechanical CAD models and assemblies
+* [`Datasheets/`](Datasheets/) – Component datasheets and reference documentation
+* [`docs/`](docs/) – Project documentation and generated files
+* [`Media/`](Media/) – Images, renders, and architecture diagrams
+* [`tools/`](tools/) – Development and utility scripts
 
-Each module contains its own firmware, hardware design files, and documentation.
+Each hardware module contains its own hardware design, firmware, documentation, and development resources.
 
 ## 🤝 Acknowledgments
 
