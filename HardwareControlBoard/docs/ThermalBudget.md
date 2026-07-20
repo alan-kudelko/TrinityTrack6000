@@ -138,8 +138,116 @@ The worst-case values specified above are used throughout the calculations to pr
 
 ### 4.4 Current Sense Shunts
 
+Current sensing within the `HardwareControlBoard` is performed using low-resistance precision shunt resistors.
+
+The High Power Section (HPS) utilizes two independent current measurement channels for the left and right H-bridges, while the winch motor uses a dedicated shunt resistor for current monitoring.
+
+The power dissipation of each shunt resistor is calculated using:
+
+```text
+Pshunt = I² × Rshunt
+```
+
+where:
+
+- **Pshunt** — shunt power dissipation [W]
+- **I** — load current [A]
+- **Rshunt** — shunt resistance [Ω]
+
+##### Design Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| HPS Rated Current | I | 40 A |
+| Winch Rated Current | I | 15 A |
+| HPS Shunt Resistance | Rshunt | 1 mΩ |
+| Winch Shunt Resistance | Rshunt | 5 mΩ |
+| Maximum PWM Duty Cycle | DMAX | 85 % |
+
+##### HPS Current Sense Shunt
+
+```text
+Pshunt = D × I² × Rshunt
+```
+
+Substituting the design parameters:
+
+```text
+Pshunt = 0.85 × (40 A)² × 1 mΩ
+Pshunt = 1.36 W
+```
+
+##### Winch Current Sense Shunt
+
+```text
+Pshunt = D × I² × Rshunt
+```
+
+Substituting the design parameters:
+
+```text
+Pshunt = 0.85 × (15 A)² × 5 mΩ
+Pshunt = 0.956 W
+```
+
+##### Total Current Sense Shunt Power Dissipation
+
+| Current Sense Channel | Quantity | Power Loss per Shunt | Total Power Loss |
+|-----------------------|---------:|---------------------:|-----------------:|
+| HPS Shunts (1 mΩ) | 2 | 1.36 W | 2.72 W |
+| Winch Shunt (5 mΩ) | 1 | 0.956 W | 0.956 W |
+| **Total Shunt Power Dissipation** | **3** | — | **3.676 W** |
+
+> **Note:** The calculations assume a maximum PWM duty cycle of **85%**, representing the worst-case continuous operating condition of the H-bridge power stages.
+
+
 ### 4.5 Other Components
 
 ## 5. Thermal Summary
 
+This section summarizes the estimated power dissipation of all major heat-generating subsystems implemented on the `HardwareControlBoard`.
+
+The objective is to establish the overall PCB thermal budget and verify that the selected PCB technology, copper area, and cooling method are capable of dissipating the generated heat under worst-case operating conditions.
+
+Unless stated otherwise, all values represent **worst-case theoretical estimates** based on conservative first-order calculations and maximum datasheet parameters.
+
+| Section | Worst-Case Power Dissipation | Notes |
+|---------|-----------------------------:|-------|
+| Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
+| Medium Power Section (MPS) | TBD | |
+| High Power Section (HPS) | TBD | |
+| Current Sense Shunts | 3.676 W | Shunt conduction losses |
+| Other Components | TBD | Gate drivers, analog front-end, logic ICs, etc. |
+| **Total PCB Thermal Budget** | **TBD** | Worst-case estimate |
+
+The resulting thermal budget will be used to verify:
+
+- PCB heat spreading capability,
+- copper area utilization,
+- thermal via placement,
+- component temperature margins,
+- heatsink requirements (if applicable),
+- expected PCB operating temperature.
+
+> **Note:**
+> - The presented values are conservative worst-case design estimates intended for thermal budgeting.
+> - Individual subsystem losses are calculated independently using worst-case operating assumptions. Consequently, the total thermal budget represents an upper design limit rather than a simultaneously achievable operating condition.
+> - The final thermal performance will be validated experimentally during prototype bring-up and hardware characterization.
+
 ## 6. Design Conclusions
+
+The thermal evaluation presented in this document is currently incomplete.
+
+Additional analysis is required for the remaining power stages and supporting circuitry before the final PCB thermal budget can be established.
+
+The following items remain to be evaluated:
+
+- Medium Power Section (MPS),
+- High Power Section (HPS),
+- Gate driver power dissipation,
+- Analog front-end and measurement circuitry,
+- Auxiliary power supplies,
+- Total PCB thermal budget,
+- Prototype thermal measurements and validation.
+
+The conclusions of this document will be updated after completing the remaining analytical calculations and validating the design using hardware measurements.
