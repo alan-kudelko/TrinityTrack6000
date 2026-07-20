@@ -136,6 +136,46 @@ The worst-case values specified above are used throughout the calculations to pr
 
 ### 4.3 High Power Section
 
+The High Power Section (HPS) consists of two independent full H-bridges designed to drive the propulsion motors of the platform.
+
+Each H-bridge is implemented using discrete **STL160N4F7** N-channel MOSFETs driven by an isolated **UCC21551** gate driver. The thermal analysis includes both conduction and switching losses, which dominate the overall power dissipation of this section.
+
+##### Design Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Supply Voltage | VDS | 12 V |
+| Gate Voltage | VGS | 10 V (datasheet) |
+| Continuous Motor Current | ID | 40 A |
+| PWM Frequency | fPWM | 40 kHz |
+| Maximum PWM Duty Cycle | DMAX | 85 % |
+| H-Bridges | — | 2 |
+| Conducting MOSFETs | — | 4 |
+| MOSFET | — | STL160N4F7 |
+| Gate Driver | — | UCC21551 |
+
+##### MOSFET Parameters (Worst-Case Datasheet Values)
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Drain-Source On Resistance | RDS(on) | 2.5 mΩ |
+| Total Gate Charge | Qg | 29 nC |
+| Rise Time | tr | 6.6 ns |
+| Fall Time | tf | 5.7 ns |
+| Maximum Junction Temperature | TJ(max) | 175 °C |
+
+The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
+
+##### Total High Power Section Power Dissipation
+
+| Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
+|-----------|---------:|----------------------:|-----------------:|
+| Conduction Loss | 4 | 3.40 W | 13.60 W |
+| Switching Loss | 4 | 0.118 W | 0.472 W |
+| **Total HPS Power Dissipation** | **4** | — | **14.07 W** |
+
+> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **40 A** and a maximum PWM duty cycle of **85%**. During normal operation, only two MOSFETs conduct the motor current simultaneously in each H-bridge. Since the High Power Section consists of two independent H-bridges, the total power dissipation is calculated for **four actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
+
 ### 4.4 Current Sense Shunts
 
 Current sensing within the `HardwareControlBoard` is performed using low-resistance precision shunt resistors.
@@ -215,7 +255,7 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
 | Medium Power Section (MPS) | TBD | |
-| High Power Section (HPS) | TBD | |
+| High Power Section (HPS) | 14.07 W | MOSFET conduction and switching losses |
 | Current Sense Shunts | 3.676 W | Shunt conduction losses |
 | Other Components | TBD | Gate drivers, analog front-end, logic ICs, etc. |
 | **Total PCB Thermal Budget** | **TBD** | Worst-case estimate |
