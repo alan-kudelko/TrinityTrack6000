@@ -392,11 +392,11 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 | Section | Worst-Case Power Dissipation | Notes |
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
-| Medium Power Section (MPS) | 4.374 W + Stepper Drivers | Heater (0.235 W), Winch (4.139 W), Stepper Drivers (7.200 W) |
+| Medium Power Section (MPS) | 11.574 W | Heater (0.235 W), Winch (4.139 W), Stepper Drivers (7.200 W) |
 | High Power Section (HPS) | 14.07 W | MOSFET conduction and switching losses |
 | Current Sense Shunts | 3.676 W | Shunt conduction losses |
-| Other Components | 0.85 W + TBD | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
-| **Total PCB Thermal Budget** | **30.618 W + Stepper Drivers + TBD** | Worst-case estimate |
+| Other Components | 0.85 W | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
+| **Total PCB Thermal Budget** | **30.618 W** | Worst-case estimate |
 
 The resulting thermal budget will be used to verify:
 
