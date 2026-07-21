@@ -134,6 +134,123 @@ The worst-case values specified above are used throughout the calculations to pr
 
 ### 4.2 Medium Power Section
 
+#### 4.2.1 Heater Output
+
+The heater output is implemented as a **single low-side MOSFET** using the **PJQ4548P-AU_R2_002A1** N-channel MOSFET.
+
+Both **conduction losses** and **switching losses** are included in the thermal analysis.
+
+##### Design Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Supply Voltage | VDS | 12 V |
+| Gate Voltage | VGS | 12 V |
+| Continuous Load Current | ID | 5 A |
+| PWM Frequency | fPWM | 40 kHz |
+| Maximum PWM Duty Cycle | DMAX | 100 % |
+| MOSFET | — | PJQ4548P-AU_R2_002A1 |
+| Gate Driver | — | 2EDN7533FXTMA1 |
+
+##### MOSFET Parameters (Worst-Case Datasheet Values)
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Drain-Source On Resistance | RDS(on) | 9.1 mΩ |
+| Total Gate Charge | Qg | 13 nC |
+| Rise Time | tr | 3 ns |
+| Fall Time | tf | 3 ns |
+| Maximum Junction Temperature | TJ(max) | 175 °C |
+
+The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
+
+##### Total Heater Output Power Dissipation
+
+| Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
+|-----------|---------:|----------------------:|-----------------:|
+| Conduction Loss | 1 | 0.228 W | 0.228 W |
+| Switching Loss | 1 | 0.007 W | 0.007 W |
+| **Total Heater Output Power Dissipation** | **1** | — | **0.235 W** |
+
+> **Note:** The calculations assume worst-case operating conditions with a continuous load current of **5 A** and a maximum PWM duty cycle of **100%**. The heater output is implemented using a single low-side MOSFET. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
+
+#### 4.2.2 Winch H-Bridge
+
+The winch output is implemented as a **single full H-bridge** using **four PJQ4548P-AU_R2_002A1 N-channel MOSFETs** driven by the **UCC21551** isolated gate driver.
+
+Both **conduction losses** and **switching losses** are included in the thermal analysis.
+
+##### Design Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Supply Voltage | VDS | 12 V |
+| Gate Voltage | VGS | 12 V |
+| Continuous Motor Current | ID | 15 A |
+| PWM Frequency | fPWM | 40 kHz |
+| Maximum PWM Duty Cycle | DMAX | 85 % |
+| H-Bridges | — | 1 |
+| Conducting MOSFETs | — | 2 |
+| MOSFET | — | PJQ4548P-AU_R2_002A1 |
+| Gate Driver | — | UCC21551 |
+
+##### MOSFET Parameters (Worst-Case Datasheet Values)
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Drain-Source On Resistance | RDS(on) | 9.1 mΩ |
+| Total Gate Charge | Qg | 13 nC |
+| Rise Time | tr | 3 ns |
+| Fall Time | tf | 3 ns |
+| Maximum Junction Temperature | TJ(max) | 175 °C |
+
+The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
+
+##### Total Winch H-Bridge Power Dissipation
+
+| Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
+|-----------|---------:|----------------------:|-----------------:|
+| Conduction Loss | 2 | 2.048 W | 4.096 W |
+| Switching Loss | 2 | 0.022 W | 0.043 W |
+| **Total Winch H-Bridge Power Dissipation** | **2** | — | **4.139 W** |
+
+> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **15 A** and a maximum PWM duty cycle of **85%**. During normal operation, only **two MOSFETs** conduct the motor current simultaneously in the H-bridge. Therefore, the total power dissipation is calculated for **two actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
+
+#### 4.2.3 Stepper Motor Drivers
+
+The `HardwareControlBoard` supports up to **six external stepper motor drivers** implemented using the **Texas Instruments DRV8434S** integrated bipolar stepper motor driver.
+
+Unlike the previous power stages, the DRV8434S integrates both the power MOSFET bridge and current regulation circuitry within a single IC. Consequently, the thermal analysis is based on the power dissipation methodology recommended by **Texas Instruments**, which includes conduction losses, switching losses and the device quiescent power consumption.
+
+##### Design Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Supply Voltage | VM | 12 V |
+| Motor Current | IRMS | 2 A / phase |
+| PWM Frequency | fPWM | 40 kHz |
+| Stepper Drivers | — | 6 |
+| Driver | — | DRV8434S |
+
+##### Driver Thermal Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Junction-to-Ambient Thermal Resistance | RθJA | 29.7 °C/W |
+| Junction-to-Board Thermal Resistance | RθJB | 9.3 °C/W |
+| Junction-to-Case (Bottom) | RθJC(bottom) | 2.4 °C/W |
+| Maximum Junction Temperature | TJ(max) | 150 °C |
+
+The thermal characteristics specified above correspond to the recommended PCB layout with an exposed thermal pad and multiple thermal vias beneath the device.
+
+##### Total Stepper Driver Power Dissipation
+
+| Loss Type | Quantity | Power Loss per Driver | Total Power Loss |
+|-----------|---------:|----------------------:|-----------------:|
+| **Total Driver Power Dissipation** | **6** | **~0.9–1.2 W** | **~5.4–7.2 W** |
+
+> **Note:** The DRV8434S integrates the complete H-bridge, gate drive circuitry and current regulation into a single package. Unlike discrete MOSFET implementations, the total power dissipation cannot be accurately determined using only MOSFET conduction and switching loss equations. Instead, the thermal analysis follows the methodology recommended by **Texas Instruments**, taking into account conduction losses, switching losses and quiescent device power. Final power dissipation depends on the selected microstepping mode, current regulation settings, motor operating point and PCB thermal performance.
+
 ### 4.3 High Power Section
 
 The High Power Section (HPS) consists of two independent full H-bridges designed to drive the propulsion motors of the platform.
@@ -241,7 +358,28 @@ Pshunt = 0.956 W
 > **Note:** The calculations assume a maximum PWM duty cycle of **85%**, representing the worst-case continuous operating condition of the H-bridge power stages.
 
 
-### 4.5 Other Components
+#### 4.5 Other Components
+
+##### 4.5.1 3.3 V LDO Regulator
+
+The **TLV76133** low-dropout regulator provides the primary **3.3 V** supply rail for the control electronics. The regulator is powered from the **5 V** rail generated by the onboard power conversion stage.
+
+##### Design Parameters
+
+| Parameter | Symbol | Value |
+|-----------|--------|------:|
+| Input Voltage | VIN | 5 V |
+| Output Voltage | VOUT | 3.3 V |
+| Maximum Output Current | IOUT | 500 mA |
+| Regulator | — | TLV76133 |
+
+##### Total LDO Power Dissipation
+
+| Loss Type | Quantity | Power per Device | Total Power |
+|-----------|---------:|-----------------:|------------:|
+| LDO Dissipation | 1 | 0.85 W | 0.85 W |
+
+> **Note:** The worst-case power dissipation assumes the regulator continuously supplies the maximum rated output current of **500 mA**. The power loss is calculated using the linear regulator equation **P = (VIN − VOUT) × IOUT**. Under normal operating conditions, the average power dissipation is expected to be significantly lower due to the substantially reduced current consumption of the digital control circuitry.
 
 ## 5. Thermal Summary
 
@@ -254,11 +392,11 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 | Section | Worst-Case Power Dissipation | Notes |
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
-| Medium Power Section (MPS) | TBD | |
+| Medium Power Section (MPS) | 4.374 W + Stepper Drivers | Heater (0.235 W), Winch (4.139 W), Stepper Drivers (7.200 W) |
 | High Power Section (HPS) | 14.07 W | MOSFET conduction and switching losses |
 | Current Sense Shunts | 3.676 W | Shunt conduction losses |
-| Other Components | TBD | Gate drivers, analog front-end, logic ICs, etc. |
-| **Total PCB Thermal Budget** | **TBD** | Worst-case estimate |
+| Other Components | 0.85 W + TBD | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
+| **Total PCB Thermal Budget** | **30.618 W + Stepper Drivers + TBD** | Worst-case estimate |
 
 The resulting thermal budget will be used to verify:
 
@@ -276,18 +414,16 @@ The resulting thermal budget will be used to verify:
 
 ## 6. Design Conclusions
 
-The thermal evaluation presented in this document is currently incomplete.
+The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 30.618 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
 
-Additional analysis is required for the remaining power stages and supporting circuitry before the final PCB thermal budget can be established.
+The analysis leads to the following design conclusions:
 
-The following items remain to be evaluated:
+- The **High Power Section (HPS)** is the dominant heat source on the PCB and therefore requires the largest copper area and efficient thermal spreading.
+- The **Medium Power Section (MPS)**, particularly the integrated stepper motor drivers and winch H-bridge, represents the second largest source of heat and should be physically separated from the HPS to improve thermal distribution.
+- Components with significant power dissipation, including MOSFETs, stepper motor drivers, current shunts and linear regulators, should be distributed across the PCB to avoid localized thermal hotspots.
+- Components utilizing exposed thermal pads, such as the **DRV8434S** stepper motor drivers, should follow the manufacturer's recommended PCB layout with adequate copper area and multiple thermal vias.
+- The calculated thermal budget should be used as a guideline for PCB layout optimization and heatsinking rather than as an indication of continuous operating power.
 
-- Medium Power Section (MPS),
-- High Power Section (HPS),
-- Gate driver power dissipation,
-- Analog front-end and measurement circuitry,
-- Auxiliary power supplies,
-- Total PCB thermal budget,
-- Prototype thermal measurements and validation.
+> **Note:** The total PCB thermal budget represents a theoretical worst-case scenario in which all major power stages are assumed to operate simultaneously at their maximum design load. Such operating conditions are not expected during normal system operation but are intentionally used to provide adequate design margin and verify the thermal robustness of the HardwareControlBoard.
 
-The conclusions of this document will be updated after completing the remaining analytical calculations and validating the design using hardware measurements.
+The analytical results presented in this document should be verified during prototype testing using temperature measurements under representative operating conditions. Any discrepancies between calculated and measured temperatures should be incorporated into future PCB revisions.
