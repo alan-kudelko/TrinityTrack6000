@@ -270,7 +270,7 @@ Unless explicitly stated otherwise, the following requirements apply to the enti
 
 | Parameter | Requirement |
 |-----------|-------------|
-| Operating Input Voltage* | 12 V – 30 V DC |
+| Operating Input Voltage* | 12 V – 48 V DC |
 | Maximum Continuous Input Current | 112 A |
 | Typical Heavy Operating Current | 86–96 A |
 | Theoretical Peak Input Current | 122 A |
@@ -278,7 +278,7 @@ Unless explicitly stated otherwise, the following requirements apply to the enti
 
 **Notes:**
 
-- The supported operating input voltage is **BOM-dependent**. The current hardware revision targets **12 V – 30 V** operation. Future revisions may support higher operating voltages by selecting components with higher voltage ratings without requiring PCB redesign.
+- The supported operating input voltage is **BOM-dependent**. The current hardware revision targets **12 V – 48 V** operation. Future revisions may support higher operating voltages by selecting components with higher voltage ratings without requiring PCB redesign.
 - The **5 V logic supply** is generated locally on the `HardwareControlBoard` and serves as the primary supply rail for digital logic, gate drivers, and auxiliary circuitry. Additional supply rails, including the **3.3 V digital rail** and the **precision analog reference**, are generated locally from this supply.
 
 #### 4.1 Common Electrical Requirements
@@ -424,132 +424,8 @@ The primary objective is to maximize hardware reuse, simplify PCB layout, reduce
 
 ---
 
-### 📐 5. Design Calculations
 
-#### 5.1 Analog Front-End
-
-The `HardwareControlBoard` utilizes the full input range of the XMC4500 Analog-to-Digital Converter to maximize measurement resolution and minimize quantization error.
-
-All analog signal conditioning circuits shall be designed around the following assumptions:
-
-- ADC input voltage range: **0 V to 3.3 V**
-- Reference voltage: **3.3 V**
-- Mid-scale reference voltage: **1.65 V**
-- Bipolar current measurements shall be centered around **1.65 V**
-- Positive current shall increase the ADC input voltage
-- Negative current shall decrease the ADC input voltage
-
-To maximize the effective utilization of the ADC input range, the ideal current sense amplifier gain would be **30 V/V**, resulting in an output voltage swing of approximately **0.15 V to 3.15 V** for a ±50 A measurement range for driver motors.
-
-However, a commercially available fixed-gain amplifier with **30 V/V** gain could not be identified among the evaluated device families.
-
-Therefore, a gain of **25 V/V** was selected as the best commercially available compromise.
-
-| Device | Current Range | Shunt | Gain | ADC Voltage Range | Current / LSB | Shunt Power Loss @ Imax |
-|--------|--------------:|------:|-----:|------------------:|--------------:|------------------------:|
-| Left Drive Motor | -50 A to 50 A | 1 mΩ | 25 V/V | 0.40 V – 2.90 V | 24.41 mA | 2.50 W |
-| Right Drive Motor | -50 A to 50 A | 1 mΩ | 25 V/V | 0.40 V – 2.90 V | 24.41 mA | 2.50 W |
-| Winch Motor | -10 A to 10 A | 5 mΩ | 25 V/V | 0.40 V – 2.90 V | 4.88 mA | 0.50 W |
-| Heater | 0 A to 10 A | 5 mΩ | 25 V/V | 1.65 V – 2.90 V | 2.44 mA | 0.50 W |
-
-The table above summarizes the standardized current measurement architecture adopted throughout the HardwareControlBoard. All current sensing channels share a common amplifier gain, while the measurement range is adjusted solely by the selected shunt resistor.
-
----
-
-### 6. Component Selection
-
-**WIP**
-
-### 7. PCB Design Requirements
-
-The `HardwareControlBoard` is designed as a mixed-signal, high-current control system. PCB requirements were established before the layout phase to ensure reliable operation under realistic operating conditions while maintaining reasonable manufacturing complexity.
-
-The following sections define the thermal and electrical design constraints used during PCB development.
-
-#### 7.1 Thermal Requirements
-
-
-##### 7.2.2 Medium Power Section (MPS)
-
-###### 7.2.2.1 Heater Output
-
-The heater output is implemented as a **single low-side MOSFET** using the **NTMFS4C09NCT1G** N-channel MOSFET.
-
-Both **conduction losses** and **switching losses** are included in the thermal analysis.
-
-**Design Parameters**
-
-| Parameter | Value |
-|----------|------:|
-| MOSFET | NTMFS4C09NCT1G |
-| Topology | Low-Side |
-| Drain Voltage | 12 V |
-| Gate Voltage | 12 V |
-| PWM Frequency | Up to 40 kHz |
-| Maximum Duty Cycle | 100 % |
-| Continuous Load Current | 5 A |
-| Maximum RDS(on) | 5.8 mΩ |
-| Total Gate Charge | 22.2 nC |
-| Rise Time | 32 ns |
-| Fall Time | 6 ns |
-
-The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet together with the first-order switching loss approximation.
-
-| Loss Type | Quantity | Power / MOSFET | Total Power |
-|-----------|---------:|---------------:|------------:|
-| Conduction Loss | 1 | 0.145 W | 0.145 W |
-| Switching Loss | 1 | 0.046 W | 0.046 W |
-| **Total Heater Output** | — | — | **0.191 W** |
-
-The total estimated power dissipation of the heater output is therefore **0.191 W** under the defined worst-case operating conditions.
-
-**Note:**
-- The analysis assumes continuous PWM operation at **40 kHz** and **100 % duty cycle**.
-- Conduction losses were calculated using the **maximum** datasheet **RDS(on)** value.
-- The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
-
-###### 7.2.2.2 Winch H-Bridge
-
-The winch output is implemented as a **single full H-bridge** using **four NTMFS4C09NCT1G N-channel MOSFETs** driven by dedicated gate drivers.
-
-Both **conduction losses** and **switching losses** are included in the thermal analysis.
-
-**Design Parameters**
-
-| Parameter | Value |
-|----------|------:|
-| MOSFET | NTMFS4C09NCT1G |
-| Topology | Full H-Bridge |
-| Drain Voltage | 12 V |
-| Gate Voltage | 12 V |
-| PWM Frequency | Up to 40 kHz |
-| Maximum Duty Cycle | 85 % |
-| Continuous Motor Current | 5 A |
-| Total MOSFETs | 4 |
-| Maximum RDS(on) | 5.8 mΩ |
-| Total Gate Charge | 22.2 nC |
-| Rise Time | 32 ns |
-| Fall Time | 6 ns |
-
-The thermal budget is calculated using the **maximum** RDS(on) value specified in the datasheet together with the first-order switching loss approximation.
-
-| Loss Type | Quantity | Power / MOSFET | Total Power |
-|-----------|---------:|---------------:|------------:|
-| Conduction Loss | 2 | 0.145 W | 0.290 W |
-| Switching Loss | 2 | 0.046 W | 0.092 W |
-| **Total Winch H-Bridge** | — | — | **0.382 W** |
-
-The total estimated power dissipation of the winch H-bridge is therefore **0.382 W** under the defined worst-case operating conditions.
-
-**Note:**
-- Only two MOSFETs conduct motor current simultaneously during normal H-bridge operation.
-- Only two MOSFETs are actively switched during PWM operation.
-- Conduction losses were calculated using the **maximum** datasheet **RDS(on)** value.
-- The analysis represents a conservative worst-case thermal estimate intended for PCB thermal budgeting.
-
----
-
-### 8. 🔌 Electrical Schematic
+### 5. 🔌 Electrical Schematic
 
 The complete electrical schematic is available here:  
 👉 [HardwareControlBoard_Schematic](PCB/Schematic_HardwareControlBoard.svg)
