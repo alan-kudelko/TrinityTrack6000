@@ -4,19 +4,25 @@
 
 This document defines the functional requirements of the `HardwareControlBoard`.
 
-Its purpose is to specify the intended functionality, operational responsibilities, and external interfaces of the board independently of the final hardware implementation.
+Its purpose is to establish the functions and operational responsibilities that the board shall provide within the TrinityTrack6000 platform.
 
-The requirements defined in this document serve as the primary input for the electrical architecture, hardware design, firmware development, PCB implementation, and system verification activities.
+The requirements defined in this document serve as the basis for the electrical architecture, hardware design, firmware development, system integration, and verification activities.
 
-Unless explicitly stated otherwise, the requirements described herein are implementation-independent and remain valid regardless of the selected electronic components or future hardware revisions.
+Unless explicitly stated otherwise, all requirements are implementation-independent and remain valid regardless of hardware revisions or component selection.
 
 ## 2. Scope
 
-This document defines the functional requirements of the `HardwareControlBoard`.
+This document specifies the functional requirements applicable to the `HardwareControlBoard`.
 
-It specifies the responsibilities of the board, the functionality it shall provide, and its external interfaces within the TrinityTrack6000 platform.
+It covers:
 
-Implementation details, electrical architecture, and hardware realization are specified in separate design documents.
+- Functional responsibilities of the board
+- Functional decomposition into Low, Medium, and High Power Sections
+- Functional safety requirements
+- Diagnostic capabilities
+- External functional interfaces
+
+Electrical implementation, mechanical design, PCB layout, firmware architecture, and component selection are specified in separate design documents.
 
 ## 3. System Overview
 
