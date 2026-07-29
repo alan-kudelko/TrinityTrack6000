@@ -432,23 +432,41 @@ The complete electrical schematic is available here:
 
 Below is a breakdown of individual sections of the design.
 
-#### 8.1 Voltage regulation for logic part
+#### 5.1 XMC Core
 
-#### 8.2 Voltage reference for analog measurements
+**TBD**
 
-#### 8.3 Lower Power Section (LPS)
+#### 5.2 Power Input
 
-#### 8.4 Medium Power Section (MPS)
+#### 5.3 Gate Driver Supply
 
-#### 8.5 High Power Section (HPS)
+**TBD**
 
-![High Power Section H Briges](Media/HPS_H_Schematic.png)
+#### 5.4 Logic Power
 
-![High Power Section Gate Drive](Media/HPS_Gate_Schematic.png)
+**TBD**
 
-#### 8.6 XMC4500
+#### 5.5 Precision Voltage Reference
 
-### 9. PCB
+**TBD**
+
+#### 5.6 Low Power Section
+
+**TBD**
+
+#### 5.7 Medium Power Section H-Bridge
+
+**TBD**
+
+#### 5.8 Medium Power Section Low Side
+
+**TBD**
+
+#### 5.9 Medium Power Section Stepper Drivers
+
+**TBD**
+
+### 6. PCB
 
 **TBD**
 
