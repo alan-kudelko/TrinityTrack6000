@@ -438,17 +438,19 @@ Below is a breakdown of individual sections of the design.
 
 #### 5.2 Power Input
 
+![Power Input1](/Media/02_Power_Input.png)
+
 #### 5.3 Gate Driver Supply
 
-**TBD**
+![Gate Driver Supply](/Media/03_Gate_Driver_Supply.png)
 
 #### 5.4 Logic Power
 
-**TBD**
+![Logic Power](/Media/04_Logic_Power.png)
 
 #### 5.5 Precision Voltage Reference
 
-**TBD**
+![Module block diagram1](/Media/05_Precision_Voltage_Reference.png)
 
 #### 5.6 Low Power Section
 
