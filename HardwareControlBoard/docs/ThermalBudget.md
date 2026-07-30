@@ -186,7 +186,7 @@ Both **conduction losses** and **switching losses** are included in the thermal 
 |-----------|--------|------:|
 | Supply Voltage | VDS | 12 V |
 | Gate Voltage | VGS | 12 V |
-| Continuous Motor Current | ID | 15 A |
+| Continuous Motor Current | ID | 10 A |
 | PWM Frequency | fPWM | 40 kHz |
 | Maximum PWM Duty Cycle | DMAX | 85 % |
 | H-Bridges | — | 1 |
@@ -210,12 +210,11 @@ The worst-case values specified above are used throughout the calculations to pr
 
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
-| Conduction Loss | 2 | 2.048 W | 4.096 W |
-| Switching Loss | 2 | 0.022 W | 0.043 W |
-| **Total Winch H-Bridge Power Dissipation** | **2** | — | **4.139 W** |
+| Conduction Loss | 2 | 0.910 W | 1.820 W |
+| Switching Loss | 2 | 0.014 W | 0.029 W |
+| **Total Winch H-Bridge Power Dissipation** | **2** | — | **1.849 W** |
 
-> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **15 A** and a maximum PWM duty cycle of **85%**. During normal operation, only **two MOSFETs** conduct the motor current simultaneously in the H-bridge. Therefore, the total power dissipation is calculated for **two actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
-
+> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **10 A** and a maximum PWM duty cycle of **85%**. During normal operation, only **two MOSFETs** conduct the motor current simultaneously in the H-bridge. Therefore, the total power dissipation is calculated for **two actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
 #### 4.2.3 Stepper Motor Drivers
 
 The `HardwareControlBoard` supports up to **six external stepper motor drivers** implemented using the **Texas Instruments DRV8434S** integrated bipolar stepper motor driver.
@@ -287,7 +286,7 @@ The worst-case values specified above are used throughout the calculations to pr
 
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
-| Conduction Loss | 4 | 3.40 W | 13.60 W |
+| Conduction Loss | 4 | 3.400 W | 13.600 W |
 | Switching Loss | 4 | 0.118 W | 0.472 W |
 | **Total HPS Power Dissipation** | **4** | — | **14.07 W** |
 
@@ -316,7 +315,7 @@ where:
 | Parameter | Symbol | Value |
 |-----------|--------|------:|
 | HPS Rated Current | I | 40 A |
-| Winch Rated Current | I | 15 A |
+| Winch Rated Current | I | 10 A |
 | HPS Shunt Resistance | Rshunt | 1 mΩ |
 | Winch Shunt Resistance | Rshunt | 5 mΩ |
 | Maximum PWM Duty Cycle | DMAX | 85 % |
@@ -343,17 +342,17 @@ Pshunt = D × I² × Rshunt
 Substituting the design parameters:
 
 ```text
-Pshunt = 0.85 × (15 A)² × 5 mΩ
-Pshunt = 0.956 W
+Pshunt = 0.85 × (10 A)² × 5 mΩ
+Pshunt = 0.425 W
 ```
 
 ##### Total Current Sense Shunt Power Dissipation
 
 | Current Sense Channel | Quantity | Power Loss per Shunt | Total Power Loss |
 |-----------------------|---------:|---------------------:|-----------------:|
-| HPS Shunts (1 mΩ) | 2 | 1.36 W | 2.72 W |
-| Winch Shunt (5 mΩ) | 1 | 0.956 W | 0.956 W |
-| **Total Shunt Power Dissipation** | **3** | — | **3.676 W** |
+| HPS Shunts (1 mΩ) | 2 | 1.36 W | 2.720 W |
+| Winch Shunt (5 mΩ) | 1 | 0.425 W | 0.425 W |
+| **Total Shunt Power Dissipation** | **3** | — | **3.145 W** |
 
 > **Note:** The calculations assume a maximum PWM duty cycle of **85%**, representing the worst-case continuous operating condition of the H-bridge power stages.
 
@@ -377,7 +376,7 @@ The **TLV76133** low-dropout regulator provides the primary **3.3 V** supply rai
 
 | Loss Type | Quantity | Power per Device | Total Power |
 |-----------|---------:|-----------------:|------------:|
-| LDO Dissipation | 1 | 0.85 W | 0.85 W |
+| LDO Dissipation | 1 | 0.850 W | 0.850 W |
 
 > **Note:** The worst-case power dissipation assumes the regulator continuously supplies the maximum rated output current of **500 mA**. The power loss is calculated using the linear regulator equation **P = (VIN − VOUT) × IOUT**. Under normal operating conditions, the average power dissipation is expected to be significantly lower due to the substantially reduced current consumption of the digital control circuitry.
 
@@ -392,11 +391,11 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 | Section | Worst-Case Power Dissipation | Notes |
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
-| Medium Power Section (MPS) | 11.574 W | Heater (0.235 W), Winch (4.139 W), Stepper Drivers (7.200 W) |
-| High Power Section (HPS) | 14.07 W | MOSFET conduction and switching losses |
-| Current Sense Shunts | 3.676 W | Shunt conduction losses |
-| Other Components | 0.85 W | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
-| **Total PCB Thermal Budget** | **30.618 W** | Worst-case estimate |
+| Medium Power Section (MPS) | 9.284 W | Heater (0.235 W), Winch (1.849 W), Stepper Drivers (7.200 W) |
+| High Power Section (HPS) | 14.070 W | MOSFET conduction and switching losses |
+| Current Sense Shunts | 3.145 W | Shunt conduction losses |
+| Other Components | 0.850 W | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
+| **Total PCB Thermal Budget** | **27.797 W** | Worst-case estimate |
 
 The resulting thermal budget will be used to verify:
 
