@@ -450,23 +450,41 @@ Below is a breakdown of individual sections of the design.
 
 #### 5.5 Precision Voltage Reference
 
-![Module block diagram1](/HardwareControlBoard/Media/05_Precision_Voltage_Reference.png)
+![Precision Voltage Reference](/HardwareControlBoard/Media/05_Precision_Voltage_Reference.png)
 
 #### 5.6 Low Power Section
 
-**TBD**
+![Lower Power Section](/HardwareControlBoard/Media/06_Low_Power_Section.png)
 
 #### 5.7 Medium Power Section H-Bridge
 
-**TBD**
+![Medium Power Section H-Bridge](/HardwareControlBoard/Media/07_Medium_Power_Section_H_Bridge.png)
 
 #### 5.8 Medium Power Section Low Side
 
-**TBD**
+![Medium Power Section Low Side](/HardwareControlBoard/Media/08_Medium_Power_Section_Low_Side.png)
 
 #### 5.9 Medium Power Section Stepper Drivers
 
+![Medium_Power_Section_Stepper_Drivers](/HardwareControlBoard/Media/09_Medium_Power_Section_Stepper_Drivers.png)
+
+#### 5.10 High Power Section
+
+![High Power Section](/HardwareControlBoard/Media/10_High_Power_Section.png)
+
+#### 5.11
+
+**TBD*
+
+#### 5.12
+
 **TBD**
+
+#### 5.13
+
+**TBD**
+
+---
 
 ### 6. PCB
 
