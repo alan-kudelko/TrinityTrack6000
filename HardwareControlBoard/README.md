@@ -428,7 +428,7 @@ The primary objective is to maximize hardware reuse, simplify PCB layout, reduce
 ### 5. 🔌 Electrical Schematic
 
 The complete electrical schematic is available here:  
-👉 [HardwareControlBoard_Schematic](PCB/Schematic_HardwareControlBoard.svg)
+👉 [HardwareControlBoard_Schematic](PCB/)
 
 Below is a breakdown of individual sections of the design.
 
