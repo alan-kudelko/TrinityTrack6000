@@ -472,15 +472,15 @@ Below is a breakdown of individual sections of the design.
 
 ![High Power Section](/HardwareControlBoard/Media/10_High_Power_Section.png)
 
-#### 5.11
-
-**TBD*
-
-#### 5.12
+#### 5.11 Temperature Measurements
 
 **TBD**
 
-#### 5.13
+#### 5.12 Encoder Inputs
+
+**TBD**
+
+#### 5.13 
 
 **TBD**
 
