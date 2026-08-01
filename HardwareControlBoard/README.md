@@ -144,3 +144,37 @@ The complete electrical design documentation is available below:
 | 📋 **Functional Requirements** | [`docs/FunctionalRequirements.md`](docs/FunctionalRequirements.md) |
 | 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
 | 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
+
+### 9. PCB Design
+
+The `HardwareControlBoard` PCB has been designed with a strong focus on power integrity, signal integrity, thermal performance, manufacturability, and long-term reliability.
+
+Special attention has been given to the separation of high-current power stages, analog measurement circuitry, and high-speed digital interfaces. The PCB layout follows established power electronics design practices to minimize switching noise, reduce electromagnetic interference (EMI), and improve thermal dissipation.
+
+The current hardware revision is implemented as a four-layer PCB with dedicated routing strategies for power distribution, ground return paths, and signal integrity. Thermal management is achieved through extensive copper pours, thermal via arrays, and optimized component placement.
+
+### PCB Images
+
+*Front View*
+
+![HardwareControlBoard Front](Media/PCB_Front.png)
+
+*Back View*
+
+![HardwareControlBoard Back](Media/PCB_Back.png)
+
+*3D Render*
+
+![HardwareControlBoard 3D](Media/PCB_3D.png)
+
+### PCB Design Documentation
+
+| Document | Description |
+|----------|-------------|
+| 📄 **Schematic** | [`PCB/HardwareControlBoard.pdf`](PCB/) |
+| ⚡ **Electrical Requirements** | [`docs/ElectricalRequirements.md`](docs/ElectricalRequirements.md) |
+| 📋 **Functional Requirements** | [`docs/FunctionalRequirements.md`](docs/FunctionalRequirements.md) |
+| 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
+| 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
+| 🛠️ **Assembly Notes** | [`docs/AssemblyNotes.md`](docs/AssemblyNotes.md) |
+
