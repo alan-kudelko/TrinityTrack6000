@@ -127,25 +127,20 @@ Communication with the `MainControlBoard` is performed through a dedicated syste
 
 The connector layout follows a modular organization, separating high-power, analog, and digital interfaces to improve signal integrity, simplify wiring, and facilitate maintenance.
 
-### 8. Electrical Design
+## 8. Electrical Design
 
-This section describes the electrical implementation of the HardwareControlBoard, including the individual power stages, analog measurement circuitry, communication interfaces, and protection mechanisms.
+The electrical design of the `HardwareControlBoard` follows a modular architecture that separates power electronics, analog measurement, communication interfaces, and safety functions into dedicated subsystems. This approach simplifies hardware development, improves maintainability, and enables individual functional blocks to be reused across future hardware revisions.
 
-The design emphasizes modularity, scalability, and reliable operation in electrically demanding environments while maintaining a reusable architecture for future hardware revisions.
+Each power stage is implemented as an independent electrical subsystem with dedicated gate drivers, protection circuitry, and analog feedback. Standardized interfaces and consistent design practices are applied throughout the board to maximize reliability, simplify debugging, and facilitate future expansion.
 
-The complete electrical design documentation is available in the following documents:
+Particular attention has been given to signal integrity, power distribution, electromagnetic compatibility (EMC), thermal performance, and hardware safety. The electrical architecture has been developed to support reliable operation in electrically demanding environments while providing the flexibility required for future platform variants.
 
-- 📄 **Electrical Schematic**  
-  👉 [`HardwareControlBoard_Schematic`](PCB/)
+The complete electrical design documentation is available below:
 
-- ⚡ **Electrical Requirements**  
-  👉 [`ElectricalRequirements.md`](docs/ElectricalRequirements.md)
-
-- 🔥 **Thermal Analysis**  
-  👉 [`ThermalBudget.md`](docs/ThermalBudget.md)
-
-- 📋 **Functional Requirements**  
-  👉 [`FunctionalRequirements.md`](docs/FunctionalRequirements.md)
-
-- 📑 **Bill of Materials (BOM)** *(optional)*  
-  👉 [`BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv)
+| Document | Description |
+|----------|-------------|
+| 📄 **Schematic** | [`PCB/HardwareControlBoard.pdf`](PCB/) |
+| ⚡ **Electrical Requirements** | [`docs/ElectricalRequirements.md`](docs/ElectricalRequirements.md) |
+| 📋 **Functional Requirements** | [`docs/FunctionalRequirements.md`](docs/FunctionalRequirements.md) |
+| 🔥 **Thermal Analysis** | [`docs/ThermalAnalysis.md`](docs/ThermalAnalysis.md) |
+| 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
