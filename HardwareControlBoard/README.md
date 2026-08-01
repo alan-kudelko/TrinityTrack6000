@@ -71,7 +71,7 @@ The overall power architecture is designed to support future hardware revisions 
 
 The `HardwareControlBoard` provides multiple communication interfaces for interaction with the MainControlBoard, external sensors, actuators, and peripheral devices. The communication architecture combines high-speed digital interfaces with dedicated motion-control and industrial signaling standards to support reliable real-time operation.
 
-The primary system interface connects the `HardwareControlBoard` to the `MainControlBoard`, through which high-level control commands, operating modes, and diagnostic information are exchanged. The XMC4500 executes all real-time control algorithms locally while remaining synchronized with the central system controller.
+The primary system interface connects the `HardwareControlBoard` to the `MainControlBoard`, through which high-level control commands, operating modes, and diagnostic information are exchanged. The **XMC4500** executes all real-time control algorithms locally while remaining synchronized with the central system controller.
 
 Dedicated communication interfaces are also provided for external devices, including differential RS-422 encoder inputs for robust position and speed feedback, STEP/DIR outputs for external stepper motor drivers, PWM outputs for servo control, and general-purpose digital I/O for auxiliary peripherals.
 
@@ -177,4 +177,18 @@ The current hardware revision is implemented as a four-layer PCB with dedicated 
 | 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
 | 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
 | 🛠️ **Assembly Notes** | [`docs/AssemblyNotes.md`](docs/AssemblyNotes.md) |
+
+## 10. Software
+
+The `HardwareControlBoard` firmware is implemented using a bare-metal architecture, allowing direct access to the hardware peripherals and deterministic real-time execution.
+
+The firmware makes extensive use of the **XMC4500** peripheral set, including timers, PWM generation, ADCs, DMA, interrupts, and dedicated motor-control peripherals. This hardware-oriented approach minimizes software overhead while providing precise timing, low interrupt latency, and predictable system behavior required for real-time motor control.
+
+The software architecture is organized into modular drivers and application layers to simplify maintenance, validation, and future feature expansion.
+
+The complete software architecture and firmware documentation are available in the following document:
+
+| Document | Description |
+|----------|-------------|
+| 💻 **Software Architecture** | [`docs/SoftwareArchitecture.md`](docs/SoftwareArchitecture.md) |
 
