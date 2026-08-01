@@ -1,4 +1,4 @@
-# HardwareControlBoard
+# HardwareControlBoard – Power Electronics & Real-Time Motion Control
 
 Power electronics and real-time motion control board developed for the `TrinityTrack6000` embedded robotics platform.
 
