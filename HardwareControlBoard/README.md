@@ -142,5 +142,5 @@ The complete electrical design documentation is available below:
 | 📄 **Schematic** | [`PCB/HardwareControlBoard.pdf`](PCB/) |
 | ⚡ **Electrical Requirements** | [`docs/ElectricalRequirements.md`](docs/ElectricalRequirements.md) |
 | 📋 **Functional Requirements** | [`docs/FunctionalRequirements.md`](docs/FunctionalRequirements.md) |
-| 🔥 **Thermal Analysis** | [`docs/ThermalAnalysis.md`](docs/ThermalAnalysis.md) |
+| 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
 | 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
