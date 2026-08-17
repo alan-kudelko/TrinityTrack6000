@@ -49,7 +49,7 @@ Applies to local routed traces; power/ground polygons are covered separately (se
 |-------|-------|-------|
 | Signal | 0.200 mm | |
 | Analog | 0.3 mm | |
-| Power | 0.300 mm | Local connections; polygons are a separate topic |
+| Power | 0.300 mm | Local connections |
 | Gate driver | 0.7 mm | |
 
 ## 6. Clearances
@@ -69,7 +69,7 @@ Applies to local routed traces; power/ground polygons are covered separately (se
 
 ## 8. High-Current Distribution
 
-High-current nets are distributed primarily through copper bus bars (Würth Elektronik RedCube, 74650173R), with PCB copper providing supplemental current spreading and local interconnection, per [`docs/ElectricalRequirements.md`](ElectricalRequirements.md) §4.4.
+High-current nets are distributed primarily through copper bus bars (Würth Elektronik RedCube, 74650173R), sized 10x3 mm with provision to mount 12x3 mm, with PCB copper providing supplemental current spreading and local interconnection, per [`docs/ElectricalRequirements.md`](ElectricalRequirements.md) §4.4.
 
 ## 9. Grounding Strategy
 

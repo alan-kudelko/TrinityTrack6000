@@ -177,6 +177,7 @@ The current hardware revision is implemented as a four-layer PCB with dedicated 
 | 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
 | 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
 | 🛠️ **Assembly Notes** | [`docs/AssemblyNotes.md`](docs/AssemblyNotes.md) |
+| 🧩 **PCB Layout Notes** | [`docs/PCBLayoutNotes.md`](docs/PCBLayoutNotes.md) |
 
 ## 10. Software
 
