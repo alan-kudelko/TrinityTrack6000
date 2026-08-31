@@ -52,6 +52,12 @@ Electrical components shall be selected with appropriate voltage, current, power
 
 Continuous operation at absolute maximum ratings shall not be considered acceptable.
 
+Component voltage ratings shall provide a minimum margin of **30%** above the highest nominal voltage the component is continuously exposed to, for the BOM variant in which it is populated (i.e., rated voltage ≥ 1.30 × nominal exposure voltage). This is a floor, not a target — greater margin shall be preferred where practical and shall not be considered over-engineering.
+
+For capacitors, margin beyond the 30% floor is particularly valuable: ceramic dielectrics (e.g., X7R) lose effective capacitance under DC bias as the applied voltage approaches the rated voltage, so additional voltage margin directly improves both breakdown safety and delivered capacitance.
+
+This 30% floor applies per BOM variant. Components validated for the 12 V input tier are not automatically valid for the 24 V or 48 V tiers, and vice versa; each populated component shall be checked against the actual nominal voltage exposure of the variant it is used in.
+
 ## 4. Power Distribution
 
 #### 4.1 Supply Voltage

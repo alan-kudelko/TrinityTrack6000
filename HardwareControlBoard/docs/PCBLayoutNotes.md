@@ -39,7 +39,7 @@ Schematic design, component selection, and BOM are covered in [`docs/ElectricalR
 | L1 (Top) | Component placement, power polygons, and signals |
 | L2 | Continuous GND plane |
 | L3 | Signals and power polygons for current distribution |
-| L4 (Bottom) | Power/supply polygons (gate drive supply, logic rails, etc.) |
+| L4 (Bottom) | Mainly power/supply polygons (gate drive supply, logic rails, etc.); signals permitted locally where they materially simplify routing, provided current distribution is not compromised |
 
 ## 5. Trace Widths
 
@@ -51,6 +51,8 @@ Applies to local routed traces; power/ground polygons are covered separately (se
 | Analog | 0.3 mm | |
 | Power | 0.300 mm | Local connections |
 | Gate driver | 0.7 mm | |
+
+Winch and MPS low-side gate drive traces use 0.4mm rather than the 0.7mm Gate driver default — justified by substantially lower gate charge on these switches versus the HPS MOSFET the 0.7mm class was set for (ISC011N04NM7V, 73nC; Winch's PJQ4548P-AU is 13nC), and applied to save space in tightly constrained sections.
 
 ## 6. Clearances
 
@@ -69,7 +71,20 @@ Applies to local routed traces; power/ground polygons are covered separately (se
 
 ## 8. High-Current Distribution
 
-High-current nets are distributed primarily through copper bus bars (Würth Elektronik RedCube, 74650173R), sized 10x3 mm with provision to mount 12x3 mm, with PCB copper providing supplemental current spreading and local interconnection, per [`docs/ElectricalRequirements.md`](ElectricalRequirements.md) §4.4.
+High-current nets are distributed primarily through copper bus bars (Würth Elektronik RedCube, 74650173R), sized 12x3 mm, with PCB copper providing supplemental current spreading and local interconnection, per [`docs/ElectricalRequirements.md`](ElectricalRequirements.md) §4.4.
+
+Lower-current (10A-class) connections — winch and MPS heater/low-side outputs — use direct screw-terminal pads sized for a standard ring terminal on 18 AWG wire. Standard MPS ring terminal: Panduit `PMV1-3RB-CY` (M3 stud, vinyl insulated, 105°C max, ring outer width 5.84 mm, ring hole 3.30 mm). M3 stud is sized specifically for this connector's 18 AWG duty, separate from HPS's #6/M3.5 stud. Pad clearance hole/diameter to be sized to match the M3 stud and 3.30 mm ring hole.
+
+HPS motor output terminals (HPS_A-D) use a dedicated ring-terminal pad: #6 stud (M3.5), 10.5 mm pad diameter (oversized for a washer), sized for Molex `19071-0176` (D-656-06X), 8 AWG max, ring outer width 9.50 mm. B1-B6 busbar mounting uses RedCube (74650173R).
+
+### 8.1 Field Wiring Wire Gauge
+
+| Section | Wire gauge |
+|---|---|
+| HPS | 8 AWG |
+| MPS | 18 AWG |
+
+MPS gauge is sized against a 60°C temperature rise (space-constrained choice). With ambient assumed at 40°C (per [`docs/ThermalBudget.md`](ThermalBudget.md)), this puts continuous wire jacket temperature at ~100°C — insulation must be rated ≥105°C (e.g. silicone or high-temperature PVC/XLPE), not standard/low-temperature PVC.
 
 ## 9. Grounding Strategy
 

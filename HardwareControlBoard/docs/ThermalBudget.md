@@ -254,7 +254,7 @@ The thermal characteristics specified above correspond to the recommended PCB la
 
 The High Power Section (HPS) consists of two independent full H-bridges designed to drive the propulsion motors of the platform.
 
-Each H-bridge is implemented using discrete **STL160N4F7** N-channel MOSFETs driven by an isolated **UCC21551** gate driver. The thermal analysis includes both conduction and switching losses, which dominate the overall power dissipation of this section.
+Each H-bridge is implemented using discrete **ISC011N04NM7V** N-channel MOSFETs driven by an isolated **UCC21551** gate driver. The thermal analysis includes both conduction and switching losses, which dominate the overall power dissipation of this section.
 
 ##### Design Parameters
 
@@ -267,16 +267,16 @@ Each H-bridge is implemented using discrete **STL160N4F7** N-channel MOSFETs dri
 | Maximum PWM Duty Cycle | DMAX | 85 % |
 | H-Bridges | — | 2 |
 | Conducting MOSFETs | — | 4 |
-| MOSFET | — | STL160N4F7 |
+| MOSFET | — | ISC011N04NM7V |
 | Gate Driver | — | UCC21551 |
 
 ##### MOSFET Parameters (Worst-Case Datasheet Values)
 
 | Parameter | Symbol | Value |
 |-----------|--------|------:|
-| Drain-Source On Resistance | RDS(on) | 2.5 mΩ |
-| Total Gate Charge | Qg | 29 nC |
-| Rise Time | tr | 6.6 ns |
+| Drain-Source On Resistance | RDS(on) | 1.1 mΩ |
+| Total Gate Charge | Qg | 73 nC |
+| Rise Time | tr | 3.5 ns |
 | Fall Time | tf | 5.7 ns |
 | Maximum Junction Temperature | TJ(max) | 175 °C |
 
@@ -286,9 +286,9 @@ The worst-case values specified above are used throughout the calculations to pr
 
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
-| Conduction Loss | 4 | 3.400 W | 13.600 W |
-| Switching Loss | 4 | 0.118 W | 0.472 W |
-| **Total HPS Power Dissipation** | **4** | — | **14.07 W** |
+| Conduction Loss | 4 | 1.496 W | 5.984 W |
+| Switching Loss | 4 | 0.088 W | 0.353 W |
+| **Total HPS Power Dissipation** | **4** | — | **6.337 W** |
 
 > **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **40 A** and a maximum PWM duty cycle of **85%**. During normal operation, only two MOSFETs conduct the motor current simultaneously in each H-bridge. Since the High Power Section consists of two independent H-bridges, the total power dissipation is calculated for **four actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
 
@@ -392,10 +392,10 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
 | Medium Power Section (MPS) | 9.284 W | Heater (0.235 W), Winch (1.849 W), Stepper Drivers (7.200 W) |
-| High Power Section (HPS) | 14.070 W | MOSFET conduction and switching losses |
+| High Power Section (HPS) | 6.337 W | MOSFET conduction and switching losses |
 | Current Sense Shunts | 3.145 W | Shunt conduction losses |
 | Other Components | 0.850 W | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
-| **Total PCB Thermal Budget** | **27.797 W** | Worst-case estimate |
+| **Total PCB Thermal Budget** | **20.064 W** | Worst-case estimate |
 
 The resulting thermal budget will be used to verify:
 
@@ -413,7 +413,7 @@ The resulting thermal budget will be used to verify:
 
 ## 6. Design Conclusions
 
-The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 30.618 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
+The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 20.064 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
 
 The analysis leads to the following design conclusions:
 
