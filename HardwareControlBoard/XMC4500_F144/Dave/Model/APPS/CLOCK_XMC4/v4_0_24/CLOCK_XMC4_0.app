@@ -6,6 +6,9 @@
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_POSIF/v4_0_18/GLOBAL_POSIF_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_1.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_2.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../SPI_MASTER/v4_3_30/SPI_MASTER_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../GLOBAL_ADC/v4_0_22/GLOBAL_ADC_0.app#//@requiredApps.0"/>
   <properties singleton="true" provideInit="true" sharable="true"/>
   <virtualSignals name="clk_perbridge_output" URI="http://resources/4.0.24/app/CLOCK_XMC4/0/vs_fpb" hwSignal="fpb" hwResource="//@hwResources.3" visible="true"/>
@@ -14,6 +17,8 @@
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../GLOBAL_CCU8/v4_1_14/GLOBAL_CCU8_1.app#//@connections.0"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_0.app#//@connections.0"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_1.app#//@connections.0"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_2.app#//@connections.0"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#//@connections.0"/>
   </virtualSignals>
   <virtualSignals name="clk_external_output" URI="http://resources/4.0.24/app/CLOCK_XMC4/0/vs_extclk" hwSignal="extclk" hwResource="//@hwResources.9" required="false"/>
   <virtualSignals name="external_clock_pin" URI="http://resources/4.0.24/app/CLOCK_XMC4/0/vs_extclkpin" hwSignal="pad" hwResource="//@hwResources.12" required="false"/>

@@ -143,7 +143,7 @@ The complete electrical design documentation is available below:
 | ⚡ **Electrical Requirements** | [`docs/ElectricalRequirements.md`](docs/ElectricalRequirements.md) |
 | 📋 **Functional Requirements** | [`docs/FunctionalRequirements.md`](docs/FunctionalRequirements.md) |
 | 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
-| 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
+| 📦 **Bill of Materials (BOM)** | [`PCB/BOM_HardwareControlBoard.csv`](PCB/BOM_HardwareControlBoard.csv) |
 
 ### 9. PCB Design
 
@@ -175,7 +175,7 @@ The current hardware revision is implemented as a four-layer PCB with dedicated 
 | ⚡ **Electrical Requirements** | [`docs/ElectricalRequirements.md`](docs/ElectricalRequirements.md) |
 | 📋 **Functional Requirements** | [`docs/FunctionalRequirements.md`](docs/FunctionalRequirements.md) |
 | 🔥 **Thermal Analysis** | [`docs/ThermalBudget.md`](docs/ThermalBudget.md) |
-| 📦 **Bill of Materials (BOM)** | [`PCB/BOM.csv`](PCB/BOM_HardwareControlBoard_2026-07-25.csv) |
+| 📦 **Bill of Materials (BOM)** | [`PCB/BOM_HardwareControlBoard.csv`](PCB/BOM_HardwareControlBoard.csv) |
 | 🛠️ **Assembly Notes** | [`docs/AssemblyNotes.md`](docs/AssemblyNotes.md) |
 | 🧩 **PCB Layout Notes** | [`docs/PCBLayoutNotes.md`](docs/PCBLayoutNotes.md) |
 

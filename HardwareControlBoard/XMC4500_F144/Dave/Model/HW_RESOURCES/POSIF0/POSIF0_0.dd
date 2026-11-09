@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Peripheral xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/0.1.29/peripheral/posif/0" description="Position Interface Unit 0" baseAddress="0x40028000">
   <provided xsi:type="ResourceModel:ResourceGroup" name="hsc_qd" URI="http://resources/0.1.29/peripheral/posif/0/posif/hsc_qd">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@hwResources.4"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ENCODER_POSIF/v4_0_6/ENCODER_POSIF_0.app#//@hwResources.4"/>
     <resourcesList name="halp" requiredResourceUri="http://resources/0.1.29/peripheral/posif/0/halp"/>
     <resourcesList name="halps" requiredResourceUri="http://resources/0.1.29/peripheral/posif/0/halps"/>
     <resourcesList name="qdc" requiredResourceUri="http://resources/0.1.29/peripheral/posif/0/qdc"/>

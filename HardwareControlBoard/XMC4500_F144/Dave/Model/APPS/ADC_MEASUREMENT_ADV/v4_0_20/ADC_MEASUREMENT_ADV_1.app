@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ADC_MEASUREMENT_ADV" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1" description="Measurement of analog signals using VADC via Queue and Scan request sources with advanced features.&#xA; Background request source is not supported." mode="NOTSHARABLE" version="4.0.20" minDaveVersion="4.0.1" instanceLabel="ADC_MEASUREMENT_ADV_Temperature" appLabel="" containingProxySignal="true">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ADC_MEASUREMENT_ADV" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1" description="Measurement of analog signals using VADC via Queue and Scan request sources with advanced features.&#xA; Background request source is not supported." mode="NOTSHARABLE" version="4.0.20" minDaveVersion="4.0.1" instanceLabel="ADC_MEASUREMENT_HPSB" appLabel="" containingProxySignal="true">
   <properties provideInit="true"/>
   <virtualSignals name="sr_interrupt_signal" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_nvic_src" hwSignal="signal_in" hwResource="//@hwResources.395"/>
   <virtualSignals name="iclass_select" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel" hwSignal="ch_class_sel" hwResource="//@hwResources.394"/>
@@ -16,7 +16,9 @@
   <virtualSignals name="scan_select" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_to_channel" hwSignal="select" hwResource="//@hwResources.393"/>
   <virtualSignals name="group_selection" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_to_config" hwSignal="req" hwResource="//@hwResources.393"/>
   <virtualSignals name="scan_to_global" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_to_global" hwSignal="global_signal" hwResource="//@hwResources.393"/>
-  <virtualSignals name="trigger_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_greqtr1sel" hwSignal="greqtr1sel" hwResource="//@hwResources.393" visible="true"/>
+  <virtualSignals name="trigger_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_greqtr1sel" hwSignal="greqtr1sel" hwResource="//@hwResources.393" visible="true">
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@connections.16"/>
+  </virtualSignals>
   <virtualSignals name="gating_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_greqgt1sel" hwSignal="greqgt1sel" hwResource="//@hwResources.393" visible="true"/>
   <virtualSignals name="event_scan_source" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_scan_sourceevent" hwSignal="sev" hwResource="//@hwResources.393" visible="true"/>
   <virtualSignals name="Channel_A_pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_0" hwSignal="pin" hwResource="//@hwResources.20"/>
@@ -59,26 +61,26 @@
   <virtualSignals name="Channel_F_pad" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_17" hwSignal="pad" hwResource="//@hwResources.17"/>
   <virtualSignals name="Channel_G_pad" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_18" hwSignal="pad" hwResource="//@hwResources.18"/>
   <virtualSignals name="Channel_H_pad" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_19" hwSignal="pad" hwResource="//@hwResources.19"/>
-  <virtualSignals name="Channel_A_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_0" hwSignal="gch" hwResource="//@hwResources.40" visible="true"/>
+  <virtualSignals name="Channel_A_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_0" hwSignal="gch" hwResource="//@hwResources.40"/>
   <virtualSignals name="Channel_A_sync_slaveA_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_1" hwSignal="gch" hwResource="//@hwResources.41"/>
   <virtualSignals name="Channel_A_sync_slaveB_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_2" hwSignal="gch" hwResource="//@hwResources.42"/>
   <virtualSignals name="Channel_A_sync_slaveC_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_3" hwSignal="gch" hwResource="//@hwResources.43"/>
-  <virtualSignals name="Channel_B_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_4" hwSignal="gch" hwResource="//@hwResources.44" visible="true"/>
+  <virtualSignals name="Channel_B_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_4" hwSignal="gch" hwResource="//@hwResources.44"/>
   <virtualSignals name="Channel_B_sync_slaveA_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_5" hwSignal="gch" hwResource="//@hwResources.45"/>
   <virtualSignals name="Channel_B_sync_slaveB_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_6" hwSignal="gch" hwResource="//@hwResources.46"/>
   <virtualSignals name="Channel_B_sync_slaveC_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_7" hwSignal="gch" hwResource="//@hwResources.47"/>
-  <virtualSignals name="Channel_C_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_8" hwSignal="gch" hwResource="//@hwResources.48" visible="true"/>
+  <virtualSignals name="Channel_C_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_8" hwSignal="gch" hwResource="//@hwResources.48"/>
   <virtualSignals name="Channel_C_sync_slaveA_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_9" hwSignal="gch" hwResource="//@hwResources.49"/>
   <virtualSignals name="Channel_C_sync_slaveB_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_10" hwSignal="gch" hwResource="//@hwResources.50"/>
   <virtualSignals name="Channel_C_sync_slaveC_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_11" hwSignal="gch" hwResource="//@hwResources.51"/>
-  <virtualSignals name="Channel_D_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_12" hwSignal="gch" hwResource="//@hwResources.52" visible="true"/>
+  <virtualSignals name="Channel_D_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_12" hwSignal="gch" hwResource="//@hwResources.52"/>
   <virtualSignals name="Channel_D_sync_slaveA_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_13" hwSignal="gch" hwResource="//@hwResources.53"/>
   <virtualSignals name="Channel_D_sync_slaveB_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_14" hwSignal="gch" hwResource="//@hwResources.54"/>
   <virtualSignals name="Channel_D_sync_slaveC_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_15" hwSignal="gch" hwResource="//@hwResources.55"/>
-  <virtualSignals name="Channel_E_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_16" hwSignal="gch" hwResource="//@hwResources.56" visible="true"/>
-  <virtualSignals name="Channel_F_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_17" hwSignal="gch" hwResource="//@hwResources.57" visible="true"/>
-  <virtualSignals name="Channel_G_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_18" hwSignal="gch" hwResource="//@hwResources.58" visible="true"/>
-  <virtualSignals name="Channel_H_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_19" hwSignal="gch" hwResource="//@hwResources.59" visible="true"/>
+  <virtualSignals name="Channel_E_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_16" hwSignal="gch" hwResource="//@hwResources.56"/>
+  <virtualSignals name="Channel_F_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_17" hwSignal="gch" hwResource="//@hwResources.57"/>
+  <virtualSignals name="Channel_G_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_18" hwSignal="gch" hwResource="//@hwResources.58"/>
+  <virtualSignals name="Channel_H_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_19" hwSignal="gch" hwResource="//@hwResources.59"/>
   <virtualSignals name="Channel_A_sel" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_0" hwSignal="select" hwResource="//@hwResources.40"/>
   <virtualSignals name="Channel_A_sync_slaveA_sel" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_1" hwSignal="select" hwResource="//@hwResources.41"/>
   <virtualSignals name="Channel_A_sync_slaveB_sel" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_2" hwSignal="select" hwResource="//@hwResources.42"/>
@@ -209,45 +211,33 @@
   <virtualSignals name="bound_fl_Channel_H" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_bfl_out_result_19" hwSignal="gbflout" hwResource="//@hwResources.67" required="false" visible="true"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/appres_scan" requiredAppName="ADC_SCAN" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/appres_queue" requiredAppName="ADC_QUEUE" required="false" requiringMode="SHARABLE"/>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#0" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_11.app#/"/>
-  </requiredApps>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#0" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#1" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#2" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#3" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#4" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_10.app#/"/>
-  </requiredApps>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#4" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#5" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#6" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#7" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#8" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_9.app#/"/>
-  </requiredApps>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#8" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#9" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#10" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#11" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#12" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_8.app#/"/>
-  </requiredApps>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#12" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#13" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#14" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#15" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#16" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_7.app#/"/>
-  </requiredApps>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#17" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_6.app#/"/>
-  </requiredApps>
-  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#18" requiredAppName="ANALOG_IO" requiringMode="SHARABLE">
-    <downwardMapList xsi:type="ResourceModel:App" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_5.app#/"/>
-  </requiredApps>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#16" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#17" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
+  <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#18" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_appres_analog_io#19" requiredAppName="ANALOG_IO" required="false" requiringMode="SHARABLE"/>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/appres_global_adc" requiredAppName="GLOBAL_ADC" requiringMode="SHARABLE">
     <downwardMapList xsi:type="ResourceModel:App" href="../../GLOBAL_ADC/v4_0_22/GLOBAL_ADC_0.app#/"/>
   </requiredApps>
   <requiredApps URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/appres_cpu" requiredAppName="CPU_CTRL_XMC4" required="false" requiringMode="SHARABLE"/>
-  <hwResources name="Channel_A Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#0" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
+  <hwResources name="Channel_A Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#0" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port14/Port14_14.dd#//@provided.41"/>
+  </hwResources>
   <hwResources name="Channel_A_sync_slaveA Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#1" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Channel_A_sync_slaveB Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#2" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Channel_A_sync_slaveC Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
@@ -267,7 +257,9 @@
   <hwResources name="Channel_F Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#17" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Channel_G Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#18" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Channel_H Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channel_pin#19" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
-  <hwResources name="Channel_A Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#0" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
+  <hwResources name="Channel_A Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#0" resourceGroupUri="devicepackage/0/38" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.99"/>
+  </hwResources>
   <hwResources name="Channel_A_sync_slaveA Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#1" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Channel_A_sync_slaveB Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#2" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Channel_A_sync_slaveC Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
@@ -288,12 +280,12 @@
   <hwResources name="Channel_G Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#18" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Channel_H Pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_pin_pad#19" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Channel_A" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#0" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv0" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv0">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.75"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.127"/>
     <solverVarMap index="6">
-      <value variableName="sv0" solverValue="6"/>
+      <value variableName="sv0" solverValue="0"/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv0" solverValue="6"/>
+      <value variableName="sv0" solverValue="0"/>
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_A_sync_slaveA" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#1" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv1">
@@ -320,16 +312,12 @@
       <value variableName="sv3" solverValue=""/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="Channel_B" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#4" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv4" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv4">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.122"/>
+  <hwResources name="Channel_B" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#4" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv4">
     <solverVarMap index="6">
-      <value variableName="sv4" solverValue="7"/>
+      <value variableName="sv4" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv4" solverValue="7"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv4" solverValue="7"/>
+      <value variableName="sv4" solverValue=""/>
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_B_sync_slaveA" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#5" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv5">
@@ -356,16 +344,12 @@
       <value variableName="sv7" solverValue=""/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="Channel_C" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#8" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv8" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv8">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.127"/>
+  <hwResources name="Channel_C" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#8" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv8">
     <solverVarMap index="6">
-      <value variableName="sv8" solverValue="0"/>
+      <value variableName="sv8" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv8" solverValue="0"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv8" solverValue="0"/>
+      <value variableName="sv8" solverValue=""/>
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_C_sync_slaveA" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#9" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv9">
@@ -392,16 +376,12 @@
       <value variableName="sv11" solverValue=""/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="Channel_D" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#12" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv12" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv12">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.65"/>
+  <hwResources name="Channel_D" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#12" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv12">
     <solverVarMap index="6">
-      <value variableName="sv12" solverValue="5"/>
+      <value variableName="sv12" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv12" solverValue="5"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv12" solverValue="5"/>
+      <value variableName="sv12" solverValue=""/>
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_D_sync_slaveA" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#13" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv13">
@@ -428,40 +408,28 @@
       <value variableName="sv15" solverValue=""/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="Channel_E" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#16" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv16" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv16">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.70"/>
+  <hwResources name="Channel_E" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#16" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv16">
     <solverVarMap index="6">
-      <value variableName="sv16" solverValue="4"/>
+      <value variableName="sv16" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv16" solverValue="4"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv16" solverValue="4"/>
+      <value variableName="sv16" solverValue=""/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="Channel_F" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#17" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv17" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv17">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.84"/>
+  <hwResources name="Channel_F" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#17" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv17">
     <solverVarMap index="6">
-      <value variableName="sv17" solverValue="3"/>
+      <value variableName="sv17" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv17" solverValue="3"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv17" solverValue="3"/>
+      <value variableName="sv17" solverValue=""/>
     </solverVarMap>
   </hwResources>
-  <hwResources name="Channel_G" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#18" resourceGroupUri="peripheral/vadc/0/group/*/ch/sv18" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv18">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.43"/>
+  <hwResources name="Channel_G" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#18" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv18">
     <solverVarMap index="6">
-      <value variableName="sv18" solverValue="2"/>
+      <value variableName="sv18" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv18" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv18" solverValue="2"/>
+      <value variableName="sv18" solverValue=""/>
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_H" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_channels#19" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/*/ch/sv19">
@@ -473,204 +441,144 @@
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_A Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#0" resourceGroupUri="peripheral/vadc/0/group/sv20/sv21/sv22" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv20/sv21/sv22">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.137"/>
-    <solverVarMap index="4">
-      <value variableName="sv20" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv21" solverValue="result"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv22" solverValue="11"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv20" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv21" solverValue="result"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv22" solverValue="11"/>
-    </solverVarMap>
-  </hwResources>
-  <hwResources name="Channel_B Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#1" resourceGroupUri="peripheral/vadc/0/group/sv23/sv24/sv25" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv23/sv24/sv25">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.134"/>
-    <solverVarMap index="4">
-      <value variableName="sv23" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv24" solverValue="result"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv25" solverValue="10"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv23" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv24" solverValue="result"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv25" solverValue="10"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv23" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv24" solverValue="result"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv25" solverValue="10"/>
-    </solverVarMap>
-  </hwResources>
-  <hwResources name="Channel_C Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#2" resourceGroupUri="peripheral/vadc/0/group/sv26/sv27/sv28" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv26/sv27/sv28">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.91"/>
-    <solverVarMap index="4">
-      <value variableName="sv26" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv27" solverValue="result_filter"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv28" solverValue="7"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv26" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv27" solverValue="result_filter"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv28" solverValue="7"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv26" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv27" solverValue="result_filter"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv28" solverValue="7"/>
-    </solverVarMap>
-  </hwResources>
-  <hwResources name="Channel_D Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#3" resourceGroupUri="peripheral/vadc/0/group/sv29/sv30/sv31" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv29/sv30/sv31">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.82"/>
-    <solverVarMap index="4">
-      <value variableName="sv29" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv30" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv31" solverValue="3"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv29" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv30" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv31" solverValue="3"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv29" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv30" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv31" solverValue="3"/>
-    </solverVarMap>
-  </hwResources>
-  <hwResources name="Channel_E Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#4" resourceGroupUri="peripheral/vadc/0/group/sv32/sv33/sv34" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv32/sv33/sv34">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.80"/>
-    <solverVarMap index="4">
-      <value variableName="sv32" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv33" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv34" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv32" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv33" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv34" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv32" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv33" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv34" solverValue="2"/>
-    </solverVarMap>
-  </hwResources>
-  <hwResources name="Channel_F Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#5" resourceGroupUri="peripheral/vadc/0/group/sv35/sv36/sv37" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv35/sv36/sv37">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.89"/>
-    <solverVarMap index="4">
-      <value variableName="sv35" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv36" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv37" solverValue="1"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv35" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv36" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv37" solverValue="1"/>
-    </solverVarMap>
-    <solverVarMap index="4">
-      <value variableName="sv35" solverValue="2"/>
-    </solverVarMap>
-    <solverVarMap index="5">
-      <value variableName="sv36" solverValue="result_adv"/>
-    </solverVarMap>
-    <solverVarMap index="6">
-      <value variableName="sv37" solverValue="1"/>
-    </solverVarMap>
-  </hwResources>
-  <hwResources name="Channel_G Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#6" resourceGroupUri="peripheral/vadc/0/group/sv38/sv39/sv40" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv38/sv39/sv40">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/VADC/VADC_0.dd#//@provided.40"/>
     <solverVarMap index="4">
-      <value variableName="sv38" solverValue="2"/>
+      <value variableName="sv20" solverValue="2"/>
     </solverVarMap>
     <solverVarMap index="5">
-      <value variableName="sv39" solverValue="result_adv"/>
+      <value variableName="sv21" solverValue="result_adv"/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv40" solverValue="0"/>
+      <value variableName="sv22" solverValue="0"/>
     </solverVarMap>
     <solverVarMap index="4">
-      <value variableName="sv38" solverValue="2"/>
+      <value variableName="sv20" solverValue="2"/>
     </solverVarMap>
     <solverVarMap index="5">
-      <value variableName="sv39" solverValue="result_adv"/>
+      <value variableName="sv21" solverValue="result_adv"/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv40" solverValue="0"/>
+      <value variableName="sv22" solverValue="0"/>
+    </solverVarMap>
+  </hwResources>
+  <hwResources name="Channel_B Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#1" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv23/sv24/sv25">
+    <solverVarMap index="4">
+      <value variableName="sv23" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv24" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv25" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="4">
-      <value variableName="sv38" solverValue="2"/>
+      <value variableName="sv23" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="5">
-      <value variableName="sv39" solverValue="result_adv"/>
+      <value variableName="sv24" solverValue=""/>
     </solverVarMap>
     <solverVarMap index="6">
-      <value variableName="sv40" solverValue="0"/>
+      <value variableName="sv25" solverValue=""/>
+    </solverVarMap>
+  </hwResources>
+  <hwResources name="Channel_C Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#2" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv26/sv27/sv28">
+    <solverVarMap index="4">
+      <value variableName="sv26" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv27" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv28" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="4">
+      <value variableName="sv26" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv27" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv28" solverValue=""/>
+    </solverVarMap>
+  </hwResources>
+  <hwResources name="Channel_D Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#3" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv29/sv30/sv31">
+    <solverVarMap index="4">
+      <value variableName="sv29" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv30" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv31" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="4">
+      <value variableName="sv29" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv30" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv31" solverValue=""/>
+    </solverVarMap>
+  </hwResources>
+  <hwResources name="Channel_E Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#4" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv32/sv33/sv34">
+    <solverVarMap index="4">
+      <value variableName="sv32" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv33" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv34" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="4">
+      <value variableName="sv32" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv33" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv34" solverValue=""/>
+    </solverVarMap>
+  </hwResources>
+  <hwResources name="Channel_F Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#5" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv35/sv36/sv37">
+    <solverVarMap index="4">
+      <value variableName="sv35" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv36" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv37" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="4">
+      <value variableName="sv35" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv36" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv37" solverValue=""/>
+    </solverVarMap>
+  </hwResources>
+  <hwResources name="Channel_G Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#6" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv38/sv39/sv40">
+    <solverVarMap index="4">
+      <value variableName="sv38" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv39" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv40" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="4">
+      <value variableName="sv38" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="5">
+      <value variableName="sv39" solverValue=""/>
+    </solverVarMap>
+    <solverVarMap index="6">
+      <value variableName="sv40" solverValue=""/>
     </solverVarMap>
   </hwResources>
   <hwResources name="Channel_H Result" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/rarray_hwres_adc_adv_measurement_result_reg#7" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/vadc/0/group/sv41/sv42/sv43">
@@ -7175,10 +7083,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_0" systemDefined="true" targetSignal="Channel_A_iclass" required="false" targetVirtualSignal="//@virtualSignals.98" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_0" systemDefined="true" targetSignal="Channel_A_iclass" required="false" targetVirtualSignal="//@virtualSignals.98" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_0" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_A_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.98"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_0/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_0" systemDefined="true" sourceSignal="pin" targetSignal="Channel_A_input" targetVirtualSignal="//@virtualSignals.58" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/0/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_11.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_11.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_0/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_0" systemDefined="true" targetSignal="Channel_A_input" required="false" targetVirtualSignal="//@virtualSignals.58" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_0/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_0" systemDefined="true" sourceSignal="Channel_A_channel_to_result" targetSignal="Channel_A_result_to_channel" srcVirtualSignal="//@virtualSignals.130" targetVirtualSignal="//@virtualSignals.110"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_1" systemDefined="true" sourceSignal="Channel_A_sync_slaveA_pad" targetSignal="Channel_A_sync_slaveA_pin" srcVirtualSignal="//@virtualSignals.39" targetVirtualSignal="//@virtualSignals.19"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_1" systemDefined="true" sourceSignal="Channel_A_sync_slaveA_pin" targetSignal="Channel_A_sync_slaveA_pad" srcVirtualSignal="//@virtualSignals.19" targetVirtualSignal="//@virtualSignals.39"/>
@@ -7204,10 +7109,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_1" systemDefined="true" targetSignal="Channel_B_iclass" required="false" targetVirtualSignal="//@virtualSignals.99" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_1" systemDefined="true" targetSignal="Channel_B_iclass" required="false" targetVirtualSignal="//@virtualSignals.99" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_1" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_B_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.99"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_4/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_4" systemDefined="true" sourceSignal="pin" targetSignal="Channel_B_input" targetVirtualSignal="//@virtualSignals.62" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/4/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_10.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_10.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_4/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_4" systemDefined="true" targetSignal="Channel_B_input" required="false" targetVirtualSignal="//@virtualSignals.62" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_4/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_4" systemDefined="true" sourceSignal="Channel_B_channel_to_result" targetSignal="Channel_B_result_to_channel" srcVirtualSignal="//@virtualSignals.134" targetVirtualSignal="//@virtualSignals.114"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_5/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_5" systemDefined="true" sourceSignal="Channel_B_sync_slaveA_pad" targetSignal="Channel_B_sync_slaveA_pin" srcVirtualSignal="//@virtualSignals.43" targetVirtualSignal="//@virtualSignals.23"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_5/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_5" systemDefined="true" sourceSignal="Channel_B_sync_slaveA_pin" targetSignal="Channel_B_sync_slaveA_pad" srcVirtualSignal="//@virtualSignals.23" targetVirtualSignal="//@virtualSignals.43"/>
@@ -7233,10 +7135,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_2" systemDefined="true" targetSignal="Channel_C_iclass" required="false" targetVirtualSignal="//@virtualSignals.100" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_2" systemDefined="true" targetSignal="Channel_C_iclass" required="false" targetVirtualSignal="//@virtualSignals.100" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_2" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_C_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.100"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_8/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_8" systemDefined="true" sourceSignal="pin" targetSignal="Channel_C_input" targetVirtualSignal="//@virtualSignals.66" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/8/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_9.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_9.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_8/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_8" systemDefined="true" targetSignal="Channel_C_input" required="false" targetVirtualSignal="//@virtualSignals.66" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_8/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_8" systemDefined="true" sourceSignal="Channel_C_channel_to_result" targetSignal="Channel_C_result_to_channel" srcVirtualSignal="//@virtualSignals.138" targetVirtualSignal="//@virtualSignals.118"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_9/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_9" systemDefined="true" sourceSignal="Channel_C_sync_slaveA_pad" targetSignal="Channel_C_sync_slaveA_pin" srcVirtualSignal="//@virtualSignals.47" targetVirtualSignal="//@virtualSignals.27"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_9/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_9" systemDefined="true" sourceSignal="Channel_C_sync_slaveA_pin" targetSignal="Channel_C_sync_slaveA_pad" srcVirtualSignal="//@virtualSignals.27" targetVirtualSignal="//@virtualSignals.47"/>
@@ -7262,10 +7161,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_3" systemDefined="true" targetSignal="Channel_D_iclass" required="false" targetVirtualSignal="//@virtualSignals.101" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_3" systemDefined="true" targetSignal="Channel_D_iclass" required="false" targetVirtualSignal="//@virtualSignals.101" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_3" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_D_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.101"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_12/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_12" systemDefined="true" sourceSignal="pin" targetSignal="Channel_D_input" targetVirtualSignal="//@virtualSignals.70" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/12/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_8.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_8.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_12/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_12" systemDefined="true" targetSignal="Channel_D_input" required="false" targetVirtualSignal="//@virtualSignals.70" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_12/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_12" systemDefined="true" sourceSignal="Channel_D_channel_to_result" targetSignal="Channel_D_result_to_channel" srcVirtualSignal="//@virtualSignals.142" targetVirtualSignal="//@virtualSignals.122"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_13/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_13" systemDefined="true" sourceSignal="Channel_D_sync_slaveA_pad" targetSignal="Channel_D_sync_slaveA_pin" srcVirtualSignal="//@virtualSignals.51" targetVirtualSignal="//@virtualSignals.31"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_13/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_13" systemDefined="true" sourceSignal="Channel_D_sync_slaveA_pin" targetSignal="Channel_D_sync_slaveA_pad" srcVirtualSignal="//@virtualSignals.31" targetVirtualSignal="//@virtualSignals.51"/>
@@ -7291,10 +7187,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_4" systemDefined="true" targetSignal="Channel_E_iclass" required="false" targetVirtualSignal="//@virtualSignals.102" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_4" systemDefined="true" targetSignal="Channel_E_iclass" required="false" targetVirtualSignal="//@virtualSignals.102" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_4" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_E_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.102"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_16/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_16" systemDefined="true" sourceSignal="pin" targetSignal="Channel_E_input" targetVirtualSignal="//@virtualSignals.74" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/16/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_7.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_7.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_16/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_16" systemDefined="true" targetSignal="Channel_E_input" required="false" targetVirtualSignal="//@virtualSignals.74" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_16/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_16" systemDefined="true" sourceSignal="Channel_E_channel_to_result" targetSignal="Channel_E_result_to_channel" srcVirtualSignal="//@virtualSignals.146" targetVirtualSignal="//@virtualSignals.126"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_17/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_17" systemDefined="true" sourceSignal="Channel_F_pad" targetSignal="Channel_F_pin" srcVirtualSignal="//@virtualSignals.55" targetVirtualSignal="//@virtualSignals.35"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_17/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_17" systemDefined="true" sourceSignal="Channel_F_pin" targetSignal="Channel_F_pad" srcVirtualSignal="//@virtualSignals.35" targetVirtualSignal="//@virtualSignals.55"/>
@@ -7305,10 +7198,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_5" systemDefined="true" targetSignal="Channel_F_iclass" required="false" targetVirtualSignal="//@virtualSignals.103" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_5" systemDefined="true" targetSignal="Channel_F_iclass" required="false" targetVirtualSignal="//@virtualSignals.103" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_5" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_F_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.103"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_17/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_17" systemDefined="true" sourceSignal="pin" targetSignal="Channel_F_input" targetVirtualSignal="//@virtualSignals.75" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/17/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_6.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_6.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_17/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_17" systemDefined="true" targetSignal="Channel_F_input" required="false" targetVirtualSignal="//@virtualSignals.75" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_17/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_17" systemDefined="true" sourceSignal="Channel_F_channel_to_result" targetSignal="Channel_F_result_to_channel" srcVirtualSignal="//@virtualSignals.147" targetVirtualSignal="//@virtualSignals.127"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_18/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_18" systemDefined="true" sourceSignal="Channel_G_pad" targetSignal="Channel_G_pin" srcVirtualSignal="//@virtualSignals.56" targetVirtualSignal="//@virtualSignals.36"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_18/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_18" systemDefined="true" sourceSignal="Channel_G_pin" targetSignal="Channel_G_pad" srcVirtualSignal="//@virtualSignals.36" targetVirtualSignal="//@virtualSignals.56"/>
@@ -7319,10 +7209,7 @@
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_scan_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_6" systemDefined="true" targetSignal="Channel_G_iclass" required="false" targetVirtualSignal="//@virtualSignals.104" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_queue_iclass_select/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_6" systemDefined="true" targetSignal="Channel_G_iclass" required="false" targetVirtualSignal="//@virtualSignals.104" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_iclass2channel/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_iclass_select_6" systemDefined="true" sourceSignal="iclass_select" targetSignal="Channel_G_iclass" srcVirtualSignal="//@virtualSignals.1" targetVirtualSignal="//@virtualSignals.104"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_18/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_18" systemDefined="true" sourceSignal="pin" targetSignal="Channel_G_input" targetVirtualSignal="//@virtualSignals.76" proxySrcVirtualSignalUri="http://resources/4.0.12/app/ANALOG_IO/18/vs_analog_io_pad_pin" containingProxySignal="true">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ANALOG_IO/v4_0_12/ANALOG_IO_5.app#//@virtualSignals.0"/>
-    <srcVirtualSignal href="../../ANALOG_IO/v4_0_12/ANALOG_IO_5.app#//@virtualSignals.0"/>
-  </connections>
+  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_analog_io_pin_18/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_18" systemDefined="true" targetSignal="Channel_G_input" required="false" targetVirtualSignal="//@virtualSignals.76" containingProxySignal="true"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_res_sel_18/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_res_sel_18" systemDefined="true" sourceSignal="Channel_G_channel_to_result" targetSignal="Channel_G_result_to_channel" srcVirtualSignal="//@virtualSignals.148" targetVirtualSignal="//@virtualSignals.128"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_19/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_19" systemDefined="true" sourceSignal="Channel_H_pad" targetSignal="Channel_H_pin" srcVirtualSignal="//@virtualSignals.57" targetVirtualSignal="//@virtualSignals.37"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_pin_pad_signal_19/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_channel_pin_signal_19" systemDefined="true" sourceSignal="Channel_H_pin" targetSignal="Channel_H_pad" srcVirtualSignal="//@virtualSignals.37" targetVirtualSignal="//@virtualSignals.57"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Peripheral xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/0.1.31/peripheral/ccu8/0" description="Capture/Compare Unit 8 (CAPCOM8)" baseAddress="0x40020000">
   <provided xsi:type="ResourceModel:ResourceGroup" name="cc80" URI="http://resources/0.1.31/peripheral/ccu8/0/cc8/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_7.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_4.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc80ins"/>
     <resourcesList name="cmc" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc80cmc"/>
     <resourcesList name="tcst" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc80tcst"/>
@@ -295,7 +295,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="CCU8xECLK[C]"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="CC81" URI="http://resources/0.1.31/peripheral/ccu8/0/cc8/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_5.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_9.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc81ins"/>
     <resourcesList name="cmc" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc81cmc"/>
     <resourcesList name="tcst" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc81tcst"/>
@@ -587,7 +587,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Timer concatenation is enabled"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="CC82" URI="http://resources/0.1.31/peripheral/ccu8/0/cc8/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_4.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_5.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc82ins"/>
     <resourcesList name="cmc" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc82cmc"/>
     <resourcesList name="tcst" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc82tcst"/>
@@ -879,7 +879,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Forward to CC4ySR3"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="CC83" URI="http://resources/0.1.31/peripheral/ccu8/0/cc8/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_6.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_8.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc83ins"/>
     <resourcesList name="cmc" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc83cmc"/>
     <resourcesList name="tcst" requiredResourceUri="http://resources/0.1.31/peripheral/ccu8/0/cc83tcst"/>

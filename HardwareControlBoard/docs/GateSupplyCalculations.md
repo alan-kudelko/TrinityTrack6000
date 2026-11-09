@@ -18,11 +18,11 @@ Reference: TI LM5164 datasheet (SNVSAU4D).
 FSW[kHz] = VOUT[V] × 2500 / RRON[kΩ]     (Eq. 1)
 ```
 
-RRON = R6 = 50.6kΩ, VOUT = 12.15V:
+RRON = R6 = 51kΩ, VOUT = 12.15V:
 ```
-FSW = 12.15 × 2500 / 50.6 ≈ 600 kHz
+FSW = 12.15 × 2500 / 51 ≈ 595.6 kHz
 ```
-Matches the schematic's stated target (600kHz).
+Standard E24 value; ~0.7% below the 600kHz target, trivial given COT's inherently "quasi-fixed" frequency (§6.3.1).
 
 ### 3.2 Output voltage
 
@@ -108,11 +108,11 @@ tON(nom) = RRON / (VIN(nom) × 2.5)                           (Eq. 11)
 
 RFB1‖RFB2 ≈ 50.5kΩ. CA minimum ≈ 330pF. C16=3.3nF, ~10x margin.
 
-tON(nom) = 50.6kΩ/(48V×2.5) ≈ 422ns.
+tON(nom) = 51kΩ/(48V×2.5) ≈ 425ns.
 
 Solving for RA at the 20mV target ripple:
 ```
-RA ≈ [422ns × (48−12.15)] / (20mV × 3.3nF) ≈ 229 kΩ
+RA ≈ [425ns × (48−12.15)] / (20mV × 3.3nF) ≈ 231 kΩ
 ```
 
 R3 = **220kΩ** (comfortably under the ceiling), giving ~20.8mV ripple at VIN(nom)=48V.

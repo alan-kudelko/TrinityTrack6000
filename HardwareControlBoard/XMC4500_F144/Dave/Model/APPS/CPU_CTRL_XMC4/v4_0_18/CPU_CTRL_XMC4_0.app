@@ -3,7 +3,7 @@
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../SEGGER_RTT/v4_0_12/SEGGER_RTT_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../UART/v4_1_14/UART_0.app#//@requiredApps.1"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@requiredApps.0"/>
-  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PIN_INTERRUPT/v4_0_4/PIN_INTERRUPT_0.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../SPI_MASTER/v4_3_30/SPI_MASTER_0.app#//@requiredApps.1"/>
   <properties singleton="true" sharable="true"/>
   <virtualSignals name="nmi_irq" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_nmi_irq" hwSignal="nmi_in" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="jtag tck" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_jtag_tck" hwSignal="db_tck" hwResource="//@hwResources.5" required="false" visible="true"/>
@@ -72,36 +72,36 @@
   </hwResources>
   <hwResources name="swo" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/hwres_port_pad_swd_tdo" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="swd etm traceclk" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/hwres_port_pad_etm_traceclk" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port6/Port6_6.dd#//@provided.19"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.0"/>
   </hwResources>
   <hwResources name="swd etm tracedata0" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/hwres_port_pad_etm_tracedata0" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port6/Port6_6.dd#//@provided.0"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.23"/>
   </hwResources>
   <hwResources name="swd etm tracedata1" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/hwres_port_pad_etm_tracedata1" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port6/Port6_6.dd#//@provided.6"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.27"/>
   </hwResources>
   <hwResources name="swd etm tracedata2" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/hwres_port_pad_etm_tracedata2" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port6/Port6_6.dd#//@provided.10"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.31"/>
   </hwResources>
   <hwResources name="swd etm tracedata3" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/hwres_port_pad_etm_tracedata3" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port6/Port6_6.dd#//@provided.15"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.36"/>
   </hwResources>
   <hwResources name="jtag tdo" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_tdo" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="swo" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_swd_tdo" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
-  <hwResources name="swd etm traceclk" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_traceclk" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.2"/>
+  <hwResources name="swd etm traceclk" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_traceclk" resourceGroupUri="devicepackage/0/60" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.6"/>
   </hwResources>
-  <hwResources name="swd etm tracedata0" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata0" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.3"/>
+  <hwResources name="swd etm tracedata0" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata0" resourceGroupUri="devicepackage/0/63" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.42"/>
   </hwResources>
-  <hwResources name="swd etm tracedata1" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata1" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.4"/>
+  <hwResources name="swd etm tracedata1" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata1" resourceGroupUri="devicepackage/0/64" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.43"/>
   </hwResources>
-  <hwResources name="swd etm tracedata2" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata2" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.0"/>
+  <hwResources name="swd etm tracedata2" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata2" resourceGroupUri="devicepackage/0/65" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.44"/>
   </hwResources>
-  <hwResources name="swd etm tracedata3" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata3" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.1"/>
+  <hwResources name="swd etm tracedata3" URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/__pin_hwres_port_pad_etm_tracedata3" resourceGroupUri="devicepackage/0/66" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.45"/>
   </hwResources>
   <connections URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_jtag_tdo/http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_cpu_tdo_hw_o" systemDefined="true" sourceSignal="jtag tdo" targetSignal="tdo_hw_o" required="false" srcVirtualSignal="//@virtualSignals.4" targetVirtualSignal="//@virtualSignals.14"/>
   <connections URI="http://resources/4.0.18/app/CPU_CTRL_XMC4/0/http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_swo/http://resources/4.0.18/app/CPU_CTRL_XMC4/0/vs_cpu_swo_hw_o" systemDefined="true" sourceSignal="swo" targetSignal="swo_hw_o" required="false" srcVirtualSignal="//@virtualSignals.8" targetVirtualSignal="//@virtualSignals.17"/>

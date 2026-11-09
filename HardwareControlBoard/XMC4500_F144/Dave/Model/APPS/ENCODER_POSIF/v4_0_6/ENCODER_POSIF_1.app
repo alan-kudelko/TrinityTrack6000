@@ -64,27 +64,27 @@
     <downwardMapList xsi:type="ResourceModel:App" href="../../MOTOR_LIB/v4_0_12/MOTOR_LIB_0.app#/"/>
   </requiredApps>
   <hwResources name="Phase A" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_port_pad_1" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port1/Port1_1.dd#//@provided.6"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.19"/>
   </hwResources>
   <hwResources name="Phase B" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_port_pad_2" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port1/Port1_1.dd#//@provided.0"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.15"/>
   </hwResources>
   <hwResources name="Index" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_port_pad_3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Encoder Enable Pad" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_port_enable_encoder_pad" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port5/Port5_5.dd#//@provided.19"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port5/Port5_5.dd#//@provided.32"/>
   </hwResources>
   <hwResources name="POSIF encoder" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_posif_hsc_qd_0" resourceGroupUri="peripheral/posif/*/posif/hsc_qd" mResGrpUri="peripheral/posif/*/posif/hsc_qd">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/POSIF0/POSIF0_0.dd#//@provided.0"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/POSIF1/POSIF1_1.dd#//@provided.1"/>
   </hwResources>
   <hwResources name="Position Count Slice" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_ccu4_slice0" resourceGroupUri="peripheral/ccu4/*/cc4/*" mResGrpUri="peripheral/ccu4/*/cc4/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU40/CCU40_0.dd#//@provided.3"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU41/CCU41_1.dd#//@provided.3"/>
   </hwResources>
   <hwResources name="Revolution Count Slice" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_ccu4_slice1" resourceGroupUri="" required="false" mResGrpUri="peripheral/ccu4/*/cc4/*"/>
   <hwResources name="Time Between Ticks Slice" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_ccu4_slice2" resourceGroupUri="peripheral/ccu4/*/cc4/*" mResGrpUri="peripheral/ccu4/*/cc4/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU40/CCU40_0.dd#//@provided.16"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU41/CCU41_1.dd#//@provided.16"/>
   </hwResources>
   <hwResources name="Time Stamp Trigger Slice" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_ccu4_slice3" resourceGroupUri="peripheral/ccu4/*/cc4/*" mResGrpUri="peripheral/ccu4/*/cc4/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU40/CCU40_0.dd#//@provided.29"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU41/CCU41_1.dd#//@provided.29"/>
   </hwResources>
   <hwResources name="ETL 1" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_ers_etl_1" resourceGroupUri="" required="false" mResGrpUri="peripheral/eru/*/ers_etl/*"/>
   <hwResources name="ETL 2" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_ers_etl_2" resourceGroupUri="" required="false" mResGrpUri="peripheral/eru/*/ers_etl/*"/>
@@ -93,15 +93,15 @@
   <hwResources name="OGU 2" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_eru_ogu_2" resourceGroupUri="" required="false" mResGrpUri="peripheral/eru/*/ogu/*"/>
   <hwResources name="OGU 3" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_eru_ogu_3" resourceGroupUri="" required="false" mResGrpUri="peripheral/eru/*/ogu/*"/>
   <hwResources name="Time Stamp Trigger Period Match NVIC Node" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_nvic_trigslice_pm" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
-  <hwResources name="Phase A" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_pad_1" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.15"/>
+  <hwResources name="Phase A" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_pad_1" resourceGroupUri="devicepackage/0/69" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.41"/>
   </hwResources>
-  <hwResources name="Phase B" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_pad_2" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.17"/>
+  <hwResources name="Phase B" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_pad_2" resourceGroupUri="devicepackage/0/70" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.40"/>
   </hwResources>
   <hwResources name="Index" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_pad_3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Encoder Enable Pad" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_enable_encoder_pad" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.16"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.34"/>
   </hwResources>
   <connections URI="http://resources/4.0.6/app/ENCODER_POSIF/1/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_ccu43_pmus_omds/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_triggen_pm_nvicsignal_in" systemDefined="true" sourceSignal="event_timestamp_trigger_period_match" targetSignal="sr_timestamp_trigger_periodmatch" required="false" srcVirtualSignal="//@virtualSignals.23" targetVirtualSignal="//@virtualSignals.22"/>
   <connections URI="http://resources/4.0.6/app/ENCODER_POSIF/1/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_global_ccu4_globalsignal/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_slice0_globalsignal" systemDefined="true" sourceSignal="ccu4_global" targetSignal="position_counter_slice_global_signal" targetVirtualSignal="//@virtualSignals.18" proxySrcVirtualSignalUri="http://resources/4.1.14/app/GLOBAL_CCU4/1/vs_global_ccu4_globalsignal" containingProxySignal="true">

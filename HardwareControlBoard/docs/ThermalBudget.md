@@ -121,6 +121,20 @@ The thermal analysis presented below evaluates the worst-case power dissipation 
 
 The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
 
+##### Actual Gate Drive Loop Switching Times
+
+Using the real loop — 2EDN7533FXTMA1 driver (RONSRC=0.8Ω, RONSNK=0.6Ω typ, per its datasheet §4.5/Table 16) and external gate resistor R=10Ω (source and sink). PJA3406's datasheet does not publish an internal gate resistance (RGFET_Int) — treated as negligible next to R=10Ω. With t ≈ Qg/IO:
+
+| Parameter | Value |
+|-----------|------:|
+| IO+ (source) | 1.13 A |
+| IO- (sink) | 1.15 A |
+| tr (actual) | 5.16 ns |
+| tf (actual) | 5.06 ns |
+
+Unlike HPS/Winch/Heater, these loop-derived times come out *faster* than PJA3406's own datasheet bench tr/tf (39 ns/28 ns), because the bench figures were measured at RG=6Ω but ID=4.4A — near the part's full rated current, not this section's actual 1A operating point. Since `t≈Qg/IO` is a simplified linear estimate that can understate real switching time relative to a bench test run at a different, higher-current condition, the datasheet's bench tr/tf (39 ns/28 ns) is retained as the conservative input to the switching-loss table below, not this faster loop estimate.
+
+R=10Ω was chosen over the 2Ω default used elsewhere (HPS/Winch/Heater) specifically because of a driver-current check: at R=2Ω, PJA3406's lack of a published internal gate resistance (unlike PJQ4548P-AU's 1.6Ω for Winch/Heater) meant the loop's worst-case current corner (RONSRC=0.4Ω/RONSNK=0.35Ω min) computed to 5.06A/5.17A — exceeding the 2EDN7533FXTMA1's own 5.0A typ peak output current rating (Table 16). At R=10Ω, worst-case current drops to ~1.17A, about 23% of that rating — comfortable margin.
 
 ##### Total Low Power Section Power Dissipation
 
@@ -158,9 +172,19 @@ Both **conduction losses** and **switching losses** are included in the thermal 
 |-----------|--------|------:|
 | Drain-Source On Resistance | RDS(on) | 9.1 mΩ |
 | Total Gate Charge | Qg | 13 nC |
-| Rise Time | tr | 3 ns |
-| Fall Time | tf | 3 ns |
+| Internal Gate Resistance | RGFET_Int | 1.6 Ω |
 | Maximum Junction Temperature | TJ(max) | 175 °C |
+
+##### Actual Gate Drive Loop Switching Times
+
+Using the real loop — 2EDN7533FXTMA1 driver (RONSRC=0.8Ω, RONSNK=0.6Ω typ, per its datasheet §4.5/Table 16), external gate resistor R=2Ω (source and sink), and RGFET_Int=1.6Ω — with t ≈ Qg/IO:
+
+| Parameter | Value |
+|-----------|------:|
+| IO+ (source) | 2.76 A |
+| IO- (sink) | 2.89 A |
+| tr (actual) | 4.71 ns |
+| tf (actual) | 4.49 ns |
 
 The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
 
@@ -169,10 +193,10 @@ The worst-case values specified above are used throughout the calculations to pr
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
 | Conduction Loss | 1 | 0.228 W | 0.228 W |
-| Switching Loss | 1 | 0.007 W | 0.007 W |
-| **Total Heater Output Power Dissipation** | **1** | — | **0.235 W** |
+| Switching Loss | 1 | 0.011 W | 0.011 W |
+| **Total Heater Output Power Dissipation** | **1** | — | **0.239 W** |
 
-> **Note:** The calculations assume worst-case operating conditions with a continuous load current of **5 A** and a maximum PWM duty cycle of **100%**. The heater output is implemented using a single low-side MOSFET. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
+> **Note:** The calculations assume worst-case operating conditions with a continuous load current of **5 A** and a maximum PWM duty cycle of **100%**. The heater output is implemented using a single low-side MOSFET. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the actual gate-drive-loop switching times above, not the datasheet's bench-test values.
 
 #### 4.2.2 Winch H-Bridge
 
@@ -200,9 +224,19 @@ Both **conduction losses** and **switching losses** are included in the thermal 
 |-----------|--------|------:|
 | Drain-Source On Resistance | RDS(on) | 9.1 mΩ |
 | Total Gate Charge | Qg | 13 nC |
-| Rise Time | tr | 3 ns |
-| Fall Time | tf | 3 ns |
+| Internal Gate Resistance | RGFET_Int | 1.6 Ω |
 | Maximum Junction Temperature | TJ(max) | 175 °C |
+
+##### Actual Gate Drive Loop Switching Times
+
+Using the real loop — UCC21551 driver (internal pull-up 1.47Ω‖ROH 5Ω, ROL 0.55Ω, per its datasheet §5.8/§7.3.4), external gate resistor R=2Ω (source and sink), and RGFET_Int=1.6Ω — with t ≈ Qg/IO:
+
+| Parameter | Value |
+|-----------|------:|
+| IO+ (source) | 2.56 A |
+| IO- (sink) | 2.93 A |
+| tr (actual) | 5.07 ns |
+| tf (actual) | 4.44 ns |
 
 The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
 
@@ -211,10 +245,10 @@ The worst-case values specified above are used throughout the calculations to pr
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
 | Conduction Loss | 2 | 0.910 W | 1.820 W |
-| Switching Loss | 2 | 0.014 W | 0.029 W |
-| **Total Winch H-Bridge Power Dissipation** | **2** | — | **1.849 W** |
+| Switching Loss | 2 | 0.023 W | 0.046 W |
+| **Total Winch H-Bridge Power Dissipation** | **2** | — | **1.866 W** |
 
-> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **10 A** and a maximum PWM duty cycle of **85%**. During normal operation, only **two MOSFETs** conduct the motor current simultaneously in the H-bridge. Therefore, the total power dissipation is calculated for **two actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
+> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **10 A** and a maximum PWM duty cycle of **85%**. During normal operation, only **two MOSFETs** conduct the motor current simultaneously in the H-bridge. Therefore, the total power dissipation is calculated for **two actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the actual gate-drive-loop switching times above, not the datasheet's bench-test values.
 #### 4.2.3 Stepper Motor Drivers
 
 The `HardwareControlBoard` supports up to **six external stepper motor drivers** implemented using the **Texas Instruments DRV8434S** integrated bipolar stepper motor driver.
@@ -276,9 +310,21 @@ Each H-bridge is implemented using discrete **ISC011N04NM7V** N-channel MOSFETs 
 |-----------|--------|------:|
 | Drain-Source On Resistance | RDS(on) | 1.1 mΩ |
 | Total Gate Charge | Qg | 73 nC |
-| Rise Time | tr | 3.5 ns |
-| Fall Time | tf | 5.7 ns |
+| Internal Gate Resistance | RGFET_Int | 0.7 Ω |
 | Maximum Junction Temperature | TJ(max) | 175 °C |
+
+##### Actual Gate Drive Loop Switching Times
+
+Datasheet tr/tf (3.5ns / 5.7ns) are measured under the manufacturer's own bench-test conditions, not this board's actual gate drive loop. Using the real loop — UCC21551 driver (internal pull-up 1.47Ω‖ROH 5Ω, ROL 0.55Ω, per its datasheet §5.8/§7.3.4), external gate resistor R=2Ω (source and sink), and RGFET_Int=0.7Ω — with IO+/IO- per the UCC21551 datasheet (§8.2.2.3, Eq. 3/7) and t ≈ Qg/IO:
+
+| Parameter | Value |
+|-----------|------:|
+| IO+ (source) | 3.16 A |
+| IO- (sink) | 3.74 A |
+| tr (actual) | 23.1 ns |
+| tf (actual) | 19.5 ns |
+
+These actual gate-drive-loop values, not the datasheet's bench-test tr/tf, are used for the switching loss calculation below.
 
 The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
 
@@ -287,10 +333,10 @@ The worst-case values specified above are used throughout the calculations to pr
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
 | Conduction Loss | 4 | 1.496 W | 5.984 W |
-| Switching Loss | 4 | 0.088 W | 0.353 W |
-| **Total HPS Power Dissipation** | **4** | — | **6.337 W** |
+| Switching Loss | 4 | 0.409 W | 1.636 W |
+| **Total HPS Power Dissipation** | **4** | — | **7.620 W** |
 
-> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **40 A** and a maximum PWM duty cycle of **85%**. During normal operation, only two MOSFETs conduct the motor current simultaneously in each H-bridge. Since the High Power Section consists of two independent H-bridges, the total power dissipation is calculated for **four actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the typical switching times specified in the datasheet.
+> **Note:** The calculations assume worst-case operating conditions with a continuous motor current of **40 A** and a maximum PWM duty cycle of **85%**. During normal operation, only two MOSFETs conduct the motor current simultaneously in each H-bridge. Since the High Power Section consists of two independent H-bridges, the total power dissipation is calculated for **four actively conducting and switching MOSFETs**. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the actual gate-drive-loop switching times above, not the datasheet's bench-test values.
 
 ### 4.4 Current Sense Shunts
 
@@ -316,8 +362,10 @@ where:
 |-----------|--------|------:|
 | HPS Rated Current | I | 40 A |
 | Winch Rated Current | I | 10 A |
+| Heater Rated Current | I | 10 A |
 | HPS Shunt Resistance | Rshunt | 1 mΩ |
 | Winch Shunt Resistance | Rshunt | 5 mΩ |
+| Heater Shunt Resistance | Rshunt | 5 mΩ |
 | Maximum PWM Duty Cycle | DMAX | 85 % |
 
 ##### HPS Current Sense Shunt
@@ -346,13 +394,27 @@ Pshunt = 0.85 × (10 A)² × 5 mΩ
 Pshunt = 0.425 W
 ```
 
+##### Heater Current Sense Shunt
+
+```text
+Pshunt = D × I² × Rshunt
+```
+
+Substituting the design parameters:
+
+```text
+Pshunt = 0.85 × (10 A)² × 5 mΩ
+Pshunt = 0.425 W
+```
+
 ##### Total Current Sense Shunt Power Dissipation
 
 | Current Sense Channel | Quantity | Power Loss per Shunt | Total Power Loss |
 |-----------------------|---------:|---------------------:|-----------------:|
 | HPS Shunts (1 mΩ) | 2 | 1.36 W | 2.720 W |
 | Winch Shunt (5 mΩ) | 1 | 0.425 W | 0.425 W |
-| **Total Shunt Power Dissipation** | **3** | — | **3.145 W** |
+| Heater Shunt (5 mΩ) | 1 | 0.425 W | 0.425 W |
+| **Total Shunt Power Dissipation** | **4** | — | **3.570 W** |
 
 > **Note:** The calculations assume a maximum PWM duty cycle of **85%**, representing the worst-case continuous operating condition of the H-bridge power stages.
 
@@ -391,11 +453,11 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 | Section | Worst-Case Power Dissipation | Notes |
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
-| Medium Power Section (MPS) | 9.284 W | Heater (0.235 W), Winch (1.849 W), Stepper Drivers (7.200 W) |
-| High Power Section (HPS) | 6.337 W | MOSFET conduction and switching losses |
-| Current Sense Shunts | 3.145 W | Shunt conduction losses |
+| Medium Power Section (MPS) | 9.305 W | Heater (0.239 W), Winch (1.866 W), Stepper Drivers (7.200 W) |
+| High Power Section (HPS) | 7.620 W | MOSFET conduction and switching losses |
+| Current Sense Shunts | 3.570 W | Shunt conduction losses |
 | Other Components | 0.850 W | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
-| **Total PCB Thermal Budget** | **20.064 W** | Worst-case estimate |
+| **Total PCB Thermal Budget** | **21.793 W** | Worst-case estimate |
 
 The resulting thermal budget will be used to verify:
 
@@ -413,7 +475,7 @@ The resulting thermal budget will be used to verify:
 
 ## 6. Design Conclusions
 
-The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 20.064 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
+The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 21.793 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
 
 The analysis leads to the following design conclusions:
 

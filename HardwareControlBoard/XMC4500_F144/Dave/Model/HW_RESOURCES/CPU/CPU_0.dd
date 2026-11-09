@@ -83,7 +83,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="setena26" URI="http://resources/0.1.31/peripheral/cpu/0/iser2/setena26" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="26" stopPos="26" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="USIC1_1_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/91">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@hwResources.8"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_30/SPI_MASTER_0.app#//@hwResources.15"/>
     <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser2/setena27"/>
     <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer2/clrena27"/>
     <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr2/setpend27"/>
@@ -105,7 +105,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="setena28" URI="http://resources/0.1.31/peripheral/cpu/0/iser2/setena28" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="28" stopPos="28" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="USIC1_3_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/93">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@hwResources.7"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_30/SPI_MASTER_0.app#//@hwResources.14"/>
     <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser2/setena29"/>
     <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer2/clrena29"/>
     <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr2/setpend29"/>
@@ -136,7 +136,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="setena25" URI="http://resources/0.1.31/peripheral/cpu/0/iser2/setena25" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="25" stopPos="25" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERU1_0_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/5">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PIN_INTERRUPT/v4_0_4/PIN_INTERRUPT_0.app#//@hwResources.0"/>
     <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser0/setena5"/>
     <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer0/clrena5"/>
     <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr0/setpend5"/>
@@ -180,5 +179,71 @@
     <bitFields name="setena31" URI="http://resources/0.1.31/peripheral/cpu/0/iser0/setena31" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="31" stopPos="31" accessPermission="rw" maxValue="1" minValue="0"/>
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="setena5" URI="http://resources/0.1.31/peripheral/cpu/0/iser0/setena5" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="5" stopPos="5" accessPermission="rw" maxValue="1" minValue="0"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="USIC2_2_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/98">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@hwResources.8"/>
+    <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser3/setena2"/>
+    <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer3/clrena2"/>
+    <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr3/setpend2"/>
+    <resourcesList name="icpr_clrpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icpr3/clrpend2"/>
+    <resourcesList name="iabr_active" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iabr3/active2"/>
+    <resourcesList name="ipr_pri" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ipr24/pri_98"/>
+    <resourcesList name="signal_in" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/usic2_2_irqhandler"/>
+  </provided>
+  <provided xsi:type="ResourceModel:RegisterParameter" name="ISER3" URI="http://resources/0.1.31/peripheral/cpu/0/iser3" value="0" toolTipHelpDescription="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;The NVIC_ISER3 characteristics are:&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Purpose Enables, or reads the enable state of a group of interrupts.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Usage constraints NVIC_ISER3[31:0] are the set-enable bits for interrupts 127 - 96.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Configurations At least one register is always implemented, see Implemented NVIC registers on page B3-753.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" defaultValue="0" accessPermission="rw" addressOffset="0x10c" resetValue="0" resetMask="0xffffffff">
+    <bitFields name="setena0" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena0" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="0" stopPos="0" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena1" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena1" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="1" stopPos="1" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena2" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena2" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="2" stopPos="2" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena3" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena3" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="3" stopPos="3" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena4" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena4" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="4" stopPos="4" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena5" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena5" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="5" stopPos="5" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena6" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena6" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="6" stopPos="6" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena7" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena7" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="7" stopPos="7" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena8" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena8" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="8" stopPos="8" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena9" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena9" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="9" stopPos="9" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena10" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena10" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="10" stopPos="10" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena11" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena11" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="11" stopPos="11" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena12" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena12" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="12" stopPos="12" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena13" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena13" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="13" stopPos="13" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena14" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena14" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="14" stopPos="14" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena15" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena15" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="15" stopPos="15" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena16" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena16" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="16" stopPos="16" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena17" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena17" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="17" stopPos="17" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena18" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena18" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="18" stopPos="18" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena19" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena19" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="19" stopPos="19" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena20" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena20" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="20" stopPos="20" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena21" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena21" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="21" stopPos="21" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena22" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena22" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="22" stopPos="22" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena23" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena23" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="23" stopPos="23" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena24" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena24" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="24" stopPos="24" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena25" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena25" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="25" stopPos="25" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena26" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena26" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="26" stopPos="26" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena27" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena27" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="27" stopPos="27" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena28" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena28" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="28" stopPos="28" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena29" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena29" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="29" stopPos="29" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena30" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena30" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="30" stopPos="30" accessPermission="rw" maxValue="1" minValue="0"/>
+    <bitFields name="setena31" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena31" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="31" stopPos="31" accessPermission="rw" maxValue="1" minValue="0"/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="setena2" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena2" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="2" stopPos="2" accessPermission="rw" maxValue="1" minValue="0"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="USIC2_3_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/99">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_SLAVE/v4_0_10/SPI_SLAVE_0.app#//@hwResources.7"/>
+    <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser3/setena3"/>
+    <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer3/clrena3"/>
+    <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr3/setpend3"/>
+    <resourcesList name="icpr_clrpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icpr3/clrpend3"/>
+    <resourcesList name="iabr_active" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iabr3/active3"/>
+    <resourcesList name="ipr_pri" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ipr24/pri_99"/>
+    <resourcesList name="signal_in" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/usic2_3_irqhandler"/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="setena3" URI="http://resources/0.1.31/peripheral/cpu/0/iser3/setena3" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="3" stopPos="3" accessPermission="rw" maxValue="1" minValue="0"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="ERU0_3_IRQHandler" URI="http://resources/0.1.31/peripheral/cpu/0/nvic/interrupt/4">
+    <resourcesList name="iser_setena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iser0/setena4"/>
+    <resourcesList name="icer_clrena" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icer0/clrena4"/>
+    <resourcesList name="ispr_setpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ispr0/setpend4"/>
+    <resourcesList name="icpr_clrpend" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/icpr0/clrpend4"/>
+    <resourcesList name="iabr_active" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/iabr0/active4"/>
+    <resourcesList name="ipr_pri" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/ipr1/pri_4"/>
+    <resourcesList name="signal_in" requiredResourceUri="http://resources/0.1.31/peripheral/cpu/0/eru0_3_irqhandler"/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="setena4" URI="http://resources/0.1.31/peripheral/cpu/0/iser0/setena4" value="0" toolTipHelpDescription="Writing 0 to a SETENA bit has no effect, writing 1 to a bit enables the corresponding interrupt." defaultValue="0" startPos="4" stopPos="4" accessPermission="rw" maxValue="1" minValue="0"/>
   <addressBlock offset="0x0" size="3488" usage="registers"/>
 </ResourceModel:Peripheral>

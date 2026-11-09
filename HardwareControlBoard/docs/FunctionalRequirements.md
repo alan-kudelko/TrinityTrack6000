@@ -117,7 +117,6 @@ The configurable hardware shall allow adaptation of the board to different appli
 
 Typical configurable features include:
 
-- Selection between stepper motor and RC servo outputs
 - Selection of actuator supply voltage where applicable
 - Optional population of application-specific hardware
 - Selection of signal routing where supported by the hardware design

@@ -2,14 +2,14 @@
 <ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="GLOBAL_CCU8" URI="http://resources/4.1.14/app/GLOBAL_CCU8/0" description="Initializes CCU8 Global Register Set." version="4.1.14" minDaveVersion="4.0.0" instanceLabel="GLOBAL_CCU8_0" appLabel="" containingProxySignal="true">
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@requiredApps.0"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@requiredApps.0"/>
-  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@requiredApps.0"/>
-  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_3.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_6.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_7.app#//@requiredApps.0"/>
   <properties provideInit="true" sharable="true"/>
   <virtualSignals name="ccu8_global" URI="http://resources/4.1.14/app/GLOBAL_CCU8/0/vs_global_ccu8_globalsignal" hwSignal="global_signal" hwResource="//@hwResources.0">
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.0"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@connections.0"/>
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_2.app#//@connections.0"/>
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_3.app#//@connections.0"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_6.app#//@connections.0"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_7.app#//@connections.0"/>
   </virtualSignals>
   <virtualSignals name="clock_ccu" URI="http://resources/4.1.14/app/GLOBAL_CCU8/0/vs_global_ccu8_clk" hwSignal="clk" hwResource="//@hwResources.0"/>
   <virtualSignals name="ccu8_global_start" URI="http://resources/4.1.14/app/GLOBAL_CCU8/0/vs_global_ccu8_gsc_enable" hwSignal="gsc_enable" hwResource="//@hwResources.1" visible="true"/>
