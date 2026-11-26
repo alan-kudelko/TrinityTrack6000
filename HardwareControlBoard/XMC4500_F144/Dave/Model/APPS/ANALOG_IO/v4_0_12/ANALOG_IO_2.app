@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ANALOG_IO" URI="http://resources/4.0.12/app/ANALOG_IO/2" description="Configures a port pin to use as analog input/output and digital input." version="4.0.12" minDaveVersion="4.0.0" instanceLabel="ANALOG_HPS2_TEMP_OUT" appLabel="">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ANALOG_IO" URI="http://resources/4.0.12/app/ANALOG_IO/2" description="Configures a port pin to use as analog input/output and digital input." version="4.0.12" minDaveVersion="4.0.0" instanceLabel="ANALOG_HPSB_TEMP_IC" appLabel="">
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@requiredApps.4"/>
   <properties provideInit="true" sharable="true"/>
   <virtualSignals name="pin" URI="http://resources/4.0.12/app/ANALOG_IO/2/vs_analog_io_pad_pin" hwSignal="pad" hwResource="//@hwResources.0" visible="true">

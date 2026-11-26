@@ -47,7 +47,7 @@ Applies to local routed traces; power/ground polygons are covered separately (se
 
 | Class | Width | Notes |
 |-------|-------|-------|
-| Signal | 0.200 mm | |
+| Signal | 0.150 mm | |
 | Analog | 0.3 mm | |
 | Power | 0.300 mm | Local connections |
 | Gate driver | 0.7 mm | |
@@ -65,7 +65,8 @@ Winch and MPS low-side gate drive traces use 0.4mm rather than the 0.7mm Gate dr
 
 | Type | Pad / Drill | Notes |
 |------|-------------|-------|
-| Standard / signal (incl. power current-transfer) | 0.620 mm / 0.310 mm | |
+| Signal | 0.505 mm / 0.200 mm | Same via as the thermal type |
+| Standard (power current-transfer) | 0.620 mm / 0.310 mm | |
 | Thermal (component) | 0.505 mm / 0.200 mm | |
 | Gate | 0.700 mm / 0.350 mm | |
 

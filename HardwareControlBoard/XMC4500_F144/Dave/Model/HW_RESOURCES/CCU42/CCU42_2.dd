@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Peripheral xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/0.1.29/peripheral/ccu4/2" description="Capture/Compare Unit 4 (CAPCOM4)" baseAddress="0x40014000">
   <provided xsi:type="ResourceModel:ResourceGroup" name="global" URI="http://resources/0.1.29/peripheral/ccu4/2/global">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_2.app#//@hwResources.0"/>
     <resourcesList name="gctrl" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/gctrl"/>
     <resourcesList name="gctrl_pcis" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/gctrl/pcis"/>
     <resourcesList name="gstat" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/gstat"/>
@@ -63,7 +63,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="CCU4xECLK[C]"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/0.1.29/peripheral/ccu4/2/cc4/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_7.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_0.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc41ins"/>
     <resourcesList name="ins_ev0is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc41ins/ev0is"/>
     <resourcesList name="ins_ev1is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc41ins/ev1is"/>
@@ -328,7 +328,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="ev2is" URI="http://resources/0.1.29/peripheral/ccu4/2/cc41ins/ev2is" value="0" toolTipHelpDescription="Event 2 signal selection" defaultValue="0" startPos="8" stopPos="11" accessPermission="rw" maxValue="15" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.29/peripheral/ccu4/2/cc4/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_4.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_1.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc40ins"/>
     <resourcesList name="ins_ev0is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc40ins/ev0is"/>
     <resourcesList name="ins_ev1is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc40ins/ev1is"/>
@@ -530,7 +530,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Shadow transfer can be requested via SW and via the CCU4xMCSS input."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/0.1.29/peripheral/ccu4/2/cc4/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_6.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc43ins"/>
     <resourcesList name="ins_ev0is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc43ins/ev0is"/>
     <resourcesList name="ins_ev1is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc43ins/ev1is"/>
@@ -795,7 +794,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Forward to CC4ySR3"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/0.1.29/peripheral/ccu4/2/cc4/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_5.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_2.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc42ins"/>
     <resourcesList name="ins_ev0is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc42ins/ev0is"/>
     <resourcesList name="ins_ev1is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/2/cc42ins/ev1is"/>

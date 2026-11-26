@@ -71,7 +71,7 @@
   </hwResources>
   <hwResources name="Index" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_port_pad_3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Encoder Enable Pad" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_port_enable_encoder_pad" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port5/Port5_5.dd#//@provided.32"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port5/Port5_5.dd#//@provided.0"/>
   </hwResources>
   <hwResources name="POSIF encoder" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/hwres_posif_hsc_qd_0" resourceGroupUri="peripheral/posif/*/posif/hsc_qd" mResGrpUri="peripheral/posif/*/posif/hsc_qd">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/POSIF1/POSIF1_1.dd#//@provided.1"/>
@@ -101,7 +101,7 @@
   </hwResources>
   <hwResources name="Index" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_pad_3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Encoder Enable Pad" URI="http://resources/4.0.6/app/ENCODER_POSIF/1/__pin_hwres_port_enable_encoder_pad" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.34"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.8"/>
   </hwResources>
   <connections URI="http://resources/4.0.6/app/ENCODER_POSIF/1/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_ccu43_pmus_omds/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_triggen_pm_nvicsignal_in" systemDefined="true" sourceSignal="event_timestamp_trigger_period_match" targetSignal="sr_timestamp_trigger_periodmatch" required="false" srcVirtualSignal="//@virtualSignals.23" targetVirtualSignal="//@virtualSignals.22"/>
   <connections URI="http://resources/4.0.6/app/ENCODER_POSIF/1/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_global_ccu4_globalsignal/http://resources/4.0.6/app/ENCODER_POSIF/1/vs_encoder_posif_slice0_globalsignal" systemDefined="true" sourceSignal="ccu4_global" targetSignal="position_counter_slice_global_signal" targetVirtualSignal="//@virtualSignals.18" proxySrcVirtualSignalUri="http://resources/4.1.14/app/GLOBAL_CCU4/1/vs_global_ccu4_globalsignal" containingProxySignal="true">

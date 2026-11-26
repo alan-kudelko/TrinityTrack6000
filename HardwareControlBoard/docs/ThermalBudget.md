@@ -134,7 +134,7 @@ Using the real loop — 2EDN7533FXTMA1 driver (RONSRC=0.8Ω, RONSNK=0.6Ω typ, p
 
 Unlike HPS/Winch/Heater, these loop-derived times come out *faster* than PJA3406's own datasheet bench tr/tf (39 ns/28 ns), because the bench figures were measured at RG=6Ω but ID=4.4A — near the part's full rated current, not this section's actual 1A operating point. Since `t≈Qg/IO` is a simplified linear estimate that can understate real switching time relative to a bench test run at a different, higher-current condition, the datasheet's bench tr/tf (39 ns/28 ns) is retained as the conservative input to the switching-loss table below, not this faster loop estimate.
 
-R=10Ω was chosen over the 2Ω default used elsewhere (HPS/Winch/Heater) specifically because of a driver-current check: at R=2Ω, PJA3406's lack of a published internal gate resistance (unlike PJQ4548P-AU's 1.6Ω for Winch/Heater) meant the loop's worst-case current corner (RONSRC=0.4Ω/RONSNK=0.35Ω min) computed to 5.06A/5.17A — exceeding the 2EDN7533FXTMA1's own 5.0A typ peak output current rating (Table 16). At R=10Ω, worst-case current drops to ~1.17A, about 23% of that rating — comfortable margin.
+R=10Ω was chosen over the 2Ω default used elsewhere (HPS/Winch) specifically because of a driver-current check: at R=2Ω, PJA3406's lack of a published internal gate resistance (unlike PJQ4548P-AU's 1.6Ω for Winch/Heater) meant the loop's worst-case current corner (RONSRC=0.4Ω/RONSNK=0.35Ω min) computed to 5.06A/5.17A — exceeding the 2EDN7533FXTMA1's own 5.0A typ peak output current rating (Table 16). At R=10Ω, worst-case current drops to ~1.17A, about 23% of that rating — comfortable margin.
 
 ##### Total Low Power Section Power Dissipation
 
@@ -177,14 +177,16 @@ Both **conduction losses** and **switching losses** are included in the thermal 
 
 ##### Actual Gate Drive Loop Switching Times
 
-Using the real loop — 2EDN7533FXTMA1 driver (RONSRC=0.8Ω, RONSNK=0.6Ω typ, per its datasheet §4.5/Table 16), external gate resistor R=2Ω (source and sink), and RGFET_Int=1.6Ω — with t ≈ Qg/IO:
+Using the real loop — 2EDN7533FXTMA1 driver (RONSRC=0.8Ω, RONSNK=0.6Ω typ, per its datasheet §4.5/Table 16), external gate resistor R=10Ω (source and sink), and RGFET_Int=1.6Ω — with t ≈ Qg/IO:
 
 | Parameter | Value |
 |-----------|------:|
-| IO+ (source) | 2.76 A |
-| IO- (sink) | 2.89 A |
-| tr (actual) | 4.71 ns |
-| tf (actual) | 4.49 ns |
+| IO+ (source) | 0.98 A |
+| IO- (sink) | 1.00 A |
+| tr (actual) | 13.27 ns |
+| tf (actual) | 13.05 ns |
+
+R=10Ω is used here, as on the LPS outputs, instead of the 2Ω default of HPS/Winch: it keeps the gate loop overdamped and limits the turn-off di/dt. The cost is slower edges and about 0.021 W more switching loss at this operating point.
 
 The worst-case values specified above are used throughout the calculations to provide conservative estimates of power dissipation and ensure adequate thermal design margin.
 
@@ -193,8 +195,8 @@ The worst-case values specified above are used throughout the calculations to pr
 | Loss Type | Quantity | Power Loss per MOSFET | Total Power Loss |
 |-----------|---------:|----------------------:|-----------------:|
 | Conduction Loss | 1 | 0.228 W | 0.228 W |
-| Switching Loss | 1 | 0.011 W | 0.011 W |
-| **Total Heater Output Power Dissipation** | **1** | — | **0.239 W** |
+| Switching Loss | 1 | 0.032 W | 0.032 W |
+| **Total Heater Output Power Dissipation** | **1** | — | **0.260 W** |
 
 > **Note:** The calculations assume worst-case operating conditions with a continuous load current of **5 A** and a maximum PWM duty cycle of **100%**. The heater output is implemented using a single low-side MOSFET. Conduction losses are calculated using the **maximum** datasheet **RDS(on)** value, while switching losses are estimated using the actual gate-drive-loop switching times above, not the datasheet's bench-test values.
 
@@ -453,11 +455,11 @@ Unless stated otherwise, all values represent **worst-case theoretical estimates
 | Section | Worst-Case Power Dissipation | Notes |
 |---------|-----------------------------:|-------|
 | Low Power Section (LPS) | 0.448 W | MOSFET conduction and switching losses |
-| Medium Power Section (MPS) | 9.305 W | Heater (0.239 W), Winch (1.866 W), Stepper Drivers (7.200 W) |
+| Medium Power Section (MPS) | 9.326 W | Heater (0.260 W), Winch (1.866 W), Stepper Drivers (7.200 W) |
 | High Power Section (HPS) | 7.620 W | MOSFET conduction and switching losses |
 | Current Sense Shunts | 3.570 W | Shunt conduction losses |
 | Other Components | 0.850 W | TLV76133 LDO, gate drivers, analog front-end, logic ICs |
-| **Total PCB Thermal Budget** | **21.793 W** | Worst-case estimate |
+| **Total PCB Thermal Budget** | **21.814 W** | Worst-case estimate |
 
 The resulting thermal budget will be used to verify:
 
@@ -475,7 +477,7 @@ The resulting thermal budget will be used to verify:
 
 ## 6. Design Conclusions
 
-The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 21.793 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
+The completed thermal analysis estimates a **worst-case PCB power dissipation of approximately 21.814 W** under maximum design loading. This value represents a conservative thermal budget used to evaluate the PCB layout, component placement and cooling capability.
 
 The analysis leads to the following design conclusions:
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="PWM_CCU4" URI="http://resources/4.1.28/app/PWM_CCU4/6" description="PWM APP using one timer slice of CCU4, with external events support, to generate a PWM output." mode="NOTSHARABLE" version="4.1.28" minDaveVersion="4.3.2" instanceLabel="PWM_MPS_2" appLabel="" containingProxySignal="true">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="PWM_CCU4" URI="http://resources/4.1.28/app/PWM_CCU4/6" description="PWM APP using one timer slice of CCU4, with external events support, to generate a PWM output." mode="NOTSHARABLE" version="4.1.28" minDaveVersion="4.3.2" instanceLabel="PWM_MPS_STEP_4" appLabel="" containingProxySignal="true">
   <properties provideInit="true"/>
   <virtualSignals name="CCU4_global_signal" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_global_signal" hwSignal="global_signal" hwResource="//@hwResources.0"/>
   <virtualSignals name="event_cmp_match" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_compare_match_interrupt" hwSignal="cmds_cmus" hwResource="//@hwResources.0" required="false"/>
@@ -9,7 +9,9 @@
   <virtualSignals name="event_2" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_event2_interrupt" hwSignal="e2as" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="timer_st" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_st" hwSignal="st" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="pwm_output" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_channel_out_signal" hwSignal="out" hwResource="//@hwResources.0" visible="true"/>
-  <virtualSignals name="ext_event0" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_gp0_unsync" hwSignal="gp0_unsync" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="ext_event0" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_gp0_unsync" hwSignal="gp0_unsync" hwResource="//@hwResources.0" visible="true">
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_7.app#//@connections.3"/>
+  </virtualSignals>
   <virtualSignals name="ext_event1" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_gp1_unsync" hwSignal="gp1_unsync" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="ext_event2" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_gp2_unsync" hwSignal="gp2_unsync" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="gp0" URI="http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_gp0" hwSignal="gp0" hwResource="//@hwResources.0" visible="true"/>
@@ -24,13 +26,13 @@
     <downwardMapList xsi:type="ResourceModel:App" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#/"/>
   </requiredApps>
   <hwResources name="CC4 Config" URI="http://resources/4.1.28/app/PWM_CCU4/6/hwres_ccu4_cc4_slice" resourceGroupUri="peripheral/ccu4/*/cc4/*" mResGrpUri="peripheral/ccu4/*/cc4/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU42/CCU42_2.dd#//@provided.29"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CCU43/CCU43_3.dd#//@provided.3"/>
   </hwResources>
   <hwResources name="PWM_CCU4 Channel Out" URI="http://resources/4.1.28/app/PWM_CCU4/6/hwres_port_channel_out" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port3/Port3_3.dd#//@provided.32"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port4/Port4_4.dd#//@provided.10"/>
   </hwResources>
-  <hwResources name="PWM_CCU4 Channel Out" URI="http://resources/4.1.28/app/PWM_CCU4/6/__pin_hwres_port_channel_out" resourceGroupUri="devicepackage/0/132" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.81"/>
+  <hwResources name="PWM_CCU4 Channel Out" URI="http://resources/4.1.28/app/PWM_CCU4/6/__pin_hwres_port_channel_out" resourceGroupUri="devicepackage/0/121" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.72"/>
   </hwResources>
   <connections URI="http://resources/4.1.28/app/PWM_CCU4/6/http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_global/http://resources/4.1.28/app/PWM_CCU4/6/vs_ccu4_cc4_global_signal" systemDefined="true" sourceSignal="ccu4_global" targetSignal="CCU4_global_signal" targetVirtualSignal="//@virtualSignals.0" proxySrcVirtualSignalUri="http://resources/4.1.14/app/GLOBAL_CCU4/3/vs_global_ccu4_globalsignal" containingProxySignal="true">
     <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#//@virtualSignals.0"/>

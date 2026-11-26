@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="PWM_CCU8" URI="http://resources/4.1.32/app/PWM_CCU8/8" description="PWM APP using one timer slice of CCU8, with external events and dead time support, to generate up to 4 PWM outputs." mode="NOTSHARABLE" version="4.1.32" minDaveVersion="4.3.2" instanceLabel="PWM_CCU8_2" appLabel="" containingProxySignal="true">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="PWM_CCU8" URI="http://resources/4.1.32/app/PWM_CCU8/8" description="PWM APP using one timer slice of CCU8, with external events and dead time support, to generate up to 4 PWM outputs." mode="NOTSHARABLE" version="4.1.32" minDaveVersion="4.3.2" instanceLabel="PWM_SERVO_1n" appLabel="" containingProxySignal="true">
   <properties provideInit="true"/>
   <virtualSignals name="ccu8_global_signal" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_config_global" hwSignal="global_signal" hwResource="//@hwResources.0"/>
   <virtualSignals name="event_period_match" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_period_match_interrupt" hwSignal="pmus_omds" hwResource="//@hwResources.0" required="false"/>
@@ -15,7 +15,9 @@
   <virtualSignals name="pwm_ch1_inverted" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_ch1_out_b" hwSignal="out1" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="pwm_ch2_direct" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_ch2_out_a" hwSignal="out2" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="pwm_ch2_inverted" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_ch2_out_b" hwSignal="out3" hwResource="//@hwResources.0" visible="true"/>
-  <virtualSignals name="ext_event0" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_gp0_unsync" hwSignal="gp0_unsync" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="ext_event0" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_gp0_unsync" hwSignal="gp0_unsync" hwResource="//@hwResources.0" visible="true">
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_7.app#//@connections.2"/>
+  </virtualSignals>
   <virtualSignals name="ext_event1" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_gp1_unsync" hwSignal="gp1_unsync" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="ext_event2" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_gp2_unsync" hwSignal="gp2_unsync" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="gp0" URI="http://resources/4.1.32/app/PWM_CCU8/8/vs_ccu8_cc8_gp0" hwSignal="gp0" hwResource="//@hwResources.0" visible="true"/>
@@ -49,11 +51,11 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.48"/>
   </hwResources>
   <hwResources name="PWM_CCU8 CH2 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/hwres_port_ch2_out3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
-  <hwResources name="PWM_CCU8 CH1 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/__pin_hwres_port_ch1_out0" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
+  <hwResources name="PWM_CCU8 CH1 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/__pin_hwres_port_ch1_out0" resourceGroupUri="devicepackage/0/140" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.62"/>
   </hwResources>
   <hwResources name="PWM_CCU8 CH1 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/__pin_hwres_port_ch1_out1" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
-  <hwResources name="PWM_CCU8 CH2 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/__pin_hwres_port_ch2_out2" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
+  <hwResources name="PWM_CCU8 CH2 Direct Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/__pin_hwres_port_ch2_out2" resourceGroupUri="devicepackage/0/68" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.63"/>
   </hwResources>
   <hwResources name="PWM_CCU8 CH2 Invert Out" URI="http://resources/4.1.32/app/PWM_CCU8/8/__pin_hwres_port_ch2_out3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>

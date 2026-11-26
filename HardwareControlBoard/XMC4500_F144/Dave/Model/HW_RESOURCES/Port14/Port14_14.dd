@@ -328,7 +328,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC8_4" URI="http://resources/0.1.30/port/p/14/iocr8/pc8_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 8 to 11" defaultValue="0" startPos="7" stopPos="7" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P14.9 / #51" URI="http://resources/0.1.30/port/p/14/pad/9">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ANALOG_IO/v4_0_12/ANALOG_IO_0.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/14/out/p9"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/14/omr/ps9"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/14/omr/pr9"/>
@@ -352,7 +351,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Pad is disabled, ADC 1 analog input 1 and ADC 2 analog input 5 and DAC output 1 selected."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P14.0 / #42" URI="http://resources/0.1.30/port/p/14/pad/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/14/out/p0"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/14/omr/ps0"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/14/omr/pr0"/>
@@ -424,7 +423,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Pad is disabled, ADC 0 analog input 4 and ADC 2 analog input 0 and DAC Reference selected."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P14.15 / #31" URI="http://resources/0.1.30/port/p/14/pad/15">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ANALOG_IO/v4_0_12/ANALOG_IO_3.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/14/out/p15"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/14/omr/ps15"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/14/omr/pr15"/>

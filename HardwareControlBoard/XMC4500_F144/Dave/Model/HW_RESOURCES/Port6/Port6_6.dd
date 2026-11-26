@@ -147,7 +147,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC6_2_0" URI="http://resources/0.1.30/port/p/6/iocr4/pc6_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P6.5 / #96" URI="http://resources/0.1.30/port/p/6/pad/5">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_1.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_4.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/6/out/p5"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/ps5"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/pr5"/>
@@ -182,7 +182,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC5_2_0" URI="http://resources/0.1.30/port/p/6/iocr4/pc5_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="11" stopPos="13" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P6.2 / #99" URI="http://resources/0.1.30/port/p/6/pad/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_3.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/6/out/p2"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/ps2"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/pr2"/>
@@ -301,7 +300,6 @@
   <provided xsi:type="ResourceModel:BitField" name="PC0_4" URI="http://resources/0.1.30/port/p/6/iocr0/pc0_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="7" stopPos="7" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC0_2_0" URI="http://resources/0.1.30/port/p/6/iocr0/pc0_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="3" stopPos="5" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P6.4 / #97" URI="http://resources/0.1.30/port/p/6/pad/4">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_0.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/6/out/p4"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/ps4"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/pr4"/>
@@ -336,7 +334,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P6.3 / #98" URI="http://resources/0.1.30/port/p/6/pad/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_2.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/6/out/p3"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/ps3"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/6/omr/pr3"/>

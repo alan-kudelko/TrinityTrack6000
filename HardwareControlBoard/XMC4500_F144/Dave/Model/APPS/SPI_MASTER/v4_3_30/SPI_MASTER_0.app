@@ -15,7 +15,7 @@
   <virtualSignals name="mosi/miso[3]_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_mosi_3" hwSignal="pad" hwResource="//@hwResources.4" required="false"/>
   <virtualSignals name="sclk_out_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_sclkoutpad" hwSignal="pad" hwResource="//@hwResources.5" visible="true"/>
   <virtualSignals name="sclk" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_sclkout" hwSignal="sclkout" hwResource="//@hwResources.0"/>
-  <virtualSignals name="slave_select_0" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0" hwResource="//@hwResources.0" solverVariableName="sv2" solverVariableValue="selo1"/>
+  <virtualSignals name="slave_select_0" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0" hwResource="//@hwResources.0" required="false" solverVariableName="sv2" solverVariableValue="selo1"/>
   <virtualSignals name="slave_select_1" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_1" hwResource="//@hwResources.0" required="false" solverVariableName="sv3" solverVariableValue=""/>
   <virtualSignals name="slave_select_2" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_2" hwResource="//@hwResources.0" required="false" solverVariableName="sv4" solverVariableValue=""/>
   <virtualSignals name="slave_select_3" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_3" hwResource="//@hwResources.0" required="false" solverVariableName="sv5" solverVariableValue=""/>
@@ -23,7 +23,7 @@
   <virtualSignals name="slave_select_5" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_5" hwResource="//@hwResources.0" required="false" solverVariableName="sv7" solverVariableValue=""/>
   <virtualSignals name="slave_select_6" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_6" hwResource="//@hwResources.0" required="false" solverVariableName="sv8" solverVariableValue=""/>
   <virtualSignals name="slave_select_7" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_7" hwResource="//@hwResources.0" required="false" solverVariableName="sv9" solverVariableValue=""/>
-  <virtualSignals name="slave_select_0_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0_pad" hwSignal="pad" hwResource="//@hwResources.6" visible="true"/>
+  <virtualSignals name="slave_select_0_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0_pad" hwSignal="pad" hwResource="//@hwResources.6" required="false"/>
   <virtualSignals name="slave_select_1_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_1_pad" hwSignal="pad" hwResource="//@hwResources.7" required="false"/>
   <virtualSignals name="slave_select_2_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_2_pad" hwSignal="pad" hwResource="//@hwResources.8" required="false"/>
   <virtualSignals name="slave_select_3_pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_3_pad" hwSignal="pad" hwResource="//@hwResources.9" required="false"/>
@@ -94,9 +94,7 @@
   <hwResources name="SCLKOUT pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_sclkout" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.49"/>
   </hwResources>
-  <hwResources name="Slave Select 0 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_0" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.11"/>
-  </hwResources>
+  <hwResources name="Slave Select 0 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_0" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Slave Select 1 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_1" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Slave Select 2 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_2" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Slave Select 3 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_3" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
@@ -105,10 +103,10 @@
   <hwResources name="Slave Select 6 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_6" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="Slave Select 7 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_port_pad_spi_ss_7" resourceGroupUri="" required="false" mResGrpUri="port/p/*/pad/*"/>
   <hwResources name="NVIC Node Tx" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_cpu_nvic_interrupt_tx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.13"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.9"/>
   </hwResources>
   <hwResources name="NVIC Node Rx" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_cpu_nvic_interrupt_rx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.9"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.6"/>
   </hwResources>
   <hwResources name="NVIC Node Error" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_cpu_nvic_interrupt_error" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
   <hwResources name="Receive DMA Channel" URI="http://resources/4.3.30/app/SPI_MASTER/0/hwres_dma_channel_rx" resourceGroupUri="" required="false" solverVariable="true" mResGrpUri="peripheral/sv1/0/*/*">
@@ -140,9 +138,7 @@
   <hwResources name="SCLKOUT pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/__pin_hwres_port_pad_spi_sclkout" resourceGroupUri="devicepackage/0/137" constraintType="GLOBAL_RESOURCE" mResGrpUri="devicepackage/0/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.84"/>
   </hwResources>
-  <hwResources name="Slave Select 0 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_0" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.53"/>
-  </hwResources>
+  <hwResources name="Slave Select 0 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_0" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Slave Select 1 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_1" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Slave Select 2 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_2" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
   <hwResources name="Slave Select 3 pin" URI="http://resources/4.3.30/app/SPI_MASTER/0/__pin_hwres_port_pad_spi_ss_3" resourceGroupUri="" required="false" mResGrpUri="devicepackage/0/*"/>
@@ -165,7 +161,7 @@
   <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_dout2/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_mosi_2_hw_o" systemDefined="true" sourceSignal="mosi_2_output_stage" targetSignal="mosi_2_hw_o" required="false" srcVirtualSignal="//@virtualSignals.6" targetVirtualSignal="//@virtualSignals.51"/>
   <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_dout3/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_mosi_3_hw_o" systemDefined="true" sourceSignal="mosi_3_output_stage" targetSignal="mosi_3_hw_o" required="false" srcVirtualSignal="//@virtualSignals.7" targetVirtualSignal="//@virtualSignals.52"/>
   <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_sclkout/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_sclkoutpad" systemDefined="true" sourceSignal="sclk" targetSignal="sclk_out_pin" srcVirtualSignal="//@virtualSignals.13" targetVirtualSignal="//@virtualSignals.12"/>
-  <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0_pad" systemDefined="true" sourceSignal="slave_select_0" targetSignal="slave_select_0_pin" srcVirtualSignal="//@virtualSignals.14" targetVirtualSignal="//@virtualSignals.22"/>
+  <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_0_pad" systemDefined="true" sourceSignal="slave_select_0" targetSignal="slave_select_0_pin" required="false" srcVirtualSignal="//@virtualSignals.14" targetVirtualSignal="//@virtualSignals.22"/>
   <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_1/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_1_pad" systemDefined="true" sourceSignal="slave_select_1" targetSignal="slave_select_1_pin" required="false" srcVirtualSignal="//@virtualSignals.15" targetVirtualSignal="//@virtualSignals.23"/>
   <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_2/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_2_pad" systemDefined="true" sourceSignal="slave_select_2" targetSignal="slave_select_2_pin" required="false" srcVirtualSignal="//@virtualSignals.16" targetVirtualSignal="//@virtualSignals.24"/>
   <connections URI="http://resources/4.3.30/app/SPI_MASTER/0/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_3/http://resources/4.3.30/app/SPI_MASTER/0/vs_spi_master_slave_select_3_pad" systemDefined="true" sourceSignal="slave_select_3" targetSignal="slave_select_3_pin" required="false" srcVirtualSignal="//@virtualSignals.17" targetVirtualSignal="//@virtualSignals.25"/>

@@ -148,7 +148,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.10 / #11" URI="http://resources/0.1.30/port/p/3/pad/10">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_9.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p10"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps10"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr10"/>
@@ -231,7 +230,7 @@
   <provided xsi:type="ResourceModel:BitField" name="PC9_2_0" URI="http://resources/0.1.30/port/p/3/iocr8/pc9_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 8 to 11" defaultValue="0" startPos="11" stopPos="13" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC9_4" URI="http://resources/0.1.30/port/p/3/iocr8/pc9_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 8 to 11" defaultValue="0" startPos="15" stopPos="15" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.13 / #8" URI="http://resources/0.1.30/port/p/3/pad/13">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_7.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_0.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p13"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps13"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr13"/>
@@ -266,6 +265,7 @@
   <provided xsi:type="ResourceModel:BitField" name="PC13_4" URI="http://resources/0.1.30/port/p/3/iocr12/pc13_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 12 to 15" defaultValue="0" startPos="15" stopPos="15" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC13_2_0" URI="http://resources/0.1.30/port/p/3/iocr12/pc13_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 12 to 15" defaultValue="0" startPos="11" stopPos="13" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.0 / #7" URI="http://resources/0.1.30/port/p/3/pad/0">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_10.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p0"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps0"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr0"/>
@@ -382,7 +382,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC12_2_0" URI="http://resources/0.1.30/port/p/3/iocr12/pc12_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 12 to 15" defaultValue="0" startPos="3" stopPos="5" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.3 / #132" URI="http://resources/0.1.30/port/p/3/pad/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_6.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_13.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p3"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps3"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr3"/>
@@ -417,7 +417,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.4 / #131" URI="http://resources/0.1.30/port/p/3/pad/4">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_5.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_2.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p4"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps4"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr4"/>
@@ -570,7 +570,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P3.6 / #129" URI="http://resources/0.1.30/port/p/3/pad/6">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_4.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_1.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p6"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps6"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr6"/>
@@ -604,5 +604,75 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC6_2_0" URI="http://resources/0.1.30/port/p/3/iocr4/pc6_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="P3.7 / #14" URI="http://resources/0.1.30/port/p/3/pad/7">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_14/UART_0.app#//@hwResources.1"/>
+    <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p7"/>
+    <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps7"/>
+    <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr7"/>
+    <resourcesList name="in_p" requiredResourceUri="http://resources/0.1.30/port/p/3/in/p7"/>
+    <resourcesList name="pps_pps" requiredResourceUri="http://resources/0.1.30/port/p/3/pps/pps7"/>
+    <resourcesList name="hwsel_hw" requiredResourceUri="http://resources/0.1.30/port/p/3/hwsel/hw7"/>
+    <resourcesList name="pdr_pd" requiredResourceUri="http://resources/0.1.30/port/p/3/pdr0/pd7"/>
+    <resourcesList name="pdisc_pdis" requiredResourceUri="http://resources/0.1.30/port/p/3/pdisc/pdis7"/>
+    <resourcesList name="iocr_oe" requiredResourceUri="http://resources/0.1.30/port/p/3/iocr4/pc7_4"/>
+    <resourcesList name="iocr_po" requiredResourceUri="http://resources/0.1.30/port/p/3/iocr4/pc7_3"/>
+    <resourcesList name="iocr_pcr" requiredResourceUri="http://resources/0.1.30/port/p/3/iocr4/pc7_2_0"/>
+    <resourcesList name="swreg_out" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/swreg_out"/>
+    <resourcesList name="alt1" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/alt1"/>
+    <resourcesList name="alt2" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/alt2"/>
+    <resourcesList name="alt3" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/alt3"/>
+    <resourcesList name="alt4" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/alt4"/>
+    <resourcesList name="hw0_out" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/hw0_out"/>
+    <resourcesList name="hw1_out" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/hw1_out"/>
+    <resourcesList name="hw_o" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/hw_o"/>
+    <resourcesList name="hw0_p" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/hw0_p"/>
+    <resourcesList name="hw1_p" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/hw1_p"/>
+    <resourcesList name="hw_p" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/hw_p"/>
+    <resourcesList name="altin" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/altin"/>
+    <resourcesList name="pad" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_7/pad"/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="HW7" URI="http://resources/0.1.30/port/p/3/hwsel/hw7" value="0" toolTipHelpDescription="Port n Pin Hardware Select Bit x" defaultValue="0" startPos="14" stopPos="15" accessPermission="rw" maxValue="3" minValue="0">
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b00" description="Software control only."/>
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b01" description="HW0 control path can override the software configuration."/>
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b10" description="HW1 control path can override the software configuration."/>
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="PC7_2_0" URI="http://resources/0.1.30/port/p/3/iocr4/pc7_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="27" stopPos="29" accessPermission="rw" maxValue="7" minValue="0"/>
+  <provided xsi:type="ResourceModel:BitField" name="PC7_4" URI="http://resources/0.1.30/port/p/3/iocr4/pc7_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="31" stopPos="31" accessPermission="rw" maxValue="1" minValue="0"/>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="P3.8 / #13" URI="http://resources/0.1.30/port/p/3/pad/8">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_14/UART_0.app#//@hwResources.2"/>
+    <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/3/out/p8"/>
+    <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/ps8"/>
+    <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/3/omr/pr8"/>
+    <resourcesList name="in_p" requiredResourceUri="http://resources/0.1.30/port/p/3/in/p8"/>
+    <resourcesList name="pps_pps" requiredResourceUri="http://resources/0.1.30/port/p/3/pps/pps8"/>
+    <resourcesList name="hwsel_hw" requiredResourceUri="http://resources/0.1.30/port/p/3/hwsel/hw8"/>
+    <resourcesList name="pdr_pd" requiredResourceUri="http://resources/0.1.30/port/p/3/pdr1/pd8"/>
+    <resourcesList name="pdisc_pdis" requiredResourceUri="http://resources/0.1.30/port/p/3/pdisc/pdis8"/>
+    <resourcesList name="iocr_oe" requiredResourceUri="http://resources/0.1.30/port/p/3/iocr8/pc8_4"/>
+    <resourcesList name="iocr_po" requiredResourceUri="http://resources/0.1.30/port/p/3/iocr8/pc8_3"/>
+    <resourcesList name="iocr_pcr" requiredResourceUri="http://resources/0.1.30/port/p/3/iocr8/pc8_2_0"/>
+    <resourcesList name="swreg_out" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/swreg_out"/>
+    <resourcesList name="alt1" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/alt1"/>
+    <resourcesList name="alt2" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/alt2"/>
+    <resourcesList name="alt3" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/alt3"/>
+    <resourcesList name="alt4" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/alt4"/>
+    <resourcesList name="hw0_out" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/hw0_out"/>
+    <resourcesList name="hw1_out" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/hw1_out"/>
+    <resourcesList name="hw_o" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/hw_o"/>
+    <resourcesList name="hw0_p" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/hw0_p"/>
+    <resourcesList name="hw1_p" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/hw1_p"/>
+    <resourcesList name="hw_p" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/hw_p"/>
+    <resourcesList name="altin" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/altin"/>
+    <resourcesList name="pad" requiredResourceUri="http://resources/0.1.30/port/p/3/pad_8/pad"/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="HW8" URI="http://resources/0.1.30/port/p/3/hwsel/hw8" value="0" toolTipHelpDescription="Port n Pin Hardware Select Bit x" defaultValue="0" startPos="16" stopPos="17" accessPermission="rw" maxValue="3" minValue="0">
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b00" description="Software control only."/>
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b01" description="HW0 control path can override the software configuration."/>
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b10" description="HW1 control path can override the software configuration."/>
+    <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
+  </provided>
+  <provided xsi:type="ResourceModel:BitField" name="PC8_4" URI="http://resources/0.1.30/port/p/3/iocr8/pc8_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 8 to 11" defaultValue="0" startPos="7" stopPos="7" accessPermission="rw" maxValue="1" minValue="0"/>
+  <provided xsi:type="ResourceModel:BitField" name="PC8_2_0" URI="http://resources/0.1.30/port/p/3/iocr8/pc8_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 8 to 11" defaultValue="0" startPos="3" stopPos="5" accessPermission="rw" maxValue="7" minValue="0"/>
   <addressBlock offset="0x0" size="0x0100" usage="registers"/>
 </ResourceModel:Port>

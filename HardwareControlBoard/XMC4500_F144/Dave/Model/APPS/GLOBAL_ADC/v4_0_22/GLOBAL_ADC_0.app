@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="GLOBAL_ADC" URI="http://resources/4.0.22/app/GLOBAL_ADC/0" description="Initializes VADC GLOBAL and GROUP resources." version="4.0.22" minDaveVersion="4.0.0" instanceLabel="GLOBAL_ADC_0" appLabel="">
-  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@requiredApps.22"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@requiredApps.22"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_2.app#//@requiredApps.22"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_3.app#//@requiredApps.22"/>
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@requiredApps.0"/>
+  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@requiredApps.22"/>
   <properties singleton="true" provideInit="true" sharable="true"/>
   <virtualSignals name="global_signal" URI="http://resources/4.0.22/app/GLOBAL_ADC/0/vs_global_adc_global" hwSignal="global_signal" hwResource="//@hwResources.1" visible="true">
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@connections.165"/>
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@connections.167"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@connections.165"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@connections.167"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_2.app#//@connections.165"/>
@@ -16,6 +14,8 @@
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_3.app#//@connections.165"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_3.app#//@connections.167"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@connections.53"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@connections.165"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@connections.167"/>
   </virtualSignals>
   <virtualSignals name="group0_end_of_arbitration_round" URI="http://resources/4.0.22/app/GLOBAL_ADC/0/vs_global_adc_g0_garbcnt" hwSignal="garbcnt" hwResource="//@hwResources.2" visible="true"/>
   <virtualSignals name="group0_end_of_sampling_signal" URI="http://resources/4.0.22/app/GLOBAL_ADC/0/vs_global_adc_g0_gsample" hwSignal="gsample" hwResource="//@hwResources.2" visible="true"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Port xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/0.1.30/port/p/5" description="Port 5" baseAddress="0x48028500">
   <provided xsi:type="ResourceModel:ResourceGroup" name="P5.9 / #57" URI="http://resources/0.1.30/port/p/5/pad/9">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_5.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@hwResources.3"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/5/out/p9"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/ps9"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/pr9"/>
@@ -386,7 +386,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P5.2 / #82" URI="http://resources/0.1.30/port/p/5/pad/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@hwResources.3"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ENCODER_POSIF/v4_0_6/ENCODER_POSIF_0.app#//@hwResources.3"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/5/out/p2"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/ps2"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/pr2"/>
@@ -456,7 +456,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC5_4" URI="http://resources/0.1.30/port/p/5/iocr4/pc5_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="15" stopPos="15" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P5.4 / #80" URI="http://resources/0.1.30/port/p/5/pad/4">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ENCODER_POSIF/v4_0_6/ENCODER_POSIF_0.app#//@hwResources.3"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_18/DIGITAL_IO_18.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.30/port/p/5/out/p4"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/ps4"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.30/port/p/5/omr/pr4"/>

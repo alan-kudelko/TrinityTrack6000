@@ -8,10 +8,10 @@
   <virtualSignals name="erunmi_in" URI="http://resources/4.1.16/app/EVENT_GENERATOR/2/vs_event_generator_erunmi_in" hwSignal="in" hwResource="//@hwResources.1"/>
   <virtualSignals name="iout" URI="http://resources/4.1.16/app/EVENT_GENERATOR/2/vs_event_generator_erunmi_out" hwSignal="out" hwResource="//@hwResources.1" visible="true"/>
   <hwResources name="ogu" URI="http://resources/4.1.16/app/EVENT_GENERATOR/2/hwres_eru_ogu" resourceGroupUri="peripheral/eru/*/ogu/*" mResGrpUri="peripheral/eru/*/ogu/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/ERU0/ERU0_0.dd#//@provided.7"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/ERU0/ERU0_0.dd#//@provided.46"/>
   </hwResources>
   <hwResources name="erunmi" URI="http://resources/4.1.16/app/EVENT_GENERATOR/2/hwres_scu_gcu_interrupt_erunmi" resourceGroupUri="peripheral/scu/*/gcu/interrupt/erunmi/*" mResGrpUri="peripheral/scu/*/gcu/interrupt/erunmi/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/SCU/SCU_0.dd#//@provided.24"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/SCU/SCU_0.dd#//@provided.32"/>
   </hwResources>
   <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/2/http://resources/4.1.16/app/EVENT_GENERATOR/2/vs_event_generator_iout/http://resources/4.1.16/app/EVENT_GENERATOR/2/vs_event_generator_erunmi_in" systemDefined="true" sourceSignal="ogu_iout" targetSignal="erunmi_in" srcVirtualSignal="//@virtualSignals.3" targetVirtualSignal="//@virtualSignals.4"/>
 </ResourceModel:App>

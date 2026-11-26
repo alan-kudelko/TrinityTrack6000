@@ -15,7 +15,9 @@
   <virtualSignals name="pwm_ch1_inverted" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_ch1_out_b" hwSignal="out1" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="pwm_ch2_direct" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_ch2_out_a" hwSignal="out2" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="pwm_ch2_inverted" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_ch2_out_b" hwSignal="out3" hwResource="//@hwResources.0" visible="true"/>
-  <virtualSignals name="ext_event0" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_gp0_unsync" hwSignal="gp0_unsync" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="ext_event0" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_gp0_unsync" hwSignal="gp0_unsync" hwResource="//@hwResources.0" visible="true">
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_6.app#//@connections.1"/>
+  </virtualSignals>
   <virtualSignals name="ext_event1" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_gp1_unsync" hwSignal="gp1_unsync" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="ext_event2" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_gp2_unsync" hwSignal="gp2_unsync" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="gp0" URI="http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_gp0" hwSignal="gp0" hwResource="//@hwResources.0" visible="true"/>

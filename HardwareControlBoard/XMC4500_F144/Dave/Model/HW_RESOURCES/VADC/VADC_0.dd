@@ -491,6 +491,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/0.1.41/peripheral/vadc/0/group/2/ch/2">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.57"/>
     <resourcesList name="gchass_assch" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2chass/assch2"/>
     <resourcesList name="gchctr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2chctr2"/>
     <resourcesList name="gcefclr_cev" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2cefclr/cev2"/>
@@ -1226,6 +1227,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/0.1.41/peripheral/vadc/0/group/2/result_adv/2">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.80"/>
     <resourcesList name="grcr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2rcr2"/>
     <resourcesList name="gres" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2res2"/>
     <resourcesList name="gresd" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2resd2"/>
@@ -1268,6 +1270,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/0.1.41/peripheral/vadc/0/group/2/ch/3">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.54"/>
     <resourcesList name="gchass_assch" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2chass/assch3"/>
     <resourcesList name="gchctr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2chctr3"/>
     <resourcesList name="gcefclr_cev" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2cefclr/cev3"/>
@@ -1360,6 +1363,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/0.1.41/peripheral/vadc/0/group/2/result_adv/1">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.83"/>
     <resourcesList name="grcr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2rcr1"/>
     <resourcesList name="gres" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2res1"/>
     <resourcesList name="gresd" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g2resd1"/>
@@ -1879,7 +1883,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/0.1.41/peripheral/vadc/0/group/1/result_adv/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.83"/>
     <resourcesList name="grcr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1rcr2"/>
     <resourcesList name="gres" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1res2"/>
     <resourcesList name="gresd" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1resd2"/>
@@ -2475,7 +2478,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="sync" URI="http://resources/0.1.41/peripheral/vadc/0/group/3/sync">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.398"/>
     <resourcesList name="gsynctr_stsel" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g3synctr/stsel"/>
     <resourcesList name="gsynctr_evalr1" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g3synctr/evalr1"/>
     <resourcesList name="gsynctr_evalr2" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g3synctr/evalr2"/>
@@ -2578,7 +2580,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Ready input Rx is considered for the start of a parallel conversion of this conversion group"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="15" URI="http://resources/0.1.41/peripheral/vadc/0/group/0/result_filter/15">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.60"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@hwResources.60"/>
     <resourcesList name="grcr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0rcr15"/>
     <resourcesList name="gres" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0res15"/>
     <resourcesList name="gresd" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0resd7"/>
@@ -2646,7 +2648,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b0111" description="Select shared service request line 3"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.41/peripheral/vadc/0/group/0/class/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.394"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@hwResources.394"/>
     <resourcesList name="giclass" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0iclass0"/>
     <resourcesList name="scan_class_sel" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0_scan_class_sel0"/>
     <resourcesList name="queue_class_sel" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0_queue_class_sel0"/>
@@ -2803,7 +2805,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1111" description="Store result in group result register GxRES15"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="scan" URI="http://resources/0.1.41/peripheral/vadc/0/group/0/scan">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.393"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@hwResources.393"/>
     <resourcesList name="garbpr_prio" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0arbpr/prio1"/>
     <resourcesList name="garbpr_csm" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0arbpr/csm1"/>
     <resourcesList name="garbpr_asen" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0arbpr/asen1"/>
@@ -3076,7 +3078,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Use global class 1"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="sync" URI="http://resources/0.1.41/peripheral/vadc/0/group/0/sync">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.397"/>
     <resourcesList name="gsynctr_stsel" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0synctr/stsel"/>
     <resourcesList name="gsynctr_evalr1" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0synctr/evalr1"/>
     <resourcesList name="gsynctr_evalr2" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0synctr/evalr2"/>
@@ -3128,7 +3129,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Ready input Rx is considered for the start of a parallel conversion of this conversion group"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/0.1.41/peripheral/vadc/0/group/1/ch/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.54"/>
     <resourcesList name="gchass_assch" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1chass/assch1"/>
     <resourcesList name="gchctr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1chctr1"/>
     <resourcesList name="gcefclr_cev" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1cefclr/cev1"/>
@@ -3383,7 +3383,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1111" description="Store result in group result register GxRES15"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.41/peripheral/vadc/0/group/0/ch/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.40"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_4.app#//@hwResources.40"/>
     <resourcesList name="gchass_assch" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0chass/assch0"/>
     <resourcesList name="gchctr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0chctr0"/>
     <resourcesList name="gcefclr_cev" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g0cefclr/cev0"/>
@@ -3654,7 +3654,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="7" URI="http://resources/0.1.41/peripheral/vadc/0/group/1/result_filter/7">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.80"/>
     <resourcesList name="grcr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1rcr7"/>
     <resourcesList name="gres" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1res7"/>
     <resourcesList name="gresd" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1resd7"/>
@@ -3673,7 +3672,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="7" URI="http://resources/0.1.41/peripheral/vadc/0/group/1/ch/7">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@hwResources.57"/>
     <resourcesList name="gchass_assch" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1chass/assch7"/>
     <resourcesList name="gchctr" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1chctr7"/>
     <resourcesList name="gcefclr_cev" requiredResourceUri="http://resources/0.1.41/peripheral/vadc/0/g1cefclr/cev7"/>

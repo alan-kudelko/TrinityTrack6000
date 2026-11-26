@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Peripheral xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/0.1.28/peripheral/eru/0" description="Event Request Unit (ERU)" baseAddress="0x50004800">
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.28/peripheral/eru/0/ers_etl/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_5.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_1.app#//@hwResources.0"/>
     <resourcesList name="exicon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon0"/>
     <resourcesList name="exicon_pe" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon0/pe"/>
     <resourcesList name="exicon_ocs" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon0/ocs"/>
@@ -127,7 +127,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Input ERU_0A3 is selected"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/0.1.28/peripheral/eru/0/ogu/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_2.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_0.app#//@hwResources.0"/>
     <resourcesList name="exocon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon3"/>
     <resourcesList name="exocon_ipen0" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon3/ipen0"/>
     <resourcesList name="exocon_ipen1" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon3/ipen1"/>
@@ -202,7 +202,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Flag EXICONx.FL is included in the pattern detection"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/0.1.28/peripheral/eru/0/ers_etl/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_0.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_3.app#//@hwResources.0"/>
     <resourcesList name="exicon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon3"/>
     <resourcesList name="exicon_pe" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon3/pe"/>
     <resourcesList name="exicon_ocs" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon3/ocs"/>
@@ -278,7 +278,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b011" description="Trigger pulses are sent to OGU3"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/0.1.28/peripheral/eru/0/ers_etl/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_1.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_2.app#//@hwResources.0"/>
     <resourcesList name="exicon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon1"/>
     <resourcesList name="exicon_pe" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon1/pe"/>
     <resourcesList name="exicon_ocs" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon1/ocs"/>
@@ -354,7 +354,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Input ERU_1A3 is selected"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/0.1.28/peripheral/eru/0/ers_etl/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_6.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_5.app#//@hwResources.0"/>
     <resourcesList name="exicon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon2"/>
     <resourcesList name="exicon_pe" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon2/pe"/>
     <resourcesList name="exicon_ocs" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exicon2/ocs"/>
@@ -430,7 +430,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Input ERU_2A3 is selected"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/0.1.28/peripheral/eru/0/ogu/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_5.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_3.app#//@hwResources.0"/>
     <resourcesList name="exocon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon2"/>
     <resourcesList name="exocon_ipen0" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon2/ipen0"/>
     <resourcesList name="exocon_ipen1" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon2/ipen1"/>
@@ -505,7 +505,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Input ERU_OGUy3 is selected"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.28/peripheral/eru/0/ogu/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_4.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_1.app#//@hwResources.0"/>
     <resourcesList name="exocon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon0"/>
     <resourcesList name="exocon_ipen0" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon0/ipen0"/>
     <resourcesList name="exocon_ipen1" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon0/ipen1"/>
@@ -580,7 +580,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Flag EXICONx.FL is included in the pattern detection"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/0.1.28/peripheral/eru/0/ogu/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_7.app#//@hwResources.0"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_2.app#//@hwResources.0"/>
     <resourcesList name="exocon" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon1"/>
     <resourcesList name="exocon_ipen0" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon1/ipen0"/>
     <resourcesList name="exocon_ipen1" requiredResourceUri="http://resources/0.1.28/peripheral/eru/0/exocon1/ipen1"/>

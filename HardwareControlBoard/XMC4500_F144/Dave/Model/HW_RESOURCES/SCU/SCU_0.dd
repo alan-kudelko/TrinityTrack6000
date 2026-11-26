@@ -127,7 +127,7 @@
     <resourcesList name="gsc_enable" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/gsc41_enable"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="CCU4_GLOBAL_ENABLE 3" URI="http://resources/0.1.34/peripheral/scu/0/gcu/ccu4_global_enable/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_2.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#//@hwResources.1"/>
     <resourcesList name="ccucon_gsc" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/ccucon/gsc43"/>
     <resourcesList name="gsc_enable" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/gsc43_enable"/>
   </provided>
@@ -137,22 +137,22 @@
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru04_in"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="CCU4_GLOBAL_ENABLE 2" URI="http://resources/0.1.34/peripheral/scu/0/gcu/ccu4_global_enable/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_3.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_2.app#//@hwResources.1"/>
     <resourcesList name="ccucon_gsc" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/ccucon/gsc42"/>
     <resourcesList name="gsc_enable" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/gsc42_enable"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_7" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/7">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_3.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_7.app#//@hwResources.1"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru07_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru07_in"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_6" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/6">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_0.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_5.app#//@hwResources.1"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru06_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru06_in"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_3" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_2.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_0.app#//@hwResources.1"/>
     <resourcesList name="nmireqen_eru" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru03"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru03_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru03_in"/>
@@ -168,26 +168,26 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="ERU03" URI="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru03" value="0" toolTipHelpDescription="Promote Channel 3 Interrupt of ERU0 Request to NMI Request" defaultValue="0" startPos="19" stopPos="19" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_5" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/5">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_1.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_4.app#//@hwResources.1"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru05_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru05_in"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_2" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/2">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_5.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_3.app#//@hwResources.1"/>
     <resourcesList name="nmireqen_eru" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru02"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru02_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru02_in"/>
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="ERU02" URI="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru02" value="0" toolTipHelpDescription="Promote Channel 2 Interrupt of ERU0 Request to NMI Request" defaultValue="0" startPos="18" stopPos="18" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_0" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_4.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_1.app#//@hwResources.1"/>
     <resourcesList name="nmireqen_eru" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru00"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru00_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru00_in"/>
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="ERU00" URI="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru00" value="0" toolTipHelpDescription="Promote Channel 0 Interrupt of ERU0 Request to NMI Request" defaultValue="0" startPos="16" stopPos="16" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="ERUNMI_1" URI="http://resources/0.1.34/peripheral/scu/0/gcu/interrupt/erunmi/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_7.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/EVENT_GENERATOR/v4_1_16/EVENT_GENERATOR_2.app#//@hwResources.1"/>
     <resourcesList name="nmireqen_eru" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/nmireqen/eru01"/>
     <resourcesList name="out" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru01_out"/>
     <resourcesList name="in" requiredResourceUri="http://resources/0.1.34/peripheral/scu/0/eru01_in"/>

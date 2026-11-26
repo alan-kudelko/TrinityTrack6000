@@ -32,7 +32,6 @@ Typical applications include:
 Component population shall be determined based on laboratory measurements performed on the assembled hardware.
 
 > **Note:** Unless experimental testing indicates otherwise, the default BOM represents the recommended production configuration.
-
 ## 4. Gate Driver Optimization
 
 The gate driver circuits include provisions for optional gate resistors and passive tuning components.

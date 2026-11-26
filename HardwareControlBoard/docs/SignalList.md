@@ -2,106 +2,123 @@
 
 ## 1. Purpose
 
-This document records the working list of external signals that must be brought to the XMC4500 MCU on `HardwareControlBoard`, compiled section by section from the board's schematics before pin assignment.
+This document records the list of external signals brought to the XMC4500 MCU on `HardwareControlBoard`, with the net names used on the schematic, compiled from the final MCU sheet.
 
 ## 2. Scope
 
-This document covers only the signal inventory — name, originating/destination block, direction, and any known assignment constraint (e.g. ADC-capable, timer/CCU-capable, EMI-sensitive). It does not cover actual pin assignment. Pin assignment will be performed separately using DAVE IDE and the XMC4500 datasheet, and recorded afterward in a separate pinout document listing only the pins actually used (not all 144). This document is a working record, not a set of normative requirements.
+This document covers only the signal inventory: net name, originating or destination block, direction, and the known constraints of each signal (peripheral type, synchronization, pull-ups, series resistors). It does not cover pin assignment, which is done in the schematic and the DAVE project. This document is a working record, not a set of normative requirements.
 
-**Note:** several entries currently reference a block/IC type only (e.g. "HPS bridge A driver (UCC21551)") without an exact schematic designator. Designators are to be filled in once the full signal list is complete.
+**Notes:**
+- Net names are as drawn on the schematic. The numbering of the LPS, STEP, CS, DIR, SERVO and LS channels may change after the routing; the signal functions do not.
+- The 22 Ω series resistors mentioned below are on the MCU sheet, next to the MCU pin.
 
-## 3. Signal List
+## 3. Signal List (91 signals)
 
 | ID | Signal Name | Source / Destination Block | Direction (to/from MCU) | Notes |
 |---|---|---|---|---|
-| 1 | U2_PGOOD | Gate_Supply (U2, LM5164 buck) | To MCU (input) | Open-drain output signaling gate-drive supply voltage is in regulation. Pulled up to +3.3V via R6=10k on the board. Reclassified 2026-09-03: safety-critical, arguably more urgent than DRV_FAULT — if the gate supply sags, the XMC will keep generating PWM into a bad gate drive before DRV_FAULT itself would trip. Worth routing through the ERU as a hardware event input, same rationale as POWER_ENABLE/DRV_FAULT/MPS_LSx — needs an ERU0/ERU1-capable pin. Fits the 8-channel ERU budget exactly now that POWER_ENABLE was downgraded to plain polled `DIGITAL_IO` (confirmed hardware-gated independent of XMC) — the set is DRV_FAULT, U2_PGOOD, MPS_LS1-6. |
-| 2 | U5_INA | LPS driver U5 (2EDN7533FXTMA1) | From MCU (output) | LPS PWM channel (up to 40kHz per `ThermalBudget.md` §4.2) — needs a CCU4/CCU8 timer-capable pin. |
-| 3 | U5_INB | LPS driver U5 (2EDN7533FXTMA1) | From MCU (output) | LPS PWM channel — needs a CCU4/CCU8 timer-capable pin. |
-| 4 | U6_INA | LPS driver U6 (2EDN7533FXTMA1) | From MCU (output) | LPS PWM channel — needs a CCU4/CCU8 timer-capable pin. |
-| 5 | U6_INB | LPS driver U6 (2EDN7533FXTMA1) | From MCU (output) | LPS PWM channel — needs a CCU4/CCU8 timer-capable pin. |
-| 6 | U7_INA | LPS driver U7 (2EDN7533FXTMA1) | From MCU (output) | LPS digital ON/OFF channel — plain GPIO for now, may upgrade to PWM-capable pin later if pin budget allows. |
-| 7 | U7_INB | LPS driver U7 (2EDN7533FXTMA1) | From MCU (output) | LPS digital ON/OFF channel — plain GPIO for now, may upgrade to PWM-capable pin later if pin budget allows. |
-| 8 | U8_INA | LPS driver U8 (2EDN7533FXTMA1) | From MCU (output) | LPS digital ON/OFF channel — plain GPIO for now, may upgrade to PWM-capable pin later if pin budget allows. |
-| 9 | U8_INB | LPS driver U8 (2EDN7533FXTMA1) | From MCU (output) | LPS digital ON/OFF channel — plain GPIO for now, may upgrade to PWM-capable pin later if pin budget allows. |
-| 10 | IN_WINCH_RIGHT_HIGH | Winch H-bridge driver U9 (UCC21551), leg 1 high-side | From MCU (output) | H-bridge leg PWM, driven at 40kHz. Must share the same CCU module/timer instance as the other 3 Winch signals below for synchronized switching and dead-time insertion — CCU8 is the natural fit (built-in complementary-pair dead-time generation for motor H-bridge control). |
-| 11 | IN_WINCH_RIGHT_LOW | Winch H-bridge driver U9 (UCC21551), leg 1 low-side | From MCU (output) | H-bridge leg PWM (INLO), driven at 40kHz. Same CCU module as IN_WINCH_RIGHT_HIGH. |
-| 12 | IN_WINCH_LEFT_HIGH | Winch H-bridge driver U10 (UCC21551), leg 2 high-side | From MCU (output) | H-bridge leg PWM (INHI), driven at 40kHz. Same CCU module as the other three Winch signals. |
-| 13 | IN_WINCH_LEFT_LOW | Winch H-bridge driver U10 (UCC21551), leg 2 low-side | From MCU (output) | H-bridge leg PWM (INLO), driven at 40kHz. Same CCU module as the other three Winch signals. |
-| 14 | VADC_H3_OUT | U11 (INA190 current-sense amp, Winch) | To MCU (analog input) | Winch current-sense analog output. Needs a VADC-capable pin (analog Group 0/1 channel). EMI-sensitive — one of the signals flagged earlier as needing distance from Gate_Supply, since noise here directly corrupts current measurement accuracy. ADC conversion should be triggered by the same CCU module driving the Winch PWM (CCU-triggered VADC conversion), sampled in a clean window of the switching cycle rather than free-running, to avoid capturing switching-transient noise. |
-| 15 | U13_INA | Heater/MPS low-side driver U13 (2EDN7533FXTMA1) | From MCU (output) | Heater PWM channel — single low-side switch, up to 40kHz per `ThermalBudget.md` §4.2.1. Needs a CCU4/CCU8 timer-capable pin. |
-| 16 | VADC_L_OUT | U12 (INA190 current-sense amp, Heater/low-side MPS) | To MCU (analog input) | Heater current-sense analog output. Needs a VADC-capable pin. EMI-sensitive, same rationale as VADC_H3_OUT. ADC conversion should be triggered by the same CCU module driving U13_INA's PWM, sampled in a clean window of the switching cycle. |
-| 17 | SPI_MPS_SCK | Stepper drivers U14-U19 (DRV8434S, shared bus) | From MCU (output) | SPI clock, target ~10MHz. Not time-sensitive — configuration/diagnostics only, not real-time control. Needs a USIC (SPI-Master) capable pin. |
-| 18 | SPI_MPS_MOSI | Stepper drivers U14-U19 (DRV8434S, shared bus) | From MCU (output) | SPI data out, shared bus to all 6 drivers. Not time-sensitive. Needs a USIC (SPI-Master) capable pin, same channel as SPI_MPS_SCK/MISO. |
-| 19 | SPI_MPS_MISO | Stepper drivers U14-U19 (DRV8434S, shared bus) | To MCU (input) | SPI data in, shared bus from all 6 drivers. Not time-sensitive. Needs a USIC (SPI-Master) capable pin, same channel as SPI_MPS_SCK/MOSI. |
-| 20 | MPS1_CS | Stepper driver U14 (DRV8434S) | From MCU (output) | Chip select for the shared SPI bus, software (GPIO) controlled — plain digital output, no USIC/timer requirement. |
-| 21 | MPS2_CS | Stepper driver U15 (DRV8434S) | From MCU (output) | Chip select for the shared SPI bus, software (GPIO) controlled — plain digital output, no USIC/timer requirement. |
-| 22 | MPS3_CS | Stepper driver U16 (DRV8434S) | From MCU (output) | Chip select for the shared SPI bus, software (GPIO) controlled — plain digital output, no USIC/timer requirement. |
-| 23 | MPS4_CS | Stepper driver U17 (DRV8434S) | From MCU (output) | Chip select for the shared SPI bus, software (GPIO) controlled — plain digital output, no USIC/timer requirement. |
-| 24 | MPS5_CS | Stepper driver U18 (DRV8434S) | From MCU (output) | Chip select for the shared SPI bus, software (GPIO) controlled — plain digital output, no USIC/timer requirement. |
-| 25 | MPS6_CS | Stepper driver U19 (DRV8434S) | From MCU (output) | Chip select for the shared SPI bus, software (GPIO) controlled — plain digital output, no USIC/timer requirement. |
-| 26 | DRV_FAULT | Stepper drivers U14-U19 (DRV8434S), shared | To MCU (input) | Open-drain fault output, shared across all 6 drivers, pulled up to +3.3V. Since it's shared, faulting driver identity must be resolved via SPI status read (per-driver), not from this pin alone. Should be routed through XMC4500's ERU (Event Request Unit) as a hardware event input rather than a plain polled GPIO, for fast response (e.g. emergency PWM shutdown) without software polling latency — needs an ERU0/ERU1-capable pin. |
-| 27 | DRV_SLEEP | Stepper drivers U14-U19 (DRV8434S), shared (nSLEEP) | From MCU (output) | Active-high enable, internal ~200kΩ pulldown on the device (defaults to sleep/safe state if undriven, per §7.3.10). |
-| 28 | MPS_DIR1 | Stepper driver U14 (DRV8434S DIR pin) | From MCU (output) | Direction control, plain GPIO — internal pulldown on the device pin. |
-| 29 | MPS_DIR2 | Stepper driver U15 (DRV8434S DIR pin) | From MCU (output) | Direction control, plain GPIO — internal pulldown on the device pin. |
-| 30 | MPS_DIR3 | Stepper driver U16 (DRV8434S DIR pin) | From MCU (output) | Direction control, plain GPIO — internal pulldown on the device pin. |
-| 31 | MPS_DIR4 | Stepper driver U17 (DRV8434S DIR pin) | From MCU (output) | Direction control, plain GPIO — internal pulldown on the device pin. |
-| 32 | MPS_DIR5 | Stepper driver U18 (DRV8434S DIR pin) | From MCU (output) | Direction control, plain GPIO — internal pulldown on the device pin. |
-| 33 | MPS_DIR6 | Stepper driver U19 (DRV8434S DIR pin) | From MCU (output) | Direction control, plain GPIO — internal pulldown on the device pin. |
-| 34 | MPS_STEP1 | Stepper driver U14 (DRV8434S STEP pin) | From MCU (output) | PWM step pulse train, application target 40kHz (datasheet supports up to 500kHz — tWH/tWL min 970ns each — so this is a design margin choice, not a part limit). Needs a CCU4/CCU8 timer-capable pin. |
-| 35 | MPS_STEP2 | Stepper driver U15 (DRV8434S STEP pin) | From MCU (output) | PWM step pulse train, application target 40kHz (datasheet supports up to 500kHz). Needs a CCU4/CCU8 timer-capable pin. |
-| 36 | MPS_STEP3 | Stepper driver U16 (DRV8434S STEP pin) | From MCU (output) | PWM step pulse train, application target 40kHz (datasheet supports up to 500kHz). Needs a CCU4/CCU8 timer-capable pin. |
-| 37 | MPS_STEP4 | Stepper driver U17 (DRV8434S STEP pin) | From MCU (output) | PWM step pulse train, application target 40kHz (datasheet supports up to 500kHz). Needs a CCU4/CCU8 timer-capable pin. |
-| 38 | MPS_STEP5 | Stepper driver U18 (DRV8434S STEP pin) | From MCU (output) | PWM step pulse train, application target 40kHz (datasheet supports up to 500kHz). Needs a CCU4/CCU8 timer-capable pin. |
-| 39 | MPS_STEP6 | Stepper driver U19 (DRV8434S STEP pin) | From MCU (output) | PWM step pulse train, application target 40kHz (datasheet supports up to 500kHz). Needs a CCU4/CCU8 timer-capable pin. |
-| 40 | VADC_H1_OUT | HPS H-bridge current-sense amp (INA190A1QDDFRQ1), channel 1 | To MCU (analog input) | HPS current-sense analog output, bidirectional (per `CurrentSenseCalculations.md` §3.2). Needs a VADC-capable pin. EMI-sensitive, same rationale as VADC_H3_OUT/VADC_L_OUT. ADC conversion must be CCU-triggered, synchronized to the same CCU module driving the HPSA PWM signals below, sampled in a clean window of the switching cycle. |
-| 41 | IN_HPSA_LEFT_HIGH | HPS bridge A driver (UCC21551), leg 1 high-side | From MCU (output) | H-bridge leg PWM (INHI), driven at 40kHz. Must share the same CCU module/timer instance as the other 3 HPSA signals for synchronized switching and dead-time insertion. |
-| 42 | IN_HPSA_LEFT_LOW | HPS bridge A driver (UCC21551), leg 1 low-side | From MCU (output) | H-bridge leg PWM (INLO), driven at 40kHz. Same CCU module as the other three HPSA signals. |
-| 43 | IN_HPSA_RIGHT_HIGH | HPS bridge A driver (UCC21551), leg 2 high-side | From MCU (output) | H-bridge leg PWM (INHI), driven at 40kHz. Same CCU module as the other three HPSA signals. |
-| 44 | IN_HPSA_RIGHT_LOW | HPS bridge A driver (UCC21551), leg 2 low-side | From MCU (output) | H-bridge leg PWM (INLO), driven at 40kHz. Same CCU module as the other three HPSA signals. |
-| 45 | VADC_H2_OUT | HPS H-bridge current-sense amp (INA190A1QDDFRQ1), channel 2 | To MCU (analog input) | HPS current-sense analog output, bidirectional (per `CurrentSenseCalculations.md` §3.2). Needs a VADC-capable pin. EMI-sensitive, same rationale as VADC_H1_OUT. ADC conversion must be CCU-triggered, synchronized to the same CCU module driving the HPSB PWM signals below, sampled in a clean window of the switching cycle. |
-| 46 | IN_HPSB_LEFT_HIGH | HPS bridge B driver (UCC21551), leg 1 high-side | From MCU (output) | H-bridge leg PWM (INHI), driven at 40kHz. Must share the same CCU module/timer instance as the other 3 HPSB signals for synchronized switching and dead-time insertion. |
-| 47 | IN_HPSB_LEFT_LOW | HPS bridge B driver (UCC21551), leg 1 low-side | From MCU (output) | H-bridge leg PWM (INLO), driven at 40kHz. Same CCU module as the other three HPSB signals. |
-| 48 | IN_HPSB_RIGHT_HIGH | HPS bridge B driver (UCC21551), leg 2 high-side | From MCU (output) | H-bridge leg PWM (INHI), driven at 40kHz. Same CCU module as the other three HPSB signals. |
-| 49 | IN_HPSB_RIGHT_LOW | HPS bridge B driver (UCC21551), leg 2 low-side | From MCU (output) | H-bridge leg PWM (INLO), driven at 40kHz. Same CCU module as the other three HPSB signals. |
-| 50 | VADC_HPS1_TEMP_OUT | U26 (TMP235A4DBZR) | To MCU (analog input) | Temperature sense analog output. Needs a VADC-capable pin. Slow-changing signal — unlike the current-sense channels, does not need CCU-triggered/synchronized sampling. |
-| 51 | VADC_HPS2_TEMP_OUT | U27 (TMP235A4DBZR) | To MCU (analog input) | Temperature sense analog output. Needs a VADC-capable pin. Slow-changing signal — no CCU-sync requirement. |
-| 52 | VADC_MPS1_TEMP_OUT | U28 (TMP235A4DBZR) | To MCU (analog input) | Temperature sense analog output. Needs a VADC-capable pin. Slow-changing signal — no CCU-sync requirement. |
-| 53 | VADC_MPS2_TEMP_OUT | U29 (TMP235A4DBZR) | To MCU (analog input) | Temperature sense analog output. Needs a VADC-capable pin. Slow-changing signal — no CCU-sync requirement. |
-| 54 | ENC_1_OUTA | U30 (ISL32273EFVZ, quad channel) | To MCU (input) | Quadrature encoder 1, channel A. Should route to a POSIF/CCU4-capable pin pair for hardware quadrature decoding — pair with ENC_1_OUTB on the same POSIF/CCU4 slice, not arbitrary GPIO. |
-| 55 | ENC_1_OUTB | U30 (ISL32273EFVZ, quad channel) | To MCU (input) | Quadrature encoder 1, channel B. Same POSIF/CCU4 slice as ENC_1_OUTA. |
-| 56 | ENC_2_OUTA | U30 (ISL32273EFVZ, quad channel) | To MCU (input) | Quadrature encoder 2, channel A. Should route to a POSIF/CCU4-capable pin pair — pair with ENC_2_OUTB on the same POSIF/CCU4 slice. |
-| 57 | ENC_2_OUTB | U30 (ISL32273EFVZ, quad channel) | To MCU (input) | Quadrature encoder 2, channel B. Same POSIF/CCU4 slice as ENC_2_OUTA. |
-| 58 | MPS_LS1 | Limit switch, MPS channel 1 (stepper/servo) | To MCU (input) | Open-drain, 10k pullup. Should route through XMC4500's ERU as a hardware event input for fast/reliable trip response, not polled GPIO — needs an ERU0/ERU1-capable pin. |
-| 59 | MPS_LS2 | Limit switch, MPS channel 2 (stepper/servo) | To MCU (input) | Open-drain, 10k pullup. ERU event input — needs an ERU0/ERU1-capable pin. |
-| 60 | MPS_LS3 | Limit switch, MPS channel 3 (stepper/servo) | To MCU (input) | Open-drain, 10k pullup. ERU event input — needs an ERU0/ERU1-capable pin. |
-| 61 | MPS_LS4 | Limit switch, MPS channel 4 (stepper/servo) | To MCU (input) | Open-drain, 10k pullup. ERU event input — needs an ERU0/ERU1-capable pin. |
-| 62 | MPS_LS5 | Limit switch, MPS channel 5 (stepper/servo) | To MCU (input) | Open-drain, 10k pullup. ERU event input — needs an ERU0/ERU1-capable pin. |
-| 63 | MPS_LS6 | Limit switch, MPS channel 6 (stepper/servo) | To MCU (input) | Open-drain, 10k pullup. ERU event input — needs an ERU0/ERU1-capable pin. |
-| 64 | MPS_A | RC servo, MPS channel 1 | From MCU (output) | Servo PWM, 50-100Hz. Needs a CCU4/CCU8 timer-capable pin. |
-| 65 | MPS_B | RC servo, MPS channel 2 | From MCU (output) | Servo PWM, 50-100Hz. Needs a CCU4/CCU8 timer-capable pin. |
-| 66 | MPS_C | RC servo, MPS channel 3 | From MCU (output) | Servo PWM, 50-100Hz. Needs a CCU4/CCU8 timer-capable pin. |
-| 67 | MPS_D | RC servo, MPS channel 4 | From MCU (output) | Servo PWM, 50-100Hz. Needs a CCU4/CCU8 timer-capable pin. |
-| 68 | MPS_E | RC servo, MPS channel 5 | From MCU (output) | Servo PWM, 50-100Hz. Needs a CCU4/CCU8 timer-capable pin. |
-| 69 | MPS_F | RC servo, MPS channel 6 | From MCU (output) | Servo PWM, 50-100Hz. Needs a CCU4/CCU8 timer-capable pin. |
-| 70 | VADC_P_OUT | Heater NTC temperature sensor | To MCU (analog input) | Analog output of an NTC divider network. Needs a VADC-capable pin. Slow-changing signal — no CCU-sync requirement. |
-| 71 | VADC_A_OUT | HPS DC motor NTC temperature sensor, motor A | To MCU (analog input) | Analog output of an NTC divider network. Needs a VADC-capable pin. Slow-changing signal — no CCU-sync requirement. |
-| 72 | VADC_B_OUT | HPS DC motor NTC temperature sensor, motor B | To MCU (analog input) | Analog output of an NTC divider network. Needs a VADC-capable pin. Slow-changing signal — no CCU-sync requirement. |
-| 73 | SPI_MOSI | MainControlBoard | To MCU (input) | Main SPI comms bus to MainControlBoard, XMC4500 operating as SPI slave. Target clock 20-40MHz. Needs a USIC (SPI-Slave) capable pin. Time-sensitive — real-time command/data link, unlike the stepper SPI bus. |
-| 74 | SPI_MISO | MainControlBoard | From MCU (output) | Main SPI comms bus, XMC4500 as SPI slave. Same USIC channel as SPI_MOSI/SCK/XMC_CS. |
-| 75 | SPI_SCK | MainControlBoard | To MCU (input) | Main SPI comms bus clock, 20-40MHz, XMC4500 as SPI slave. Needs verification against XMC4500's SPI-slave max clock spec once the full datasheet electrical characteristics are available — could not confirm from the reference manual excerpt read this session. |
-| 76 | XMC_CS | MainControlBoard | To MCU (input) | Chip select for the XMC4500 as SPI slave, 4.7k pullup. Same USIC channel as SPI_MOSI/MISO/SCK. Must be a hardware-compatible CS pin (native USIC SELx input), not software/GPIO-bit-banged — at 20-40MHz, software CS handling would be far too slow. |
-| 77 | UART_TX | Debug UART interface | From MCU (output) | Debug UART. Needs a USIC (UART-capable) pin. Not time-critical — low priority for pin resource contention. |
-| 78 | UART_RX | Debug UART interface | To MCU (input) | Debug UART. Same USIC channel as UART_TX. Not time-critical. |
-| 79 | TMS | J_DEBUG (FTSH-110-01-L-DV-K-TR) | To MCU (input) | SWD/JTAG debug. Fixed-function dedicated pin, not GPIO-mux'd. Connector pinout confirmed against the XMC4500 Debug and Trace System chapter §27.6.2 (Figure 27-4, standard 20-pin Cortex Debug+ETM connector) — schematic matches exactly. |
-| 80 | TCK | J_DEBUG (FTSH-110-01-L-DV-K-TR) | To MCU (input) | SWD/JTAG debug clock. Fixed-function dedicated pin. |
-| 81 | TDO | J_DEBUG (FTSH-110-01-L-DV-K-TR) | From MCU (output) | JTAG data out / SWO. GPIO alternate function (`DB.TDO/TRACESWO`), not a dedicated silicon pin — competes for a regular port pin, unlike TMS/TCK. Assigned P2.1 in `PinoutSuggestion.md`. |
-| 82 | TDI | J_DEBUG (FTSH-110-01-L-DV-K-TR) | To MCU (input) | JTAG data in. GPIO alternate function (`DB.TDI`), competes for a regular port pin. Assigned P0.7 in `PinoutSuggestion.md`. |
-| 83 | TRACECLK | J_DEBUG (FTSH-110-01-L-DV-K-TR) | From MCU (output) | ETM trace clock. GPIO alternate function (`DB.ETM_TRACECLK`), competes for a regular port pin. Assigned P2.14 in `PinoutSuggestion.md`. |
-| 84 | TRACEDATA0 | J_DEBUG (FTSH-110-01-L-DV-K-TR) | From MCU (output) | ETM trace data bit 0. GPIO alternate function. Assigned P2.13 in `PinoutSuggestion.md`. |
-| 85 | TRACEDATA1 | J_DEBUG (FTSH-110-01-L-DV-K-TR) | From MCU (output) | ETM trace data bit 1. GPIO alternate function. Assigned P2.12 in `PinoutSuggestion.md`. |
-| 86 | TRACEDATA2 | J_DEBUG (FTSH-110-01-L-DV-K-TR) | From MCU (output) | ETM trace data bit 2. GPIO alternate function. Assigned P2.11 in `PinoutSuggestion.md`. |
-| 87 | TRACEDATA3 | J_DEBUG (FTSH-110-01-L-DV-K-TR) | From MCU (output) | ETM trace data bit 3. GPIO alternate function. Assigned P2.10 in `PinoutSuggestion.md`. |
-| 88 | GNDDetect | J_DEBUG (FTSH-110-01-L-DV-K-TR) | To MCU (input) | Detects whether a programmer/debug probe is present — driven low by the tool when plugged in. Per §27.6.2: requires a weak pull-up on the PCB. |
-| 89 | Key | J_DEBUG (FTSH-110-01-L-DV-K-TR) | N/A | Resolved: per §27.6.2, this is a purely mechanical keying position (Infineon explicitly recommends NOT populating this pin on the connector) — not an electrical signal, no MCU connection needed. |
-| 90 | POWER_ENABLE | MainControlBoard | To MCU (input) | Global POWER_ENABLE — primary hardware permission for power delivery, per `README.md` §5 Safety Features. Sourced from the MainControlBoard's STM32 supervisor, which deasserts it on wireless link loss or on a communication timeout between itself and the XMC4500. Confirmed 2026-09-04: gated in hardware directly to every power stage (HPS, Winch, Heater, LPS, steppers) except RC servos — servos are excluded because they're pure PWM outputs with no local HardwareControlBoard power stage to gate (externally powered from the 6V servo rail, not switched by this board). XMC's own connection to this signal is for status/notification only, not enforcement — the hardware cutoff does not depend on XMC noticing or reacting, which matters specifically because XMC being unresponsive is one of the scenarios this signal exists to catch. Downgraded from the earlier ERU-routing plan to plain polled `DIGITAL_IO` — no ERU channel needed. Note: STM32 can also hard-reset XMC directly in an emergency via a separate signal, XMC_RST. |
+| 1 | U2_PGOOD | Gate-drive supply (LM5164 buck) | To MCU (input) | Open-drain power-good output, 10 kΩ pull-up to +3.3 V. Safety-critical: if the gate supply sags, PWM generation must stop. ERU event input. |
+| 2 | POWER_ENABLE | MainControlBoard | To MCU (input) | Global power enable, active high. Gated in hardware directly to every power stage except the RC servos (the servo rail is not switched by this board). The MCU only reads the state. Plain digital input. |
+| 3 | XMC_RDY | MainControlBoard | From MCU (output) | Ready flag to the MainControlBoard. Open-drain, active low, 4.7 kΩ pull-up to +3.3 V. |
+| 4 | XMC_RST | MainControlBoard, debug connector | To MCU (input) | MCU reset (PORST), 10 kΩ pull-up to +3.3 V. The MainControlBoard can hard-reset the MCU through it. |
+| 5 | LPS_1_PWM | LPS gate driver (2EDN7533), output 1 | From MCU (output) | PWM up to 40 kHz. Single CCU4/CCU8 slice output. Every LPS driver input has a 10 kΩ pull-down and no series resistor. |
+| 6 | LPS_2_PWM | LPS gate driver, output 2 | From MCU (output) | PWM up to 40 kHz, as LPS_1_PWM. |
+| 7 | LPS_3_PWM | LPS gate driver, output 3 | From MCU (output) | PWM up to 40 kHz, as LPS_1_PWM. |
+| 8 | LPS_4_PWM | LPS gate driver, output 4 | From MCU (output) | PWM up to 40 kHz, as LPS_1_PWM. |
+| 9 | LPS_5 | LPS gate driver, output 5 | From MCU (output) | Digital on/off, plain GPIO. |
+| 10 | LPS_6 | LPS gate driver, output 6 | From MCU (output) | Digital on/off, plain GPIO. |
+| 11 | LPS_7 | LPS gate driver, output 7 | From MCU (output) | Digital on/off, plain GPIO. |
+| 12 | LPS_8 | LPS gate driver, output 8 | From MCU (output) | Digital on/off, plain GPIO. |
+| 13 | IN_WINCH_RIGHT_HIGH | Winch H-bridge gate driver (UCC21551), leg 2 high-side | From MCU (output) | H-bridge leg PWM, 40 kHz. All four Winch signals come from one CCU8 slice with two complementary channels; dead time is inserted by the CCU8 only (the driver DT pin is not populated). |
+| 14 | IN_WINCH_RIGHT_LOW | Winch H-bridge gate driver, leg 2 low-side | From MCU (output) | Complementary to IN_WINCH_RIGHT_HIGH. |
+| 15 | IN_WINCH_LEFT_HIGH | Winch H-bridge gate driver, leg 1 high-side | From MCU (output) | H-bridge leg PWM, 40 kHz, same slice as the other Winch signals. |
+| 16 | IN_WINCH_LEFT_LOW | Winch H-bridge gate driver, leg 1 low-side | From MCU (output) | Complementary to IN_WINCH_LEFT_HIGH. |
+| 17 | WINCH_CURRENT | Winch current-sense amplifier (INA296A2) | To MCU (analog input) | Bidirectional, 100 mV/A (20 V/V, 5 mΩ), centred on 1.65 V. EMI-sensitive. ADC conversion triggered by the Winch CCU8 slice and sampled in a clean window of the switching cycle (see `CurrentSenseCalculations.md`). |
+| 18 | IN_HEATER | Heater low-side gate driver (2EDN7533) | From MCU (output) | Heater PWM, single low-side switch, up to 40 kHz, CCU8 output. 22 Ω series resistor. |
+| 19 | HEATER_CURRENT | Heater current-sense amplifier (INA296A2) | To MCU (analog input) | Unidirectional, ground-referenced, 100 mV/A (0.5–1.0 V at 5–10 A). EMI-sensitive. ADC conversion triggered by the Heater CCU8 slice. |
+| 20 | SPI_MPS_SCK | Stepper drivers (DRV8434S), shared bus | From MCU (output) | SPI master clock, 1 MHz maximum. 22 Ω series resistor. Configuration and diagnostics only, not time-critical. |
+| 21 | SPI_MPS_MOSI | Stepper drivers, shared bus | From MCU (output) | SPI data out to all six drivers, 1 MHz maximum. 22 Ω series resistor. |
+| 22 | SPI_MPS_MISO | Stepper drivers, shared bus | To MCU (input) | SPI data in from all six drivers. No series resistor at the MCU pin; each driver has a 22 Ω series resistor at its SDO output instead. |
+| 23 | MPS_CS_1 | Stepper driver 1 | From MCU (output) | Chip select, software-controlled GPIO. |
+| 24 | MPS_CS_2 | Stepper driver 2 | From MCU (output) | Chip select, software-controlled GPIO. |
+| 25 | MPS_CS_3 | Stepper driver 3 | From MCU (output) | Chip select, software-controlled GPIO. |
+| 26 | MPS_CS_4 | Stepper driver 4 | From MCU (output) | Chip select, software-controlled GPIO. |
+| 27 | MPS_CS_5 | Stepper driver 5 | From MCU (output) | Chip select, software-controlled GPIO. |
+| 28 | MPS_CS_6 | Stepper driver 6 | From MCU (output) | Chip select, software-controlled GPIO. |
+| 29 | DRV_FAULT | Stepper drivers, shared | To MCU (input) | Open-drain fault output shared by all six drivers, one common 10 kΩ pull-up to +3.3 V. The faulting driver is identified by an SPI status read. ERU event input for a fast hardware response. |
+| 30 | DRV_SLEEP | Stepper drivers, shared (nSLEEP) | From MCU (output) | Active-high enable. The device has an internal pull-down (about 200 kΩ), so an undriven line means sleep. |
+| 31 | MPS_DIR_1 | Stepper driver 1 (DIR) | From MCU (output) | Direction, plain GPIO. The device pin has an internal pull-down. |
+| 32 | MPS_DIR_2 | Stepper driver 2 (DIR) | From MCU (output) | As MPS_DIR_1. |
+| 33 | MPS_DIR_3 | Stepper driver 3 (DIR) | From MCU (output) | As MPS_DIR_1. |
+| 34 | MPS_DIR_4 | Stepper driver 4 (DIR) | From MCU (output) | As MPS_DIR_1. |
+| 35 | MPS_DIR_5 | Stepper driver 5 (DIR) | From MCU (output) | As MPS_DIR_1. |
+| 36 | MPS_DIR_6 | Stepper driver 6 (DIR) | From MCU (output) | As MPS_DIR_1. |
+| 37 | MPS_STEP_1 | Stepper driver 1 (STEP) | From MCU (output) | Step pulse train, application target 40 kHz (the driver accepts up to 500 kHz). Each STEP signal has its own independent CCU4 slice. |
+| 38 | MPS_STEP_2 | Stepper driver 2 (STEP) | From MCU (output) | As MPS_STEP_1. |
+| 39 | MPS_STEP_3 | Stepper driver 3 (STEP) | From MCU (output) | As MPS_STEP_1. |
+| 40 | MPS_STEP_4 | Stepper driver 4 (STEP) | From MCU (output) | As MPS_STEP_1. |
+| 41 | MPS_STEP_5 | Stepper driver 5 (STEP) | From MCU (output) | As MPS_STEP_1. |
+| 42 | MPS_STEP_6 | Stepper driver 6 (STEP) | From MCU (output) | As MPS_STEP_1. |
+| 43 | IN_HPSA_LEFT_HIGH | HPS bridge A gate driver (UCC21551), leg 1 high-side | From MCU (output) | H-bridge leg PWM, 40 kHz. All four HPSA signals come from one CCU8 slice with two complementary channels; dead time is inserted by the CCU8 only (the driver DT pin is not populated). |
+| 44 | IN_HPSA_LEFT_LOW | HPS bridge A gate driver, leg 1 low-side | From MCU (output) | Complementary to IN_HPSA_LEFT_HIGH. |
+| 45 | IN_HPSA_RIGHT_HIGH | HPS bridge A gate driver, leg 2 high-side | From MCU (output) | H-bridge leg PWM, 40 kHz, same slice as the other HPSA signals. |
+| 46 | IN_HPSA_RIGHT_LOW | HPS bridge A gate driver, leg 2 low-side | From MCU (output) | Complementary to IN_HPSA_RIGHT_HIGH. |
+| 47 | HPSA_CURRENT | HPS bridge A current-sense amplifier (INA296A2) | To MCU (analog input) | Bidirectional, 20 mV/A (20 V/V, 1 mΩ), centred on 1.65 V. EMI-sensitive. ADC conversion triggered by the HPSA CCU8 slice and sampled in a clean window of the switching cycle. |
+| 48 | IN_HPSB_LEFT_HIGH | HPS bridge B gate driver (UCC21551), leg 1 high-side | From MCU (output) | H-bridge leg PWM, 40 kHz. Same arrangement as bridge A, on its own CCU8 slice. |
+| 49 | IN_HPSB_LEFT_LOW | HPS bridge B gate driver, leg 1 low-side | From MCU (output) | Complementary to IN_HPSB_LEFT_HIGH. |
+| 50 | IN_HPSB_RIGHT_HIGH | HPS bridge B gate driver, leg 2 high-side | From MCU (output) | H-bridge leg PWM, 40 kHz, same slice as the other HPSB signals. |
+| 51 | IN_HPSB_RIGHT_LOW | HPS bridge B gate driver, leg 2 low-side | From MCU (output) | Complementary to IN_HPSB_RIGHT_HIGH. |
+| 52 | HPSB_CURRENT | HPS bridge B current-sense amplifier (INA296A2) | To MCU (analog input) | As HPSA_CURRENT, triggered by the HPSB CCU8 slice. Converted in a different VADC group than HPSA_CURRENT. |
+| 53 | HPSA_TEMP_IC | Temperature sensor (TMP235A4), HPS A | To MCU (analog input) | 10 mV/°C, 500 mV at 0 °C, 100 Ω and 680 pF output filter. Slow signal, no CCU synchronization; firmware averages 4–16 samples. |
+| 54 | HPSB_TEMP_IC | Temperature sensor (TMP235A4), HPS B | To MCU (analog input) | As HPSA_TEMP_IC. |
+| 55 | MPS1_TEMP_IC | Temperature sensor (TMP235A4), MPS 1 | To MCU (analog input) | As HPSA_TEMP_IC. |
+| 56 | MPS2_TEMP_IC | Temperature sensor (TMP235A4), MPS 2 | To MCU (analog input) | As HPSA_TEMP_IC. |
+| 57 | HPSA_MOTOR_TEMP_NTC | NTC divider, HPS motor A (casing) | To MCU (analog input) | NTC 10 kΩ, B 3950 K, 1.5 kΩ pull-up to +3.3 V, 1 kΩ series resistor, no filter capacitor. Slow signal; needs a long ADC sample time. |
+| 58 | HPSB_MOTOR_TEMP_NTC | NTC divider, HPS motor B (casing) | To MCU (analog input) | As HPSA_MOTOR_TEMP_NTC. |
+| 59 | HEATER_TEMP_NTC | NTC divider, heater | To MCU (analog input) | Glass NTC 100 kΩ, B 3950 K, up to 300 °C, 3.3 kΩ pull-up, 1 kΩ series resistor, no filter capacitor. A short or over-temperature reading must disable the heater. |
+| 60 | ENC_1_OUTA | Encoder 1 receiver (ISL32273E, RS-422) | To MCU (input) | Quadrature channel A. POSIF input; A and B go to the same POSIF unit. A 22 Ω series resistor is fitted in each of the four ENC_x_OUT lines. |
+| 61 | ENC_1_OUTB | Encoder 1 receiver | To MCU (input) | Quadrature channel B. |
+| 62 | ENC_2_OUTA | Encoder 2 receiver | To MCU (input) | Quadrature channel A, on the second POSIF unit. |
+| 63 | ENC_2_OUTB | Encoder 2 receiver | To MCU (input) | Quadrature channel B. |
+| 64 | LS_1 | Limit switch, channel 1 | To MCU (input) | 10 kΩ pull-up to +3.3 V. ERU event input, so the stop does not depend on polling. |
+| 65 | LS_2 | Limit switch, channel 2 | To MCU (input) | As LS_1. |
+| 66 | LS_3 | Limit switch, channel 3 | To MCU (input) | As LS_1. |
+| 67 | LS_4 | Limit switch, channel 4 | To MCU (input) | As LS_1. |
+| 68 | LS_5 | Limit switch, channel 5 | To MCU (input) | As LS_1. |
+| 69 | LS_6 | Limit switch, channel 6 | To MCU (input) | As LS_1. |
+| 70 | MPS_SERVO_1 | RC servo, channel 1 | From MCU (output) | Servo PWM, 50 Hz. Output of a CCU8 slice with two channels sharing one period. 330 Ω series resistor on the signal line at the connector. |
+| 71 | MPS_SERVO_2 | RC servo, channel 2 | From MCU (output) | As MPS_SERVO_1. |
+| 72 | MPS_SERVO_3 | RC servo, channel 3 | From MCU (output) | As MPS_SERVO_1. |
+| 73 | MPS_SERVO_4 | RC servo, channel 4 | From MCU (output) | As MPS_SERVO_1. |
+| 74 | MPS_SERVO_5 | RC servo, channel 5 | From MCU (output) | As MPS_SERVO_1. |
+| 75 | MPS_SERVO_6 | RC servo, channel 6 | From MCU (output) | As MPS_SERVO_1. |
+| 76 | SPI_MOSI | MainControlBoard | To MCU (input) | Main SPI bus, the MCU is the slave, target clock 20–40 MHz. Time-critical real-time command and data link. 22 Ω series resistor. The XMC4500 slave maximum clock is not confirmed (the electrical datasheet is not in the project). |
+| 77 | SPI_MISO | MainControlBoard | From MCU (output) | Main SPI bus data out of the MCU. 22 Ω series resistor. |
+| 78 | SPI_SCK | MainControlBoard | To MCU (input) | Main SPI bus clock, 20–40 MHz. 22 Ω series resistor. |
+| 79 | XMC_CS | MainControlBoard | To MCU (input) | Chip select of the main SPI bus, hardware slave-select input of the same USIC channel (at 20–40 MHz it cannot be handled in software). 4.7 kΩ pull-up to +3.3 V, no series resistor. |
+| 80 | UART_TX | Debug UART header | From MCU (output) | Debug UART. Not time-critical. |
+| 81 | UART_RX | Debug UART header | To MCU (input) | Debug UART. Not time-critical. |
+| 82 | TMS | Debug connector (20-pin Cortex Debug + ETM) | To MCU (input) | SWD/JTAG, 22 Ω series resistor. Dedicated pin. |
+| 83 | TCK | Debug connector | To MCU (input) | SWD/JTAG clock, 22 Ω series resistor. Dedicated pin. |
+| 84 | TDO | Debug connector | From MCU (output) | JTAG data out / SWO, 22 Ω series resistor. Alternate function of a port pin. |
+| 85 | TDI | Debug connector | To MCU (input) | JTAG data in, 22 Ω series resistor. Alternate function of a port pin. |
+| 86 | TRACECLK | Debug connector | From MCU (output) | ETM trace clock, 22 Ω series resistor. Alternate function of a port pin. |
+| 87 | TRACEDATA0 | Debug connector | From MCU (output) | ETM trace data, 22 Ω series resistor. |
+| 88 | TRACEDATA1 | Debug connector | From MCU (output) | ETM trace data, 22 Ω series resistor. |
+| 89 | TRACEDATA2 | Debug connector | From MCU (output) | ETM trace data, 22 Ω series resistor. |
+| 90 | TRACEDATA3 | Debug connector | From MCU (output) | ETM trace data, 22 Ω series resistor. |
+| 91 | GNDDetect | Debug connector | To MCU (input) | Pulled low by the debug probe when plugged in. Uses the internal pull-up of the MCU pin. |
 
+## 4. Resource Summary
+
+| Resource | Signals |
+|---|---|
+| ERU event inputs (8 channels) | DRV_FAULT, U2_PGOOD, LS_1 to LS_6 |
+| CCU8, complementary pairs with dead time | Winch, HPSA, HPSB (one slice each, two channels) |
+| CCU8, single output | IN_HEATER |
+| CCU8 twin-channel slices (shared period) | MPS_SERVO_1 to MPS_SERVO_6 |
+| CCU4 single slices | MPS_STEP_1 to MPS_STEP_6 (each on its own slice), LPS_2_PWM, LPS_4_PWM |
+| CCU8, one slice with two outputs | LPS_1_PWM and LPS_3_PWM (shared period, independent duty) |
+| POSIF | ENC_1 (POSIF0), ENC_2 (POSIF1) |
+| VADC, synchronized to CCU8 | WINCH_CURRENT, HEATER_CURRENT, HPSA_CURRENT, HPSB_CURRENT |
+| VADC, slow | four `*_TEMP_IC`, three `*_TEMP_NTC` |
+| USIC | stepper SPI master, MainControlBoard SPI slave, debug UART |

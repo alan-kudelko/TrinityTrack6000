@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="EVENT_GENERATOR" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6" description="Provides the configuration for Output Gating Unit of ERU" version="4.1.16" minDaveVersion="4.0.0" instanceLabel="EVENT_GENERATOR_6" appLabel="">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="EVENT_GENERATOR" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6" description="Provides the configuration for Output Gating Unit of ERU" version="4.1.16" minDaveVersion="4.0.0" instanceLabel="EVENT_GENERATOR_HPSB_STOP" appLabel="">
   <properties provideInit="true" sharable="true"/>
-  <virtualSignals name="pattern" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_pdin" hwSignal="pdin" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="pattern" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_pdin" hwSignal="pdin" hwResource="//@hwResources.0" visible="true">
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_6.app#//@connections.1"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../EVENT_DETECTOR/v4_0_8/EVENT_DETECTOR_0.app#//@connections.3"/>
+  </virtualSignals>
   <virtualSignals name="trigger_in" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_trin" hwSignal="trin" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="pdout" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_pdout" hwSignal="pdout" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="ogu_iout" URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_iout" hwSignal="iout" hwResource="//@hwResources.0"/>
@@ -14,4 +17,24 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/SCU/SCU_0.dd#//@provided.20"/>
   </hwResources>
   <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_iout/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_erunmi_in" systemDefined="true" sourceSignal="ogu_iout" targetSignal="erunmi_in" srcVirtualSignal="//@virtualSignals.3" targetVirtualSignal="//@virtualSignals.4"/>
+  <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_erunmi_out/http://resources/4.1.32/app/PWM_CCU8/1/vs_ccu8_cc8_gp0_unsync" sourceSignal="iout" targetSignal="ext_event0" srcVirtualSignal="//@virtualSignals.5">
+    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@virtualSignals.14"/>
+    <targetVirtualSignal href="../../PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@virtualSignals.14"/>
+  </connections>
+  <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_erunmi_out/http://resources/4.1.28/app/PWM_CCU4/8/vs_ccu4_cc4_gp0_unsync" sourceSignal="iout" targetSignal="ext_event0" srcVirtualSignal="//@virtualSignals.5">
+    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../PWM_CCU4/v4_1_28/PWM_CCU4_8.app#//@virtualSignals.8"/>
+    <targetVirtualSignal href="../../PWM_CCU4/v4_1_28/PWM_CCU4_8.app#//@virtualSignals.8"/>
+  </connections>
+  <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_erunmi_out/http://resources/4.1.28/app/PWM_CCU4/4/vs_ccu4_cc4_gp0_unsync" sourceSignal="iout" targetSignal="ext_event0" srcVirtualSignal="//@virtualSignals.5">
+    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../PWM_CCU4/v4_1_28/PWM_CCU4_4.app#//@virtualSignals.8"/>
+    <targetVirtualSignal href="../../PWM_CCU4/v4_1_28/PWM_CCU4_4.app#//@virtualSignals.8"/>
+  </connections>
+  <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_erunmi_out/http://resources/4.1.28/app/PWM_CCU4/1/vs_ccu4_cc4_gp0_unsync" sourceSignal="iout" targetSignal="ext_event0" srcVirtualSignal="//@virtualSignals.5">
+    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../PWM_CCU4/v4_1_28/PWM_CCU4_1.app#//@virtualSignals.8"/>
+    <targetVirtualSignal href="../../PWM_CCU4/v4_1_28/PWM_CCU4_1.app#//@virtualSignals.8"/>
+  </connections>
+  <connections URI="http://resources/4.1.16/app/EVENT_GENERATOR/6/http://resources/4.1.16/app/EVENT_GENERATOR/6/vs_event_generator_erunmi_out/http://resources/4.1.32/app/PWM_CCU8/4/vs_ccu8_cc8_gp0_unsync" sourceSignal="iout" targetSignal="ext_event0" srcVirtualSignal="//@virtualSignals.5">
+    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_4.app#//@virtualSignals.14"/>
+    <targetVirtualSignal href="../../PWM_CCU8/v4_1_32/PWM_CCU8_4.app#//@virtualSignals.14"/>
+  </connections>
 </ResourceModel:App>

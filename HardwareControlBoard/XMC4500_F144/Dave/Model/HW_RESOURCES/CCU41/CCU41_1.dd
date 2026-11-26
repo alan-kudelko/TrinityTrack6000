@@ -843,7 +843,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="EV1IS" URI="http://resources/0.1.29/peripheral/ccu4/1/cc43ins/ev1is" value="0" toolTipHelpDescription="Event 1 signal selection" defaultValue="0" startPos="4" stopPos="7" accessPermission="rw" maxValue="15" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.29/peripheral/ccu4/1/cc4/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU4/v4_1_28/PWM_CCU4_9.app#//@hwResources.0"/>
     <resourcesList name="ins" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/1/cc40ins"/>
     <resourcesList name="ins_ev0is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/1/cc40ins/ev0is"/>
     <resourcesList name="ins_ev1is" requiredResourceUri="http://resources/0.1.29/peripheral/ccu4/1/cc40ins/ev1is"/>

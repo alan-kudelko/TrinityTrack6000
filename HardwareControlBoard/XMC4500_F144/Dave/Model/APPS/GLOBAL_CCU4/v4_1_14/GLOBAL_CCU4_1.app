@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="GLOBAL_CCU4" URI="http://resources/4.1.14/app/GLOBAL_CCU4/1" description="Initializes CCU4 Global Register Set." version="4.1.14" minDaveVersion="4.0.0" instanceLabel="GLOBAL_CCU4_1" appLabel="" containingProxySignal="true">
   <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@requiredApps.1"/>
-  <upwardMapList xsi:type="ResourceModel:RequiredApp" href="../../PWM_CCU4/v4_1_28/PWM_CCU4_9.app#//@requiredApps.0"/>
   <properties provideInit="true" sharable="true"/>
   <virtualSignals name="ccu4_global" URI="http://resources/4.1.14/app/GLOBAL_CCU4/1/vs_global_ccu4_globalsignal" hwSignal="global_signal" hwResource="//@hwResources.0">
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@connections.1"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@connections.3"/>
     <upwardMapList xsi:type="ResourceModel:Connections" href="../../ENCODER_POSIF/v4_0_6/ENCODER_POSIF_1.app#//@connections.4"/>
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU4/v4_1_28/PWM_CCU4_9.app#//@connections.0"/>
   </virtualSignals>
   <virtualSignals name="clock_ccu" URI="http://resources/4.1.14/app/GLOBAL_CCU4/1/vs_global_ccu4_clk" hwSignal="clk" hwResource="//@hwResources.0"/>
   <virtualSignals name="ccu4_global_start" URI="http://resources/4.1.14/app/GLOBAL_CCU4/1/vs_global_ccu4_gsc_enable" hwSignal="gsc_enable" hwResource="//@hwResources.1" visible="true"/>

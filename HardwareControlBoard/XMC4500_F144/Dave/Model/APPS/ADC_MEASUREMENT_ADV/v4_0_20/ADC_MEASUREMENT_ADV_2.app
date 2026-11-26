@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ADC_MEASUREMENT_ADV" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2" description="Measurement of analog signals using VADC via Queue and Scan request sources with advanced features.&#xA; Background request source is not supported." mode="NOTSHARABLE" version="4.0.20" minDaveVersion="4.0.1" instanceLabel="ADC_MEASUREMENT_WINCH" appLabel="" containingProxySignal="true">
+<ResourceModel:App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" name="ADC_MEASUREMENT_ADV" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2" description="Measurement of analog signals using VADC via Queue and Scan request sources with advanced features.&#xA; Background request source is not supported." mode="NOTSHARABLE" version="4.0.20" minDaveVersion="4.0.1" instanceLabel="ADC_WINCH_CURRENT" appLabel="" containingProxySignal="true">
   <properties provideInit="true"/>
   <virtualSignals name="sr_interrupt_signal" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_nvic_src" hwSignal="signal_in" hwResource="//@hwResources.395"/>
   <virtualSignals name="iclass_select" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_iclass2channel" hwSignal="ch_class_sel" hwResource="//@hwResources.394"/>
@@ -16,7 +16,9 @@
   <virtualSignals name="scan_select" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_to_channel" hwSignal="select" hwResource="//@hwResources.393"/>
   <virtualSignals name="group_selection" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_to_config" hwSignal="req" hwResource="//@hwResources.393"/>
   <virtualSignals name="scan_to_global" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_to_global" hwSignal="global_signal" hwResource="//@hwResources.393"/>
-  <virtualSignals name="trigger_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_greqtr1sel" hwSignal="greqtr1sel" hwResource="//@hwResources.393" visible="true"/>
+  <virtualSignals name="trigger_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_greqtr1sel" hwSignal="greqtr1sel" hwResource="//@hwResources.393" visible="true">
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_4.app#//@connections.16"/>
+  </virtualSignals>
   <virtualSignals name="gating_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_greqgt1sel" hwSignal="greqgt1sel" hwResource="//@hwResources.393" visible="true"/>
   <virtualSignals name="event_scan_source" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_measurement_adv_scan_sourceevent" hwSignal="sev" hwResource="//@hwResources.393" visible="true"/>
   <virtualSignals name="Channel_A_pin" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/2/vs_adc_adv_measurement_pin_pad_signal_0" hwSignal="pin" hwResource="//@hwResources.20"/>
